@@ -1,0 +1,47 @@
+{
+	"motion":
+	{
+		"ShowFieldsOnCondition_1":
+		{
+			"aField_ID": 	["sFullName_SubjectOrgan_appl", "sShortName_SubjectOrgan_appl","sID_SubjectActionKVED_SubjectOrgan_appl", "sNote_ID_SubjectActionKVED_SubjectOrgan_appl", "sDateActual_SubjectOrgan_appl", "sLocation_SubjectOrgan_appl", "ur_tel", "ur_fax","sID_SubjectOrgan_OKPO_appl","sCEOName_SubjectOrgan_appl","ur_post"],
+			"asID_Field": 	{"sClient": "subekt"},
+			"sCondition": 	"[sClient] == 'ur'"
+		},
+		"ShowFieldsOnCondition_8":
+		{
+			"aField_ID":	["nFile_CopyPassport","warning_CopyPassport"],
+			"asID_Field":	{"sClient":"asForMySelf","sTerm2":"asEnumTypeDocument1"},
+			"sCondition":	"([sClient] == 'sNo' && ([sTerm2] == 'sEnumElement_Passport' || [sTerm2] == 'sEnumElement_ID_Passport' || [sTerm2] == 'sEnumElement_Other'))"
+		},
+		"RequiredFieldsOnCondition_8": 
+		{
+			"aField_ID":	["nFile_CopyPassport"],
+			"asID_Field":	{"sClient":"asForMySelf","sTerm2":"asEnumTypeDocument1"},
+			"sCondition":	"([sClient] == 'sNo' && ([sTerm2] == 'sEnumElement_Passport' || [sTerm2] == 'sEnumElement_ID_Passport' || [sTerm2] == 'sEnumElement_Other'))"
+		},
+		"ShowFieldsOnCondition_9":
+		{
+			"aField_ID":	["sPIB_osoba2","sDateBirth_osoba2"],
+			"asID_Field":	{"sClient":"asForMySelf"},
+			"sCondition":	"[sClient] == 'sNo'"
+		},
+		"RequiredFieldsOnCondition_9": 
+		{
+			"aField_ID":	["sPIB_osoba2","sDateBirth_osoba2"],
+			"asID_Field":	{"sClient":"asForMySelf"},
+			"sCondition":	"[sClient] == 'sNo'"
+		},
+		"ShowFieldsOnCondition_10":
+		{
+			"aField_ID":	["lable_Mariupol_CNAP"],
+			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition":	"[sClient] == 'don_mariupolR'"
+		},
+		"ShowFieldsOnCondition_11":
+		{
+			"aField_ID":	["lable_Mariupol_Lev"],
+			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition":	"[sClient] == 'don_mariupol_LevR'"
+		}
+	}
+}

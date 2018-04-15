@@ -1,0 +1,31 @@
+{
+	"motion": 
+    {
+		"ShowFieldsOnCondition_5":
+		{
+        	"aField_ID": 	["sDescriptionRoute02","sID_SubjectOrgan_OKPO_sender02","sFullName_SubjectOrgan_sender02","sLocation_SubjectOrgan_sender02","ur_tel_sender02","sDateActual_SubjectOrgan_sender02","sID_SubjectOrgan_OKPO_recipient02","sFullName_SubjectOrgan_recipient02","sLocation_SubjectOrgan_recipient02","ur_tel_recipient02","sDateActual_SubjectOrgan_recipient02",
+        					 "sDescriptionRoute03","sID_SubjectOrgan_OKPO_sender03","sFullName_SubjectOrgan_sender03","sLocation_SubjectOrgan_sender03","ur_tel_sender03","sDateActual_SubjectOrgan_sender03","sID_SubjectOrgan_OKPO_recipient03","sFullName_SubjectOrgan_recipient03","sLocation_SubjectOrgan_recipient03","ur_tel_recipient03","sDateActual_SubjectOrgan_recipient03"],
+        	"asID_Field": 	{"sClient": "enumCountRoute"},
+         	"sCondition": 	"[sClient] == 'CountRoute_3'"
+		},
+		"RequiredFieldsOnCondition_5": 
+		{
+        	"aField_ID": 	["sDescriptionRoute02","sID_SubjectOrgan_OKPO_sender02","sFullName_SubjectOrgan_sender02","sLocation_SubjectOrgan_sender02","ur_tel_sender02","sDateActual_SubjectOrgan_sender02","sID_SubjectOrgan_OKPO_recipient02","sFullName_SubjectOrgan_recipient02","sLocation_SubjectOrgan_recipient02","ur_tel_recipient02","sDateActual_SubjectOrgan_recipient02",
+        					 "sDescriptionRoute03","sID_SubjectOrgan_OKPO_sender03","sFullName_SubjectOrgan_sender03","sLocation_SubjectOrgan_sender03","ur_tel_sender03","sDateActual_SubjectOrgan_sender03","sID_SubjectOrgan_OKPO_recipient03","sFullName_SubjectOrgan_recipient03","sLocation_SubjectOrgan_recipient03","ur_tel_recipient03","sDateActual_SubjectOrgan_recipient03"],
+        	"asID_Field": 	{"sClient": "enumCountRoute"},
+         	"sCondition": 	"[sClient] == 'CountRoute_3'"
+		},
+		"ShowFieldsOnCondition_6":
+		{
+        	"aField_ID": 	["sConfidant_pib","sConfidant_passport","nFile_ConfidantDoc"],
+        	"asID_Field": 	{"sClient": "subekt_2"},
+         	"sCondition": 	"[sClient] == 'confidant'"
+		},
+		"RequiredFieldsOnCondition_6": 
+		{
+        	"aField_ID": 	["sConfidant_pib","sConfidant_passport","nFile_ConfidantDoc"],
+        	"asID_Field": 	{"sClient": "subekt_2"},
+         	"sCondition": 	"[sClient] == 'confidant'"
+		}
+     }
+}

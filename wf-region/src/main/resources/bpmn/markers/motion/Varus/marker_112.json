@@ -1,0 +1,19 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_112": {
+      "aField_ID": [
+        "sFirma",
+        "sDateOpozdania",
+        "sNamePostach",
+        "sPlanDatePrih",
+        "sFactDatePrih",
+        "sNotes"
+      ],
+      "asID_Field": {
+        "sClient": "asPodCat2",
+        "sClient1": "asCat1"
+      },
+      "sCondition": "[sClient] == 'sPodCategory2' && [sClient1] == 'sCategory2'"
+    }
+  }
+}

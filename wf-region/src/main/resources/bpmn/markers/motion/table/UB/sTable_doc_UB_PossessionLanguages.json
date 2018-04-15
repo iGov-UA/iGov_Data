@@ -1,0 +1,45 @@
+{
+  "aField": [
+    {
+      "id": "asLanguages",
+      "name": "Володіння іноземними мовами",
+      "type": "string",
+      "default": "англійский"      
+    },
+    {
+      "id": "asRivet",
+      "name": "Рівень знання",
+      "type": "enum",
+      "a": [
+        {
+          "id": "Enum1",
+          "name": "Початковий рівень (Beginner)"
+        },
+        {
+          "id": "Enum2",
+          "name": "Елементарний рівень (Elementary)"
+        },
+        {
+          "id": "Enum3",
+          "name": "Нижче середнього (Pre-Intermediate)"
+        },
+        {
+          "id": "Enum4",
+          "name": "Середній (Intermediate)"
+        },
+        {
+          "id": "Enum5",
+          "name": "Вище середнього (Upper Intermediate)"
+        },
+        {
+          "id": "Enum6",
+          "name": "Високий рівень (Advanced)"
+        },
+        {
+          "id": "Enum7",
+          "name": "Супер просунутий (Mastery)"
+        }
+      ]
+    }
+  ]
+}

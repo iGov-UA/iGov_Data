@@ -1,0 +1,93 @@
+{
+  "_:Watch": {
+    "_default_btsol": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "CreateTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"UB_Head"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_btsol_reestr": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"UB_Head"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+     
+    "_default_btsol_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "AddVisor", "AddViewer", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_Accept", "sGroup_Activiti":"UB_Head"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"UB_Head"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"UB_Head"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"UB_Head"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+       "_default_btsol_Agree": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "AddViewer", "AskMessage", "AnswerMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_Agree", "sGroup_Activiti":"UB_Head"}, 
+      "oPermitions_Delegate": {"sGroup_Activiti":"UB_Head"},    
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"UB_Head"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"UB_Head"},
+       "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+   
+    "_default_btsol_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument","EditTask", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Execute": {},
+  "step_5:Seen": {},
+  "step_6:Edit": {},
+  "step_7:Edit": {}
+}

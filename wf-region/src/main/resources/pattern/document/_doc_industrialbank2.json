@@ -1,0 +1,38 @@
+{
+  "_:Watch": 
+  {
+    "_default_IndustrialBank_2": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_IndustrialBank_2_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Accept": {},
+  "step_6:Accept": {},
+  "step_7:Accept": {},
+  "step_8:Accept": {},
+  "step_9:Execute": {},
+  "step_10:Agree": {}
+  
+}

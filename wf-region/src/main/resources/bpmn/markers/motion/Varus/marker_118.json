@@ -1,0 +1,16 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_118": {
+      "aField_ID": [
+        "sTorgovaMarka",
+		"sPoblemHtml",
+		"sContaktFIO"
+      ],
+      "asID_Field": {
+        "sClient": "asPodCat5",
+        "sClient1": "asCat1"
+      },
+      "sCondition": "[sClient] == 'sPodCategory8' && [sClient1] == 'sCategory5'"
+    }
+  }
+}

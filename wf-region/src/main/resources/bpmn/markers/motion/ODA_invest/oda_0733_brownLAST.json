@@ -1,0 +1,38 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_brownLAST": {
+      "aField_ID": [
+        "sNamePunkt",
+        "sNamePunktEN",
+        "sLength",
+        "sWidth",
+        "sHeight",
+        "sArea",
+        "sPremisesetc",
+        "sPremisesetcEN",
+        "sProvidespace",
+        "sProvidespaceEN",
+        "sUnloadingprovided",
+        "sUnloadingprovidedEN",
+        "asTechnicalCondition",
+        "sDescribeBriefly",
+        "sDescribeBrieflyEN",
+        "asCanwork",
+        "asAvailabilityTrack",
+        "asGasConnection",
+        "asElectricityConnection",
+        "asWhaterConnection",
+        "asDrainageConnection",
+        "asCommunicationTI",
+        "sInbuilt",
+        "sNumberfloorsBuilding",
+        "sOnthefloor",
+        "edrpou"
+       ],
+      "asID_Field": {
+        "sClient": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sBrown'"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_:Watch": {
+    "_default_kamin": {   
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_kamin_avtor_edit": { 
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_kamin_add_accept": { 
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+ },
+ 
+ 
+ 
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Edit": {},
+  "step_5:Execute": {}
+}

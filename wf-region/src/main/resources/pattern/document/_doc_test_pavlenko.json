@@ -1,0 +1,29 @@
+{  
+   "_:Watch":{  
+      "_default_Author":{  
+         "sName":"Бухгалтер",
+         "bWrite":true,
+         "asID_Field_Read":[  
+            "*"
+         ],
+         "asID_Field_Write":[  
+            "*"
+         ]
+      },
+      "_default_Accept":{  
+         "sName":"Узгоджувач",
+         "bWrite":true,
+         "bNeedECP":true,
+         "asID_Field_Read":[  
+            "*"
+         ]
+        } 
+   },
+   "step_1":{  
+
+   },
+   "step_2":{  
+    
+   }
+   
+}

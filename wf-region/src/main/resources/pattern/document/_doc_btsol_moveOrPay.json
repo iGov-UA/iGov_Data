@@ -1,0 +1,82 @@
+{
+  "_:Watch": {
+    "_default_btsol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "AnswerMessage", "SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2", "step_3"]},   
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_btsol_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage", "SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2", "step_3"]},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_approve", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_btsol_approve_1": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_approve_1", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },   
+     "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_btsol_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Edit": {},
+  "step_5:Edit": {}
+  
+}

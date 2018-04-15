@@ -1,0 +1,16 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1": {
+      "aField_ID": [
+        "lastName_UA2",
+        "firstName_UA2",
+        "middleName_UA2",
+        "svid"
+      ],
+      "asID_Field": {
+        "sReason": "Family"
+      },
+      "sCondition": "[sReason]=='two'||[sReason]=='one'"
+    }
+  }
+}

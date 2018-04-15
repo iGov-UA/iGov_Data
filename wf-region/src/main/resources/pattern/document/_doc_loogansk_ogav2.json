@@ -1,0 +1,53 @@
+{
+  "_:Watch": 
+  {
+    "_default_loogogav2": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  	"_default_loogogav2_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_loogogav2_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_loogogav2_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["EditTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Agree": {}
+}

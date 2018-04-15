@@ -1,0 +1,41 @@
+{
+	"motion": 
+    {
+		"ShowElementsOnTrue_21": 
+		{
+			"aElement_ID":	["s_ur_p01","s_ur_p02","s_ur_p03"],
+			"asID_Field":	{"sClient":"subekt"},
+			"sCondition":	"[sClient] == 'ur' || [sClient] == 'юридична особа'"
+		},
+		"ShowElementsOnTrue_22": 
+		{
+			"aElement_ID":	["s_fz_p01","s_fz_p02","s_fz_p03"],
+			"asID_Field":	{"sClient":"subekt"},
+			"sCondition":	"[sClient] == 'fiz' || [sClient] == 'фізична особа-підприємець'"
+		},
+		"ShowElementsOnTrue_23": 
+		{
+			"aElement_ID":	["m2_p00","m2_p01","m2_p02","m2_p03","m2_p04","m2_p05"],
+			"asID_Field":	{"sClient":"enumCountRoute"},
+			"sCondition":	"[sClient] == 'CountRoute_2' || [sClient] == '2'"
+		},
+		"ShowElementsOnTrue_24": 
+		{
+			"aElement_ID":	["m2_p00","m2_p01","m2_p02","m2_p03","m2_p04","m2_p05","m3_p00","m3_p01","m3_p02","m3_p03","m3_p04","m3_p05"],
+			"asID_Field":	{"sClient":"enumCountRoute"},
+			"sCondition":	"[sClient] == 'CountRoute_3' || [sClient] == '3'"
+		},
+		"ShowElementsOnTrue_25": 
+		{
+			"aElement_ID":	["s1_Prichip"],
+			"asID_Field":	{"sClient":"TypeConsist"},
+			"sCondition":	"[sClient] == 'Avto_Trailer' || [sClient] == 'Автомобіль з причіпом (напівпричіпом)'"
+		},
+		"ShowElementsOnTrue_26": 
+		{
+			"aElement_ID":	["s1_NotPrichip"],
+			"asID_Field":	{"sClient":"TypeConsist"},
+			"sCondition":	"[sClient] == 'Avto' || [sClient] == 'Автомобіль'"
+		}
+     }
+}

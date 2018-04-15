@@ -1,0 +1,40 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sRegNum": {
+      "aField_ID": [
+        "sRegNum"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'accept'"
+    },
+    "RequiredFieldsOnCondition_sRegNum": {
+      "aField_ID": [
+        "sRegNum"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'accept'"
+    },
+    "ShowFieldsOnCondition_comment": {
+      "aField_ID": [
+        "comment"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    },
+    "RequiredFieldsOnCondition_comment": {
+      "aField_ID": [
+        "comment"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    }
+  }
+}

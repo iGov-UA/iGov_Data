@@ -1,0 +1,63 @@
+{
+    "_:Watch": {
+        "_default_AkordBank": {
+            "sName": " ",
+            "bWrite": true,
+            "asID_Field_Read": [
+                "*"
+            ],
+            "asID_Field_Write": [
+                "*"
+            ]
+          },
+          "_default_AkordBank_Read": {
+            "sName": " ",
+            "bWrite": null,
+            "asID_Field_Read": [
+                "*"
+            ]            
+          },
+          
+          "_default_AkordBank_edit_author": {
+            "sName": " ",
+            "bWrite": true,
+            "aPermition": ["DeleteDocument", "AnswerMessage"],  
+            "asID_Field_Read": [
+                "*"
+            ],
+            "asID_Field_Write": [
+                "*"
+            ]
+          }, 
+          "_default_AkordBank_redag": {
+            "sName": " ",
+            "bWrite": true,
+             "aPermition": ["AskMessage"],   
+            "asID_Field_Read": [
+                "*"
+            ],
+            "asID_Field_Write": [
+                "*"
+            ]
+          }
+               
+    },
+     
+    "step_1:Create": {  
+    },
+    "step_2:Accept": {  
+    },
+    "step_3:Accept": {  
+    },
+    "step_4:Accept": {  
+    },
+    "step_5:Accept": {  
+    }, 
+     "step_6:Accept": {  
+    }, 
+     "step_7:Accept": {  
+    }, 
+     "step_8:Accept": {  
+    }
+    
+}

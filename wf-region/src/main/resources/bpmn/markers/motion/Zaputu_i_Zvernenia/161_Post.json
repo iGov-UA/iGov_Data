@@ -1,0 +1,14 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamFizA": {
+      "aField_ID": [
+        "sPost_Ind",
+        "sPost_Adress"
+      ],
+      "asID_Field": {
+        "sCondit1": "asResultWay"
+      },
+      "sCondition": "[sCondit1]=='sOpost'||[sCondit1]=='На поштову адресу'"
+    }
+  }
+}

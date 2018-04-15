@@ -1,0 +1,25 @@
+ {
+ "aField": [
+        {
+      "id": "sGraphPost",
+      "name": "Графік поставки ; ;bNew=true",
+      "type": "file",
+      "required": "true",
+      "nWidth" : "33%"
+      },
+    {
+      "id": "sAgreement",
+      "name": "Доручення ; ;bNew=true",
+      "type": "file",
+      "required": "true",
+      "nWidth" : "33%"
+      },
+    {
+      "id": "sTermsOfCorporatization",
+      "name": "Умови акціонування ; ;bNew=true",
+      "type": "file",
+      "required": "true",
+      "nWidth" : "34%"
+      }
+      ]
+   }

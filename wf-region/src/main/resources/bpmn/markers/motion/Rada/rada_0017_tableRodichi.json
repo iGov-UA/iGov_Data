@@ -1,0 +1,25 @@
+{
+  "aField": [
+    {
+      "id": "nTable1",
+      "name": "ПІБ співмешканця",
+      "type": "string",
+      "required": "true",
+      "nWidth": "55%"
+    },
+    {
+      "id": "nTable2",
+      "name": "Дата народження",
+      "type": "date",
+      "required": "true",
+      "nWidth": "20%"
+    },
+    {
+      "id": "nTable3",
+      "name": "Родинні стосунки",
+      "type": "string",
+      "required": "true",
+      "nWidth": "25%"
+    }
+  ]
+}

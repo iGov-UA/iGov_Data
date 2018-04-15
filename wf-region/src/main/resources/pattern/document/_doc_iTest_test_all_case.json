@@ -1,0 +1,104 @@
+{
+  "_:Watch": {
+    "_default_iTest": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "CreateTask", "EditTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_iTest_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AddVisor","AddViewer", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_iTest_read", "sGroup_Activiti":"iTest_,"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_iTest_view", "sGroup_Activiti":"iTest_,"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_iTest_read", "sGroup_Activiti":"iTest_,"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"iTest_,"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_iTest_Seen": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "AddViewer", "AskMessage", "Refuse", "Seen"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_iTest_read", "sGroup_Activiti":"iTest_,"}, 
+       "oPermitions_Delegate": {"sGroup_Activiti":"iTest_,"},    
+        "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_iTest_view", "sGroup_Activiti":"iTest_,"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_iTest_direct": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["Seen","AddViewer", "Delegate", "RemoveDocumentStepSubject", "CancelDocumentSubmit", "CreateTask", "AskMessage", "Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_iTest_view", "sGroup_Activiti":"iTest_,"}, 
+       "oPermitions_Delegate": {"sGroup_Activiti":"iTest_head,"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_iTest_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_iTest_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_iTest_view", "sGroup_Activiti":"iTest_,"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_iTest_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_iTest_execute": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "RemoveDocumentStepSubject"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Direct": {},
+  "step_5:Seen": {},
+  "step_6:Edit": {},
+  "step_7:Edit": {},
+  "step_8:Execute": {},
+  "step_9:Seen": {}
+}

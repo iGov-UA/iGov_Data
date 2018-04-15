@@ -1,0 +1,16 @@
+{
+  "motion": {
+    "ValuesFieldsOnCondition_st_7": {
+      "aField_ID": [
+        "sTotalPrice"
+      ],
+      "asID_Field_sValue": [
+        "[sCount]*[sPrice]"
+      ],
+      "asID_Field": {
+        "sClient": "sCount"
+      },
+      "sCondition": "[sClient] != '0'"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+ "aField": [
+        {
+      "id": "sWeightDimensionalCharacteristics",
+      "name": "Ваго-габаритні характеристики ; ;bNew=true",
+      "type": "file",
+      "required": "true",
+      "nWidth" : "33%"
+      },
+    {
+      "id": "sSpecification",
+      "name": "Специфікація ; ;bNew=true",
+      "type": "file",
+      "required": "true",
+      "nWidth" : "33%"
+      },
+    {
+      "id": "sLogisticsApplication",
+      "name": "Додаток з логістики ; ;bNew=true",
+      "type": "file",
+      "required": "true",
+      "nWidth" : "34%"
+      }
+      ]
+   }

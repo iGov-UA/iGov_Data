@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="dsz_309_forma3pn" name="Інформація про попит на робочу силу (вакансії). Форма №3-ПН" isExecutable="true">
+    <documentation>https://github.com/e-government-ua/iBP/issues/1602</documentation>
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть свій район або місто" type="select" default="0" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Серія та номер паспорту" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdinn" name="ІПН" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Контактний номер телефону" type="string" default="+380" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="asSubekt" name="Оберіть суб'єкт підприємницької діяльності" type="enum" default="ur" required="true">
+          <activiti:value id="fiz" name="фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="юридична особа"></activiti:value>
+        </activiti:formProperty>
+
+        <activiti:formProperty id="imya_fiz" name="П.І.Б.фізичної особи–підприємця" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="ad_fiz" name="Місце реєстрації фізичної особи-підприємця" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) " type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Місцезнаходження юридичної особи" type="textArea" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sShortName_SubjectOrgan_appl" name="Коротке найменування" type="string" default=" "></activiti:formProperty>
+
+        <activiti:formProperty id="sCEOName_SubjectOrgan_appl" name="ПІБ керівника або уповноваженої ним особи" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="ur_post" name="Посада керівника або уповноваженої ним особи" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="ur_tel" name="Телефон" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="ur_fax" name="Факс" type="string" default=" "></activiti:formProperty>
+
+
+        <activiti:formProperty id="asSubekt_3" name="Вид звітності:" type="enum" required="true">
+          <activiti:value id="first" name="первинна"></activiti:value>
+          <activiti:value id="secondary" name="уточнювальнa"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="second_1" name="Дата подання попередньої звітності" type="string" default=" "></activiti:formProperty>
+        
+        
+        <activiti:formProperty id="Info_1" name="ОСНОВНІ ДАНІ ПРО ВАКАНСІЇ" type="label" default="_____________________________________________________________________________"></activiti:formProperty>     
+         
+          
+        <activiti:formProperty id="sProf_1" name="Професія; посада" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_vac" name="Кількість вакансій" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_plata" name="Розмір заробітної плати" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_misce" name="Місце проведення робіт; область,район,місто,район у місті,селище, село" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="asProf_dod" name="Наявність коментарів у додатку; Вкажіть будь ласка чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" required="true">
+          <activiti:value id="yes1" name="так"></activiti:value>
+          <activiti:value id="no1" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_more" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" required="true">
+          <activiti:value id="yes_1" name="так"></activiti:value>
+          <activiti:value id="no_1" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="sProf_2" name="Професія; посада" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_vac2" name="Кількість вакансій" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_plata2" name="Розмір заробітної плати" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_misce2" name="Місце проведення робіт; область,район,місто,район у місті,селище, село" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="asProf_dod2" name="Наявність коментарів у додатку; Вкажіть будь ласка чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" required="true">
+          <activiti:value id="yes2" name="так"></activiti:value>
+          <activiti:value id="no2" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_more2" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" required="true">
+          <activiti:value id="yes_2" name="так"></activiti:value>
+          <activiti:value id="no_2" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="sProf_3" name="Професія; посада" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_vac3" name="Кількість вакансій" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_plata3" name="Розмір заробітної плати" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_misce3" name="Місце проведення робіт; область,район,місто,район у місті,селище, село" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="asProf_dod3" name="Наявність коментарів у додатку; Вкажіть будь ласка чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" required="true">
+          <activiti:value id="yes3" name="так"></activiti:value>
+          <activiti:value id="no3" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_more3" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" required="true">
+          <activiti:value id="yes_3" name="так"></activiti:value>
+          <activiti:value id="no_3" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="sProf_4" name="Професія; посада" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_vac4" name="Кількість вакансій" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_plata4" name="Розмір заробітної плати" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_misce4" name="Місце проведення робіт; область,район,місто,район у місті,селище, село" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="asProf_dod4" name="Наявність коментарів у додатку; Вкажіть будь ласка чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" required="true">
+          <activiti:value id="yes4" name="так"></activiti:value>
+          <activiti:value id="no4" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_more4" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" required="true">
+          <activiti:value id="yes_4" name="так"></activiti:value>
+          <activiti:value id="no_4" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="sProf_5" name="Професія; посада" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_vac5" name="Кількість вакансій" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_plata5" name="Розмір заробітної плати" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_misce5" name="Місце проведення робіт; область,район,місто,район у місті,селище, село" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="asProf_dod5" name="Наявність коментарів у додатку; Вкажіть будь ласка чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" required="true">
+          <activiti:value id="yes5" name="так"></activiti:value>
+          <activiti:value id="no5" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="Info_2" name="КОМЕНТАРІ ДО ДАНИХ ПРО ВАКАНСІЇ" type="label" default="_____________________________________________________________________________"></activiti:formProperty>     
+        <activiti:formProperty id="Info_3" name="Коментар до вакансії #1" type="label" default="______________________________________"></activiti:formProperty> 
+        <activiti:formProperty id="sProf_1_kom" name="Кількість вакансій; усього" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProf_1_ks" name="Кількість осіб, які мають додаткові гарантії щодо сприяння працевлаштуванню та можуть бути працевлаштовані" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="asProf_kat" name="Чи бажаєте Ви зазначити конкретні категорії громадян?" type="enum" required="true">
+          <activiti:value id="yes_z" name="так"></activiti:value>
+          <activiti:value id="no_z" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat1" name="Один з батьків або особа, яка їх замінює, має на утриманні дитину (дітей) віком до шести років?" type="enum" required="true">
+          <activiti:value id="yes_z1" name="так"></activiti:value>
+          <activiti:value id="no_z1" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat2" name="Один з батьків або особа, яка їх замінює, виховує без одного з подружжя дитину віком до 14 років або дитину - інваліда?" type="enum" required="true">
+          <activiti:value id="yes_z2" name="так"></activiti:value>
+          <activiti:value id="no_z2" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat3" name="Один з батьків або особа, яка їх замінює, утримує без одного з подружжя  інваліда  з  дитинства  (незалежно  від  віку)  та/або  інваліда  І  групи (незалежно від причини інвалідності)?" type="enum" required="true">
+          <activiti:value id="yes_z3" name="так"></activiti:value>
+          <activiti:value id="no_z3" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat4" name="Діти-сироти та діти, позбавлені батьківського піклування?" type="enum" required="true">
+          <activiti:value id="yes_z4" name="так"></activiti:value>
+          <activiti:value id="no_z4" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat5" name="Особи, яким виповнилося 15 років та які за згодою одного з батьків або особи, яка їх замінює, можуть, як виняток, прийматися на роботу?" type="enum" required="true">
+          <activiti:value id="yes_z5" name="так"></activiti:value>
+          <activiti:value id="no_z5" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat6" name="Особи, звільнені після відбуття покарання або примусового лікування?" type="enum" required="true">
+          <activiti:value id="yes_z6" name="так"></activiti:value>
+          <activiti:value id="no_z6" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat7" name="Молодь,  яка  закінчила  або  припинила  навчання  у  загальноосвітніх, професійно-технічних  і  вищих  навчальних  закладах,  звільнилася  із  строкової військової або альтернативної служби і яка вперше приймається на роботу?" type="enum" required="true">
+          <activiti:value id="yes_z7" name="так"></activiti:value>
+          <activiti:value id="no_z7" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat8" name="Особи, яким до настання права на пенсію за віком відповідно до статті 26 Закону України „Про загальнообов’язкове державне пенсійне страхування” залишилося 10 і менше років?" type="enum" required="true">
+          <activiti:value id="yes_z8" name="так"></activiti:value>
+          <activiti:value id="no_z8" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat9" name="Інваліди, які не досягли пенсійного віку, встановленого статтею 26 Закону України „Про загальнообов’язкове державне пенсій не страхування”?" type="enum" required="true">
+          <activiti:value id="yes_z9" name="так"></activiti:value>
+          <activiti:value id="no_z9" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat10" name="Учасники бойових дій, зазначені у пунктах 19, 20 частини першої статті 6 Закону  України  „Про  статус  ветеранів  війни,  гарантії  їх  соціального захисту”?" type="enum" required="true">
+          <activiti:value id="yes_z10" name="так"></activiti:value>
+          <activiti:value id="no_z10" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asProf_kat11" name="Внутрішньо переміщені особи?" type="enum" required="true">
+          <activiti:value id="yes_z11" name="так"></activiti:value>
+          <activiti:value id="no_z11" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sProf_1_komt" name="Завдання та обов’язки, опис робіт, коментарі " type="string" default=" "></activiti:formProperty>
+        
+        <activiti:formProperty id="asProf_rezh" name="Режим роботи" type="enum" required="true">
+          <activiti:value id="rezh" name="5-денний робочий тиждень"></activiti:value>
+          <activiti:value id="rezh1" name="6-денний робочий тиждень"></activiti:value>
+          <activiti:value id="rezh2" name="підсумковий  облік  робочого  часу"></activiti:value>
+          <activiti:value id="rezh3" name="позмінний графік роботи"></activiti:value>
+          <activiti:value id="rezh4" name="ненормований робочий час"></activiti:value>
+          <activiti:value id="rezh5" name="з поділом робочого дня (зміни) на частини"></activiti:value>
+          <activiti:value id="rezh6" name="гнучкий режим роботи"></activiti:value>
+          <activiti:value id="rezh7" name="вахтовий метод роботи"></activiti:value>
+          <activiti:value id="rezh8" name="робота у нічний час"></activiti:value>
+          <activiti:value id="rezh9" name="неповний робочий час"></activiti:value>
+          <activiti:value id="rezh10" name="інше"></activiti:value>
+       </activiti:formProperty>
+       <activiti:formProperty id="rezh11" name="Режим роботи інше:" type="string" default=" "></activiti:formProperty>
+       
+       <activiti:formProperty id="asProf_caracter" name="Характер виконуваної роботи" type="enum" required="true">
+          <activiti:value id="caracter" name="постійний"></activiti:value>
+          <activiti:value id="caracter1" name="тимчасовий"></activiti:value>
+          <activiti:value id="caracter2" name="сезонний"></activiti:value>
+          <activiti:value id="caracter3" name="за сумісництвом"></activiti:value>
+          <activiti:value id="caracter4" name="робота вдома"></activiti:value>
+          <activiti:value id="caracter5" name="інше"></activiti:value>
+       </activiti:formProperty>
+       <activiti:formProperty id="caracter11" name="Інший характер виконуваної роботи:" type="string" default=" "></activiti:formProperty>
+       
+       <activiti:formProperty id="asProf_umovy" name="Умови праці:" type="enum" required="true">
+          <activiti:value id="umovy" name="оптимальні"></activiti:value>
+          <activiti:value id="umovy1" name="допустимі"></activiti:value>
+          <activiti:value id="umovy2" name="шкідливі"></activiti:value>
+          <activiti:value id="umovy3" name="небезпечні"></activiti:value>
+          <activiti:value id="umovy4" name="інше"></activiti:value>
+       </activiti:formProperty>
+       <activiti:formProperty id="umovy11" name="Інші уомви праці:" type="string" default=" "></activiti:formProperty>
+       
+       <activiti:formProperty id="asProf_dodatoc" name="Додатково:" type="enum" required="true">
+          <activiti:value id="dodatoc" name="медичне страхування"></activiti:value>
+          <activiti:value id="dodatoc1" name="наявність житла"></activiti:value>
+          <activiti:value id="dodatoc2" name="харчування"></activiti:value>
+          <activiti:value id="dodatoc3" name="відшкодування транспортних витрат"></activiti:value>
+          <activiti:value id="dodatoc4" name="інше"></activiti:value>
+       </activiti:formProperty>
+       <activiti:formProperty id="dodatoc11" name="Інший характер виконуваної роботи:" type="string" default=" "></activiti:formProperty>
+       
+       
+        <activiti:formProperty id="Info_4" name="Вимоги до кандидата" type="label" default="______________________________________"></activiti:formProperty> 
+        <activiti:formProperty id="asProf_osvita" name="Освітній рівень:" type="enum" required="true">
+          <activiti:value id="osvita" name="початкова загальна освіта"></activiti:value>
+          <activiti:value id="osvita1" name="базова загальна середня освіта"></activiti:value>
+          <activiti:value id="osvita2" name="повна загальна середня освіта"></activiti:value>
+          <activiti:value id="osvita3" name="професійно-технічна  освіта"></activiti:value>
+          <activiti:value id="osvita4" name="вища освіта"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="asProf_riven" name="Освітньо-кваліфікаційний  рівень, науковий ступінь:" type="enum" required="true">
+          <activiti:value id="riven" name="кваліфікований робітник"></activiti:value>
+          <activiti:value id="riven1" name="молодший спеціаліст"></activiti:value>
+          <activiti:value id="riven2" name="молодший бакалавр"></activiti:value>
+          <activiti:value id="riven3" name="бакалавр"></activiti:value>
+          <activiti:value id="riven4" name="магістр"></activiti:value>
+          <activiti:value id="riven5" name="доктор філософії"></activiti:value>
+          <activiti:value id="riven6" name="доктор наук"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSpecializ" name="Спеціальність (спеціалізація) та/або галузь знань, професійна кваліфікація" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="sStazh" name="Стаж роботи (років) за відповідною професією (спеціальністю)" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="sVminnya" name="Додаткові  вміння, знання,  навички,  вимоги  до  працівника" type="string" default=" "></activiti:formProperty>
+        
+        
+        <activiti:formProperty id="sPhoneOrgan" name="Телефон для довідок; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="Назва органа; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="Адреса; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Час роботи; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта держслужбовця; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sShapka" name="Шапка; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="m1" type="markers" default="${markerService.loadFromFile('ternopil/dsz_309_forma3pn_1.json')}"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <endEvent id="endevent2" name="End"></endEvent>
+    <serviceTask id="servicetask10" name="успішно зарестроване" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Звернення на тему: Інформація про попит на робочу силу (вакансії). Форма №3-ПН]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
+<p align="left"> Ваше звернення №[sID_Order] щодо Інформація про попит на робочу силу (вакансії). Форма №3-ПН було зареєстровано у системі.<br/>
+Повідомлення про результат послуги буде спрямоване на Ваш e-mail.</p>
+<br />
+${sPhoneOrgan}<br />
+[pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan}<br />
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <userTask id="usertask1" name="прийняття рішення про надання послуги" activiti:candidateGroups="dsz_${sID_Public_SubjectOrganJoin}">
+      <extensionElements>
+        <activiti:formProperty id="sNameOrgan" name="Район" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Серія та номер паспорту" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdAddress" name="Адреса прописки" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Контактний номер телефону" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="subekt" name="Оберіть суб'єкт підприємницької діяльності" type="enum" writable="false">
+          <activiti:value id="fiz" name="фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="юридична особа"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="imya_fiz" name="П.І.Б.фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="ad_fiz" name="Місце реєстрації фізичної особи-підприємця" type="string" default=" " writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Місцезнаходження юридичної особи/Місце проживання фізичної особи-підприємця" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) " type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sShortName_SubjectOrgan_appl" name="Коротке найменування" writable="false"></activiti:formProperty>
+
+        <activiti:formProperty id="ur_tel" name="Телефон" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="ur_fax" name="Факс" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCEOName_SubjectOrgan_appl" name="ПІБ керівника або уповноваженої ним особи" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="ur_post" name="Посада керівника або уповноваженої ним особи" type="string" writable="false"></activiti:formProperty>
+
+        <activiti:formProperty id="subekt_3" name="Вид звітності:" type="enum" writable="false">
+          <activiti:value id="first" name="первинна"></activiti:value>
+          <activiti:value id="secondary" name="уточнювальнa"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="second_1" name="Дата подання попередньої звітності" type="string" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="prof_1" name="Професія (посада)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_vac" name="Кількість вакансій" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_plata" name="Розмір заробітної плати" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_misce" name="Місце проведення робіт (область,район,місто,район у місті,селище, село)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_dod" name="Наявність коментарів у додатку; чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" writable="false">
+          <activiti:value id="yes1" name="так"></activiti:value>
+          <activiti:value id="no1" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="prof_more" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" writable="false">
+          <activiti:value id="yes_1" name="так"></activiti:value>
+          <activiti:value id="no_1" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="prof_2" name="Професія (посада)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_vac2" name="Кількість вакансій" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_plata2" name="Розмір заробітної плати" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_misce2" name="Місце проведення робіт (область,район,місто,район у місті,селище, село)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_dod2" name="Наявність коментарів у додатку; чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" writable="false">
+          <activiti:value id="yes2" name="так"></activiti:value>
+          <activiti:value id="no2" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="prof_more2" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" writable="false">
+          <activiti:value id="yes_2" name="так"></activiti:value>
+          <activiti:value id="no_2" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="prof_3" name="Професія (посада)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_vac3" name="Кількість вакансій" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_plata3" name="Розмір заробітної плати" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_misce3" name="Місце проведення робіт (область,район,місто,район у місті,селище, село)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_dod3" name="Наявність коментарів у додатку; чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" writable="false">
+          <activiti:value id="yes3" name="так"></activiti:value>
+          <activiti:value id="no3" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="prof_more3" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" writable="false">
+          <activiti:value id="yes_3" name="так"></activiti:value>
+          <activiti:value id="no_3" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="prof_4" name="Професія (посада)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_vac4" name="Кількість вакансій" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_plata4" name="Розмір заробітної плати" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_misce4" name="Місце проведення робіт (область,район,місто,район у місті,селище, село)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_dod4" name="Наявність коментарів у додатку; чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" writable="false">
+          <activiti:value id="yes4" name="так"></activiti:value>
+          <activiti:value id="no4" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="prof_more4" name="Чи необхідно Вам вказати ще одну вакансію?" type="enum" writable="false">
+          <activiti:value id="yes_4" name="так"></activiti:value>
+          <activiti:value id="no_4" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="prof_5" name="Професія (посада)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_vac5" name="Кількість вакансій" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_plata5" name="Розмір заробітної плати" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_misce5" name="Місце проведення робіт (область,район,місто,район у місті,селище, село)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="prof_dod5" name="Наявність коментарів у додатку; чи потрібно шукати службі зайнятості працівників на цю вакансію" type="enum" writable="false">
+          <activiti:value id="yes5" name="так"></activiti:value>
+          <activiti:value id="no5" name="ні"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="decision_1" name="Прийняття рішення про надання послуги" type="enum" required="true">
+          <activiti:value id="accept" name="Заповнені дані вірні, інформація направлена на розгляд, очікується рішення"></activiti:value>
+          <activiti:value id="reject" name="Дані заповнені невірно, відхилити звернення (обов'язково впишіть коментар нижче)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="comment_1" name="У разі відхилення запиту внесіть, будь ласка, коментар" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="Телефон для довідок; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="Назва органа; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="Адреса; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Час роботи; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта держслужбовця; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sShapka" name="Шапка; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/ternopil/dsz_309_forma3pn_print.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <serviceTask id="servicetask7" name="повідомлення співробітника ДЦЗ" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[$sMailClerk]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Нове  звернення. Інформація про попит на робочу силу (вакансії). Форма №3-ПН]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask2" name="успішне подання зверенння" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] peredano na rozglyad. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${opis}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Звернення на тему: Інформація про попит на робочу силу (вакансії). Форма №3-ПН]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
+<p align="left">Ваше звернення №[sID_Order] щодо Інформація про попит на робочу силу (вакансії). Форма №3-ПН передано на розгляд в ${sShapka228} області і буде опрацьовано протягом 5 робочих днів.</h3><br /><br />
+Реєстраційний номер заяви в ЦНАП: ${reestr_numb};<br />
+До листа додається опис наданих Вами документів.<br />
+<br />
+Ви отримаєте додаткове повідомлення за результатами розгляду зверення.<br /></p>
+${sPhoneOrgan}<br />
+[pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan}<br />
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask9" name="відхилення звернення" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Звернення на тему: Інформація про попит на робочу силу (вакансії). Форма №3-ПН]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
+<p align="left">На жаль, Ваше звернення щодо Інформація про попит на робочу силу (вакансії). Форма №3-ПН відхилено через недостатню або неправильну інформацію.<br />
+${comment_1}<br />
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">iGov.org.ua</a><br />
+${sPhoneOrgan}<br />
+</p>
+[pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan}<br />
+
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow19" name="документи ок" sourceRef="exclusivegateway2" targetRef="servicetask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='accept'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow44" name="відхилення" sourceRef="exclusivegateway2" targetRef="servicetask9">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='reject'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow45" sourceRef="servicetask9" targetRef="endevent2"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow54" sourceRef="usertask1" targetRef="exclusivegateway2"></sequenceFlow>
+    <sequenceFlow id="flow57" sourceRef="servicetask7" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="flow59" sourceRef="servicetask10" targetRef="servicetask7"></sequenceFlow>
+    <sequenceFlow id="flow60" sourceRef="startevent1" targetRef="servicetask10"></sequenceFlow>
+    <sequenceFlow id="flow61" sourceRef="servicetask2" targetRef="endevent2"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_dsz_309_forma3pn">
+    <bpmndi:BPMNPlane bpmnElement="dsz_309_forma3pn" id="BPMNPlane_dsz_309_forma3pn">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="70.0" y="81.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
+        <omgdc:Bounds height="35.0" width="35.0" x="349.0" y="256.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask10" id="BPMNShape_servicetask10">
+        <omgdc:Bounds height="55.0" width="105.0" x="250.0" y="71.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="55.0" width="137.0" x="490.0" y="71.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask7" id="BPMNShape_servicetask7">
+        <omgdc:Bounds height="55.0" width="105.0" x="370.0" y="71.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask2" id="BPMNShape_servicetask2">
+        <omgdc:Bounds height="55.0" width="141.0" x="488.0" y="246.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask9" id="BPMNShape_servicetask9">
+        <omgdc:Bounds height="55.0" width="141.0" x="296.0" y="150.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="538.0" y="157.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow19" id="BPMNEdge_flow19">
+        <omgdi:waypoint x="558.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="558.0" y="246.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="69.0" x="569.0" y="186.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow44" id="BPMNEdge_flow44">
+        <omgdi:waypoint x="538.0" y="177.0"></omgdi:waypoint>
+        <omgdi:waypoint x="437.0" y="177.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="57.0" x="453.0" y="160.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow45" id="BPMNEdge_flow45">
+        <omgdi:waypoint x="366.0" y="205.0"></omgdi:waypoint>
+        <omgdi:waypoint x="366.0" y="256.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow54" id="BPMNEdge_flow54">
+        <omgdi:waypoint x="558.0" y="126.0"></omgdi:waypoint>
+        <omgdi:waypoint x="558.0" y="157.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow57" id="BPMNEdge_flow57">
+        <omgdi:waypoint x="475.0" y="98.0"></omgdi:waypoint>
+        <omgdi:waypoint x="490.0" y="98.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow59" id="BPMNEdge_flow59">
+        <omgdi:waypoint x="355.0" y="98.0"></omgdi:waypoint>
+        <omgdi:waypoint x="370.0" y="98.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow60" id="BPMNEdge_flow60">
+        <omgdi:waypoint x="105.0" y="98.0"></omgdi:waypoint>
+        <omgdi:waypoint x="250.0" y="98.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow61" id="BPMNEdge_flow61">
+        <omgdi:waypoint x="488.0" y="273.0"></omgdi:waypoint>
+        <omgdi:waypoint x="384.0" y="273.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

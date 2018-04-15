@@ -1,0 +1,16 @@
+{
+  "aField": [
+    {
+      "id": "sName_isExecute",
+      "name": "Ознайомлюючі; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel,sID_BP=_doc_conkordbank_rozporadgena",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_isExecute",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+    }
+  ]
+}

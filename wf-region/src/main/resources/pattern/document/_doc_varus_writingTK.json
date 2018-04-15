@@ -1,0 +1,93 @@
+{
+  "_:Watch": {
+    "_default_Varus": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "AnswerMessage", "SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2"]},   
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_Varus_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage", "SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2"]},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_Varus_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_Varus_approve", "sGroup_Activiti":"vs_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Varus_read", "sGroup_Activiti":"vs_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"vs_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_Varus_approve_1": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"}, 
+          
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_Varus_2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": [ "Seen", "AddViewer", "AddVisor", "Delegate", "CreateTask", "AskMessage"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},  
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Varus_read", "sGroup_Activiti":"vs_"},
+       "oPermitions_Delegate": {"sGroup_Activiti":"vs_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_Varus_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer", "AddVisor"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Varus_read", "sGroup_Activiti":"vs_"}, 
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Direct": {},
+  "step_4:Edit": {},
+  "step_5:Edit": {},
+  "step_6:Seen": {}
+  
+}

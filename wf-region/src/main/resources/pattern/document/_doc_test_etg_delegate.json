@@ -1,0 +1,60 @@
+{
+  "_:Watch": 
+  {
+    "_default_ETG": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_ETG_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_ETG_delegate": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AskMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_ETG_answer": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Seen": {}
+}

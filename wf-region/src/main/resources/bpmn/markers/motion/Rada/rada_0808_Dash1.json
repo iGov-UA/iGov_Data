@@ -1,0 +1,42 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1D": {
+      "aField_ID": [
+        "sRNumber",
+        "tCommentOK"
+      ],
+      "asID_Field": {
+        "sReason": "asRisheniaj"
+      },
+      "sCondition": "[sReason]=='sEnumAccept'"
+    },
+    "RequiredFieldsOnCondition_1D": {
+      "aField_ID": [
+        "sRNumber",
+        "tCommentOK"
+      ],
+      "asID_Field": {
+        "sCondit1": "asRisheniaj"
+      },
+      "sCondition": "[sCondit1]=='sEnumAccept'"
+    },
+    "ShowFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tCommentV"
+      ],
+      "asID_Field": {
+        "sReason": "asRisheniaj"
+      },
+      "sCondition": "[sReason]=='sEnumVidmova'"
+    },
+    "RequiredFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tCommentV"
+      ],
+      "asID_Field": {
+        "sCondit1": "asRisheniaj"
+      },
+      "sCondition": "[sCondit1]=='sEnumVidmova'"
+    }
+  }
+}

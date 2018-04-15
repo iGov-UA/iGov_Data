@@ -1,0 +1,17 @@
+{
+  "_:Watch": {
+    "_default_education": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+    },
+    "step_1_Create_Doc:Create": {},
+     "step_2_Acception:Accept": {}
+ }

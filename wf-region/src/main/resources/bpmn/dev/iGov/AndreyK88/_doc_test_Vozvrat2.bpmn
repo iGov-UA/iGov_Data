@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="_doc_test_Vozvrat" name="Тестування повернення на попередні етапи" isExecutable="true">
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="sTypeDoc" name="Тип документа ; ;bVisible=false" type="string" default="Інвойс для оплати"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер звернення ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="processInstanceId" name="ид процесса ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="processDefinitionId" name="processDefinitionId ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="FlagVozvrat" name="FlagVozvrat; ;bVisible=false" type="string" default="1step"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <serviceTask id="servicetask1" name="ProcessCountTaskCustom" activiti:delegateExpression="#{ProcessCountTaskCustomListener}">
+      <extensionElements>
+        <activiti:field name="sKey">
+          <activiti:string><![CDATA[_doc_test_Vozvrat]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="sPattern">
+          <activiti:string><![CDATA[[sID_Custom_GovPublic]]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="nDigits">
+          <activiti:string><![CDATA[5]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <scriptTask id="scripttask11" name="Script Task" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>
+      var flag ='1step'
+      execution.setVariable('FlagVozvrat', flag)
+      
+      //1. лічільник
+var number=execution.getVariable('sID_Custom_GovPublic')
+number = number&lt;&lt;0
+var fullNumber="вх-"+number+"/"
+execution.setVariable('sID_Custom_GovPublic', fullNumber)
+
+	//2. назначение даты исполнения - по умолчанию + 30 дней к текущей даты и перевод даты в нужный формат дд/мм/гггг
+var updatedDate = new Date();
+var days = 30;
+updatedDate.setDate(new Date().getDate() + days);
+var d = updatedDate.getDate();
+if (d &lt; 10) d = "0"+d;
+var m = updatedDate.getMonth() + 1;
+if (m &lt; 10) m = "0"+m;
+var sNewDate = (d + "/" + m + "/" + updatedDate.getFullYear());
+execution.setVariable('sDateExecution', sNewDate)
+
+//3. получение ИД текущего процесса
+var processInstanceId = execution.getProcessInstanceId();
+execution.setVariable('processInstanceId', processInstanceId)
+
+//4. получение ИД БП
+var executeProcessDefinitionId = execution.getProcessDefinitionId();
+var splittedProcessDefinitionId = executeProcessDefinitionId.split(':')[0];
+execution.setVariable('processDefinitionId', splittedProcessDefinitionId)
+
+      </script>
+    </scriptTask>
+    <userTask id="usertask1" name="Ініціатор - створення рахунку">
+      <extensionElements>
+        <activiti:formProperty id="processDefinitionId" name="processDefinitionId ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер звернення ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sTypeDoc" name="Тип документа" type="string" default="Інвойс для оплати"></activiti:formProperty>
+        <activiti:formProperty id="tKerKoment" name="Коментар керівника" type="textArea" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="sInvoisN" name="Номер інвойсу" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dInvoisD" name="Дата інвойсу" type="date" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="markerOplInit" name="Viddil" type="markers" default="${markerService.loadFromFile('CIB/OplAdmGospVutr/OplInit.json')}"></activiti:formProperty>
+        <activiti:formProperty id="FlagVozvrat" name="FlagVozvrat; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}">
+          <activiti:field name="sKey_GroupPostfix_New">
+            <activiti:expression><![CDATA[${sLoginAuthor}]]></activiti:expression>
+          </activiti:field>
+          <activiti:field name="sKey_GroupPostfix">
+            <activiti:string><![CDATA[_default_CIB_start]]></activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow2" sourceRef="scripttask11" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="flow34" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
+    <sequenceFlow id="flow35" sourceRef="servicetask1" targetRef="scripttask11"></sequenceFlow>
+    <scriptTask id="scripttask12" name="Степ 2" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>
+      var flag ='2step'
+      execution.setVariable('FlagVozvrat', flag)
+
+      //перемикання степа
+      var snID_Process_Activiti = execution.getProcessInstanceId()
+      var oResultSetDoc = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_2')      
+      
+      //Клонування прав для 
+      var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_CIB_Kerivn', 'CIB_Opiliavska', 'step_2', true)
+      </script>
+    </scriptTask>
+    <userTask id="usertask2" name="Візування. Керівник підрозділу">
+      <extensionElements>
+        <activiti:formProperty id="processDefinitionId" name="processDefinitionId ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер звернення ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sTypeDoc" name="Тип документа ; ;bVisible=false" type="string" default="Службова записка про дозвіл на обслуговування публічного діяча"></activiti:formProperty>
+        
+        <activiti:formProperty id="sInvoisN" name="Номер інвойсу" type="string"></activiti:formProperty>
+        <activiti:formProperty id="dInvoisD" name="Дата інвойсу" type="date"></activiti:formProperty>
+        
+        <activiti:formProperty id="asRish" name="Рішення керівника" type="enum" required="true">
+          <activiti:value id="sEnamDoprac" name="Відправити на доопрацювання"></activiti:value>
+          <activiti:value id="sEnamVidmova" name="Відмова"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="tKerKoment" name="Коментар керівника" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="markerKerKoment" name="Viddil" type="markers" default="${markerService.loadFromFile('CIB/OplAdmGospVutr/Kerivn.json')}"></activiti:formProperty>
+        <activiti:formProperty id="FlagVozvrat" name="FlagVozvrat; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow76" name="Відмова 2" sourceRef="exclusivegateway3" targetRef="endevent3">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asRish == 'sEnamVidmova'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow40" name="Повернення ініціатору 2" sourceRef="exclusivegateway3" targetRef="scripttask16">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asRish == 'sEnamDoprac'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow37" sourceRef="scripttask12" targetRef="usertask2"></sequenceFlow>
+    <scriptTask id="scripttask16" name="Повернення ініціатору" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>
+      //перемикання степа
+      var snID_Process_Activiti = execution.getProcessInstanceId()
+      var oResultSetDoc = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_1')      
+      
+      //Клонування прав для 
+      var sKey_GroupPostfix_New = execution.getVariable('sLoginAuthor')
+      var oResult2 = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_CIB_start', sKey_GroupPostfix_New, 'step_1', true)
+      </script>
+    </scriptTask>
+    <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow53" sourceRef="scripttask16" targetRef="usertask1"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <endEvent id="endevent3" name="End"></endEvent>
+    <sequenceFlow id="flow77" sourceRef="usertask1" targetRef="scripttask12"></sequenceFlow>
+    <sequenceFlow id="flow78" sourceRef="usertask2" targetRef="exclusivegateway3"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram__doc_test_Vozvrat">
+    <bpmndi:BPMNPlane bpmnElement="_doc_test_Vozvrat" id="BPMNPlane__doc_test_Vozvrat">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="1.0" y="71.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="60.0" y="61.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask11" id="BPMNShape_scripttask11">
+        <omgdc:Bounds height="55.0" width="105.0" x="201.0" y="61.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="331.0" y="61.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask12" id="BPMNShape_scripttask12">
+        <omgdc:Bounds height="55.0" width="105.0" x="651.0" y="61.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="55.0" width="105.0" x="791.0" y="61.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask16" id="BPMNShape_scripttask16">
+        <omgdc:Bounds height="55.0" width="105.0" x="331.0" y="136.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway3" id="BPMNShape_exclusivegateway3">
+        <omgdc:Bounds height="40.0" width="40.0" x="823.0" y="210.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="826.0" y="1090.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
+        <omgdc:Bounds height="35.0" width="35.0" x="826.0" y="310.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="306.0" y="88.0"></omgdi:waypoint>
+        <omgdi:waypoint x="331.0" y="88.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
+        <omgdi:waypoint x="36.0" y="88.0"></omgdi:waypoint>
+        <omgdi:waypoint x="60.0" y="88.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow35" id="BPMNEdge_flow35">
+        <omgdi:waypoint x="165.0" y="88.0"></omgdi:waypoint>
+        <omgdi:waypoint x="201.0" y="88.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow76" id="BPMNEdge_flow76">
+        <omgdi:waypoint x="843.0" y="250.0"></omgdi:waypoint>
+        <omgdi:waypoint x="843.0" y="310.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="51.0" x="843.0" y="250.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow40" id="BPMNEdge_flow40">
+        <omgdi:waypoint x="823.0" y="230.0"></omgdi:waypoint>
+        <omgdi:waypoint x="383.0" y="229.0"></omgdi:waypoint>
+        <omgdi:waypoint x="383.0" y="191.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="42.0" width="100.0" x="655.0" y="137.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow37" id="BPMNEdge_flow37">
+        <omgdi:waypoint x="756.0" y="88.0"></omgdi:waypoint>
+        <omgdi:waypoint x="791.0" y="88.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow53" id="BPMNEdge_flow53">
+        <omgdi:waypoint x="383.0" y="136.0"></omgdi:waypoint>
+        <omgdi:waypoint x="383.0" y="116.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow77" id="BPMNEdge_flow77">
+        <omgdi:waypoint x="436.0" y="88.0"></omgdi:waypoint>
+        <omgdi:waypoint x="651.0" y="88.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow78" id="BPMNEdge_flow78">
+        <omgdi:waypoint x="843.0" y="116.0"></omgdi:waypoint>
+        <omgdi:waypoint x="843.0" y="210.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,60 @@
+{
+  "attributes": {
+    "Line_1": {
+      "aElement_ID": [
+        "sDescription"
+      ],
+      "sValue": "Огляд Проекту (Project overview)"
+    },
+    "Line_2": {
+      "aElement_ID": [
+        "sAmount"
+      ],
+      "sValue": "Необхідні інвестиції (Necessary investments)"
+    },
+    "Line_3": {
+      "aElement_ID": [
+        "sLocation"
+      ],
+      "sValue": "Розташування проекту та Інфраструктура (Project location and Infrastructure)"
+    },
+    "Line_4": {
+      "aElement_ID": [
+        "sresource"
+      ],
+      "sValue": "Ресурси та послуги (Resources and services)"
+    },
+    "Line_5": {
+      "aElement_ID": [
+        "sPermissions"
+      ],
+      "sValue": "Особливості регулювання (Regulatory features)"
+    },
+    "Line_6": {
+      "aElement_ID": [
+        "sOther"
+      ],
+      "sValue": "Інше (Other)"
+    }
+  },
+  "motion": {
+    "ShowFieldsOnCondition_1": {
+      "aField_ID": [
+        "scomment"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    },
+    "RequiredFieldsOnCondition_1": {
+      "aField_ID": [
+        "scomment"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    }
+  }
+}

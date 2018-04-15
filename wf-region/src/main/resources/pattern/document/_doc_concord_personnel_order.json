@@ -1,0 +1,27 @@
+{
+  "_:Watch": {
+    "_default_Concord": {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_Concord_read": {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Agree": {},
+  "step_5:Agree": {},
+  "step_6": {}
+}

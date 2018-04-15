@@ -1,0 +1,33 @@
+{
+  "aField": [
+    {
+      "id": "sTextIndOpt",
+      "name": "Індивідуальна   умова",
+      "type": "string"     
+    },
+    {
+      "id": "asAcceptComDir",
+      "name": "Погодження   умови",
+      "type": "enum",
+      "a": [
+        {
+          "id": "Enum1",
+          "name": "Погоджено"
+        },
+        {
+          "id": "Enum2",
+          "name": "Не погоджено"
+        },
+        {
+          "id": "Enum3",
+          "name": "Погоджено за умови"
+        }
+      ]
+    },
+    {
+          "id": "sComment",
+          "name": "Коментар",
+          "type": "string"       
+        }
+  ]
+}

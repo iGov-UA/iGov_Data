@@ -1,0 +1,23 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1": {
+      "aField_ID": [
+        "sTableServices", "sNumberDodUgod"
+      ],
+      "asID_Field": {
+        "sClient": "sAkt"
+      },
+      "sCondition": "[sClient] == 'sYes'"
+    },
+    "RequiredFieldsOnCondition_1": {
+      "aField_ID": [
+        "sTableServices",
+        "sNumberDodUgod"
+      ],
+      "asID_Field": {
+        "sClient": "sAkt"
+      },
+      "sCondition": "[sClient] == 'sYes'"
+    }
+  }
+}

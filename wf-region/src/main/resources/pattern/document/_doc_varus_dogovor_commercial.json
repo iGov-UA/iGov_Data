@@ -1,0 +1,77 @@
+{
+  "_:Watch": 
+  {
+    "_default_varus": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    
+    "_default_varus_avtor_edit": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_varus_approve": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_varus_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_varus_1": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Execute": {},
+  "step_5:Seen": {},
+  "step_6:Edit": {}
+  
+}

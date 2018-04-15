@@ -1,0 +1,96 @@
+{
+  "_:Watch": {
+    "_default_nssmc": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_nssmc_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_nssmc_read", "sGroup_Activiti":"nssmc"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"nssmc"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_nssmc_Seen": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_nssmc_read", "sGroup_Activiti":"nssmc_head,OGOK_,MGOK_,ZCPK_"}, 
+       "oPermitions_Delegate": {"sGroup_Activiti":"nssmc"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_nssmc_direct": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "RemoveDocumentStepSubject", "CreateTask"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_nssmc_view", "sGroup_Activiti":"nssmc"}, 
+       "oPermitions_Delegate": {"sGroup_Activiti":"nssmc"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_nssmc_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_nssmc_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_nssmc_view", "sGroup_Activiti":"nssmc"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_nssmc_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_nssmc_execute": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "RemoveDocumentStepSubject"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1_Create:Create": {},
+  "step_2_Edit:Edit": {},
+  "step_3_Accept:Accept": {},
+  "step_4_Seen:Seen": {}
+}

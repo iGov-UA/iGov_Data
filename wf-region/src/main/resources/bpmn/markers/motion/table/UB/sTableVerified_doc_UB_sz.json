@@ -1,0 +1,50 @@
+{
+  "aField": [
+    {
+      "id": "sNumberVerified",
+      "name": "№ п/п",
+      "type": "long",     
+      "nWidth": "5%"
+   
+    },
+    {
+      "id": "sNameVerified",
+      "name": "Ім'я повіреного",
+      "type": "string"
+       
+    },
+    {
+      "id": "sPositionVerified",
+      "name": "Посада",
+      "type": "string"
+      
+      
+    },
+    {
+      "id": "sPIB_Verified",
+      "name": "ПІБ",
+      "type": "string"
+      
+      
+    },
+    {
+      "id": "sIPN_Verified",
+      "name": "Серія та номер паспорта, ІПН",
+      "type": "string"
+      
+      
+    },
+    {
+      "id": "sDateOrgan",
+      "name": "Дата видачі та орган, що видав паспорт",
+      "type": "string"      
+      
+    },
+    {
+      "id": "sAdress",
+      "name": "Адреса реєстрації та поштова адреса",
+      "type": "string"      
+      
+    } 
+  ]
+}

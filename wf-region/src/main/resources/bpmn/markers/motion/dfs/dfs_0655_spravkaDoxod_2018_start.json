@@ -1,0 +1,85 @@
+{
+  "attributes": {
+    "Line_1": {
+      "aElement_ID": [
+        "bankIdlastName"
+      ],
+      "sValue": "Блок даних заявника"
+    },
+    "Line_2": {
+      "aElement_ID": [
+        "sCountry"
+      ],
+      "sValue": "Адреса заявника"
+    },
+    "Line_3": {
+      "aElement_ID": [
+        "sDoc"
+      ],
+      "sValue": "Паспортні дані"
+    },
+    "Line_4": {
+      "aElement_ID": [
+        "sLabelINFO"
+      ],
+      "sValue": "Інформація про період замовлення справки"
+    },
+    "Line_5": {
+      "aElement_ID": [
+        "lStartYear"
+      ],
+      "sValue": ""
+    },
+    "Line_6": {
+      "aElement_ID": [
+        "lEndYear"
+      ],
+      "sValue": ""
+    },
+    "Line_7": {
+      "aElement_ID": [
+        "asPaperOrElect"
+      ],
+      "sValue": ""
+    }
+  },
+  "motion": {
+    "ShowFieldsOnCondition_11": {
+      "aField_ID": [
+        "asPaperOrElect"
+      ],
+      "asID_Field": {
+        "sCondit": "bEl"
+      },
+      "sCondition": "[sCondit] == 'true'"
+    },
+    "ShowFieldsOnCondition_12": {
+      "aField_ID": [
+        "sLabelECP",
+        "form_signed_1"
+      ],
+      "asID_Field": {
+        "sCondit": "asPaperOrElect"
+      },
+      "sCondition": "[sCondit] == 'version1'"
+    },
+    "RequiredFieldsOnCondition_21": {
+      "aField_ID": [
+        "form_signed_1"
+      ],
+      "asID_Field": {
+        "sClient": "asPaperOrElect"
+      },
+      "sCondition": "[sClient] == 'version1'"
+    }
+  },
+  "validate": {
+    "CustomFormat_1": {
+      "aField_ID": [
+        "sDate"
+      ],
+      "sFormat": "##.##.####",
+      "sMessage": "Невірна дата, введіть дату у форматі ##.##.####"
+    }
+  }
+}

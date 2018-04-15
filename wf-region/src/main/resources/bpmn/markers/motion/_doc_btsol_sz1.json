@@ -1,0 +1,58 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1": {
+      "aField_ID": [
+        "sAcceptanceInformation"
+      ],
+      "asID_Field": {
+        "sClient": "sInformation"
+      },
+      "sCondition": "[sClient] == 'Enum1'"
+    },
+    "RequiredFieldsOnCondition_1": {
+      "aField_ID": [
+        "sAcceptanceInformation"      
+      ],
+      "asID_Field": {
+        "sClient": "sInformation"                 
+      },
+      "sCondition": "[sClient] == 'Enum1'"  
+    },
+    "ShowFieldsOnCondition_2": {
+      "aField_ID": [
+        "sTableWinners"
+      ],
+      "asID_Field": {
+        "sClient": "sTender"
+      },
+      "sCondition": "[sClient] == 'Yes'"
+    },
+    "RequiredFieldsOnCondition_2": {
+      "aField_ID": [
+        "sTableWinners" 
+      ],
+      "asID_Field": {
+        "sClient": "sTender"                 
+      },
+      "sCondition": "[sClient] == 'Yes'"  
+    },
+    "ShowFieldsOnCondition_3": {
+      "aField_ID": [
+        "sTableNumber441"
+      ],
+      "asID_Field": {
+        "sClient": "sNumber_441"
+      },
+      "sCondition": "[sClient] == '0'"    
+    },
+    "RequiredFieldsOnCondition_3": {
+      "aField_ID": [
+        "sTableNumber441" 
+      ],
+      "asID_Field": {
+        "sClient": "sNumber_441"                 
+      },
+      "sCondition": "[sClient] == '0'"  
+    }
+  }
+}

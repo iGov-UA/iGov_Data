@@ -1,0 +1,14 @@
+{
+  "validate": {
+    "EndPeriod": {
+      "aField_ID": [
+        "sDateVacationEnd",
+        "sDateVacationBegin"
+      ],
+      "aDateBegin_ID": [
+        "sDateVacationBegin",
+        "sDateReg"
+      ]
+    }
+  }
+}

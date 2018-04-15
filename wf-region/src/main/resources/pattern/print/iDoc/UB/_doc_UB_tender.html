@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html>
+<head lang="ua">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Документ створено у системі iDoc</title>
+
+
+    <!-- Общие стили  -->
+    <style type="text/css">
+        body article.PrintFormClaim {
+            font: 300 14pt/16pt "Times New Roman";
+            text-align: justify;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            word-wrap: break-word;
+        }
+
+        article.PrintFormClaim h1 {
+            text-align: center;
+            margin-top: 24px 0 6px 0;
+            font-size: 14pt;
+            font-weight: 600;
+        }
+
+        article.PrintFormClaim h2 {
+            font-weight: 600;
+        }
+
+        article.PrintFormClaim h2,
+        article.PrintFormClaim h3,
+        article.PrintFormClaim p {
+            text-indent: 50px; /* Отступ первой строки в пикселах */
+            margin: 12px 0 6px 0;
+        }
+
+            /* Без абзаца */
+            article.PrintFormClaim .not-indent p,
+            article.PrintFormClaim p.not-indent {
+                text-indent: 0;
+            }
+
+        article.PrintFormClaim h2 {
+            font-size: 14pt;
+            font-weight: 600;
+        }
+
+        article.PrintFormClaim h3 {
+            font-size: 14pt;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        article.PrintFormClaim div {
+            margin-top: 6pt;
+        }
+
+
+        /* Подчеркивание с отступами не подходит для  */
+        article.PrintFormClaim em {
+            padding: 0 15px;
+            font-style: normal;
+            border-bottom: 1px solid black;
+        }
+
+        article.PrintFormClaim ol,
+        article.PrintFormClaim ul {
+            list-style-type: none;
+            counter-reset: item 0;
+            padding: 0; /* Убираем поля */
+            margin: 6px 0 12px 0; /* Отступ слева */
+        }
+
+
+            /* настраиваем отступы маркеров */
+            article.PrintFormClaim ol li:before,
+            article.PrintFormClaim ul li:before {
+                margin-left: 50px;
+                display: inline-block;
+                text-align: left;
+            }
+
+            /* нумерация со скобкой */
+            article.PrintFormClaim ol li:before {
+                content: counter(item) ') '; /* Добавляем к числам скобку */
+                counter-increment: item; /* Задаём имя счетчика */
+                width: 33px;
+            }
+
+            /* маркер в виде дифиса */
+            article.PrintFormClaim ul li:before {
+                content: '- '; /* Добавляем к числам скобку */
+                width: 15px;
+            }
+
+        .smallText {
+            font-size: 12pt;
+            line-height: 1.1;
+        }
+    </style>
+
+    <!-- Стили таблиц -->
+    <style type="text/css">
+        /* Общее оформление таблицы */
+        article.PrintFormClaim table {
+            border-spacing: 0;
+            border: 1px solid black;
+            border-radius: 5px;
+            border-collapse: collapse; /* Отображать двойные линии как одинарные */
+        }
+
+        /* Настройка заголовков */
+        article.PrintFormClaim th {
+            text-align: center;
+        }
+
+        article.PrintFormClaim td,
+        article.PrintFormClaim th {
+            padding: 5px 5px;
+            vertical-align: central;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+            /* оставить только нижнюю границу */
+            article.PrintFormClaim td.bb,
+            article.PrintFormClaim .bb {
+                border: 0px solid black;
+                border-bottom: 1px solid black;
+            }
+
+            /* Убрать границы таблицы */
+            article.PrintFormClaim table.notb,
+            article.PrintFormClaim table.notb th,
+            article.PrintFormClaim table.notb td,
+            article.PrintFormClaim th.notb,
+            article.PrintFormClaim td.notb {
+                border: 0px solid black;
+            }
+    </style>
+
+
+    <!-- Выравнивание текста -->
+    <style type="text/css">
+        /* Мелкий шрифт */
+        article.PrintFormClaim table.small-text th,
+        article.PrintFormClaim table.small-text td,
+        article.PrintFormClaim tr.small-text > th,
+        article.PrintFormClaim tr.small-text > td,
+        article.PrintFormClaim tr > th.small-text,
+        article.PrintFormClaim tr > td.small-text,
+        article.PrintFormClaim .small-text {
+            font-size: 10pt;
+        }
+
+        /* Выравнимание текста по вертикали*/
+        article.PrintFormClaim table.va-c th,
+        article.PrintFormClaim table.va-c td,
+        article.PrintFormClaim tr.va-c > th,
+        article.PrintFormClaim tr.va-c > td,
+        article.PrintFormClaim tr > th.va-c,
+        article.PrintFormClaim tr > td.va-c,
+        article.PrintFormClaim .va-c {
+            vertical-align: central;
+        }
+
+        article.PrintFormClaim table.va-b th,
+        article.PrintFormClaim table.va-b td,
+        article.PrintFormClaim tr.va-b > th,
+        article.PrintFormClaim tr.va-b > td,
+        article.PrintFormClaim tr > th.va-b,
+        article.PrintFormClaim tr > td.va-b,
+        article.PrintFormClaim .va-b {
+            vertical-align: bottom;
+        }
+
+
+        article.PrintFormClaim table.va-t th,
+        article.PrintFormClaim table.va-t td,
+        article.PrintFormClaim tr.va-t > th,
+        article.PrintFormClaim tr.va-t > td,
+        article.PrintFormClaim tr > th.va-t,
+        article.PrintFormClaim tr > td.va-t,
+        article.PrintFormClaim .va-t {
+            vertical-align: top;
+        }
+
+
+        /* выравнивание текста по горизонтали */
+        article.PrintFormClaim table.ta-c th,
+        article.PrintFormClaim table.ta-c td,
+        article.PrintFormClaim tr.ta-c > th,
+        article.PrintFormClaim tr.ta-c > td,
+        article.PrintFormClaim tr > th.ta-c,
+        article.PrintFormClaim tr > td.ta-c,
+        article.PrintFormClaim .ta-c {
+            text-align: center;
+        }
+
+        article.PrintFormClaim table.ta-l th,
+        article.PrintFormClaim table.ta-l td,
+        article.PrintFormClaim tr.ta-l > th,
+        article.PrintFormClaim tr.ta-l > td,
+        article.PrintFormClaim tr > th.ta-l,
+        article.PrintFormClaim tr > td.ta-l,
+        article.PrintFormClaim .ta-l {
+            text-align: left;
+        }
+
+        article.PrintFormClaim table.ta-r th,
+        article.PrintFormClaim table.ta-r td,
+        article.PrintFormClaim tr.ta-r > th,
+        article.PrintFormClaim tr.ta-r > td,
+        article.PrintFormClaim tr > th.ta-r,
+        article.PrintFormClaim tr > td.ta-r,
+        article.PrintFormClaim .ta-r {
+            text-align: right;
+        }
+
+        article.PrintFormClaim table.ta-j th,
+        article.PrintFormClaim table.ta-j td,
+        article.PrintFormClaim tr.ta-j > th,
+        article.PrintFormClaim tr.ta-j > td,
+        article.PrintFormClaim tr > th.ta-j,
+        article.PrintFormClaim tr > td.ta-j,
+        article.PrintFormClaim .ta-j {
+            text-align: justify;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            word-wrap: break-word;
+        }
+
+
+
+        /* Форматирование текста*/
+        /* Косым */
+        article.PrintFormClaim table.i th,
+        article.PrintFormClaim table.i td,
+        article.PrintFormClaim tr.i > th,
+        article.PrintFormClaim tr.i > td,
+        article.PrintFormClaim tr > th.i,
+        article.PrintFormClaim tr > td.i,
+        article.PrintFormClaim .i {
+            font-style: italic;
+        }
+        /* Жирным */
+        article.PrintFormClaim table.b th,
+        article.PrintFormClaim table.b td,
+        article.PrintFormClaim tr.b > th,
+        article.PrintFormClaim tr.b > td,
+        article.PrintFormClaim tr > th.b,
+        article.PrintFormClaim tr > td.b,
+        article.PrintFormClaim .b {
+            font-weight: 600;
+        }
+        /* Подчеркнутым */
+        article.PrintFormClaim table.u th,
+        article.PrintFormClaim table.u td,
+        article.PrintFormClaim tr.u > th,
+        article.PrintFormClaim tr.u > td,
+        article.PrintFormClaim tr > th.u,
+        article.PrintFormClaim tr > td.u,
+        article.PrintFormClaim .u {
+            text-decoration: underline;
+        }
+
+
+        /* Первая колонка жирным */
+        article.PrintFormClaim table.col-1-b tr td:nth-child(1) {
+            font-weight: 600;
+        }
+
+        /* Вторая колонка жирным */
+        article.PrintFormClaim table.col-2-b tr td:nth-child(2) {
+            font-weight: 600;
+        }
+    </style>
+
+
+    <!-- Подготовленные блоки -->
+    <style type="text/css">
+        .whomBlock {
+            text-align: justify;
+        }
+
+        .whoBlock {
+            text-align: justify;
+        }
+
+        .claimBlock {
+            text-align: center;
+            margin-top: 6pt;
+            font-size: 14pt;
+            font-weight: 600;
+        }
+
+
+        /* организация колонок */
+        article.PrintFormClaim .layout {
+            overflow: hidden;
+        }
+
+            article.PrintFormClaim .layout div {
+                margin: 0 0 15px 0;
+                float: left;
+            }
+
+                article.PrintFormClaim .layout div.r-t {
+                    float: right;
+                }
+
+                article.PrintFormClaim .layout div.l-t {
+                    float: left;
+                }
+
+
+        .under_multifield { /* Мой кейс, многострочный текст*/
+            border-bottom: 1px solid black;
+            text-align: justify;
+            clear: both;
+        }
+
+            .under_multifield > b {
+                float: left;
+                padding: 0 10px 0 0;
+                font-weight: normal;
+                position: relative;
+                bottom: -3px;
+                background-color: white;
+            }
+
+            .under_multifield > u {
+                padding: 0 10px;
+                text-decoration: none;
+                border-bottom: 1px solid black;
+                position: relative;
+                bottom: -1px;
+                line-height: 125%;
+            }
+
+        .under_field { /* Блок с подписью */
+            margin: 0 0 15px 0;
+            border-bottom: 1px solid black;
+            position: relative;
+            display: inline-block;
+            clear: both;
+        }
+
+            .under_field > b { /*если не надо подчеркивать*/
+                padding: 0 10px 0 0;
+                font-weight: normal;
+                background: white;
+                display: inline-block;
+                position: relative;
+                left: 0;
+                font-style: normal;
+                bottom: -1px;
+                background-color: white;
+            }
+
+            /*если надо подчеркнуть*/
+            .under_field > u {
+                padding: 0 10px;
+                text-decoration: none;
+                background: white;
+                display: inline-block;
+                position: relative;
+                left: 0;
+            }
+
+            /*текст снизу*/
+            .under_field > span {
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                color: #606060;
+                bottom: -16px;
+                font-size: 11px;
+            }
+
+
+        /* линия отреза */
+        .lineCut {
+            border-bottom: 2px dashed #000;
+        }
+
+            .lineCut > span {
+                bottom: 10px;
+                background: white;
+                float: left;
+                position: relative;
+            }
+
+        /*чек-боксы*/
+        .check_box {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #000;
+            margin: 0 10px 0 5px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .text_box {
+            height: 25px;
+            border: 1px solid #000;
+            margin-left: 5px;
+            display: inline-block;
+            line-height: 23px;
+        }
+
+
+        /* номер дела, ярлык */
+        .numBusines {
+            border: 1px solid #000000;
+            margin-top: 25px;
+            float: right;
+        }
+
+            .numBusines > div {
+                height: 20px;
+                margin-right: 5px;
+                margin-left: 5px;
+                border-bottom: 1px solid black;
+                position: relative;
+                display: block;
+            }
+
+                .numBusines > div > i {
+                    height: 21px;
+                    left: 0;
+                    padding-right: 5px;
+                    background: white;
+                    display: inline-block;
+                    position: relative;
+                    font-style: normal;
+                }
+
+                .numBusines > div > span {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    color: #606060;
+                    bottom: -16px;
+                    font-size: 11px;
+                }
+    </style>
+
+    <!-- Ширина и отступы -->
+    <style type="text/css">
+        .m-b-5 {
+            margin-bottom: 5px;
+        }
+
+        .m-b-30 {
+            margin-bottom: 30px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+
+        /* ширина в процентах */
+        .w1p {
+            width: 1%;
+        }
+
+        .w4p {
+            width: 4%;
+        }
+
+        .w60p {
+            width: 60%;
+        }
+
+        .w30p {
+            width: 30%;
+        }
+
+        .w33p {
+            width: 33%;
+        }
+
+        .w100p {
+            width: 100%;
+        }
+
+        /* ширина */
+        .w50 {
+            width: 50px;
+        }
+
+        .w100 {
+            width: 100px;
+        }
+
+        .w150 {
+            width: 150px;
+        }
+
+        .w200 {
+            width: 200px;
+        }
+
+        .w250 {
+            width: 250px;
+        }
+
+        .w300 {
+            width: 300px;
+        }
+
+        .w350 {
+            width: 350px;
+        }
+
+        .w450 {
+            width: 450px;
+        }
+
+        .w400 {
+            width: 400px;
+        }
+
+        .w500 {
+            width: 500px;
+        }
+
+        /* отступ  */
+
+        .pl-paragraph {
+            padding-left: 1cm;
+        }
+
+        .pl-25 {
+            padding-left: 25px;
+        }
+
+        .pl-50 {
+            padding-left: 50px;
+        }
+
+        .pl-75 {
+            padding-left: 75px;
+        }
+
+        .pl-100 {
+            padding-left: 100px;
+        }
+
+        .pl-150 {
+            padding-left: 150px;
+        }
+
+        .pl-200 {
+            padding-left: 200px;
+        }
+
+        .pl-250 {
+            padding-left: 250px;
+        }
+
+        .pl-300 {
+            padding-left: 300px;
+        }
+
+        .pl-paragraph {
+            padding-left: 1cm;
+        }
+
+        .pr-25 {
+            padding-right: 25px;
+        }
+
+        .pr-50 {
+            padding-right: 50px;
+        }
+
+        .pr-75 {
+            padding-right: 75px;
+        }
+
+        .pr-100 {
+            padding-right: 100px;
+        }
+
+        .pr-150 {
+            padding-right: 150px;
+        }
+
+        .pr-200 {
+            padding-right: 200px;
+        }
+
+        .pr-250 {
+            padding-right: 250px;
+        }
+
+        .pr-300 {
+            padding-right: 300px;
+        }
+
+
+        .ml-5 {
+            margin-left: 5cm;
+        }
+
+        .ml-6 {
+            margin-left: 6cm;
+        }
+
+        .ml-7 {
+            margin-left: 7cm;
+        }
+
+        .ml-8 {
+            margin-left: 8cm;
+        }
+
+        .ml-9 {
+            margin-left: 9cm;
+        }
+
+        .ml-10 {
+            margin-left: 10cm;
+        }
+
+        .ml-11 {
+            margin-left: 11cm;
+        }
+
+        .ml-12 {
+            margin-left: 12cm;
+        }
+
+        .ml-13 {
+            margin-left: 13cm;
+        }
+
+        .ml-14 {
+            margin-left: 14cm;
+        }
+
+
+
+        /* междустрочные интервалы */
+        .line0 {
+            line-height: 0;
+        }
+
+        .line05 {
+            line-height: 0.5;
+        }
+
+        .line1 {
+            line-height: 1;
+        }
+
+        .line15 {
+            line-height: 1.5;
+        }
+
+        .line2 {
+            line-height: 2;
+        }
+
+        .line25 {
+            line-height: 2.5;
+        }
+
+        .line3 {
+            line-height: 3;
+        }
+
+        /*отступы по горизонтали*/
+        .pg-25 {
+            padding: 0 25px;
+        }
+
+        .pg-50 {
+            padding: 0 50px;
+        }
+
+        .pg-75 {
+            padding: 0 75px;
+        }
+
+        .pg-100 {
+            padding: 0 100px;
+        }
+
+        /* отступы по вертикале */
+        article.PrintFormClaim .mt-6 :nth-child(n) {
+            margin-top: 6px;
+        }
+
+
+        .test {
+            border: 1px solid red;
+        }
+
+        article.PrintFormClaim footer#colontitle {
+            /* Фиксируем елемент на странице */
+            display: none;
+        }
+    </style>
+
+
+    <!-- Стили печати -->
+    <style type="text/css">
+        @media screen {
+            body article.PrintFormClaim {
+                padding: 1cm 1.5cm 1cm 2.5cm;
+                width: 21cm;
+                min-height: 100%;
+                height: 100%;
+            }
+        }
+
+        /* Настройки печати должны помещаться в блок @media print */
+        @media print {
+            /* Задайом отступы страницы по умолчанию, если пользователь выбрал свои то эти игнорируются */
+            /* Задавать либо в cm (санитиметры) либо в in (дюймы)  в px  и дуругих единицах нельзя */
+            @page {
+                margin: 1.5cm 1.5cm 1.5cm 2.5cm;
+            }
+
+            body {
+                font-family: Times, 'Times New Roman', serif; /* Шрифт с засечками */
+            }
+
+            article.PrintFormClaim section {
+                /* Указываем что по окончанию каждого блока делаем разрыв страницы */
+                page-break-after: always;
+                /* это по слоям, тоесть указывает какой слой будет сверху, у кого больше тот и сверху */
+                z-index: 1;
+            }
+
+            article.PrintFormClaim footer#colontitle {
+                /* Фиксируем елемент на странице */
+                display: block;
+                position: fixed;
+                /* привязываем по вертикали, тоесть к низу страницы, если вместо bottom указать top то будет к верху */
+                bottom: 0;
+                /* привязываем по горизонтали, тоесть к правой части страницы */
+                /* если вместо right указать left то будет привязывать к левому краю страницы */
+                left: 0;
+                /* это по слоям, тоесть указывает какой слой будет сверху, у кого больше тот и сверху */
+                z-index: 0;
+            }
+        }
+       
+    </style>
+
+</head>
+<body>
+
+    <article class="PrintFormClaim">
+     
+
+        <section>
+            <div class="claimBlock">ЗАПИТ ЦІНОВИХ ПРОПОЗИЦІЙ</div>
+            <div class="claimBlock">стосовно  закупівлі</div>
+           <div class="claimBlock">„[sName_Zak]”</div>
+            <br>
+            <div class="layout">
+                <div class="pl-50">                                      
+                </div>
+                <div class="pr-50 r-t">
+                [sDateCreateProcess]
+                </div>
+            </div>
+
+                
+          <div> 1. <i>ПАТ «УНІВЕРСАЛ БАНК» </i> запрошує Вас надати цінові пропозиції (надалі - Пропозиції) на [sName_Zak]. Цей запит не є конкурсом та не означає проведення конкурсу у значенні Цивільного кодексу України та не накладає на нас будь-яких зобов’язань та обмежень, ним передбачених. Крім  того, ми не зобов’язані приймати жодну Пропозицію, яка надійшла нам у відповідь на цей запит.</div>
+<div>2. Ваші Пропозиції мають бути повними, тобто включати усі товари відповідно до цього Запрошення. Контракт присуджуватиметься тій компанії, загальна вартість пропозиції якої буде найнижчою при відповідності вказаним умовам постачання та технічним умовам. </div>
+<div>3. Під час проведення 1 туру тендеру цінова пропозиція (у встановленій формі), а також додаткова інформація мають завантажуватись в систему електронних закупівель (СЕЗ) у форматі word/excel та pdf  (з підписом та печаткою).</div>
+ <div>	4.Будь-які питання з приводу закупівлі, включаючи питання щодо уточнення положень цього Запиту, мають бути викладені виключно в письмовій формі в СЕЗ, не пізніше ніж за 24 години до терміну, який зазначено у п. 5 нижче. До своїх пропозицій Ви маєте додати відповідну технічну документацію, а також каталоги й інші друковані матеріали чи іншу додаткову інформацію по кожному товару,  включаючи назви та адреси компаній, що надають сервісне обслуговування.<div>
+   <div>5. Кінцевим терміном для отримання Ваших пропозицій встановлюється <i>(вказати час та дату) (Термін підготовки цінових пропозицій має складати не менш ніж 4 робочі дні з урахуванням дати розсилки цього Запиту та отримання Пропозицій.) </i>за адресою, зазначеною у пункті 3. </div>
+<div>6. Після проведення 1 туру планується запуск 2 туру (редукціон) серед компаній, що відповідають обов’язковим умовам тендеру. Про дату проведення 2 туру та терміни подання пропозицій учасники тендеру будуть повідомлені додатково.
+<br>Після завершення редукціону Комерційна пропозиція (Додаток 1) має бути надіслана на електронну адресу <i>(вказати адресу)</i> у форматі word/excel та pdf (з підписом та печаткою) протягом 3 годин з моменту закінчення редукціону. </div>
+<div>7. Подання Цінових пропозицій в 1 турі здійснюється відповідно до нижченаведених інструкцій, а саме: заповнені Умови постачання (Додаток 1), Технічні умови (Додаток 2) та Анкету учасника (Додаток 3), кожну сторінку яких має бути підписано та скріплено печаткою.  В подальшому цю інформацію буде включено до договору. </div>
+   
+ <div>  (і) <ins>ЦІНИ:</ins> Див. п. 3 Додатку 1 нижче.</div>
+  <div> (ii) <ins>ОЦІНКА ПРОПОЗИЦІЙ ТА ПРИСУДЖЕННЯ КОНТРАКТУ:</ins>  пропозиції, визнані такими, що задовольняють обов’язкові умови постачання та технічні умови, оцінюватимуться шляхом порівняння цін <i>(при необхідності вказати: включаючи вартість доставки до місця призначення, монтажу та пусконалагоджувальних робіт).</i> Замовлення на поставку присуджуватиметься компанії, яка запропонує найнижчу ціну та задовольнятиме встановлені обов’язкові  вимоги. Ваша пропозиція та умови, зазначені у цьому Запиті, будуть включені до договору. </div>
+    <div>  (iii) <ins>ТЕРМІН ЧИННОСТІ ПРОПОЗИЦІЇ:</ins>Див. п. 2 Додатку 1 нижче.</div>
+                 
+   <div> 8. Письмові скарги щодо проведення цієї закупівлі Ви можете направляти <b>ТОВ «Група ТАС» </b>за адресою: <b>01032, м. Київ, вул. Симона Петлюри, буд. 30, офіс 406 або procurement@tas.ua.</b></div>
+<div>9. Будь-які витрати, пов’язані з підготовкою та подачею Пропозицій не компенсуються Покупцем незалежно від результату подачі Вашої Пропозиції.</div>
+<div>10. Ми також залишаємо за собою право відхилити Вашу Пропозицію, коли встановимо, що будь-який співробітник Вашої компанії надав чи погодився надати або запропонував нашому співробітнику винагороду в будь-якій формі – роботу, послугу, будь-яку цінність в якості стимулу, що може вплинути на прийняття рішення по наданню контракту за цією закупівлею.</div>
+<div>11. Ми також залишаємо за собою право відхилити Вашу Пропозицію, коли встановимо, що між учасниками було досягнуто домовленостей з метою попереднього прийняття або впливу на прийняття рішення по наданню контракту за цією закупівлею.</div>
+   <div>З повагою, </div>
+   <div> Правління <i>ПАТ «УНІВЕРСАЛ БАНК» ____________________ Старомінська І.О.</i></div>
+   <br/>
+
+        <table class="w100p notb">
+                <colgroup>
+                    <col width="20%" />
+                    <col width="30%" />
+                    <col width="50%" />
+                   
+                </colgroup>
+                <tbody>
+                    <tr class="ta-l">
+                        <td>Додатки:</td>
+                        <td>Додаток 1. Умови постачання</td>
+                        <td></td>                      
+                       
+                    </tr>
+                    <tr class="ta-l">
+                        <td></td>
+                        <td>Додаток 2. Технічні умови</td>
+                        <td></td>                    
+                    </tr>
+                    <tr class="ta-l">
+                        <td></td>
+                        <td>Додаток 3. Анкета учасника</td>
+                        <td></td>                    
+                    </tr>
+                  <tr id="sLot" class="ta-l">
+                        <td></td>
+                        <td>Додаток 4. Лоти</td>
+                        <td></td>                    
+                    </tr>
+                  <tr id="sAdress" class="ta-l">
+                        <td></td>
+                        <td>Додаток 4. Адреса</td>
+                        <td></td>                    
+                    </tr>
+                  <tr id="sAdress1" class="ta-l">
+                        <td></td>
+                        <td>Додаток 5. Адреса</td>
+                        <td></td>                    
+                    </tr>      
+                    <tr class="ta-l">  
+                       <td></td>
+                    <td><!--[sTableFile-->[sNameFile]<!--sTableFile]--></td>
+                       <td></td>
+                     </tr>
+                </tbody>
+            </table>
+            
+    <div/>             
+       <br/>           
+   <section/>                  
+             
+<section>
+  <div class="ml-11 w100p ta-l">
+              <div class="layout not-indent"><b>Додаток 1</b></div>
+    <div class="layout not-indent"><b>до Запиту цінових пропозиці</b></div>        </div>
+<br/>
+          
+  <div class="ta-c">(БЛАНК ПОСТАЧАЛЬНИКА)</div>
+            <div class="claimBlock">УМОВИ ПОСТАЧАННЯ</div>
+          
+  <div>Покупець: <i>ПАТ «УНІВЕРСАЛ БАНК»</i></div>        
+<div>Номер та назва закупівлі: [sName_Zak]</div>
+  
+  
+  
+  <p> 1. <b>Ціни на товари, що мають постачатися</b>
+	(вкажіть Виробника, моделі та ціни, включаючи ціну доставки до місця призначення, монтажу та пусконалагоджування, інших додаткових послуг, якщо необхідно,  податки та збори) (заповніть таблицю)</p>
+  <br/>
+  
+  <table class="w100p">
+                <colgroup>
+                    <col width="10%" />
+                    <col width="30%" />
+                    <col width="15%" />
+                    <col width="25%" />
+                   <col width="25%" />
+               </colgroup>
+                <tbody>
+           <tr class="small-text">
+                        <th>№</th>
+                        <th>Виробник і модель</th>
+                        <th>Кількість</th>
+                        <th id=sCina>Ціна за одиницю</th>
+                        <th>Ціна за одиницю</th>                         
+                    </tr>
+            <!--[sTablePrice--> <tr class="ta-c">
+                        <td>[sNumber]</td>
+                        <td>[sNameGoods]</td>
+                        <td>[sQuantity]</td>
+                        <td id=sCina1></td>
+                      <td></td>                      
+                    </tr><!--sTablePrice]-->                 
+                  <tr class="ta-c">
+                        <td></td>
+                        <td class="ta-l" colspan="2">ПДВ (____%) </td> 
+                    <td></td> 
+                      <td></td>                      
+                    </tr>
+                  <tr class="ta-c">
+                        <td></td>
+                        <td class="ta-l" colspan="2">Всього</td>                       <td></td> 
+                      <td></td>                      
+                    </tr>
+                </tbody>
+            </table>
+
+  
+  
+<p>  (Примітка: у разі розбіжності між ціною за одиницю та загальною вартістю, підрахованою учасником торгів на основі ціни за одиницю продукції, чинною вважається загальна вартість, вирахувана на основі цін за одиницю продукції.) </p>
+  <p>(<i>Зважаючи на доцільність вказати:</i> Пропозиції можуть бути подані за усіма чи будь-яким лотом).<p>
+    <p>2. <b>Термін чинності Пропозиції:</b> Запропоновані цінові пропозиції є дійсними протягом 45 календарних днів від дати їхнього отримання, встановленої в пункті 5 Запиту.</p>
+    <p>3.<b> Постійність ціни.</b> Ціни мають бути виражені в гривнях, включаючи вартість доставки до місця призначення <span id="sDod"> згідно Додатка 5 <span/><!--[sTableAdress--><span id="sTablA">[sName_Adress],[sName_Service]<span/><!--sTableAdress]--> всі податки та збори. Наведені вище ціни є фіксованими і жодним змінам не підлягають, включаючи період виконання контракту (за виключенням випадку передбаченого п. 9 цього Додатку). Покупець залишає за собою право змінювати кількість товару в межах 20% від зазначеного у цьому Запиті без зміни ціни за одиницю.</p>
+    <p>4. <b>Гривневий еквівалент.</b> Якщо пропозиція містить будь яку іншу за гривню валюту – продавець повинен вказати валюту та курс за яким буде здійснюватися перерахунок з наданням посилання на джерело (наприклад, http://www.bank.gov.ua/).</p>
+    <p>5. <b>Термін постачання та місце призначення.</b> Місце призначення товарів – <span id="sDod1">згідно Додатка 5 <span/><!--[sTableAdress--><span id="sTablA1">[sName_Adress]<span/><!--sTableAdress]-->. Поставка товарів до місця призначення, включаючи <span id="sDod2"> згідно Додатка 5 <span/><!--[sTableAdress--><span id="sTablA2">[sName_Adress],[sName_Service]<span/><!--sTableAdress]-->протягом [sTermin] тижнів від дати підписання договору. Більш тривалий графік поставки може зумовити відхилення Пропозиції. </p>
+    <p>6. <b>Оплата.</b><span id="sOplata" >Оплата (100 %) здійснюється через 10 днів після надання: - рахунку – фактури та на основі Видаткової накладної/підписаного сторонами Акту приймання - передавання), яка підписується Покупцем, що підтвердить повну поставку товару, а також його встановлення та пуск в експлуатацію/налагодження).</p><span/><span id="sOplata2">[sYmovu]<span/>
+    <p>7. <b>Гарантія.</b> Поставлені товари повинні мати гарантію виробника/ постачальника не менше, ніж на [sGarant] місяців від дати поставки товарів Покупцеві.</p>
+    <p>8. <b>Технічні вимоги.</b>/ Наведені у Додатку 2 (Технічні вимоги). Постачальник має підтвердити відповідність запропонованого товару наведеним специфікаціям/ характеристикам, або навести усі розбіжності (див. Додаток 2). </p>
+      <p>9.<b> Наслідки невиконання контракту.</b> Контракт з Постачальником передбачатиме неустойку за невиконання або несвоєчасне виконання Постачальником зобов’язань. 
+        <div>НАЗВА ПОСТАЧАЛЬНИКА____________________________________________________________ <div/> 
+          <div>Підпис уповноваженої особи та посада  ___________________________________________________<div/>
+            <div>ПІБ, Печатка компанії: _________________________________________________________________ <div/>
+              <div>Дата: ___________________<div/>
+                <p>[Примітка: Будь ласка підпишіть та поставте печатку на ВСІ сторінки цього документу]<p/>
+                  <section/>
+   <section>        
+
+      <div class="ml-11 w100p ta-l">
+              <div class="layout not-indent"><b>Додаток 2</b></div>
+    <div class="layout not-indent"><b>до Запиту цінових пропозиці</b></div>        </div>
+<br/>
+     <div class="ta-c">(БЛАНК ПОСТАЧАЛЬНИКА)</div>
+            <div class="claimBlock">ТЕХНІЧНІ ВИМОГИ</div>
+          
+  <div>Покупець: <i>ПАТ «УНІВЕРСАЛ БАНК»</i></div>        
+<div>Номер та назва закупівлі: [sName_Zak]</div>
+      <div class="ta-c">ЗАГАЛЬНІ ВИМОГИ</div>
+     <hr align="center" width="1000" size="1" color="#000000" />
+     [sTextForm1]
+      <div class="ta-c">КРЕСЛЕННЯ (СХЕМИ) (якщо необхідно)</div>
+     <hr align="center" width="1000" size="1" color="#000000" />
+     <div>НАЗВА ПОСТАЧАЛЬНИКА____________________________________________________________ <div/> 
+          <div>Підпис уповноваженої особи та посада  ___________________________________________________<div/>
+            <div>ПІБ, Печатка компанії: _________________________________________________________________ <div/>
+              <div>Дата: ___________________<div/>
+                 <p>[Примітка: Будь ласка підпишіть та поставте печатку на ВСІ сторінки цього документу]<p/>
+                <section/>
+                  <section> 
+            
+      <div class="ml-11 w100p ta-l">
+              <div class="layout not-indent"><b>Додаток 3</b></div>
+    <div class="layout not-indent"><b>до Запиту цінових пропозиці</b></div>        </div>
+<br/>               
+     <div class="ta-c">(БЛАНК ПОСТАЧАЛЬНИКА)</div>
+                    <div class="claimBlock"><b>АНКЕТА УЧАСНИКА</b></div>
+          
+  <div>Покупець: <i>ПАТ «УНІВЕРСАЛ БАНК»</i></div>        
+<div>Номер та назва закупівлі: [sName_Zak]</div>  
+                    <br/>
+<table class="w100p smallText ta-c ">
+                <colgroup>
+                    <col width="6%" />
+                    <col width="30%" />
+                    <col width="14%" />                   
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>№</th>
+                        <th>Категорія</th>
+                        <th>Відомості про учасника</th>                       
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            Організаційно-правова форма та фірмова назва учасника
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            ЄДРПОУ учасника
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                           Свідоцтво про внесення в єдиний державний реєстр юридичних осіб
+(Дата, номер, ким видано)
+
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                           ІПН учасника
+                        </td>
+                        <td></td>
+                       
+                    </tr>
+                  <tr>
+                        <td>5.</td>
+                        <td>
+                           Юридична адреса
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>
+                           Почтова адреса
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>
+                           Банківські реквізити
+(назва та адреса банка, номер р/р учасника, телефони банку
+
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>
+                            Телефони учасника (код міста)
+                        </td>
+                        <td></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>
+                            Факс учасника (код міста)
+                        </td>
+                        <td></td>
+                       
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>
+                            Адрес ел. пошти учасника
+
+                        </td>
+                        <td></td>
+                                          </tr>
+                 <tr>
+                        <td>11.</td>
+                        <td>
+                            ПІБ керівника, що має право підпису відповідно до установчих документів учасника, з вказівкою посади та контактного телефону
+
+                        </td>
+                        <td></td>
+                                          </tr>                  <tr>
+                        <td>12.</td>
+                        <td>
+                            ПІБ головного бухгалтера учасника (контактний телефону)
+                        </td>
+                        <td></td>
+                                          </tr>
+                  <tr>
+                        <td>13.</td>
+                        <td>
+                            ПІБ контактної особи щодо Закупівлі (контактний телефону)
+                        </td>
+                        <td></td>
+                                          </tr>
+                </tbody>
+</table>
+            <br/>
+                    <ul>
+                      <li><i>Будь-ласка заповніть вказану форму по усіх позиціях.</i></li>
+                        <li><i>В графі 7 «Банківські реквізити» вкажіть реквізити для заповнення договору.</i>
+</li>
+                    </ul>
+                        <br/>
+                        <div>НАЗВА ПОСТАЧАЛЬНИКА____________________________________________________________ <div/> 
+          <div>Підпис уповноваженої особи та посада  ___________________________________________________<div/>
+            <div>ПІБ, Печатка компанії: _________________________________________________________________ <div/>
+              <div>Дата: ___________________<div/>
+                 <p>[Примітка: Будь ласка підпишіть та поставте печатку на ВСІ сторінки цього документу]<p/>
+        </section>
+    </article>
+</body>
+</html>

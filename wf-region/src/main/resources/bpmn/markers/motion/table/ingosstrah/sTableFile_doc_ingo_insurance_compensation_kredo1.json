@@ -1,0 +1,59 @@
+{
+  "aField": [
+     {
+      "id": "nNumber",
+      "name": "№, п/п",
+      "type": "long",
+      "nWidth": "5%"
+    },   
+     {
+      "id": "sType_Human",
+      "name": "Тип клієнта",
+      "type": "string"
+    },    
+    {
+      "id": "sName_Human",
+      "name": "ПІБ/Назва клієнта",
+      "type": "string",
+      "nWidth": "35%"
+    },
+    {
+      "id": "nINN_Human",
+      "name": "ІНН",     
+      "type": "long"    
+    },
+    {
+      "id": "sIdEkb",
+      "name": "ID ЕКБ",
+      "type": "string"
+	},
+	{
+      "id": "asTypeEnco",
+      "name": "Значимий",
+      "type": "enum",
+      "nWidth": "8%",
+      "a" : [
+	        {
+		"id" : "sYes2", 
+		"name" : "Так"},
+		{
+		"id" : "sNo2", 
+		"name" : "Ні"}
+		]	
+	},
+	{
+      "id": "asCause",
+      "name": "VIP",
+      "type": "enum",
+      "nWidth": "8%",
+      "a" : [
+	        {
+		"id" : "sYes3", 
+		"name" : "Так"},
+		{
+		"id" : "sNo3", 
+		"name" : "Ні"}
+		]	
+	}
+  ]   
+}

@@ -1,0 +1,98 @@
+{
+  "aField": [
+     {
+      "id": "sCategory",
+      "name": "Категорія",
+      "type": "enum",
+      "a" : [
+	        {
+		"id" : "sCategory1", 
+		"name" : "Автомобілі"},
+			{
+		"id" : "sCategory2", 
+		"name" : "Автоперевезення"},
+		    {
+		"id" : "sCategory3", 
+		"name" : "Оренда"},
+		    {
+		"id" : "sCategory4", 
+		"name" : "Вентиляція"},
+		    {
+		"id" : "sCategory5", 
+		"name" : "Водопостачання"},
+		    {
+		"id" : "sCategory6", 
+		"name" : "Вивіз ТВП"},
+		    {
+		"id" : "sCategory7", 
+		"name" : "Газопостачання"},
+		    {
+		"id" : "sCategory8", 
+		"name" : "Дезінсекція/дератизація"},
+			{
+		"id" : "sCategory9", 
+		"name" : "Дезінсекція"},
+		{
+		"id" : "sCategory10", 
+		"name" : "Канцелярські товари"},
+		{
+		"id" : "sCategory11", 
+		"name" : "Клінінг"},
+		{
+		"id" : "sCategory12", 
+		"name" : "Кур'єрські послуги'"},
+		{
+		"id" : "sCategory13", 
+		"name" : "Лабараторні дослідження"},
+		{
+		"id" : "sCategory14", 
+		"name" : "Обладнання"},
+		{
+		"id" : "sCategory15", 
+		"name" : "Визначення технічного стану конструкцій"},
+		{
+		"id" : "sCategory16", 
+		"name" : "Персонал"},
+		{
+		"id" : "sCategory17", 
+		"name" : "Розпродаж вторсировини"},
+		{
+		"id" : "sCategory18", 
+		"name" : "Проектна документація"},
+		{
+		"id" : "sCategory19", 
+		"name" : "Ремонтні роботи"},
+		{
+		"id" : "sCategory20", 
+		"name" : "Страхування"},
+		{
+		"id" : "sCategory21", 
+		"name" : "Будівництво"},
+		{
+		"id" : "sCategory22", 
+		"name" : "Теплопостачання"},
+		{
+		"id" : "sCategory23", 
+		"name" : "Паливо"},
+		{
+		"id" : "sCategory24", 
+		"name" : "Придбання території"},
+		{
+		"id" : "sCategory25", 
+		"name" : "Упаковка"},
+		{
+		"id" : "sCategory26", 
+		"name" : "Утилізація відходів"},
+		{
+		"id" : "sCategory27", 
+		"name" : "Електропостачання"},
+		{
+		"id" : "sCategory28", 
+		"name" : "Різні послуги"},
+		{
+		"id" : "sCategory29", 
+		"name" : "Вторсировина"}
+		]	
+    }
+    ]
+}

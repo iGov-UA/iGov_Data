@@ -1,0 +1,24 @@
+{
+  "_:Watch": {
+    "_default_MJU": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+    "_default_MJU_read": {
+      "sName": " ",
+      "bWrite": null,      
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Watch": {}
+}

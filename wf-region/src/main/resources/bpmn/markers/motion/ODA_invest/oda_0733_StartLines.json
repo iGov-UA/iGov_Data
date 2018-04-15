@@ -1,0 +1,63 @@
+{
+  "attributes": {
+    "Line_1": {
+      "aElement_ID": [
+        "lPlot"
+      ]
+    },
+    "Line_2": {
+      "aElement_ID": [
+        "sLength"
+      ],
+      "sValue": "Розміри виробничої площі (The size of the production space)"
+    },
+    "Line_3": {
+      "aElement_ID": [
+        "asGasConnection"
+      ],
+      "sValue": "Газопостачання (Gas supply)"
+    },
+    "Line_31": {
+      "aElement_ID": [
+        "sDistanceGas"
+      ],
+      "sValue": "Інформація про підведення газотранспортної мережі до ділянки (Information about supplying the gas transportation network to the site)"
+    },
+    "Line_4": {
+      "aElement_ID": [
+        "asElectricityConnection"
+      ],
+      "sValue": "Електромережа (Electric network)"
+    },
+    "Line_41": {
+      "aElement_ID": [
+        "sDistanceLine"
+      ],
+      "sValue": "Інформація про підведення єлектричної мережі до ділянки (Information about the supply of the electric network to the site)"
+    },
+    "Line_5": {
+      "aElement_ID": [
+        "asWhaterConnection"
+      ],
+      "sValue": "Водопостачання (Water supply)"
+    },
+    "Line_51": {
+      "aElement_ID": [
+        "sWaterSupply"
+      ],
+      "sValue": "Інформація про підведення водопостачання до ділянки (Information about water supply to the site)"
+    },
+    "Line_6": {
+      "aElement_ID": [
+        "asDrainageConnection"
+      ],
+      "sValue": "Водовідведення (Drainage)"
+    },
+    "Line_61": {
+      "aElement_ID": [
+        "sSewage"
+      ],
+      "sValue": "Інформація про можливість водовідведення з ділянки (Information on the possibility of drainage from the site)"
+    }
+  }
+}

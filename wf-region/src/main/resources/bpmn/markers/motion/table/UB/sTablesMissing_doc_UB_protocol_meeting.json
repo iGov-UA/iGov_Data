@@ -1,0 +1,24 @@
+{
+  "aField": [
+    {
+      "id": "sName_Missing",
+      "name": "Відсутні; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_Missing",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+      
+    },
+    {
+      "id": "sEmail_Missing",
+      "name": "Email",
+      "type": "string",
+      "bVisible": "false"
+     
+    }
+  ]
+}

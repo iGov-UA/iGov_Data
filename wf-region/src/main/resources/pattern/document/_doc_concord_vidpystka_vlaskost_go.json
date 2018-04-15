@@ -1,0 +1,63 @@
+{
+  "_:Watch": {
+    "_default_conkordvid": {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_conkordvid_doc": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "AnswerMessage"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+      "_default_conkordvid_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_conkordvid_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_conkordvid_read": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+ "step_1:Create": {},
+ "step_2:Accept": {},
+ "step_3:Agree": {},
+ "step_4:Accept": {},
+ "step_5:Accept": {},
+ "step_6:Agree": {},
+ "step_7:Agree": {},
+ "step_8:Seen": {},
+ "step_9:Agree": {}
+}

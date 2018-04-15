@@ -1,0 +1,20 @@
+{
+  "aField": [
+    {
+      "id": "sName_isExecute",
+      "name": "Відділ; ;sID_SubjectRole=ExecutorDepart,sID_Group_Activiti=sID_Group_Activiti_Depart,nDeepLevel=nDeepLevelDepart",
+      "type": "select"
+    },
+    {
+      "id": "sID_Group_Activiti_Organ",
+      "name": "Орган; ;sID_SubjectRole=ExecutorDepart,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "string"
+    },
+    {
+      "id": "sID_Group_Activiti_isExecute",
+      "name": "Логины на ознайомлення",
+      "type": "string",
+      "bVisible": "false"      
+    }
+  ]
+}

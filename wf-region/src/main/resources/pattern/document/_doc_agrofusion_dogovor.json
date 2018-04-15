@@ -1,0 +1,160 @@
+{
+  "_:Watch": 
+  {
+    "_default_AF": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_AF_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_AF_delegate": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["Delegate","AskMessage"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Product,AF_Supply,AF_Prov,AF_Justice,AF_Staff"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_AF_J": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["Delegate"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Justice"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_AF_Tr": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["Delegate"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Treasury"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    
+    "_default_AF_First": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AskMessage"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Treasury,AF_Agrodep,AF_Justice,AF_Suppl,AF_Staff,AF_IASFin_MainAcc1,AF_OSPFin_MainAcc1,AF_OSFFin_MainAcc1,AF_OSFFin_MainAcc1,AF_RAGFin_MainAcc1"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    
+    "_default_AF_delegateFirst": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["Delegate","AskMessage"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Treasury,AF_Agrodep"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_AF_delegateOwn": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["Delegate"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Head"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_AF_ECPOwn": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "bNeedECP":true,
+      "aPermition": ["Delegate"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"AF_Head_Own1,AF_Head_Own2"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }
+       
+   },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Accept": {},
+  "step_6:Edit": {},
+  "step_7:Execute": {},
+  "step_8:Execute": {},
+  "step_9:Execute": {},
+  "step_10:Execute": {},
+  "step_11:Execute": {},
+  "step_12:Edit": {},
+  "step_13:Execute": {},
+  "step_14:Accept": {},
+  "step_15:Edit": {},
+  "step_16:Execute": {},
+  "step_17:Accept": {},
+  "step_18:Execute": {},
+  "step_19:Agree": {},
+  "step_20:Agree": {},
+  "step_21:Execute": {},
+  "step_22:Execute": {},
+  "step_23:Execute": {}  
+}

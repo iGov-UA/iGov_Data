@@ -1,0 +1,17 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_119": {
+      "aField_ID": [
+		"sFirma",
+        "sNazvaPlanog",
+		"sPoblemHtml",
+		"sPhoto1"
+      ],
+      "asID_Field": {
+        "sClient": "asPodCat6",
+        "sClient1": "asCat1"
+      },
+      "sCondition": "[sClient] == 'sPodCategory9' && [sClient1] == 'sCategory6'"
+    }
+  }
+}

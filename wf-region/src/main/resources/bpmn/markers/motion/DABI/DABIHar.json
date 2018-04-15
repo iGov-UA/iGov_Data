@@ -1,0 +1,14 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_Har1": {
+      "aField_ID": [
+        "dGospPlosh",
+        "tGospBud"
+      ],
+      "asID_Field": {
+        "sCond": "chekTexNag"
+      },
+      "sCondition": "[sCond]=='yes'"
+    }
+  }
+}

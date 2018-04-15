@@ -1,0 +1,88 @@
+{
+  "_:Watch": {
+    "_default_MJU": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "CreateTask", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_MJU_Resolution": {
+      "sName": " ",
+      "aPermition": ["AddViewer", "AskMessage","AnswerMessage", "CancelDocumentSubmit", "RemoveDocumentStepSubject","Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"MJU_Dnipro_"},
+      "bWrite": true, 
+        
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_MJU_Accept": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddVisor"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_MJU_Seen", "sGroup_Activiti":"MJU_Dnipro_"},     
+      "asID_Field_Read": [
+        "*"
+      ]
+      },
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+       "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"MJU_Dnipro_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+    },
+     "_default_MJU_Seen": {
+      "sName": " ",
+      "bWrite": false,
+       "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_MJU_read": {
+      "sName": " ",
+      "bWrite": null,      
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_MJU_Adress": {
+      "sName": " ",
+      "bWrite": true,      
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"MJU_Dnipro_"},
+ 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_MJU_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Direct": {},
+  "step_4:Edit": {}
+}

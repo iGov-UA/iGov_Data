@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="_test_fields_address" name="_test_fields_address" isExecutable="true">
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="sID_address" name="sID_address" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sRegion" name="sRegion" type="select"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_Region" name="sID_UA_Region" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nKOATUU_Region" name="nKOATUU_Region" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sDistrict" name="sDistrict" type="select"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_District" name="sID_UA_District" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nKOATUU_District" name="nKOATUU_District" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asSettlementType" name="asSettlementType" type="enum">
+          <activiti:value id="CITY" name="місто"></activiti:value>
+          <activiti:value id="VILLAGE" name="село"></activiti:value>
+          <activiti:value id="TOWNSHIP" name="смт"></activiti:value>
+          <activiti:value id="SETTLEMENT" name="селище"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSettlement" name="sSettlement" type="select"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_Settlement" name="sID_UA_Settlement" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nKOATUU_Settlement" name="nKOATUU_Settlement" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asStreetType" name="asStreetType" type="enum">
+          <activiti:value id="STREET" name="вулиця"></activiti:value>
+          <activiti:value id="AVENUE" name="проспект"></activiti:value>
+          <activiti:value id="PASS" name="провулок"></activiti:value>
+          <activiti:value id="BOULEVARD" name="бульвар"></activiti:value>
+          <activiti:value id="HOUSING_AREA" name="житловий масив"></activiti:value>
+          <activiti:value id="HIGHWAY" name="шосе"></activiti:value>
+          <activiti:value id="SQUARE" name="площа"></activiti:value>
+          <activiti:value id="ENTRANCE" name="в'їзд"></activiti:value>
+          <activiti:value id="PASSAGE" name="проїзд"></activiti:value>
+          <activiti:value id="BLIND_STREET" name="тупик"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sStreet" name="sStreet" type="select"></activiti:formProperty>
+        <activiti:formProperty id="sHouse" name="sHouse" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string"></activiti:formProperty>
+        <activiti:formProperty id="email" name="email" type="string"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <serviceTask id="servicetask1" name="Тест ПФ" activiti:delegateExpression="#{MailTaskWithAttachments}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Тест полей Адрес]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+[pattern/mail/new_design/_common_content_start.html]
+			<p>Тут должна быть тестовая принтформа с полями Адреса</p>
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_feedback.html]   	 
+[pattern/mail/new_design/_common_signature_start.html]
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${PrintForm_1}]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <userTask id="usertask1" name="User Task" activiti:candidateGroups="sales">
+      <extensionElements>
+        <activiti:formProperty id="sID_address" name="sID_address; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sRegion" name="sRegion" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_Region" name="sID_UA_Region; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nKOATUU_Region" name="nKOATUU_Region; ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sDistrict" name="sDistrict" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_District" name="sID_UA_District; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nKOATUU_District" name="nKOATUU_District; ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asSettlementType" name="asSettlementType" type="enum" writable="false">
+          <activiti:value id="CITY" name="місто"></activiti:value>
+          <activiti:value id="VILLAGE" name="село"></activiti:value>
+          <activiti:value id="TOWNSHIP" name="смт"></activiti:value>
+          <activiti:value id="SETTLEMENT" name="селище"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSettlement" name="sSettlement" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_Settlement" name="sID_UA_Settlement; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nKOATUU_Settlement" name="nKOATUU_Settlement; ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asStreetType" name="asStreetType" type="enum" writable="false">
+          <activiti:value id="STREET" name="вулиця"></activiti:value>
+          <activiti:value id="AVENUE" name="проспект"></activiti:value>
+          <activiti:value id="PASS" name="провулок"></activiti:value>
+          <activiti:value id="BOULEVARD" name="бульвар"></activiti:value>
+          <activiti:value id="HOUSING_AREA" name="житловий масив"></activiti:value>
+          <activiti:value id="HIGHWAY" name="шосе"></activiti:value>
+          <activiti:value id="SQUARE" name="площа"></activiti:value>
+          <activiti:value id="ENTRANCE" name="в'їзд"></activiti:value>
+          <activiti:value id="PASSAGE" name="проїзд"></activiti:value>
+          <activiti:value id="BLIND_STREET" name="тупик"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sStreet" name="sStreet" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sHouse" name="sHouse; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_1" name="File label;File title;sPrintFormFileAsPDF=pattern/print/testPrint_Address.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/testPrint_Address.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
+      </extensionElements>
+    </userTask>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="usertask1" targetRef="servicetask1"></sequenceFlow>
+    <sequenceFlow id="flow3" sourceRef="servicetask1" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram__test_fields_address">
+    <bpmndi:BPMNPlane bpmnElement="_test_fields_address" id="BPMNPlane__test_fields_address">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="100.0" y="150.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="320.0" y="140.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="170.0" y="140.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="470.0" y="150.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="135.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="170.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="275.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="425.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="470.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

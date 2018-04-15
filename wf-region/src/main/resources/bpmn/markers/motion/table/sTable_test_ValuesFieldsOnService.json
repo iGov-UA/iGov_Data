@@ -1,0 +1,9 @@
+{
+  "aField": [
+    {
+      "id": "sTest",
+      "name": "sTest",
+      "type": "string"
+    }
+  ]
+}

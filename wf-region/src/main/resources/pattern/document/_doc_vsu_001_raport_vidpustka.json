@@ -1,0 +1,71 @@
+{
+  "_:Watch": {
+    "_default_VSU": {
+      "sName": "CreateDoc",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+   "_default_VSU_Agree": {
+      "sName": "Level of Agree",
+      "bWrite": true,
+        "aPermition": ["AskMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+   "_default_VSU_Accept": {
+      "sName": "Level of Accept",
+      "bWrite": true,
+        "aPermition": ["AskMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+     },
+   "_default_VSU_VK": {
+      "sName": "Level of HR-department",
+      "bWrite": true,
+      "aPermition": ["AskMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+   "_default_VSU_Seen": {
+      "sName": "Level of Seen",
+      "bWrite": false,
+      "aPermition": ["AskMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1_CreateDoc:Create": {},
+  "step_2_Accept_OK:Accept": {},
+  "step_3_Accept_Commander1:Accept": {},
+  "step_4_Accept_Commander2:Accept": {},
+  "step_5_Accept_Commander3:Accept": {},
+  "step_6_Accept_Commander4:Accept": {},
+  "step_7_Accept_Commander5:Accept": {},
+  "step_8_Agree_CommanderMain:Agree": {},
+  "step_9_Seen:Seen": {},
+  "step_10_Seen:Seen": {},
+  "step_11_Seen:Seen": {},
+  "step_12:Sign": {}
+}

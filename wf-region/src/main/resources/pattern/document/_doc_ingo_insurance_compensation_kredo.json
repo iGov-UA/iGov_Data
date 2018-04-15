@@ -1,0 +1,99 @@
+{
+  "_:Watch": {
+    "_default_ingo": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "AnswerMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ingo_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ingo_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ingo_approve", "sGroup_Activiti":"INGO_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"INGO_"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ingo_read", "sGroup_Activiti":"INGO_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"INGO_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ingo_approve_1": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ingo_approve_1", "sGroup_Activiti":"INGO_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"INGO_"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ingo_read", "sGroup_Activiti":"INGO_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"INGO_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+      "_default_ingo_2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": [ "Seen", "AddViewer", "AddVisor", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"INGO_"},  
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ingo_read", "sGroup_Activiti":"INGO_"},
+       "oPermitions_Delegate": {"sGroup_Activiti":"INGO_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },   
+     "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"INGO_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_ingo_read": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"INGO_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Edit": {},
+  "step_5:Edit": {},
+  "step_6:Direct": {},
+  "step_7:Seen": {}
+  
+}

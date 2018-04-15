@@ -1,0 +1,105 @@
+{
+  "_:Watch": 
+  {
+    "_default_CIB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB2": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_approve": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage", "CreateTask"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_cib_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CIB_direct": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage", "CreateTask"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+     "_default_cib_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+    },
+    "_default_cib_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_cib_acceptor": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Agree": {},
+  "step_5:Execute": {},
+  "step_6:Execute": {},
+  "step_7:Seen": {},
+  "step_8:Edit": {}
+}

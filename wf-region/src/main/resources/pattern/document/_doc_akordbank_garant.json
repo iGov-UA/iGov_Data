@@ -1,0 +1,32 @@
+{
+  "_:Watch": {
+   "_default_akordbank_garant_ask": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],           
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_akordbank_garant": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Agree": {},
+  "step_6:Seen": {}
+}

@@ -1,0 +1,131 @@
+{
+	"_:Watch": {
+		"_default_Police": {
+			"sName": " ",
+			"bWrite": true,
+			"aPermition": ["DeleteDocument","AnswerMessage","AddVisor"],
+			"asID_Field_Read": [
+				"*"
+			],
+			"asID_Field_Write": [
+				"*"
+			]
+		},
+     "_default_Police_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "CreateTask", "EditTask", "AskMessage", "AddAcceptor"],      
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_avtor_edit", "sGroup_Activiti":"CONCORD_Supervisory_Board"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+		"_default_Police_ECP": {
+			"sName": " ",
+			"bWrite": true,
+			 "bNeedECP":true,
+			"asID_Field_Read": [
+				"*"
+			],
+			"asID_Field_Write": [
+				"*"
+			]
+		},
+		"_default_Police_approve_1": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["CancelDocumentSubmit", "AskMessage","AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_approve_1", "sGroup_Activiti":"CONCORD_Supervisory_Board"},   
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_Police_Del": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "CancelDocumentSubmit", "Delegate", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_2", "sGroup_Activiti":"CONCORD_Supervisory_Board"},   
+      "oPermitions_Delegate": {"sGroup_Activiti":"CONCORD_Supervisory_Board"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+      	"_default_Police_read": {
+			"sName": " ",
+			"bWrite": false,
+			"asID_Field_Read": [
+				"*"
+			]
+		  }
+		},
+	"step_1:Create": {
+	},
+	"step_2:Accept": {
+	},
+	"step_3:Accept": {
+	},
+	"step_4:Accept": {
+	},
+	"step_5:Accept": {
+	},
+	"step_6:Accept": {
+	},
+	"step_7:Accept": {
+	},
+	"step_8:Accept": {
+	},
+	"step_9:Accept": {
+	},
+	"step_10:Accept": {
+	},
+	"step_11:Accept": {
+	},
+	"step_12:Accept": {
+	},
+	"step_13:Accept": {
+	},
+	"step_14:Accept": {
+	},
+	"step_15:Accept": {
+	},
+	"step_16:Accept": {
+	},
+	"step_17:Accept": {
+	},
+	"step_18:Accept": {
+	},
+	"step_19:Accept": {
+	},
+	"step_20:Accept": {
+	},
+	"step_21:Accept": {
+	},
+	"step_22:Accept": {
+	},
+	"step_23:Accept": {
+	},
+	"step_24:Accept": {
+	},
+	"step_25:Accept": {
+	},
+	"step_26:Accept": {
+	},
+	"step_27:Accept": {
+	},
+	"step_28:Accept": {
+	},
+	"step_29:Accept": {
+	},
+	"step_30:Accept": {
+	},
+	"step_31:Seen": {}
+}

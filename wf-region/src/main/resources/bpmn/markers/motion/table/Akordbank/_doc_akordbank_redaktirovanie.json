@@ -1,0 +1,10 @@
+{
+  "aField": [
+    {
+      "id": "sDodat",
+      "name": "Додаток",
+      "type": "file",
+      "writable": "true"
+    }   
+  ]
+}

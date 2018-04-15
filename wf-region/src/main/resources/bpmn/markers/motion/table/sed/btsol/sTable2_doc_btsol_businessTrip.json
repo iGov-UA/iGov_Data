@@ -1,0 +1,64 @@
+{
+  "aField": [
+    {
+      "id": "nNumberOrder",
+      "name": "№ з/п",
+      "type": "long",
+      "nWidth": "5%"
+    },
+    {
+      "id": "asTypeCosts",
+      "name": "Стаття витрат",
+      "type": "enum",
+      "nWidth": "15%",
+      "writable": "true",
+      "a": [
+        {
+          "id": "transport",
+          "name": "Транспорт"
+        },
+        {
+          "id": "salary",
+          "name": "Добові"
+        },
+        {
+          "id": "hotel",
+          "name": "Проживання"
+        }
+      ]
+    },
+    {
+      "id": "sDescription",
+      "name": "Деталі витрат",
+      "type": "string",
+      "nWidth": "40%"
+    },
+    {
+      "id": "sCount",
+      "name": "Кількість од.",
+      "type": "string",
+      "nWidth": "10%"
+    },
+    {
+      "id": "sPrice",
+      "name": "Вартість, грн.",
+      "type": "double",
+      "nWidth": "15%"
+    },
+    {
+      "name": "Число1*Число2",
+      "type": "string",
+      "nWidth": "25%"
+      ,"sFormula": "[sCount]*[sPrice]"
+      ,"sFooterCalc": "sum"
+      ,"sFooterCalcName": "Сумма"
+      ,"sFooterCalcResult_sID_Field": "sTotalPrice"
+    },
+    {
+      "id": "sTotalPrice",
+      "name": "Загальна сума, грн.",
+      "type": "double",
+      "nWidth": "15%"
+    }
+  ]
+}

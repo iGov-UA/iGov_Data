@@ -1,0 +1,24 @@
+{
+  "aField": [
+    {
+      "id": "sName_Review",
+      "name": "На ознайомлення; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_Review",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+      
+    },
+    {
+      "id": "sEmail_Review",
+      "name": "Email",
+      "type": "string",
+      "bVisible": "false"
+     
+    }
+  ]
+}

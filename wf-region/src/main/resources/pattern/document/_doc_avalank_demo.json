@@ -1,0 +1,34 @@
+{
+  "_": 
+  {
+    "_default_ETG": 
+    {
+      "sName": " ",
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  	"_default_ETG_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+  "step_1_Create:Create": {},
+  "step_2_Accept:Accept": {},
+  "step_3_Accept:Accept": {},
+  "step_4_Accept:Accept": {},
+  "step_5_Accept:Accept": {},
+  "step_6_Agree:Agree": {}
+}
+}

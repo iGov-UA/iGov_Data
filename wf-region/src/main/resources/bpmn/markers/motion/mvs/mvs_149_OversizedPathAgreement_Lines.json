@@ -1,0 +1,30 @@
+{
+	"attributes": 
+    {
+		"Line_1": 
+		{
+			"aElement_ID": ["sID_SubjectOrgan_OKPO_transfer"],
+			"sValue": "Організація, що виконує перевезення"        
+      	},      
+		"Line_3": 
+      	{
+       		"aElement_ID": 	["subekt"],
+      		"sValue": 		"Дані щодо суб'єкта підприємницької діяльності"        
+      	},      
+		"Line_4": 
+      	{
+       		"aElement_ID": 	["sNameCargo"],
+      		"sValue": 		"Інформація щодо вантажу"        
+      	},      
+		"Line_5": 
+      	{
+       		"aElement_ID": 	["sDescriptionRoute"],
+      		"sValue": 		"Маршрут"        
+      	},       
+		"Line_14": 
+      	{
+       		"aElement_ID": 	["sDocCommunal"],
+      		"sValue": 		"Копії документів"        
+      	}
+	}
+}

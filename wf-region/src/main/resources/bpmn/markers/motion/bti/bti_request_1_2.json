@@ -1,0 +1,50 @@
+{
+	"motion" : {
+		"ValuesFieldsOnCondition_1": {
+		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
+		      "asID_Field_sValue": ["397.15","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","325","65","390.00"],
+		      "asID_Field": {
+		        "sCond1":"saQuestion1",
+		        "sCond2":"saQuestion3"
+		        },                
+      		"sCondition" : "[sCond1] == 'type1' && [sCond2] == 'type1' " 
+    	},
+    	"ValuesFieldsOnCondition_2": {
+		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
+		      "asID_Field_sValue": ["626.27","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","512.5","102.5","615.00"], 				
+		      "asID_Field": {
+		        "sCond1":"saQuestion1",
+		        "sCond2":"saQuestion3"
+		        },                
+      		"sCondition" : "[sCond1] == 'type1' && [sCond2] == 'type2' " 
+    	},
+    			"ValuesFieldsOnCondition_3": {
+		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
+		      "asID_Field_sValue": ["855.37","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","700","140","840"],	 		
+		      "asID_Field": {
+		        "sCond1":"saQuestion1",
+		        "sCond2":"saQuestion3"
+		        },                
+      		"sCondition" : "[sCond1] == 'type1' && [sCond2] == 'type3' " 
+    	},
+    			"ValuesFieldsOnCondition_4": {
+		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
+		      "asID_Field_sValue": ["1084.51","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","887.5","177.5","1065.00"], 
+		      "asID_Field": { 
+		        "sCond1":"saQuestion1",
+		        "sCond2":"saQuestion3"
+		        },                
+      		"sCondition" : "[sCond1] == 'type1' && [sCond2] == 'type4' " 
+    	},
+    		"ValuesFieldsOnCondition_5": {
+		     "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
+		      "asID_Field_sValue": ["1313.63","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","1075","215","1290.00"],				
+		      "asID_Field": {
+		        "sCond1":"saQuestion1",
+		        "sCond2":"saQuestion3"
+		        },                
+      		"sCondition" : "[sCond1] == 'type1' && [sCond2] == 'type5' " 
+
+		}
+}    	
+}

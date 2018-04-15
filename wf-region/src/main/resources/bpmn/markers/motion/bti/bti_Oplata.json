@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamLiqpay": {
+      "aField_ID": [
+        "infoMessage4"
+      ],
+      "asID_Field": {
+        "sCond1": "asOplata"
+      },
+      "sCondition": "[sCond1] == 'sEnamLiqpay'"
+    },
+    "ShowFieldsOnCondition_sEnamBank": {
+      "aField_ID": [
+        "infoMessage4_2"
+      ],
+      "asID_Field": {
+        "sCond1": "asOplata"
+      },
+      "sCondition": "[sCond1] == 'sEnamBank'"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+	"motion": 
+    {
+		"ShowFieldsOnCondition_6":
+		{
+        	"aField_ID": 	["sConfidant_pib","sConfidant_passport","nFile_ConfidantDoc"],
+        	"asID_Field": 	{"sClient": "subekt_2"},
+         	"sCondition": 	"[sClient] == 'confidant'"
+		},
+		"RequiredFieldsOnCondition_6": 
+		{
+        	"aField_ID": 	["sConfidant_pib","sConfidant_passport","nFile_ConfidantDoc"],
+        	"asID_Field": 	{"sClient": "subekt_2"},
+         	"sCondition": 	"[sClient] == 'confidant'"
+		}
+     }
+}

@@ -1,0 +1,90 @@
+{
+  "_:Watch": {
+    "_default_btsol": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "CreateTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "AddViewer"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_Agree": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "AskMessage", "AddViewer","Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"}, 
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+       "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_btsol_direct": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "RemoveDocumentStepSubject", "AskMessage", "CancelDocumentSubmit", "Seen","Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"}, 
+       "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_btsol_read": {
+      "sName": " ",
+      "bWrite": false,
+       "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_btsol_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+      "_default_btsol_author_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage", "CreateTask", "EditTask"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1_Create_Doc:Create": {},
+  "step_2_Acception:Accept": {},
+  "step_3_Approve:Agree": {},
+  "step_4_Destination:Direct": {},
+  "step_5_Author_Agree:Seen": {},
+  "step_6_Edit:Edit": {},
+  "step_7_Edit:Edit": {}
+}

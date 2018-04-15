@@ -1,0 +1,11 @@
+{
+	"motion": 
+    {
+		"RequiredFieldsOnCondition_15": 
+		{
+        	"aField_ID": 	["comment_1"],
+        	"asID_Field": 	{"sClient": "decision_1"},
+         	"sCondition": 	"[sClient] == 'reject'"
+		}
+     }
+}

@@ -1,0 +1,62 @@
+{
+  "_:Watch": 
+  {
+    "_default_varus": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument","CreateTask"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    
+        },
+     "_default_varus_avtor_edit": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument","CreateTask", "AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]   
+       },
+       "_default_varus_approve": 
+   
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage", "CreateTask", "EditTask"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }, 
+    
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Edit": {} 
+}

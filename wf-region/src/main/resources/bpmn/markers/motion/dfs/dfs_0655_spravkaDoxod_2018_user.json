@@ -1,0 +1,89 @@
+{
+  "attributes": {
+    "Line_11": {
+      "aElement_ID": [
+        "bankIdlastName"
+      ],
+      "sValue": "Блок даних заявника"
+    },
+    "Line_12": {
+      "aElement_ID": [
+        "sCountry"
+      ],
+      "sValue": "Адреса заявника"
+    },
+    "Line_13": {
+      "aElement_ID": [
+        "sDoc"
+      ],
+      "sValue": "Паспортні дані"
+    },
+    "Line_14": {
+      "aElement_ID": [
+        "lStartYear"
+      ],
+      "sValue": "Інформація про період замовлення справки"
+    },
+    "Line_16": {
+      "aElement_ID": [
+        "lEndYear"
+      ],
+      "sValue": ""
+    },
+    "Line_17": {
+      "aElement_ID": [
+        "asPaperOrElect"
+      ],
+      "sValue": ""
+    }
+  },
+  "motion": {
+    "ShowFieldsOnCondition_51": {
+      "aField_ID": [
+        "aComment"
+      ],
+      "asID_Field": {
+        "sClient": "aDecision"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    },
+    "RequiredFieldsOnCondition_51": {
+      "aField_ID": [
+        "aComment"
+      ],
+      "asID_Field": {
+        "sClient": "aDecision"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    },
+    "ShowFieldsOnCondition_52": {
+      "aField_ID": [
+        "nFileResult"
+      ],
+      "asID_Field": {
+        "sClient1": "asPaperOrElect",
+        "sClient2": "aDecision"
+      },
+      "sCondition": "[sClient1] == 'version1' && [sClient2] == 'accept'"
+    },
+    "ShowFieldsOnCondition_53": {
+      "aField_ID": [
+        "sElectroforma"
+      ],
+      "asID_Field": {
+ 	     "sClient1": "asPaperOrElect"      
+ 	     },
+      "sCondition": "[sClient1] == 'version1'"
+    },
+    "RequiredFieldsOnCondition_52": {
+      "aField_ID": [
+        "nFileResult"
+      ],
+      "asID_Field": {
+        "sClient1": "asPaperOrElect",
+        "sClient2": "aDecision"
+      },
+      "sCondition": "[sClient1] == 'version1' && [sClient2] == 'accept'"
+    }
+  }
+}

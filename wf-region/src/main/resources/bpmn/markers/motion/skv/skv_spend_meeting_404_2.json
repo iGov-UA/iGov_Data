@@ -1,0 +1,17 @@
+{
+	"motion":
+	{
+		"ShowFieldsOnCondition_42":	
+		{
+			"aField_ID":	["fPovidomlennyaProZahid"],
+			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition":	"[sClient] != 'lviv_drog'"
+		},	
+		"RequiredFieldsOnCondition_42": 
+		{
+			"aField_ID": 	["fPovidomlennyaProZahid"],
+			"asID_Field": 	{"sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition":	"[sClient] != 'lviv_drog'"
+		}
+	}
+}

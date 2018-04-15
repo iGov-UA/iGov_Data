@@ -1,0 +1,110 @@
+{
+  "_:Watch": {
+    "_default_btsol": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2_Accept", "step_3_Agree"]},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AddVisor","AddViewer", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_Accept", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_Seen": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "AddVisor",  "Delegate", "AddViewer", "AskMessage", "AnswerMessage", "Refuse"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},      
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_btsol_Seen", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"}, 
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},    
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_btsol_direct": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["Seen","AddViewer", "AddVisor", "Delegate", "RemoveDocumentStepSubject", "CancelDocumentSubmit", "CreateTask", "AskMessage", "Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},       
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+       "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_btsol_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer", "AddVisor"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_btsol_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_,ZCPK_,TGOK_,AZOT_,NFZ_,ZZF_,AGRO_,BORIVAZG_,TSU_,AUTO_,NFM_,IG_,AKP_,ME_,RA_,KA_,DK_,ACH_,KDA_,DNA_,DVA_,NA_,BA_,ZAL_,SA_,BRA_,MAA_,UA_,NSA_,CA_,VA_,KGRK_,NTRU_,STALMAG_,KVVP_,PIT_,ICKK_,GMI_,FERAL_,PE_,OD_,KMD_,POLT_,ZA_,DA_,DASC_,OPAP_,MA_,ASP_,RV_,IGOV_,TSP_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_btsol_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_btsol_execute": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "RemoveDocumentStepSubject"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1_Create:Create": {},
+  "step_2_Accept:Accept": {},
+  "step_3_Agree:Agree": {},
+  "step_4_Direct:Direct": {},
+  "step_5_Seen:Seen": {},
+  "step_6_Edit:Edit": {},
+  "step_7_Edit:Edit": {},
+  "step_8_Execute:Execute": {},
+  "step_9_Seen:Seen": {}
+}

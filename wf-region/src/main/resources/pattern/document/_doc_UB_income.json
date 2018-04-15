@@ -1,0 +1,51 @@
+{
+  "_:Watch": 
+  {
+   "_default_UB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "CreateTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+  	"_default_UB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_UB_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_UB_Resol": {
+      "sName": " ",
+      "bWrite": true,      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Seen": {},
+  "step_4:Execute": {}
+}

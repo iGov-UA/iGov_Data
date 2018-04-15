@@ -1,0 +1,130 @@
+{
+  "motion": {
+    "ValuesFieldsOnCondition_101": {
+      "aField_ID": [
+        "sFormPlot",
+        "sFormPlotEN"
+      ],
+      "asID_Field_sValue": [
+        "Квадрат",
+        "Square"
+      ],
+      "asID_Field": {
+        "sClient": "asFormPlot",
+        "sClient_1": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sSquare' && [sClient_1] == 'sGreen'"
+    },
+    "ValuesFieldsOnCondition_102": {
+      "aField_ID": [
+        "sFormPlot",
+        "sFormPlotEN"
+      ],
+      "asID_Field_sValue": [
+        "Прямокутник",
+        "Rectangle"
+      ],
+      "asID_Field": {
+        "sClient": "asFormPlot",
+        "sClient_1": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sRectangle' && [sClient_1] == 'sGreen'"
+    },
+    "ValuesFieldsOnCondition_103": {
+      "aField_ID": [
+        "sFormPlot",
+        "sFormPlotEN"
+      ],
+      "asID_Field_sValue": [
+        "Трикутник",
+        "Triangle"
+      ],
+      "asID_Field": {
+        "sClient": "asFormPlot",
+        "sClient_1": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sTriangle' && [sClient_1] == 'sGreen'"
+    },
+    "ValuesFieldsOnCondition_104": {
+      "aField_ID": [
+        "sFormPlot",
+        "sFormPlotEN"
+      ],
+      "asID_Field_sValue": [
+        "Трапепція",
+        "Trapeze"
+      ],
+      "asID_Field": {
+        "sClient": "asFormPlot",
+        "sClient_1": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sTrapeze' && [sClient_1] == 'sGreen'"
+    },
+    "ValuesFieldsOnCondition_201": {
+      "aField_ID": [
+        "sFormTransferring",
+        "sFormTransferringEN"
+      ],
+      "asID_Field_sValue": [
+        "Продаж",
+        "Selling"
+      ],
+      "asID_Field": {
+        "sClient": "asFormTransferring"
+      },
+      "sCondition": "[sClient] == 'sSelling'"
+    },
+    "ValuesFieldsOnCondition_202": {
+      "aField_ID": [
+        "sFormTransferring",
+        "sFormTransferringEN"
+      ],
+      "asID_Field_sValue": [
+        "Довгострокова аренда",
+        "Long term lease"
+      ],
+      "asID_Field": {
+        "sClient": "asFormTransferring"
+      },
+      "sCondition": "[sClient] == 'sLongTerm'"
+    },
+    "ValuesFieldsOnCondition_203": {
+      "aField_ID": [
+        "sFormTransferring",
+        "sFormTransferringEN"
+      ],
+      "asID_Field_sValue": [
+        "Постійне користування",
+        "Permanent use"
+      ],
+      "asID_Field": {
+        "sClient": "asFormTransferring"
+      },
+      "sCondition": "[sClient] == 'sPermanentUse'"
+    },
+    "ValuesFieldsOnCondition_401": {
+      "aField_ID": [
+        "sflag"
+      ],
+      "asID_Field_sValue": [
+        "g"
+      ],
+      "asID_Field": {
+        "sClient": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sGreen'"
+    },
+    "ValuesFieldsOnCondition_402": {
+      "aField_ID": [
+        "sflag"
+      ],
+      "asID_Field_sValue": [
+        "b"
+      ],
+      "asID_Field": {
+        "sClient": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sBrown'"
+    }
+  }
+}

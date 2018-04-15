@@ -1,0 +1,51 @@
+{
+  "_:Watch": 
+  {
+   "_default_ETG": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+  	"_default_ETG_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_ETG_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ETG_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["EditTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Execute": {}
+}

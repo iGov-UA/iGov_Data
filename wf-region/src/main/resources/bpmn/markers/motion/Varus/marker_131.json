@@ -1,0 +1,17 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_131": {
+      "aField_ID": [
+        "sFirma",
+        "sPolomka",
+        "sPeriod",
+        "sNomerZayavki"
+      ],
+      "asID_Field": {
+        "sClient": "asPodCat10",
+        "sClient1": "asCat1"
+      },
+      "sCondition": "[sClient] == 'sPodCategory21' && [sClient1] == 'sCategory10'"
+    }
+  }
+}

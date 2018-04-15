@@ -1,0 +1,75 @@
+{
+	"attributes": 
+    {
+		"Line_1": 
+		{
+			"aElement_ID": ["sID_SubjectOrgan_OKPO_transfer"],
+			"sValue": "Організація, що виконує перевезення"        
+      	},      
+		"Line_3": 
+      	{
+       		"aElement_ID": 	["subekt"],
+      		"sValue": 		"Дані щодо суб'єкта підприємницької діяльності"        
+      	},      
+		"Line_4": 
+      	{
+       		"aElement_ID": 	["sNameCargo"],
+      		"sValue": 		"Інформація щодо небезпечного вантажу"        
+      	},      
+		"Line_5": 
+      	{
+       		"aElement_ID": 	["sDescriptionRoute01"],
+      		"sValue": 		"Маршрут 1"        
+      	},      
+		"Line_6": 
+      	{
+       		"aElement_ID": 	["sID_SubjectOrgan_OKPO_sender01"],
+      		"sValue": 		"Вантажовідправник (Маршрут 1)"        
+      	},      
+		"Line_7": 
+      	{
+       		"aElement_ID": 	["sID_SubjectOrgan_OKPO_recipient01"],
+      		"sValue": 		"Вантажоодержувач (Маршрут 1)"        
+      	},      
+		"Line_8": 
+      	{
+       		"aElement_ID": 	["sDescriptionRoute02"],
+      		"sValue": 		"Маршрут 2"        
+      	},      
+		"Line_9": 
+      	{
+       		"aElement_ID": 	["sID_SubjectOrgan_OKPO_sender02"],
+      		"sValue": 		"Вантажовідправник (Маршрут 2)"        
+      	},      
+		"Line_10": 
+      	{
+       		"aElement_ID": 	["sID_SubjectOrgan_OKPO_recipient02"],
+      		"sValue": 		"Вантажоодержувач (Маршрут 2)"        
+      	},      
+		"Line_11": 
+      	{
+       		"aElement_ID": 	["sDescriptionRoute03"],
+      		"sValue": 		"Маршрут 3"        
+      	},      
+		"Line_12": 
+      	{
+       		"aElement_ID": 	["sID_SubjectOrgan_OKPO_sender03"],
+      		"sValue": 		"Вантажовідправник (Маршрут 3)"        
+      	},      
+		"Line_13": 
+      	{
+       		"aElement_ID": 	["sID_SubjectOrgan_OKPO_recipient03"],
+      		"sValue": 		"Вантажоодержувач (Маршрут 3)"        
+      	},      
+		"Line_14": 
+      	{
+       		"aElement_ID": 	["pidgotovka"],
+      		"sValue": 		"Копії документів"        
+      	},      
+		"Line_15": 
+      	{
+       		"aElement_ID": 	["enumCountRoute"],
+      		"sValue": 		" "        
+      	}
+	}
+}

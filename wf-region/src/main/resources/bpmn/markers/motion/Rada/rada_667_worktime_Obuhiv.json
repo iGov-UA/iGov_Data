@@ -1,0 +1,52 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_ObjTipe1": {
+      "aField_ID": [
+        "chekRest",
+        "nSquareObject",
+        "nTorgSquareObject",
+        "nKolvoWork",
+        "nFileP1",
+        "nFileP2",
+        "nFileP3"
+      ],
+      "asID_Field": {
+        "sReason": "asObjTipe"
+      },
+      "sCondition": "[sReason]=='sEnamPostiyniy'"
+    },
+    "ShowFieldsOnCondition_ObjTipe2": {
+      "aField_ID": [
+        "chekAvtolavka",
+        "sDateBeg",
+        "sDateEnd",
+        "nFileT1",
+        "nFileT3"
+      ],
+      "asID_Field": {
+        "sReason": "asObjTipe"
+      },
+      "sCondition": "[sReason]=='sEnamTumchasoviy'"
+    },
+    "ShowFieldsOnCondition_ObjTipe3": {
+      "aField_ID": [
+        "nKolvoMest"
+      ],
+      "asID_Field": {
+        "sReason": "asObjTipe",
+        "sReason2": "chekRest"
+      },
+      "sCondition": "[sReason]=='sEnamPostiyniy'&&[sReason2]=='yes'"
+    },
+    "ShowFieldsOnCondition_ObjTipe4": {
+      "aField_ID": [
+        "nFileT2"
+      ],
+      "asID_Field": {
+        "sReason": "asObjTipe",
+        "sReason2": "chekAvtolavka"
+      },
+      "sCondition": "[sReason]=='sEnamTumchasoviy'&&[sReason2]=='yes'"
+    }
+  }
+}

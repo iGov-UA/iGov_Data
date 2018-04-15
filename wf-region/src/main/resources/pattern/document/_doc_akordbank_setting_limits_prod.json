@@ -1,0 +1,71 @@
+{
+    "_:Watch": {
+        "_default_AKORDBANK": {
+            "sName": " ",
+            "bWrite": true,
+            "aPermition": ["DeleteDocument"],  
+            "asID_Field_Read": [
+                "*"
+            ],
+            "asID_Field_Write": [
+                "*"
+            ]
+               
+    },
+     "_default_AKORDBANK_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+      "_default_AKORDBANK_Head_KC":{  
+         "sName":" ",
+         "bWrite":null,
+         "aPermition": ["Seen", "AskMessage"], 
+         "asID_Field_Read":[  
+            "*"
+         ]
+         
+   },
+   "_default_AKORDBANK_KC_pogod": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_AKORDBANK_UKRB": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["Refuse"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+    },
+    
+    "step_1:Create": {
+    },
+    "step_2:Accept": { 
+    }, 
+    
+    "step_3:Agree": {  
+    },
+    "step_4:Agree": {  
+    },
+    "step_5:Accept": {  
+    }
+   
+}

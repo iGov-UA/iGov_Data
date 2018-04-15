@@ -1,0 +1,23 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_116": {
+      "aField_ID": [
+        "sTovar",
+        "sNameTovar",
+        "sFirma",
+        "sLastDate",
+        "sKolvoProd",
+		"sDateIzgotovl",
+		"sKonechnSrok",
+		"sKolvoPlohKach",
+		"sPoblemHtml",
+		"sPhoto"
+      ],
+      "asID_Field": {
+        "sClient": "asPodCat4",
+        "sClient1": "asCat1"
+      },
+      "sCondition": "[sClient] == 'sPodCategory6' && [sClient1] == 'sCategory4'"
+    }
+  }
+}

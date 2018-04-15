@@ -1,0 +1,23 @@
+{
+  "aField": [
+    {
+      "id": "sNu",
+      "name": "ступінь споріднення",
+      "type": "string",    
+      "nWidth": "15%"
+   
+    },
+    {
+      "id": "sNam",
+      "name": "ПІБ",
+      "type": "string"
+      
+   
+    },
+    {
+      "id": "sNumb",
+      "name": "Дата народження",
+      "type": "date"       
+    }
+  ]
+}

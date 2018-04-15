@@ -1,0 +1,107 @@
+{  
+   "_:Watch": {
+    "_default_Comfy": {          
+      "sName": " ",      
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask", "AnswerMessage"],         
+         "asID_Field_Read":[  
+            "*"
+         ],
+         "asID_Field_Write":[  
+            "*"
+         ]
+         },
+     "_default_Comfy_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_Comfy_approve", "sGroup_Activiti":"Comfy_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"Comfy_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Comfy_read", "sGroup_Activiti":"Comfy_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"Comfy_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+     "_default_Comfy_approve1": {
+      "sName": " ",
+      "bWrite": true,
+      "bNeedECP":true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_Comfy_approve", "sGroup_Activiti":"Comfy_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"Comfy_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Comfy_read", "sGroup_Activiti":"Comfy_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"Comfy_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+   
+    "_default_Comfy_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+    "_default_Comfy_read": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"Comfy_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+     "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"Comfy_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+      "_default_Comfy_Head":{  
+         "sName":" ",
+         "bWrite":true,
+         "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_Comfy_approve", "sGroup_Activiti":"Comfy_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"Comfy_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Comfy_read", "sGroup_Activiti":"Comfy_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"Comfy_"},    
+      "asID_Field_Read": [
+         
+            "*"
+         ],
+         "asID_Field_Write":[  
+            "*"
+         ]
+      }
+   },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Edit": {},
+  "step_6:Accept": {},
+  "step_7:Accept": {},
+  "step_8:Edit": {},  
+  "step_9:Accept":{},
+  "step_10:Execute":{},
+  "step_11:Edit":{},
+  "step_12:Edit":{}
+}

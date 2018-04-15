@@ -1,0 +1,69 @@
+{
+  "_:Watch": {
+    "_default_MJU_read": {
+       "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage", "AnswerMessage", "CreateTask", "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"MJU_Dnipro_"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_MJU_author_read": {
+      "sName": " ",
+      "bWrite": null,      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+       "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"MJU_Dnipro_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_MJU_read1": {
+      "sName": " ",
+      "bWrite": null,      
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_MJU": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_MJU_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"MJU_Dnipro_"},
+      
+       "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      }
+   },
+  "step_1:Create": {},
+  "step_2:Seen": {},
+  "step_3:Edit": {}
+}

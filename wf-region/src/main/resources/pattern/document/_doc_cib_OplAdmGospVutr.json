@@ -1,0 +1,121 @@
+{
+  "_:Watch": 
+  {
+    "_default_CIB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_start": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage","AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CIB", "sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_Kerivn": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_bank_all"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_FinDep": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_bank_all"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_FinDir": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_bank_all"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_GenDir": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_bank_all"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_Bux": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Agree": {},
+  "step_6:Execute": {}
+}

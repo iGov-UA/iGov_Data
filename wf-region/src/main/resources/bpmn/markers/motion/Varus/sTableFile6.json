@@ -1,0 +1,40 @@
+{
+  "aField": [
+    {
+      "id": "sDateTable",
+      "name": "дата прийому",
+      "type": "date", 
+      "nWidth": "15%"
+
+    },
+    {
+      "id": "sNameTable",
+      "name": "дата звільнення",
+      "type": "date"
+
+
+    },
+    {
+      "id": "sPeriodTable",
+      "name": "назва організації",
+      "type": "string" 
+    },
+    {
+      "id": "sVid",
+      "name": "посада",
+      "type": "string" 
+    },
+    {
+      "id": "sFormaTable",
+      "name": "причина звільнення",
+      "type": "string"
+
+
+    },
+    {
+      "id": "sNazvaTable",
+      "name": "рівень з/п",
+      "type": "string" 
+    }
+  ]
+}

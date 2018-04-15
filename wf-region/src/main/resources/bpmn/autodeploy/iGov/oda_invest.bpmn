@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="oda_invest" name="Анкета інвест проекту" isExecutable="true">
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть свій регіон" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="підпис ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="електронна пошта ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="адреса; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartamentOda" name="Департамент; ;bVisible=false" type="string" default="Департамент зовнішніх зносин, зовнішньоекономічної та інвестиційної діяльності, відділ сприяння залученню інвестицій та міжнародних виставок"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="lPlot" name=" ; ;labelType=success" type="label" default="Анкета інвестиційного проекту (Questionnaire for the investment project)"></activiti:formProperty>
+        <activiti:formProperty id="asScopeOfActivity" name="Сфера діяльності;Scope of activity" type="enum" required="true">
+          <activiti:value id="sAgriculture" name="Агропромисловий комплекс/Agriculture"></activiti:value>
+          <activiti:value id="sInfrastructure" name="Інфраструктура та містобудування/Infrastructure and Urban Development"></activiti:value>
+          <activiti:value id="sEnergy" name="Енергетика та енергоефективність/Energy and Energy Efficiency"></activiti:value>
+          <activiti:value id="sIndustrial" name="Промисловий комплекс/Industrial Complex"></activiti:value>
+          <activiti:value id="sSecurity" name="Безпека/Security"></activiti:value>
+          <activiti:value id="sWater" name="Водопостачання та водовідведення/Water Supply and Sewerage"></activiti:value>
+          <activiti:value id="sGas" name="Газопостачання/Gas"></activiti:value>
+          <activiti:value id="sElectricity" name="Електропостачання/Electricity"></activiti:value>
+          <activiti:value id="sEcology" name="Екологія/Ecology"></activiti:value>
+          <activiti:value id="sSociety" name="Суспільство/Society"></activiti:value>
+          <activiti:value id="sEducation" name="Освіта та культура/Education and Culture"></activiti:value>
+          <activiti:value id="sSports" name="Спорт та туризм/Sports and Tourism"></activiti:value>
+          <activiti:value id="sHealth" name="Охорона здоров'я/Health Care"></activiti:value>
+          <activiti:value id="sIT" name="IT"></activiti:value>
+          <activiti:value id="sOther" name="Інше/Other"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sScopeOfActivity" name="Інше/Other" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sScopeOfActivityEN" name="Інше/Other" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProject" name="Назва проекту;Project name" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectEN" name="Project name" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectAutor" name="Назва ініціатора/власника проекту;Project initiator/owner name" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectAutorEN" name="Project initiator/owner name" type="string"></activiti:formProperty>
+        <activiti:formProperty id="lGeneral" name=" ; ;labelType=info" type="label" default="Огляд проекту (Project overview)"></activiti:formProperty>
+        <activiti:formProperty id="sDescription" name="Опис проекту (Короткий опис проекту, який має дати чітке розуміння про вид діяльності та основні фактори, що спонукатимуть інвестора до подальшого детального розгляду проекту);Description of the project" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDescriptionEN" name="Description of the project;Brief description of the project, which should give a clear understanding of the type of activity and the main factors that will encourage the investor to further detailed consideration of the project" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProducts" name="Продукти/послуги (Детальна інформація щодо продуктів/послуг, які будуть вироблятися/надаватися);Products/services" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProductsEN" name="Products/services;Detailed information about the products/services to be produced/provided" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sMarketOverview" name="Огляд ринку (Інформація стосовно того, куди буде поставлятися продукція/послуги (внутрішній ринок, експорт, країни) і потенційних клієнтів. Необхідно надати обґрунтування, чому пропонована продукція/послуги будуть цікаві зазначеним ринкам/клієнтам);Market overview" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sMarketOverviewEN" name="Market overview;Information about where the products/services (domestic market, exports, country) and potential customers will be delivered. It is necessary to provide a justification as to why the proposed products/services will be of interest to the indicated markets/customers" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectPreparation" name="Стан підготовки проекту (Наявність попереднього техніко-економічного обґрунтування, наявність бізнес плану);Status of project preparation" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sProjectPreparationEN" name="Status of project preparation;Presence of preliminary feasibility study, availability of business plan" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectCost" name="Оціночна вартість проекту (в дол. США);Estimated cost of the project (USD)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="lInvestments" name=" ; ;labelType=info" type="label" default="Необхідні інвестиції (Necessary investments)"></activiti:formProperty>
+        <activiti:formProperty id="sAmount" name="Сума необхідних інвестицій (в дол. США);Amount of required investment (USD)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sAmountForm" name="Форма залучення інвестицій" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sAmountFormEN" name="Form of investment attraction" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDetailing" name="Деталізація необхідних інвестицій (на що саме будуть витрачені інвестиційні кошти: будівництво приміщень, закупівля обладнання (вказати якого саме), і т.п. Розбивка суми інвестицій по періодам (роки і місяці)).;Detailing of necessary investments" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDetailingEN" name="Detailing of necessary investments; What exactly will be spent investment funds: building of premises, purchase of equipment (indicate which one), etc. Breakdown of the amount of investments by periods (years and months)." type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sExpectedDuration" name="Очікуваний термін реалізації проекту (програми), кількість років (місяців);Expected duration of the project (program), number of years (months)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNVP" name="Чиста приведена вартість, (NPV);Net present value (NPV)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sPBP" name="Термін окупності проекту (PBP), років (місяців);Project payback period (PBP), number of years (months)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sEffectiveness" name="Рентабельність проекту (%);Cost-effectiveness of the project (%)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sSavings" name="Загалом економія (дол США);Total savings (USD)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLowerCO2" name="Зниження СО2 (якщо є, %);Lower CO2 (if available, %)" type="long"></activiti:formProperty>
+        <activiti:formProperty id="lProjectlocation" name=" ; ;labelType=info" type="label" default="Розташування проекту та Інфраструктура (Project location and Infrastructure)"></activiti:formProperty>
+        <activiti:formProperty id="sLocation" name="Розташування проекту/підприємства відносно обласного і районного центрів. (Можна показати карту, додавши її у полі додавання файлів);Location" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLocationEN" name="Location;Location of the project/enterprise relative to the regional and district centers. You can show the map by adding it in the field of adding files" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sArea" name="Площа (Га);Area (ha)" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sOwnership" name="Право власності;Ownership" type="enum" required="true">
+          <activiti:value id="sPrivate" name="Приватна/Private"></activiti:value>
+          <activiti:value id="sState" name="Державна/State"></activiti:value>
+          <activiti:value id="sMunicipal" name="Муніципальна/Municipal"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sClassification" name="Цільове призначення земельної ділянки (сільськогосподарське, для житлової та громадської забудови, промислового призначення і т.п.);Purposeful use of a plot of land" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationEN" name="Purposeful use of a plot of land;Agricultural, residential and public building, industrial use, etc." type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationActual" name="Фактичне використання ділянки;Actual use of the site" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationActualEN" name="Actual use of the site" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sSpecifics" name="Облік специфіки проекту (інші характеристики: наявні будівлі/споруди, насадження, особливості сусідніх ділянок, статус або фактичне використання яких може вплинути на реалізацію проекту як в позитивному, так і в негативному плані);Accounting for project specifics" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sSpecificsEN" name="Accounting for project specifics;other characteristics: existing buildings/structures, plantations, features of neighboring sites, status or actual use of which may affect the implementation of the project both in a positive and a negative plan" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTransport" name="Доступ до транспортної інфраструктури (відстань до найближчих транспортних шляхів та ключових інфраструктурних об’єктів, наприклад, аеропорти, порти, автомагістралі, залізничні вокзали);Access to transport infrastructure" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sTransportEN" name="Access to transport infrastructure;Distance to the nearest transport routes and key infrastructure objects, such as airports, ports, highways, railway stations" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCommunalInfrastructure" name="Наявність та відстань до комунальної інфраструктури ((опис наявної або відстані до найближчої інженерно-технічної інфраструктури, наприклад, електроенергія, вода, газ, каналізація). Важливо вказати їхні технічні характеристики та надати коментарі стосовно необхідності збільшення потужностей або модернізації комунікацій для реалізації проекту);Availability and distance to the communal infrastructure" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sCommunalInfrastructureEN" name="Availability and distance to the communal infrastructure;(description of the available or distance to the nearest engineering infrastructure such as electricity, water, gas, sewage). It is important to specify their specifications and comment on the need to increase capacity or upgrade communications for project implementation" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="lResources" name=" ; ;labelType=info" type="label" default="Ресурси та послуги (Resources and services)"></activiti:formProperty>
+        <activiti:formProperty id="sresource" name="Доступ до ресурсів та послуг (Вказати, які природні ресурси необхідні для виробництва і джерела їхнього постачання. Якщо є попередні домовленості з постачальниками таких ресурсів – важливо це вказати);Access to resources and services" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sresourceEN" name="Access to resources and services;Indicate what natural resources are needed for production and their source of supply. If there are prior agreements with suppliers of such resources, it is important to specify this" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sassets" name="Характеристика наявних активів (Наявність будівель та їх характеристика (будівлі, що можуть бути використані для реалізації проекту: план забудови, площа, кількість поверхів, технічний стан, чи були проведені ремонтні роботи). Даний розділ повинен розкривати інформацію про наявні активи (будівлі, споруди, виробниче обладнання), які можуть бути використані для реалізації проекту, або які необхідно демонтувати (у такому випадку вказати очікувані строки демонтажу та суму відповідних витрат). Важливо зазначити технічний стан активів);Characteristics of available assets" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sassetsEN" name="Characteristics of available assets;Availability of buildings and their characteristics (buildings that can be used for the project: building plan, area, number of floors, technical condition, or repairs were carried out). This section should disclose information about available assets (buildings, structures , production equipment) that can be used to implement a project or to be disassembled (in which case indicate the expected dismantling times and the amount of relevant costs). It is important to note the technical state of the assets" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sHumanResources" name="Наявність та якість людських ресурсів (Надати інформацію щодо наявності людських ресурсів із необхідним рівнем навичок/знань, присутність спеціалізованих учбових закладів, щорічну кількість випускників, схожі проекти в регіоні із залученням відповідних фахівців. Інформація щодо середнього рівня заробітної плати та безробіття в регіоні);Availability and quality of human resources" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sHumanResourcesEN" name="Availability and quality of human resources;Provide information on the availability of human resources with the required level of skills/knowledge, the presence of specialized schools, the annual number of graduates, similar projects in the region with the involvement of relevant specialists. Information on average wages and unemployment in the region" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="lRegulatory" name=" ; ;labelType=info" type="label" default="Особливості регулювання (Regulatory features)"></activiti:formProperty>
+        <activiti:formProperty id="sPermissions" name="Необхідні дозволи та ліцензії ;Required permissions and licenses" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sPermissionsEN" name="Required permissions and licenses" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRestrictions" name="Екологічні обмеження та вимоги (за наявності);Environmental restrictions and requirements" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRestrictionsEN" name="Environmental restrictions and requirements;if any" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPrivileges" name="Наявні або заплановані пільги або преференції (за наявності);Available or planned privileges or preferences" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPrivilegesEN" name="Available or planned privileges or preferences;if any" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="lOther" name=" ; ;labelType=info" type="label" default="Інше (Other)"></activiti:formProperty>
+        <activiti:formProperty id="sOther" name="Інше (інформація, що може бути корисною для потенційного інвестора (наявність аудійованої фінансової звітності, інші ключові фінансові показники, наявність зацікавлених спів-інвесторів));Other" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sOtherEN" name="Other;information that may be useful to a potential investor (availability of audited financial statements, other key financial indicators, presence of interested co-investors);if any" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="lContacts" name=" ; ;labelType=info" type="label" default="Контактні дані (Contacts)"></activiti:formProperty>
+        <activiti:formProperty id="sContact" name="Ім’я, прізвище контактної особи; Name, surname of the contact person" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sContactEN" name="Name, surname of the contact person" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition" name="Посада; Position" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sPositionEN" name="Position" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddressCont" name="Адреса;Address" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sAddressContEN" name="Address" type="string"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Телефон; Phone" type="string" default="+380" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-мail" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="general" type="markers" default="${markerService.loadFromFile('ODA_invest/oda_invest_start.json')}"></activiti:formProperty>
+        <activiti:formProperty id="nFile1" name="Додаткові файли (Additional files); ;bNew=true" type="file"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <serviceTask id="servicetask5" name="Лист-привітання громадянина" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[Звернення на тему: Анкета інвестиційного проекту]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+[pattern/mail/new_design/_common_content_start.html]
+			<p>
+			Ваше звернення №[sID_Order] подачі анкети інвестиційного проекту успішно зареєстроване.<br>
+			Ви отримаєте відповідь протягом найближчого часу.
+			</p>
+			<p>Контакти підрозділу , який буде займатися обробкою Вашого звернення:</p>
+			<b>${sNameOrgan}</b>.<br>
+            ${sDepartamentOda}<br>
+			${sAddress}<br>
+			${sWorkTime}<br>
+			${sPhoneOrgan}
+[pattern/mail/new_design/_common_signature_start.html]
+			${sNameOrgan}<br>
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask6" name="Повідомлення держслужбовця" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[Нове звернення на порталі igov.org.ua]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <userTask id="usertask2" name="Перевірка даних" activiti:candidateGroups="${sID_Public_SubjectOrganJoin}_invest">
+      <extensionElements>
+        <activiti:formProperty id="sNameOrgan" name="підпис ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="електронна пошта ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="адреса; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartamentOda" name="Департамент; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sScopeOfActivity" name="Сфера діяльності(Scope of activity); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sScopeOfActivityEN" name="Scope of activity" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProject" name="Назва проекту; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectEN" name="Project name" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectAutor" name="Назва ініціатора/власника проекту (Project initiator/owner name); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectAutorEN" name="Project initiator/owner name" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDescription" name="Опис проекту (Короткий опис проекту, який має дати чітке розуміння про вид діяльності та основні фактори, що спонукатимуть інвестора до подальшого детального розгляду проекту); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sDescriptionEN" name="Description of the project;Brief description of the project, which should give a clear understanding of the type of activity and the main factors that will encourage the investor to further detailed consideration of the project" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProducts" name="Продукти/послуги (Детальна інформація щодо продуктів/послуг, які будуть вироблятися/надаватися); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProductsEN" name="Products/services;Detailed information about the products/services to be produced/provided" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sMarketOverview" name="Огляд ринку (Інформація стосовно того, куди буде поставлятися продукція/послуги (внутрішній ринок, експорт, країни) і потенційних клієнтів. Необхідно надати обґрунтування, чому пропонована продукція/послуги будуть цікаві зазначеним ринкам/клієнтам); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sMarketOverviewEN" name="Market overview;Information about where the products/services (domestic market, exports, country) and potential customers will be delivered. It is necessary to provide a justification as to why the proposed products/services will be of interest to the indicated markets/customers" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectPreparation" name="Стан підготовки проекту (Наявність попереднього техніко-економічного обґрунтування, наявність бізнес плану); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectPreparationEN" name="Status of project preparation;Presence of preliminary feasibility study, availability of business plan" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectCost" name="Оціночна вартість проекту (в дол. США)(Estimated cost of the project (USD)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sAmount" name="Сума необхідних інвестицій (в дол. США)(Amount of required investment (USD)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sAmountForm" name="Форма залучення інвеcтицій (Form of investment attraction); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAmountFormEN" name="Form of investment attraction" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDetailing" name="Деталізація необхідних інвестицій (на що саме будуть витрачені інвестиційні кошти: будівництво приміщень, закупівля обладнання (вказати якого саме), і т.п. Розбивка суми інвестицій по періодам (роки і місяці).); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sDetailingEN" name="Detailing of necessary investments; What exactly will be spent investment funds: building of premises, purchase of equipment (indicate which one), etc. Breakdown of the amount of investments by periods (years and months)." type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sExpectedDuration" name="Очікуваний термін реалізації проекту (програми), кількість років (місяців) (Expected duration of the project (program), number of years (months)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sNVP" name="Чиста приведена вартість, (NPV) (Net present value (NPV)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sPBP" name="Термін окупності проекту (PBP), років (місяців) (Project payback period (PBP), number of years (months)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sEffectiveness" name="Рентабельність проекту (%) (Cost-effectiveness of the project (%)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sSavings" name="Загалом економія (дол США) (Total savings (USD)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sLowerCO2" name="Зниження СО2 (якщо є, %) (Lower CO2 (if available, %)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sLocation" name="Розташування проекту/підприємства відносно обласного і районного центрів. (Можна показати карту, додавши її у полі додавання файлів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sLocationEN" name="Location;Location of the project/enterprise relative to the regional and district centers. You can show the map by adding it in the field of adding files" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sArea" name="Площа (Га); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sOwnership" name="Право власності; ;writable=false" type="enum">
+          <activiti:value id="sPrivate" name="Приватна/Private"></activiti:value>
+          <activiti:value id="sState" name="Державна/State"></activiti:value>
+          <activiti:value id="sMunicipal" name="Муніципальна/Municipal"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sClassification" name="Цільове призначення земельної ділянки (сільськогосподарське, для житлової та громадської забудови, промислового призначення і т.п.); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationEN" name="Purposeful use of a plot of land;Agricultural, residential and public building, industrial use, etc." type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationActual" name="Фактичне використання ділянки; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationActualEN" name="Actual use of the site" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sSpecifics" name="Облік специфіки проекту (інші характеристики: наявні будівлі/споруди, насадження, особливості сусідніх ділянок, статус або фактичне використання яких може вплинути на реалізацію проекту як в позитивному, так і в негативному плані); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sSpecificsEN" name="Accounting for project specifics;other characteristics: existing buildings/structures, plantations, features of neighboring sites, status or actual use of which may affect the implementation of the project both in a positive and a negative plan" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTransport" name="Доступ до транспортної інфраструктури (відстань до найближчих транспортних шляхів та ключових інфраструктурних об’єктів, наприклад, аеропорти, порти, автомагістралі, залізничні вокзали); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTransportEN" name="Access to transport infrastructure;Distance to the nearest transport routes and key infrastructure objects, such as airports, ports, highways, railway stations" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCommunalInfrastructure" name="Наявність та відстань до комунальної інфраструктури ((опис наявної або відстані до найближчої інженерно-технічної інфраструктури, наприклад, електроенергія, вода, газ, каналізація). Важливо вказати їхні технічні характеристики та надати коментарі стосовно необхідності збільшення потужностей або модернізації комунікацій для реалізації проекту); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCommunalInfrastructureEN" name="Availability and distance to the communal infrastructure;(description of the available or distance to the nearest engineering infrastructure such as electricity, water, gas, sewage). It is important to specify their specifications and comment on the need to increase capacity or upgrade communications for project implementation" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sresource" name="Доступ до ресурсів та послуг (Вказати, які природні ресурси необхідні для виробництва і джерела їхнього постачання. Якщо є попередні домовленості з постачальниками таких ресурсів – важливо це вказати); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sresourceEN" name="Access to resources and services;Indicate what natural resources are needed for production and their source of supply. If there are prior agreements with suppliers of such resources, it is important to specify this" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sassets" name="Характеристика наявних активів (Наявність будівель та їх характеристика (будівлі, що можуть бути використані для реалізації проекту: план забудови, площа, кількість поверхів, технічний стан, чи були проведені ремонтні роботи). Даний розділ повинен розкривати інформацію про наявні активи (будівлі, споруди, виробниче обладнання), які можуть бути використані для реалізації проекту, або які необхідно демонтувати (у такому випадку вказати очікувані строки демонтажу та суму відповідних витрат). Важливо зазначити технічний стан активів); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sassetsEN" name="Characteristics of available assets;Availability of buildings and their characteristics (buildings that can be used for the project: building plan, area, number of floors, technical condition, or repairs were carried out). This section should disclose information about available assets (buildings, structures , production equipment) that can be used to implement a project or to be disassembled (in which case indicate the expected dismantling times and the amount of relevant costs). It is important to note the technical state of the assets" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sHumanResources" name="Наявність та якість людських ресурсів (Надати інформацію щодо наявності людських ресурсів із необхідним рівнем навичок/знань, присутність спеціалізованих учбових закладів, щорічну кількість випускників, схожі проекти в регіоні із залученням відповідних фахівців. Інформація щодо середнього рівня заробітної плати та безробіття в регіоні); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sHumanResourcesEN" name="Availability and quality of human resources;Provide information on the availability of human resources with the required level of skills/knowledge, the presence of specialized schools, the annual number of graduates, similar projects in the region with the involvement of relevant specialists. Information on average wages and unemployment in the region" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPermissions" name="Необхідні дозволи та ліцензії; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPermissionsEN" name="Required permissions and licenses" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRestrictions" name="Екологічні обмеження та вимоги (за наявності)(Environmental restrictions and requirements); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRestrictionsEN" name="Environmental restrictions and requirements;if any" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPrivileges" name="Наявні або заплановані пільги або преференції (за наявності)(Available or planned privileges or preferences); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPrivilegesEN" name="Available or planned privileges or preferences;if any" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sOther" name="Інше (інформація, що може бути корисною для потенційного інвестора (наявність аудійованої фінансової звітності, інші ключові фінансові показники, наявність зацікавлених спів-інвесторів)); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sOtherEN" name="Other;information that may be useful to a potential investor (availability of audited financial statements, other key financial indicators, presence of interested co-investors);if any" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sContact" name="Ім’я, прізвище контактної особи; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sContactEN" name="Name, surname of the contact person" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition" name="Посада; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPositionEN" name="Position" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddressCont" name="Адреса; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddressContEN" name="Address" type="string"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-мail; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nFile1" name="Додаткові файли (Additional files); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="decide" name="Рішення про правильність інформації" type="enum" required="true">
+          <activiti:value id="accept" name="Заява оформлена вірно, дані додано до бази даних"></activiti:value>
+          <activiti:value id="reject" name="Заява оформлена невірно, відмова"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="scomment" name="У разі відмови, внесіть коментар для заявника" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/oda_invest.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Анкета інвестиційного проекту" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_EN" name="[pattern/print/oda_investEN.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Questionnaire for the investment project" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markers" name="general" type="markers" default="${markerService.loadFromFile('ODA_invest/oda_invest.json')}"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
+    <serviceTask id="servicetask7" name="Звернення прийняте" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
+      <extensionElements>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Анкета інвестиційного проекту]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
+<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
+<p> Ваше звернення було розглянуто. Об'єкт внесено в базу залучення інвестицій.<br>
+
+[pattern/mail/_common_signature_start.html]
+${sNameOrgan}
+[pattern/mail/_common_signature_end.html]
+[pattern/mail/_common_feedback.html]
+[pattern/mail/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask8" name="Відмова" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
+      <extensionElements>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Анкета інвестиційного проекту]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
+<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
+<p>На жаль, Ваше звернення було відхилено. <br>
+<p>Причина в наступному:<br>
+${scomment}</p>
+<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/ target="_blank">iGov.org.ua</a></p>
+[pattern/mail/_common_signature_start.html]
+${sNameOrgan}
+[pattern/mail/_common_signature_end.html]
+[pattern/mail/_common_feedback.html]
+[pattern/mail/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <endEvent id="endevent5" name="End"></endEvent>
+    <sequenceFlow id="flow13" name="accept" sourceRef="exclusivegateway2" targetRef="servicetask7">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide == 'accept'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow15" name="reject" sourceRef="exclusivegateway2" targetRef="servicetask8">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide == 'reject'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow16" sourceRef="servicetask8" targetRef="usertask3_green"></sequenceFlow>
+    <sequenceFlow id="flow21" sourceRef="servicetask5" targetRef="servicetask6"></sequenceFlow>
+    <sequenceFlow id="flow22" sourceRef="servicetask6" targetRef="usertask2"></sequenceFlow>
+    <sequenceFlow id="flow23" sourceRef="startevent1" targetRef="servicetask5"></sequenceFlow>
+    <sequenceFlow id="flow24" sourceRef="servicetask7" targetRef="usertask3_green"></sequenceFlow>
+    <userTask id="usertask3_green" name="Архів заявок" activiti:candidateGroups="${sID_Public_SubjectOrganJoin}_invest">
+      <extensionElements>
+        <activiti:formProperty id="sNameOrgan" name="підпис ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="електронна пошта ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="адреса; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartamentOda" name="Департамент; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sScopeOfActivity" name="Сфера діяльності(Scope of activity); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sScopeOfActivityEN" name="Scope of activity; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProject" name="Назва проекту; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectEN" name="Project name; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectAutor" name="Назва ініціатора/власника проекту (Project initiator/owner name); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameProjectAutorEN" name="Project initiator/owner name; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDescription" name="Опис проекту (Короткий опис проекту, який має дати чітке розуміння про вид діяльності та основні фактори, що спонукатимуть інвестора до подальшого детального розгляду проекту); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sDescriptionEN" name="Description of the project;Brief description of the project, which should give a clear understanding of the type of activity and the main factors that will encourage the investor to further detailed consideration of the project; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProducts" name="Продукти/послуги (Детальна інформація щодо продуктів/послуг, які будуть вироблятися/надаватися); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProductsEN" name="Products/services;Detailed information about the products/services to be produced/provided; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sMarketOverview" name="Огляд ринку (Інформація стосовно того, куди буде поставлятися продукція/послуги (внутрішній ринок, експорт, країни) і потенційних клієнтів. Необхідно надати обґрунтування, чому пропонована продукція/послуги будуть цікаві зазначеним ринкам/клієнтам); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sMarketOverviewEN" name="Market overview;Information about where the products/services (domestic market, exports, country) and potential customers will be delivered. It is necessary to provide a justification as to why the proposed products/services will be of interest to the indicated markets/customers; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectPreparation" name="Стан підготовки проекту (Наявність попереднього техніко-економічного обґрунтування, наявність бізнес плану); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectPreparationEN" name="Status of project preparation;Presence of preliminary feasibility study, availability of business plan; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sProjectCost" name="Оціночна вартість проекту (в дол. США)(Estimated cost of the project (USD)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sAmount" name="Сума необхідних інвестицій (в дол. США)(Amount of required investment (USD)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sAmountForm" name="Форма залучення інвеcтицій (Form of investment attraction); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAmountFormEN" name="Form of investment attraction; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDetailing" name="Деталізація необхідних інвестицій (на що саме будуть витрачені інвестиційні кошти: будівництво приміщень, закупівля обладнання (вказати якого саме), і т.п. Розбивка суми інвестицій по періодам (роки і місяці)); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sDetailingEN" name="Detailing of necessary investments; What exactly will be spent investment funds: building of premises, purchase of equipment (indicate which one), etc. Breakdown of the amount of investments by periods (years and months).; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sExpectedDuration" name="Очікуваний термін реалізації проекту (програми), кількість років (місяців) (Expected duration of the project (program), number of years (months)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sNVP" name="Чиста приведена вартість, (NPV) (Net present value (NPV)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sPBP" name="Термін окупності проекту (PBP), років (місяців) (Project payback period (PBP), number of years (months)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sEffectiveness" name="Рентабельність проекту (%) (Cost-effectiveness of the project (%)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sSavings" name="Загалом економія (дол США) (Total savings (USD)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sLowerCO2" name="Зниження СО2 (якщо є, %) (Lower CO2 (if available, %)); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sLocation" name="Розташування проекту/підприємства відносно обласного і районного центрів. (Можна показати карту, додавши її у полі додавання файлів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sLocationEN" name="Location;Location of the project/enterprise relative to the regional and district centers. You can show the map by adding it in the field of adding files; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sArea" name="Площа (Га); ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sOwnership" name="Право власності; ;writable=false" type="enum">
+          <activiti:value id="sPrivate" name="Приватна/Private"></activiti:value>
+          <activiti:value id="sState" name="Державна/State"></activiti:value>
+          <activiti:value id="sMunicipal" name="Муніципальна/Municipal"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sClassification" name="Цільове призначення земельної ділянки (сільськогосподарське, для житлової та громадської забудови, промислового призначення і т.п.); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationEN" name="Purposeful use of a plot of land(Agricultural, residential and public building, industrial use, etc.); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationActual" name="Фактичне використання ділянки; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sClassificationActualEN" name="Actual use of the site; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sSpecifics" name="Облік специфіки проекту (інші характеристики: наявні будівлі/споруди, насадження, особливості сусідніх ділянок, статус або фактичне використання яких може вплинути на реалізацію проекту як в позитивному, так і в негативному плані); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sSpecificsEN" name="Accounting for project specifics(other characteristics: existing buildings/structures, plantations, features of neighboring sites, status or actual use of which may affect the implementation of the project both in a positive and a negative plan); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTransport" name="Доступ до транспортної інфраструктури (відстань до найближчих транспортних шляхів та ключових інфраструктурних об’єктів, наприклад, аеропорти, порти, автомагістралі, залізничні вокзали); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTransportEN" name="Access to transport infrastructure;Distance to the nearest transport routes and key infrastructure objects, such as airports, ports, highways, railway stations; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCommunalInfrastructure" name="Наявність та відстань до комунальної інфраструктури ((опис наявної або відстані до найближчої інженерно-технічної інфраструктури, наприклад, електроенергія, вода, газ, каналізація). Важливо вказати їхні технічні характеристики та надати коментарі стосовно необхідності збільшення потужностей або модернізації комунікацій для реалізації проекту); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCommunalInfrastructureEN" name="Availability and distance to the communal infrastructure((description of the available or distance to the nearest engineering infrastructure such as electricity, water, gas, sewage). It is important to specify their specifications and comment on the need to increase capacity or upgrade communications for project implementation); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sresource" name="Доступ до ресурсів та послуг (Вказати, які природні ресурси необхідні для виробництва і джерела їхнього постачання. Якщо є попередні домовленості з постачальниками таких ресурсів – важливо це вказати); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sresourceEN" name="Access to resources and services(Indicate what natural resources are needed for production and their source of supply. If there are prior agreements with suppliers of such resources, it is important to specify this); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sassets" name="Характеристика наявних активів (Наявність будівель та їх характеристика (будівлі, що можуть бути використані для реалізації проекту: план забудови, площа, кількість поверхів, технічний стан, чи були проведені ремонтні роботи). Даний розділ повинен розкривати інформацію про наявні активи (будівлі, споруди, виробниче обладнання), які можуть бути використані для реалізації проекту, або які необхідно демонтувати (у такому випадку вказати очікувані строки демонтажу та суму відповідних витрат). Важливо зазначити технічний стан активів); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sassetsEN" name="Characteristics of available assets(Availability of buildings and their characteristics (buildings that can be used for the project: building plan, area, number of floors, technical condition, or repairs were carried out). This section should disclose information about available assets (buildings, structures , production equipment) that can be used to implement a project or to be disassembled (in which case indicate the expected dismantling times and the amount of relevant costs). It is important to note the technical state of the assets); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sHumanResources" name="Наявність та якість людських ресурсів (Надати інформацію щодо наявності людських ресурсів із необхідним рівнем навичок/знань, присутність спеціалізованих учбових закладів, щорічну кількість випускників, схожі проекти в регіоні із залученням відповідних фахівців. Інформація щодо середнього рівня заробітної плати та безробіття в регіоні); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sHumanResourcesEN" name="Availability and quality of human resources(Provide information on the availability of human resources with the required level of skills/knowledge, the presence of specialized schools, the annual number of graduates, similar projects in the region with the involvement of relevant specialists. Information on average wages and unemployment in the region); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPermissions" name="Необхідні дозволи та ліцензії; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPermissionsEN" name="Required permissions and licenses; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRestrictions" name="Екологічні обмеження та вимоги (за наявності)(Environmental restrictions and requirements); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRestrictionsEN" name="Environmental restrictions and requirements(if any); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPrivileges" name="Наявні або заплановані пільги або преференції (за наявності)(Available or planned privileges or preferences); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPrivilegesEN" name="Available or planned privileges or preferences(if any); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sOther" name="Інше (інформація, що може бути корисною для потенційного інвестора (наявність аудійованої фінансової звітності, інші ключові фінансові показники, наявність зацікавлених спів-інвесторів)); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sOtherEN" name="Other(information that may be useful to a potential investor (availability of audited financial statements, other key financial indicators, presence of interested co-investors)); ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sContact" name="Ім’я, прізвище контактної особи; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sContactEN" name="Name, surname of the contact person; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition" name="Посада; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPositionEN" name="Position; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddressCont" name="Адреса; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddressContEN" name="Address; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-мail; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nFile1" name="Додаткові файли (Additional files); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="ENDorNOT" name="Що далі робити з анкетою?" type="enum" required="true">
+          <activiti:value id="noend" name="Повернути в необроблені"></activiti:value>
+          <activiti:value id="end" name="Повністю завершити роботу з анкетою"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/oda_invest.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Анкета інвестиційного проекту" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_EN" name="[pattern/print/oda_investEN.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Questionnaire for the investment project" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markers" name="general" type="markers" default="${markerService.loadFromFile('ODA_invest/oda_invest.json')}"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow25" sourceRef="usertask2" targetRef="exclusivegateway2"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow26" sourceRef="usertask3_green" targetRef="exclusivegateway3"></sequenceFlow>
+    <sequenceFlow id="flow27" sourceRef="exclusivegateway3" targetRef="usertask3_green">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${ENDorNOT == 'noend'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow28" sourceRef="exclusivegateway3" targetRef="endevent5">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${ENDorNOT == 'end'}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_oda_invest">
+    <bpmndi:BPMNPlane bpmnElement="oda_invest" id="BPMNPlane_oda_invest">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="20.0" y="293.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask5" id="BPMNShape_servicetask5">
+        <omgdc:Bounds height="61.0" width="107.0" x="100.0" y="280.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask6" id="BPMNShape_servicetask6">
+        <omgdc:Bounds height="65.0" width="105.0" x="220.0" y="278.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="71.0" width="105.0" x="346.0" y="275.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="483.0" y="290.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask7" id="BPMNShape_servicetask7">
+        <omgdc:Bounds height="71.0" width="108.0" x="450.0" y="160.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask8" id="BPMNShape_servicetask8">
+        <omgdc:Bounds height="55.0" width="105.0" x="451.0" y="390.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent5" id="BPMNShape_endevent5">
+        <omgdc:Bounds height="35.0" width="35.0" x="820.0" y="293.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask3_green" id="BPMNShape_usertask3_green">
+        <omgdc:Bounds height="71.0" width="105.0" x="580.0" y="275.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway3" id="BPMNShape_exclusivegateway3">
+        <omgdc:Bounds height="40.0" width="40.0" x="730.0" y="291.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow13" id="BPMNEdge_flow13">
+        <omgdi:waypoint x="503.0" y="290.0"></omgdi:waypoint>
+        <omgdi:waypoint x="504.0" y="231.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="33.0" x="468.0" y="251.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow15" id="BPMNEdge_flow15">
+        <omgdi:waypoint x="503.0" y="330.0"></omgdi:waypoint>
+        <omgdi:waypoint x="503.0" y="390.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="27.0" x="471.0" y="344.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow16" id="BPMNEdge_flow16">
+        <omgdi:waypoint x="503.0" y="390.0"></omgdi:waypoint>
+        <omgdi:waypoint x="632.0" y="346.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow21" id="BPMNEdge_flow21">
+        <omgdi:waypoint x="207.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="220.0" y="310.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow22" id="BPMNEdge_flow22">
+        <omgdi:waypoint x="325.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="346.0" y="310.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
+        <omgdi:waypoint x="55.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="100.0" y="310.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow24" id="BPMNEdge_flow24">
+        <omgdi:waypoint x="504.0" y="231.0"></omgdi:waypoint>
+        <omgdi:waypoint x="632.0" y="275.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
+        <omgdi:waypoint x="451.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="483.0" y="310.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow26" id="BPMNEdge_flow26">
+        <omgdi:waypoint x="685.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="730.0" y="311.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow27" id="BPMNEdge_flow27">
+        <omgdi:waypoint x="750.0" y="291.0"></omgdi:waypoint>
+        <omgdi:waypoint x="749.0" y="214.0"></omgdi:waypoint>
+        <omgdi:waypoint x="632.0" y="214.0"></omgdi:waypoint>
+        <omgdi:waypoint x="632.0" y="275.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
+        <omgdi:waypoint x="770.0" y="311.0"></omgdi:waypoint>
+        <omgdi:waypoint x="820.0" y="310.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

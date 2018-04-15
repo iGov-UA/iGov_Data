@@ -1,0 +1,104 @@
+{
+  "_:Watch": 
+  {
+    "_default_CIB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "bNeedECP":true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_start": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "Delegate", "AnswerMessage", "SetUrgent", "AddVisor"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"CIB_"},
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2"]}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_cib_read", "sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },  
+  "_default_CIB_SlugbFM": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage", "SetUrgent"],
+      "oPermitions_SetUrgent": {"sKey_Step":["step_3", "step_4"]}, 
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_ViddilPovern": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "SetUrgent"],
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2"]}, 
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_KerVid": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_GolPravl": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "bNeedECP":true,
+      "aPermition": ["Refuse", "AskMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }     
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Seen": {},
+  "step_4:Agree": {},
+  "step_5:Watch": {}
+}

@@ -1,0 +1,11 @@
+{
+  "aField": [
+    {
+      "id": "sDocument",
+      "name": "№ 441 документ АРМ",
+      "default": "sNumber_441",
+      "type": "long"
+    }
+     
+  ]
+}

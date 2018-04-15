@@ -1,0 +1,67 @@
+{
+  "_:Watch": 
+  {
+    "_default_NTSU": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  	"_default_NTSU_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_NTSU_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_NTSU_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_NTSU_Ask": {
+      "sName": " ",
+      "bWrite": true, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_NTSU_Answer": {
+      "sName": " ",
+      "bWrite": false, 
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {}
+}

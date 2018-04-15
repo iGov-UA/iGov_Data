@@ -1,0 +1,95 @@
+{
+	"motion": {
+		"ShowFieldsOnCondition_1": {
+			"aField_ID": ["sID_SubjectOrgan_OKPO_appl", "sFullName_SubjectOrgan_appl", "sShortName_SubjectOrgan_appl", "sLocation_SubjectOrgan_appl", "ur_tel", "ur_fax","sID_SubjectOrgan_OKPO_appl","sCEOName_SubjectOrgan_appl","ur_post"],
+			"asID_Field": {
+				"sReason": "asSubekt"
+			},
+			"sCondition": "[sReason]=='ur'"
+		},
+		"ShowFieldsOnCondition_2": {
+			"aField_ID": ["imya_fiz","ad_fiz"],
+			"asID_Field": {
+				"sReason": "asSubekt"
+			},
+			"sCondition": "[sReason]=='fiz'"
+		},
+		"ShowFieldsOnCondition_3": {
+			"aField_ID": ["second_1"],
+			"asID_Field": {
+				"sReason": "asSubekt_3"
+			},
+			"sCondition": "[sReason]=='secondary'"
+		},
+		"ShowFieldsOnCondition_4": {
+			"aField_ID": ["sProf_2", "sProf_vac2", "sProf_plata2", "sProf_misce2", "asProf_dod2", "asProf_more2"],
+			"asID_Field": {
+				"sReason": "asProf_more"
+			},
+			"sCondition": "[sReason]=='yes_1'"
+		},
+		"ShowFieldsOnCondition_5": {
+			"aField_ID": ["sProf_3", "sProf_vac3", "sProf_plata3", "sProf_misce3", "asProf_dod3", "asProf_more3"],
+			"asID_Field": {
+				"sReason": "asProf_more2"
+			},
+			"sCondition": "[sReason]=='yes_2'"
+		},
+		"ShowFieldsOnCondition_6": {
+			"aField_ID": ["sProf_4", "sProf_vac4", "sProf_plata4", "sProf_misce4", "asProf_dod4", "asProf_more4"],
+			"asID_Field": {
+				"sReason": "asProf_more3"
+			},
+			"sCondition": "[sReason]=='yes_3'"
+		},
+		"ShowFieldsOnCondition_7": {
+			"aField_ID": ["sProf_5", "sProf_vac5", "sProf_plata5", "sProf_misce5", "asProf_dod5"],
+			"asID_Field": {
+				"sReason": "asProf_more4"
+			},
+			"sCondition": "[sReason]=='yes_4'"
+		},
+		"ShowFieldsOnCondition_8": {
+			"aField_ID": ["Info_2", "Info_3", "sProf_1_kom", "sProf_1_ks", "asProf_kat", "sProf_1_komt", "asProf_rezh", "asProf_caracter", "asProf_umovy", "asProf_dodatoc", "Info_4", "asProf_osvita", "asProf_riven", "sSpecializ", "sStazh", "sVminnya"],
+			"asID_Field": {
+				"sReason": "asProf_dod"
+			},
+			"sCondition": "[sReason]=='yes1'"
+		},
+		"ShowFieldsOnCondition_9": {
+			"aField_ID": ["rezh11"],
+			"asID_Field": {
+				"sReason": "asProf_rezh"
+			},
+			"sCondition": "[sReason]=='rezh10'"
+		},
+		"ShowFieldsOnCondition_10": {
+			"aField_ID": ["caracter11"],
+			"asID_Field": {
+				"sReason": "asProf_caracter"
+			},
+			"sCondition": "[sReason]=='caracter5'"
+		},
+		"ShowFieldsOnCondition_11": {
+			"aField_ID": ["umovy11"],
+			"asID_Field": {
+				"sReason": "asProf_umovy"
+			},
+			"sCondition": "[sReason]=='umovy4'"
+		},
+		"ShowFieldsOnCondition_12": {
+			"aField_ID": ["dodatoc11"],
+			"asID_Field": {
+				"sReason": "asProf_dodatoc"
+			},
+			"sCondition": "[sReason]=='dodatoc4'"
+			},
+		"ShowFieldsOnCondition_13": {
+			"aField_ID": ["asProf_kat1", "asProf_kat2", "asProf_kat3", "asProf_kat4", "asProf_kat5", "asProf_kat6", "asProf_kat7", "asProf_kat8", "asProf_kat9", "asProf_kat10", "asProf_kat11"],
+			"asID_Field": {
+				"sReason": "asProf_kat"
+			},
+			"sCondition": "[sReason]=='yes_z'"
+		}
+	}
+}

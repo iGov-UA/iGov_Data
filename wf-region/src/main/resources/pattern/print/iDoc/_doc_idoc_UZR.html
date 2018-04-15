@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+	 <head>
+  <meta charset="utf-8">
+  <title>font-style</title>
+  <style> 
+   p {
+    font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
+   }
+   div {
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+   }
+  </style>
+ 	</head>
+ 	<body>
+ 		<h3 style="text-align: center;">
+			<b>Узгоджене замовлення робіт №[sNumberDodUgod]</b><br>
+			до Договору №[sDateStart] від [sDateStart], про надання послуг на інформаційно-технічне обслуговування Системи<br>
+		</h3>
+			<p><table border="0" cellpadding="1" cellspacing="1" style="width:100%">
+			<tr>
+				<th><b>м.Дніпро</b></th>
+				<th style="text-align: right;"><b>“___”  ___________ 20___ року</b></th>
+			</tr>
+			</table></p>
+			<br>
+			
+			<p><b>Субліцензіат</b> [sCompany], який діє в рамках Субліцензійного Договору № 
+			[sSubDog] від [sDateSubDog] (надалі “Субліцензія”) 
+			в особі [sNameClient], який діє на підставі <b>Статуту</b> (далі «Замовник») з однієї сторони, та <b>Ліцензіат 
+			ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «АЙДОК»</b>, в особі директора <b><i>Дубілета Дмитра Олександровича</b></i>, який діє на підставі 
+			<b>Ліцензійного договору №20170513-1л від 13.05.2017</b> року (далі “Ліцензія”) 
+			та <b>Статуту</b> (далі «Виконавець»), з іншої сторони (надалі разом  «Сторони»), склали та погодили це Узгоджене замовленя 
+			робіт (далі “Замовлення”) згідно п. 6.5 Договору:
+ 			<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+                <tbody>              
+                    <tr style="text-align: center;">
+                        <th style="width: 5%; text-align: center;">№</th>
+                        <th style="width: 65%; text-align: center;">Опис робіт</th>
+                        <th style="width: 10%; text-align: center;">Годин</th>
+                        <th style="width: 10%; text-align: center;">Година/грн</th>
+                        <th style="width: 10%; text-align: center;">Сума всього, грн.</th> 
+                    </tr>
+                     <!--[sTableServices-->
+                    <tr>
+                        <td style="text-align: center;">[sNumber]</td>
+                        <td style="text-align: left;">[sService]</td>
+                        <td style="text-align: center;">[sAmount]</td>
+                        <td style="text-align: center;">[sAverage]</td>
+                        <td style="text-align: center;">[sFinalSum]</td>
+                    </tr>
+                    <!--sTableServices]--> 
+                </tbody>
+            </table>
+            
+            <div>1. Визначена Виконавцем, та погоджена Замовником згідно п.6.5.1 Договору:</div>
+			<div>1. 1 загальна вартість Замовлення (далі “Сума”) становить: ____________ грн.(_________________________________________________________________)</div>
+			<div>1. 2 планова дата виконання замовлення: ____________</div>
+			<div>2. Замовник погоджується, згідно п.6.5.2 Договору - передплатити “Суму” Виконавцю у тридений строк після дати цього Замовлення та прийняти роботи після їх завершення, закріпивши це складанням Акту.</div>
+			<div>3. Виконавець погоджується виконати замовлення у вказаний термін, згідно п.6.5.2 Договору та цього Замовлення.</div>
+           
+			<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+			<tr>
+				<th style="width:50%; text-align: left;"><div style="text-align: center;">Замовник:</div>
+				<br>
+				[sFullName_SubjectOrgan_01]<br>
+				Поштова адреса: [sPost_SubjectOrgan_01]<br>
+				п/р: [sID_SubjectOrgan_RR_01]<br>
+				в [sID_SubjectOrgan_Bank_01],<br>
+				Код банку: [sID_SubjectOrgan_MFO_01]<br>
+				Код ЄДРПОУ: [sID_SubjectOrgan_OKPO_01]<br>
+				Тел./факс: [sID_SubjectOrgan_Phone_01]<br>
+				Електрона адреса: [sID_SubjectOrgan_Email_01]<br>
+				Уповноважений технічний спеціаліст замовника: [sRefName_SubjectOrgan_01]<br>
+
+				_______________      /__________________/<br>
+				</th>
+				<th style="width:50%; text-align: left;"><div style="text-align: center;">Виконавець:<br></div>
+				<div style="text-align: center;">ТОВ “АЙДОК”<br></div>
+				Місцезнаходження юридичної особи: 49000, Дніпропетровська обл., місто Дніпро, вул.Рогольова, буд.28, к.229.<br>
+				Поштова адреса: 49000, Дніпропетровська обл., місто Дніпро, вул.Рогальова, буд.28, кім.229<br>
+				п/р: 26000050294773<br>
+				в ПАТ КБ "ПРИВАТБАНК",<br>
+				Код банку: 305299<br>
+				Код ЄДРПОУ: 40411743<br>
+				Електрона адреса: client-support@idoc.com.ua<br>
+				<br>
+				Директор    _____________  /Д.О. Дубілет/<br>
+				</th>
+			</tr>
+			</table>
+ 	</body>
+ </html>

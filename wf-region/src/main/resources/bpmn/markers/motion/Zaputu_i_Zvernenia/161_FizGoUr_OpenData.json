@@ -1,0 +1,71 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_GO_UrK": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sLocation_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamGO'||[sCond] == 'sEnamUrK'||[sCond] == 'Громадська організація (подає представник)'||[sCond] == 'Юридична особа (подає представник)'"
+    },
+    "ShowFieldsOnCondition_sEnamFiz": {
+      "aField_ID": [
+        "sRegistrationMisto",
+        "asBudType",
+        "sRegistrationVul",
+        "sRegistrationBud"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFiz'||[sCond] == 'Громадянин України'"
+    },
+    "ShowFieldsOnCondition_sBagkvatur": {
+      "aField_ID": [
+        "asKorp",
+        "lRegistrationKvart"
+      ],
+      "asID_Field": {
+        "sCondit1": "asBudType",
+        "sConditO": "asOsoba"
+      },
+      "sCondition": "[sCondit1]=='sBagkvatur'&&[sConditO]=='sEnamFiz'"
+    },
+    "ShowFieldsOnCondition_sBagkvaturKorp": {
+      "aField_ID": [
+        "lRegistrationKorp"
+      ],
+      "asID_Field": {
+        "sCondit1": "asKorp",
+        "sCondit2": "asBudType",
+        "sConditO": "asOsoba"
+      },
+      "sCondition": "[sCondit1]=='yes'&&[sCondit2]=='sBagkvatur'&&[sConditO]=='sEnamFiz'"
+    },
+    "ShowFieldsOnCondition_sPrivSector": {
+      "aField_ID": [
+        "asKvart"
+      ],
+      "asID_Field": {
+        "sCondit1": "asBudType",
+        "sConditO": "asOsoba"
+      },
+      "sCondition": "[sCondit1]=='sPrivSector'&&[sConditO]=='sEnamFiz'"
+    },
+    "ShowFieldsOnCondition_sPrivSectorKvart": {
+      "aField_ID": [
+        "lRegistrationKvart"
+      ],
+      "asID_Field": {
+        "sCondit1": "asBudType",
+        "sCondit2": "asKvart",
+        "sConditO": "asOsoba"
+      },
+      "sCondition": "[sCondit1]=='sPrivSector'&&[sCondit2]=='yes'&&[sConditO]=='sEnamFiz'"
+    }
+  }
+}

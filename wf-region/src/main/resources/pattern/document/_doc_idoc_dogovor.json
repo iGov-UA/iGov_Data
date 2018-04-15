@@ -1,0 +1,18 @@
+{
+  "_:Watch": {
+    "_default_idoc": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Edit": {},
+  "step_3:Edit": {}
+}

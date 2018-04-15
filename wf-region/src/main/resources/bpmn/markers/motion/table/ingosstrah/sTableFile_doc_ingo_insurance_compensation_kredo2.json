@@ -1,0 +1,14 @@
+{
+  "aField": [
+    {
+      "id": "sNameFile",
+      "name": "Назва документа",
+      "type": "string"
+    },
+    {
+      "id": "sFile",
+      "name": "Документ; ;bNew=true",
+      "type": "file"
+    }
+  ]
+}

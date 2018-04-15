@@ -1,0 +1,105 @@
+{
+  "_:Watch": 
+  {
+    "_default_CIB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_start": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "sTestPer1",
+        "sTestPer2"
+      ],
+      "asID_Field_Write": 
+      [
+        "sTestPer1",
+        "sTestPer2"
+      ]
+    },
+    "_default_CIB1": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "sTestPer1",
+        "sTestPer2"
+      ],
+      "asID_Field_Write": 
+      [
+        "sTestPer1",
+        "sTestPer2"
+      ]
+    },
+    "_default_CIB2": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "sTestPer1",
+        "sTestPer3"
+      ],
+      "asID_Field_Write": 
+      [
+        "sTestPer1",
+        "sTestPer3"
+      ]
+    },
+    "_default_CIB3": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "sTestPer1",
+        "sTestPer2",
+        "sTestPer4"
+      ],
+      "asID_Field_Write": 
+      [
+        "sTestPer1",
+        "sTestPer2",
+        "sTestPer4"
+      ]
+    },
+    "_default_CIB_Kerivn": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "asRish",
+        "tKerKoment"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {}
+}

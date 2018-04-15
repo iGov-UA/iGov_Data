@@ -1,0 +1,25 @@
+{
+  "_:Watch": {
+    "_default_akordbankza": {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    
+    "_default_akordbankza_read": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {}
+}

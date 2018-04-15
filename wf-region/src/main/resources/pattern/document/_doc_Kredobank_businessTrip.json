@@ -1,0 +1,111 @@
+{
+  "_:Watch": {
+    "_default_Kredo": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "CreateTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_Kredo_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    
+    },
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+       "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+     
+    "_default_Kredo_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "AddVisor","AddViewer","AskMessage", "AnswerMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_Kredo_Accept", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Kredo_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+     
+    "_default_Kredo_Accept1": {
+      "sName": " ",
+      "bWrite": true,
+      "bNeedECP":true,
+      "aPermition": ["AddAcceptor", "Delegate", "CancelDocumentSubmit", "AddVisor","AddViewer","AskMessage", "AnswerMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_Kredo_Accept1", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Kredo_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"btsol_,OGOK_,MGOK_"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+     
+    "_default_Kredo_Accept2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddVisor","AddViewer","AskMessage", "AnswerMessage"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_Kredo_read", "sGroup_Activiti":"btsol_,OGOK_,MGOK_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+       "_default_Kredo_Agree": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage", "AnswerMessage"],   
+       "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+   
+    "_default_Kredo_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "EditTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Edit": {},
+  "step_4:Direct": {},
+  "step_5:Edit": {},
+  "step_6:Seen": {},
+  "step_7:Seen": {}
+}

@@ -1,0 +1,18 @@
+{
+	"motion" : {
+		"ShowFieldsOnCondition_1" : {
+			"aField_ID" : ["nFileAreaRegister"], 
+			"asID_Field" : {
+				"sClient" : "asAreaRegister"
+			}, 
+			"sCondition" : "[sClient] == 'no_1'"
+		}, 
+		"ShowFieldsOnCondition_inv01" : {
+			"aField_ID" : ["nArea", "sPhoneOrgan", "sWorkTime", "sMailClerk", "sNameOrgan", "sAddress", "bankIdAddressFactual", "markersAdressTransfer", "markersStart", "cc_1_3"], 
+			"asID_Field" : {
+				
+			}, 
+			"sCondition" : "false"
+		}
+	}
+}

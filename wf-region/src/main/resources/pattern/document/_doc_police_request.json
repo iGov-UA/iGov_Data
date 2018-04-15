@@ -1,0 +1,50 @@
+{
+  "_:Watch": 
+  {
+    "_default_Police": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],   
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  	"_default_Police_agree": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_Police_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["CreateTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Execute": {},
+  "step_5:Agree": {},
+  "step_6:Agree": {},
+  "step_7:Accept": {}
+}

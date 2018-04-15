@@ -1,0 +1,60 @@
+{
+  "aField": [
+     {
+      "id": "nNumber",
+      "name": "Введь номер карточки пояснювального документу:",
+      "type": "long",
+      "nWidth": "70%"
+    },   
+     {
+      "id": "nYear",
+      "name": "Рік",
+      "type": "enum",
+      "nWidth": "30%",
+      "a" : [
+	        {
+		"id" : "nYear1", 
+		"name" : "2010"},
+		{
+		"id" : "nYear2", 
+		"name" : "2011"},
+		    {
+		"id" : "nYear3", 
+		"name" : "2012"},
+		    {
+		"id" : "nYear4", 
+		"name" : "2013"},
+		    {
+		"id" : "nYear5", 
+		"name" : "2014"},
+		    {
+		"id" : "nYear6", 
+		"name" : "2015"},
+		    {
+		"id" : "nYear7", 
+		"name" : "2016"},
+		    {
+		"id" : "nYear8", 
+		"name" : "2017"},
+		    {
+		"id" : "nYear9", 
+		"name" : "2018"},
+		    {
+		"id" : "nYear10", 
+		"name" : "2019"},
+		   {
+		"id" : "nYear11", 
+		"name" : "2020"},
+		   {
+		"id" : "nYear12", 
+		"name" : "2021"},
+		   {
+		"id" : "nYear13", 
+		"name" : "2022"},
+		   {
+		"id" : "nYear14", 
+		"name" : "2023"}
+		]	
+    }  
+  ]   
+}

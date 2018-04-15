@@ -1,0 +1,114 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_brown": {
+      "aField_ID": [
+        "sLength",
+        "sWidth",
+        "sHeight",
+        "sArea",
+        "sPremisesetc",
+        "sPremisesetcEN",
+        "sProvidespace",
+        "sProvidespaceEN",
+        "sUnloadingprovided",
+        "sUnloadingprovidedEN",
+        "asTechnicalCondition",
+        "sDescribeBriefly",
+        "sDescribeBrieflyEN",
+        "asCanwork",
+        "asAvailabilityTrack",
+        "asGasConnection",
+        "asElectricityConnection",
+        "asWhaterConnection",
+        "asDrainageConnection",
+        "asCommunicationTI",
+        "lProductionAreas",
+        "lCharacteristicsAreas",
+        "sInbuilt",
+        "sNumberfloorsBuilding",
+        "sOnthefloor",
+        "nFile1Brown",
+        "nFile2Brown",
+        "sNamePunkt",
+        "sNamePunktEN",
+        "edrpou"
+       ],
+      "asID_Field": {
+        "sClient": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sBrown'"
+    },
+    "RequiredFieldsOnCondition_brown": {
+      "aField_ID": [
+        "sLength",
+        "sWidth",
+        "sHeight",
+        "sArea",
+        "sPremisesetc",
+        "sProvidespace",
+        "sUnloadingprovided",
+        "asTechnicalCondition",
+        "asGasConnection",
+        "asElectricityConnection",
+        "asWhaterConnection",
+        "asDrainageConnection",
+        "asCommunicationTI",
+        "sDescribeBriefly",
+        "asCanwork",
+        "sInbuilt",
+        "sNumberfloorsBuilding",
+        "sOnthefloor",
+        "nFile1Brown",
+        "nFile2Brown",
+        "sNamePunkt",
+        "edrpou"
+      ],
+      "asID_Field": {
+        "sClient": "asPlotType"
+      },
+      "sCondition": "[sClient] == 'sBrown'"
+    },
+    "ShowFieldsOnCondition_12": {
+      "aField_ID": [
+        "sWhatreserve"
+       ],
+      "asID_Field": {
+        "sClient": "asPlotType",
+        "sClient1": "asGasConnection"
+      },
+      "sCondition": "[sClient] == 'sBrown' && [sClient1] == 'sYes'"
+    },
+    "ShowFieldsOnCondition_22": {
+      "aField_ID": [
+        "sPowerSupply"
+       ],
+      "asID_Field": {
+        "sClient": "asPlotType",
+        "sClient1": "asElectricityConnection"
+      },
+      "sCondition": "[sClient] == 'sBrown' && [sClient1] == 'sYes'"
+    },
+    "ShowFieldsOnCondition_32": {
+      "aField_ID": [
+        "sWatersupplyWhat"
+       ],
+      "asID_Field": {
+        "sClient": "asPlotType",
+        "sClient1": "asWhaterConnection"
+        
+      },
+      "sCondition": "[sClient] == 'sBrown' && [sClient1] == 'sYes'"
+    },
+    "ShowFieldsOnCondition_42": {
+      "aField_ID": [
+        "sDrainageWha"
+       ],
+      "asID_Field": {
+        "sClient": "asPlotType",
+        "sClient1": "asDrainageConnection"
+        
+      },
+      "sCondition": "[sClient] == 'sBrown' && [sClient1] == 'sYes'"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "_:Watch": {
+    "_default_cib": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "Delegate", "AnswerMessage", "AddAcceptor", "SetUrgent"],    
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_cib", "sGroup_Activiti":"CIB_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CIB_"}, 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2", "step_3"]}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_cib_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_cib_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_cib_approve", "sGroup_Activiti":"CIB_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_cib_read", "sGroup_Activiti":"CIB_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CIB_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_cib_agree": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_cib_approve_1", "sGroup_Activiti":"CIB_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_cib_read", "sGroup_Activiti":"CIB_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CIB_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_cib_resol": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_cib_approve_1", "sGroup_Activiti":"CIB_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_cib_read", "sGroup_Activiti":"CIB_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CIB_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_cib_2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": [ "Seen", "AddViewer", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"},  
+       "oPermitions_Delegate": {"sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_cib_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+    },
+    "_default_cib_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_cib_execute": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_cib_view", "sGroup_Activiti":"CIB_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Edit": {},
+  "step_5:Direct": {},
+  "step_6:Execute": {},
+  "step_7:Seen": {},
+  "step_8:Seen": {},
+  "step_9:Seen": {}
+}

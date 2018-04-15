@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="_doc_concord_personnel_order" name="Наказ на звільнення" isExecutable="true">
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер звернення ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="processInstanceId" name="ід процеса ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <userTask id="usertask1" name="Створення документа">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id групи ; ;bVisible=false" type="string" default="ETG_Head_ComDir"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глибина ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+        
+        <activiti:formProperty id="sNameDismissal" name="ПІБ заявника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" default="Наказ на звільнення" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPersonnelCard" name="Картка №" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sPersonnelCardDate" name="від" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sPosition" name="Посада робітника, що звільняється" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sCommentUT2" name="Коментар керівника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeLaw" name="Стаття" type="enum" required="true">
+          <activiti:value id="sEnumLaw_1" name="по згоді сторін (Ст.36 п.1)"></activiti:value>
+          <activiti:value id="sEnumLaw_2" name="за власним бажанням (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_3" name="по переводу (Ст.36 п.5)"></activiti:value>
+          <activiti:value id="sEnumLaw_4" name="за власним бажанням (догляд за дитиною до 14 років) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_5" name="в зв'язку з закликом у ЗС (Ст.36 п.3)"></activiti:value>
+          <activiti:value id="sEnumLaw_6" name="за власним бажанням (в зв'язку з виходом на пенсію) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_7" name="за власним бажанням (прийом на роботу за конкурсом) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_8" name="за власним бажанням (в зв'язку з неможливістю продовження роботи за станом здоров'я) (Ст.38)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sReason" name="Причина звільнення" type="string" required="true"></activiti:formProperty>        
+        <activiti:formProperty id="email" name="Особистий E-mail" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Вн.тел." type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDateDismissal" name="Звільнити" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bAssistance" name="Допомога при звільненні; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sAssistanceSum" name="Сума (грн.)" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="сума вихідної допомоги" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_1&quot;:{&quot;aField_ID&quot;:[&quot;sAssistanceSum&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;bAssistance&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'yes'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sName_AssignTo" name="Виконання обов'язків покласти на; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" ></activiti:formProperty>
+        <activiti:formProperty id="sLogin_AssignTo" name="sLogin_AssignTo; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_1" name="лінія візи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;sName_DelegateUT2&quot;],&quot;sValue&quot;:&quot;Візи&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sName_DelegateUT2" name="Керівник; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_DelegateUT2" name="sLogin_DelegateUT2 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/iDoc/Concord/_doc_concord_personnel_order.html] ; ;bVisible=false" type="string" default="Наказ" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Author" name="Департамент (структурний підрозділ)" type="string" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}">
+          <activiti:field name="sKey_GroupPostfix_New">
+            <activiti:expression><![CDATA[${sLoginAuthor}]]></activiti:expression>
+          </activiti:field>
+          <activiti:field name="sKey_GroupPostfix">
+            <activiti:string><![CDATA[_default_Concord]]></activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <userTask id="usertask2" name="Узгодження заяви на звільнення">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id групи ; ;bVisible=false" type="string" default="ETG_Head_ComDir"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глибина ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevelDepart" name="глибина підрозділів ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+        
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameDismissal" name="ПІБ робітника, що звільняється; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPersonnelCard" name="Картка №" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPersonnelCardDate" name="від" type="date" writable="false"></activiti:formProperty>        
+        <activiti:formProperty id="sPosition" name="Посада робітника, що звільняється" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Author" name="Департамент (структурний підрозділ)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeLaw" name="Стаття" type="enum" writable="false">
+          <activiti:value id="sEnumLaw_1" name="по згоді сторін (Ст.36 п.1)"></activiti:value>
+          <activiti:value id="sEnumLaw_2" name="за власним бажанням (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_3" name="по переводу (Ст.36 п.5)"></activiti:value>
+          <activiti:value id="sEnumLaw_4" name="за власним бажанням (догляд за дитиною до 14 років) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_5" name="в зв'язку з закликом у ЗС (Ст.36 п.3)"></activiti:value>
+          <activiti:value id="sEnumLaw_6" name="за власним бажанням (в зв'язку з виходом на пенсію) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_7" name="за власним бажанням (прийом на роботу за конкурсом) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_8" name="за власним бажанням (в зв'язку з неможливістю продовження роботи за станом здоров'я) (Ст.38)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sReason" name="Причина звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCause" name="Підстава звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="Особистий E-mail" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDateDismissal" name="Звільнити" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_AssignTo" name="Виконання обов'язків покласти на; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_AssignTo" name="sLogin_AssignTo; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAssistanceSum" name="Допомога при звільненні" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asActionDocUT2" name="Дія з документом" type="enum" required="true">
+          <activiti:value id="sEnumSign" name="Завізувати"></activiti:value>
+          <activiti:value id="sEnumRemark" name="Зауваження"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sCommentUT2" name="Внесіть текст зауваження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markers5" name="якщо зауваження" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_5&quot;:{&quot;aField_ID&quot;:[&quot;sCommentUT2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asActionDocUT2&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sEnumRemark'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="marker_50_1" name="Обов'язковий коментар" type="markers" default="{&quot;motion&quot;:{&quot;RequiredFieldsOnCondition_50&quot;:{&quot;aField_ID&quot;:[&quot;sCommentUT2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asActionDocUT2&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sEnumRemark'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/iDoc/Concord/_doc_concord_personnel_order.html] ; ;bVisible=false" type="string" default="Наказ" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameDepart" name="Департамент" type="string" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <scriptTask id="scripttask1" name="ProcessInstanceId" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var processInstanceId = execution.getProcessInstanceId();
+execution.setVariable('processInstanceId', processInstanceId)
+</script>
+    </scriptTask>
+    <sequenceFlow id="flow21" sourceRef="scripttask1" targetRef="scripttask18"></sequenceFlow>
+    <sequenceFlow id="flow23" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
+    <sequenceFlow id="flow57" sourceRef="usertask1" targetRef="scripttask6"></sequenceFlow>
+    <scriptTask id="scripttask6" name="Step2" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId()
+var oSwitchStep2 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_2')
+
+var sKey_GroupPostfix_New = execution.getVariable('sLogin_DelegateUT2')
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_Concord', sKey_GroupPostfix_New, 'step_2', true)
+
+
+
+</script>
+    </scriptTask>
+    <sequenceFlow id="flow65" sourceRef="scripttask6" targetRef="usertask2"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow72" name="замечание" sourceRef="exclusivegateway3" targetRef="scripttask16">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asActionDocUT2 == 'sEnumRemark'}]]></conditionExpression>
+    </sequenceFlow>
+    <scriptTask id="scripttask16" name="Step1" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId()
+var oSwitchStep12 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_1')
+var sKey_GroupPostfix_New = execution.getVariable('sLoginAuthor')
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_Concord', sKey_GroupPostfix_New, 'step_1', true)</script>
+    </scriptTask>
+    <sequenceFlow id="flow103" sourceRef="scripttask16" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="flow104" sourceRef="usertask2" targetRef="exclusivegateway3"></sequenceFlow>
+    <sequenceFlow id="flow105" sourceRef="usertask4" targetRef="scripttask20">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asActionDocUT2 == 'sEnumSign'}]]></conditionExpression>
+    </sequenceFlow>
+    <scriptTask id="scripttask17" name="Step5" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId()
+var oSwitchStep12 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_5')
+
+var sKey_GroupPostfix_New = execution.getVariable('sLoginAuthor')
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_Concord_read', sKey_GroupPostfix_New, 'step_5', false)</script>
+    </scriptTask>
+    <userTask id="usertask3" name="Ознайомлення автора з наказом">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id групи ; ;bVisible=false" type="string" default="ETG_Head_ComDir"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глибина ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+        
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameDismissal" name="ПІБ робітника, що звільняється; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPositionDismissal" name="Посада робітника, що звільняється" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sSubdivisionDismissal" name="Підрозділ робітника, що звільняється" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeLaw" name="Стаття" type="enum" writable="false">
+          <activiti:value id="sEnumLaw_1" name="по згоді сторін (Ст.36 п.1)"></activiti:value>
+          <activiti:value id="sEnumLaw_2" name="за власним бажанням (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_3" name="по переводу (Ст.36 п.5)"></activiti:value>
+          <activiti:value id="sEnumLaw_4" name="за власним бажанням (догляд за дитиною до 14 років) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_5" name="в зв'язку з закликом у ЗС (Ст.36 п.3)"></activiti:value>
+          <activiti:value id="sEnumLaw_6" name="за власним бажанням (в зв'язку з виходом на пенсію) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_7" name="за власним бажанням (прийом на роботу за конкурсом) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_8" name="за власним бажанням (в зв'язку з неможливістю продовження роботи за станом здоров'я) (Ст.38)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sReason" name="Причина звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCause" name="Підстава звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="Особистий E-mail" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDateDismissal" name="Звільнити" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAssistanceSum" name="Допомога при звільненні" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_AssignTo" name="Виконання обов'язків покласти на; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_AssignTo" name="sLogin_AssignTo; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+        <activiti:value id="sEnumSign" name="Завізован"></activiti:value>
+        <activiti:value id="sEnumRemark" name="Зауваження"></activiti:value>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow106" sourceRef="scripttask17" targetRef="usertask3"></sequenceFlow>
+    <sequenceFlow id="flow107" sourceRef="usertask3" targetRef="endevent1"></sequenceFlow>
+    <serviceTask id="servicetask1" name="Письмо с решением" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Рішення про звільнення]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[<b>Доброго дня!</b><br><br>
+Ваша заява на звільнення підпісана.<br>
+Всього найкращого!<br>
+<p>
+    Обов'язково ознайомтесь з наказом за <a href="https://alpha.test.region.igov.org.ua">посиланням</a>
+</p>]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow108" sourceRef="servicetask1" targetRef="scripttask17"></sequenceFlow>
+    <scriptTask id="scripttask18" name="ПІБ" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>// ФИО заявителя
+var sLoginAuthor = execution.getVariable('sLoginAuthor')
+var oResultAuthorName = subjectService.getSubjectByLoginAccount(sLoginAuthor)
+execution.setVariable('sNameDismissal', oResultAuthorName.sLabel)
+
+//Назва структурного підрозділу
+var obj2 = subjectGroupTreeService.getSubjectGroupsTreeUp(sLoginAuthor,'Organ',1)
+var sDepartment_Author = obj2[0].oSubject.sLabel
+execution.setVariable('sDepartment_Author', sDepartment_Author)
+
+</script>
+    </scriptTask>
+    <sequenceFlow id="flow109" sourceRef="scripttask18" targetRef="usertask1"></sequenceFlow>
+    <userTask id="usertask4" name="Затвердження заяви на звільнення">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id групи ; ;bVisible=false" type="string" default="ETG_Head_ComDir"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глибина ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevelDepart" name="глибина підрозділів ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+       
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameDismissal" name="ПІБ робітника, що звільняється; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPersonnelNumber" name="Табельний номер" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPosition" name="Посада робітника, що звільняється" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Author" name="Департамент (структурний підрозділ)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeLaw" name="Стаття" type="enum" writable="false">
+          <activiti:value id="sEnumLaw_1" name="по згоді сторін (Ст.36 п.1)"></activiti:value>
+          <activiti:value id="sEnumLaw_2" name="за власним бажанням (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_3" name="по переводу (Ст.36 п.5)"></activiti:value>
+          <activiti:value id="sEnumLaw_4" name="за власним бажанням (догляд за дитиною до 14 років) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_5" name="в зв'язку з закликом у ЗС (Ст.36 п.3)"></activiti:value>
+          <activiti:value id="sEnumLaw_6" name="за власним бажанням (в зв'язку з виходом на пенсію) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_7" name="за власним бажанням (прийом на роботу за конкурсом) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_8" name="за власним бажанням (в зв'язку з неможливістю продовження роботи за станом здоров'я) (Ст.38)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sReason" name="Причина звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCause" name="Підстава звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="Особистий E-mail" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDateDismissal" name="Звільнити" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAssistanceSum" name="Допомога при звільненні" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_AssignTo" name="Виконання обов'язків покласти на; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_AssignTo" name="sLogin_AssignTo; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="marker_50_1" name="Обов'язковий коментар" type="markers" default="{&quot;motion&quot;:{&quot;RequiredFieldsOnCondition_50&quot;:{&quot;aField_ID&quot;:[&quot;sCommentUT2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asActionDocUT2&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sEnumRemark'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/iDoc/ETG/_doc_etg_dismissal.html] ; ;bVisible=false" type="string" default="Наказ" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/iDoc/ETG/_doc_etg_dismissal_1.html] ; ;bVisible=false" type="string" default="Обхідний лист" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameDepart" name="Департамент" type="string" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+        <activiti:value id="sEnumSign" name="Завізувати"></activiti:value>
+        <activiti:value id="sEnumRemark" name="Зауваження"></activiti:value>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="scripttask19" name="Step3" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId()
+var oSwitchStep2 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_3')
+
+var sKey_GroupPostfix_New = 'ETG_Head_Dir'
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_ETG', sKey_GroupPostfix_New, 'step_3', true)</script>
+    </scriptTask>
+    <sequenceFlow id="flow110" sourceRef="scripttask19" targetRef="usertask4"></sequenceFlow>
+    <scriptTask id="scripttask20" name="Step4" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId()
+var oSwitchStep15 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_4')
+
+var sKey_GroupPostfix_New = execution.getVariable('sLogin_AssignTo')
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_ETG_read', sKey_GroupPostfix_New, 'step_4', false)</script>
+    </scriptTask>
+    <userTask id="usertask5" name="Ознайомлення з наказом ">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id групи ; ;bVisible=false" type="string" default="ETG_Head_ComDir"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глибина ; ;bVisible=false" type="string" default="3"></activiti:formProperty>
+       
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameDismissal" name="ПІБ робітника, що звільняється; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPositionDismissal" name="Посада робітника, що звільняється" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sSubdivisionDismissal" name="Підрозділ робітника, що звільняється" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeLaw" name="Стаття" type="enum" writable="false">
+          <activiti:value id="sEnumLaw_1" name="по згоді сторін (Ст.36 п.1)"></activiti:value>
+          <activiti:value id="sEnumLaw_2" name="за власним бажанням (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_3" name="по переводу (Ст.36 п.5)"></activiti:value>
+          <activiti:value id="sEnumLaw_4" name="за власним бажанням (догляд за дитиною до 14 років) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_5" name="в зв'язку з закликом у ЗС (Ст.36 п.3)"></activiti:value>
+          <activiti:value id="sEnumLaw_6" name="за власним бажанням (в зв'язку з виходом на пенсію) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_7" name="за власним бажанням (прийом на роботу за конкурсом) (Ст.38)"></activiti:value>
+          <activiti:value id="sEnumLaw_8" name="за власним бажанням (в зв'язку з неможливістю продовження роботи за станом здоров'я) (Ст.38)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sReason" name="Причина звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCause" name="Підстава звільнення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="Особистий E-mail" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDateDismissal" name="Звільнити" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAssistanceSum" name="Допомога при звільненні" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_AssignTo" name="Виконання обов'язків покласти на; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_AssignTo" name="sLogin_AssignTo; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow112" sourceRef="scripttask20" targetRef="usertask5"></sequenceFlow>
+    <sequenceFlow id="flow113" sourceRef="usertask5" targetRef="servicetask1"></sequenceFlow>
+    <sequenceFlow id="flow114" sourceRef="exclusivegateway3" targetRef="scripttask19">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asActionDocUT2 == 'sEnumSign'}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram__doc_concord_personnel_order">
+    <bpmndi:BPMNPlane bpmnElement="_doc_concord_personnel_order" id="BPMNPlane__doc__concord_personnel_order">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="45.0" y="109.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="84.0" width="130.0" x="432.0" y="85.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="84.0" width="131.0" x="767.0" y="85.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="270.0" y="550.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="100.0" y="99.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask6" id="BPMNShape_scripttask6">
+        <omgdc:Bounds height="56.0" width="105.0" x="606.0" y="99.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway3" id="BPMNShape_exclusivegateway3">
+        <omgdc:Bounds height="40.0" width="40.0" x="812.0" y="209.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask16" id="BPMNShape_scripttask16">
+        <omgdc:Bounds height="56.0" width="105.0" x="444.0" y="202.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask17" id="BPMNShape_scripttask17">
+        <omgdc:Bounds height="55.0" width="105.0" x="511.0" y="540.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask3" id="BPMNShape_usertask3">
+        <omgdc:Bounds height="55.0" width="105.0" x="366.0" y="540.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="641.0" y="540.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask18" id="BPMNShape_scripttask18">
+        <omgdc:Bounds height="55.0" width="105.0" x="260.0" y="99.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask4" id="BPMNShape_usertask4">
+        <omgdc:Bounds height="55.0" width="108.0" x="779.0" y="370.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask19" id="BPMNShape_scripttask19">
+        <omgdc:Bounds height="55.0" width="105.0" x="780.0" y="280.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask20" id="BPMNShape_scripttask20">
+        <omgdc:Bounds height="55.0" width="105.0" x="780.0" y="460.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask5" id="BPMNShape_usertask5">
+        <omgdc:Bounds height="55.0" width="105.0" x="780.0" y="540.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow21" id="BPMNEdge_flow21">
+        <omgdi:waypoint x="205.0" y="126.0"></omgdi:waypoint>
+        <omgdi:waypoint x="260.0" y="126.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
+        <omgdi:waypoint x="80.0" y="126.0"></omgdi:waypoint>
+        <omgdi:waypoint x="100.0" y="126.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow57" id="BPMNEdge_flow57">
+        <omgdi:waypoint x="562.0" y="127.0"></omgdi:waypoint>
+        <omgdi:waypoint x="606.0" y="127.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow65" id="BPMNEdge_flow65">
+        <omgdi:waypoint x="711.0" y="127.0"></omgdi:waypoint>
+        <omgdi:waypoint x="767.0" y="127.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow72" id="BPMNEdge_flow72">
+        <omgdi:waypoint x="812.0" y="229.0"></omgdi:waypoint>
+        <omgdi:waypoint x="549.0" y="230.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="55.0" x="756.0" y="216.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow103" id="BPMNEdge_flow103">
+        <omgdi:waypoint x="496.0" y="202.0"></omgdi:waypoint>
+        <omgdi:waypoint x="497.0" y="169.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow104" id="BPMNEdge_flow104">
+        <omgdi:waypoint x="832.0" y="169.0"></omgdi:waypoint>
+        <omgdi:waypoint x="832.0" y="209.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow105" id="BPMNEdge_flow105">
+        <omgdi:waypoint x="833.0" y="425.0"></omgdi:waypoint>
+        <omgdi:waypoint x="832.0" y="460.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow106" id="BPMNEdge_flow106">
+        <omgdi:waypoint x="511.0" y="567.0"></omgdi:waypoint>
+        <omgdi:waypoint x="471.0" y="567.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow107" id="BPMNEdge_flow107">
+        <omgdi:waypoint x="366.0" y="567.0"></omgdi:waypoint>
+        <omgdi:waypoint x="305.0" y="567.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow108" id="BPMNEdge_flow108">
+        <omgdi:waypoint x="641.0" y="567.0"></omgdi:waypoint>
+        <omgdi:waypoint x="616.0" y="567.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow109" id="BPMNEdge_flow109">
+        <omgdi:waypoint x="365.0" y="126.0"></omgdi:waypoint>
+        <omgdi:waypoint x="432.0" y="127.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow110" id="BPMNEdge_flow110">
+        <omgdi:waypoint x="832.0" y="335.0"></omgdi:waypoint>
+        <omgdi:waypoint x="833.0" y="370.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow112" id="BPMNEdge_flow112">
+        <omgdi:waypoint x="832.0" y="515.0"></omgdi:waypoint>
+        <omgdi:waypoint x="832.0" y="540.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow113" id="BPMNEdge_flow113">
+        <omgdi:waypoint x="780.0" y="567.0"></omgdi:waypoint>
+        <omgdi:waypoint x="746.0" y="567.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow114" id="BPMNEdge_flow114">
+        <omgdi:waypoint x="832.0" y="249.0"></omgdi:waypoint>
+        <omgdi:waypoint x="832.0" y="280.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,106 @@
+{
+  "_:Watch": 
+  {
+    "_default_conkorde": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer","DeleteDocument","CreateTask","AnswerMessage"],
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},  
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  	"_default_conkorde_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+       "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_conkorde_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AddViewer","CreateTask","DeleteDocument"],    
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_conkorde_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AddViewer","EditTask"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+      "_default_conkordvid_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer","AskMessage"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_conkorde_answer": {
+      "sName": " ",
+      "bWrite": null, 
+      "aPermition": ["AddViewer","AnswerMessage"],    
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    
+        "_default_CONCORD_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+     "_default_conkorde_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Seen": {}
+}

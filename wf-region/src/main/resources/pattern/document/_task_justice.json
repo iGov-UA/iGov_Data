@@ -1,0 +1,15 @@
+{
+  "_:Watch": {
+    "_default_MJU": {
+      "sName": "Виконавець завдання",
+      "bWrite": true,
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1": {}
+}

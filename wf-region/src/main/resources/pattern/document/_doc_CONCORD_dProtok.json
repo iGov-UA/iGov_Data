@@ -1,0 +1,119 @@
+{
+  "_": {
+    "_default_CONCORD": {
+      "sName": " ",
+     "bWrite": true,
+      "aPermition": ["DeleteDocument","AnswerMessage","CreateTask","AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_Supervisory_Board"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+      "_default_CONCORD_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "CreateTask", "EditTask", "AskMessage","AnswerMessage"],   
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_CONCORD_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_"},   
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CONCORD_"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_CONCORD_approve_1": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_"},   
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CONCORD_"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_CONCORD_approve_2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_approve_2", "sGroup_Activiti":"CONCORD_Supervisory_Board"},   
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_Supervisory_Board"}, 
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CONCORD_read", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"CONCORD_Supervisory_Board"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_CONCORD_2": {
+      "sName": " ",
+       "bWrite": true,
+      "aPermition": ["CancelDocumentSubmit", "AskMessage", "AddAcceptor"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_2", "sGroup_Activiti":"CONCORD_Supervisory_Board"},   
+      "oPermitions_Delegate": {"sGroup_Activiti":"CONCORD_Supervisory_Board"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CONCORD_4": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddAcceptor", "CancelDocumentSubmit", "Delegate", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_CONCORD_4", "sGroup_Activiti":"CONCORD_Supervisory_Board"},   
+      "oPermitions_Delegate": {"sGroup_Activiti":"CONCORD_Supervisory_Board"},  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_view": {
+      "sName": " ",
+     "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_CONCORD_read": {
+      "sName": " ",
+      "bWrite": false,
+       "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"CONCORD_Supervisory_Board"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+   "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Seen": {},
+  "step_5:Edit": {},
+  "step_6:Edit": {}
+}

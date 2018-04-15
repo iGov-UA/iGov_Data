@@ -1,0 +1,73 @@
+{
+  "_:Watch": {
+    "_default_UB": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_UB_Read": {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_UB_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+     
+    "_default_UB_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage","AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+      },
+       "_default_UB_Agree": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["Delegate", "AddViewer", "AskMessage", "AnswerMessage", "Refuse"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"Nuwm_Dep_IT"},    
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_UB_view", "sGroup_Activiti":"Nuwm_Dep_IT"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+   
+    "_default_UB_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument","EditTask", "AnswerMessage"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Seen": {},
+  "step_5:Edit": {}
+ 
+  
+}

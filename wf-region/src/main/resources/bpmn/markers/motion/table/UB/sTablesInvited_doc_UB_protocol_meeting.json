@@ -1,0 +1,24 @@
+{
+  "aField": [
+    {
+      "id": "sName_Invited",
+      "name": "Запрошені; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_Invited",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+      
+    },
+    {
+      "id": "sEmail_Invited",
+      "name": "Email",
+      "type": "string",
+      "bVisible": "false"
+     
+    }
+  ]
+}

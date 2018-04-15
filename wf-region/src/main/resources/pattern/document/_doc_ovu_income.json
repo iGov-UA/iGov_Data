@@ -1,0 +1,74 @@
+{
+  "_:Watch": 
+  {
+    "_default_NSTU": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },     
+    "_default_btsol_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["CreateTask"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+  	"_default_NSTU_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_NSTU_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["CreateTask","EditTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_NSTU_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["EditTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Consideration": {},
+  "step_3:Agree": {},
+  "step_4:Agree": {}
+    }

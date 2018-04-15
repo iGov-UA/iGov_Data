@@ -1,0 +1,14 @@
+{
+  "aField": [
+    {
+      "id": "sNameFile1",
+      "name": "Назва уставного документа",
+      "type": "string"
+    },
+    {
+      "id": "sFile1",
+      "name": "Додаток; ;bNew=true",
+      "type": "file"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "_": {
+    "_default_nssmc": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_nssmc_Accept": {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1_Create:Create": {},
+  "step_2_Accept:Accept": {},
+  "step_3_Accept:Accept": {},
+  "step_4_Accept:Accept": {},
+  "step_5_Agree:Agree": {},
+  "step_6_Seen:Seen": {},
+  "step_7_Accept:Accept": {},
+  "step_8_Agree:Agree": {},
+  "step_9_Seen:Seen": {},
+  "step_11_Accept:Accept": {},
+  "step_12_Accept:Accept": {},
+  "step_13_Accept:Accept": {},
+  "step_14_Accept:Accept": {},
+  "step_15_Accept:Accept": {},
+  "step_16_Accept:Accept": {},
+  "step_17_Accept:Accept": {}
+  
+}

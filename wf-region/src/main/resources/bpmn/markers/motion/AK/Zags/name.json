@@ -1,0 +1,15 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1": {
+      "aField_ID": [
+        "file_Dov",
+        "sDovir_Name"
+      ],
+      "asID_Field": {
+        "sClient": "asOtrymuvach"
+      },
+      "sCondition": "[sClient] == 'sEnamInshOs'"
+    }  
+  }
+}
+

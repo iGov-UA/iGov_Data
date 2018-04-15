@@ -1,0 +1,31 @@
+{
+  "aField": [
+    {
+      "id": "sNumberVerifiedUR",
+      "name": "№ п/п",
+      "type": "long",     
+      "nWidth": "10%"
+   
+    },
+    {
+      "id": "sNameVerified1",
+      "name": "Повне найменування",
+      "type": "string"
+       
+    },
+    {
+      "id": "sRegis",
+      "name": "Країна реєстрації та реєстраційний код (ЄДРПОУ)",
+      "type": "string"
+      
+      
+    },
+    {
+      "id": "sBoss",
+      "name": "Керівник (и) (посада, ПІБ)",
+      "type": "string"
+      
+      
+    }
+  ]
+}

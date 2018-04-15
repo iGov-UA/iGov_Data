@@ -1,0 +1,85 @@
+{
+  "_:Watch": 
+  {
+    "_default_aval": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  	"_default_aval_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_aval_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_aval_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["EditTask"],    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_aval_ask": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AskMessage", "Refuse", "AddViewer", "Delegate", "AddAcceptor", "AddVisor", "Refuse", "CancelDocumentSubmit", "Seen", "EditTask"],    
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_aval", "sGroup_Activiti":"ETG_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_aval_read", "sGroup_Activiti":"ETG_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_aval_view", "sGroup_Activiti":"ETG_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"ETG_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_aval_answer": {
+      "sName": " ",
+      "bWrite": null, 
+      "aPermition": ["AnswerMessage"],    
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+     "_default_aval_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Agree": {},
+  "step_6:Seen": {}
+}

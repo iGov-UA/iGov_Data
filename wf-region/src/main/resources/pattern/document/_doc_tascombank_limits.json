@@ -1,0 +1,62 @@
+{
+    "_:Watch": {
+        "_default_TasComBank": {
+            "sName": " ",
+            "bWrite": true,
+            "aPermition": ["DeleteDocument"],  
+            "asID_Field_Read": [
+                "*"
+            ],
+            "asID_Field_Write": [
+                "*"
+            ]
+               
+    },
+     "_default_TasComBank_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_TasComBank_pogod": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_TasComBank_Head_KC_view": {
+      "sName": " ",
+      "bWrite":null,
+      "aPermition": ["Seen", "AskMessage"],  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+    },
+    
+    "step_1:Create": {
+    },
+    "step_2:Accept": { 
+    }, 
+    
+    "step_3:Accept": {  
+    },
+    "step_4:Accept": {  
+    },
+    "step_5:Accept": {  
+    }
+   
+}

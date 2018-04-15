@@ -1,0 +1,24 @@
+{
+  "aField": [
+    {
+      "id": "sName_ComMembers",
+      "name": "Члени комітету; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_ComMembers",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+      
+    },
+    {
+      "id": "sEmail_ComMembers",
+      "name": "Email",
+      "type": "string",
+      "bVisible": "false"
+     
+    }
+  ]
+}

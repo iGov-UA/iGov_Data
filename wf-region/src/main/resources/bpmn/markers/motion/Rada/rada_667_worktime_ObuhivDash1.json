@@ -1,0 +1,58 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1D": {
+      "aField_ID": [
+        "sRNumber"
+      ],
+      "asID_Field": {
+        "sReason": "asRisheniaj"
+      },
+      "sCondition": "[sReason]=='sEnumAccept'"
+    },
+    "RequiredFieldsOnCondition_1D": {
+      "aField_ID": [
+        "sRNumber"
+      ],
+      "asID_Field": {
+        "sCondit1": "asRisheniaj"
+      },
+      "sCondition": "[sCondit1]=='sEnumAccept'"
+    },
+    "ShowFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sReason": "asRisheniaj"
+      },
+      "sCondition": "[sReason]=='sEnumVidmova'"
+    },
+    "RequiredFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sCondit1": "asRisheniaj"
+      },
+      "sCondition": "[sCondit1]=='sEnumVidmova'"
+    },
+    "ShowFieldsOnCondition_sBodyPostiyniy": {
+      "aField_ID": [
+        "sBodyPostiyniy"
+      ],
+      "asID_Field": {
+        "sReason": "asObjTipe"
+      },
+      "sCondition": "[sReason]=='sEnamPostiyniy'||[sReason]=='Стаціонарна споруда'"
+    },
+    "ShowFieldsOnCondition_sBodyTumchasoviy": {
+      "aField_ID": [
+        "sBodyTumchasoviy"
+      ],
+      "asID_Field": {
+        "sReason": "asObjTipe"
+      },
+      "sCondition": "[sReason]=='sEnamTumchasoviy'||[sReason]=='Сезонна або тимчасова споруда'"
+    }
+  }
+}

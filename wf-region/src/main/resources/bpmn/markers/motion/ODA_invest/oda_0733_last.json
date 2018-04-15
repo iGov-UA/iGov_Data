@@ -1,0 +1,66 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_l1": {
+      "aField_ID": [
+        "scomment"
+       ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'reject'"
+    },
+    "ShowFieldsOnCondition_l2": {
+      "aField_ID": [
+        "sBody_1",
+        "sBody_2"
+       ],
+      "asID_Field": {
+        "sClient": "sflag"
+      },
+      "sCondition": "[sClient] == 'b'"
+    },
+    "ShowFieldsOnCondition_l3": {
+      "aField_ID": [
+        "sBody_3",
+        "sBody_4"
+       ],
+      "asID_Field": {
+        "sClient": "sflag"
+      },
+      "sCondition": "[sClient] == 'g'"
+    },
+    "RequiredFieldsOnCondition_l1": {
+      "aField_ID": [
+         "scomment"
+      ],
+      "asID_Field": {
+        "sClient": "decide" 
+      },
+      "sCondition": "[sClient] == 'reject'"
+    },
+    "ValuesFieldsOnCondition_l1": {
+      "aField_ID": [
+        "sflag2"
+      ],
+      "asID_Field_sValue": [
+        "accept"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] == 'accept'"
+      },
+    "ValuesFieldsOnCondition_l2": {
+      "aField_ID": [
+        "sflag2"
+      ],
+      "asID_Field_sValue": [
+        "regect"
+      ],
+      "asID_Field": {
+        "sClient": "decide"
+      },
+      "sCondition": "[sClient] != 'accept'"
+      }
+  }
+}

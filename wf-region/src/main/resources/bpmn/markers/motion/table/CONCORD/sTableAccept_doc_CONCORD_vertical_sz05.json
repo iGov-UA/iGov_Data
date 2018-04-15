@@ -1,0 +1,29 @@
+{
+  "aField": [
+    {
+      "id": "sName_Acceptor",
+      "name": "Додати на ознайомлення (заповнює автор за необхідністю); ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+     {
+      "id": "sCompany_Acc",
+      "name": "Компанія",
+      "type": "string",
+      "writable": "false"     
+    },
+    {
+      "id": "sPosition_Acceptor",
+      "name": "Посада",
+      "type": "string",
+      "writable": "false",
+      "bVisible": "false"
+    },
+    {
+      "id": "sLogin_Acceptor",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "aField": [
+     {
+      "id": "nNumber",
+      "name": "№, п/п",
+      "type": "long",
+      "nWidth": "5%"
+    },   
+     {
+      "id": "sDepartment_Human",
+      "name": "Філія",
+      "type": "string"
+    },    
+    {
+      "id": "sLogin_Human",
+      "name": "Логін",
+      "type": "string",
+      "writable": "false"
+    },
+    {
+      "id": "sName_Human",
+      "name": "ПІБ; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",     
+      "type": "select"    
+    },
+    {
+      "id": "sGroup",
+      "name": "Посадова група",
+      "type": "string"
+	},
+	{
+      "id": "asTypeEnco",
+      "name": "Вид заохочення/ дисциплінарного стягнення",
+      "type": "enum",
+      "a" : [
+	        {
+		"id" : "sRebuke", 
+		"name" : "Догана"},
+		{
+		"id" : "sEncouraging", 
+		"name" : "Заохочення"}
+		]	
+	},
+	{
+      "id": "asCause",
+      "name": "Причина заохочення/ стягнення",
+      "type": "enum",
+      "a" : [
+	        {
+		"id" : "sCause1", 
+		"name" : "Первая причина"},
+		{
+		"id" : "sCause2", 
+		"name" : "вторая"}
+		]	
+	},
+		{
+      "id": "asDopInfo",
+      "name": "Блокування виплати бонусів; ;sID_CheckboxTrue=yes1",
+      "nWidth": "9%",
+      "type": "enum",
+      "a" : [
+	        {
+		"id" : "yes1", 
+		"name" : "так"},
+		{
+		"id" : "no1", 
+		"name" : "ні"}
+		]	
+	}   
+  ]   
+}

@@ -1,0 +1,37 @@
+{
+  "aField": [
+    {
+      "id": "sName_Acc",
+      "name": "Додати на ознайомлення при узгодженні документу (заповнюється за необхідністю автором); ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_Acc",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+      
+    },
+    {
+      "id": "sEmail_Acc",
+      "name": "Email",
+      "type": "string",
+      "bVisible": "false"
+     
+    },
+    {
+      "id": "sCompany_Acc",
+      "name": "Компанія",
+      "type": "string",
+      "writable": "false"     
+    },
+      {
+      "id": "sPosition_Acc",
+      "name": "Посада",
+      "type": "string",
+      "writable": "false",
+      "bVisible": "false"
+    }
+  ]
+}

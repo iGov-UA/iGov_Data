@@ -1,0 +1,111 @@
+{
+  "aField": [
+    {
+      "id": "sNumber",
+      "name": "№ п/п",
+      "type": "long",    
+      "nWidth": "5%"
+   
+    },
+    {
+      "id": "sService",
+      "name": "Послуга",
+      "type": "enum",
+      "a": [
+        {
+          "id": "CreateBP",
+          "name": "Реалізація Бізнес Процессу"
+        },
+        {
+          "id": "ITupd",
+          "name": "ІТ-доробки"
+        },
+        {
+          "id": "ItSupport", 
+          "name": "Підтримка реалізації БП та ІТ-доробки"
+        },
+        {
+          "id": "Support",
+          "name": "Виділена підтримка"
+        },
+        {
+          "id": "TechSupport1", 
+          "name": "Технічна підтримка із реакцією у строк доби"
+        },
+        {
+          "id": "TechSupport2", 
+          "name": "Технічна підтримка із реакцією у строк години"
+        },
+		{
+          "id": "TechSupport3", 
+          "name": "Технічна підтримка із миттєвою реакцією"
+        },
+        {
+          "id": "HelpDesk1", 
+          "name": "Хелпдеск до 200 користувачів"
+        },
+        {
+          "id": "HelpDesk2", 
+          "name": "Хелпдеск до 2000 користувачів"
+        },
+        {
+          "id": "HelpDesk3", 
+          "name": "Хелпдеск понад 2000 користувачів"
+        },
+        {
+          "id": "VipSupport1", 
+          "name": "VIP-підтримка до 500 користувачів"
+        },
+        {
+          "id": "VipSupport2", 
+          "name": "VIP-підтримка до 2000 користувачів"
+        },
+        {
+          "id": "VipSupport3", 
+          "name": "VIP-підтримка понад 2000 користувачів"
+        },
+        {
+          "id": "SereverRent", 
+          "name": "Виділення потужностей"
+        },
+        {
+          "id": "TechSupportSystem", 
+          "name": "Технічна підтримка Екосистеми"
+        },
+        {
+          "id": "SystemInstall", 
+          "name": "Інсталляція Системи"
+        },
+        {
+          "id": "BP_Study", 
+          "name": "Навчання конфігуруванню шаблонів"
+        }
+      ]
+    },
+    {
+      "id": "sFullDescription",
+      "name": "Детальний опис",
+      "type": "string",    
+      "nWidth": "35%"
+   
+    },
+    {
+      "id": "sAmount",
+      "name": "Обсяг, од.",
+      "type": "string",
+      "nWidth": "10%"    
+    },
+    {
+      "id": "sAverage",
+      "name": "Вартість грн. за од.",
+      "type": "string",
+      "nWidth": "10%"    
+    },
+    {
+      "id": "sFinalSum",
+      "name": "Сума, грн.",
+      "type": "string",
+      "nWidth": "10%"    
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "_:Watch": 
+  {
+    "_default_CIB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+  	"_default_CIB_task": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask", "SetUrgent", "AnswerMessage", "AddVisor"],  
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_"},
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2"]},   
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CIB_Resol": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["CreateTask", "AddVisor", "AskMessage", "Refuse", "SetUrgent"],    
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_"},
+      "oPermitions_SetUrgent": {"sKey_Step":["step_4"]},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CIB_Execute1": {
+      "sName": " ",
+      "aPermition": ["AddViewer"],    
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_"},
+      "bWrite": true, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CIB_Agree": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CIB_Execute2": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_CIB_read", "sGroup_Activiti":"CIB_"}, 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_CIB_Edit": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "AskMessage", "CreateTask"],  
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Edit": {},
+  "step_4:Execute": {},
+  "step_5:Agree": {},
+  "step_6:Execute": {}
+}

@@ -1,0 +1,96 @@
+{
+  "_": {
+    "_default_ovu": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask", "AnswerMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ovu_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "CreateTask", "EditTask", "AskMessage"], 
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ovu_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddAcceptor", "AddVisor", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ovu_approve", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ovu_read", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"NSTU_Board_nstu"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ovu_approve_1": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ovu_approve_1", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ovu_read", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"NSTU_Board_nstu"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ovu_2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": [ "Seen", "AddViewer", "Delegate", "CreateTask", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"},  
+       "oPermitions_Delegate": {"sGroup_Activiti":"NSTU_Board_nstu"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ovu_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Visa": {},
+  "step_4:Sign": {},
+  "step_5:Edit": {},
+  "step_6:Edit": {},
+  "step_7:Edit": {},
+  "step_8:Seen": {}
+  
+}

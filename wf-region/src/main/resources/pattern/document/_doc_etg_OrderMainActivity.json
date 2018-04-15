@@ -1,0 +1,81 @@
+{
+  "_:Watch": 
+  {
+    "_default_ETG": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_ETG_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    
+    "_default_ETG_avtor_edit": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_ETG_approve": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],
+      "oPermitions": {"sKeyGroupe_Source":"_default_ETG_approve", "sGroup_Activiti":"ETG_"},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    
+    
+    
+    "_default_ETG_Vis": 
+    {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["AddAcceptor","AskMessage"],      
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ETG_Vis", "sGroup_Activiti":"ETG_Head"}, 
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Seen": {},
+  "step_3:Accept": {},
+  "step_4:Accept": {},
+  "step_5:Accept": {},
+  "step_6:Agree": {}
+}

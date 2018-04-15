@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="_doc_Kredobank_businessTrip" name="Наказ на відрядження" isExecutable="true">
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер звернення ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="processInstanceId" name="ід процеса ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <serviceTask id="servicetask1" name="Лічильник" activiti:delegateExpression="#{ProcessCountTaskCustomListener}">
+      <extensionElements>
+        <activiti:field name="sKey">
+          <activiti:string><![CDATA[_doc_universal_businessTrip]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="sPattern">
+          <activiti:string><![CDATA[[sID_Custom_GovPublic]]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="nDigits">
+          <activiti:string><![CDATA[5]]></activiti:string>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <scriptTask id="scripttask1" name="ProcessInstanceId/ПІБ заявника/посада/департамент/керівник" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>//1.Получение ИД текущего процесса
+var processInstanceId = execution.getProcessInstanceId();
+execution.setVariable('processInstanceId', processInstanceId)
+
+//2. ПІБ автора
+var sLoginAuthor = execution.getVariable('sLoginAuthor')
+var oResultAuthorName = subjectService.getSubjectByLoginAccount(sLoginAuthor)
+execution.setVariable('sNameAuthor', oResultAuthorName.sLabel)
+// 3.Департамент автора
+var obj2 = subjectGroupTreeService.getSubjectGroupsTreeUp(sLoginAuthor,'Organ')
+var sDepartment_Author = obj2[0].oSubject.sLabel
+execution.setVariable('sDepartment_Author', sDepartment_Author)
+//4.Посада автора
+var obj3 = subjectGroupService.getSubjectGroup(sLoginAuthor)
+var sPosition_Author = obj3.oSubjectHumanPositionCustom.sNote
+execution.setVariable('sPosition_Author', sPosition_Author)
+// 5.Дані керівника заявника,ПІБ,логін,посада
+var obj1 = subjectGroupTreeService.getSubjectGroupsTreeUp(sLoginAuthor,'Human')
+var sLogin_Head = obj1[0].sID_Group_Activiti
+var sName_Head = obj1[0].oSubject.sLabel
+var sPosition_Head = obj1[0].oSubjectHumanPositionCustom.sNote
+
+execution.setVariable('sLogin_Head', sLogin_Head)
+execution.setVariable('sName_Head', sName_Head)
+execution.setVariable('sPosition_Head', sPosition_Head)
+//6. лічільник
+var number=execution.getVariable('sID_Custom_GovPublic')
+number = number&lt;&lt;0
+var fullNumber=number+"-В/Д"
+execution.setVariable('sID_Custom_GovPublic', fullNumber)</script>
+    </scriptTask>
+    <scriptTask id="scripttask2" name="Сьогоднішня дата за замовчуванням" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>execution.setVariable('sDateRegistration', new Date().format("dd.MM.yyyy").toString())</script>
+    </scriptTask>
+    <userTask id="usertask1" name="Створення документу :: Наказ на відрядження">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll2" name="bSubmitedAll2 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll3" name="bSubmitedAll3 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id группы ; ;bVisible=false" type="string" default="UB_Head"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глубина ; ;bVisible=false" type="string" default="5"></activiti:formProperty>
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер наказу" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameAuthor" name="ПІБ заявника ; ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLoginAuthor" name="sLoginAuthor ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sName_Delegate" name="Вiдправити у службове вiдрядження; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Delegate" name="sLogin_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_Delegate" name="Посада відрядника" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Delegate" name="Підрозділ відрядника" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sName_Header" name="Керівник підрядника; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Header" name="sLogin_Header ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_Header" name="Посада керівника підрядника" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sName_STRHeader" name="Керівник структурного підрозділу відрядника; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_STRHeader" name="sLogin_STRHeader ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_STRHeader" name="Посада керівника структурного підрозділу відрядника" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sContent" name="Короткий зміст" type="textArea"></activiti:formProperty>
+         <activiti:formProperty id="sDateStart" name="Дата початку відрядження" type="date"></activiti:formProperty>
+        <activiti:formProperty id="sDateEnd" name="Дата закінчення відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDurationTrip" name="Тривалiсть вiдрядження; кількість днів" type="long"></activiti:formProperty>
+                 <activiti:formProperty id="asTypeTrip" name="Тип відрядження" type="enum">
+          <activiti:value id="sObl" name="Область"></activiti:value>
+          <activiti:value id="sUkrain" name="Україна"></activiti:value>
+          <activiti:value id="sBorder" name="Закордон"></activiti:value>
+        </activiti:formProperty> 
+        <activiti:formProperty id="sCountry" name="Країна" type="string" default="Україна"></activiti:formProperty>
+        <activiti:formProperty id="sCity" name="Мiсто" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganization" name="Організація" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPurposeTrip" name="Мета відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sReason" name="Підстава" type="string"></activiti:formProperty>
+        <activiti:formProperty id="asTransport" name="Чи буде використовуватись транспорт?; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+       <activiti:formProperty id="asAdvancePayment" name="Оберіть тип транспорту" type="enum">
+          <activiti:value id="sAuto" name="Службовий автомобіль"></activiti:value>
+          <activiti:value id="sBus" name="Автобус"></activiti:value>
+          <activiti:value id="sTrainPL" name="Залізниця плацкартний"></activiti:value>
+          <activiti:value id="sTrainCU" name="Залізниця купейний"></activiti:value>
+          <activiti:value id="sTrainSV" name="Залізниця СВ"></activiti:value>
+          <activiti:value id="sTrainI" name="Залізниця Hyundai (І клас)"></activiti:value>
+          <activiti:value id="sTrainII" name="Залізниця Hyundai (ІІ клас)"></activiti:value>
+          <activiti:value id="sAvia" name="Літак"></activiti:value>
+          <activiti:value id="sAutoMy" name="Власний автомобіль"></activiti:value>
+          <activiti:value id="sOther" name="Інші"></activiti:value>          
+       </activiti:formProperty>
+        <activiti:formProperty id="asCentralTicket" name="Централізоване замовлення квитків; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable3" name="Замовлення квитків; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTableTicket_doc_Kredobank_businessTrip.json')}"></activiti:formProperty>
+        
+        
+        <activiti:formProperty id="asNeedHotel" name="Чи буде використовуватись готель?; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable1" name="Готель; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable1_doc_Kredobank_businessTrip.json')}"></activiti:formProperty>
+       
+         
+        
+        
+        <activiti:formProperty id="sTable2" name="Добові; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable2_doc_Kredobank_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="asAdvancePayment" name="Виплата коштів" type="enum">
+          <activiti:value id="sCash" name="Готівка у касі"></activiti:value>
+          <activiti:value id="sCard" name="На карту"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumberCard" name="Карта для видачі авансу" type="long"></activiti:formProperty>
+ 		
+        <activiti:formProperty id="sName_Approve" name="Погоджувач; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Approve" name="sLogin_Approve ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDateApprove" name="Погодити до" type="date"></activiti:formProperty>
+        
+        <activiti:formProperty id="sCost" name="Вартість транспорту" type="double"></activiti:formProperty>
+        <activiti:formProperty id="asCurrencyTickets" name="Вид валюти транспорту" type="enum">
+          <activiti:value id="sUkr" name="UAH"></activiti:value>
+          <activiti:value id="sEng" name="USD"></activiti:value>
+          <activiti:value id="sEuro" name="EUR"></activiti:value>
+          <activiti:value id="sPln" name="PLN"></activiti:value>         
+        </activiti:formProperty>  
+        
+        
+        
+        <activiti:formProperty id="sRoute" name="За маршрутом" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sName_Assign" name="На час відрядження виконуючим обов'язки призначити; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Assign" name="sLogin_Assign ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCostEstimates" name="Затвердити кошторис витрат на відрядження:" type="fileHTML"></activiti:formProperty>
+        <activiti:formProperty id="sTable1" name="Кошторис витрат; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable1_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sAdvance" name="Сума авансу" type="double"></activiti:formProperty>
+        <activiti:formProperty id="asAdvancePayment" name="Виплата авансу" type="enum">
+          <activiti:value id="sCash" name="Готівкою"></activiti:value>
+          <activiti:value id="sCard" name="На карту"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumberCard" name="Карта для видачі авансу" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asCar" name="Чи буде використовуватись автомобіль?; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSpecialConditions" name="Особливі умови, що підтверждують необхідність використання автомобіля" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCarBrand" name="Марка авто" type="string"></activiti:formProperty>
+        <activiti:formProperty id="asTypeFuel" name="Тип палива" type="enum">
+          <activiti:value id="Petrol" name="Бензин"></activiti:value>
+          <activiti:value id="Gas" name="Газ"></activiti:value>
+          <activiti:value id="Diesel" name="Диз.паливо"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable5" name="Кошторис палива; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sTableAutoBudget_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTotalDistance" name="Загальна відстань в разі складного маршруту" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFuelNorm" name="Норма палива на 100 км" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFuelCost" name="Вартість палива на дату відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCalculation" name="Розрахунок витрат" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCalculationDepatr" name="Розрахунок витрат проведений Департаментом по роботі з персоналом" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTable3" name="Ознайомити; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable3_doc_universal_businessTrip_Viewers.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTable2" name="Узгоджуючі; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable2_doc_universal_businessTrip_Approves.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTable4" name="Затверджуючий; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable4_doc_universal_businessTrip_Agreement.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/_doc_universal_businessTrip_Order.html] ; ;bVisible=false" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="Якщо карта" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_1&quot;:{&quot;aField_ID&quot;:[&quot;sNumberCard&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asAdvancePayment&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sCard'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markers2" name="кошторис авто" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_2&quot;:{&quot;aField_ID&quot;:[&quot;sSpecialConditions&quot;,&quot;sCarBrand&quot;,&quot;asTypeFuel&quot;,&quot;sTable5&quot;,&quot;sTotalDistance&quot;,&quot;sFuelNorm&quot;,&quot;sFuelCost&quot;,&quot;sCalculation&quot;,&quot;sCalculationDepatr&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asCar&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'yes'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/_doc_universal_businessTrip_Fuel.html] ; ;bVisible=false" type="string" default="Кошторис витрат палива у відрядженні" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_1" name="лінія аванс" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;sTypeTrip&quot;],&quot;sValue&quot;:&quot;Заява на аванс&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="Якщо карта" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_1&quot;:{&quot;aField_ID&quot;:[&quot;sNumberCard&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asAdvancePayment&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sCard'&quot;}}}"></activiti:formProperty>
+
+        <activiti:formProperty id="oProcessSubject_Executor_1" name="Виконавець; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="oProcessSubject_Controller_1" name="Контролер; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}">
+          <activiti:field name="sKey_GroupPostfix_New">
+            <activiti:expression><![CDATA[${sLoginAuthor}]]></activiti:expression>
+          </activiti:field>
+          <activiti:field name="sKey_GroupPostfix">
+            <activiti:string><![CDATA[_default_UB]]></activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="scripttask3" name="Step 2" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId();
+var oSwitchStep2 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_2');
+
+var oCloneRightsApprove = documentStepService.syncDocumentSubmitedsByField(snID_Process_Activiti, '_default_UB_Accept', 'sTable2', 'sLogin_Approver',  'step_2', true, true)
+
+</script>
+    </scriptTask>
+    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
+    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
+    <scriptTask id="scripttask4" name="Step 3" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId();
+var sKey_Step = 'step_3';
+var oSwitchStep2 = documentStepService.setDocumentStep(snID_Process_Activiti, sKey_Step);
+var sKey = execution.getVariable('sLoginAuthor')
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_UB_edit', sKey, sKey_Step, true)</script>
+    </scriptTask>
+    <userTask id="usertask2" name="Редагування документу :: Наказ на відрядження">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll2" name="bSubmitedAll2 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll3" name="bSubmitedAll3 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id группы ; ;bVisible=false" type="string" default="UB_Head"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глубина ; ;bVisible=false" type="string" default="5"></activiti:formProperty>
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер наказу" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameAuthor" name="ПІБ заявника ; ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLoginAuthor" name="sLoginAuthor ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sName_Delegate" name="Вiдправити у службове вiдрядження; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Delegate" name="sLogin_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCity" name="З мiста" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCountry" name="До країни" type="string" default="Україна"></activiti:formProperty>
+        <activiti:formProperty id="sDestination" name="Пункт призначення" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganization" name="Найменування організації" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDurationTrip" name="Тривалiсть вiдрядження; кількість днів" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sDateStart" name="Дата початку відрядження" type="date"></activiti:formProperty>
+        <activiti:formProperty id="sPurposeTrip" name="Мета відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAllowTravel" name="Дозволити проїзд" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sRoute" name="За маршрутом" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sName_Assign" name="На час відрядження виконуючим обов'язки призначити; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Assign" name="sLogin_Assign ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCostEstimates" name="Затвердити кошторис витрат на відрядження:" type="fileHTML"></activiti:formProperty>
+        <activiti:formProperty id="sTable1" name="Кошторис витрат; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable1_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sAdvance" name="Сума авансу" type="double"></activiti:formProperty>
+        <activiti:formProperty id="asAdvancePayment" name="Виплата авансу" type="enum">
+          <activiti:value id="sCash" name="Готівкою"></activiti:value>
+          <activiti:value id="sCard" name="На карту"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumberCard" name="Карта для видачі авансу" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asCar" name="Чи буде використовуватись автомобіль?; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSpecialConditions" name="Особливі умови, що підтверждують необхідність використання автомобіля" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCarBrand" name="Марка авто" type="string"></activiti:formProperty>
+        <activiti:formProperty id="asTypeFuel" name="Тип палива" type="enum">
+          <activiti:value id="Petrol" name="Бензин"></activiti:value>
+          <activiti:value id="Gas" name="Газ"></activiti:value>
+          <activiti:value id="Diesel" name="Диз.паливо"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable5" name="Кошторис палива; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sTableAutoBudget_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTotalDistance" name="Загальна відстань в разі складного маршруту" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFuelNorm" name="Норма палива на 100 км" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFuelCost" name="Вартість палива на дату відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCalculation" name="Розрахунок витрат" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCalculationDepatr" name="Розрахунок витрат проведений Департаментом по роботі з персоналом" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sTable3" name="Ознайомити; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable3_doc_universal_businessTrip_Viewers.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTable2" name="Узгоджуючі; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable2_doc_universal_businessTrip_Approves.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTable4" name="Затверджуючий; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable4_doc_universal_businessTrip_Agreement.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/_doc_universal_businessTrip_Order.html] ; ;bVisible=false" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="Якщо карта" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_1&quot;:{&quot;aField_ID&quot;:[&quot;sNumberCard&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asAdvancePayment&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sCard'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markers2" name="кошторис авто" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_2&quot;:{&quot;aField_ID&quot;:[&quot;sSpecialConditions&quot;,&quot;sCarBrand&quot;,&quot;asTypeFuel&quot;,&quot;sTable5&quot;,&quot;sTotalDistance&quot;,&quot;sFuelNorm&quot;,&quot;sFuelCost&quot;,&quot;sCalculation&quot;,&quot;sCalculationDepatr&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asCar&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'yes'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/_doc_universal_businessTrip_Fuel.html] ; ;bVisible=false" type="string" default="Кошторис витрат палива у відрядженні" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="scripttask5" name="Check signes" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var nID_Process = execution.getProcessInstanceId();
+var oCheckSubmitedAll2= documentStepService.isDocumentStepSubmitedAll(nID_Process, 'test', 'step_2')
+execution.setVariable('bSubmitedAll2', oCheckSubmitedAll2.bSubmitedAll.toString())
+</script>
+    </scriptTask>
+    <userTask id="usertask3" name="Узгодження документу :: Наказ на відрядження">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll2" name="bSubmitedAll2 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll3" name="bSubmitedAll3 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id группы ; ;bVisible=false" type="string" default="UB_Head"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глубина ; ;bVisible=false" type="string" default="5"></activiti:formProperty>
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameAuthor" name="ПІБ заявника ; ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLoginAuthor" name="sLoginAuthor ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер наказу" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_Delegate" name="Вiдправити у службове вiдрядження" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Delegate" name="sLogin_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCity" name="З мiста" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCountry" name="До країни" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDestination" name="Пункт призначення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganization" name="Найменування організації" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDurationTrip" name="Тривалiсть вiдрядження; кількість днів" type="long" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDateStart" name="Дата початку відрядження" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPurposeTrip" name="Мета відрядження" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAllowTravel" name="Дозволити проїзд" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sRoute" name="За маршрутом" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_Assign" name="На час відрядження виконуючим обов'язки призначити" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Assign" name="sLogin_Assign ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCostEstimates" name="Затвердити кошторис витрат на відрядження:" type="fileHTML" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable1" name="Кошторис витрат; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAdvance" name="Сума авансу" type="double" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asAdvancePayment" name="Виплата авансу" type="enum" writable="false">
+          <activiti:value id="sCash" name="Готівкою"></activiti:value>
+          <activiti:value id="sCard" name="На карту"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumberCard" name="Карта для видачі авансу" type="long" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asCar" name="Чи буде використовуватись автомобіль?; ;sID_CheckboxTrue=yes" type="enum" default="no" writable="false">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSpecialConditions" name="Особливі умови, що підтверждують необхідність використання автомобіля" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCarBrand" name="Марка авто" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeFuel" name="Тип палива" type="enum" writable="false">
+          <activiti:value id="Petrol" name="Бензин"></activiti:value>
+          <activiti:value id="Gas" name="Газ"></activiti:value>
+          <activiti:value id="Diesel" name="Диз.паливо"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable5" name="Кошторис палива; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTotalDistance" name="Загальна відстань в разі складного маршруту" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFuelNorm" name="Норма палива на 100 км" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFuelCost" name="Вартість палива на дату відрядження" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCalculation" name="Розрахунок витрат" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCalculationDepatr" name="Розрахунок витрат проведений Департаментом по роботі з персоналом" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/_doc_universal_businessTrip_Fuel.html] ; ;bVisible=false" type="string" default="Кошторис витрат палива у відрядженні" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable2" name="Узгоджуючі; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable3" name="Ознайомити; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable4" name="Затверджуючий; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/_doc_universal_businessTrip_Order.html] ; ;bVisible=false" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bAuthorEdit" name="Автору на редактирование; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="scripttask6" name="Step 4" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId();
+var oSwitchStep2 = documentStepService.setDocumentStep(snID_Process_Activiti, 'step_4');
+
+var oCloneRightsAgreement = documentStepService.syncDocumentSubmitedsByField(snID_Process_Activiti, '_default_UB_Agree', 'sTable4', 'sLogin_Agreement', 'step_4', true, true)
+</script>
+    </scriptTask>
+    <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
+    <userTask id="usertask4" name="Затвердження документу :: Наказ на відрядження">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll2" name="bSubmitedAll2 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll3" name="bSubmitedAll3 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id группы ; ;bVisible=false" type="string" default="UB_Head"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глубина ; ;bVisible=false" type="string" default="5"></activiti:formProperty>
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameAuthor" name="ПІБ заявника ; ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLoginAuthor" name="sLoginAuthor ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер наказу" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_Delegate" name="Вiдправити у службове вiдрядження" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Delegate" name="sLogin_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCity" name="З мiста" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCountry" name="До країни" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDestination" name="Пункт призначення" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganization" name="Найменування організації" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDurationTrip" name="Тривалiсть вiдрядження; кількість днів" type="long" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDateStart" name="Дата початку відрядження" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sPurposeTrip" name="Мета відрядження" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAllowTravel" name="Дозволити проїзд" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sRoute" name="За маршрутом" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sName_Assign" name="На час відрядження виконуючим обов'язки призначити" type="select" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Assign" name="sLogin_Assign ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCostEstimates" name="Затвердити кошторис витрат на відрядження:" type="fileHTML" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable1" name="Кошторис витрат; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sAdvance" name="Сума авансу" type="double" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asAdvancePayment" name="Виплата авансу" type="enum" writable="false">
+          <activiti:value id="sCash" name="Готівкою"></activiti:value>
+          <activiti:value id="sCard" name="На карту"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumberCard" name="Карта для видачі авансу" type="long" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asCar" name="Чи буде використовуватись автомобіль?; ;sID_CheckboxTrue=yes" type="enum" default="no" writable="false">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSpecialConditions" name="Особливі умови, що підтверждують необхідність використання автомобіля" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCarBrand" name="Марка авто" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeFuel" name="Тип палива" type="enum" writable="false">
+          <activiti:value id="Petrol" name="Бензин"></activiti:value>
+          <activiti:value id="Gas" name="Газ"></activiti:value>
+          <activiti:value id="Diesel" name="Диз.паливо"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable5" name="Кошторис палива; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTotalDistance" name="Загальна відстань в разі складного маршруту" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFuelNorm" name="Норма палива на 100 км" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFuelCost" name="Вартість палива на дату відрядження" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCalculation" name="Розрахунок витрат" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCalculationDepatr" name="Розрахунок витрат проведений Департаментом по роботі з персоналом" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/_doc_universal_businessTrip_Fuel.html] ; ;bVisible=false" type="string" default="Кошторис витрат палива у відрядженні" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable3" name="Ознайомити; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable2" name="Узгоджуючі; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable4" name="Затверджуючий; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/_doc_universal_businessTrip_Order.html] ; ;bVisible=false" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bAuthorEdit" name="Автору на редактирование; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="scripttask7" name="Check signes" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var nID_Process = execution.getProcessInstanceId();
+var oCheckSubmitedAll3= documentStepService.isDocumentStepSubmitedAll(nID_Process, 'test', 'step_4')
+execution.setVariable('bSubmitedAll3', oCheckSubmitedAll3.bSubmitedAll.toString())
+</script>
+    </scriptTask>
+    <scriptTask id="scripttask8" name="Step 5" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>var snID_Process_Activiti = execution.getProcessInstanceId();
+var sKey_Step = 'step_5';
+var oSwitchStep2 = documentStepService.setDocumentStep(snID_Process_Activiti, sKey_Step);
+var sKey = execution.getVariable('sLoginAuthor')
+var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti, '_default_UB_edit', sKey, sKey_Step, true)
+
+// Видалення прав керівника-селект
+var Head = execution.getVariable('sLogin_Head')
+var oResultHead = documentStepService.removeDocumentStepSubject(snID_Process_Activiti, 'step_2', Head) 
+</script>
+    </scriptTask>
+    <userTask id="usertask5" name="Редагування документу :: Наказ на відрядження">
+      <extensionElements>
+        <activiti:formProperty id="processInstanceId" name="ІД процесу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKey_Step_Document" name="sKey_Step_Document ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll2" name="bSubmitedAll2 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bSubmitedAll3" name="bSubmitedAll3 ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Group_Activiti" name="id группы ; ;bVisible=false" type="string" default="UB_Head"></activiti:formProperty>
+        <activiti:formProperty id="nDeepLevel" name="глубина ; ;bVisible=false" type="string" default="5"></activiti:formProperty>
+        <activiti:formProperty id="sTitleDoc" name="Заголовок документа" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sID_Custom_GovPublic" name="Номер наказу" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameAuthor" name="ПІБ заявника ; ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLoginAuthor" name="sLoginAuthor ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sName_Delegate" name="Вiдправити у службове вiдрядження; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Delegate" name="sLogin_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosition_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDepartment_Delegate" name="sPosition_Delegate ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCity" name="З мiста" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCountry" name="До країни" type="string" default="Україна"></activiti:formProperty>
+        <activiti:formProperty id="sDestination" name="Пункт призначення" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganization" name="Найменування організації" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDurationTrip" name="Тривалiсть вiдрядження; кількість днів" type="long"></activiti:formProperty>
+        <activiti:formProperty id="sDateStart" name="Дата початку відрядження" type="date"></activiti:formProperty>
+        <activiti:formProperty id="sPurposeTrip" name="Мета відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAllowTravel" name="Дозволити проїзд" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sRoute" name="За маршрутом" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sName_Assign" name="На час відрядження виконуючим обов'язки призначити; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel" type="select" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLogin_Assign" name="sLogin_Assign ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCostEstimates" name="Затвердити кошторис витрат на відрядження:" type="fileHTML"></activiti:formProperty>
+        <activiti:formProperty id="sTable1" name="Кошторис витрат; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable1_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sAdvance" name="Сума авансу" type="double"></activiti:formProperty>
+        <activiti:formProperty id="asAdvancePayment" name="Виплата авансу" type="enum">
+          <activiti:value id="sCash" name="Готівкою"></activiti:value>
+          <activiti:value id="sCard" name="На карту"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumberCard" name="Карта для видачі авансу" type="long"></activiti:formProperty>
+        <activiti:formProperty id="asCar" name="Чи буде використовуватись автомобіль?; ;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sSpecialConditions" name="Особливі умови, що підтверждують необхідність використання автомобіля" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCarBrand" name="Марка авто" type="string"></activiti:formProperty>
+        <activiti:formProperty id="asTypeFuel" name="Тип палива" type="enum">
+          <activiti:value id="Petrol" name="Бензин"></activiti:value>
+          <activiti:value id="Gas" name="Газ"></activiti:value>
+          <activiti:value id="Diesel" name="Диз.паливо"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sTable5" name="Кошторис палива; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sTableAutoBudget_doc_universal_businessTrip.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTotalDistance" name="Загальна відстань в разі складного маршруту" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFuelNorm" name="Норма палива на 100 км" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFuelCost" name="Вартість палива на дату відрядження" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCalculation" name="Розрахунок витрат" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCalculationDepatr" name="Розрахунок витрат проведений Департаментом по роботі з персоналом" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/_doc_universal_businessTrip_Fuel.html] ; ;bVisible=false" type="string" default="Кошторис витрат палива у відрядженні" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sTable3" name="Ознайомити; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable3_doc_universal_businessTrip_Viewers.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTable2" name="Узгоджуючі; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable2_doc_universal_businessTrip_Approves.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sTable4" name="Затверджуючий; ;bNew=true" type="table" default="${markerService.loadFromFile('table/sed/sTable4_doc_universal_businessTrip_Agreement.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/_doc_universal_businessTrip_Order.html] ; ;bVisible=false" type="string" default="Наказ на відрядження" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="Якщо карта" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_1&quot;:{&quot;aField_ID&quot;:[&quot;sNumberCard&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asAdvancePayment&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'sCard'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markers2" name="кошторис авто" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_2&quot;:{&quot;aField_ID&quot;:[&quot;sSpecialConditions&quot;,&quot;sCarBrand&quot;,&quot;asTypeFuel&quot;,&quot;sTable5&quot;,&quot;sTotalDistance&quot;,&quot;sFuelNorm&quot;,&quot;sFuelCost&quot;,&quot;sCalculation&quot;,&quot;sCalculationDepatr&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;asCar&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'yes'&quot;}}}"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${DocumentInit_iDoc}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="scripttask9" name="Старт завдання" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>// Старт завдання
+var snID_Process_Activiti = execution.getProcessInstanceId();                                                                 
+var result = processSubjectTaskService.startProcess(snID_Process_Activiti)</script>
+    </scriptTask>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="servicetask1" targetRef="scripttask2"></sequenceFlow>
+    <sequenceFlow id="flow3" sourceRef="scripttask2" targetRef="scripttask1"></sequenceFlow>
+    <sequenceFlow id="flow4" sourceRef="scripttask1" targetRef="usertask1"></sequenceFlow>
+    <sequenceFlow id="flow5" sourceRef="usertask1" targetRef="exclusivegateway1"></sequenceFlow>
+    <sequenceFlow id="flow6" sourceRef="exclusivegateway1" targetRef="scripttask3"></sequenceFlow>
+    <sequenceFlow id="flow7" sourceRef="scripttask3" targetRef="usertask3"></sequenceFlow>
+    <sequenceFlow id="flow8" sourceRef="usertask3" targetRef="exclusivegateway2"></sequenceFlow>
+    <sequenceFlow id="flow9" sourceRef="exclusivegateway2" targetRef="scripttask4">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sLoginAuthor==sLogin_LastSubmited}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow10" sourceRef="scripttask4" targetRef="usertask2"></sequenceFlow>
+    <sequenceFlow id="flow11" sourceRef="usertask2" targetRef="exclusivegateway1"></sequenceFlow>
+    <sequenceFlow id="flow12" sourceRef="exclusivegateway2" targetRef="scripttask5">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sLoginAuthor != sLogin_LastSubmited}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow13" sourceRef="scripttask5" targetRef="exclusivegateway3"></sequenceFlow>
+    <sequenceFlow id="flow14" sourceRef="exclusivegateway3" targetRef="usertask3">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${bSubmitedAll2 == false}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow15" sourceRef="exclusivegateway3" targetRef="scripttask6">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${bSubmitedAll2 == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow16" sourceRef="scripttask6" targetRef="usertask4"></sequenceFlow>
+    <sequenceFlow id="flow24" sourceRef="scripttask8" targetRef="usertask5"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway4" name="Exclusive Gateway"></exclusiveGateway>
+    <exclusiveGateway id="exclusivegateway5" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow25" sourceRef="usertask4" targetRef="exclusivegateway4"></sequenceFlow>
+    <sequenceFlow id="flow26" sourceRef="exclusivegateway4" targetRef="scripttask7">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sLoginAuthor != sLogin_LastSubmited}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow27" sourceRef="exclusivegateway4" targetRef="scripttask8">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sLoginAuthor==sLogin_LastSubmited}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow28" sourceRef="scripttask7" targetRef="exclusivegateway5"></sequenceFlow>
+    <sequenceFlow id="flow29" sourceRef="exclusivegateway5" targetRef="scripttask9">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${bSubmitedAll2 == true}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow30" sourceRef="scripttask9" targetRef="endevent1"></sequenceFlow>
+    <sequenceFlow id="flow31" sourceRef="exclusivegateway5" targetRef="usertask4">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${bSubmitedAll2 == false}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow32" sourceRef="usertask5" targetRef="exclusivegateway1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram__doc_Kredobank_businessTrip">
+    <bpmndi:BPMNPlane bpmnElement="_doc_Kredobank_businessTrip" id="BPMNPlane__doc_Kredobank_businessTrip">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="30.0" y="150.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="81.0" width="121.0" x="110.0" y="127.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
+        <omgdc:Bounds height="81.0" width="131.0" x="300.0" y="1.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask2" id="BPMNShape_scripttask2">
+        <omgdc:Bounds height="81.0" width="121.0" x="110.0" y="1.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="81.0" width="141.0" x="295.0" y="127.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
+        <omgdc:Bounds height="55.0" width="105.0" x="590.0" y="140.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="490.0" y="147.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
+        <omgdc:Bounds height="40.0" width="40.0" x="910.0" y="147.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask4" id="BPMNShape_scripttask4">
+        <omgdc:Bounds height="55.0" width="105.0" x="878.0" y="37.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="71.0" width="131.0" x="670.0" y="27.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask5" id="BPMNShape_scripttask5">
+        <omgdc:Bounds height="55.0" width="105.0" x="878.0" y="259.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask3" id="BPMNShape_usertask3">
+        <omgdc:Bounds height="81.0" width="131.0" x="740.0" y="127.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask6" id="BPMNShape_scripttask6">
+        <omgdc:Bounds height="55.0" width="105.0" x="878.0" y="427.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway3" id="BPMNShape_exclusivegateway3">
+        <omgdc:Bounds height="40.0" width="40.0" x="912.0" y="356.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask4" id="BPMNShape_usertask4">
+        <omgdc:Bounds height="75.0" width="133.0" x="866.0" y="527.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask7" id="BPMNShape_scripttask7">
+        <omgdc:Bounds height="55.0" width="105.0" x="880.0" y="727.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask8" id="BPMNShape_scripttask8">
+        <omgdc:Bounds height="55.0" width="105.0" x="1041.0" y="640.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask5" id="BPMNShape_usertask5">
+        <omgdc:Bounds height="71.0" width="131.0" x="1203.0" y="632.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="scripttask9" id="BPMNShape_scripttask9">
+        <omgdc:Bounds height="55.0" width="105.0" x="1095.0" y="727.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="1251.0" y="737.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway4" id="BPMNShape_exclusivegateway4">
+        <omgdc:Bounds height="40.0" width="40.0" x="912.0" y="647.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway5" id="BPMNShape_exclusivegateway5">
+        <omgdc:Bounds height="40.0" width="40.0" x="1020.0" y="734.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="65.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="110.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="170.0" y="127.0"></omgdi:waypoint>
+        <omgdi:waypoint x="170.0" y="82.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="231.0" y="41.0"></omgdi:waypoint>
+        <omgdi:waypoint x="300.0" y="41.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="365.0" y="82.0"></omgdi:waypoint>
+        <omgdi:waypoint x="365.0" y="127.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="436.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="490.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="530.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="590.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="695.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="740.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
+        <omgdi:waypoint x="871.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="910.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
+        <omgdi:waypoint x="930.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="930.0" y="92.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
+        <omgdi:waypoint x="878.0" y="64.0"></omgdi:waypoint>
+        <omgdi:waypoint x="801.0" y="62.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
+        <omgdi:waypoint x="670.0" y="62.0"></omgdi:waypoint>
+        <omgdi:waypoint x="510.0" y="62.0"></omgdi:waypoint>
+        <omgdi:waypoint x="510.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow12" id="BPMNEdge_flow12">
+        <omgdi:waypoint x="930.0" y="187.0"></omgdi:waypoint>
+        <omgdi:waypoint x="930.0" y="259.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow13" id="BPMNEdge_flow13">
+        <omgdi:waypoint x="930.0" y="314.0"></omgdi:waypoint>
+        <omgdi:waypoint x="932.0" y="356.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow14" id="BPMNEdge_flow14">
+        <omgdi:waypoint x="912.0" y="376.0"></omgdi:waypoint>
+        <omgdi:waypoint x="805.0" y="376.0"></omgdi:waypoint>
+        <omgdi:waypoint x="805.0" y="208.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow15" id="BPMNEdge_flow15">
+        <omgdi:waypoint x="932.0" y="396.0"></omgdi:waypoint>
+        <omgdi:waypoint x="930.0" y="427.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow16" id="BPMNEdge_flow16">
+        <omgdi:waypoint x="930.0" y="482.0"></omgdi:waypoint>
+        <omgdi:waypoint x="932.0" y="527.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow24" id="BPMNEdge_flow24">
+        <omgdi:waypoint x="1146.0" y="667.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1203.0" y="667.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
+        <omgdi:waypoint x="932.0" y="602.0"></omgdi:waypoint>
+        <omgdi:waypoint x="932.0" y="647.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow26" id="BPMNEdge_flow26">
+        <omgdi:waypoint x="932.0" y="687.0"></omgdi:waypoint>
+        <omgdi:waypoint x="932.0" y="727.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow27" id="BPMNEdge_flow27">
+        <omgdi:waypoint x="952.0" y="667.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1041.0" y="667.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
+        <omgdi:waypoint x="985.0" y="754.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1020.0" y="754.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow29" id="BPMNEdge_flow29">
+        <omgdi:waypoint x="1060.0" y="754.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1095.0" y="754.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow30" id="BPMNEdge_flow30">
+        <omgdi:waypoint x="1200.0" y="754.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1251.0" y="754.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow31" id="BPMNEdge_flow31">
+        <omgdi:waypoint x="1040.0" y="774.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1040.0" y="820.0"></omgdi:waypoint>
+        <omgdi:waypoint x="818.0" y="820.0"></omgdi:waypoint>
+        <omgdi:waypoint x="818.0" y="565.0"></omgdi:waypoint>
+        <omgdi:waypoint x="866.0" y="564.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow32" id="BPMNEdge_flow32">
+        <omgdi:waypoint x="1268.0" y="632.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1268.0" y="8.0"></omgdi:waypoint>
+        <omgdi:waypoint x="510.0" y="8.0"></omgdi:waypoint>
+        <omgdi:waypoint x="510.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

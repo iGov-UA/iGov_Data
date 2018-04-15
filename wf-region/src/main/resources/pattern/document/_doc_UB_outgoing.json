@@ -1,0 +1,43 @@
+{
+  "_:Watch": 
+  {
+    "_default_UB": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument","AnswerMessage"],
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_UB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    },
+    "_default_UB_approve": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AskMessage"],
+      "oPermitions": {"sKeyGroupe_Source":"_default_ETG_approve", "sGroup_Activiti":"UB_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {}
+}

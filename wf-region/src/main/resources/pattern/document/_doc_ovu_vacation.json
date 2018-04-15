@@ -1,0 +1,34 @@
+{
+  "_:Watch": {
+    "_default_OVU": {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_OVU_read": {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+    "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"NSTU_Board_nstu"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Seen": {}  
+}

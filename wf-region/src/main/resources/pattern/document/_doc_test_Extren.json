@@ -1,0 +1,60 @@
+{
+  "_:Watch": 
+  {
+    "_default_CIB_Extr": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["SetUrgent"],
+      "oPermitions_SetUrgent": {"sKey_Step":["nDeepLevel:3", "step_2", "step_3"]},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_ExtrObr": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["SetUrgent"],
+      "oPermitions_SetUrgent": {"sKey_Step":["step_3"]},
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+    "_default_CIB_ExtrObr3": 
+    {
+      "sName": " ",
+      "bWrite": true,
+      "asID_Field_Read": 
+      [
+        "*"
+      ],
+      "asID_Field_Write": 
+      [
+        "*"
+      ]
+    },
+  "_default_CIB_read": 
+    {
+      "sName": " ",
+      "bWrite": false,
+      "asID_Field_Read": 
+      [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {}
+}

@@ -1,0 +1,96 @@
+{
+  "_:Watch": {
+    "_default_ub": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AnswerMessage", "CreateTask"],
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ub_Accept": {
+      "sName": " ",
+      "bWrite": true, 
+      "bNeedECP": true,     
+      "aPermition": ["AddAcceptor", "AddVisor", "Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "AddViewer","Refuse"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ub_read", "sGroup_Activiti":"ETG_Head"}, 
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ub_read", "sGroup_Activiti":"ETG_Head"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_ub_view", "sGroup_Activiti":"ETG_Head"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"ETG_Head"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ub_Agree": {
+      "sName": " ",
+      "bWrite": true,      
+      "aPermition": ["AddAcceptor", "AddVisor", "Delegate", "AskMessage", "AddViewer","Refuse"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ub_read", "sGroup_Activiti":"ETG_Head"}, 
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ub_read", "sGroup_Activiti":"ETG_Head"}, 
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_ub_view", "sGroup_Activiti":"ETG_Head"},
+       "oPermitions_Delegate": {"sGroup_Activiti":"ETG_Head"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ub_direct": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "Delegate", "AddVisor", "RemoveDocumentStepSubject", "AskMessage", "CancelDocumentSubmit", "Seen","Refuse"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ub_read", "sGroup_Activiti":"ETG_Head"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_ub_view", "sGroup_Activiti":"ETG_Head"}, 
+       "oPermitions_Delegate": {"sGroup_Activiti":"ETG_Head"},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ub_view": {
+      "sName": " ",
+      "bWrite": null,
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_ub_read": {
+      "sName": " ",
+      "bWrite": false,
+       "aPermition": ["AddVisor", "AddViewer"],
+      "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ub_read", "sGroup_Activiti":"ETG_Head"},       
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_ub_view", "sGroup_Activiti":"ETG_Head"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    },
+      "_default_ub_author_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "AskMessage", "CreateTask", "EditTask"],      
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Accept": {},
+  "step_4:Agree": {},
+  "step_5:Agree": {}, 
+  "step_6:Seen": {},
+  "step_7:Edit": {},
+  "step_8:Edit": {}
+}

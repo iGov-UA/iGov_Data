@@ -1,0 +1,21 @@
+{
+  "aField": [
+    {
+      "id": "sName_isExecute",
+      "name": "Додатково на ознайомлення; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel,sID_BP=sTable_doc_CONCORD_vidgul",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    {
+      "id": "sLogin_isExecute",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+    },
+    {
+      "id": "sPosition_isExecute",
+      "name": "Департамент",
+      "type": "string"
+    }
+  ]
+}

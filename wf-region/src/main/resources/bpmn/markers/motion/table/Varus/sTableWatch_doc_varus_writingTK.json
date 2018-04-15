@@ -1,0 +1,25 @@
+{
+  "aField": [
+    {
+      "id": "sName_Watcher",
+      "name": "Наглядачі; ;sID_SubjectRole=Executor,sID_Group_Activiti=sID_Group_Activiti,nDeepLevel=nDeepLevel",
+      "type": "select",
+      "nWidth": "50%"
+    },
+    
+    {
+      "id": "sLogin_Watcher",
+      "name": "Login",
+      "type": "string",
+      "bVisible": "false"
+      
+    },
+    
+    {
+      "id": "sPosition_Watcher",
+      "name": "Посада",
+      "type": "string",
+      "writable": "false"     
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "_:Watch": {
+    "_default_ovu": {
+      "sName": " ",
+      "bWrite": true, 
+      "aPermition": ["DeleteDocument", "CreateTask", "AnswerMessage", "SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2", "step_3"]},   
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ovu_avtor_edit": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["DeleteDocument", "CreateTask", "EditTask", "AskMessage","SetUrgent"], 
+      "oPermitions_SetUrgent": {"sKey_Step":["step_2", "step_3"]},     
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ovu_approve": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["Delegate", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AddAcceptor", "AskMessage", "Refuse", "AddViewer"],
+      "oPermitions_Delegate": {"sGroup_Activiti":"vs_"},  
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ovu_approve", "sGroup_Activiti":"vs_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},   
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_ovu_approve_1": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": ["AddViewer", "AddVisor", "Delegate", "AddAcceptor", "AskMessage", "Refuse"],
+      "oPermitions_AddAcceptor": {"sKeyGroupe_Source":"_default_ovu_approve_1", "sGroup_Activiti":"vs_"},
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"}, 
+       "oPermitions_AddVisor": {"sKeyGroupe_Source":"_default_ovu_read", "sGroup_Activiti":"vs_"},
+      "oPermitions_Delegate": {"sGroup_Activiti":"vs_"},    
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+    "_default_ovu_2": {
+      "sName": " ",
+      "bWrite": true,
+      "aPermition": [ "Seen", "AddViewer", "Delegate", "CreateTask", "CancelDocumentSubmit", "RemoveDocumentStepSubject", "AskMessage", "Refuse"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},  
+       "oPermitions_Delegate": {"sGroup_Activiti":"vs_"},
+      "asID_Field_Read": [
+        "*"
+      ],
+      "asID_Field_Write": [
+        "*"
+      ]
+    },
+     "_default_view": {
+      "sName": " ",
+      "bWrite": null,
+      "aPermition": [ "AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},
+      "asID_Field_Read": [
+        "*"
+           ]
+           },
+    "_default_ovu_read": {
+      "sName": " ",
+      "bWrite": false,
+      "aPermition": ["AddViewer"],
+      "oPermitions_AddViewer": {"sKeyGroupe_Source":"_default_view", "sGroup_Activiti":"vs_"},
+      "asID_Field_Read": [
+        "*"
+      ]
+    }
+  },
+  "step_1:Create": {},
+  "step_2:Accept": {},
+  "step_3:Agree": {},
+  "step_4:Execute": {},
+  "step_5:Edit": {},
+  "step_6:Edit": {},
+  "step_7:Edit": {},
+  "step_8:Seen": {}
+  
+}

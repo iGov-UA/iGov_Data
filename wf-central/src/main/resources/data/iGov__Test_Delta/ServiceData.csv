@@ -5143,3 +5143,10 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5286;149;14;14;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim_Zaporija:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5287;121;14;14;NULL;4;{"processDefinitionId":"mvs_121_TransferPathAgreement_Zaporija:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5288;1404;14;14;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim_Zaporija:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5289;1568;16;16;NULL;4;{"processDefinitionId":"DABI_1568_DekVukBud:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5290;1569;16;16;NULL;4;{"processDefinitionId":"DABI_1569_PovVukBudBP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5291;54;16;16;NULL;4;{"processDefinitionId":"DABI_0054_GotEkspluat:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5292;56;16;16;NULL;4;{"processDefinitionId":"DABI_0056_GotEkspluatBP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5293;55;16;16;NULL;4;{"processDefinitionId":"DABI_0055_GotEkspluatSUD:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5294;1575;16;16;NULL;4;{"processDefinitionId":"DABI_1575_ZminBudBPSS1:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5295;1576;16;16;NULL;4;{"processDefinitionId":"DABI_1576_ZminBudBP:1:1"};;false;225;true;;BankID,EDS,mpbds;0

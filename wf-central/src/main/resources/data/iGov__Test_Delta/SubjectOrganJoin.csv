@@ -3206,3 +3206,6 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3536;225;Філія ЦНАП по Дніпровському та Хортицькому районах;Днепровский и Хортицкий  районы;zp_zpT_Dnepr_Hort;zp_zpT_Dnepr_Hort; ; ;NULL;NULL;2310100000
 3537;225;Філія ЦНАП по Заводському району;Завoдский район;zp_zpT_Zavodskiy;zp_zpT_Zavodskiy; ; ;NULL;NULL;2310100000
 3538;225;Філія ЦНАП по Комунарському району;Коммунарский район;zp_zpT_Communar;zp_zpT_Communar; ; ;NULL;NULL;2310100000
+3539;225;ЦНАП Маневицької РДА;ЦНАП Маневицької РДА;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000
+3540;205;ЦНАП Маневицької РДА;ЦНАП Маневицької РДА;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000
+3541;288;ЦНАП Маневицької РДА;ЦНАП Маневицької РДА;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000

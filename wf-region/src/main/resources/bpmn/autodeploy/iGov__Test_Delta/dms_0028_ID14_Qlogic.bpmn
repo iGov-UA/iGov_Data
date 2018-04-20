@@ -117,6 +117,7 @@ execution.setVariable('sEndDay', timerEnd)</script>
 </p>
 <p>
 									<b>Деталі зустрічі:</b><br>
+									Ім'я дитини для якої зареєтровано місце в черзі: ${lastName_UA1} ${firstName_UA1} ${middleName_UA1}.<br>
 									Номер талону - ${sTicketNumber}, орієнтовна дата та час візиту - ${sNotification_day}. 
 								</p>
 <p>

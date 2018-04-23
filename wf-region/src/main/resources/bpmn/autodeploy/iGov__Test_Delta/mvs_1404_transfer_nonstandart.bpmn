@@ -64,7 +64,6 @@
         <activiti:formProperty id="trailer_model" name="Марка та модель причепа (напівпричепа)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="semitrailer_number" name="Номерний знак причепа (напівпричепа)" type="string" required="true"></activiti:formProperty>
        
-       <activiti:formProperty id="Table_escort" name="Транспорт супроводу автоколони; ;nRowsLimit=2,bNew=true" type="table" default="${markerService.loadFromFile('table/mvs/mvs_1404_transfer_nonstandart_table.json')}" required="true"></activiti:formProperty>
        
        <activiti:formProperty id="pib_sender" name="Прізвище ім'я та по батькові відправника (або найменування юридичної особи)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="adres_sender" name="Адреса реєстрації відправника" type="string" required="true"></activiti:formProperty>

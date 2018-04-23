@@ -5302,3 +5302,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5445;725;133;133;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5446;455;133;133;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5447;1476;133;133;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5448;1429;133;133;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;true;;BankID,EDS,mpbds;0

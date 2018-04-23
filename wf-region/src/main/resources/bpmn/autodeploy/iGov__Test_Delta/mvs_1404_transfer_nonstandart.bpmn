@@ -78,8 +78,6 @@
         <activiti:formProperty id="post_responsible" name="Посада  відповідального за устаткування транспортних засобів, їх технічний стан" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="agreed_organization" name="Організація, яка погодила перевезення" type="string" required="true"></activiti:formProperty>
        
-       <activiti:formProperty id="Table_route" name="Маршрут руху; ;nRowsLimit=20,bNew=true" type="table" default="${markerService.loadFromFile('table/mvs/mvs_1404_transfer_nonstandart_table3.json')}"></activiti:formProperty>
-       
         <activiti:formProperty id="dangerous_name" name="Транспортна назва вантажу" type="textArea" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="length" name="Довжина (м.)" type="string" required="true"></activiti:formProperty>

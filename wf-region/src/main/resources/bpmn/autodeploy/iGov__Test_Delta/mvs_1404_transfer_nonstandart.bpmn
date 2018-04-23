@@ -71,7 +71,6 @@
         <activiti:formProperty id="pib_recipient" name="Прізвище ім'я та по батькові одержувача (або найменування юридичної особи)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="adres_recipient" name="Адреса реєстрації одержувача" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="phone_recipient" name="Телефон одержувача" type="string" required="true"></activiti:formProperty>
-       <activiti:formProperty id="Table_driver" name="Водії, що будуть перевозити небезпечний вантаж; ;nRowsLimit=2,bNew=true" type="table" default="${markerService.loadFromFile('table/mvs/mvs_1404_transfer_nonstandart_table2.json')}" required="true"></activiti:formProperty>
        
         <activiti:formProperty id="pib_instructor" name="Прізвище ім'я та по батькові відповідального за виконання водіями правил проїзду;великогабаритних та великовагових транспортних засобів автомобільними дорогами, вулицями та залізничними переїздами" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="position_instructor" name="Посада відповідального за виконання водіями правил проїзду" type="string" required="true"></activiti:formProperty>

@@ -25,7 +25,7 @@
           <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
           <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="lZutloPlosha" name="Площа житла" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="lZutloPlosha" name="Площа житла" type="double" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;fPasport&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
@@ -95,7 +95,7 @@ ${sNameOrgan},<br>
     <sequenceFlow id="flow2" sourceRef="servicetask1" targetRef="servicetask2"></sequenceFlow>
     <userTask id="usertask1" name="ЦНАП перевірка" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
-        <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспорті дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
@@ -113,7 +113,7 @@ ${sNameOrgan},<br>
           <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
           <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="lZutloPlosha" name="Площа житла; ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="lZutloPlosha" name="Площа житла; ;writable=false" type="double"></activiti:formProperty>
         
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fIPN" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -212,7 +212,7 @@ ${sNameOrgan},<br>
     </serviceTask>
     <userTask id="usertask2" name="ЦНАП відповідь" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
-        <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспорті дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
@@ -230,7 +230,7 @@ ${sNameOrgan},<br>
           <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
           <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="lZutloPlosha" name="Площа житла; ;writable=false" type="long"></activiti:formProperty>
+        <activiti:formProperty id="lZutloPlosha" name="Площа житла; ;writable=false" type="double"></activiti:formProperty>
         
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fIPN" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -306,7 +306,7 @@ ${sNameOrgan},<br>
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 <p>Ваше звернення щодо видачі дубліката свідоцтва про право власності на приватизоване житло - опрацьовано. <br>
-Ви можете отримати довідку особисто:<br>
+Ви можете отримати дублікат особисто:<br>
 ${sAddress}<br>
 ${sWorkTime}<br><br>
 При собі треба мати документ, що посвідчує особу.

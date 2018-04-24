@@ -1,0 +1,52 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_VlasnP": {
+      "aField_ID": [
+        "fVlasn"
+      ],
+      "asID_Field": {
+        "sReason": "asPravo"
+      },
+      "sCondition": "[sReason]=='sEnumVlasnP'"
+    },
+    "ShowFieldsOnCondition_VlasnCh": {
+      "aField_ID": [
+        "fVlasn",
+        "fZgodaVlasn"
+      ],
+      "asID_Field": {
+        "sReason": "asPravo"
+      },
+      "sCondition": "[sReason]=='sEnumVlasnCh'"
+    },
+    "ShowFieldsOnCondition_Korust": {
+      "aField_ID": [
+        "fKorust",
+        "fZgodaVlasn"
+      ],
+      "asID_Field": {
+        "sReason": "asPravo"
+      },
+      "sCondition": "[sReason]=='sEnumKorust'"
+    },
+    "ShowFieldsOnCondition_Superfich": {
+      "aField_ID": [
+        "fSuperfich",
+        "fZgodaVlasn"
+      ],
+      "asID_Field": {
+        "sReason": "asPravo"
+      },
+      "sCondition": "[sReason]=='sEnumSuperfich'"
+    },
+    "ShowFieldsOnCondition_chekBudPoj": {
+      "aField_ID": [
+        "fProjekt"
+      ],
+      "asID_Field": {
+        "sReason": "chekBudPoj"
+      },
+      "sCondition": "[sReason]=='yes'"
+    }
+  }
+}

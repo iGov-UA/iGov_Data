@@ -1,0 +1,40 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_1D": {
+      "aField_ID": [
+        "sRNumber"
+      ],
+      "asID_Field": {
+        "sReason": "asDecision"
+      },
+      "sCondition": "[sReason]=='sEnumDoc_ok'"
+    },
+    "RequiredFieldsOnCondition_1D": {
+      "aField_ID": [
+        "sRNumber"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecision"
+      },
+      "sCondition": "[sCondit1]=='sEnumDoc_ok'"
+    },
+    "ShowFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sReason": "asDecision"
+      },
+      "sCondition": "[sReason]=='sEnumDoc_bad'"
+    },
+    "RequiredFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecision"
+      },
+      "sCondition": "[sCondit1]=='sEnumDoc_bad'"
+    }
+  }
+}

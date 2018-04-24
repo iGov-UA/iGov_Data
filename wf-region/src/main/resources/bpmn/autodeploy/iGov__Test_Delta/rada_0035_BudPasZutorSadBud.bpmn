@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="rada_0035_BudPasZut&SadBud" name="Надання згоди на виготовлення будівельного паспорту на житловий або садовий будинок." isExecutable="true">
+  <process id="rada_0035_BudPasZutorSadBud" name="Надання згоди на виготовлення будівельного паспорту на житловий або садовий будинок." isExecutable="true">
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому хочете отримати відповідь" type="select" default="0" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -14,12 +13,10 @@
         <activiti:formProperty id="phone" name="Телефон" type="string" default="+380" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта; для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації" type="string" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_Z" name="Інформація про землю і будівлю" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Z&quot;:{&quot;aElement_ID&quot;:[&quot;sPlace&quot;],&quot;sValue&quot;:&quot;Інформація про землю і будівлю&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPlace" name="Місце знаходження земельної ділянки;(на якій планується звести будинок)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="dZplosh" name="Площа земельної ділянки;(м.кв)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="dBplosh" name="Площа планованого будинку;(м.кв)" type="string" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="asPravo" name="Право на землю" type="enum" required="true">
           <activiti:value id="sEnumVlasnP" name="Повна власніть"></activiti:value>
           <activiti:value id="sEnumVlasnCh" name="Часткова властність"></activiti:value>
@@ -30,20 +27,16 @@
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;fPasport&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="fVlasn" name="Право власності;(документ, що посвідчує вашу власніть на землю);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fKorust" name="Право користування;(документ, що посвідчує ваше право користування землею);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fSuperfich" name="Договір суперфіцію; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fEskiz" name="Ескізні наміри забудови;(місце розташування будівель та споруд на земельній ділянці, відстані до меж сусідніх земельних ділянок та розташованих на них об’єктів, інженерних мереж і споруд, фасади та плани поверхів об’єктів із зазначенням габаритних розмірів, перелік систем інженерного забезпечення, у тому числі автономного, що плануються до застосування, тощо) ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fProjekt" name="Проект будівництва; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fZgodaVlasn" name="Згода співвласників; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        
-        <activiti:formProperty id="marker1" name="marker1" type="markers" default="${markerService.loadFromFile('Rada/rada_0035_BudPasZut&SadBud1.json')}"></activiti:formProperty>
-        
+        <activiti:formProperty id="marker1" name="marker1" type="markers" default="${markerService.loadFromFile('Rada/rada_0035_BudPasZutorSadBud1.json')}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта органу ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса установи ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -113,7 +106,6 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="phone" name="Телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації; ;writable=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_Z" name="Інформація про землю і будівлю" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Z&quot;:{&quot;aElement_ID&quot;:[&quot;sPlace&quot;],&quot;sValue&quot;:&quot;Інформація про землю і будівлю&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPlace" name="Місце знаходження земельної ділянки; ;writable=false" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="dZplosh" name="Площа земельної ділянки (м.кв); ;writable=false" type="string" required="true"></activiti:formProperty>
@@ -128,7 +120,6 @@ ${sNameOrgan},<br>
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fIPN" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fVlasn" name="Право власності; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -137,15 +128,12 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="fEskiz" name="Ескізні наміри забудови; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fProjekt" name="Проект будівництва; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fZgodaVlasn" name="Згода співвласників; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="decide" name="Результат" type="enum" required="true">
           <activiti:value id="accept" name="Згоду надано. Запросити заявника."></activiti:value>
           <activiti:value id="reject" name="Відмова у наданні послуги"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="comment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="sBody_1" name="[pattern/print/architecture/zayava_dozvil_na_bud.html]; ;bVisible=false ,bPrintform=true" type="string" default="заява громадянина" writable="false"></activiti:formProperty>
-        
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -155,7 +143,6 @@ ${sNameOrgan},<br>
     <sequenceFlow id="flow6" name="Надано згоду" sourceRef="exclusivegateway1" targetRef="servicetask4">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide=='reject'}]]></conditionExpression>
     </sequenceFlow>
-    
     <sequenceFlow id="flow3" sourceRef="servicetask2" targetRef="usertask1"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="flow4" sourceRef="usertask1" targetRef="exclusivegateway1"></sequenceFlow>
@@ -239,8 +226,8 @@ ${sPhoneOrgan}<br>
     <sequenceFlow id="flow11" sourceRef="servicetask4" targetRef="endevent2"></sequenceFlow>
     <sequenceFlow id="flow12" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_kolon_cnap394">
-    <bpmndi:BPMNPlane bpmnElement="kolon_cnap394" id="BPMNPlane_kolon_cnap394">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_rada_0035_BudPasZutorSadBud">
+    <bpmndi:BPMNPlane bpmnElement="rada_0035_BudPasZutorSadBud" id="BPMNPlane_rada_0035_BudPasZutorSadBud">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="73.0" y="123.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
@@ -269,14 +256,6 @@ ${sPhoneOrgan}<br>
         <omgdi:waypoint x="255.0" y="140.0"></omgdi:waypoint>
         <omgdi:waypoint x="290.0" y="140.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
-        <omgdi:waypoint x="395.0" y="140.0"></omgdi:waypoint>
-        <omgdi:waypoint x="440.0" y="140.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
-        <omgdi:waypoint x="492.0" y="168.0"></omgdi:waypoint>
-        <omgdi:waypoint x="492.0" y="202.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
         <omgdi:waypoint x="472.0" y="222.0"></omgdi:waypoint>
         <omgdi:waypoint x="441.0" y="222.0"></omgdi:waypoint>
@@ -290,6 +269,14 @@ ${sPhoneOrgan}<br>
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="14.0" width="67.0" x="562.0" y="182.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="395.0" y="140.0"></omgdi:waypoint>
+        <omgdi:waypoint x="440.0" y="140.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="492.0" y="168.0"></omgdi:waypoint>
+        <omgdi:waypoint x="492.0" y="202.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
         <omgdi:waypoint x="388.0" y="250.0"></omgdi:waypoint>

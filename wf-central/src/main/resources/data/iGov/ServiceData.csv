@@ -976,7 +976,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1037;31;5;5;NULL;4;{"processDefinitionId":"kalush_minsoc_399:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 1038;40;467;467;NULL;4;{"processDefinitionId":"spend_meeting_404:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1039;687;92;92;NULL;4;{"processDefinitionId":"ternopol_rcnap_117:1:1"};;false;117;true;;BankID,EDS,mpbds;0
-1040;35;467;467;NULL;4;{"processDefinitionId":"kolon_cnap394:1:1"};;false;268;false;;BankID,EDS,mpbds;0
+1040;35;467;467;NULL;4;{"processDefinitionId":"rada_0035_BudPasZutorSadBud:1:1"};;false;268;false;;BankID,EDS,mpbds;0
 1041;143;283;283;NULL;4;{"processDefinitionId":"dnepr_cnap_275:1:1"};;false;212;true;;BankID,EDS,mpbds;0
 1042;1472;28;28;NULL;4;{"processDefinitionId":"dnepr_obl_cnap_484:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1043;1422;13;13;NULL;4;{"processDefinitionId":"dnepr_cnap_246:1:1"};;true;246;true;;BankID,EDS,mpbds;0
@@ -3132,7 +3132,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 3193;1540;638;638;NULL;4;{"processDefinitionId":"cnap_293_rda:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 3194;628;483;483;NULL;4;{"processDefinitionId":"ternopil_obl_284:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 3195;1548;50025;NULL;25;4;{"processDefinitionId":"hmel_just_1131:1:1"};;false;1;false;;email,BankID,EDS,mpbds;0
-3196;740;124;124;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;212;true;;BankID,EDS,mpbds;0
+3196;740;124;124;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 3197;1549;50013;NULL;13;4;{"processDefinitionId":"DFS_F3000410:1:1"};;false;286;true;;BankID,EDS,mpbds;0
 3198;1550;NULL;NULL;NULL;4;{"processDefinitionId":"_test_field_checkbox:1:1"};;false;1;true;;BankID,email,EDS,mpbds;0
 3199;56;50005;NULL;5;4;{"processDefinitionId":"kmda_works_notification:1:1"};;false;1;true;;BankID,EDS,mpbds;0
@@ -4258,10 +4258,10 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4379;175;514;514;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4380;1431;514;514;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4381;25;514;514;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-4382;23;124;124;NULL;4;{"processDefinitionId":"zhitomir_mvk_2:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-4383;1496;124;124;NULL;4;{"processDefinitionId":"cnap_khmeln_545:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-4384;725;124;124;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-4385;35;124;124;NULL;4;{"processDefinitionId":"kolon_cnap394:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+4382;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+4383;1496;124;124;NULL;4;{"processDefinitionId":"cnap_khmeln_545:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+4384;725;124;124;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+4385;35;124;124;NULL;4;{"processDefinitionId":"rada_0035_BudPasZutorSadBud:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 4386;1476;124;124;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4387;161;124;124;NULL;4;{"processDefinitionId":"Rada_0161_InfoZaput:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 4388;1429;124;124;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -4594,11 +4594,11 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4715;173;24;24;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4716;175;24;24;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4717;1431;24;24;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-4718;23;124;124;NULL;4;{"processDefinitionId":"rada_0023_dovidkaOSG:1:1"};;false;212;false;;BankID,EDS,mpbds;0
-4719;1445;124;124;NULL;4;{"processDefinitionId":"dnepr_cnap_274:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+4718;23;124;124;NULL;4;{"processDefinitionId":"rada_0023_dovidkaOSG:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+4719;1445;124;124;NULL;4;{"processDefinitionId":"dnepr_cnap_274:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 4720;790;10;10;NULL;4;{"processDefinitionId":"ZemRada_790_ZemOrPonov:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4721;701;16;16;NULL;4;{"processDefinitionId":"rada_0701_OrderCopyBuilding:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-4722;734;124;124;NULL;4;{"processDefinitionId":"Ark_734_Vuk2000_Boyar:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+4722;734;124;124;NULL;4;{"processDefinitionId":"Ark_734_Vuk2000_Boyar:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 4723;87;50024;NULL;24;4;{"processDefinitionId":"justice_0087_FOPclose:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 4724;196;50024;NULL;24;4;{"processDefinitionId":"justice_0196_TabooReg:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 4725;87;50018;NULL;18;4;{"processDefinitionId":"justice_0087_FOPclose:1:1"};;false;1;true;;BankID,EDS,mpbds;0
@@ -5297,3 +5297,12 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5440;55;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5441;1575;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5442;1576;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
+5443;455;662;662;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5444;725;662;662;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5445;725;133;133;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5446;455;133;133;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5447;1476;133;133;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5448;1429;133;133;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5449;668;133;133;NULL;4;{"processDefinitionId":"chernihiv_mvk_479:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5450;627;133;133;NULL;4;{"processDefinitionId":"rada_0627_DovKvOblik:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5451;130;133;133;NULL;4;{"processDefinitionId":"rada_0130_DubVlPruvZutl:1:1"};;false;225;true;;BankID,EDS,mpbds;0

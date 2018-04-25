@@ -13,7 +13,7 @@
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sBankIdPassport" name="Паспортні дані" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспорті дані" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон" type="string" default="+380" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="Ваш e-mail; На цей e-mail  Ви отримаєте результат обробки Вашого звернення" type="string" required="true"></activiti:formProperty>
@@ -94,7 +94,7 @@
     <userTask id="usertask1" name="Прийняття рішення: доцільність запиту" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="контактний  телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="e-mail громадянина" type="string" writable="false"></activiti:formProperty>

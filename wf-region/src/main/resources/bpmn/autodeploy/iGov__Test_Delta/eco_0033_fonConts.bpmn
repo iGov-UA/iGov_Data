@@ -61,7 +61,6 @@
     <sequenceFlow id="flow1" name="Менше 250 тисяч" sourceRef="exclusivegateway3" targetRef="servicetask1">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asCity250 == 'sYes'}]]></conditionExpression>
     </sequenceFlow>
-    <serviceTask id="servicetask8" name="Місто більше 250 тис"></serviceTask>
     <sequenceFlow id="flow55" name="Більше 250 тисяч" sourceRef="exclusivegateway3" targetRef="servicetask8">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asCity250 == 'sNo'}]]></conditionExpression>
     </sequenceFlow>

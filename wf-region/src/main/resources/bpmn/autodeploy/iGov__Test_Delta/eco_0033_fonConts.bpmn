@@ -19,7 +19,7 @@
           <activiti:value id="sPost" name="поштою"></activiti:value>
         </activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про організацію та її місце розташування" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sOrgName&quot;],&quot;sValue&quot;:&quot;Інформація про організацію та її місце розташування&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Організація та її місце розташування" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sOrgName&quot;],&quot;sValue&quot;:&quot;Інформація про організацію та її місце розташування&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sOrgName" name="Назва організації, яка запитує довідку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sOrgAdress" name="Поштова адреса" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sCity" name="Населений пункт, для якого відбувається запит; Додатково зазначте назву області" type="string" required="true"></activiti:formProperty>
@@ -36,13 +36,13 @@
           <activiti:value id="sBuild" name="будується"></activiti:value>
         </activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_3" name="Інформація про викиди" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;asDocTime&quot;],&quot;sValue&quot;:&quot;Інформація про викиди&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_3" name="Інформація про викиди" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sCompElem&quot;],&quot;sValue&quot;:&quot;Інформація про викиди&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sCompElem" name="Перелік речовин, які викидаються підприємством" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="asDocTime" name="Термін, на який запитуються величини фонових концентрацій" type="enum" default="sNo" required="true">
           <activiti:value id="sNo" name=" "></activiti:value>
           <activiti:value id="sFirst" name="строки вводу першої черги будівництва"></activiti:value>
           <activiti:value id="sDone" name="розвитку підприємства на повну потужність"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="sCompElem" name="Перелік речовин, які викидаються підприємством" type="textArea" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;lable1&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lable1" name="; ;labelType='warning'" type="label" default="&lt;a href=&quot; https://drive.google.com/open?id=1eT5aMmb8GxhzcPL4kUzWJQ7BNJ9WtggAnqftMVvi-SM&quot; target=&quot;_blank&quot;&gt;Вимоги до характеристики розташування проммайданчика&lt;/a&gt;"></activiti:formProperty>

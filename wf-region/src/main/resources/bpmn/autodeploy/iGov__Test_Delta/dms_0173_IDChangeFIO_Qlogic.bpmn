@@ -23,6 +23,9 @@
           <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
           <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
+          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
+        </activiti:formProperty>
 		<activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>

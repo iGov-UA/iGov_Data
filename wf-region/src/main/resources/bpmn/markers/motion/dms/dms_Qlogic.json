@@ -5,13 +5,25 @@
 		{
 			"aField_ID":	["asEnumDistrictMariupol"],
 			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
-			"sCondition":	"[sClient] == 'don_mariupolR' || [sClient] == 'don_mariupol_LevR' || [sClient] == 'don_mariupolMVC'"
+			"sCondition":	"[sClient] == 'don_mariupolR' || [sClient] == 'don_mariupol_LevR'"
 		},
 		"RequiredFieldsOnCondition_21": 
 		{
 			"aField_ID":	["asEnumDistrictMariupol"],
 			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
-			"sCondition":	"[sClient] == 'don_mariupolR' || [sClient] == 'don_mariupol_LevR' || [sClient] == 'don_mariupolMVC'"
+			"sCondition":	"[sClient] == 'don_mariupolR' || [sClient] == 'don_mariupol_LevR'"
+		},
+		"ShowFieldsOnCondition_71":
+		{
+			"aField_ID":	["asEnumDistrictMariupolMVC"],
+			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition":	"[sClient] == 'don_mariupolMVC'"
+		},
+		"RequiredFieldsOnCondition_71": 
+		{
+			"aField_ID":	["asEnumDistrictMariupolMVC"],
+			"asID_Field":	{"sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition":	"[sClient] == 'don_mariupolMVC'"
 		},
 		"ValuesFieldsOnCondition_22":
 		{
@@ -45,29 +57,29 @@
 		{
 			"aField_ID":	["sServiceId_visitDay"],
 			"asID_Field_sValue": ["31"],
-			"asID_Field":	{"sReason": "asEnumDistrictMariupol","sClient":"sID_Public_SubjectOrganJoin"},
-			"sCondition": 	"[sReason] == 'sEnumCentral' && [sClient] == 'don_mariupolMVC'"
+			"asID_Field":	{"sReason": "asEnumDistrictMariupolMVC","sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition": 	"[sReason] == 'sEnumCentralMVC' && [sClient] == 'don_mariupolMVC'"
 		},
 		"ValuesFieldsOnCondition_27":
 		{
 			"aField_ID":	["sServiceId_visitDay"],
 			"asID_Field_sValue": ["33"],
-			"asID_Field":	{"sReason": "asEnumDistrictMariupol","sClient":"sID_Public_SubjectOrganJoin"},
-			"sCondition": 	"[sReason] == 'sEnumKalmius' && [sClient] == 'don_mariupolMVC'"
+			"asID_Field":	{"sReason": "asEnumDistrictMariupolMVC","sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition": 	"[sReason] == 'sEnumKalmiusMVC' && [sClient] == 'don_mariupolMVC'"
 		},
 		"ValuesFieldsOnCondition_28":
 		{
 			"aField_ID":	["sServiceId_visitDay"],
 			"asID_Field_sValue": ["34"],
-			"asID_Field":	{"sReason": "asEnumDistrictMariupol","sClient":"sID_Public_SubjectOrganJoin"},
-			"sCondition": 	"[sReason] == 'sEnumLivoberezniy' && [sClient] == 'don_mariupolMVC'"
+			"asID_Field":	{"sReason": "asEnumDistrictMariupolMVC","sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition": 	"[sReason] == 'sEnumLivoberezniyMVC' && [sClient] == 'don_mariupolMVC'"
 		},
 		"ValuesFieldsOnCondition_29":
 		{
 			"aField_ID":	["sServiceId_visitDay"],
 			"asID_Field_sValue": ["32"],
-			"asID_Field":	{"sReason": "asEnumDistrictMariupol","sClient":"sID_Public_SubjectOrganJoin"},
-			"sCondition": 	"[sReason] == 'sEnumPrimorsky' && [sClient] == 'don_mariupolMVC'"
+			"asID_Field":	{"sReason": "asEnumDistrictMariupolMVC","sClient":"sID_Public_SubjectOrganJoin"},
+			"sCondition": 	"[sReason] == 'sEnumPrimorskyMVC' && [sClient] == 'don_mariupolMVC'"
 		}
 	}
 }

@@ -31,8 +31,6 @@
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="Запуск таймера напоминания; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
-        
-        <activiti:formProperty id="markers2" name="flow data" type="markers" default="${markerService.loadFromFile('dms/dmsZagran.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>

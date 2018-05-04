@@ -36,7 +36,6 @@
         <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markers2" name="flow data" type="markers" default="${markerService.loadFromFile('dms/dmsZagran.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>

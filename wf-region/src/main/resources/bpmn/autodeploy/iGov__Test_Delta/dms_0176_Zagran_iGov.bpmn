@@ -26,7 +26,6 @@
         <activiti:formProperty id="sPaymentDMS" name="Реквізити для сплати; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDocZagran" name="Документи у регіоні; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markers2" name="flow data" type="markers" default="${markerService.loadFromFile('dms/dmsZagran.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>

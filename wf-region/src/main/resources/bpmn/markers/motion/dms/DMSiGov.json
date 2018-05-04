@@ -10,7 +10,7 @@
       "asID_Field": {
         "sCondit1": "sID_Public_SubjectOrganJoin"
       },
-      "sCondition": "[sCondit1] == 'lviv_drohob'||[sCondit1] == 'khers_oleshkiR'||[sCondit1] == 'khers_kahovT'||[sCondit1] == 'khers_KochubOTG'"
+      "sCondition": "[sCondit1] == 'lviv_drohob'||[sCondit1] == 'khers_oleshkiR'||[sCondit1] == 'khers_kahovT'||[sCondit1] == 'khers_KochubOTG'||[sCondit1] == 'volin_ManivetskaRDA'"
     },
     "ValuesFieldsOnCondition_FlagiDMS": {
       "aField_ID": [
@@ -22,7 +22,7 @@
       "asID_Field": {
         "sCondit1": "sID_Public_SubjectOrganJoin"
       },
-      "sCondition": "[sCondit1] != 'lviv_drohob'&&[sCondit1] != 'khers_oleshkiR'&&[sCondit1] != 'khers_kahovT'&&[sCondit1] != 'khers_KochubOTG'"
+      "sCondition": "[sCondit1] != 'lviv_drohob'&&[sCondit1] != 'khers_oleshkiR'&&[sCondit1] != 'khers_kahovT'&&[sCondit1] != 'khers_KochubOTG'&&[sCondit1] != 'volin_ManivetskaRDA'"
     },
     "ShowFieldsOnCondition_DMS": {
       "aField_ID": [

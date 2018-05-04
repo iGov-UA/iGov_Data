@@ -11,17 +11,10 @@
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="lable3" name=" ; ;labelType=danger" type="label" default="&lt;b&gt;Дана послуга доступна лише за місцем реєстрації. Якщо Ви зробите вибір району не за місцем реєстрації, у наданні послуги Вам буде відмовлено в момент відвідування.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть підрозділ міграційної служби;виключно за місцем своєї реєстрації" type="select" default="0" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
-        <activiti:formProperty id="visitDay1" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nID_Department_visitDay1" name="Департамент; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="nID_ServiceCustomPrivate_visitDay1" name="Номер черги за довідником ДМС; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sID_Type_visitDay1" name="Тип зовнішньої черги; ;bVisible=false" type="string" default="DMS"></activiti:formProperty>
-        
+        <activiti:formProperty id="nID_Department_visitDay" name="Департамент; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
-        
-        <activiti:formProperty id="nID_Department_visitDay" name="Департамент; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAdminID" name="Реквізити для сплати; ;bVisible=false" type="string"></activiti:formProperty>
@@ -31,8 +24,6 @@
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="markers1" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/passport.json')}"></activiti:formProperty>
         <activiti:formProperty id="sRekvIDZagranPos" name="Реквізити; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sFlag" name="sFlag; ;bVisible=false" type="string" default="DMS"></activiti:formProperty>
-        <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/DMSCnapID.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
@@ -42,7 +33,7 @@
     </boundaryEvent>
     <sequenceFlow id="flow23" sourceRef="boundaryerror1" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
-    <sequenceFlow id="flow10" sourceRef="servicetask1" targetRef="exclusivegateway6"></sequenceFlow>
+    <sequenceFlow id="flow10" sourceRef="servicetask1" targetRef="scripttask1"></sequenceFlow>
     <scriptTask id="scripttask1" name="Формировка даты" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>var src=execution.getVariable('date_of_visit')
 var year=src.substr(0,4)
@@ -99,65 +90,6 @@ execution.setVariable('sEndDay', timerEnd)</script>
     </endEvent>
     <sequenceFlow id="flow33" name="${sCancelInfo == 'Заявка актуальна'}" sourceRef="exclusivegateway3" targetRef="exclusivegateway8">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sCancelInfo == 'Заявка актуальна'}]]></conditionExpression>
-    </sequenceFlow>
-    <serviceTask id="servicetask6" name="Нагадування про візит ДМС" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
-      <extensionElements>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Отримання ID-картки замість вклеювання фотокарток при досягненні особою віку 25 або 45 років]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-[pattern/mail/new_design/_common_content_start.html]
-
-	Чекаємо Вас за адресою: ${sAddress}<br>
-	для отримання ID-картки замість вклеювання фотокарток при досягненні особою віку 25 або 45 років
-</p>
-<p>
-	Дата та час візиту:  ${date_of_visit}.
-</p>
-<p>
-	Реквізити для сплати адмінсбору за оформлення ID-картки доступні за <a href="https://dmsu.gov.ua/services/payment.html" target="_blank">посиланням</a>.<br>
-	<b>Зверніть увагу:</b> В квитанції дані платника повинні бути написані українською мовою, а також бути присутній код підрозділу ДМС (знаходиться у реквізитах платежу). В іншому випадку Ваші документи можуть бути не прийняті в підрозділі ДМС.
-</p>
-<p>
-	<b>Необхідні документи, які треба принести до підрозділу ДМС:</b>
-	<ul>
-		<li>паспорт, що підлягає обміну (оригінал та копія);</li>
-		<li>оригінал та копію ІПН;</li>
-		<li>квитанцію про сплату з мокрою печаткою банку, де Ви зазначені, як платник;</li>
-	</ul>
-</p>
-<p>
-	<b>Зверніть увагу:</b> 
-	<ul>
-		<li>Вам не потрібно буде реєструватися у черзі на місці. Вашого запису через iGov на вказаний час достатньо. Але дуже просимо Вас не спізнюватись, бо електронна черга має доволі чіткий крок.</li>
-		<li>Якщо Ви перебуваєте або перебували у шлюбі, то Вам потрібно додатково принести оригінал та копію документів про шлюб або розірвання шлюбу;</li>
-		<li>Якщо Ви маєте дітей, то Вам потрібно додатково принести оригінал та копію документів про народження дітей;</li>
-		<li>Якщо Ви змінювали прізвище, ім'я або по батькові, то Вам потрібно додатково принести оригінал та копію документів про зміну прізвища, ім'я або по батькові;</li>
-		<li>Якщо Ви є внутрішньо переміщеною особою, тобто адреса Вашої реєстрації (прописки) відноситься до тимчасово окупованої території або районів проведення антитерористичної операції (АТО), то Вам потрібно додатково принести з собою ксерокопію та оригінал довідки про взяття на облік внутрішньо переміщеної особи</li>
-	</ul>
-</p>
-<p>[cancelTask]</p>                
-[pattern/mail/new_design/_common_content_end.html]
-[pattern/mail/new_design/_common_signature_start.html]
-${sNameOrgan},<br>
-[pattern/mail/new_design/_common_signature_end.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow32" sourceRef="servicetask6" targetRef="parallelgateway2"></sequenceFlow>
-    <sequenceFlow id="flow37" name="ДМС" sourceRef="exclusivegateway7" targetRef="servicetask2">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag == 'DMS'}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="flow50" name="ЦНАП" sourceRef="exclusivegateway7" targetRef="servicetask8">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag == 'CNAP'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask8" name="Лист заявнику" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
@@ -219,66 +151,6 @@ ${sNameOrgan},<br>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <serviceTask id="servicetask2" name="ID картка" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Отримання ID-картки замість вклеювання фотокарток при досягненні особою віку 25 або 45 років]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-[pattern/mail/new_design/_common_content_start.html]
-	Чекаємо Вас за адресою: ${sAddress}<br>
-	для отримання ID-картки замість вклеювання фотокарток при досягненні особою віку 25 або 45 років
-</p>
-<p>
-	Дата та час візиту:  ${date_of_visit}.
-</p>
-<p>
-	Реквізити для сплати адмінсбору за оформлення ID-картки доступні за <a href="https://dmsu.gov.ua/services/payment.html" target="_blank">посиланням</a>.<br>
-	<b>Зверніть увагу:</b> В квитанції дані платника повинні бути написані українською мовою. </p>
-<p>
-	<b>Необхідні документи, які треба принести до підрозділу ДМС:</b>
-	<ul>
-		<li>паспорт, що підлягає обміну (оригінал та копія);</li>
-		<li>оригінал та копію ІПН;</li>
-		<li>квитанцію про сплату з мокрою печаткою банку, де Ви зазначені, як платник;</li>
-	</ul>
-</p>
-<p>
-	<b>Зверніть увагу:</b> 
-	<ul>
-		<li>Вам не потрібно буде реєструватися у черзі на місці. Вашого запису через iGov на вказаний час достатньо. Але дуже просимо Вас не спізнюватись, бо електронна черга має доволі чіткий крок.</li>
-		<li>Якщо Ви перебуваєте або перебували у шлюбі, то Вам потрібно додатково принести оригінал та копію документів про шлюб або розірвання шлюбу;</li>
-		<li>Якщо Ви маєте дітей, то Вам потрібно додатково принести оригінал та копію документів про народження дітей;</li>
-		<li>Якщо Ви є внутрішньо переміщеною особою, тобто адреса Вашої реєстрації (прописки) відноситься до тимчасово окупованої території або районів проведення антитерористичної операції (АТО), то Вам потрібно додатково принести з собою ксерокопію та оригінал довідки про взяття на облік внутрішньо переміщеної особи</li>
-	</ul>
-</p>
-<p>Після подання документів Ви зможете перевіряти готовність ID-картки за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p>          
-<p>[cancelTask]</p>                
-[pattern/mail/new_design/_common_content_end.html]
-[pattern/mail/new_design/_common_signature_start.html]
-${sNameOrgan},<br>
-[pattern/mail/new_design/_common_signature_end.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sPhone_SMS">
-          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[" "]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow26" sourceRef="servicetask2" targetRef="usertask1_yellow"></sequenceFlow>
     <userTask id="usertask1_yellow" name="Заявка прийнята" activiti:candidateGroups="id_card_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="sCancelInfo" name="Чи скасована заявка (заповнюється громадянином лише у разі відміни запису, за замовчуванням вказано &quot;Заявка актуальна&quot;)" type="string"></activiti:formProperty>
@@ -384,143 +256,7 @@ ${sNameOrgan},<br>
         <activiti:executionListener event="start" delegateExpression="${updateStatus_HistoryServiceEvent}"></activiti:executionListener>
       </extensionElements>
     </endEvent>
-    <exclusiveGateway id="exclusivegateway6" name="Exclusive Gateway"></exclusiveGateway>
-    <sequenceFlow id="flow44" sourceRef="exclusivegateway6" targetRef="scripttask1">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${visitDay != null}]]></conditionExpression>
-    </sequenceFlow>
-    <scriptTask id="scripttask3" name="Отримання дати" scriptFormat="javascript" activiti:autoStoreVariables="false">
-      <script>var src=execution.getVariable('visitDay1')
-var date_of_visit=src.substr(src.indexOf('"sDate":"')+9,16);
-var tickNum=src.substr(src.indexOf('"ticket_number":"')+17,3);
-var tickCode=src.substr(src.indexOf('"ticket_code":"')+15,src.indexOf('"',src.indexOf('"ticket_code":"')+15)-(src.indexOf('"ticket_code":"')+15));
-execution.setVariable('sNotification_day', date_of_visit)
-execution.setVariable('sTicketNumber', tickNum)
-execution.setVariable('sTicketCode', tickCode)
-var src=date_of_visit
-var year=src.substr(0,4)
-var month=src.substr(5,2)
-var day=src.substr(8,2)
-var hour=src.substr(11,2)
-var minutes=src.substr(14,2)
-var seconds='00'
-var delta=1
-var day1=day
-var month1=month
-if (day!='01')
-    {
-        day1=+day-delta
-    }
-else
-    {
-        if ((month!='01')&amp;&amp;(month!='03'))
-          {
-              month1=+month-1
-              day1=30
-          }
-        else
-          {
-            if (month=='03')
-            {
-              month1='02'
-              day1='28'
-            }            
-          }
-     }
-var timerEnd=year+'-'+month+'-'+day+'T'+'19'+':'+'00'+':'+seconds
-execution.setVariable('sEndDay', timerEnd)</script>
-    </scriptTask>
-    <sequenceFlow id="flow45" sourceRef="exclusivegateway6" targetRef="scripttask3">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${visitDay == null}]]></conditionExpression>
-    </sequenceFlow>
-    <serviceTask id="servicetask7" name="ID картка" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
-      <extensionElements>
-        <activiti:field name="sPhone_SMS">
-          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Pered splatoyu posluhy prosymo pereviryty svoyu cherhu za telefonamy 097 470 05 05 abo 066 470 05 05 abo 073 470 05 05]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Отримання ID-картки замість вклеювання фотокарток при досягненні особою віку 25 або 45 років]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-[pattern/mail/new_design/_common_content_start.html]
-<p>
-	Для того щоб закінчити процедуру необхідно:
-	<ul>
-		<li>У будь-якому банку сплатити адмінсбір та отримати квитанцію про сплату. Реквізити для сплати адмінсбору доступні за <a href="https://dmsu.gov.ua/services/payment.html" target="_blank">посиланням</a></li>
-		<li>Прийти з необхідними документами (перелік нижче) за адресою: ${sAddress}
-	</ul>
-</p>
-<p>
-	<b>Деталі зустрічі:</b><br>
-	Номер талону - ${sTicketNumber}, орієнтовна дата та час візиту - ${sNotification_day}. 
-</p>
-<p>
-	<b>Зверніть увагу:</b> В квитанції дані платника повинні бути написані українською мовою, а також бути присутній код підрозділу ДМС (знаходиться у реквізитах платежу). В іншому випадку Ваші документи можуть бути не прийняті в підрозділі ДМС.
-</p>
-<p>
-	<b>Необхідні документи, які треба принести до підрозділу ДМС:</b>
-	<ul>
-		<li>паспорт, що підлягає обміну (оригінал);</li>
-		<li>оригінал ІПН;</li>
-		<li>квитанцію про сплату з мокрою печаткою банку, де Ви зазначені, як платник;</li>
-	</ul>
-</p>
-<p>
-	<b>Зверніть увагу:</b> 
-	<ul>
-		<li>Вам не потрібно буде реєструватися у черзі на місці. Вашого запису через iGov на вказаний час достатньо. Але дуже просимо Вас не спізнюватись, бо електронна черга має доволі чіткий крок.</li>
-		<li>Якщо Ви перебуваєте або перебували у шлюбі, то Вам потрібно додатково принести оригінал та копію документів про шлюб або розірвання шлюбу;</li>
-		<li>Якщо Ви маєте дітей, то Вам потрібно додатково принести оригінал та копію документів про народження дітей;</li>
-		<li>Якщо Ви змінювали прізвище, ім'я або по батькові, то Вам потрібно додатково принести оригінал та копію документів про зміну прізвища, ім'я або по батькові;</li>
-		<li>Якщо Ви є внутрішньо переміщеною особою, тобто адреса Вашої реєстрації (прописки) відноситься до тимчасово окупованої території або районів проведення антитерористичної операції (АТО), то Вам потрібно додатково принести з собою ксерокопію та оригінал довідки про взяття на облік внутрішньо переміщеної особи</li>
-	</ul>
-</p>
-<p>Після подання документів Ви зможете перевіряти готовність ID-картки за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p>          
-<p>Якщо Вам потрібно скасувати заявку,  зверніться,  будь ласка, за телефонами: 097 470 05 05; 066 470 05 05; 073 470 05 05<br>
-При цьому потрібно буде вказати код талону = ${sTicketCode}.
-</p>
-[pattern/mail/new_design/_common_content_end.html]
-[pattern/mail/new_design/_common_signature_start.html]
-${sNameOrgan},<br>
-[pattern/mail/new_design/_common_signature_end.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow46" sourceRef="scripttask3" targetRef="servicetask7"></sequenceFlow>
-    <userTask id="usertask1" name="Заявка прийнята" activiti:candidateGroups="id_card_${sID_Public_SubjectOrganJoin}">
-      <extensionElements>
-        <activiti:formProperty id="visitDay1" name="День та час зустрічі " type="queueData" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBankIdPassport" name="Ваш документ; Тип, серія та номер документу, дата і орган, що його видав" type="string" default="паспорт " required="true"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Контактний телефон заявника" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="email" name="E-Mail заявника" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asResult" name="Результат візиту" type="enum" required="true">
-          <activiti:value id="attr1_ok" name="Громадянин з'явився у призначений час"></activiti:value>
-          <activiti:value id="attr2_missed" name="Громадянин не з'явився"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="sCustom" name="Запуск таймера юзертаски" type="string" default="Auto" writable="false"></activiti:formProperty>
-        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
-      </extensionElements>
-    </userTask>
-    <sequenceFlow id="flow47" sourceRef="servicetask7" targetRef="usertask1"></sequenceFlow>
-    <boundaryEvent id="escalationTimer1" name="Timer" attachedToRef="usertask1" cancelActivity="true">
-      <timerEventDefinition>
-        <timeDate>${sEndDay}</timeDate>
-      </timerEventDefinition>
-    </boundaryEvent>
-    <sequenceFlow id="flow48" sourceRef="escalationTimer1" targetRef="endevent4"></sequenceFlow>
-    <exclusiveGateway id="exclusivegateway7" name="Exclusive Gateway"></exclusiveGateway>
-    <sequenceFlow id="flow49" sourceRef="parallelgateway1" targetRef="exclusivegateway7"></sequenceFlow>
+    <sequenceFlow id="flow49" sourceRef="parallelgateway1" targetRef="servicetask8"></sequenceFlow>
     <sequenceFlow id="flow51" sourceRef="servicetask8" targetRef="usertask1_yellow"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway8" name="Exclusive Gateway"></exclusiveGateway>
     <serviceTask id="servicetask9" name="Нагадування про візит ЦНАП" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -578,9 +314,6 @@ ${sNameOrgan},<br>
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag == 'CNAP'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow53" sourceRef="servicetask9" targetRef="parallelgateway2"></sequenceFlow>
-    <sequenceFlow id="flow54" name="ДМС" sourceRef="exclusivegateway8" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag == 'DMS'}]]></conditionExpression>
-    </sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0025_ID2545_iGov">
     <bpmndi:BPMNPlane bpmnElement="dms_0025_ID2545_iGov" id="BPMNPlane_dms_0025_ID2545_iGov">
@@ -594,7 +327,7 @@ ${sNameOrgan},<br>
         <omgdc:Bounds height="30.0" width="30.0" x="141.0" y="78.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
-        <omgdc:Bounds height="35.0" width="35.0" x="181.0" y="20.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="138.0" y="20.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
         <omgdc:Bounds height="55.0" width="105.0" x="200.0" y="77.0"></omgdc:Bounds>
@@ -611,14 +344,8 @@ ${sNameOrgan},<br>
       <bpmndi:BPMNShape bpmnElement="endevent4" id="BPMNShape_endevent4">
         <omgdc:Bounds height="35.0" width="35.0" x="828.0" y="300.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask6" id="BPMNShape_servicetask6">
-        <omgdc:Bounds height="55.0" width="105.0" x="734.0" y="224.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask8" id="BPMNShape_servicetask8">
-        <omgdc:Bounds height="55.0" width="105.0" x="461.0" y="30.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask2" id="BPMNShape_servicetask2">
-        <omgdc:Bounds height="58.0" width="105.0" x="461.0" y="107.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="400.0" y="77.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask1_yellow" id="BPMNShape_usertask1_yellow">
         <omgdc:Bounds height="55.0" width="105.0" x="592.0" y="77.0"></omgdc:Bounds>
@@ -647,29 +374,11 @@ ${sNameOrgan},<br>
       <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
         <omgdc:Bounds height="35.0" width="35.0" x="1105.0" y="140.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="exclusivegateway6" id="BPMNShape_exclusivegateway6">
-        <omgdc:Bounds height="40.0" width="40.0" x="232.0" y="210.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
-        <omgdc:Bounds height="55.0" width="105.0" x="200.0" y="360.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask7" id="BPMNShape_servicetask7">
-        <omgdc:Bounds height="55.0" width="105.0" x="410.0" y="360.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="55.0" width="105.0" x="602.0" y="360.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="escalationTimer1" id="BPMNShape_escalationTimer1">
-        <omgdc:Bounds height="30.0" width="30.0" x="677.0" y="358.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="exclusivegateway7" id="BPMNShape_exclusivegateway7">
-        <omgdc:Bounds height="40.0" width="40.0" x="381.0" y="84.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway8" id="BPMNShape_exclusivegateway8">
         <omgdc:Bounds height="40.0" width="40.0" x="651.0" y="197.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask9" id="BPMNShape_servicetask9">
-        <omgdc:Bounds height="55.0" width="105.0" x="734.0" y="157.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="734.0" y="190.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
         <omgdi:waypoint x="36.0" y="107.0"></omgdi:waypoint>
@@ -677,12 +386,11 @@ ${sNameOrgan},<br>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
         <omgdi:waypoint x="156.0" y="78.0"></omgdi:waypoint>
-        <omgdi:waypoint x="198.0" y="55.0"></omgdi:waypoint>
+        <omgdi:waypoint x="155.0" y="55.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
-        <omgdi:waypoint x="117.0" y="134.0"></omgdi:waypoint>
-        <omgdi:waypoint x="117.0" y="229.0"></omgdi:waypoint>
-        <omgdi:waypoint x="232.0" y="230.0"></omgdi:waypoint>
+        <omgdi:waypoint x="170.0" y="106.0"></omgdi:waypoint>
+        <omgdi:waypoint x="200.0" y="104.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
         <omgdi:waypoint x="305.0" y="104.0"></omgdi:waypoint>
@@ -702,7 +410,7 @@ ${sNameOrgan},<br>
         <omgdi:waypoint x="571.0" y="317.0"></omgdi:waypoint>
         <omgdi:waypoint x="828.0" y="317.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="42.0" width="100.0" x="709.0" y="318.0"></omgdc:Bounds>
+          <omgdc:Bounds height="42.0" width="100.0" x="596.0" y="269.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow33" id="BPMNEdge_flow33">
@@ -712,36 +420,14 @@ ${sNameOrgan},<br>
           <omgdc:Bounds height="42.0" width="100.0" x="590.0" y="175.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow32" id="BPMNEdge_flow32">
-        <omgdi:waypoint x="839.0" y="251.0"></omgdi:waypoint>
-        <omgdi:waypoint x="881.0" y="250.0"></omgdi:waypoint>
-        <omgdi:waypoint x="882.0" y="127.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow37" id="BPMNEdge_flow37">
-        <omgdi:waypoint x="421.0" y="104.0"></omgdi:waypoint>
-        <omgdi:waypoint x="461.0" y="136.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="23.0" x="422.0" y="124.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow50" id="BPMNEdge_flow50">
-        <omgdi:waypoint x="421.0" y="104.0"></omgdi:waypoint>
-        <omgdi:waypoint x="513.0" y="85.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="29.0" x="413.0" y="71.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow26" id="BPMNEdge_flow26">
-        <omgdi:waypoint x="566.0" y="136.0"></omgdi:waypoint>
-        <omgdi:waypoint x="592.0" y="104.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
         <omgdi:waypoint x="697.0" y="104.0"></omgdi:waypoint>
         <omgdi:waypoint x="734.0" y="104.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow38" id="BPMNEdge_flow38">
         <omgdi:waypoint x="687.0" y="68.0"></omgdi:waypoint>
-        <omgdi:waypoint x="722.0" y="49.0"></omgdi:waypoint>
+        <omgdi:waypoint x="686.0" y="50.0"></omgdi:waypoint>
+        <omgdi:waypoint x="785.0" y="50.0"></omgdi:waypoint>
         <omgdi:waypoint x="786.0" y="77.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow39" id="BPMNEdge_flow39">
@@ -783,53 +469,25 @@ ${sNameOrgan},<br>
         <omgdi:waypoint x="1122.0" y="201.0"></omgdi:waypoint>
         <omgdi:waypoint x="1122.0" y="175.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow44" id="BPMNEdge_flow44">
-        <omgdi:waypoint x="252.0" y="210.0"></omgdi:waypoint>
-        <omgdi:waypoint x="252.0" y="132.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow45" id="BPMNEdge_flow45">
-        <omgdi:waypoint x="252.0" y="250.0"></omgdi:waypoint>
-        <omgdi:waypoint x="252.0" y="360.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow46" id="BPMNEdge_flow46">
-        <omgdi:waypoint x="305.0" y="387.0"></omgdi:waypoint>
-        <omgdi:waypoint x="410.0" y="387.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow47" id="BPMNEdge_flow47">
-        <omgdi:waypoint x="515.0" y="387.0"></omgdi:waypoint>
-        <omgdi:waypoint x="602.0" y="387.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow48" id="BPMNEdge_flow48">
-        <omgdi:waypoint x="707.0" y="373.0"></omgdi:waypoint>
-        <omgdi:waypoint x="845.0" y="372.0"></omgdi:waypoint>
-        <omgdi:waypoint x="845.0" y="335.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow49" id="BPMNEdge_flow49">
         <omgdi:waypoint x="361.0" y="104.0"></omgdi:waypoint>
-        <omgdi:waypoint x="381.0" y="104.0"></omgdi:waypoint>
+        <omgdi:waypoint x="400.0" y="104.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow51" id="BPMNEdge_flow51">
-        <omgdi:waypoint x="566.0" y="57.0"></omgdi:waypoint>
-        <omgdi:waypoint x="644.0" y="77.0"></omgdi:waypoint>
+        <omgdi:waypoint x="505.0" y="104.0"></omgdi:waypoint>
+        <omgdi:waypoint x="592.0" y="104.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow52" id="BPMNEdge_flow52">
         <omgdi:waypoint x="691.0" y="217.0"></omgdi:waypoint>
-        <omgdi:waypoint x="734.0" y="184.0"></omgdi:waypoint>
+        <omgdi:waypoint x="734.0" y="217.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="691.0" y="184.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="29.0" x="691.0" y="184.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow53" id="BPMNEdge_flow53">
-        <omgdi:waypoint x="839.0" y="184.0"></omgdi:waypoint>
-        <omgdi:waypoint x="882.0" y="185.0"></omgdi:waypoint>
+        <omgdi:waypoint x="839.0" y="217.0"></omgdi:waypoint>
+        <omgdi:waypoint x="882.0" y="216.0"></omgdi:waypoint>
         <omgdi:waypoint x="882.0" y="127.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow54" id="BPMNEdge_flow54">
-        <omgdi:waypoint x="691.0" y="217.0"></omgdi:waypoint>
-        <omgdi:waypoint x="734.0" y="251.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="691.0" y="228.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

@@ -39,7 +39,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 38;6;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 39;109;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 40;478;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
-41;176;27;27;NULL;4;{"processDefinitionId":"dms_0176_Zagran_iGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
+41;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 42;9;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 43;474;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 44;475;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
@@ -870,7 +870,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 931;173;108;108;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 932;180;NULL;NULL;NULL;4;{"processDefinitionId":"zags_0180_marriageFast:1:1"};;false;969;false;;BankID,EDS,mpbds;0
 933;175;108;108;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-934;25;108;108;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+934;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 935;1431;108;108;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 936;290;NULL;NULL;NULL;4;{"processDefinitionId":"_test_newattach_NewFile:1:1"};;false;1;true;;BankID,EDS;0
 937;291;NULL;NULL;NULL;4;{"processDefinitionId":"_test_newattach_NewTable:1:1"};;false;1;true;;BankID,EDS;0
@@ -1557,7 +1557,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1618;173;2;2;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1619;175;2;2;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1620;1431;2;2;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-1621;173;465;465;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+1621;173;465;465;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1622;25;2;2;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1623;24;2;2;NULL;4;{"processDefinitionId":"rada_0024_dovidka_live_place_2_step_Dnepr:1:1"};;false;89;false;;BankID,EDS,mpbds;0
 1624;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
@@ -1569,13 +1569,13 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1630;173;37;37;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1631;175;37;37;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1632;1431;37;37;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-1633;175;465;465;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+1633;175;465;465;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1634;25;37;37;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1635;28;37;37;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1636;173;42;42;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1637;175;42;42;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1638;1431;42;42;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-1639;1431;465;465;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+1639;1431;465;465;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1640;25;42;42;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1641;28;42;42;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1642;25;465;465;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
@@ -1673,12 +1673,12 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1734;173;509;509;NULL;4;{"processDefinitionId":"dms_0173_changeFIONoID:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1735;178;509;509;NULL;4;{"processDefinitionId":"dms_0178_2545:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1736;24;509;509;NULL;4;{"processDefinitionId":"rada_0024_dovidka_live_place_2_step_Dnepr:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-1737;173;510;510;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-1738;175;510;510;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-1739;1431;510;510;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+1737;173;510;510;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+1738;175;510;510;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+1739;1431;510;510;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 1740;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-1741;25;510;510;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-1742;28;510;510;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+1741;25;510;510;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+1742;28;510;510;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 1743;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 1744;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 1745;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
@@ -4064,8 +4064,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4185;175;137;137;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4186;1431;137;137;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4187;25;137;137;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-4188;25;92;92;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-4189;25;506;506;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+4188;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+4189;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 4190;25;509;509;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4191;1383;561;561;NULL;4;{"processDefinitionId":"dnepr_soc_help_176:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4192;767;561;561;NULL;4;{"processDefinitionId":"dnepr_soc_help_150:1:1"};;false;14;false;;BankID,EDS,mpbds;0
@@ -4887,13 +4887,13 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5030;368;198;198;NULL;4;{"processDefinitionId":"dfs_0368_extSingleTax_kherson:1:1"};;false;285;true;;BankID,EDS,mpbds;0
 5031;376;198;198;NULL;4;{"processDefinitionId":"dfs_0376_RefNoDebt_kherson:1:1"};;false;285;true;;BankID,EDS,mpbds;0
 5032;655;198;198;NULL;4;{"processDefinitionId":"dfs_0655_spravkaDoxod_2018:1:1"};;false;285;true;;BankID,EDS,mpbds;0
-5033;176;241;241;NULL;4;{"processDefinitionId":"dms_0176_Zagran_iGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
-5034;177;241;241;NULL;4;{"processDefinitionId":"dms_0177_zagranChild_iGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
-5035;28;241;241;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5036;25;241;241;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5037;173;241;241;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;true;205;false;;BankID,EDS,mpbds;0
-5038;175;241;241;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5039;1431;241;241;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5033;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5034;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5035;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5036;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5037;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5038;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5039;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5040;2518;NULL;NULL;NULL;4;{"processDefinitionId":"DFS_2518_PodatNakl:1:1"};;false;285;true;;EDS;0
 5041;368;486;486;NULL;4;{"processDefinitionId":"dfs_0368_extSingleTax_kherson:1:1"};;false;285;false;;BankID,EDS,mpbds;0
 5042;376;486;486;NULL;4;{"processDefinitionId":"dfs_0376_RefNoDebt_kherson:1:1"};;false;285;false;;BankID,EDS,mpbds;0

@@ -22,7 +22,7 @@
       "asID_Field": {
         "sCondit1": "sID_Public_SubjectOrganJoin"
       },
-      "sCondition": "[sCondit1] != 'lviv_drohob'&&[sCondit1] != 'khers_oleshkiR'&&[sCondit1] != 'khers_kahovT'&&[sCondit1] != 'polt5332'&&[sCondit1] != 'khers_KochubOTG'&&[sCondit1] != 'tern_tern_R'&&[sCondit1] != 'don_vuhledar'"
+      "sCondition": "[sCondit1] != 'lviv_drohob'&&[sCondit1] != 'khers_oleshkiR'&&[sCondit1] != 'khers_kahovT'&&[sCondit1] != 'polt5332'&&[sCondit1] != 'khers_KochubOTG'&&[sCondit1] != 'tern_tern_R'&&[sCondit1] != 'don_vuhledar'&&[sCondit1] != 'volin_ManivetskaRDA'"
     },
     "ShowFieldsOnCondition_DMS": {
       "aField_ID": [

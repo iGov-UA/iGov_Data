@@ -27,7 +27,6 @@
         <activiti:formProperty id="sPaymentDMS" name="Реквізити для сплати; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sDocChild" name="Документи у регіоні; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="Запуск таймера напоминания; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
@@ -128,7 +127,6 @@ execution.setVariable('sEndDay', timerEnd)</script>
 <p>
 <b>Необхідні документи, які треба принести для оформлення паспорта громадянина України для виїзду за кордон для дитини:</b>
 <ul>
-										${sDocChild}
 <br>
 <li>свідоцтво про народження або паспорт громадянина України (для громадян, які досягли 14-річного віку);</li>
 
@@ -204,7 +202,6 @@ ${sNameOrgan},<br>
 									<p>
 										<b>Необхідні документи, які треба принести для оформлення паспорта громадянина України для виїзду за кордон для дитини:</b>
 										<ul>
-										${sDocChild}
 <br>
 <li>свідоцтво про народження або паспорт громадянина України (для громадян, які досягли 14-річного віку);</li>
 
@@ -452,7 +449,6 @@ execution.setVariable('sEndDay', timerEnd)</script>
 									<p>
 										<b>Необхідні документи, які треба принести для оформлення паспорта громадянина України для виїзду за кордон для дитини:</b>
 										<ul>
-										${sDocChild}
 <br>
 <li>свідоцтво про народження або паспорт громадянина України (для громадян, які досягли 14-річного віку);</li>
 

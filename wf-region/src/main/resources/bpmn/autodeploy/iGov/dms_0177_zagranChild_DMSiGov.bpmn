@@ -34,7 +34,6 @@
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/DMSiGov.json')}"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sDocChild" name="Документи у регіоні; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNotification_day1" name="sNotification_day1; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string" default=" "></activiti:formProperty>
@@ -138,7 +137,6 @@ execution.setVariable('sEndDay', timerEnd)</script>
 									<p>
 										<b>Необхідні документи, які треба принести для оформлення паспорта громадянина України для виїзду за кордон для дитини:</b>
 										<ul>
-										${sDocChild}
 <br>
 <li>свідоцтво про народження або паспорт громадянина України (для громадян, які досягли 14-річного віку);</li>
 

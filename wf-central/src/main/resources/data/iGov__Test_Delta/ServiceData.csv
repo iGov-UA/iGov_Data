@@ -77,9 +77,9 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 76;630;NULL;NULL;NULL;1;{};http://geoinf.kiev.ua/wp/interaktyvna-karta-rodovyshch-korysnykh-kopalyn.htm;FALSE;1;FALSE;За наступним посиланням Ви зможете переглянути інтерактивну карту із можливістю фільтрації на різні типи шарів та за різноманітними атрибутами. Веріфікація не потрібна;BankID,EDS,mpbds;0
 77;631;NULL;NULL;NULL;1;{};http://geoinf.kiev.ua/katalog-fondu/;FALSE;1;FALSE;Пошук за каталогом геологічних досліджень у каталозі фонду (більше 60.000 матеріалів) за різноманітними атрибутами. Веріфікація не потрібна;BankID,EDS,mpbds;0
 78;632;NULL;NULL;NULL;1;{};http://geoinf.kiev.ua/zayavy-na-otrymannya-spedozvoliv-na-korystuvannya-nadramy/;FALSE;1;FALSE;Перевірка статусу заяви на отримання спедозволів на користування надрами за різноманітними атрибутами. Веріфікація не потрібна;BankID,EDS,mpbds;0
-79;647;NULL;NULL;NULL;1;{};https://e-dabi.gov.ua/;true;1;FALSE;Для реєстрації Вам знадобиться електронно-цифровий підпис;BankID,EDS,mpbds;0
+79;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 80;80;NULL;NULL;NULL;1;{};https://usr.minjust.gov.ua/paidextract;FALSE;1;FALSE;Для запиту Вам не знадобляться електронно-цифровий підпис або BankID. Послуга платна згідно тарифам, вказаним на сайті Міністерства Юстиції;BankID,EDS,mpbds;0
-81;499;NULL;NULL;NULL;1;{};https://e-dabi.gov.ua/;true;1;FALSE;Для реєстрації Вам знадобиться електронно-цифровий підпис;BankID,EDS,mpbds;0
+81;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 82;55;NULL;NULL;NULL;1;{};https://e-dabi.gov.ua/;true;1;FALSE;Для реєстрації Вам знадобиться електронно-цифровий підпис;BankID,EDS,mpbds;0
 83;173;149;149;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 84;175;149;149;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
@@ -274,7 +274,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 334;1497;50009;NULL;9;4;{"processDefinitionId":"dnepr_cnap_686:1:1"};;false;1;false;;BankID,EDS,mpbds;0
 335;654;469;469;NULL;4;{"processDefinitionId":"subsidiesUkraine_ECP:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 336;73;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap_45:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-337;39;50005;NULL;5;4;{"processDefinitionId":"kyiv_mda_1194:1:1"};;false;1;true;;BankID,EDS,mpbds;0
+337;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 338;27;108;108;NULL;4;{"processDefinitionId":"uzhgorod_cnap_112:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 339;1507;50005;NULL;5;4;{"processDefinitionId":"kiev_mda_832budad:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 340;115;50001;NULL;1;4;{"processDefinitionId":"dnepr_cnap-57:1:1"};;true;305;true;;BankID,EDS,mpbds;0
@@ -1137,7 +1137,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1198;66;50001;NULL;1;4;{"processDefinitionId":"dnepr_cnap_630:1:1"};;false;628;false;;BankID,EDS,mpbds;0
 1199;456;37;37;NULL;4;{"processDefinitionId":"nikopol_cnap_268_dovidka:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1200;67;50001;NULL;1;4;{"processDefinitionId":"dnepr_cnap_631:1:1"};;false;628;false;;BankID,EDS,mpbds;0
-1201;241;50005;NULL;5;4;{"processDefinitionId":"kiev_mda_1194:1:1"};;false;1;true;;BankID,EDS,mpbds;0
+1201;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 1202;455;524;524;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1203;1443;149;149;NULL;4;{"processDefinitionId":"nikopol_cnap_273:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1204;1443;148;148;NULL;4;{"processDefinitionId":"nikopol_cnap_273:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -2969,7 +2969,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 3030;227;50002;NULL;2;4;{"processDefinitionId":"common_mreo_20:1:1"};;false;12;false;;BankID,EDS,mpbds;0
 3031;237;50002;NULL;2;4;{"processDefinitionId":"common_mreo_21:1:1"};;false;12;false;;BankID,EDS,mpbds;0
 3032;238;50002;NULL;2;4;{"processDefinitionId":"mvs_238_TempReTicket:1:1"};;false;12;false;;BankID,EDS,mpbds;0
-3033;241;50002;NULL;2;4;{"processDefinitionId":"common_mreo_23:1:1"};;false;12;true;;BankID,EDS,mpbds;0
+3033;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 3034;242;50002;NULL;2;4;{"processDefinitionId":"common_mreo_24:1:1"};;false;12;false;;BankID,EDS,mpbds;0
 3035;790;163;163;NULL;4;{"processDefinitionId":"ZemRada_790_ZemOrPonov:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 3036;1419;163;163;NULL;4;{"processDefinitionId":"dnepr_mvk_501:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -4857,19 +4857,19 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5000;2500;NULL;NULL;NULL;4;{"processDefinitionId":"_test_print_table:1:1"};;false;1;true;;BankID;0
 5001;2501;NULL;NULL;NULL;4;{"processDefinitionId":"_test_choose_employee:1:1"};;false;1;true;;BankID;0
 5002;2502;NULL;NULL;NULL;4;{"processDefinitionId":"_test_skuhtin:1:1"};;false;1;true;;BankID;0
-5003;499;6;6;NULL;4;{"processDefinitionId":"dabi_build_notification:1:1"};;false;1;true;;BankID,EDS;0
-5004;647;6;6;NULL;4;{"processDefinitionId":"kmda_works_notification:1:1"};;false;1;true;;BankID,EDS;0
+5003;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5004;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5005;55;6;6;NULL;4;{"processDefinitionId":"kyiv_mda_929:1:1"};;false;1;true;;BankID,EDS;0
 5006;53;6;6;NULL;4;{"processDefinitionId":"dabi_works_notif_change:1:1"};;false;1;true;;BankID,EDS;0
-5007;2507;6;6;NULL;4;{"processDefinitionId":"dabi_build_notification:1:1"};;false;1;true;;BankID,EDS;0
-5008;2504;6;6;NULL;4;{"processDefinitionId":"dabi_works_notif_change:1:1"};;false;1;true;;BankID,EDS;0
-5009;2503;6;6;NULL;4;{"processDefinitionId":"dabi_works_notification:1:1"};;false;1;true;;BankID,EDS;0
-5010;2505;6;6;NULL;4;{"processDefinitionId":"dabi_works_declaration:1:1"};;false;1;true;;BankID,EDS;0
-5011;2508;6;6;NULL;4;{"processDefinitionId":"dabi_build_notif_change:1:1"};;false;1;true;;BankID,EDS;0
-5012;2506;6;6;NULL;4;{"processDefinitionId":"dabi_works_declaration_dupl:1:1"};;false;1;true;;BankID,EDS;0
-5013;2510;6;6;NULL;4;{"processDefinitionId":"dabi_build_declaration_dupl:1:1"};;false;1;true;;BankID,EDS;0
-5014;2511;6;6;NULL;4;{"processDefinitionId":"dabi_build_permit_dupl:1:1"};;false;1;true;;BankID,EDS;0
-5015;2512;6;6;NULL;4;{"processDefinitionId":"dabi_ready_declaration:1:1"};;false;1;true;;BankID,EDS;0
+5007;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5008;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5009;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5010;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5011;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5012;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5013;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5014;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5015;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5016;2513;NULL;NULL;NULL;4;{"processDefinitionId":"_test_table_req:1:1"};;false;1;true;;BankID;0
 5017;2514;6;6;NULL;4;{"processDefinitionId":"dabi_ready_certificate_dupl:1:1"};;false;1;true;;BankID,EDS;0
 5018;2515;6;NULL;NULL;4;{"processDefinitionId":"dabi_build_permit_change:1:1"};;false;1;true;;BankID,EDS;0

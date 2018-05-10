@@ -3,7 +3,7 @@
 
 		"ValuesFieldsOnCondition_6": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["427.69","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","350.00","70.00","420.00"],				
+		      "asID_Field_sValue": ["427.70","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","350.00","70.00","420.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -21,7 +21,7 @@
     	},
     			"ValuesFieldsOnCondition_8": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["896.12","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","733.34","146.66","880.00"],				
+		      "asID_Field_sValue": ["896.13","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","733.34","146.66","880.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -30,7 +30,7 @@
     	},
     			"ValuesFieldsOnCondition_9": {
 		     "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["1130.33","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","925.01","184.99","1110.00"],				
+		      "asID_Field_sValue": ["1130.35","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","925.01","184.99","1110.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -39,7 +39,7 @@
     	},
     			"ValuesFieldsOnCondition_10": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["1364.55","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","1116.68","223.32","1340.00"],				
+		      "asID_Field_sValue": ["1364.56","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","1116.68","223.32","1340.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"

@@ -3203,7 +3203,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3533;555;Архів ХДАУ (Херсонський Державний Аграрний Університет);Архів ХДАУ (Херсонський Державний Аграрний Університет);HDAU_arhiv;HDAU_arhiv; ; ;NULL;NULL;6500000000
 3534;309;Дрогобицька міська рада;Дрогобицька міська рада;lviv_drohobDMG;lviv_drohobDMG;;;NULL;NULL;4610600000
 3535;225;Бул. Центральний, буд.27 (Вознесенівський район);Вознесеновский  район;zp_zpT_vznesensk;zp_zpT_vznesensk; ; ;NULL;NULL;2310100000
-3536;225;Вул. Кияшка, буд. 22 (Дніпровськи та Хортицький райони);Днепровский и Хортицкий  районы;zp_zpT_Dnepr_Hort;zp_zpT_Dnepr_Hort; ; ;NULL;NULL;2310100000
+3536;225;Вул. Кияшка, буд. 22 (Дніпровський та Хортицький райони);Днепровский и Хортицкий  районы;zp_zpT_Dnepr_Hort;zp_zpT_Dnepr_Hort; ; ;NULL;NULL;2310100000
 3537;225;Вул. Лізи Чайкіної, буд.56 (Заводський район);Завoдский район;zp_zpT_Zavodskiy;zp_zpT_Zavodskiy; ; ;NULL;NULL;2310100000
 3538;225;Вул. Чумаченка, буд.32 (Комунарський район);Коммунарский район;zp_zpT_Communar;zp_zpT_Communar; ; ;NULL;NULL;2310100000
 3539;225;ЦНАП Маневицької РДА;ЦНАП Маневицької РДА;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000

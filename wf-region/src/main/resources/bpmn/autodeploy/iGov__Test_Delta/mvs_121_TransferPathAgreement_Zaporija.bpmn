@@ -717,7 +717,7 @@ execution.setVariable('rName', per4)
     </sequenceFlow>
     <sequenceFlow id="flow65" sourceRef="servicetask4" targetRef="endevent3"></sequenceFlow>
     <sequenceFlow id="flow66" sourceRef="servicetask10" targetRef="endevent3"></sequenceFlow>
-    <serviceTask id="servicetask11" name="Повідомлення співробітника МВД">
+    <serviceTask id="servicetask11" name="Повідомлення співробітника МВД" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -740,7 +740,7 @@ execution.setVariable('rName', per4)
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow67" sourceRef="servicetask11" targetRef="usertask3"></sequenceFlow>
-    <serviceTask id="servicetask12" name="повідомлення співробітника ЦНАП про наявність відповіді від МВД">
+    <serviceTask id="servicetask12" name="повідомлення співробітника ЦНАП про наявність відповіді від МВД" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -762,7 +762,7 @@ execution.setVariable('rName', per4)
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <serviceTask id="servicetask13" name="Повідомлення громадянина  про успішну реєстрацію звернення + СМС">
+    <serviceTask id="servicetask13" name="Повідомлення громадянина  про успішну реєстрацію звернення + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>

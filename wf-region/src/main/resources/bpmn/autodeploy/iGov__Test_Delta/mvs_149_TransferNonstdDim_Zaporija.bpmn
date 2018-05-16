@@ -639,7 +639,7 @@ ${sListDocumentsLetter}
     <endEvent id="endevent3" name="End"></endEvent>
     <sequenceFlow id="flow64" sourceRef="servicetask4" targetRef="endevent3"></sequenceFlow>
     <sequenceFlow id="flow65" sourceRef="servicetask10" targetRef="endevent3"></sequenceFlow>
-    <serviceTask id="servicetask11" name="Повідомлення співробітника МВД">
+    <serviceTask id="servicetask11" name="Повідомлення співробітника МВД" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -655,7 +655,7 @@ ${sListDocumentsLetter}
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <serviceTask id="servicetask12" name="повідомлення співробітника ЦНАП про наявність відповіді від МВД">
+    <serviceTask id="servicetask12" name="повідомлення співробітника ЦНАП про наявність відповіді від МВД" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -671,7 +671,7 @@ ${sListDocumentsLetter}
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <serviceTask id="servicetask13" name="Повідомлення громадянина  про успішну реєстрацію звернення + СМС">
+    <serviceTask id="servicetask13" name="Повідомлення громадянина  про успішну реєстрацію звернення + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
@@ -773,7 +773,7 @@ ${sNameOrganTransfer}<br />
         <omgdi:waypoint x="528.0" y="359.0"></omgdi:waypoint>
         <omgdi:waypoint x="528.0" y="384.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="69.0" x="530.0" y="358.0"></omgdc:Bounds>
+          <omgdc:Bounds height="48.0" width="69.0" x="530.0" y="358.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow22" id="BPMNEdge_flow22">
@@ -784,7 +784,7 @@ ${sNameOrganTransfer}<br />
         <omgdi:waypoint x="508.0" y="339.0"></omgdi:waypoint>
         <omgdi:waypoint x="437.0" y="339.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="57.0" x="453.0" y="322.0"></omgdc:Bounds>
+          <omgdc:Bounds height="48.0" width="57.0" x="453.0" y="322.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow45" id="BPMNEdge_flow45">

@@ -3212,3 +3212,5 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3542;212;Володимир-Волинська міська рада;Володимир-Волинська міська рада;volin_VolVolun;volin_VolVolun; ; ;NULL;NULL;710200000
 3543;205;м. Маріуполь (спільний СЦ МВС та ЦНАП), Запорізьке шосе 2, ТРЦ Порт-Сіті;г. Мариуполь (МВС + ЦПАУ), Запорізьке шосе 2, ТРЦ Порт-Сіті;don_mariupolMVC;don_mariupolMVC; ; ;NULL;NULL;1412300000
 3544;225;Проспект Моторобудівників, 34 (Олександрівський район);Олександрівський район;zp_zpT_Motobud;zp_zpT_Motobud; ; ;NULL;NULL;2310100000
+3545;555;Дрогобицький коледж нафти і газу;Дрогобицький коледж нафти і газу;Drog_NaftaGaz;Drog_NaftaGaz; ; ;NULL;NULL;4610600000
+

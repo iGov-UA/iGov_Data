@@ -664,7 +664,7 @@ execution.setVariable('rName', per4)
     <sequenceFlow id="flow61" sourceRef="scripttask2" targetRef="scripttask1"></sequenceFlow>
     <sequenceFlow id="flow62" sourceRef="usertask3" targetRef="servicetask12"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
-    <serviceTask id="servicetask10" name="Повідомлення громадянина про негативне рішення" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}hAttachments}">
+    <serviceTask id="servicetask10" name="Повідомлення громадянина про негативне рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>

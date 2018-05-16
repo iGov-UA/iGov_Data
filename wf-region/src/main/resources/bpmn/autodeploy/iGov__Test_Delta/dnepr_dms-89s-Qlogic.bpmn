@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="dnepr_dms-89s-Qlogic" name="Зняття з реєстрації місця проживання особи" isExecutable="true">
-    <documentation>Смоктій К.В. Qlogic Последние правки: 16.01.2018</documentation>
+    <documentation>Смоктій К.В. Qlogic Последние правки: 16.05.2018</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="warning1" name="Зверніть увагу" type="label" default="&lt;b&gt; Послуга надається лише для однієї особи, що подає звернення! &lt;/b&gt;"></activiti:formProperty>
@@ -12,6 +12,9 @@
           <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
           <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
           <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де Ви плануєте знятися з реєстрації місця проживання" type="enum">
+          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -47,6 +50,7 @@
         <activiti:formProperty id="sServiceCenterId_visitDay_Qlogic" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceId_visitDay_Qlogic" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="1"></activiti:formProperty>
         <activiti:formProperty id="visitDay_Qlogic" name="Оберіть зручний день та час з доступних місць у черзі, коли Вам буде зручно з'явитись для отримання послуги" type="queueData" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sOrganType" name="Тип органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -71,6 +75,7 @@
         <activiti:formProperty id="markers1" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/registration.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers11" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/registration_1.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers12" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/registration_1_Qlogic.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markers13" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/registration_1_Qlogic_89s.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
@@ -207,6 +212,9 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
           <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
           <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де Ви плануєте знятися з реєстрації місця проживання" type="enum" writable="false">
+          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації; ;writable=false" type="textArea"></activiti:formProperty>
@@ -468,6 +476,9 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
           <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
           <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де Ви плануєте знятися з реєстрації місця проживання" type="enum" writable="false">
+          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="asMilitStatus" name="Чи перебуває громадянин на військовому обліку?" type="enum" writable="false">
           <activiti:value id="sYesM" name="Так"></activiti:value>

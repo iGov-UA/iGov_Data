@@ -1,0 +1,12 @@
+{
+	"motion":
+	{
+		"ValuesFieldsOnCondition_30":
+		{
+			"aField_ID":	["sNameParam_Qlogic"],
+			"asID_Field_sValue": ["[bankIdlastName] [bankIdfirstName] [bankIdmiddleName] (iGov, померлий [lastName_UA2] [firstName_UA2] [middleName_UA2])"],
+			"asID_Field":	{"sReason": "sID_Public_SubjectOrganJoin"},
+			"sCondition": 	"[sReason] == [sReason]"
+		}
+	}
+}

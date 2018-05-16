@@ -26,7 +26,7 @@
         <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
           <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
         </activiti:formProperty>
-		<activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
+        <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
@@ -37,6 +37,7 @@
         <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPaymentDMS" name="Реквізити для сплати; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDistrictMariupol" name="Юзер-група щодо опрацювання заявки; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markers1" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/passport.json')}"></activiti:formProperty>
@@ -111,7 +112,7 @@ execution.setVariable('sDistrictMariupol', GrpUserNameResult)
     <sequenceFlow id="flow40" sourceRef="scripttask2" targetRef="servicetask3"></sequenceFlow>
     <serviceTask id="servicetask3" name="біометричний не терміновий" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
       <extensionElements>
-              <activiti:field name="sPhone_SMS">
+        <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
@@ -242,8 +243,8 @@ execution.setVariable('sNotification_day', timer)
     </boundaryEvent>
     <sequenceFlow id="flow44" sourceRef="scripttask3" targetRef="endevent2"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0173_IDChangeFIO_DMS">
-    <bpmndi:BPMNPlane bpmnElement="dms_0173_IDChangeFIO_DMS" id="BPMNPlane_dms_0173_IDChangeFIO_DMS">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0173_IDChangeFIO_Qlogic">
+    <bpmndi:BPMNPlane bpmnElement="dms_0173_IDChangeFIO_Qlogic" id="BPMNPlane_dms_0173_IDChangeFIO_Qlogic">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="13.0" y="95.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>

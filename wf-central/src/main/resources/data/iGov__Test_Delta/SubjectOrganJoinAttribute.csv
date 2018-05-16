@@ -9588,7 +9588,7 @@ nID_SubjectOrganJoin;sName;sValue
 2858;sNameOrgan;Державна міграційна служба у м. Львів
 
 2859;nID_ServiceCustomPrivate_visitDay;622
-2859;sAddress;м.Львів, вул. Я. Мудрого, 12А
+2859;sAddress;м. Львів, вул. Городоцька, 126
 2859;sNameOrgan;Державна міграційна служба у м. Львів
 
 2860;nID_ServiceCustomPrivate_visitDay;623
@@ -10681,7 +10681,7 @@ nID_SubjectOrganJoin;sName;sValue
 3047;sNameOrgan;Державна міграційна служба у м. Хмельницькому
 
 3048;nID_ServiceCustomPrivate_visitDay;653
-3048;sAddress;м. Харків, просп. Правди, 5
+3048;sAddress;м. Харків, просп. Незалежності, 5
 3048;sNameOrgan;Державна міграційна служба у м. Харкові
 
 3049;nID_ServiceCustomPrivate_visitDay;652
@@ -11928,7 +11928,7 @@ nID_SubjectOrganJoin;sName;sValue
 3214;sNameOrgan;Шевченківський РВ ДМС у м. Львові
 
 3215;nID_ServiceCustomPrivate_visitDay;617
-3215;sAddress;м. Львів, вул.Руданського, 3
+3215;sAddress;м. Львів, вул. Січових Стрільців, 11
 3215;sNameOrgan;Обласний відділ ДМС у Львівській області
 
 3216;nID_ServiceCustomPrivate_visitDay;691
@@ -12199,7 +12199,7 @@ nID_SubjectOrganJoin;sName;sValue
 3258;sAddress;<b>Адреса:</b>м. Луцьк, вул. Прогресу, 7
 3258;sPhoneOrgan;<b>Телефон(и):</b> (0332) 77-07-17, (0332) 77-07-19
 3258;sWorkTime;<b>Графік роботи:</b> дані тимчасово відсутні
-58;sMailClerk;lutsk1.volyn@legalaid.lt.ua
+3258;sMailClerk;lutsk1.volyn@legalaid.lt.ua
 
 3259;sNameOrgan;Краматорський місцевий центр з надання БВПД
 3259;sShapka;Директору місцевого центру з надання безоплатної вторинної правової допомоги

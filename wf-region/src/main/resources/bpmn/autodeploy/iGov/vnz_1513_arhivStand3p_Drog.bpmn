@@ -173,6 +173,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="Komment_vidmova" name="Вкажіть детальну причину відмови (буде направлено заявнику в електронному листі)" type="textArea"></activiti:formProperty>
         
         <activiti:formProperty id="sBody" name="[pattern/print/vnz/vnz_1513_arhivStand3p_Drog.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="Назва ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>

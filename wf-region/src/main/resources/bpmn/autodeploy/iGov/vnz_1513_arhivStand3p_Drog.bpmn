@@ -15,6 +15,7 @@
         </activiti:formProperty>
         <activiti:formProperty id="tNakaz" name="З якого саме наказу видати витяг?; (вкажіть про що саме наказ, якщо можливо зазначте приблизну дату)" type="textArea" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="markerFlag" name="marker" type="markers" default="${markerService.loadFromFile('archiv/VNZarhiv_1513_Flag.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerNavchPrachja" name="marker" type="markers" default="${markerService.loadFromFile('archiv/VNZarhiv_1513_NavPrach.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -52,6 +53,7 @@
         <activiti:formProperty id="sPosada" name="Посада;(відповідно до трудової)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPidrozdil" name="Структурний підрозділ;(відповідно до трудової)" type="string" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="sFlag" name="Назва ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
@@ -120,8 +122,8 @@ ${sNameOrgan}<br />
     <userTask id="usertask1" name="(1 етап) Архів Перевірка " activiti:candidateGroups="vnz_arhiv_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="asVNZposlug" name="Що хоче отримати заявник" type="enum" writable="false">
-          <activiti:value id="sEnamPos1" name="Архівна довідка вищого навчального закладу з годинами та оцінками"></activiti:value>
-          <activiti:value id="sEnamPos2" name="Архівна довідка про підтвердження роботи або навчання у вищому навчальному закладі"></activiti:value>
+          <activiti:value id="sEnamPos1" name="Архівну (академічну) довідку ВНЗ з годинами та оцінками"></activiti:value>
+          <activiti:value id="sEnamPos2" name="Архівну довідку про підтвердження роботи або навчання у вищому навчальному закладі"></activiti:value>
           <activiti:value id="sEnamPos3" name="Витяг з наказу вищого навчального закладу що стосується навчання або праці"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="asDokTip" name="Про що видати документ" type="enum" writable="false">
@@ -161,6 +163,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="Date_WorkEnd" name="Дата звільнення з роботи" type="date"></activiti:formProperty>
         <activiti:formProperty id="sPosada" name="Посада; ;writable=false" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sPidrozdil" name="Структурний підрозділ; ;writable=false" type="string" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="asObrobka1" name="Результат обробки звернення" type="enum" required="true">
           <activiti:value id="sEnamZadovolnutu" name="Матеріали наявні, звернення можна задовольнити, запросити заявника для отримання документу"></activiti:value>
           <activiti:value id="sEnamVidmova" name="Відмова в задоволенні звернення"></activiti:value>
@@ -168,6 +171,9 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="markerObrobka1" name="markerObrobka1" type="markers" default="${markerService.loadFromFile('AK/Dash_Obrobka_FileZadov_KomVidm.json')}"></activiti:formProperty>
         <activiti:formProperty id="file_Vidpovid" name="Електронний документ ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="Komment_vidmova" name="Вкажіть детальну причину відмови (буде направлено заявнику в електронному листі)" type="textArea"></activiti:formProperty>
+        
+        <activiti:formProperty id="sBody" name="[pattern/print/vnz/vnz_1513_arhivStand3p_Drog.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>

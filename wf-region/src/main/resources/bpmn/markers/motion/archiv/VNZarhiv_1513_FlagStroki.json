@@ -7,7 +7,7 @@
       "asID_Field": {
         "sCond": "sFlag"
       },
-      "sCondition": "[sCond]!='12Akreditation'&& [sCond]!=' '"
+      "sCondition": "[sCond]=='34Akreditation'"
     }
   }
 }

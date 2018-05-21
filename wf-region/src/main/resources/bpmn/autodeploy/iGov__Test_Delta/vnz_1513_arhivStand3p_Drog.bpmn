@@ -164,6 +164,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="Date_WorkEnd" name="Дата звільнення з роботи" type="date"></activiti:formProperty>
         <activiti:formProperty id="sPosada" name="Посада; ;writable=false" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sPidrozdil" name="Структурний підрозділ; ;writable=false" type="string" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="asObrobka1" name="Результат обробки звернення" type="enum" required="true">
           <activiti:value id="sEnamZadovolnutu" name="Матеріали наявні, звернення можна задовольнити, запросити заявника для отримання документу"></activiti:value>
           <activiti:value id="sEnamVidmova" name="Відмова в задоволенні звернення"></activiti:value>
@@ -171,6 +172,9 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="markerObrobka1" name="markerObrobka1" type="markers" default="${markerService.loadFromFile('AK/Dash_Obrobka_FileZadov_KomVidm.json')}"></activiti:formProperty>
         <activiti:formProperty id="file_Vidpovid" name="Електронний документ ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="Komment_vidmova" name="Вкажіть детальну причину відмови (буде направлено заявнику в електронному листі)" type="textArea"></activiti:formProperty>
+        
+        <activiti:formProperty id="sBody" name="[pattern/print/vnz/vnz_1513_arhivStand3p_Drog.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>

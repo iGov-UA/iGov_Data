@@ -38,7 +38,7 @@
       ],
       "asID_Field": {
         "sCond": "asVNZposlug",
-        "sCond2": "asDokTip"
+        "sCond2": "asDokTip",
         "sCond3": "sFlag"
       },
       "sCondition": "([sCond]=='sEnamPos1'||[sCond]=='Архівна довідка вищого навчального закладу з годинами та оцінками'||[sCond2]=='sEnamNavch'||[sCond2]=='Про навчання')&&[sCond3]=='34Akreditation'"

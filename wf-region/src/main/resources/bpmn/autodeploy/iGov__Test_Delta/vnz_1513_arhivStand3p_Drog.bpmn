@@ -15,6 +15,8 @@
         </activiti:formProperty>
         <activiti:formProperty id="tNakaz" name="З якого саме наказу видати витяг?; (вкажіть про що саме наказ, якщо можливо зазначте приблизну дату)" type="textArea" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="markerFlag" name="marker" type="markers" default="${markerService.loadFromFile('archiv/VNZarhiv_1513_Flag.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerFlagStroki" name="marker" type="markers" default="${markerService.loadFromFile('archiv/VNZarhiv_1513_FlagStroki.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerNavchPrachja" name="marker" type="markers" default="${markerService.loadFromFile('archiv/VNZarhiv_1513_NavPrach.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -52,6 +54,7 @@
         <activiti:formProperty id="sPosada" name="Посада;(відповідно до трудової)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPidrozdil" name="Структурний підрозділ;(відповідно до трудової)" type="string" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="sFlag" name="Назва ЦНАП; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>

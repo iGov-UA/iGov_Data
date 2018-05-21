@@ -1,0 +1,28 @@
+{
+  "motion": {
+    "ValuesFieldsOnCondition_Flag12": {
+      "aField_ID": [
+        "sFlag"
+      ],
+      "asID_Field_sValue": [
+        "12Akreditation"
+      ],
+      "asID_Field": {
+        "sCondit1": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sCondit1] == 'Drog_NaftaGaz'"
+    },
+    "ValuesFieldsOnCondition_Flag34": {
+      "aField_ID": [
+        "sFlag"
+      ],
+      "asID_Field_sValue": [
+        "34Akreditation"
+      ],
+      "asID_Field": {
+        "sCondit1": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sCondit1] != 'Drog_NaftaGaz'"
+    }
+  }
+}

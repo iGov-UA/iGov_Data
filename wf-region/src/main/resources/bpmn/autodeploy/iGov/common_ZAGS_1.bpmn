@@ -125,12 +125,10 @@
         <activiti:formProperty id="sPassport2" name="Документ, що посвідчує особу (паспорт або паспортний документ);назва, серія, номер, яким органом и коли виданий" type="string"></activiti:formProperty>
         <activiti:formProperty id="Scan_Passport2" name="Копія документу, що посвідчує особу (паспорт або паспортний документ); декілька сторінок об'єднайте у один .pdf файл або .zip архів;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="sNewLastName2" name="Після реєстрації шлюбу бажає мати прізвище" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="asMedicalInspectione" name="Бажаєте отримати направлення на медичне обстеження" type="enum" required="true">
           <activiti:value id="sEnumYes" name="Так"></activiti:value>
           <activiti:value id="sEnumNo" name="Ні"></activiti:value>
         </activiti:formProperty>
-        
         <activiti:formProperty id="bReferent" name="Referent ; ;bVisible=false" type="string" default="false"></activiti:formProperty>
         <activiti:formProperty id="sCountPayment" name="лічільник спрацювання таймера ; ;bVisible=false" type="string" default="0"></activiti:formProperty>
         <activiti:formProperty id="ScancopyDoc" name="Копія документу, що підтверджує оплату мита або наявність пільг; ;bNew=true" type="file"></activiti:formProperty>
@@ -478,6 +476,10 @@
 Вартість скороченого обряду (15 хвилин): <b> 219 грн. </b><br>
 <br>
 Телефон для довідок: ${sPhoneOrgan} <br> 
+<p>
+У разі необхідності, Ви маєте можливість самостійно скасувати заявку, натиснувши кнопку нижче:<br>
+[cancelTask]
+</p>
 [pattern/mail/new_design/_common_content_end.html]                                
 [pattern/mail/new_design/_common_signature_start.html]
 ${sMail_Signature} <br>
@@ -572,6 +574,11 @@ ${sMail_Signature}<br>
                                     
 Ваше звернення успішно зареєстровано. <br>
 Результати обробки звернення будуть спрямовані на цей е-мейл протягом 3-х робочих днів.
+<br>
+<p>
+У разі необхідності, Ви маєте можливість самостійно скасувати заявку, натиснувши кнопку нижче:<br>
+[cancelTask]
+</p>
 [pattern/mail/new_design/_common_content_end.html]  
 [pattern/mail/new_design/_common_signature_start.html]
 ${sMail_Signature}<br>
@@ -1115,7 +1122,11 @@ execution.setVariable('sCountPayment', src)</script>
 Призначення платежу: <b>Надання платних послуг. Код відділу ${sCodeDRACS}, код послуги 4.1.1</b><br>
 Вартість повного обряду (45 хвилин): <b> 526 грн. </b><br>
 <br>
-Телефон для довідок: ${sPhoneOrgan} <br>                                 
+Телефон для довідок: ${sPhoneOrgan} <br>
+<p>
+У разі необхідності, Ви маєте можливість самостійно скасувати заявку, натиснувши кнопку нижче:<br>
+[cancelTask]
+</p>                               
 [pattern/mail/new_design/_common_content_end.html] 
 [pattern/mail/new_design/_common_signature_start.html]
 ${sMail_Signature} <br>

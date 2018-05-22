@@ -1,0 +1,26 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_FizFOP": {
+      "aField_ID": [
+        "sRegistrationAddress"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFiz'||[sCond]=='sEnamFOP'||[sCond]=='Громадянин України'||[sCond]=='Фізична особа підприємець'"
+    },
+    "ShowFieldsOnCondition_DABI_FOP": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sLocation_SubjectOrgan_01",
+        "sCEOName_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrK'||[sCond]=='Юридична особа (подає представник)'"
+    }
+  }
+}

@@ -4,7 +4,14 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Вам буде зручно отримати відповідь" type="select" default="0" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">
+          <activiti:value id="sEnamFiz" name="Громадянин України"></activiti:value>
+          <activiti:value id="sEnamFOP" name="Фізична особа підприємець"></activiti:value>
+          <activiti:value id="sEnamUO" name="Юридична особа (подає представник)"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
@@ -12,22 +19,40 @@
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон" type="string" default="+380" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта; для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sWorkPlace" name="Місце роботи" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sAdresaGutlo&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sAdresaGutlo" name="Адреса нерухомості;(Вкажіть повну адресу житла на яке потрібен дублікат)" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asKilkKimnat" name="Кількість кімнат" type="enum" required="true">
-          <activiti:value id="sEnum1" name="Однокімнатна"></activiti:value>
-          <activiti:value id="sEnum2" name="Двокімнатна"></activiti:value>
-          <activiti:value id="sEnum3" name="Трьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="lZutloPlosha" name="Площа житла" type="double" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;fPasport&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="fIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="fVlasnistCopy" name="Копія свідоцтва про власність;(за наявності фотографія або сканкопія);bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Введіть код ЄДРПОУ" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLocation_SubjectOrgan_01" name="Юридична адреса;(індекс, місто, вулиця, будинок, офіс)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sCEOName_SubjectOrgan_01" name="ПІБ директора" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
+        <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Start_FizFopUo.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_T" name="Інформація про транспорт та маршрут" type="markers" default="{&quot;attributes&quot;:{&quot;Line_T&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про транспорт та маршрут&quot;}}}"></activiti:formProperty>
+        
+        <activiti:formProperty id="tMarshrut" name="Маршрут;(вкажіть початковий та кінцевий пункти маршруту)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="lKilkRiysiv" name="Кількість рейсів" type="long" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dMarshrutBegin" name="Дата початку руху" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sTranspVlasnuk" name="Належність транспортного засобу;(вкажіть найменування організації власника транспорту, або зробіть відмітку що він належить вам)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sTransprModel" name="Марка, модель та реєстраційний номер транспортного засобу" type="string" required="true"></activiti:formProperty>
+        
+        
+        
+        <activiti:formProperty id="markersLine_V" name="Інформація про вантаж" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про вантаж&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sVantagName" name="Назва вантажу" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="dVantagLong" name="Довжина вантажу (м)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dVantagWight" name="Ширина вантажу (м)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dVantagHight" name="Висота вантажу (м)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dVantagLongTransp" name="Довжина на яку вантаж виступає за задній габарит автопоїзда (м)" type="double"></activiti:formProperty>
+        <activiti:formProperty id="dVantagMass" name="Вага вантажу (т)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dVantagTranspMass" name="Вага транспорту з вантажем (т)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dTranspMass" name="Вага транспорту без вантажу (т)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dVisNavantagenia" name="Найбільше навантаження на вісь (т)" type=double required="true"></activiti:formProperty>
+        <activiti:formProperty id="lWheels" name="Кількість шин на строєній осі;(якщо така є)" type="long" default=" "></activiti:formProperty>
+        
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта органу ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса установи ; ;bVisible=false" type="string"></activiti:formProperty>

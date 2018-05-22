@@ -50,7 +50,7 @@
         <activiti:formProperty id="dVantagMass" name="Вага вантажу (т)" type="double" required="true"></activiti:formProperty>
         <activiti:formProperty id="dVantagTranspMass" name="Вага транспорту з вантажем (т)" type="double" required="true"></activiti:formProperty>
         <activiti:formProperty id="dTranspMass" name="Вага транспорту без вантажу (т)" type="double" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dVisNavantagenia" name="Найбільше навантаження на вісь (т)" type=double required="true"></activiti:formProperty>
+        <activiti:formProperty id="dVisNavantagenia" name="Найбільше навантаження на вісь (т)" type="double" required="true"></activiti:formProperty>
         <activiti:formProperty id="lWheels" name="Кількість шин на строєній осі;(якщо така є)" type="long" default=" "></activiti:formProperty>
         
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>

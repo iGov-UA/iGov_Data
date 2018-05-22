@@ -30,8 +30,7 @@
         <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Start_FizFopUo.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_T" name="Інформація про транспорт та маршрут" type="markers" default="{&quot;attributes&quot;:{&quot;Line_T&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про транспорт та маршрут&quot;}}}"></activiti:formProperty>
-        
+        <activiti:formProperty id="markersLine_T" name="Інформація про транспорт та маршрут" type="markers" default="{&quot;attributes&quot;:{&quot;Line_T&quot;:{&quot;aElement_ID&quot;:[&quot;tMarshrut&quot;],&quot;sValue&quot;:&quot;Інформація про транспорт та маршрут&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="tMarshrut" name="Маршрут;(вкажіть початковий та кінцевий пункти маршруту)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="lKilkRiysiv" name="Кількість рейсів" type="long" required="true"></activiti:formProperty>
         <activiti:formProperty id="dMarshrutBegin" name="Дата початку руху" type="date" required="true"></activiti:formProperty>
@@ -40,7 +39,7 @@
         
         
         
-        <activiti:formProperty id="markersLine_V" name="Інформація про вантаж" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про вантаж&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_V" name="Інформація про вантаж" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;sVantagName&quot;],&quot;sValue&quot;:&quot;Інформація про вантаж&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sVantagName" name="Назва вантажу" type="string" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="dVantagLong" name="Довжина вантажу (м)" type="double" required="true"></activiti:formProperty>

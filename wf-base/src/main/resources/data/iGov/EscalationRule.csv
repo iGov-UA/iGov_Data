@@ -1021,3 +1021,12 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 1078;rada_659_CityHeadRequest_PoltVar;"usertask3_yellow";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:35}";"escalation/escalation_template.html";2
 1079;rada_659_CityHeadRequest_PoltVar;"usertask3_yellow";"(nDays >= nDaysLimit)&&(bAssigned==true)";"{nDaysLimit:38, asRecipientMail:['akylish88@gmail.com']}";"escalation/escalation_template.html";1
 1080;rada_659_CityHeadRequest_PoltVar;"usertask3_yellow";"(nDays >= nDaysLimit)&&(bAssigned==true)";"{nDaysLimit:38}";"escalation/escalation_template.html";2
+
+1081;vnz_1513_arhivStand3p_Drog;"usertask1";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']}";"escalation/escalation_template.html";1
+1082;vnz_1513_arhivStand3p_Drog;"usertask1";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:3}";"escalation/escalation_template.html";2
+1083;vnz_1513_arhivStand3p_Drog;"usertask1";"(nDays >= nDaysLimit)&&(bAssigned==true)";"{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']}";"escalation/escalation_template.html";1
+1084;vnz_1513_arhivStand3p_Drog;"usertask1";"(nDays >= nDaysLimit)&&(bAssigned==true)";"{nDaysLimit:5}";"escalation/escalation_template.html";2
+1085;vnz_1513_arhivStand3p_Drog;"usertask2";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:12, asRecipientMail:['akylish88@gmail.com']}";"escalation/escalation_template.html";1
+1086;vnz_1513_arhivStand3p_Drog;"usertask2";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:12}";"escalation/escalation_template.html";2
+1087;vnz_1513_arhivStand3p_Drog;"usertask2";"(nDays >= nDaysLimit)&&(bAssigned==true)";"{nDaysLimit:16, asRecipientMail:['akylish88@gmail.com']}";"escalation/escalation_template.html";1
+1088;vnz_1513_arhivStand3p_Drog;"usertask2";"(nDays >= nDaysLimit)&&(bAssigned==true)";"{nDaysLimit:16}";"escalation/escalation_template.html";2

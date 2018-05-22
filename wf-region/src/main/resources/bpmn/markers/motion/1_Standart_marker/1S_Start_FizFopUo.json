@@ -20,7 +20,7 @@
       "asID_Field": {
         "sCond": "asOsoba"
       },
-      "sCondition": "[sCond]=='sEnamUrK'||[sCond]=='Юридична особа (подає представник)'"
+      "sCondition": "[sCond]=='sEnamUO'||[sCond]=='Юридична особа (подає представник)'"
     }
   }
 }

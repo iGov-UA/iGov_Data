@@ -4,6 +4,7 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Вам буде зручно отримати відповідь" type="select" default="0" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -14,6 +15,7 @@
         <activiti:formProperty id="email" name="Електронна пошта; для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sWorkPlace" name="Місце роботи" type="string" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sAdresaGutlo&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sAdresaGutlo" name="Адреса нерухомості;(Вкажіть повну адресу житла на яке потрібен дублікат)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asKilkKimnat" name="Кількість кімнат" type="enum" required="true">
@@ -24,16 +26,21 @@
           <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lZutloPlosha" name="Площа житла" type="double" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;fPasport&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fVlasnistCopy" name="Свідоцтво про власність;(за наявності фотографія або сканкопія);bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта органу ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса установи ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="Часи роботи ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Контактний телефон ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="Шапка заяви ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sPosluga_name" name="назва послуги ; ;bVisible=false" type="string" default="Погодження на приєднання до мереж газопостачання"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_nameZV" name="назва послугиЗВ ; ;bVisible=false" type="string" default="погодження приєднання до мереж газопостачання"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask1" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -45,7 +52,7 @@
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове звернення. Видача дубліката свідоцтва про право власності на приватизоване житло]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
@@ -62,13 +69,13 @@
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Видача дубліката свідоцтва про право власності на приватизоване житло]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 <p>
-Ваш запит зареєстровано в ситемі.<br><br>
+Ваше звернення зареєстровано в ситемі.<br><br>
 Спеціалісти відповідального підрозділу нададуть відповідь найближчим часом.
 </p>
 [pattern/mail/new_design/_common_content_end.html]
@@ -143,14 +150,14 @@ ${sNameOrgan},<br>
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Видача дубліката свідоцтва про право власності на приватизоване житло]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 <p>
-Ваше звернення №[sID_Order] щодо видачі дубліката свідоцтва про право власності на приватизоване житло отримало реєстраційний номер ${sRNumber}.<br>
-Ви отримаєте відповідь протягом 15 днів.
+Ваше звернення №[sID_Order] щодо ${sPosluga_nameZV} отримало реєстраційний номер ${sRNumber}.<br>
+Ви отримаєте відповідь протягом 10 днів.
 </p>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -178,7 +185,7 @@ ${sNameOrgan},<br>
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Видача дубліката свідоцтва про право власності на приватизоване житло]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -234,7 +241,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="tComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="markerDash2" name="markerDash2" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash2_Com.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sBody_1" name="[pattern/print/Zaputu_i_Zvernenia/rada_0130_DubVlPruvZutl.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/rada_1075_PruednGazopostach.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="Шапка заяви ; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </userTask>
@@ -256,7 +263,7 @@ ${sNameOrgan},<br>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Видача дубліката свідоцтва про право власності на приватизоване житло]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -290,13 +297,13 @@ ${sNameOrgan},<br>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Видача дубліката свідоцтва про право власності на приватизоване житло]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-<p>Ваше звернення щодо видачі дубліката свідоцтва про право власності на приватизоване житло - опрацьовано. <br>
-Ви можете отримати дублікат особисто:<br>
+<p>Ваше звернення щодо ${sPosluga_nameZV} - опрацьовано. <br>
+Ви можете отримати відповідь особисто:<br>
 ${sAddress}<br>
 ${sWorkTime}<br><br>
 При собі треба мати документ, що посвідчує особу.

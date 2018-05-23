@@ -33,6 +33,7 @@
         <activiti:formProperty id="Date_NavchEnd" name="Дата закінчення ВНЗ;(якщо не пам'ятаєте, зазначте приблизну дату)" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sSpesialutu" name="Спеціальність;(вкажіть повну назву)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sFakultu" name="Факультет;(вкажіть повну назву)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sGroup" name="Група;(вкажіть повну назву)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asNavch_form" name="Форма навчання" type="enum" required="true">
           <activiti:value id="sEnamDenna" name="Денна"></activiti:value>
           <activiti:value id="sEnamZaoch" name="Заочна"></activiti:value>
@@ -145,6 +146,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="Date_NavchEnd" name="Дата закінчення ВНЗ" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sSpesialutu" name="Спеціальність; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sFakultu" name="Факультет; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sGroup" name="Група; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="asNavch_form" name="Форма навчання" type="enum" writable="false">
           <activiti:value id="sEnamDenna" name="Денна"></activiti:value>
           <activiti:value id="sEnamZaoch" name="Заочна"></activiti:value>

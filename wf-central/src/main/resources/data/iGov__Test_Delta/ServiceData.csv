@@ -5306,8 +5306,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5449;668;133;133;NULL;4;{"processDefinitionId":"chernihiv_mvk_479:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5450;627;133;133;NULL;4;{"processDefinitionId":"rada_0627_DovKvOblik:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5451;130;133;133;NULL;4;{"processDefinitionId":"rada_0130_DubVlPruvZutl:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5452;1075;133;133;NULL;4;{"processDefinitionId":"rada_1075_PruednGazopostach:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5453;1076;133;133;NULL;4;{"processDefinitionId":"rada_1076_VelukTonTrDorKomVl:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5452;1075;133;133;NULL;4;{"processDefinitionId":"rada_1075_PruednGazopostach:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5453;1076;133;133;NULL;4;{"processDefinitionId":"rada_1076_VelukTonTrDorKomVl:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5454;28;662;662;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5455;25;662;662;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5456;173;662;662;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0

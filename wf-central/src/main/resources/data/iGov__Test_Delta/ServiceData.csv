@@ -5299,10 +5299,10 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5442;1576;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5443;455;662;662;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5444;725;662;662;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5445;725;133;133;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5446;455;133;133;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5447;1476;133;133;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5448;1429;133;133;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5445;725;133;133;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5446;455;133;133;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5447;1476;133;133;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5448;1429;133;133;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5449;668;133;133;NULL;4;{"processDefinitionId":"chernihiv_mvk_479:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5450;627;133;133;NULL;4;{"processDefinitionId":"rada_0627_DovKvOblik:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5451;130;133;133;NULL;4;{"processDefinitionId":"rada_0130_DubVlPruvZutl:1:1"};;false;225;true;;BankID,EDS,mpbds;0
@@ -5316,3 +5316,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5459;176;50008;NULL;8;4;{"processDefinitionId":"dms_0176_Zagran_DMSiGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
 5460;177;50008;NULL;8;4;{"processDefinitionId":"dms_0177_zagranChild_DMSiGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
 5461;179;50008;NULL;8;4;{"processDefinitionId":"dms_0179_zagranLost_DMSiGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
+5462;1473;133;133;NULL;4;{"processDefinitionId":"DGK_1473_VusnZeml:1:1"};;false;225;false;;BankID,EDS,mpbds;0

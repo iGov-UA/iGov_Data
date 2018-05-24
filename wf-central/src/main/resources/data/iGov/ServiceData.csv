@@ -349,7 +349,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 409;1378;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 410;1379;28;28;NULL;4;{"processDefinitionId":"dndz_cnap_201:1:1"};;false;1;false;;BankID,EDS,mpbds;0
 411;343;1;1;NULL;4;{"processDefinitionId":"dnepr_mvd_199:1:1"};;false;1;false;;BankID,EDS,mpbds;0
-412;667;28;28;NULL;4;{"processDefinitionId":"rada_667_worktime_BaseVar:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+412;667;28;28;NULL;4;{"processDefinitionId":"rada_667_worktime_BaseVar:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 413;1381;28;28;NULL;4;{"processDefinitionId":"dndz_cnap_194:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 414;1382;1;1;NULL;4;{"processDefinitionId":"_test_enum_usertask:1:1"};;false;1;false;;BankID,email,EDS,mpbds;0
 415;23;50013;NULL;13;4;{"processDefinitionId":"zt_region_cnap_183:1:1"};;true;1;true;;BankID,EDS,mpbds;0
@@ -1200,7 +1200,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1261;790;506;506;NULL;4;{"processDefinitionId":"ZemRada_790_ZemOrPonov:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1262;106;130;130;NULL;4;{"processDefinitionId":"Synelnykove_cnap_509:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1263;1407;26;26;NULL;4;{"processDefinitionId":"sanepid_1407_HealthDanger:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1264;1122;1;1;NULL;4;{"processDefinitionId":"common_mvd_2:1:58"};;false;308;false;;BankID,EDS,mpbds;0
+1264;1122;1;1;NULL;4;{"processDefinitionId":"common_mvd_2:1:58"};;false;308;true;;BankID,EDS,mpbds;0
 1265;1476;481;481;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1266;1476;496;496;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1267;1476;497;497;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;true;;BankID,EDS,mpbds;0
@@ -1268,8 +1268,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1329;11;465;465;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 1330;11;485;485;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 1331;15;22;22;NULL;4;{"processDefinitionId":"dnepr_cnap_184_otrimannya:1:1"};;false;212;true;;BankID,EDS,mpbds;0
-1332;1485;1;1;NULL;4;{"processDefinitionId":"common_mvd_3:1:58"};;false;308;false;;BankID,EDS,mpbds;0
-1333;1486;1;1;NULL;4;{"processDefinitionId":"common_mvd_4:1:58"};;false;308;false;;BankID,EDS,mpbds;0
+1332;1485;1;1;NULL;4;{"processDefinitionId":"common_mvd_3:1:58"};;false;308;true;;BankID,EDS,mpbds;0
+1333;1486;1;1;NULL;4;{"processDefinitionId":"common_mvd_4:1:58"};;false;308;true;;BankID,EDS,mpbds;0
 1334;134;26;26;NULL;4;{"processDefinitionId":"dnepr_cnap_252:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1335;1429;495;495;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1336;1429;108;108;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;false;;BankID,EDS,mpbds;0

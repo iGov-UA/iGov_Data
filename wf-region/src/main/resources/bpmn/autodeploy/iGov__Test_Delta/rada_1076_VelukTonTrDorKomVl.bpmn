@@ -31,7 +31,7 @@
         <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Start_FizFopUo.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_T" name="Інформація про транспорт та маршрут" type="markers" default="{&quot;attributes&quot;:{&quot;Line_T&quot;:{&quot;aElement_ID&quot;:[&quot;tMarshrut&quot;],&quot;sValue&quot;:&quot;Інформація про транспорт та маршрут&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="tMarshrut" name="Маршрут;(вкажіть початковий та кінцевий пункти маршруту)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tMarshrut" name="Маршрут;(вкажіть початковий та кінцевий пункти маршруту, наприклад Київ - Бердянськ)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="lKilkRiysiv" name="Кількість рейсів" type="long" required="true"></activiti:formProperty>
         <activiti:formProperty id="dMarshrutBegin" name="Дата початку руху" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sTranspVlasnuk" name="Належність транспортного засобу;(вкажіть найменування організації власника транспорту, або зробіть відмітку що він належить вам)" type="string" required="true"></activiti:formProperty>
@@ -46,7 +46,7 @@
         <activiti:formProperty id="dVantagLongTransp" name="Довжина на яку вантаж виступає за задній габарит автопоїзда (м)" type="double"></activiti:formProperty>
         <activiti:formProperty id="dVantagMass" name="Вага вантажу (т)" type="double" required="true"></activiti:formProperty>
         <activiti:formProperty id="dVantagTranspMass" name="Вага транспорту з вантажем (т)" type="double" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dTranspMass" name="Вага транспорту без вантажу (т)" type="double" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dTranspMass" name="Вага транспорту без вантажу (т);(якщо повертається наднормативним)" type="double" default=" "></activiti:formProperty>
         <activiti:formProperty id="dVisNavantagenia" name="Найбільше навантаження на вісь (т)" type="double" required="true"></activiti:formProperty>
         <activiti:formProperty id="lWheels" name="Кількість шин на строєній осі;(якщо така є)" type="long" default=" "></activiti:formProperty>
         

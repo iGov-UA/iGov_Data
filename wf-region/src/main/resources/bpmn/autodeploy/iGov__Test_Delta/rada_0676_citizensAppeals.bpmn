@@ -1156,13 +1156,13 @@ execution.setVariable('sAnswerEmail', res)</script>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення до Дніпропетровської міської ради.]]></activiti:string>
+          <activiti:string><![CDATA[Звернення до Дніпровської міської ради.]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 
-<p>Ваше звернення від ${sDateAppeal} зареєстровано Дніпропетровською міською радою № ${sID_Order_GovPublic}.<br><br>
+<p>Ваше звернення від ${sDateAppeal} зареєстровано Дніпровською міською радою № ${sID_Order_GovPublic}.<br><br>
 Суть Вашого звернення:<br>
 <i>${sReason}</i><br><br>
 Відповідь Ви отримаєте в продовж 30-ти календарних днів.</p>
@@ -1174,7 +1174,7 @@ execution.setVariable('sAnswerEmail', res)</script>
 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-Дніпропетровська міська рада,<br>
+Дніпровська міська рада,<br>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -1208,7 +1208,7 @@ execution.setVariable('sAnswerEmail', res)</script>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення до Дніпропетровської міської ради.]]></activiti:string>
+          <activiti:string><![CDATA[Звернення до Дніпровської міської ради.]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -1227,7 +1227,7 @@ execution.setVariable('sAnswerEmail', res)</script>
 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-Дніпропетровська міська рада,<br>
+Дніпровська міська рада,<br>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

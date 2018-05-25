@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="rada_1075_PruednGazopostach" name="Погодження на приєднання до мереж газопостачання" isExecutable="true">
+  <process id="rada_1075_PruednGazopostach" name="Погодження на приєднання будинку до мереж газопостачання" isExecutable="true">
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Вам буде зручно отримати відповідь" type="select" default="0" required="true"></activiti:formProperty>
@@ -16,14 +16,16 @@
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sWorkPlace" name="Місце роботи" type="string" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sAdresaGutlo&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Інформація про будинок" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sAdresaGutlo&quot;],&quot;sValue&quot;:&quot;Інформація про будинок&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sAdresaGutlo" name="Адреса нерухомості;(Вкажіть повну адресу житла на яке потрібен дублікат)" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asKilkKimnat" name="Кількість кімнат" type="enum" required="true">
-          <activiti:value id="sEnum1" name="Однокімнатна"></activiti:value>
-          <activiti:value id="sEnum2" name="Двокімнатна"></activiti:value>
-          <activiti:value id="sEnum3" name="Трьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
+        <activiti:formProperty id="asKilkKimnat" name="Кількість житлових кімнат" type="enum" required="true">
+          <activiti:value id="sEnum1" name="Одна"></activiti:value>
+          <activiti:value id="sEnum2" name="Дві"></activiti:value>
+          <activiti:value id="sEnum3" name="Три"></activiti:value>
+          <activiti:value id="sEnum4" name="Чотири"></activiti:value>
+          <activiti:value id="sEnum5" name="П'ять"></activiti:value>
+          <activiti:value id="sEnum6" name="Шість"></activiti:value>
+          <activiti:value id="sEnum7" name="Сім"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lZutloPlosha" name="Площа житла" type="double" required="true"></activiti:formProperty>
         
@@ -109,11 +111,13 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sAdresaGutlo&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sAdresaGutlo" name="Адреса нерухомості; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="asKilkKimnat" name="Кількість кімнат" type="enum" writable="false">
-          <activiti:value id="sEnum1" name="Однокімнатна"></activiti:value>
-          <activiti:value id="sEnum2" name="Двокімнатна"></activiti:value>
-          <activiti:value id="sEnum3" name="Трьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
+          <activiti:value id="sEnum1" name="Одна"></activiti:value>
+          <activiti:value id="sEnum2" name="Дві"></activiti:value>
+          <activiti:value id="sEnum3" name="Три"></activiti:value>
+          <activiti:value id="sEnum4" name="Чотири"></activiti:value>
+          <activiti:value id="sEnum5" name="П'ять"></activiti:value>
+          <activiti:value id="sEnum6" name="Шість"></activiti:value>
+          <activiti:value id="sEnum7" name="Сім"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lZutloPlosha" name="Площа житла; ;writable=false" type="double"></activiti:formProperty>
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -223,11 +227,13 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sAdresaGutlo&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sAdresaGutlo" name="Адреса нерухомості; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="asKilkKimnat" name="Кількість кімнат" type="enum" writable="false">
-          <activiti:value id="sEnum1" name="Однокімнатна"></activiti:value>
-          <activiti:value id="sEnum2" name="Двокімнатна"></activiti:value>
-          <activiti:value id="sEnum3" name="Трьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum4" name="Чотирьохкімнатна"></activiti:value>
-          <activiti:value id="sEnum5" name="Пятикімнатна"></activiti:value>
+          <activiti:value id="sEnum1" name="Одна"></activiti:value>
+          <activiti:value id="sEnum2" name="Дві"></activiti:value>
+          <activiti:value id="sEnum3" name="Три"></activiti:value>
+          <activiti:value id="sEnum4" name="Чотири"></activiti:value>
+          <activiti:value id="sEnum5" name="П'ять"></activiti:value>
+          <activiti:value id="sEnum6" name="Шість"></activiti:value>
+          <activiti:value id="sEnum7" name="Сім"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lZutloPlosha" name="Площа житла; ;writable=false" type="double"></activiti:formProperty>
         <activiti:formProperty id="fPasport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>

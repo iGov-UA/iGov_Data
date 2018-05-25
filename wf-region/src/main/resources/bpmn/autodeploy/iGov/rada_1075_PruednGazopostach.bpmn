@@ -133,10 +133,10 @@ ${sNameOrgan},<br>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow6" name="Відмова" sourceRef="exclusivegateway1" targetRef="servicetask4">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sEnumDoc_bad'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_bad'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow5" name="Перевірка ОК" sourceRef="exclusivegateway1" targetRef="servicetask3">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sEnumDoc_ok'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_ok'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow3" sourceRef="servicetask2" targetRef="usertask1"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
@@ -246,10 +246,10 @@ ${sNameOrgan},<br>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow9" name="Відмова в послузі" sourceRef="exclusivegateway2" targetRef="servicetask5">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide=='reject'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_bad'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow10" name="Лист Відповідь" sourceRef="exclusivegateway2" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide=='reject'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_ok'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow7" sourceRef="servicetask3" targetRef="usertask2"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>

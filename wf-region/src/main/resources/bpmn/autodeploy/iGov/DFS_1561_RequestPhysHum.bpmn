@@ -32,7 +32,7 @@
           <activiti:value id="2015" name="2015"></activiti:value>
           <activiti:value id="2016" name="2016"></activiti:value>
           <activiti:value id="2017" name="2017"></activiti:value>
-          <activiti:value id="2017" name="2018"></activiti:value>
+          <activiti:value id="2018" name="2018"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="asEndPeriod" name="Квартал;кінець періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R02G01" type="enum" required="true">
           <activiti:value id="1" name="1"></activiti:value>
@@ -44,6 +44,7 @@
           <activiti:value id="2015" name="2015"></activiti:value>
           <activiti:value id="2016" name="2016"></activiti:value>
           <activiti:value id="2017" name="2017"></activiti:value>
+          <activiti:value id="2018" name="2018"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="C_REG" name="C_REG;system;writable=true,sID_Field_SWinEd=C_REG" type="string" default="04"></activiti:formProperty>
         <activiti:formProperty id="C_RAJ" name="C_RAJ;system;writable=true,sID_Field_SWinEd=C_RAJ" type="string" default="63"></activiti:formProperty>

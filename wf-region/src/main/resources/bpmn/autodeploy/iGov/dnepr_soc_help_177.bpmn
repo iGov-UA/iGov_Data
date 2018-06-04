@@ -4,7 +4,7 @@
     <documentation>https://github.com/e-government-ua/iBP/issues/150</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
-        <activiti:formProperty id="info" name=" " type="label" default="&lt;font color='#ff0000'&gt;&lt;b&gt;Увага!&lt;/b&gt;&lt;/font&gt; Результатом цієї послуги є &lt;b&gt;надання довідки&lt;/b&gt;, а не отримання допомоги"></activiti:formProperty>
+        <activiti:formProperty id="info" name=" ; ;labelType=info" type="label" default="Увага! Результатом цієї послуги є &lt;b&gt;надання довідки&lt;/b&gt;, а не отримання допомоги"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть свій район або місто" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string"></activiti:formProperty>
@@ -39,6 +39,8 @@
           <activiti:value id="other_funeral" name="призначення допомоги на поховання"></activiti:value>
           <activiti:value id="children_orphan" name="призначення допомоги на дітей-сиріт та дітей, позбавлених батьківського піклування"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="dStartDate" name="Дата початку періоду" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dFinishDate" name="Дата закінчення періоду" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="asSubekt" name="Звернння подаю" type="enum" required="true">
           <activiti:value id="personally" name="особисто"></activiti:value>
           <activiti:value id="confidant" name="довірена особа"></activiti:value>
@@ -85,6 +87,8 @@
           <activiti:value id="other_funeral" name="призначення допомоги на поховання"></activiti:value>
           <activiti:value id="children_orphan" name="призначення допомоги на дітей-сиріт та дітей, позбавлених батьківського піклування"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="dStartDate" name="Дата початку періоду:" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dFinishDate" name="Дата закінчення періоду:" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFileRishen" name="Завантажте відскановану довідку у полі нижче, скориставшись кнопкою &quot;завантажити файл&quot;  ; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFileScanPassport" name="Сканований паспорт громадянина; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFileConfidant" name="Довіренність ; ;bNew=true" type="file" writable="false"></activiti:formProperty>

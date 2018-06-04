@@ -31,7 +31,7 @@
       </extensionElements>
     </startEvent>
     <endEvent id="endevent1" name="End"></endEvent>
-    <serviceTask id="servicetask2" name="Повідомлення держслужбовця про звернення" activiti:async="true" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+    <serviceTask id="servicetask2" name="Повідомлення держслужбовця про звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
@@ -105,9 +105,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="sBody1" name="[pattern/print/UPSZN/kalush_soczah_401_print.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nCertif" name="Копія пенсійного посвідчення ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nTrud" name="Документ, який підтверджує загальний трудовий стаж ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
-        
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow5" sourceRef="servicetask3" targetRef="usertask1"></sequenceFlow>
@@ -256,14 +254,14 @@ execution.setVariable('sGroup', per1)
         <omgdi:waypoint x="546.0" y="215.0"></omgdi:waypoint>
         <omgdi:waypoint x="476.0" y="216.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="48.0" width="100.0" x="488.0" y="170.0"></omgdc:Bounds>
+          <omgdc:Bounds height="42.0" width="100.0" x="488.0" y="170.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
         <omgdi:waypoint x="566.0" y="235.0"></omgdi:waypoint>
         <omgdi:waypoint x="565.0" y="264.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="48.0" width="100.0" x="575.0" y="222.0"></omgdc:Bounds>
+          <omgdc:Bounds height="42.0" width="100.0" x="575.0" y="222.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">

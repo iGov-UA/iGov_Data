@@ -12,19 +12,14 @@
         <activiti:formProperty id="email" name="Ваша електронна пошта" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть підрозділ міграційної служби, в якому Ви будете отримувати паспорт" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="sInfoFAQ" name=" ; ;labelType=info" type="label" default="Відповіді на найчастіші питання по закордонних паспортах (в т.ч. про наявність черги) Ви можете знайти за &lt;a href=&quot;https://docs.google.com/document/d/12tTbPz081dMJPxPicyXEe8xMMQdYNUet4Qx04VNCnys/edit?usp=sharing&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
-        
         <activiti:formProperty id="visitDay1" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_Department_visitDay1" name="Департамент; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_ServiceCustomPrivate_visitDay" name="Номер черги за довідником ДМС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_Type_visitDay" name="sID_Type_visitDay; ;bVisible=false" type="string" default="DMS"></activiti:formProperty>
-        
         <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
-        
         <activiti:formProperty id="sFlag" name="sFlag; ;bVisible=false" type="string" default="2etap"></activiti:formProperty>
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/DMSiGov.json')}"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
@@ -35,8 +30,6 @@
         <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sRekvIDZagranPos" name="Реквізити; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
-        
-        
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Паспорт громадянина України для виїзду за кордон"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="паспорт громадянина України для виїзду за кордон"></activiti:formProperty>
       </extensionElements>
@@ -168,7 +161,6 @@ ${sNameOrgan},<br>
     <userTask id="usertask2" name="Заявка прийнята ДМС" activiti:candidateGroups="id_card_kiev">
       <extensionElements>
         <activiti:formProperty id="sCancelInfo" name="Чи скасована заявка (заповнюється громадянином лише у разі відміни запису, за замовчуванням вказано &quot;Заявка актуальна&quot;)" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
@@ -185,24 +177,6 @@ ${sNameOrgan},<br>
         <activiti:executionListener event="start" delegateExpression="${updateStatus_HistoryServiceEvent}"></activiti:executionListener>
       </extensionElements>
     </endEvent>
-    <scriptTask id="scripttask3" name="Формировка даты" scriptFormat="javascript" activiti:autoStoreVariables="false">
-      <script>var delta='10';
-var unixdate= Math.round((new Date()).getTime());
-var unixdate=unixdate+86400*1000*delta;
-var new_src = new Date(unixdate);
-var d = new_src.getDate();
-if (d &lt; 10) d = "0"+d;
-var m = new_src.getMonth();
-var m = (+m + +1);
-if (m &lt; 10) m = "0"+m;
-
-var new_year = new_src.getFullYear();
-var new_hour = new_src.getHours();
-var new_minutes = new_src.getMinutes();
-var timer = new_year+'-'+m+'-'+d+'T'+new_hour+':'+new_minutes+':00';
-execution.setVariable('sNotification_day', timer)
-</script>
-    </scriptTask>
     <boundaryEvent id="escalationTimer" name="Timer" attachedToRef="usertask2" cancelActivity="true">
       <timerEventDefinition>
         <timeDate>${sEndDay}</timeDate>
@@ -294,7 +268,6 @@ ${sNameOrgan},<br>
     <userTask id="usertask3" name="Обробка звернення" activiti:candidateGroups="dms_zagran_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="sCancelInfo" name="Чи скасована заявка (заповнюється громадянином лише у разі відміни запису, за замовчуванням вказано &quot;Заявка актуальна&quot;)" type="string"></activiti:formProperty>
-                
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон громадянина" type="string" writable="false"></activiti:formProperty>
@@ -318,8 +291,7 @@ ${sNameOrgan},<br>
     <sequenceFlow id="flow57" name="Неявка заявника" sourceRef="exclusivegateway2" targetRef="servicetask9">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamNeJavka'}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow41" sourceRef="escalationTimer" targetRef="scripttask3"></sequenceFlow>
-    <sequenceFlow id="flow42" sourceRef="scripttask3" targetRef="endevent2"></sequenceFlow>
+    <sequenceFlow id="flow41" sourceRef="escalationTimer" targetRef="endevent2"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="flow43" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
     <sequenceFlow id="flow45" sourceRef="servicetask4" targetRef="servicetask5"></sequenceFlow>
@@ -465,10 +437,7 @@ execution.setVariable('sNotification_day1', date_of_visit1)</script>
         <omgdc:Bounds height="30.0" width="30.0" x="813.0" y="76.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
-        <omgdc:Bounds height="35.0" width="35.0" x="919.0" y="160.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
-        <omgdc:Bounds height="55.0" width="105.0" x="884.0" y="63.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="910.0" y="73.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask4" id="BPMNShape_servicetask4">
         <omgdc:Bounds height="55.0" width="105.0" x="210.0" y="232.0"></omgdc:Bounds>
@@ -556,11 +525,7 @@ execution.setVariable('sNotification_day1', date_of_visit1)</script>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow41" id="BPMNEdge_flow41">
         <omgdi:waypoint x="843.0" y="91.0"></omgdi:waypoint>
-        <omgdi:waypoint x="884.0" y="90.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow42" id="BPMNEdge_flow42">
-        <omgdi:waypoint x="936.0" y="118.0"></omgdi:waypoint>
-        <omgdi:waypoint x="936.0" y="160.0"></omgdi:waypoint>
+        <omgdi:waypoint x="910.0" y="90.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow43" id="BPMNEdge_flow43">
         <omgdi:waypoint x="36.0" y="90.0"></omgdi:waypoint>

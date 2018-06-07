@@ -1,0 +1,89 @@
+{
+  "aField": [
+    {
+      "id": "nTable1",
+      "name": "Прізвище, ім'я, по батькові",
+      "type": "string",
+      "required": "true",
+      "nWidth": "35%"
+    },
+    {
+      "id": "nTable2",
+      "name": "Сімейний стан",
+      "type": "date",
+      "required": "true",
+      "nWidth": "15%"
+    },
+    {
+      "id": "nTable3",
+      "name": "Дата народження",
+      "type": "date",
+      "required": "true",
+      "nWidth": "20%"
+    },
+    {
+      "id": "nTable4",
+      "name": "Серія та номер паспорту (або свідоцтва про народження)",
+      "type": "string",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable5",
+      "name": "Реєстраційний номер облікової картки платника податків (ІПН)",
+      "type": "string",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable6",
+      "name": "Примітки; наприклад, 'прописаний але не проживає'",
+      "type": "string",
+      "required": "true",
+      "nWidth": "20%"
+    },
+    {
+      "id": "nTable7",
+      "name": "Вид доходу, інформація про який відсутня податковій",
+      "type": "string",
+      "default": " ",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable8",
+      "name": "Сума доходу на місяць, грн",
+      "type": "string",
+      "default": " ",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable9",
+      "name": "Найменування органцізації, у якій отримано дохід",
+      "type": "string",
+      "default": " ",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable10",
+      "name": "Марка автомобіля",
+      "type": "string",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable11",
+      "name": "Державний номерний знак",
+      "type": "string",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable12",
+      "name": "Рік випуску",
+      "type": "string",
+      "nWidth": "30%"
+    },
+    {
+      "id": "nTable13",
+      "name": "Авто отримані через підрозділи соцзахисту",
+      "type": "string",
+      "nWidth": "30%"
+    }
+  ]
+}

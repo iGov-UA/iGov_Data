@@ -16,7 +16,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 15;659;319;319;NULL;4;{"processDefinitionId":"rada_659_CityHeadRequest:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 16;4;24;24;NULL;4;{"processDefinitionId":"cnap_293:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 17;4;319;319;NULL;4;{"processDefinitionId":"cnap_293:1:1"};;false;212;true;;BankID,EDS,mpbds;0
-18;17;15;15;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:2"};;false;220;false;;BankID,EDS,mpbds;0
+18;17;15;15;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:2"};;false;220;false;;BankID,EDS,mpbds;0
 19;136;NULL;NULL;NULL;4;{"processDefinitionId":"_test_sID_SubjectOrgan_OKPO:4:12552"};;false;1;true;;BankID,EDS,mpbds;0
 20;217;NULL;NULL;NULL;4;{"processDefinitionId":"_test_sID_Pay_MasterPass:4:12558"};;false;1;true;;BankID,EDS,mpbds;0
 21;152;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap_255:1:1"};;false;225;true;;BankID,EDS,mpbds;0
@@ -987,8 +987,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1048;1392;182;182;NULL;4;{"processDefinitionId":"cnap_417:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1049;11;479;479;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 1050;63;7;7;NULL;4;{"processDefinitionId":"rada_0063_dozvilZN:1:1"};;false;220;false;;BankID,EDS,mpbds;0
-1051;17;22;22;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;212;true;;BankID,EDS,mpbds;0
-1052;17;494;494;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;212;true;;BankID,EDS,mpbds;0
+1051;17;22;22;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;212;true;;BankID,EDS,mpbds;0
+1052;17;494;494;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;212;true;;BankID,EDS,mpbds;0
 1053;11;491;491;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 1054;333;50001;NULL;1;4;{"processDefinitionId":"justice_0333_complaint:1:1"};;false;1;false;;BankID,EDS,mpbds;0
 1055;1166;1;1;NULL;4;{"processDefinitionId":"Minust_1166_PrupVidGO:1:1"};;false;225;true;;BankID,EDS,mpbds;0
@@ -1287,10 +1287,10 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1348;659;151;151;NULL;4;{"processDefinitionId":"rada_659_CityHeadRequest:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 1349;676;151;151;NULL;4;{"processDefinitionId":"ostroh_mvk_481:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 1350;277;151;151;NULL;4;{"processDefinitionId":"KMVProcess:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-1351;17;102;102;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1352;17;37;37;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1353;17;42;42;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1354;17;149;149;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+1351;17;102;102;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+1352;17;37;37;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+1353;17;42;42;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+1354;17;149;149;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1355;669;1;1;NULL;4;{"processDefinitionId":"_test_SED_SwinEd_1:1:1"};;false;1;false;;BankID,email,EDS,mpbds;0
 1356;702;50022;NULL;22;4;{"processDefinitionId":"ternopol_oda_226:1:1"};;false;209;false;;BankID,EDS,mpbds;0
 1357;1038;50020;NULL;20;4;{"processDefinitionId":"nicolaev_dfs_593:1:1"};;false;285;true;;BankID,EDS,mpbds;0
@@ -1766,7 +1766,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1827;185;581;581;NULL;4;{"processDefinitionId":"dnepr_dms-212s:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1828;667;22;22;NULL;4;{"processDefinitionId":"dnepr_cnap_529_mode_worktime_chernigov:1:1"};;false;633;false;;BankID,EDS,mpbds;0
 1829;667;85;85;NULL;4;{"processDefinitionId":"rada_667_worktime_BaseVar:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1830;17;85;85;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+1830;17;85;85;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1831;4;85;85;NULL;4;{"processDefinitionId":"cnap_293:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1832;41;485;485;NULL;4;{"processDefinitionId":"DGK_0041_VupPomulok:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1833;126;42;42;NULL;4;{"processDefinitionId":"ZemRada_126_ZemVlasn:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -1851,7 +1851,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1912;15;514;514;NULL;4;{"processDefinitionId":"dnepr_cnap_184_otrimannya:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1913;455;465;465;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1914;28;10;10;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-1915;17;26;26;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+1915;17;26;26;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1916;1393;182;182;NULL;4;{"processDefinitionId":"dndz_cnap_190:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1917;1393;92;92;NULL;4;{"processDefinitionId":"dndz_cnap_190:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1918;1393;65;65;NULL;4;{"processDefinitionId":"dndz_cnap_190:1:1"};;false;225;true;;BankID,EDS,mpbds;0
@@ -2496,7 +2496,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 2557;657;130;130;NULL;4;{"processDefinitionId":"ZemRada_0657_ZemNajavnist:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 2558;1392;130;130;NULL;4;{"processDefinitionId":"cnap_417:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 2559;1481;130;130;NULL;4;{"processDefinitionId":"dnepr_obl_cnap_490:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-2560;17;130;130;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+2560;17;130;130;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 2561;1506;50005;NULL;5;4;{"processDefinitionId":"Kiev_mda_833dgk:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 2562;11;602;602;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 2563;161;602;602;NULL;4;{"processDefinitionId":"demo2:1:1"};;false;212;true;;BankID,EDS,mpbds;0
@@ -2925,7 +2925,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 2986;231;465;465;NULL;4;{"processDefinitionId":"hmel_cnap_494:1:1"};;false;246;false;;BankID,EDS,mpbds;0
 2987;472;465;465;NULL;4;{"processDefinitionId":"kids_0472_oblik:1:1"};;false;246;false;;BankID,EDS,mpbds;0
 2988;234;465;465;NULL;4;{"processDefinitionId":"hmel_cnap_331:1:1"};;false;246;false;;BankID,EDS,mpbds;0
-2989;17;134;134;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+2989;17;134;134;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 2990;248;NULL;NULL;NULL;1;{};http://court.gov.ua/sudytax/;FALSE;1;FALSE;Замовити послугу можна на офіційному веб-порталі "Судова влада України" ;BankID,EDS,mpbds;0
 2991;249;NULL;NULL;NULL;1;{};http://court.gov.ua/fair/;FALSE;1;FALSE;Замовити послугу можна на офіційному веб-порталі "Судова влада України" ;BankID,EDS,mpbds;0
 2992;250;NULL;NULL;NULL;1;{};http://court.gov.ua/fair/;FALSE;1;FALSE;Замовити послугу можна на офіційному веб-порталі "Судова влада України" ;BankID,EDS,mpbds;0
@@ -3069,7 +3069,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 3130;762;491;491;NULL;4;{"processDefinitionId":"dnepr_soczah_139:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 3131;777;491;491;NULL;4;{"processDefinitionId":"dnepr_soczah_156:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 3132;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-3133;17;197;197;NULL;4;{"processDefinitionId":"nikolaev_oda_2:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+3133;17;197;197;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 3134;15;14;14;NULL;4;{"processDefinitionId":"dnepr_cnap_184_otrimannya:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 3135;1489;14;14;NULL;4;{"processDefinitionId":"dnepr_cnap_184_annulluvannya:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 3136;1490;14;14;NULL;4;{"processDefinitionId":"dnepr_cnap_184_podovzennya:1:1"};;false;225;true;;BankID,EDS,mpbds;0

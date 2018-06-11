@@ -22,7 +22,7 @@
       "asID_Field": {
         "sCondit1": "asDistrict"
       },
-      "sCondition": "[sCondit1] != 'sSamar'"
+      "sCondition": "[sCondit1] != 'sSamar'||[sCondit1] != ' '||[sCondit1] != 'null'"
     }
   }
 }

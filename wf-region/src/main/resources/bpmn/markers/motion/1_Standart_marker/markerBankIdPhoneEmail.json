@@ -1,0 +1,18 @@
+{
+  "motion": {
+    "ValuesFieldsOnCondition_BankIdPhoneEmail": {
+      "aField_ID": [
+        "phone",
+        "email"
+      ],
+      "asID_Field_sValue": [
+        "[bankIdphone]",
+        "[bankIdemail]"
+      ],
+      "asID_Field": {
+        "sCondit1": "bankIdlastName"
+      },
+      "sCondition": "[sCondit1] != '1234567890'"
+    }
+  }
+}

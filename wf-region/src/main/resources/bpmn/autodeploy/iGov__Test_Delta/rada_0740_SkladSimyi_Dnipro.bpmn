@@ -53,8 +53,13 @@
         <activiti:formProperty id="nFile_ZayIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Контактний телефон" type="string" default="+380" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
+        
         
         <activiti:formProperty id="markersLine_D" name="Інформація про довірителя" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;DovirutLastName&quot;],&quot;sValue&quot;:&quot;Інформація про довірителя&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DovirutLastName" name="Прізвище довірителя" type="string" required="true"></activiti:formProperty>

@@ -3,16 +3,19 @@
     "ValuesFieldsOnCondition_BankIdPhoneEmail": {
       "aField_ID": [
         "phone",
-        "email"
+        "email",
+        "FlagBankIdPhoneEmail"
       ],
       "asID_Field_sValue": [
         "[bankIdphone]",
-        "[bankIdemail]"
+        "[bankIdemail]",
+        "1234567890"
       ],
       "asID_Field": {
-        "sCondit1": "bankIdlastName"
+        "sCondit1": "bankIdlastName",
+        "sCondit2": "FlagBankIdPhoneEmail"
       },
-      "sCondition": "[sCondit1] != '1234567890'"
+      "sCondition": "[sCondit1] != '1234567890'&&[sCondit2] != '1234567890'"
     }
   }
 }

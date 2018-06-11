@@ -497,7 +497,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 557;654;50027;NULL;27;4;{"processDefinitionId":"subsidiesUkraine_ECP:1:1"};;true;14;true;;BankID,EDS,mpbds;0
 558;654;50028;NULL;28;4;{"processDefinitionId":"subsidiesUkraine_ECP:1:1"};;true;14;true;;BankID,EDS,mpbds;0
 559;1434;92;92;NULL;4;{"processDefinitionId":"dnepr_cnap_262:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-560;32;182;182;NULL;4;{"processDefinitionId":"dnepr_cnap_278:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+560;32;NULL;NULL;NULL;1;{};https://kap.minjust.gov.ua/services/rrpzinstruction;false;1;false;Ви можете подати заяву на попередню перевірку на сайті Міністерства Юстиції. За підсумками вам призначать час подачі оригіналів документів на реєстрацію.;BankID,EDS,mpbds;0
 561;46;466;466;NULL;4;{"processDefinitionId":"DGK_0046_VidAdminTerit:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 562;1445;182;182;NULL;4;{"processDefinitionId":"dnepr_cnap_274:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 563;1446;NULL;NULL;NULL;4;{"processDefinitionId":"system_feedback:1:1"};;false;1;true;;BankID,EDS,mpbds;0
@@ -1494,7 +1494,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1555;719;501;501;NULL;4;{"processDefinitionId":"dnepr_cnap_59:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1556;1419;137;137;NULL;4;{"processDefinitionId":"cnap_514:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1557;1419;104;104;NULL;4;{"processDefinitionId":"cnap_514:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1558;32;92;92;NULL;4;{"processDefinitionId":"dnepr_cnap_278:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+1558;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 1559;78;NULL;NULL;NULL;1;{};https://goo.gl/86hxCM;false;1;false;Ви можете отримати зразки заяв у документі за посиланням;BankID,EDS,mpbds;0
 1560;1419;37;37;NULL;4;{"processDefinitionId":"dnepr_mvk_501:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1561;1419;102;102;NULL;4;{"processDefinitionId":"dnepr_mvk_501:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -1714,7 +1714,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1775;110;NULL;NULL;NULL;4;{"processDefinitionId":"infrastr_624:1:1"};;false;624;true;;BankID,email,EDS,mpbds;0
 1776;142;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_36:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1777;140;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_37:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-1778;141;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_38:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+1778;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 1779;139;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_39:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1780;654;569;569;NULL;4;{"processDefinitionId":"subsidiesUkraine_ECP:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 1781;1479;498;498;NULL;4;{"processDefinitionId":"dnepr_obl_cnap_515:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -4625,7 +4625,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4746;152;484;484;NULL;4;{"processDefinitionId":"dnepr_cnap_256:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 4747;111;484;484;NULL;4;{"processDefinitionId":"cherkasy_lmg_416:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4748;468;484;484;NULL;4;{"processDefinitionId":"dnepr_cnap_278_inshe_pravo:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-4749;32;484;484;NULL;4;{"processDefinitionId":"dnepr_cnap_278:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+4749;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 4750;598;484;484;NULL;4;{"processDefinitionId":"eco_0598_useAnimals:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4751;1590;NULL;NULL;NULL;1;{};http://dpvs.hsc.gov.ua/site/authenticate?from_frame=0;false;1;false;Для замовлення довідки перейдіть за посиланням;BankID,EDS,mpbds;0
 4752;1591;NULL;NULL;NULL;1;{};http://dpvs.hsc.gov.ua/applications/check-certificate-of-conduct?from_frame=0;false;1;false;Для перевірки статусу довідки перейдіть за посиланням;BankID,EDS,mpbds;0

@@ -113,7 +113,7 @@
         <activiti:formProperty id="sIndex" name="Індекс" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asLust" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Вартість доставки листа поштою 55.59 грн (54.60 грн. + 0.99 грн. комісія) &lt;/b&gt;"></activiti:formProperty>
-        <activiti:formProperty id="sLabeRegistr2" name=" ; ;labelType=warning" type="label" default="УВАГА! Для всіх районів крім Самарського, довідки видаються тільки, якщо інформація про вас вже внесена в реєстр фізичних осіб (тобто, якщо ви вже отримували довідку у відділах реєстрації фіз. осіб після червня 2017го).&lt;br&gt; Якщо в реєстрі не має інформації про зареєстрованих за вашою адресою осіб, вам буде відмовлено!"></activiti:formProperty>
+        <activiti:formProperty id="sLabeRegistr2" name=" ; ;labelType=warning" type="label" default="УВАГА! Для всіх районів крім Самарського, довідки видаються тільки, якщо інформація про вас вже внесена в реєстр фізичних осіб (тобто, якщо ви вже отримували довідку у відділах реєстрації фіз. осіб після червня 2017го).&lt;br&gt; Якщо в реєстрі не має інформації про зареєстрованих за вашою адресою осіб, вам буде відмовлено в наданні послуги!"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name=" ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="markerPost" name="Post" type="markers" default="${markerService.loadFromFile('AK/Dnipro_Post_MarkerNoSOJ_ECP.json')}"></activiti:formProperty>
         

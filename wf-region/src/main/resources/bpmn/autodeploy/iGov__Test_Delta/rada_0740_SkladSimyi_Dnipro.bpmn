@@ -43,7 +43,7 @@
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювали ви прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так, якщо ні - натисніть двічі на квадратик;sID_CheckboxTrue=yes" type="enum" required="true">
+        <activiti:formProperty id="asPrizv" name="Чи змінювали ви прізвище?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -78,12 +78,12 @@
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці;(якщо це проспект вкажіть це)" type="string" default="вул. " required="true"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено ваш будинок на корпуса?;позначте галочкою - якщо так, якщо ні - натисніть двічі на квадратик;sID_CheckboxTrue=yes" type="enum" required="true">
+        <activiti:formProperty id="asKorp" name="Чи поділено ваш будинок на корпуса?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу" type="long" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено ваш будинок на квартири?;позначте галочкою - якщо так, якщо ні - натисніть двічі на квадратик;sID_CheckboxTrue=yes" type="enum" required="true">
+        <activiti:formProperty id="asKvart" name="Чи поділено ваш будинок на квартири?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -359,7 +359,7 @@ ${sNameOrgan}.<br />
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -383,12 +383,12 @@ ${sNameOrgan}.<br />
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу; ;writable=false" type="long"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -639,7 +639,7 @@ ${sNameOrgan}<br>
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -664,12 +664,12 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу; ;writable=false" type="long"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -875,7 +875,7 @@ ${sNameOrgan}<br>
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -900,12 +900,12 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу; ;writable=false" type="long"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>

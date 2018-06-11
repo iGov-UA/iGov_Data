@@ -1714,7 +1714,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1775;110;NULL;NULL;NULL;4;{"processDefinitionId":"infrastr_624:1:1"};;false;624;true;;BankID,email,EDS,mpbds;0
 1776;142;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_36:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1777;140;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_37:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-1778;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+1778;141;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_38:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1779;139;67;67;NULL;4;{"processDefinitionId":"dnepr_cnap_39:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 1780;654;569;569;NULL;4;{"processDefinitionId":"subsidiesUkraine_ECP:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 1781;1479;498;498;NULL;4;{"processDefinitionId":"dnepr_obl_cnap_515:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -1723,7 +1723,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1784;102;80;80;NULL;4;{"processDefinitionId":"demo:1:58"};;true;1;true;;BankID,EDS,mpbds;0
 1785;1378;130;130;NULL;4;{"processDefinitionId":"nitishin_cnap_600:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1786;1495;50001;NULL;1;4;{"processDefinitionId":"dnepr_cnap_560_fop:1:1"};;false;1;false;;BankID,EDS,mpbds;0
-1787;32;467;467;NULL;4;{"processDefinitionId":"dnepr_cnap_278:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+1787;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 1788;175;10;10;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1789;1431;10;10;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 1790;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0

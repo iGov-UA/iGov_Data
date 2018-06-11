@@ -12,6 +12,7 @@
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankIdPhoneEmail" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="nID_ServiceCustomPrivate_visitDay" name="Номер черги за довідником ДМС; ;bVisible=false" type="string"></activiti:formProperty>

@@ -12,6 +12,7 @@
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankIdPhoneEmail" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="lable3" name=" ; ;labelType=danger" type="label" default="&lt;b&gt;Дана послуга доступна лише за місцем реєстрації. Якщо Ви зробите вибір району не за місцем реєстрації, у наданні послуги Вам буде відмовлено в момент відвідування.&lt;/b&gt;"></activiti:formProperty>

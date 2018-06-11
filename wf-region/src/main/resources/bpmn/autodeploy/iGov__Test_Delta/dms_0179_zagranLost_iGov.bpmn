@@ -7,8 +7,13 @@
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Ваш телефон" type="string" default="+380" required="true"></activiti:formProperty>
-        <activiti:formProperty id="email" name="Ваша електронна пошта" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="asKind_passport" name="Паспорт будете отримувати замість" type="enum" required="true">
           <activiti:value id="sLost" name="втраченого"></activiti:value>
           <activiti:value id="sStolen" name="викраденого"></activiti:value>

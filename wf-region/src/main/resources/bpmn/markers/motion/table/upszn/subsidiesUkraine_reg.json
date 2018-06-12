@@ -1,89 +1,46 @@
 {
   "aField": [
     {
-      "id": "nTable1",
+      "id": "sTable1_1",
       "name": "Прізвище, ім'я, по батькові",
-      "type": "string",
-      "required": "true",
-      "nWidth": "35%"
+      "type": "string"
+      "default": " ",
+      "nWidth": "30%"
     },
     {
-      "id": "nTable2",
+      "id": "sTable2_1",
       "name": "Сімейний стан",
-      "type": "date",
-      "required": "true",
+      "type": "string"
+      "default": " ",
       "nWidth": "15%"
     },
     {
-      "id": "nTable3",
+      "id": "sTable3_1",
       "name": "Дата народження",
-      "type": "date",
-      "required": "true",
-      "nWidth": "20%"
+      "type": "date"
+      "default": " ",
+      "nWidth": "10%"
     },
     {
-      "id": "nTable4",
+      "id": "sTable4_1",
       "name": "Серія та номер паспорту (або свідоцтва про народження)",
-      "type": "string",
-      "nWidth": "30%"
+      "type": "string"
+      "default": " ",
+      "nWidth": "15%"
     },
     {
-      "id": "nTable5",
+      "id": "nTable5_1",
       "name": "Реєстраційний номер облікової картки платника податків (ІПН)",
-      "type": "string",
-      "nWidth": "30%"
+      "type": "long",
+      "default": " ",
+      "nWidth": "15%"
     },
     {
-      "id": "nTable6",
+      "id": "sTable6_1",
       "name": "Примітки; наприклад, 'прописаний але не проживає'",
       "type": "string",
-      "required": "true",
-      "nWidth": "20%"
-    },
-    {
-      "id": "nTable7",
-      "name": "Вид доходу, інформація про який відсутня податковій",
-      "type": "string",
       "default": " ",
-      "nWidth": "30%"
-    },
-    {
-      "id": "nTable8",
-      "name": "Сума доходу на місяць, грн",
-      "type": "string",
-      "default": " ",
-      "nWidth": "30%"
-    },
-    {
-      "id": "nTable9",
-      "name": "Найменування органцізації, у якій отримано дохід",
-      "type": "string",
-      "default": " ",
-      "nWidth": "30%"
-    },
-    {
-      "id": "nTable10",
-      "name": "Марка автомобіля",
-      "type": "string",
-      "nWidth": "30%"
-    },
-    {
-      "id": "nTable11",
-      "name": "Державний номерний знак",
-      "type": "string",
-      "nWidth": "30%"
-    },
-    {
-      "id": "nTable12",
-      "name": "Рік випуску",
-      "type": "string",
-      "nWidth": "30%"
-    },
-    {
-      "id": "nTable13",
-      "name": "Авто отримані через підрозділи соцзахисту",
-      "type": "string",
-      "nWidth": "30%"
+      "nWidth": "15%"
     }
   ]
 }

@@ -17,7 +17,7 @@
     {
       "id": "nTable8",
       "name": "Сума доходу на місяць, грн",
-      "type": "long",
+      "type": "string",
       "default": " ",
       "nWidth": "15%"
     },

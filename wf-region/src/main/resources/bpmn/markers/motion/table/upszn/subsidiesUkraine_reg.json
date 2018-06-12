@@ -3,28 +3,28 @@
     {
       "id": "sTable1_1",
       "name": "Прізвище, ім'я, по батькові",
-      "type": "string"
+      "type": "string",
       "default": " ",
       "nWidth": "30%"
     },
     {
       "id": "sTable2_1",
       "name": "Сімейний стан",
-      "type": "string"
+      "type": "string",
       "default": " ",
       "nWidth": "15%"
     },
     {
       "id": "sTable3_1",
       "name": "Дата народження",
-      "type": "date"
+      "type": "date",
       "default": " ",
       "nWidth": "10%"
     },
     {
       "id": "sTable4_1",
       "name": "Серія та номер паспорту (або свідоцтва про народження)",
-      "type": "string"
+      "type": "string",
       "default": " ",
       "nWidth": "15%"
     },

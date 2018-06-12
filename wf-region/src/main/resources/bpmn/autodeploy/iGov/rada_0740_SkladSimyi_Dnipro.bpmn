@@ -3,7 +3,7 @@
   <process id="rada_0740_SkladSimyi_Dnipro" name="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб" isExecutable="true">
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
-        <activiti:formProperty id="asDistrict" name="Оберіть район до якого належить Ваш будинок;(через Портал довідку можливо замовити в АНД, Індустіальному, Самарському, Соборному і Центральному районах)" type="enum" required="true">
+        <activiti:formProperty id="asDistrict" name="Оберіть район до якого належить Ваш будинок;" type="enum" required="true">
           <activiti:value id="sAND" name="Амур-Нижньодніпровський"></activiti:value>
           <activiti:value id="sIndus" name="Індустріальний"></activiti:value>
           <activiti:value id="sNovok" name="Новокодацький"></activiti:value>
@@ -43,18 +43,24 @@
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювали ви прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так, якщо ні - натисніть двічі на квадратик;sID_CheckboxTrue=yes" type="enum" required="true">
+        <activiti:formProperty id="asPrizv" name="Чи змінювали ви прізвище?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища;(сканкопія оригіналу, наприклад - свідоцтво про шлюб);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sLabePasport" name=" ; ;labelType=info" type="label" default="Увага! Завантажте всі заповнені сторінки паспорта(крім сторінок зі штампами старих місць реєстрації)"></activiti:formProperty>
+        <activiti:formProperty id="sLabePasport" name=" ; ;labelType=info" type="label" default="Увага! Завантажте всі заповнені сторінки паспорта (крім сторінок зі штампами старих місць реєстрації)"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Контактний телефон" type="string" default="+380" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankIdPhoneEmail" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
+        
         
         <activiti:formProperty id="markersLine_D" name="Інформація про довірителя" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;DovirutLastName&quot;],&quot;sValue&quot;:&quot;Інформація про довірителя&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DovirutLastName" name="Прізвище довірителя" type="string" required="true"></activiti:formProperty>
@@ -73,12 +79,12 @@
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці;(якщо це проспект вкажіть це)" type="string" default="вул. " required="true"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено ваш будинок на корпуса?;позначте галочкою - якщо так, якщо ні - натисніть двічі на квадратик;sID_CheckboxTrue=yes" type="enum" required="true">
+        <activiti:formProperty id="asKorp" name="Чи поділено ваш будинок на корпуса?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу" type="long" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено ваш будинок на квартири?;позначте галочкою - якщо так, якщо ні - натисніть двічі на квадратик;sID_CheckboxTrue=yes" type="enum" required="true">
+        <activiti:formProperty id="asKvart" name="Чи поділено ваш будинок на квартири?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -107,7 +113,7 @@
         <activiti:formProperty id="sIndex" name="Індекс" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asLust" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Вартість доставки листа поштою 55.59 грн (54.60 грн. + 0.99 грн. комісія) &lt;/b&gt;"></activiti:formProperty>
-        <activiti:formProperty id="sLabeRegistr2" name=" ; ;labelType=warning" type="label" default="УВАГА! Для АНД, Індустіального, Соборного і Центрального району, довідки видаються тільки, якщо інформація про вас вже внесена в реєстр фізичних осіб (тобто, якщо ви вже отримували довідку у відділах реєстрації фіз. осіб).&lt;br&gt; Якщо в реєстрі не має інформації про зареєстрованих за вашою адресою осіб, вам буде відмовлено!"></activiti:formProperty>
+        <activiti:formProperty id="sLabeRegistr2" name=" ; ;labelType=warning" type="label" default="УВАГА! Для всіх районів крім Самарського, довідки видаються тільки, якщо інформація про вас вже внесена в реєстр фізичних осіб (тобто, якщо ви вже отримували довідку у відділах реєстрації фіз. осіб після червня 2017го).&lt;br&gt; Якщо в реєстрі не має інформації про зареєстрованих за вашою адресою осіб, вам буде відмовлено в наданні послуги!"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name=" ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="markerPost" name="Post" type="markers" default="${markerService.loadFromFile('AK/Dnipro_Post_MarkerNoSOJ_ECP.json')}"></activiti:formProperty>
         
@@ -354,7 +360,7 @@ ${sNameOrgan}.<br />
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -378,12 +384,12 @@ ${sNameOrgan}.<br />
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу; ;writable=false" type="long"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -634,7 +640,7 @@ ${sNameOrgan}<br>
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -659,12 +665,12 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу; ;writable=false" type="long"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -784,7 +790,7 @@ ${sNameOrgan}<br>
 </p>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-${sNameOrgan}&lt;br/&gt;
+${sNameOrgan}<br>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -870,7 +876,7 @@ ${sNameOrgan}<br>
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?;наприклад в зв'язку зі шлюбом, поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPrizv" name="Чи змінювалось прізвище?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -895,12 +901,12 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="sRegistrationVul" name="Назва вулиці; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationBud" name="Номер будинку; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKorp" name="Чи поділено будинок на корпуса?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKorp" name="Номер корпусу; ;writable=false" type="long"></activiti:formProperty>
-        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asKvart" name="Чи поділено будинок на квартири?" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>

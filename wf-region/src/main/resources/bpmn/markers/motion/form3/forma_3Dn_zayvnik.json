@@ -38,9 +38,10 @@
         "nFile_ZayPasp"
       ],
       "asID_Field": {
+        "sCondit1": "asDistrict",
         "sCondit3": "asStatus"
       },
-      "sCondition": "[sCondit3]!='sVlasnDov'&&[sCondit3]!='sZareyDov'"
+      "sCondition": "[sCondit3]!='sVlasnDov'&&[sCondit3]!='sZareyDov'&&[sCondit1] != ' '&&[sCondit1] != 'null'"
     },
     "ShowFieldsOnCondition_FlTrueFIPN": {
       "aField_ID": [

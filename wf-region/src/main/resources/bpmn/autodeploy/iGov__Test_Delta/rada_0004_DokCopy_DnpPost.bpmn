@@ -297,7 +297,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="sDocDate" name="Дата прийняття документа; ;writable=false" type="date"></activiti:formProperty>
         <activiti:formProperty id="sDocNumber" name="Номер документа; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMeta" name="Мета отримання документа; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asVudacha" name="Чи видано довідку заявнику?" type="enum" required="true">
+        <activiti:formProperty id="asVudacha" name="Чи видано відповідь заявнику?" type="enum" required="true">
           <activiti:value id="sEnamVudano" name="Так видано"></activiti:value>
           <activiti:value id="sEnamNejavka" name="Заявник, не з'явився"></activiti:value>
         </activiti:formProperty>
@@ -519,7 +519,7 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="Номер транзакції платежу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asResult" name="Результат обробки" type="enum" required="true">
-          <activiti:value id="sSend" name="Довідку передано Укрпошті для відправлення"></activiti:value>
+          <activiti:value id="sSend" name="Відповідь передано Укрпошті для відправлення"></activiti:value>
         </activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>

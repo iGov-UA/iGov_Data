@@ -1,0 +1,62 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sRegNum": {
+      "aField_ID": [
+        "sRegNum"
+      ],
+      "asID_Field": {
+        "sClient": "asDicide1",
+        "sClientV": "asVidpovid"
+      },
+      "sCondition": "[sClient] == 'sEnamAccept'&&([sClientV] == 'sEnamPost'||[sClientV] == 'sEnamnarochno'||[sClientV] == 'Поштою (з оплатою доставки)'||[sClientV] == 'Самостійно забрати довідку')"
+    },
+    "RequiredFieldsOnCondition_sRegNum": {
+      "aField_ID": [
+        "sRegNum"
+      ],
+      "asID_Field": {
+        "sClient": "asDicide1",
+        "sClientV": "asVidpovid"
+      },
+      "sCondition": "[sClient] == 'sEnamAccept'&&([sClientV] == 'sEnamPost'||[sClientV] == 'sEnamnarochno'||[sClientV] == 'Поштою (з оплатою доставки)'||[sClientV] == 'Самостійно забрати довідку')"
+    },
+    "ShowFieldsOnCondition_fileVidpov": {
+      "aField_ID": [
+        "FileVidpovid"
+      ],
+      "asID_Field": {
+        "sClient": "asDicide1",
+        "sClientV": "asVidpovid"
+      },
+      "sCondition": "[sClient] == 'sEnamAccept'&&([sClientV] == 'sEnamECP'||[sClientV] == 'Електронна копія')"
+    },
+    "RequiredFieldsOnCondition_fileVidpov": {
+      "aField_ID": [
+        "FileVidpovid"
+      ],
+      "asID_Field": {
+        "sClient": "asDicide1",
+        "sClientV": "asVidpovid"
+      },
+      "sCondition": "[sClient] == 'sEnamAccept'&&([sClientV] == 'sEnamECP'||[sClientV] == 'Електронна копія')"
+    },
+    "ShowFieldsOnCondition_tComment": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sClient": "asDicide1"
+      },
+      "sCondition": "[sClient] == 'sEnamReject'"
+    },
+    "RequiredFieldsOnCondition_tComment": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sClient": "asDicide1"
+      },
+      "sCondition": "[sClient] == 'sEnamReject'"
+    }
+  }
+}

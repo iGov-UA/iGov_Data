@@ -5,7 +5,7 @@
       "name": "Прізвище, ініціали",
       "type": "string",
       "default": " ",
-      "nWidth": "25%"
+      "nWidth": "30%"
     },
     {
       "id": "sTable7",
@@ -19,7 +19,7 @@
       "name": "Сума доходу на місяць, грн",
       "type": "string",
       "default": " ",
-      "nWidth": "15%"
+      "nWidth": "10%"
     },
     {
       "id": "nTable9",

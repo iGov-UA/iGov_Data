@@ -5,14 +5,14 @@
       "name": "Прізвище, ініціали власника",
       "type": "string",
       "default": " ",
-      "nWidth": "30%"
+      "nWidth": "25%"
     },
     {
       "id": "nTable10",
       "name": "Марка автомобіля",
       "type": "string",
       "default": " ",
-      "nWidth": "20%"
+      "nWidth": "25%"
     },
     {
       "id": "nTable11",

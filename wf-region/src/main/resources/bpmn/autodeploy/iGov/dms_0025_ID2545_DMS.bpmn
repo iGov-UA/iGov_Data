@@ -6,14 +6,16 @@
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="FlagBankIdPhoneEmail" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="lable3" name=" ; ;labelType=danger" type="label" default="&lt;b&gt;Дана послуга доступна лише за місцем реєстрації. Якщо Ви зробите вибір району не за місцем реєстрації, у наданні послуги Вам буде відмовлено в момент відвідування.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть підрозділ міграційної служби;виключно за місцем своєї реєстрації" type="select" default="0" required="true"></activiti:formProperty>
@@ -151,7 +153,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Дата та час візиту - " type="queueData" writable="false"></activiti:formProperty>

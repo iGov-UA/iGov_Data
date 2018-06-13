@@ -50,9 +50,9 @@
         
         <activiti:formProperty id="sMailClerk" name="Пошта для службових повідомлень ЦНАП" type="string" default="k_n_i@ukr.net"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="назва органу ; ;bVisible=false" type="string" default="Дніпровська міська рада"></activiti:formProperty>
-        <activiti:formProperty id="sPhoneOrgan" name="телефон ; ;bVisible=false" type="string" default="<b>Телефон(и):</b> (056) 742-84-08, (056) 745-30-26"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string" default="<b>Адреса:</b> 49000, м. Дніпро, просп. Д. Яворницького, 75, 1 поверх, кімн. 105"></activiti:formProperty>
-        <activiti:formProperty id="sWorkTime" name="графік роботи органу ; ;bVisible=false" type="string" default="</b> понеділок, вівторок, четвер 9:00-18:00, середа 9:00-20:00, п’ятниця 9:00-16:45, субота 9:00-16:00 (крім святкових днів)"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="телефон ; ;bVisible=false" type="string" default="&lt;b&gt;Телефон(и):&lt;/b&gt; (056) 742-84-08, (056) 745-30-26"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string" default="&lt;b&gt;Адреса:&lt;/b&gt; 49000, м. Дніпро, просп. Д. Яворницького, 75, 1 поверх, кімн. 105"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="графік роботи органу ; ;bVisible=false" type="string" default="&lt;b&gt;Графік роботи:&lt;/b&gt; понеділок, вівторок, четвер 9:00-18:00, середа 9:00-20:00, п’ятниця 9:00-16:45, субота 9:00-16:00 (крім святкових днів)"></activiti:formProperty>
         <activiti:formProperty id="sShapkaGolova" name="підпис в шапке ; ;bVisible=false" type="string" default="Дніпровська міська рада"></activiti:formProperty>
         
         <activiti:formProperty id="sID_Payment" name="ИД транзакции платежа; ;bVisible=false" type="string" default=" "></activiti:formProperty>

@@ -5,7 +5,7 @@
       "name": "Прізвище, ім'я, по батькові",
       "type": "string",
       "default": " ",
-      "nWidth": "30%"
+      "nWidth": "40%"
     },
     {
       "id" : "asTable2_2", 
@@ -21,18 +21,6 @@
 				}, {
 					"id" : "wife", 
 					"name" : "дружина"
-				}, {
-					"id" : "father", 
-					"name" : "батько"
-				}, {
-					"id" : "mother", 
-					"name" : "мати"
-				}, {
-					"id" : "brother", 
-					"name" : "брат"
-				}, {
-					"id" : "sister", 
-					"name" : "сестра"
 				}, {
 					"id" : "son", 
 					"name" : "син"
@@ -54,14 +42,14 @@
       "name": "Серія та номер паспорту (або свідоцтва про народження",
       "type": "string",
       "default": " ",
-      "nWidth": "15%"
+      "nWidth": "10%"
     },
     {
       "id": "nTable5_2",
       "name": "Реєстраційний номер облікової картки платника податків (ІПН)",
       "type": "string",
       "default": " ",
-      "nWidth": "15%"
+      "nWidth": "10%"
     },
     {
       "id": "nTable6_2",

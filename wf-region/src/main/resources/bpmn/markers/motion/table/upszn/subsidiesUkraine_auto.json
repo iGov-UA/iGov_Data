@@ -5,7 +5,7 @@
       "name": "Прізвище, ініціали власника",
       "type": "string",
       "default": " ",
-      "nWidth": "30%"
+      "nWidth": "40%"
     },
     {
       "id": "nTable10",
@@ -19,14 +19,14 @@
       "name": "Державний номерний знак",
       "type": "string",
       "default": " ",
-      "nWidth": "15%"
+      "nWidth": "10%"
     },
     {
       "id": "nTable12",
       "name": "Рік випуску",
       "type": "string",
       "default": " ",
-      "nWidth": "15%"
+      "nWidth": "10%"
     },
     {
       "id": "nTable13",

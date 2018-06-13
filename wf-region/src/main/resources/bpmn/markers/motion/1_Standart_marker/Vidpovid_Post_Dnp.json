@@ -1,0 +1,15 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_VidpovidPost": {
+      "aField_ID": [
+        "sIndex",
+        "sPostAdress",
+        "asLust"
+      ],
+      "asID_Field": {
+        "sClientF": "asVidpovid"
+      },
+      "sCondition": "[sClientF] == 'sEnamPost'"
+    }
+  }
+}

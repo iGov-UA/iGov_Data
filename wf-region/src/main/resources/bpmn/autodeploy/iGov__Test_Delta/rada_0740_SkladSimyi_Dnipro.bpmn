@@ -21,7 +21,7 @@
         <activiti:formProperty id="sLabeZayava" name=" ; ;labelType=info" type="label" default="Якщо ви хочете отримати довідку вперше, вам треба особисто звернутись до відповідного відділу.&lt;br&gt; Ви можете завантажити порожній бланк заяви, перейшовши за посиланням. &lt;br&gt;Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1j9h2UgZwajLOTHaHs-qQL5GCoKIrndJlLlUaOEgzQgk/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Форма заяви для самостійного заповнення&lt;/a&gt;&lt;br&gt;Форма заяви для загального користування, щоб заповнити форму скопіюйте її в окремий файл."></activiti:formProperty>
         <activiti:formProperty id="sLabeRegistr" name=" ; ;labelType=info" type="label" default="Якщо ви раніше, надавали інформацію для внесення в міський реєст фізичних осіб, то скановані копії документів завантажувати не треба."></activiti:formProperty>
         <activiti:formProperty id="sLabeRayon" name=" ; ;labelType=warning" type="label" default="УВАГА! Для всіх районів крім Самарського діє лиш повнорна видача довідок, для тих хто вже внесений до реєстру(реєстр працює з березня 2017го)."></activiti:formProperty>
-        <activiti:formProperty id="asRegistr" name="Чи надавали ви раніше документи для внесення інформації в реєстр;(новий реєстр фізичних осіб м.Дніпра, який створено з березня 2017го року) позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" default="no" required="true">
+        <activiti:formProperty id="asRegistr" name="Чи надавали ви раніше документи для внесення інформації в реєстр;(новий реєстр фізичних осіб м.Дніпра, який створено з березня 2017го року)" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -338,7 +338,7 @@ ${sNameOrgan}.<br />
     </serviceTask>
     <userTask id="usertask3" name="Попередня перевірка" activiti:candidateGroups="dnepr_mvk_form3_${asDistrict}">
       <extensionElements>
-        <activiti:formProperty id="asRegistr" name="Чи надавали ви вже раніше документи для внесення інформації в реєстр;поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asRegistr" name="Чи надавали ви вже раніше документи для внесення інформації в реєстр;поначте галочкою - якщо так" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -621,10 +621,6 @@ ${sNameOrgan}<br>
     </serviceTask>
     <userTask id="usertask4" name="Видача довідки Заявнику" activiti:candidateGroups="dnepr_mvk_form3_${asDistrict}">
       <extensionElements>
-        <activiti:formProperty id="asRegistr" name="Чи надавали ви вже раніше документи для внесення інформації в реєстр;поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
-          <activiti:value id="yes" name="так"></activiti:value>
-          <activiti:value id="no" name="ні"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
@@ -836,7 +832,6 @@ execution.setVariable('sCountPayment', src)
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 <p>
 На жаль, Ви не сплатили за послугу доставки, тому не можемо надіслати Вам листа з довідкою про склад сім'ї.<br> 
 Отримайте довідку особисто, за нижче вказаною адресою.
@@ -856,10 +851,6 @@ ${sNameOrgan}<br>
     <sequenceFlow id="flow39" sourceRef="servicetask9" targetRef="usertask4"></sequenceFlow>
     <userTask id="usertask1" name="Передача довідки УкрПошті" activiti:candidateGroups="dnepr_mvk_form3_${asDistrict}">
       <extensionElements>
-        <activiti:formProperty id="asRegistr" name="Чи надавали ви вже раніше документи для внесення інформації в реєстр;поначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
-          <activiti:value id="yes" name="так"></activiti:value>
-          <activiti:value id="no" name="ні"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>

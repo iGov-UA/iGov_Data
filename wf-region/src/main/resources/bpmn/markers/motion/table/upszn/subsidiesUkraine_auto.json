@@ -5,28 +5,28 @@
       "name": "Прізвище, ініціали власника",
       "type": "string",
       "default": " ",
-      "nWidth": "40%"
+      "nWidth": "25%"
     },
     {
       "id": "nTable10",
       "name": "Марка автомобіля",
       "type": "string",
       "default": " ",
-      "nWidth": "20%"
+      "nWidth": "25%"
     },
     {
       "id": "nTable11",
       "name": "Державний номерний знак",
       "type": "string",
       "default": " ",
-      "nWidth": "10%"
+      "nWidth": "15%"
     },
     {
       "id": "nTable12",
       "name": "Рік випуску",
       "type": "string",
       "default": " ",
-      "nWidth": "10%"
+      "nWidth": "15%"
     },
     {
       "id": "nTable13",

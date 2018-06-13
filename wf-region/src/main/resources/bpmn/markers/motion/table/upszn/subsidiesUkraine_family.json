@@ -5,7 +5,7 @@
       "name": "Прізвище, ім'я, по батькові",
       "type": "string",
       "default": " ",
-      "nWidth": "40%"
+      "nWidth": "23%"
     },
     {
       "id" : "asTable2_2", 
@@ -28,35 +28,35 @@
 					"id" : "doughter", 
 					"name" : "дочка"
 				}], 
-			"nWidth" : "15%"
+			"nWidth" : "13%"
 	},
     {
       "id": "nTable3_2",
       "name": "Дата народження",
       "type": "date",
       "default": " ",
-      "nWidth": "10%"
+      "nWidth": "25%"
     },
     {
       "id": "nTable4_2",
       "name": "Серія та номер паспорту (або свідоцтва про народження",
       "type": "string",
       "default": " ",
-      "nWidth": "10%"
+      "nWidth": "13%"
     },
     {
       "id": "nTable5_2",
       "name": "Реєстраційний номер облікової картки платника податків (ІПН)",
       "type": "string",
       "default": " ",
-      "nWidth": "10%"
+      "nWidth": "13%"
     },
     {
       "id": "nTable6_2",
       "name": "Примітки",
       "type": "string",
       "default": " ",
-      "nWidth": "15%"
+      "nWidth": "13%"
     }
   ]
 }

@@ -259,7 +259,7 @@ ${sNameOrgan}<br>
 ${sAddress}<br><br>
 З собою мати документ, що посвідчує особу.<br><br>
 ${sPhoneOrgan}<br>
-${sWorkDay}<br>
+${sWorkTime}<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br>
@@ -354,7 +354,7 @@ ${sNameOrgan}<br>
 ${sAddress}<br><br>
 З собою мати документ, що посвідчує особу.<br><br>
 ${sPhoneOrgan}<br>
-${sWorkDay}<br>
+${sWorkTime}<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_feedback.html] 
 [pattern/mail/new_design/_common_signature_start.html]
@@ -447,7 +447,7 @@ execution.setVariable('sCountPayment', src)
 </p>
 З собою мати документ, що посвідчує особу.<br>
 ${sAddress}<br>
-${sWorkDay}<br>
+${sWorkTime}<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br>

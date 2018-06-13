@@ -5,7 +5,7 @@
       "name": "Прізвище, ім'я, по батькові",
       "type": "string",
       "default": " ",
-      "nWidth": "23%"
+      "nWidth": "28%"
     },
     {
       "id" : "asTable2_2", 
@@ -35,7 +35,7 @@
       "name": "Дата народження",
       "type": "date",
       "default": " ",
-      "nWidth": "25%"
+      "nWidth": "20%"
     },
     {
       "id": "nTable4_2",

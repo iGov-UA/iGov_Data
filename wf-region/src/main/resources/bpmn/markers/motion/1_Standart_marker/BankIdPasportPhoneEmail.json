@@ -4,16 +4,18 @@
       "aField_ID": [
         "phone",
         "email",
-        "FlagBankIdPhoneEmail"
+        "tPassport",
+        "FlagBankId"
       ],
       "asID_Field_sValue": [
         "[bankIdphone]",
         "[bankIdemail]",
+        "[bankIdPassport]",
         "1234567890"
       ],
       "asID_Field": {
         "sCondit1": "bankIdlastName",
-        "sCondit2": "FlagBankIdPhoneEmail"
+        "sCondit2": "FlagBankId"
       },
       "sCondition": "[sCondit1] != '1234567890'&&[sCondit2] != '1234567890'"
     }

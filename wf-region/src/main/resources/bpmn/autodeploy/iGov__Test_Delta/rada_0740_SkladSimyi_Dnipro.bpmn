@@ -27,12 +27,16 @@
         </activiti:formProperty>
         <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="Для замовлення послуги, буде необхідно завантажувати сканкопії документів, щоб завантажити кілька документів одним файлом скористайтесь ZIP архівом. Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити ZIP архів&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerzayvnik" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zayvnik.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" required="true">
           <activiti:value id="sVlasn" name="Власник житла"></activiti:value>
           <activiti:value id="sZarey" name="Зареєстрована особа, що не є власником"></activiti:value>
@@ -48,12 +52,14 @@
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу);bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="FlagBankIdPhoneEmail" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markerBankIdPhoneEmail" name="markerBankIdPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/markerBankIdPhoneEmail.json')}"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_D" name="Інформація про довірителя" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;DovirutLastName&quot;],&quot;sValue&quot;:&quot;Інформація про довірителя&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DovirutLastName" name="Прізвище довірителя" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DovirutFirstName" name="Ім'я довірителя" type="string" required="true"></activiti:formProperty>
@@ -105,18 +111,21 @@
         <activiti:formProperty id="sLabeRegistr2" name=" ; ;labelType=warning" type="label" default="УВАГА! Для всіх районів крім Самарського, довідки видаються тільки, якщо інформація про вас вже внесена в реєстр фізичних осіб (тобто, якщо ви вже отримували довідку у відділах реєстрації фіз. осіб після червня 2017го).&lt;br&gt; Якщо в реєстрі не має інформації про зареєстрованих за вашою адресою осіб, вам буде відмовлено в наданні послуги!"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name=" ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="markerPost" name="Post" type="markers" default="${markerService.loadFromFile('AK/Dnipro_Post_MarkerNoSOJ_ECP.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptMiddleName" name="По батькові; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptInn" name="IПН; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptPassport" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptAdress" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddressForPost" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkDay" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string" default="Відділ обліку проживання фізичних осіб управління у сфері державної реєстрації департаменту адміністративних послуг та дозвільних процедур Дніпровської міської ради"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Контактний телефон; ;bVisible=false" type="string" default=" "></activiti:formProperty>
+        
         <activiti:formProperty id="sID_Payment" name="ИД транзакции платежа; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sCountPayment" name="лічільник спрацювання таймера; ;bVisible=false" type="string" default="0"></activiti:formProperty>
         <activiti:formProperty id="nID_Subject" name="ИД-номер субъекта; ;bVisible=false" type="string" default="0"></activiti:formProperty>
@@ -124,6 +133,7 @@
         <activiti:formProperty id="sSum" name="сумма платежа; ;bVisible=false" type="string" default="55.59"></activiti:formProperty>
         <activiti:formProperty id="sID_Currency" name="ИД-строковой валюты; ;bVisible=false" type="string" default="UAH"></activiti:formProperty>
         <activiti:formProperty id="sDescription" name="строка-описание платежа; ;bVisible=false" type="string" default="сплата за отримання листа"></activiti:formProperty>
+        
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про склад сім'ї"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="довідку про склад сім'ї"></activiti:formProperty>
       </extensionElements>
@@ -335,7 +345,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" writable="false">
           <activiti:value id="sVlasn" name="Власник житла"></activiti:value>
           <activiti:value id="sZarey" name="Зареєстрована особа, що не є власником"></activiti:value>
@@ -613,7 +623,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" writable="false">
           <activiti:value id="sVlasn" name="Власник житла"></activiti:value>
           <activiti:value id="sZarey" name="Зареєстрована особа, що не є власником"></activiti:value>
@@ -848,7 +858,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" writable="false">
           <activiti:value id="sVlasn" name="Власник житла"></activiti:value>
           <activiti:value id="sZarey" name="Зареєстрована особа, що не є власником"></activiti:value>
@@ -960,7 +970,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markersLine_VP" name="Інформація про поштову доставку" type="markers" default="{&quot;attributes&quot;:{&quot;Line_VP&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Інформація про поштову доставку&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як заявник хоче отримати відповідь" type="enum" writable="false">
           <activiti:value id="sEnamPost" name="Поштою"></activiti:value>

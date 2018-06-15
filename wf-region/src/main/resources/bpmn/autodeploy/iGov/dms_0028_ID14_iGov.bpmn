@@ -193,7 +193,7 @@ execution.setVariable('sCustom', custom)</script>
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 Ви скористалися  послугою  "Оформлення паспорта громадянина України особам, які досягли 14-річного віку у формі ID-картки" <br>
-<p>Нагадуємо Вам, що Ви можете перевірити готовність свого паспорта за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p> 
+<p>Нагадуємо Вам, що Ви можете перевірити готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -248,7 +248,7 @@ ${sNameOrgan},<br>
          </ul>
      </ul>
 </p>
-<p>Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p>          
+<p>Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p>          
 <p>[cancelTask]</p>                
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -307,7 +307,7 @@ ${sNameOrgan},<br>
          </ul>
      </ul>
 </p>
-<p>Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p>          
+<p>Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p>          
 <p>[cancelTask]</p>                
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]

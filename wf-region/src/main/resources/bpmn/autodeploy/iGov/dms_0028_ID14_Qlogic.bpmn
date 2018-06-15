@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="dms_0028_ID14_Qlogic" name="Паспорт громадянина України особам, які досягли 14-річного віку у формі ID-картки" isExecutable="true">
-    <documentation>Смоктій К.В. QLogic Последние правки:  03.05.2018</documentation>
+    <documentation>Смоктій К.В. QLogic Последние правки:  16.05.2018</documentation>
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
@@ -23,7 +23,7 @@
           <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
           <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
+        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано місце проживання особи, яка буде отримувати паспорт" type="enum">
           <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lablepos" name=" ; ;labelType=info" type="label" default="Необхідним документом для отримання паспорта громадянина України у формі ID-картки є довідка про реєстрацію місця проживання/перебування особи. Її можна отримати особисто у органах реєстрації місця проживання або &lt;a href=&quot;https://igov.org.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;оформити цю довідку через iGov&lt;/a&gt; (працює не для всіх регіонів). Строк надання послуги через iGov - 10 робочих днів."></activiti:formProperty>
@@ -37,10 +37,12 @@
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketCode" name="Код  талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDistrictMariupol" name="Юзер-група щодо опрацювання заявки; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markers1" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/passport.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markers21" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic_28.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
@@ -160,7 +162,7 @@ execution.setVariable('sDistrictMariupol', GrpUserNameResult)
 									</ul>
 								</p>
 								<br>
-
+<p>Після подання документів Ви зможете перевіряти готовність документа за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p>  
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan},<br>
@@ -187,7 +189,7 @@ ${sNameOrgan},<br>
           <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
           <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum" writable="false">
+        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано місце проживання особи, яка буде отримувати паспорт" type="enum" writable="false">
           <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="result" name="Результат зустрічі" type="enum">

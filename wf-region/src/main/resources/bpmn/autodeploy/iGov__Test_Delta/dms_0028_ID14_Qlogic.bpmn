@@ -162,7 +162,7 @@ execution.setVariable('sDistrictMariupol', GrpUserNameResult)
 									</ul>
 								</p>
 								<br>
-
+<p>Після подання документів Ви зможете перевіряти готовність документа за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p>  
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan},<br>

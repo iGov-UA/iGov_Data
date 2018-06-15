@@ -140,7 +140,7 @@ execution.setVariable('sEndDay', timerEnd)</script>
 		<li>Якщо Ви є внутрішньо переміщеною особою, тобто адреса Вашої реєстрації (прописки) відноситься до тимчасово окупованої території або районів проведення антитерористичної операції (АТО), то Вам потрібно додатково принести з собою ксерокопію та оригінал довідки про взяття на облік внутрішньо переміщеної особи</li>
 	</ul>
 </p>
-<p>Після подання документів Ви зможете перевіряти готовність ID-картки за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p>          
+<p>Після подання документів Ви зможете перевіряти готовність ID-картки за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p>          
 <p>[cancelTask]</p>                
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -246,7 +246,7 @@ execution.setVariable('sCustom', custom)</script>
 [pattern/mail/new_design/_common_content_start.html]
                                     <p>
                               		Ви скористалися  послугою  "Отримання ID-картки замість вклеювання фотокарток при досягненні особою віку 25 або 45 років".<br></p>
-<p>Нагадуємо Вам, що Ви можете перевірити готовність свого паспорта за цим <a href="http://dmsu.gov.ua/perevirkastanu.php" target="_blank">посиланням</a> </p> 
+<p>Нагадуємо Вам, що Ви можете перевірити готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p> 
  <p>Якщо для замовлення послуги Ви використовували BankID, то після отримання паспорту завітайте у будь-яке відділення вашого банку та актуалізуйте свої дані. Це допоможе безперешкодно отримувати електронні послуги в майбутньому.
                               		</p>
                               		[pattern/mail/new_design/_common_content_end.html]

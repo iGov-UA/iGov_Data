@@ -36,7 +36,6 @@
           <activiti:value id="other" name="Інший"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sNumberAplication" name="Реєстраційний номер заяви ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sCategoryDoc" name="Перелік документів ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sID_Order" name="Номер заяви ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sStatus" name="Інший процесуальний статус учасника судового процесу, від імені якого подається документ" type="string" required="true" default=" "></activiti:formProperty>
         <activiti:formProperty id="sNameUr" name="Найменування юридичної особи" type="string" required="true" default=" "></activiti:formProperty>
@@ -53,6 +52,10 @@
     </startEvent>
     <userTask id="usertask1" name="прийняття рішення про реєстрацію документів" activiti:candidateGroups="Court_Of_Cassation">
       <extensionElements>
+        <activiti:formProperty id="bankIdlastName" name="прізвище в ПФ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я в ПФ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="по батькові в ПФ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="fio" name="ПІБ особи, яка внесла дані" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sPositionAplicant" name="Посада особи, яка внесла дані; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="email" name="Адреса особистої електронної пошти(e-mail); ;writable=false" type="string"></activiti:formProperty>

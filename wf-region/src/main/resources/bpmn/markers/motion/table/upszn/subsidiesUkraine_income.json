@@ -5,28 +5,34 @@
       "name": "Прізвище, ініціали",
       "type": "string",
       "default": " ",
-      "nWidth": "30%"
+      "nWidth": "28%"
     },
     {
       "id": "sTable7",
-      "name": "Вид доходу, інформація про який відсутня податковій",
+      "name": "Вид доходу",
       "type": "string",
       "default": " ",
-      "nWidth": "30%"
+      "nWidth": "23%"
     },
     {
-      "id": "nTable8",
+      "id": "sTable8",
       "name": "Сума доходу на місяць, грн",
       "type": "string",
       "default": " ",
       "nWidth": "10%"
     },
     {
-      "id": "nTable9",
+      "id": "sTable9",
       "name": "Найменування органцізації, у якій отримано дохід",
       "type": "string",
       "default": " ",
-      "nWidth": "30%"
+      "nWidth": "24%"
+    },
+    {
+      "id": "sTable14",
+      "name": "Довідка про дохід або письмове пояснення у вільній формі",
+      "type": "file",
+      "nWidth": "15%"
     }
   ]
 }

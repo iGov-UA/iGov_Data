@@ -5,35 +5,35 @@
       "name": "Прізвище, ініціали власника",
       "type": "string",
       "default": " ",
-      "nWidth": "25%"
+      "nWidth": "28%"
     },
     {
-      "id": "nTable10",
+      "id": "sTable10",
       "name": "Марка автомобіля",
       "type": "string",
       "default": " ",
-      "nWidth": "25%"
+      "nWidth": "23%"
     },
     {
-      "id": "nTable11",
+      "id": "sTable11",
       "name": "Державний номерний знак",
       "type": "string",
       "default": " ",
       "nWidth": "15%"
     },
     {
-      "id": "nTable12",
+      "id": "sTable12",
       "name": "Рік випуску",
       "type": "string",
       "default": " ",
       "nWidth": "15%"
     },
     {
-      "id": "nTable13",
+      "id": "sTable13",
       "name": "Авто отримані через підрозділи соцзахисту",
       "type": "string",
       "default": " ",
-      "nWidth": "20%"
+      "nWidth": "19%"
     }
   ]
 }

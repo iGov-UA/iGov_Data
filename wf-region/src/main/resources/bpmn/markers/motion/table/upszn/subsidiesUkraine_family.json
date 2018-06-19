@@ -31,28 +31,28 @@
 			"nWidth" : "13%"
 	},
     {
-      "id": "nTable3_2",
+      "id": "sTable3_2",
       "name": "Дата народження",
       "type": "date",
       "default": " ",
       "nWidth": "20%"
     },
     {
-      "id": "nTable4_2",
+      "id": "sTable4_2",
       "name": "Серія та номер паспорту (або свідоцтва про народження",
       "type": "string",
       "default": " ",
       "nWidth": "13%"
     },
     {
-      "id": "nTable5_2",
+      "id": "sTable5_2",
       "name": "Реєстраційний номер облікової картки платника податків (ІПН)",
       "type": "string",
       "default": " ",
       "nWidth": "13%"
     },
     {
-      "id": "nTable6_2",
+      "id": "sTable6_2",
       "name": "Примітки",
       "type": "string",
       "default": " ",

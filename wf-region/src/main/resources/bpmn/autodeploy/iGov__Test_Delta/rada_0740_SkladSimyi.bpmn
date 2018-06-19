@@ -298,9 +298,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="nFile_SvidNar" name="Свідоцтва про народження дітей; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidDeath" name="Свідоцтво про смерть; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
-        
         <activiti:formProperty id="markerDash2" name="markerLabels" type="markers" default="${markerService.loadFromFile('form3/form3_Dash2.json')}"></activiti:formProperty>
-        
         
         <activiti:formProperty id="asResult" name="Результат зустрічі" type="enum" required="true">
           <activiti:value id="sEnamReestr" name="Громадянин отримав довідку"></activiti:value>
@@ -308,13 +306,8 @@ ${sNameOrgan},<br>
         </activiti:formProperty>
         <activiti:formProperty id="Pasportyst" name="Посада того, хто оформлює довідку" type="string"></activiti:formProperty>
         <activiti:formProperty id="Nachalnyk" name="Посада керівника органу" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sSots" name="Орган, для якого видається довідка" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/forma2.html]; ;bVisible=false ,bPrintform=true" type="string" default="Форма 3" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_2" name="[pattern/print/rada/forma2_lubin.html]; ;bVisible=false ,bPrintform=true" type="string" default="Форма 2" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_3" name="[pattern/print/rada/forma3.html]; ;bVisible=false ,bPrintform=true" type="string" default="Форма Мінсоцполітики №204" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_4" name="[pattern/print/rada/forma3_1.html]; ;bVisible=false ,bPrintform=true" type="string" default="Форма Мінсоцполітики №204 (розширена)" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_3" name="[pattern/print/rada/forma3_lubin.html]; ;bVisible=false ,bPrintform=true" type="string" default="Форма Мінсоцполітики №204 (для домогосподарств)" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="sFlag" name="Флаг органу; ;bVisible=false" type="string" default="false"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="Шапка заяви ; ;bVisible=false" type="string"></activiti:formProperty>

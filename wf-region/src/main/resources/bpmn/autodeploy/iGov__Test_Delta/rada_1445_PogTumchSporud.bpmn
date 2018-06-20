@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="rada_1445_PogTumchSporud" name="Погодження розміщення тимчасових споруд для впровадження підприємницької діяльності" isExecutable="true">
+  <process id="rada_1445_PogTumchSporud" name="Погодження розміщення тимчасових споруд для ведення підприємницької діяльності" isExecutable="true">
     <documentation>Рефакторинг: Куліш А.Ю. 20.06.18</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
@@ -39,8 +39,8 @@
         <activiti:formProperty id="sShapka" name="шапка принтформы; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Погодження розміщення тимчасових споруд для впровадження підприємницької діяльності"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="погодження розміщення тимчасових споруд для впровадження підприємницької діяльності"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Погодження розміщення тимчасових споруд для ведення підприємницької діяльності"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="погодження розміщення тимчасових споруд для ведення підприємницької діяльності"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask4" name="Лист Чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">

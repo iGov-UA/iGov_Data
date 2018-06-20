@@ -6,14 +6,23 @@
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть Центр надання адміністративних послуг" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="sLabe2000" name=" ; ;labelType=warning" type="label" default="В цьому місті доступне викопіювання у масштабі 1:2000"></activiti:formProperty>
         <activiti:formProperty id="sLabeUmova" name=" ; ;labelType=info" type="label" default="Викопіювання може отримати тільки особа, що має право власності або користування об’ктом нерухомого майна (будівлею чи земельною ділянкою)"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="Ваш ІПН" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Ваші паспортні дані" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Контактний телефон" type="string" default="+380" required="true"></activiti:formProperty>
-        <activiti:formProperty id="email" name="Ваш e-mail; На цей e-mail  Ви отримаєте результат обробки Вашого звернення" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="markerOsoba" name="markers" type="markers" default="${markerService.loadFromFile('AK/UrFop_OpenData.json')}"></activiti:formProperty>
         <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">
           <activiti:value id="sEnamFop" name="Фізична особа"></activiti:value>
@@ -43,8 +52,9 @@
         <activiti:formProperty id="fZemleustr" name="Рішення ради про дозвіл на розробку проекту землеустрою; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fNeruhVlasn" name="Право власності на нерухомість; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fSvidReg" name="Свідоцтво про державну реєстрацію юр.особи або ФОП; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankId_scan_passport" name="Паспорт Громадянина; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerFiles" name="markers" type="markers" default="${markerService.loadFromFile('architecture/Ark_734_files.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="sNameOrgan" name="Назва ЦНАП; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон ЦНАП; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string" default=" "></activiti:formProperty>
@@ -114,7 +124,7 @@ ${sNameOrgan},<br>
       <extensionElements>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспорті дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспорті дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта" type="string" writable="false"></activiti:formProperty>
@@ -240,7 +250,7 @@ ${sNameOrgan},<br>
       <extensionElements>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспорті дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспорті дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта" type="string" writable="false"></activiti:formProperty>

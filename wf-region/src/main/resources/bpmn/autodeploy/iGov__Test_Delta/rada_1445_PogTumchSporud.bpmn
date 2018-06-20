@@ -120,7 +120,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="doc" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="sBody_1" name="[pattern/print/architecture/rada_1445_PogTumchSporud.htm]; ;bVisible=false" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/architecture/rada_1445_PogTumchSporud.htm]; ;bVisible=false ,bPrintform=true" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="шапка принтформы; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
@@ -230,7 +230,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="fVidpovid" name="Відповідь (сканкопія); ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="markerDash2" name="markerDash2" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash2_ComFile.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sBody_1" name="[pattern/print/architecture/rada_1445_PogTumchSporud.htm]; ;bVisible=false" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/architecture/rada_1445_PogTumchSporud.htm]; ;bVisible=false ,bPrintform=true" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>

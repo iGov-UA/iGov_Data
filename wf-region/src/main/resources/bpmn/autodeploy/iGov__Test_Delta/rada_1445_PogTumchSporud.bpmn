@@ -261,14 +261,15 @@ ${sNameOrgan},<br>
 <p>Ваше звернення №[sID_Order] щодо ${sPosluga_nameZV} - опрацьовано. <br><br>
 
 Вам надано дозвіл на розміщення на території міста тимчасових споруд для впровадження підприємницької діяльності.<br>
-Ви або уповноважена вами особа (при наявності довіреності) можете отримати відповідь особисто<br>
-${sAddress}<br>
-${sWorkTime}<br><br>
+Ви або уповноважена вами особа (при наявності довіреності) можете отримати відповідь особисто.<br><br>
+
 При собі треба мати:<br>
 1. Документ, що посвідчує особу.<br>
 2. Для уповоноваженої особи - довіренність.<br>
-3. Викопіювання з ситуаційного плану міста М 1:500 з зазначенням бажаного місця розташування тимчасової споруди. <br />
-			
+3. Викопіювання з ситуаційного плану міста М 1:500 з зазначенням бажаного місця розташування тимчасової споруди. <br><br>
+	
+${sAddress}<br>
+${sWorkTime}<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -287,7 +288,7 @@ ${sPhoneOrgan}<br>
           <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[" "]]></activiti:expression>
+          <activiti:expression><![CDATA[${fVidpovid}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

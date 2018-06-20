@@ -30,7 +30,7 @@
         
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;bankId_scan_passport&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="doc" name="Викопіювання з ситуаційного плану міста М 1:500;(з зазначенням бажаного місця розташування тимчасової споруди, погоджене з балансоутримувачами інженерних мереж міста); ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="doc" name="Викопіювання з ситуаційного плану міста М 1:500;(з зазначенням бажаного місця розташування тимчасової споруди, погоджене з балансоутримувачами інженерних мереж міста);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="sNameOrgan" name="название органа в подписи письма; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="график работы; ;bVisible=false" type="string"></activiti:formProperty>

@@ -522,3 +522,5 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 498;ЦНАП м. Олешки(район);4535;341;dms_0176_Zagran_DMSiGov_auto;15;DMS
 499;ЦНАП Кочубеївської ОТГ;4535;342;dms_0176_Zagran_DMSiGov_auto;15;DMS_OTG
 500;ЦНАП Маневицької РДА;5459;343;dms_0176_Zagran_DMSiGov_auto;15;DMS
+
+501;Відділ реєстрації Станіславська ОТГ;5007;344;dnepr_dms-89_auto;40;REGISTRATION_DAY5

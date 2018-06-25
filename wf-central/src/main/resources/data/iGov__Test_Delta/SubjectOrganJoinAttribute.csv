@@ -13561,7 +13561,7 @@ nID_SubjectOrganJoin;sName;sValue
 3452;nID_ServiceCustomPrivate_visitDay;892
 
 3453;sNameOrgan;Каховський РС ДМСУ в Херсонській області
-3453;nID_ServiceCustomPrivate_visitDay;896
+3453;nID_ServiceCustomPrivate_visitDay;894
 3453;sAddress;м. Каховка, вул. Мелітопольська 153
 
 3454;nID_ServiceCustomPrivate_visitDay;896
@@ -14007,6 +14007,7 @@ nID_SubjectOrganJoin;sName;sValue
 3508;sRozkladPriyom;=[sPosada]=='0'?'Понеділок з 8.00 до 12.00 години<br>П’ятниця з 13.00 до 15.45 години':''
 3508;sMailClerk226;stanislav_sr@meta.ua
 3508;sShapkaGolova;Голові Станіславської ОТГ
+3508;nID_Department_visitDay;344
 
 3509;sNameOrgan;Одномандатний виборчий округ №26
 3509;sMailClerk967;akylish88@gmail.com

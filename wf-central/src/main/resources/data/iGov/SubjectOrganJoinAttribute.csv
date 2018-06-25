@@ -13559,7 +13559,7 @@ nID_SubjectOrganJoin;sName;sValue
 3452;nID_ServiceCustomPrivate_visitDay;892
 
 3453;sNameOrgan;Каховський РС ДМСУ в Херсонській області
-3453;nID_ServiceCustomPrivate_visitDay;896
+3453;nID_ServiceCustomPrivate_visitDay;894
 3453;sAddress;м. Каховка, вул. Мелітопольська 153
 
 3454;nID_ServiceCustomPrivate_visitDay;896
@@ -14159,7 +14159,7 @@ nID_SubjectOrganJoin;sName;sValue
 3528;sAddress;<b>Адреса:</b> 75100, Херсонська область, м. Олешки, вул. Гвардійська, 24
 3528;sRekv;Одержувач платежу: реквізити Олешків
 3528;nID_Department_visitDay;341
-3528;sRekvIDZagranPos;<a href="http://drohobych-rada.gov.ua/administratyvnyj-zbir-miskogo-viddilu-tsnap" target="_blank">доступні за посиланням</a>
+3528;sRekvIDZagranPos;<a href="https://docs.google.com/document/d/1IC97TIc_9sQF6ABcMEe33iaqeSJLV3DRlzqzplaxxK8/edit?usp=sharing" target="_blank">доступні за посиланням</a>
 
 3529;sNameOrgan;Олешківський районний ЦНАП при РДА
 3529;sPhoneOrgan;<b>Телефон(и):</b> +380663103072
@@ -14168,7 +14168,7 @@ nID_SubjectOrganJoin;sName;sValue
 3529;sAddress;<b>Адреса:</b> 75100, Херсонська область, м. Олешки, вул. Гвардійська, 24
 3529;sRekv;Одержувач платежу: реквізити Олешків
 3529;nID_Department_visitDay1;341
-3529;sRekvIDZagranPos;<a href="http://drohobych-rada.gov.ua/administratyvnyj-zbir-miskogo-viddilu-tsnap" target="_blank">доступні за посиланням</a>
+3529;sRekvIDZagranPos;<a href="https://docs.google.com/document/d/1IC97TIc_9sQF6ABcMEe33iaqeSJLV3DRlzqzplaxxK8/edit?usp=sharing" target="_blank">доступні за посиланням</a>
 
 3530;sNameOrgan;ЦНАП м.Обухів
 3530;sPhoneOrgan;(03244) 2-05-84

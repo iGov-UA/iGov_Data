@@ -23,6 +23,7 @@
         <activiti:formProperty id="nID_ServiceCustomPrivate_visitDay" name="Номер черги за довідником ДМС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_Type_visitDay" name="sID_Type_visitDay; ;bVisible=false" type="string" default="DMS"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>

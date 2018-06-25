@@ -1,0 +1,28 @@
+{
+  "motion": {
+    "ValuesFieldsOnCondition_Lay_true": {
+      "aField_ID": [
+        "sFlag"
+      ],
+      "asID_Field_sValue": [
+        "true"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDistrict"
+      },
+      "sCondition": "[sCondit1] == 'sSamar'||[sCondit1] == 'sSobor'||[sCondit1] == 'sCentr'"
+    },
+    "ValuesFieldsOnCondition_Lay_registr": {
+      "aField_ID": [
+        "sFlag"
+      ],
+      "asID_Field_sValue": [
+        "registr1"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDistrict"
+      },
+      "sCondition": "[sCondit1] != 'sSamar'&&[sCondit1] != 'sSobor'&&[sCondit1] != 'sCentr'&&[sCondit1] != ' '&&[sCondit1] != 'null'"
+    }
+  }
+}

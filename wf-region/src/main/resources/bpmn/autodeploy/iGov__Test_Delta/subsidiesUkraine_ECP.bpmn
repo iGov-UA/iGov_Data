@@ -317,8 +317,8 @@
           <activiti:value id="reject" name="відмова в обробці (обов'язково вкажіть причину в коментарі)"></activiti:value>
           <activiti:value id="sign" name="запросити громадянина до підписання (якщо заявка без ЕЦП)"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="PrintForm_1" name="File label;File title;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201805.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_2" name="File label;File title;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201805.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_1" name="Заява;Заява;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201805.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_2" name="Декларація;Декларація;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201805.html" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/UPSZN/subsidy_zayava_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/UPSZN/subsidy_declaration_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Декларація" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ScanPassport" name="Скан-копія паспорта;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -447,9 +447,10 @@ ${sNameOrgan}<br/>
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
           <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="electricity_number1" name="Номер особового рахунку" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="electricity_name" name="Назва організації, що надає послугу" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="electricity_number1" name="Номер особового рахунку (електроенергія); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="electricity_name" name="Назва організації, що надає послугу (електроенергія); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="electricity_notice" name="Примітки (електроенергія)" type="enum" writable="false">
+          <activiti:value id="0" name=" "></activiti:value>
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
@@ -467,6 +468,7 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="gas_number1" name="Номер особового рахунку (газ); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="gas_name" name="Назва організації, що надає послугу (газ); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="gas_notice" name="Примітки (газ)" type="enum" writable="false">
+          <activiti:value id="0" name=" "></activiti:value>
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
@@ -477,6 +479,7 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="coolwater_number1" name="Номер особового рахунку (водопостачання); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="coolwater_name" name="Назва організації, що надає послугу (водопостачання); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="coolwater_notice" name="Примітки; наприклад, наявність лічильника (водопостачання)" type="enum" writable="false">
+          <activiti:value id="0" name=" "></activiti:value>
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
@@ -487,6 +490,7 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="hotwater_number1" name="Номер особового рахунку (гаряча вода); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="hotwater_name" name="Назва організації, що надає послугу (гаряча вода); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="hotwater_notice" name="Примітки; наприклад, наявність лічильника (гаряча вода)" type="enum" writable="false">
+          <activiti:value id="0" name=" "></activiti:value>
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
@@ -497,6 +501,7 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="waterback_number1" name="Номер особового рахунку (водовідведення); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="waterback_name" name="Назва організації, що надає послугу (водовідведення); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="waterback_notice" name="Примітки (водовідведення)" type="enum" writable="false">
+          <activiti:value id="0" name=" "></activiti:value>
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
@@ -507,6 +512,7 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="warming_number1" name="Номер особового рахунку (опалення); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="warming_name" name="Назва організації, що надає послугу (опалення); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="warming_notice" name="Примітки (опалення)" type="enum" writable="false">
+          <activiti:value id="0" name=" "></activiti:value>
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
@@ -514,9 +520,9 @@ ${sNameOrgan}<br/>
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
           <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="garbage_number1" name="Номер особового рахунку" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="garbage_name" name="Назва організації, що надає послугу" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="garbage_notice" name="Примітки; наприклад, наявність лічильника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="garbage_number1" name="Номер особового рахунку (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="garbage_name" name="Назва організації, що надає послугу (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="garbage_notice" name="Примітки (вивіз відходів)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_2" name="Дані для декларації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place_type&quot;],&quot;sValue&quot;:&quot;Дані для декларації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place_type" name="Тип будинку" type="enum" writable="false">
           <activiti:value id="1" name="індивідуальний будинок"></activiti:value>
@@ -547,9 +553,9 @@ ${sNameOrgan}<br/>
           <activiti:value id="attr4" name="субсидія погоджена"></activiti:value>
           <activiti:value id="attr5" name="субсидія потребує розгляду комісії"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="decision" name="Рішення про надання субсидії" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_1" name="File label;File title;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201805.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_2" name="File label;File title;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201805.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="decision" name="Рішення про надання субсидії; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_1" name="Заява;Заява;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201805.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_2" name="Декларація;Декларація;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201805.html" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/UPSZN/subsidy_zayava_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/UPSZN/subsidy_declaration_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Декларація" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ScanPassport" name="Скан-копія паспорта;bNew=true" type="file" writable="false"></activiti:formProperty>

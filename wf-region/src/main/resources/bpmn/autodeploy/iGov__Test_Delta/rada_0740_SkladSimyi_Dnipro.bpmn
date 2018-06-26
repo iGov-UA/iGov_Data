@@ -88,7 +88,9 @@
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири" type="long" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DomovKnig" name="Домова книга;(сканкопія оригіналу, завантажте сторінки, які підтверджуть реєстрацію вас та інших співмешканців);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersInOs" name="ShowFields" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_inOs.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_3" name="Інші зареєстровані особи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;chekReestrOsob&quot;],&quot;sValue&quot;:&quot;Інші зареєстровані особи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="chekReestrOsob" name="Чи зареєстровані по цій адресі інші особи?;(окрім заявника або довірителя)" type="enum" required="true">
           <activiti:value id="sNo" name="Ні, крім заявника за зазначеною адресою ніхто не зареєстрований"></activiti:value>
@@ -98,6 +100,7 @@
         </activiti:formProperty>
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" default="${markerService.loadFromFile('table/registr/form3_table_Dnipro.json')}"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб;(сканкопії оригіналу, перша, друга та сторінка з реэстраціэю, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб;(сканкопії оригіналу);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження;(сканкопії оригіналу, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersLine_4" name="Спосіб отримання довідки заявником" type="markers" default="{&quot;attributes&quot;:{&quot;Line_4&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Спосіб отримання довідки заявником&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як ви хочете отримати відповідь" type="enum" required="true">
@@ -392,6 +395,7 @@ ${sNameOrgan}.<br />
         </activiti:formProperty>
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayIPN" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_V" name="Спосіб отримання документа" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Спосіб отримання документа&quot;}}}"></activiti:formProperty>
@@ -669,6 +673,7 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name="Заява з ЕЦП; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_V" name="Спосіб отримання документа" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Спосіб отримання документа&quot;}}}"></activiti:formProperty>
@@ -927,6 +932,7 @@ ${sNameOrgan}<br/>
         </activiti:formProperty>
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_V" name="Спосіб отримання документа" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Спосіб отримання документа&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як заявник хоче отримати відповідь" type="enum" writable="false">

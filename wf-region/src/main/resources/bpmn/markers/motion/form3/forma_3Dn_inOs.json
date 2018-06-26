@@ -21,7 +21,8 @@
     },
     "ShowFieldsOnCondition_sDor": {
       "aField_ID": [
-        "nFile_ZarPasports"
+        "nFile_ZarPasports",
+        "nFile_ZarIPNs"
       ],
       "asID_Field": {
         "sConditF": "sFlag",
@@ -44,7 +45,8 @@
     "ShowFieldsOnCondition_sDorDit": {
       "aField_ID": [
         "nFile_NarSvid",
-        "nFile_ZarPasports"
+        "nFile_ZarPasports",
+        "nFile_ZarIPNs"
       ],
       "asID_Field": {
         "sConditF": "sFlag",

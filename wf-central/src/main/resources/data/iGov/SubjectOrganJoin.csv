@@ -3196,7 +3196,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3526;205;Каховський міський ЦНАП;Каховський міський ЦНАП;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6510400000
 3527;288;Каховський міський ЦНАП;Каховський міський ЦНАП;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6500000000
 3528;205;Олешківський районний ЦНАП при РДА;Олешківський районний ЦНАП при РДА;khers_oleshkiR;khers_oleshkiR; ; ;NULL;NULL;6525000000
-3529;288;Олешківський районний ЦНАП при РДА;Олешківський районний ЦНАП при РДА;khers_oleshkiR;khers_oleshkiR; ; ;NULL;NULL;6500000000
+3529;2;Олешківський районний ЦНАП при РДА;Олешківський районний ЦНАП при РДА;khers_oleshkiR;khers_oleshkiR; ; ;NULL;NULL;6500000000
 3530;225;ЦНАП м.Обухів;ЦНАП м.Обухів;kiev_obuhivT;kiev_obuhivT;;;NULL;NULL;3211600000
 3531;225;Кочубеївська ОТГ ЦНАП(Високопільський район);Кочубеївська ОТГ ЦНАП(Високопільський район);khers_KochubOTG;khers_KochubOTG; ; ;NULL;NULL;6521881501
 3532;2;Кочубеївська ОТГ ЦНАП(Високопільський район);Кочубеївська ОТГ ЦНАП(Високопільський район);khers_KochubOTG;khers_KochubOTG; ; ;NULL;NULL;6500000000

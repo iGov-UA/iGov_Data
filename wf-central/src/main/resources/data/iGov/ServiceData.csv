@@ -5115,11 +5115,11 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5258;702;660;660;NULL;4;{"processDefinitionId":"ternopol_oda_226:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5259;11;661;661;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5260;702;661;661;NULL;4;{"processDefinitionId":"ternopol_oda_226:1:1"};;false;212;false;;BankID,EDS,mpbds;0
-5261;28;648;648;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5262;25;648;648;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5263;173;648;648;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5264;175;648;648;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5265;1431;648;648;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5261;28;648;648;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5262;25;648;648;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5263;173;648;648;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5264;175;648;648;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5265;1431;648;648;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5266;28;115;115;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5267;25;115;115;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5268;173;115;115;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0

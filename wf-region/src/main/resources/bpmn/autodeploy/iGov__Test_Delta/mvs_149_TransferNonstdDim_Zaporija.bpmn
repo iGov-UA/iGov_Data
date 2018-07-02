@@ -689,7 +689,6 @@ ${sListDocumentsLetter}
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 <b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
 <p> Ваше звернення щодо надання дозволу на на рух великогабаритних та великовагових транспортних засобів передано на розгляд в Управління патрульної поліції  і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
-Реєстраційний номер заяви: ${reestr_numb};<br />
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 	${sNameOrganTransfer} <br> 

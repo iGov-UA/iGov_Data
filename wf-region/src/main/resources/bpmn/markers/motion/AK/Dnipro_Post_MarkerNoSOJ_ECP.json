@@ -30,22 +30,20 @@
         "form_signed_all_1"
       ],
       "asID_Field": {
-        "sClient2": "asVidpovid",
         "sClient1": "asRegistr",
         "sClientF": "sFlag"
       },
-      "sCondition": "([sClient2]=='sEnamPost'&&[sClient1]=='no'&&[sClientF] == 'true') && ([sClientR] != 'no' && [sClientD] != 'sPrivSector')"
+      "sCondition": "[sClient1]=='no' && [sClientF] == 'true'"
     },
     "RequiredFieldsOnCondition_PostECPRek": {
       "aField_ID": [
         "form_signed_all_1"
       ],
       "asID_Field": {
-        "sClient2": "asVidpovid",
         "sClient1": "asRegistr",
         "sClientF": "sFlag"
       },
-      "sCondition": "([sClient2]=='sEnamPost'&&[sClient1]=='no'&&[sClientF] == 'true') && ([sClientR] != 'no' && [sClientD] != 'sPrivSector')"
+      "sCondition": "[sClient1]=='no' && [sClientF] == 'true'"
     }
   }
 }

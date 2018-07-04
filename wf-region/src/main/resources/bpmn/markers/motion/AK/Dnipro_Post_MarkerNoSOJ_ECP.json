@@ -6,9 +6,12 @@
         "asVidpovid"
       ],
       "asID_Field": {
-        "sClientF": "sFlag"
+        "sClientF": "sFlag",
+        "sClientR": "asRegistr",
+        "sClientD": "asBudType"
+        
       },
-      "sCondition": "([sClientF] == 'true'||[sClientF] == 'registr1')"
+      "sCondition": "([sClientF] == 'true' || [sClientF] == 'registr1') && ([sClientR] != 'no' && [sClientD] != 'sPrivSector')"
     },
     "ShowFieldsOnCondition_PostPost": {
       "aField_ID": [

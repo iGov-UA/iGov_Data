@@ -90,7 +90,7 @@
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири" type="long" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DomovKnig" name="Домова книга;(сканкопія оригіналу, завантажте сторінки, які підтверджуть реєстрацію вас та інших співмешканців);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DK_KartReestr" name="Картка реєстрації особи;(якщо додатково до домової книги маєте цей документ, завантажте його скановану копію);bNew=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="sLabe_DomovKnig" name=" ; ;labelType=info" type="label" default="Коли будете отримувати довідку обов'язково візьміть з собою оригінал домової книгу"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_DomovKnig" name=" ; ;labelType=info" type="label" default="Коли будете отримувати довідку, обов'язково візьміть з собою оригінал домової книги"></activiti:formProperty>
         <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersInOs" name="ShowFields" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_inOs.json')}"></activiti:formProperty>
         
@@ -416,6 +416,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markerDash1" name="markerLabels" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_Dash1.json')}"></activiti:formProperty>
         <activiti:formProperty id="asDecide" name="Чи можливо надати заявнику довідку?" type="enum" required="true">
           <activiti:value id="sEnamAccept" name="Можливо! Надіслати лист запрошення або лист для оплати доставки поштою"></activiti:value>
+          <activiti:value id="sEnamDodChas" name="Для перевірки інформації потрібен додатковий час"></activiti:value>
           <activiti:value id="sEnamReject" name="Відмова. Невірно вказані дані. (з коментарем)"></activiti:value>
           <activiti:value id="sEnamRejectNR" name="Відмова. Відсутня інформація в реєстрі"></activiti:value>
         </activiti:formProperty>
@@ -449,6 +450,34 @@ execution.setVariable('sID_Payment', Payment)
     <sequenceFlow id="flow29" name="БЕЗ ПОШТИ" sourceRef="exclusivegateway2" targetRef="servicetask6">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamAccept' && asVidpovid == 'sEnamnarochno'}]]></conditionExpression>
     </sequenceFlow>
+    <sequenceFlow id="flow84" name="Додатковий час на розгляд" sourceRef="exclusivegateway2" targetRef="servicetask21">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamDodChas'}]]></conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="servicetask21" name="+ Строк відповіді" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+[pattern/mail/new_design/_common_content_start.html]
+Для надання довідки необхідно перевірити інформацію, шо потребує додаткового часу.<br> 
+
+Ви будете повідомлені про результат найближчим часом.<br> 
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan}<br>
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
     <serviceTask id="servicetask8" name="Відмова" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="to">
@@ -1096,10 +1125,6 @@ ${sNameOrgan}<br>
     <sequenceFlow id="flow81" sourceRef="parallelgateway6" targetRef="endevent8"></sequenceFlow>
     <sequenceFlow id="flow82" sourceRef="scripttask3" targetRef="exclusivegateway2"></sequenceFlow>
     <sequenceFlow id="flow83" sourceRef="servicetask20" targetRef="parallelgateway1"></sequenceFlow>
-    <serviceTask id="servicetask21" name="+ Строк відповіді" activiti:delegateExpression="#{MailTaskWithoutAttachment}"></serviceTask>
-    <sequenceFlow id="flow84" name="Додатковий час на розгляд" sourceRef="exclusivegateway2" targetRef="servicetask21">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[Додатковий час на розгляд]]></conditionExpression>
-    </sequenceFlow>
     <sequenceFlow id="flow85" sourceRef="servicetask21" targetRef="usertask3"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_rada_0740_SkladSimyi_Dnipro">

@@ -11,7 +11,7 @@
         "sClientD": "asBudType"
         
       },
-      "sCondition": "([sClientF] == 'true' || [sClientF] == 'registr1') && ([sClientR] != 'no' && [sClientD] != 'sPrivSector')"
+      "sCondition": "([sClientF] == 'true' || [sClientF] == 'registr1') && ([sClientR] != 'yes' && [sClientD] != 'sPrivSector')"
     },
     "ShowFieldsOnCondition_PostPost": {
       "aField_ID": [

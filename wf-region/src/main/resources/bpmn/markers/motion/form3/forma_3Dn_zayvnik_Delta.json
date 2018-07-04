@@ -6,6 +6,7 @@
         "bankIdlastName",
         "bankIdfirstName",
         "bankIdmiddleName",
+        "bankIdbirthDay",
         "bankIdinn",
         "tPassport",
         "phone",
@@ -20,12 +21,13 @@
       "aField_ID": [
         "asStatus",
         "sLabePasport",
-        "phone",
         "bankIdlastName",
         "bankIdfirstName",
         "bankIdmiddleName",
+        "bankIdbirthDay",
         "bankIdinn",
         "tPassport",
+        "phone",
         "email"
       ],
       "asID_Field": {

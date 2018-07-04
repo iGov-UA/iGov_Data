@@ -34,7 +34,7 @@
         "sClient1": "asRegistr",
         "sClientF": "sFlag"
       },
-      "sCondition": "[sClient2]=='sEnamPost'&&[sClient1]=='no'&&[sClientF] == 'true'"
+      "sCondition": "([sClient2]=='sEnamPost'&&[sClient1]=='no'&&[sClientF] == 'true') && ([sClientR] != 'no' && [sClientD] != 'sPrivSector')"
     },
     "RequiredFieldsOnCondition_PostECPRek": {
       "aField_ID": [
@@ -45,7 +45,7 @@
         "sClient1": "asRegistr",
         "sClientF": "sFlag"
       },
-      "sCondition": "[sClient2]=='sEnamPost'&&[sClient1]=='no'&&[sClientF] == 'true'"
+      "sCondition": "([sClient2]=='sEnamPost'&&[sClient1]=='no'&&[sClientF] == 'true') && ([sClientR] != 'no' && [sClientD] != 'sPrivSector')"
     }
   }
 }

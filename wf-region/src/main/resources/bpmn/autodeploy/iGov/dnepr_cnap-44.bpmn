@@ -147,7 +147,7 @@
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
         </activiti:field>
         <activiti:field name="bcc">
-          <activiti:string><![CDATA[zhigan.roman@gmail.com]]></activiti:string>
+          <activiti:string><![CDATA[akylish88@gmail.com ]]></activiti:string>
         </activiti:field>
         <activiti:field name="html">
           <activiti:expression><![CDATA[<!DOCTYPE html>
@@ -243,7 +243,7 @@
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
         </activiti:field>
         <activiti:field name="bcc">
-          <activiti:string><![CDATA[zhigan.roman@gmail.com]]></activiti:string>
+          <activiti:string><![CDATA[akylish88@gmail.com ]]></activiti:string>
         </activiti:field>
         <activiti:field name="html">
           <activiti:expression><![CDATA[<!DOCTYPE html>

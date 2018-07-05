@@ -40,13 +40,13 @@ if (execution.getVariable('sID_UA') == '6100000000'){
 per1 = 'Тернопільської обласної державної адміністрації'
 per2 = 'adres'
 var per3 = 'ternopil_vrp@ukr.net'
-var per4 = 'zhigan.roman@gmail.com'
+var per4 = 'akylish88@gmail.com '
 }
 if (execution.getVariable('sID_UA') == '4800000000'){
 per1 = 'Миколаївської обласної державної адміністрації'
 per2 = 'Миколаївська обласна держана адміністрація 54001, м. Миколаїв, вул. Адміральська, 22'
-var per3 = 'zhigan.roman@gmail.com'
-var per4 = 'zhigan.roman@gmail.com'
+var per3 = 'akylish88@gmail.com '
+var per4 = 'akylish88@gmail.com '
 }
 if (execution.getVariable('sID_UA') == '7400000000'){
 per1 = 'Чернігівської обласної державної адміністрації'

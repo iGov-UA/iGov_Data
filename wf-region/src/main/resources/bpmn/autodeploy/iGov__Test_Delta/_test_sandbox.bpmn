@@ -25,7 +25,6 @@
         <activiti:formProperty id="form_signed_all_1" name="Перша Заява громадянина з ЕЦП; ;bNew=true, bPrintFormFileAsPDF=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для наложения ЭЦП; ;bVisible=false" type="string" default="pattern/print/testPrint2.html"></activiti:formProperty>
         <activiti:formProperty id="nFile1" name="Файл для накладення підпису; ;bNew=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="sTableDocExt" name="Таблиця з документами; ;bNew=true" type="table" default="${markerService.loadFromFile('table/court/CourtOfCassation_sTableDoc.json')}"></activiti:formProperty>
         <activiti:formProperty id="sTableDocInt" name="Таблиця з документами реквайр фолс; ;bNew=true" type="table" default="{&quot;aField&quot;:[{&quot;id&quot;:&quot;sDoc&quot;,&quot;name&quot;:&quot;Документ; ;bNew=true&quot;,&quot;type&quot;:&quot;file&quot;,&quot;required&quot;:&quot;true&quot;,&quot;writable&quot;:&quot;true&quot;,&quot;nWidth&quot;:&quot;20%&quot;}]}" required="true"></activiti:formProperty>
       </extensionElements>
     </startEvent>
@@ -67,7 +66,7 @@
         <activiti:formProperty id="nFile1" name="Файл для накладення підпису; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sTableDocExt" name="Таблиця з документами; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sTableDocInt" name="Таблиця з документами реквайр фолс; ;bNew=true" type="table" writable="false"></activiti:formProperty>
-     </extensionElements>
+      </extensionElements>
     </userTask>
     <endEvent id="endevent1" name="End"></endEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>

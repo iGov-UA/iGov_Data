@@ -36,7 +36,7 @@ nID_SubjectOrganJoin;sName;sValue
 369;sNameOrgan;Управління соціального захисту населення<br>Тернопільської РДА
 
 372;sOrganID;Управління соціального захисту населення м. Нетішин
-372;sMailClerk;zhigan.roman@gmail.com
+372;sMailClerk;akylish88@gmail.com 
 372;sNameOrgan;Управління соціального захисту населення<br>м. Нетішин
 
 373;sNameOrgan;Сектор архітектури, містобудування та житлово-комунального господарства Чорнухинської РДА
@@ -57,11 +57,11 @@ nID_SubjectOrganJoin;sName;sValue
 374;sMailClerk;Up_ekon22@city.kherson.ua
 
 375;sOrganID;Департаменту соціального захисту населення Херсонської ОДА
-375;sMailClerk;zhigan.roman@gmail.com
+375;sMailClerk;akylish88@gmail.com 
 375;sNameOrgan;Департамент соціального захисту населення<br>Херсонської ОДА
 
 376;sOrganID;Управління соціального захисту населення Шепетівської РДА
-376;sMailClerk;zhigan.roman@gmail.com
+376;sMailClerk;akylish88@gmail.com 
 376;sNameOrgan;Управління соціального захисту населення<br>Шепетівської РДА
 
 377;sAddress; м. Дніпро, вул. Красна 2-а
@@ -104,7 +104,7 @@ nID_SubjectOrganJoin;sName;sValue
 379;sZajava_zber;<a href="https://drive.google.com/file/d/0B4euXvFru4YDRlBuVHhOSEFzS0k/view?usp=sharing" target="_blank">Зразок заяви</a>
 
 380;sOrganID;Управління соціального захисту населення Каховського МВК
-380;sMailClerk;zhigan.roman@gmail.com
+380;sMailClerk;akylish88@gmail.com 
 380;sNameOrgan;Управління соціального захисту населення<br>Каховського МВК
 
 381;nArea;1
@@ -1591,7 +1591,7 @@ nID_SubjectOrganJoin;sName;sValue
 
 1136;sShapkaGolova;Міському голові <br>м. Суми
 1136;sAddress;40013, Сумська обл., м. Суми, вул. Горького,21
-1136;sMailClerk;zhigan.roman@gmail.com
+1136;sMailClerk;akylish88@gmail.com 
 1136;sNameOrgan;ЦНАП Сумської міськради
 1136;sWorkTime;<p>Понеділок, середа: 08.00-17.15<br>вівторок, четвер: 08.00-20.00<br>п’ятниця: 08.00-16.00<br>субота: 08.00-14.00<br>Вихідний - Неділя</p>
 1136;sPhoneOrgan;Телефон: (0542) 700-575, 700-574
@@ -1857,12 +1857,12 @@ nID_SubjectOrganJoin;sName;sValue
 1181;sNameOrgan;Костопільська РДА
 1181;sPhoneOrgan;телефон
 1181;sWorkTime;Графік роботи
-1181;sMailClerk;zhigan.roman@gmail.com
+1181;sMailClerk;akylish88@gmail.com 
 1181;sOrgan;голови Костопільської РДА
 1181;sAddress;<b>Адреса:</b> адреса
 
 1182;sNameOrgan;Дніпровський МВК
-1182;sMailClerk226;zhigan.roman@gmail.com
+1182;sMailClerk226;akylish88@gmail.com 
 1182;sPosada;["Міський голова","Заступник міського голови","Заступник міського голови/керуючий справами виконкому ради","Заступник міського голови/директор департаменту комунального господарства та капітального будівництва","Заступник міського голови","Заступник міського голови/директор департаменту охорони здоров’я"]
 1182;sRozkladPriyom;=[sPosada]=='0'?'2-й четвер місяця з 11.00 год. та 3-й четвер місяця (обов’язковий попередній запис з 1 по 8 число місяця прийому)':[sPosada]=='1'?'1-й четвер і 3-й понеділок місяця з 11.00 год.':[sPosada]=='2'?'2-а вівторок місяця з 15.00 год.':[sPosada]=='3'?'2-а і 4-а п`ятниця місяця з 10.00 год.':[sPosada]=='4'?'3-а вівторок місяця з 11.00 год.':[sPosada]=='5'?'1-й понеділок місяця з 10.00 год. до 13.00 год.':''
 1182;sPhoneOrgan; телефон для довідок
@@ -1872,7 +1872,7 @@ nID_SubjectOrganJoin;sName;sValue
 1183;sSignCnap;Виконавчий комітет Богодухівської міської ради
 1183;sPhoneCnap;телефон
 1183;sRozklad;Адреса: 62103, м.Богодухів, пл.Леніна, 2<br>Графік роботи:<br>
-1183;sPostV;zhigan.roman@gmail.com
+1183;sPostV;akylish88@gmail.com 
 1183;sOrgan;міського голови м. Богодухів
 1183;sAddress;<b>Адреса:</b> 62103, м.Богодухів, пл.Леніна, 2
 
@@ -2004,7 +2004,7 @@ nID_SubjectOrganJoin;sName;sValue
 1197;sShapkaGolova;Голові Каланчацької РДА
 
 1198;sSignCnap;УПСЗН Каланчацького району
-1198;sMailClerk;zhigan.roman@gmail.com
+1198;sMailClerk;akylish88@gmail.com 
 
 1199;sMailClerk;tsar.alternatyva@gmail.com
 1199;sWorkTime;<b>Графік роботи:</b><br>Понеділок-п'ятниця з 8.00 до 20.00<br>Субота з 9.00 до 16.00<br>Без перерви на обід
@@ -2778,11 +2778,11 @@ nID_SubjectOrganJoin;sName;sValue
 1282;sPosadaVid;=[sPosada]=='0'?'голови Тернопільської РДА':''
 
 1283;sNameOrgan;Івано-Франківська ОДА
-1283;sMailClerk;zhigan.roman@gmail.com
+1283;sMailClerk;akylish88@gmail.com 
 1283;sPosada;["Голова Івано-Франківської ОДА"]
 1283;sRozkladPriyom;=[sPosada]=='0'?'1-й і 3-й четвер щомісяця в облдержадміністрації з 10.00 до 13.00 год. 4-й четвер - виїзний день':''
 1283;sPhoneOrgan;(0342) 55-20-07
-1283;sMailClerk226;zhigan.roman@gmail.com
+1283;sMailClerk226;akylish88@gmail.com 
 1283;sPosadaVid;=[sPosada]=='0'?'голови Івано-Франківської ОДА':''
 1283;sArea;Івано-Франківської обласної державної адміністрації
 1283;sGolova; 
@@ -4335,7 +4335,7 @@ nID_SubjectOrganJoin;sName;sValue
 1418;sRekv;УК у м. Новомосковську<br>Одержувач: 22012500<br>Рахунок 33216879727030 ГУДКСУ у Дніпропетровській області<br>МФО 805012<br>ОКПО 37951041
 1418;sAddress;<b>Адреса:</b> 51200, Дніпропетровська обл., м. Новомосковськ, вул. Шевченка, 7, І поверх
 1418;sPhoneOrgan;<b>Телефон(и):</b> (05693)7-54-31, (05693)7-89-60
-1418;sMailClerk;zhigan.roman@gmail.com
+1418;sMailClerk;akylish88@gmail.com 
 1418;sMailOfficialContact;<b>E-mail:</b> nmoskrda@i.ua
 1418;sWepPortal;<b>Веб портал:</b> <a href='http://www.novomosk-rn.dp.gov.ua'>ЦНАП Новомосковської РДА </a>
 1418;sWorkTime;<b>Графік роботи:</b> Понеділок, середа, п’ятниця, субота: 8:00 – 16:00 Вівторок, четвер: 13:00 – 20:00
@@ -4997,7 +4997,7 @@ nID_SubjectOrganJoin;sName;sValue
 1476;sGolovaKomu;=[sPosada]=='0'?'Мерікову В.І.':[sPosada]=='1'?'Романчуку М.П.':[sPosada]=='2'?'Бонь В.В.':[sPosada]=='3'?'Янішевській О.А.':[sPosada]=='4'?'Ничипорчуку А.Г.':''
 
 1477;sNameOrgan;Івано-Франківська ОДА
-1477;sMailClerk;zhigan.roman@gmail.com
+1477;sMailClerk;akylish88@gmail.com 
 1477;sPosada;["Голова Івано-Франківської ОДА"]
 1477;sPosadaVid;=[sPosada]=='0'?'голови Івано-Франківської ОДА':''
 1477;sPhoneOrgan;(0342) 55-20-07
@@ -5025,7 +5025,7 @@ nID_SubjectOrganJoin;sName;sValue
 1479;shapka; Центр надання адміністративних послуг м.Коломия  <br> міському голові
 
 1480;sNameOrgan;порту Ізмаїл
-1480;sMailClerk;zhigan.roman@gmail.com
+1480;sMailClerk;akylish88@gmail.com 
 1480;sArea;Ізмаїл
 1480;sPort;PORT IZMAIL
 1480;sPhoneOrgan; (04841) 2-04-87
@@ -5035,7 +5035,7 @@ nID_SubjectOrganJoin;sName;sValue
 1480;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-четверг з 15.00 до 17.00, п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів
 
 1481;sNameOrgan;порту Маріуполь
-1481;sMailClerk;zhigan.roman@gmail.com
+1481;sMailClerk;akylish88@gmail.com 
 1481;sArea;Маріуполь
 1481;sPort;PORT MARIUPOL
 1481;sPhoneOrgan; (0629) 40-08-35
@@ -5045,7 +5045,7 @@ nID_SubjectOrganJoin;sName;sValue
 1481;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів 
 
 1482;sNameOrgan;порту Миколаїв
-1482;sMailClerk;zhigan.roman@gmail.com
+1482;sMailClerk;akylish88@gmail.com 
 1482;sArea;Миколаїв
 1482;sPort;PORT MYKOLAIV
 1482;sPhoneOrgan; (0512) 50-75-87
@@ -5055,7 +5055,7 @@ nID_SubjectOrganJoin;sName;sValue
 1482;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів
 
 1483;sNameOrgan;порту Одеса
-1483;sMailClerk;zhigan.roman@gmail.com
+1483;sMailClerk;akylish88@gmail.com 
 1483;sArea;Одеса
 1483;sPort;PORT ODESSA
 1483;sPhoneOrgan; (048) 729-48-22
@@ -5065,7 +5065,7 @@ nID_SubjectOrganJoin;sName;sValue
 1483;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів 
 
 1484;sNameOrgan;порту Херсон
-1484;sMailClerk;zhigan.roman@gmail.com
+1484;sMailClerk;akylish88@gmail.com 
 1484;sArea;Херсон
 1484;sPort;PORT KHERSON
 1484;sPhoneOrgan; (0552) 48-13-24
@@ -5075,7 +5075,7 @@ nID_SubjectOrganJoin;sName;sValue
 1484;sRozklad;<b>Графік видачі посвідчень:</b>  понеділок-четверг з 14.00 до 16.00, п’ятниця з 14.00 до 15.45 крім вихідних та святкових днів
 
 1485;sNameOrgan;порту Чорноморськ
-1485;sMailClerk;zhigan.roman@gmail.com
+1485;sMailClerk;akylish88@gmail.com 
 1485;sArea;Чорноморськ
 1485;sPort;PORT CHORNOMORSK
 1485;sPhoneOrgan; (04868) 9-19-78

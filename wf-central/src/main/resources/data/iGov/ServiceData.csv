@@ -155,7 +155,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 154;4;3;3;NULL;1;{};https://egov.city-adm.lviv.ua/;FALSE;1;FALSE;Скористатися послугою можна на сайті порталу міста Львів. Для користування послугою треба буде увійти в систему через BankID або електронно-цифровий підпис;BankID,EDS,mpbds;0
 155;686;3;3;NULL;1;{};https://egov.city-adm.lviv.ua/;FALSE;1;FALSE;Скористатися послугою можна на сайті порталу міста Львів. Для користування послугою треба буде увійти в систему через BankID або електронно-цифровий підпис;BankID,EDS,mpbds;0
 156;372;3;3;NULL;1;{};https://egov.city-adm.lviv.ua/;FALSE;1;FALSE;Скористатися послугою можна на сайті порталу міста Львів. Для користування послугою треба буде увійти в систему через BankID або електронно-цифровий підпис;BankID,EDS,mpbds;0
-157;700;124;124;NULL;4;{"processDefinitionId":"rada_0700_RegistrationChildKindergarden:1:1"};;false;212;true;;BankID,EDS,mpbds;0
+157;700;NULL;NULL;NULL;1;{};https://reg.isuo.org/preschools;false;1;false;Перейшовши за посиланням можна зареєструвати дитину  до закладу дошкільної освіти;BankID,EDS,mpbds;0
 158;33;50001;NULL;1;4;{"processDefinitionId":"eco_0033_fonConts:1:1"};;false;1;false;;EDS;0
 159;702;3;3;NULL;1;{};https://egov.city-adm.lviv.ua/;FALSE;1;FALSE;Скористатися послугою можна на сайті порталу міста Львів. Для користування послугою треба буде увійти в систему через BankID або електронно-цифровий підпис;BankID,EDS,mpbds;0
 160;155;NULL;NULL;NULL;4;{"processDefinitionId":"_doc_test_justice_setTasks:1:1"};;false;1;true;;BankID,EDS,mpbds;0
@@ -5115,11 +5115,11 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5258;702;660;660;NULL;4;{"processDefinitionId":"ternopol_oda_226:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5259;11;661;661;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5260;702;661;661;NULL;4;{"processDefinitionId":"ternopol_oda_226:1:1"};;false;212;false;;BankID,EDS,mpbds;0
-5261;28;648;648;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5262;25;648;648;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5263;173;648;648;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5264;175;648;648;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5265;1431;648;648;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5261;28;648;648;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5262;25;648;648;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5263;173;648;648;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5264;175;648;648;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5265;1431;648;648;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5266;28;115;115;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5267;25;115;115;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5268;173;115;115;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0

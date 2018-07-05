@@ -5,7 +5,7 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="info" name="Зверніть увагу: ця послуга є платною (95 грн.), при заповненні полів треба буде завантажити документ, що засвідчує внесення плати." type="label" default="Ви можете здійснити оплату зручним для Вас способом за  &lt;a href=&quot;https://docs.google.com/document/d/1i8QNof1RTuzoP5z6IVukqBz-ENobSqEvBjwbi_I3RwM/edit?usp=sharing&quot; target=&quot;_blank&quot;&gt;реквізитами&lt;/a&gt; "></activiti:formProperty>
-        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть адресу ЦНАП району (міста), де зручно отримати документи" type="select" default="0" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП району (міста), де зручно отримати результат послуги" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string"></activiti:formProperty>
@@ -689,7 +689,6 @@ ${sListDocumentsLetter}
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 <b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
 <p> Ваше звернення щодо надання дозволу на на рух великогабаритних та великовагових транспортних засобів передано на розгляд в Управління патрульної поліції  і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
-Реєстраційний номер заяви: ${reestr_numb};<br />
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 	${sNameOrganTransfer} <br> 

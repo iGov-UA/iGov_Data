@@ -3203,7 +3203,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3533;555;Архів ХДАУ (Херсонський Державний Аграрний Університет);Архів ХДАУ (Херсонський Державний Аграрний Університет);HDAU_arhiv;HDAU_arhiv; ; ;NULL;NULL;6500000000
 3534;309;Дрогобицька міська рада;Дрогобицька міська рада;lviv_drohobDMG;lviv_drohobDMG;;;NULL;NULL;4610600000
 3535;225;Бул. Центральний, буд.27 (Вознесенівський район);Вознесеновский  район;zp_zpT_vznesensk;zp_zpT_vznesensk; ; ;NULL;NULL;2310100000
-3536;225;Вул. Кияшка, буд. 22 (Дніпровський та Хортицький райони);Днепровский и Хортицкий  районы;zp_zpT_Dnepr_Hort;zp_zpT_Dnepr_Hort; ; ;NULL;NULL;2310100000
+3536;225;Вул. Кияшка, буд. 22 (Дніпровський райони);Днепровский и Хортицкий  районы;zp_zpT_Dnepr_Hort;zp_zpT_Dnepr_Hort; ; ;NULL;NULL;2310100000
 3537;225;Вул. Лізи Чайкіної, буд.56 (Заводський район);Завoдский район;zp_zpT_Zavodskiy;zp_zpT_Zavodskiy; ; ;NULL;NULL;2310100000
 3538;225;Вул. Чумаченка, буд.32 (Комунарський район);Коммунарский район;zp_zpT_Communar;zp_zpT_Communar; ; ;NULL;NULL;2310100000
 3539;225;ЦНАП Маневицької РДА;ЦНАП Маневицької РДА;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000
@@ -3211,6 +3211,6 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3541;288;ЦНАП Маневицької РДА;ЦНАП Маневицької РДА;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;700000000
 3542;212;Володимир-Волинська міська рада;Володимир-Волинська міська рада;volin_VolVolun;volin_VolVolun; ; ;NULL;NULL;710200000
 3543;205;м. Маріуполь (спільний СЦ МВС та ЦНАП), Запорізьке шосе 2, ТРЦ Порт-Сіті;г. Мариуполь (МВС + ЦПАУ), Запорізьке шосе 2, ТРЦ Порт-Сіті;don_mariupolMVC;don_mariupolMVC; ; ;NULL;NULL;1412300000
-3544;225;Проспект Моторобудівників, 34 (Олександрівський район);Олександрівський район;zp_zpT_Motobud;zp_zpT_Motobud; ; ;NULL;NULL;2310100000
+3544;225;Проспект Моторобудівників, 34 (Шевченківський район);Олександрівський район;zp_zpT_Motobud;zp_zpT_Motobud; ; ;NULL;NULL;2310100000
 3545;555;Дрогобицький коледж нафти і газу;Дрогобицький коледж нафти і газу;Drog_NaftaGaz;Drog_NaftaGaz; ; ;NULL;NULL;4610600000
 

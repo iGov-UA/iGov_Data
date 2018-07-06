@@ -52,7 +52,7 @@
         <activiti:formProperty id="sLabePasport" name=" ; ;labelType=info" type="label" default="Увага! Завантажте всі заповнені сторінки паспорта (крім сторінок зі штампами старих місць реєстрації)"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації або повністю відскануйте посвідку);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу, обов'язково завантажте всі сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>

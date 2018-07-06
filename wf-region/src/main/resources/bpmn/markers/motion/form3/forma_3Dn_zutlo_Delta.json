@@ -69,6 +69,7 @@
     "ShowFieldsOnCondition_Zutl": {
       "aField_ID": [
         "asBudType",
+        "asTypeVul",
         "sRegistrationVul",
         "sRegistrationBud"
       ],

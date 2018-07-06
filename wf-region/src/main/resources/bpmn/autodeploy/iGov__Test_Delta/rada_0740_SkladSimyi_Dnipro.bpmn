@@ -68,7 +68,7 @@
         <activiti:formProperty id="DovirutdInn" name="IПН довірителя;(якщо ІПН з якихось причин відсутній, вкажіть причину)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DovirutdPassport" name="Паспорт довірителя; (тип, серія та номер документу, дата і орган, що його видав)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirutIPN" name="ІПН довірителя; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirutIPN" name="ІПН довірителя; ;bNew=true" type="file"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Вкажіть тип вашого будинку" type="enum" required="true">
@@ -103,7 +103,7 @@
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DomovKnig" name="Домова книга;(сканкопія оригіналу, завантажте всі заповнені сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DK_KartReestr" name="Картка реєстрації особи;(якщо додатково до домової книги маєте цей документ, завантажте його сканкопію, обов'язково відскануйте карту з двох сторін);bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DK_KartReestr" name="Картка реєстрації особи;(якщо додатково до домової книги маєте цей документ, завантажте його сканкопію, обов'язково відскануйте картку з двох сторін);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="sLabe_DomovKnig" name=" ; ;labelType=info" type="label" default="Коли будете отримувати довідку, обов'язково візьміть з собою оригінал домової книги"></activiti:formProperty>
         <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zutlo_Delta.json')}"></activiti:formProperty>
@@ -117,8 +117,8 @@
           <activiti:value id="sYesDorDit" name="Так, зареєстровані діти і повнолітні особи (є і паспорти і свідоцтва)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" default="${markerService.loadFromFile('table/registr/form3_table_Dnipro.json')}"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб (або посвідок на проживання);(сканкопії оригіналу, перша, друга та сторінка з реэстраціэю, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб;(сканкопії оригіналу, якщо у ваших дітеє вже є ІПН завантажте ці сканкопії теж);bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб (або Посвідки на проживання);(сканкопії оригіналу, перша, друга та сторінка з реэстраціэю, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб;(сканкопії оригіналу, якщо у ваших дітей вже є ІПН завантажте ці сканкопії теж);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження;(сканкопії оригіналу, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersInOs" name="ShowFields" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_inOs.json')}"></activiti:formProperty>
         

@@ -64,7 +64,7 @@
           <activiti:value id="fiz" name="фізична особа-підприємець"></activiti:value>
           <activiti:value id="ur" name="юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="subekt_2" name="Звернння подаю" type="enum" required="true">
+        <activiti:formProperty id="subekt_2" name="Звернення подаю" type="enum" required="true">
           <activiti:value id="personally" name="особисто"></activiti:value>
           <activiti:value id="confidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
@@ -155,7 +155,7 @@
           <activiti:value id="fiz" name="фізична особа-підприємець"></activiti:value>
           <activiti:value id="ur" name="юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="subekt_2" name="Звернння подаю" type="enum" writable="false">
+        <activiti:formProperty id="subekt_2" name="Звернення подаю" type="enum" writable="false">
           <activiti:value id="personally" name="особисто"></activiti:value>
           <activiti:value id="confidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
@@ -255,7 +255,7 @@
           <activiti:value id="fiz" name="фізична особа-підприємець"></activiti:value>
           <activiti:value id="ur" name="юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="subekt_2" name="Звернння подаю" type="enum" writable="false">
+        <activiti:formProperty id="subekt_2" name="Звернення подаю" type="enum" writable="false">
           <activiti:value id="personally" name="особисто"></activiti:value>
           <activiti:value id="confidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
@@ -355,7 +355,7 @@
           <activiti:value id="fiz" name="фізична особа-підприємець"></activiti:value>
           <activiti:value id="ur" name="юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="subekt_2" name="Звернння подаю" type="enum" writable="false">
+        <activiti:formProperty id="subekt_2" name="Звернення подаю" type="enum" writable="false">
           <activiti:value id="personally" name="особисто"></activiti:value>
           <activiti:value id="confidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
@@ -688,7 +688,7 @@ ${sListDocumentsLetter}
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 <b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p> Ваше звернення щодо надання дозволу на на рух великогабаритних та великовагових транспортних засобів передано на розгляд в Управління патрульної поліції  і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
+<p> Ваше звернення щодо надання дозволу на на рух великогабаритних та великовагових транспортних засобів передано на розгляд в Управління патрульної поліції  і буде опрацьовано протягом 3x робочих днів.</h3><br /><br />
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 	${sNameOrganTransfer} <br> 

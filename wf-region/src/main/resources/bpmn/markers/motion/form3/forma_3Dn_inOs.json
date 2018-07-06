@@ -33,7 +33,8 @@
     },
     "ShowFieldsOnCondition_sDit": {
       "aField_ID": [
-        "nFile_NarSvid"
+        "nFile_NarSvid",
+        "nFile_ZarIPNs"
       ],
       "asID_Field": {
         "sConditF": "sFlag",
@@ -54,6 +55,17 @@
         "sCondit1": "chekReestrOsob"
       },
       "sCondition": "[sCondit1] == 'sYesDorDit'&&[sConditF] == 'true'&&[sConditR] == 'no'"
+    },
+    "RequiredFieldsOnCondition_sDorDit": {
+      "aField_ID": [
+        "nFile_ZarIPNs"
+      ],
+      "asID_Field": {
+        "sConditF": "sFlag",
+        "sConditR": "asRegistr",
+        "sCondit1": "chekReestrOsob"
+      },
+      "sCondition": "([sCondit1] == 'sYesDor'||[sCondit1] == 'sYesDorDit')&&[sConditF] == 'true'&&[sConditR] == 'no'"
     }
   }
 }

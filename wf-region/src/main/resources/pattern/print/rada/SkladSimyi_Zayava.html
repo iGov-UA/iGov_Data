@@ -113,9 +113,6 @@
         <td colspan="10" height="20" align="LEFT" valign="TOP"><font color="#000000"><div id="ZarVlasn"></div></font></td>
         </tr>
     <tr>
-        <td colspan="10" height="20" align="LEFT" valign="TOP"><font color="#000000">Підтверджую, що я зареєстрований/власник житлового приміщення/будинку за адресою:<br/></font></td>
-        </tr>
-    <tr>
         <td style="border-bottom:1px solid #000000" colspan="10" align="LEFT" valign="BOTTOM"><font color="#000000">[ScriptAdress]<br/></font></td>
         </tr>
     <tr>
@@ -144,15 +141,19 @@
         <td height="10" colspan="10" align="LEFT" valign="BOTTOM"><font color="#000000"></font></td>
     </tr>
     
-    
     <tr>
-        <td style="border-bottom:1px solid #000000" colspan="10" height="20" align="LEFT" valign="BOTTOM"><font color="#000000"><br>Даю згоду на обробку персональних даних відповідно до ЗУ "Про захист персональних даних".<br>Я [ScriptLastName] [ScriptFirstName] [ScriptMiddleName], несу відповідальність за достовірність наданої інформації<br/></font></td>
+        <td colspan="10" height="20" align="LEFT" valign="TOP"><font color="#000000">Цим надається згода на обробку персональних даних відповідно до Закону України
+«Про захист персональних даних».<br/></font></td>
         </tr>
-    
     <tr>
-        <td style="border-bottom:1px solid #000000" colspan="10" height="20" align="LEFT" valign="BOTTOM"><font color="#000000"><br/>Результат бажаю отримати: [asVidpovid]</font></td>
+        <td colspan="10" height="20" align="LEFT" valign="BOTTOM"><font color="#000000"><br>Я [ScriptLastName] [ScriptFirstName] [ScriptMiddleName], несу відповідальність за достовірність наданої інформації.<br/></font></td>
         </tr>
-    
+    <tr>
+        <td colspan="10" height="20" align="LEFT" valign="BOTTOM"><font color="#000000"><br>Також надається згода на отримання інформації від виконавчих органів Дніпровської міської
+ради на вищезазначену електронну адресу та на передачу підприємствам, установам,
+організаціям, у межах наданих їм повноважень, відомостей щодо зареєстрованих осіб та їх
+кількості.<br/></font></td>
+        </tr>
     <tr>
         <td colspan="10" height="20" align="LEFT" valign="BOTTOM"><font face="Times New Roman" color="#000000"></font></td>
         </tr>
@@ -183,13 +184,24 @@
 
 <script type="text/javascript">
 var ScrStatus = "[asStatus]";
-
+var ScrBudType = "[asBudType]";
   
 
-  if(ScrStatus == 'sVlasn'||ScrStatus == 'sVlasnDov'||ScrStatus == 'Власник житла'||ScrStatus == 'Представник власника'){
-  document.getElementById("ZarVlasn").innerHTML += "Підтверджую, що я власник житлового приміщення/будинку за адресою:";}
+if(ScrStatus == 'sVlasn'||ScrStatus == 'sVlasnDov'||ScrStatus == 'Власник житла'||ScrStatus == 'Представник власника'){
+    if(ScrBudType == 'sBagkvatur'||ScrBudType == 'багатоквартирний'){
+    document.getElementById("ZarVlasn").innerHTML += "Підтверджую, що я власник квартири за адресою:";
+    }
+    else {
+    document.getElementById("ZarVlasn").innerHTML += "Підтверджую, що я власник житлового будинку за адресою:";
+    }
+  }
   else {
-  document.getElementById("ZarVlasn").innerHTML += "Підтверджую, що я зареєстрований в житловому приміщенні/будинку за адресою:";}
+    if(ScrBudType == 'sBagkvatur'||ScrBudType == 'багатоквартирний'){
+    document.getElementById("ZarVlasn").innerHTML += "Підтверджую, що я зареєстрований в квартирі за адресою:";
+    }
+    else {
+    document.getElementById("ZarVlasn").innerHTML += "Підтверджую, що я зареєстрований в житловому будинку за адресою:";
+    }
   }
 
 </script> 

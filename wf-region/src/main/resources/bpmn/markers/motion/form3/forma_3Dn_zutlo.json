@@ -45,7 +45,9 @@
     },
     "ShowFieldsOnCondition_sPrivSectorF": {
       "aField_ID": [
-        "nFile_DomovKnig"
+        "nFile_DomovKnig",
+        "nFile_DK_KartReestr",
+        "sLabe_DomovKnig"        
       ],
       "asID_Field": {
         "sCondit1": "asBudType",
@@ -67,6 +69,7 @@
     "ShowFieldsOnCondition_Zutl": {
       "aField_ID": [
         "asBudType",
+        "asTypeVul",
         "sRegistrationVul",
         "sRegistrationBud"
       ],

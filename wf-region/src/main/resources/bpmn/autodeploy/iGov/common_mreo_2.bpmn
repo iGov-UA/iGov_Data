@@ -8,8 +8,14 @@
         <activiti:formProperty id="bankIdfirstName" name="Ваше ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdbirthDay" name="Ваша дата народження; в форматі ДД.ММ.РРРР" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Ваш контактний телефон" type="long" default="380" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="bankIdphone" name="Ваш контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Ваш контактний телефон; ;bVisible=false" type="long"></activiti:formProperty>
         <activiti:formProperty id="email" name="Ваш e-mail; На цей e-mail  Ви отримаєте результат обробки Вашого звернення" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerPhoneMail" name="markerPhoneMail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankId_PhoneNoCange_Email.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="reqType" name="Оберіть тип запитуваної інформації" type="enum" required="true">
           <activiti:value id="phis" name="інформація про володіння транспортнними засобами фізичною особою"></activiti:value>
           <activiti:value id="jur" name="інформація про володіння транспортнними засобами юридичною особою"></activiti:value>

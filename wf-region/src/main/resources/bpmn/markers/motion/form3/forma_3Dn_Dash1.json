@@ -26,7 +26,7 @@
         "sCondit1": "asDecide",
         "sCondit2": "asVidpovid"
       },
-      "sCondition": "[sCondit1] == 'sEnamAccept' && ([sCondit2] == 'sEnamnarochno'||[sCondit2] == 'Особисто')"
+      "sCondition": "[sCondit1] == 'sEnamAccept' && ([sCondit2] != 'sEnamPost'||[sCondit2] != 'Поштою')"
     },
     "RequiredFieldsOnCondition_DashOtr": {
       "aField_ID": [
@@ -36,7 +36,7 @@
         "sCondit1": "asDecide",
         "sCondit2": "asVidpovid"
       },
-      "sCondition": "[sCondit1] == 'sEnamAccept' && ([sCondit2] == 'sEnamnarochno'||[sCondit2] == 'Особисто')"
+      "sCondition": "[sCondit1] == 'sEnamAccept' && ([sCondit2] != 'sEnamPost'||[sCondit2] != 'Поштою')"
     }
   }
 }

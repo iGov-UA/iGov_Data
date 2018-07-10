@@ -150,8 +150,33 @@
         <activiti:formProperty id="markers1" name="m1" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_Lines.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="m2" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_ST01.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="m3" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_ST02.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів"></activiti:formProperty>
       </extensionElements>
     </startEvent>
+    <serviceTask id="servicetask7" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний колего!</b><br /><br />
+У черзі на обробку зареєстровано нове звернення.<br />
+Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
+Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
+[pattern/mail/new_design/_common_signature.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
     <serviceTask id="servicetask13" name="Лист громадянину" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
@@ -270,6 +295,7 @@
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="reestr_numb" name="Реєстраційний номер" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="date_reestr" name="Укажіть дату реєстрації звернення" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="pib_admin" name="Прізвище та ініціали адміністратора" type="string" default=" "></activiti:formProperty>
@@ -278,6 +304,7 @@
           <activiti:value id="reject" name="Дані заповнені невірно, відхилити звернення (обов'язково впишіть коментар нижче)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="comment_1" name="У разі відхилення запиту внесіть, будь ласка, коментар" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -295,6 +322,91 @@
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
+    <sequenceFlow id="flow44" name="Відмова" sourceRef="exclusivegateway2" targetRef="servicetask9">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='reject'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow19" name="Перевірка ОК" sourceRef="exclusivegateway2" targetRef="servicetask2">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='accept'}]]></conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="servicetask2" name="Перевірка ОК" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA["${email}"]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
+<p align="left">Ваше звернення [sID_Order] щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів передано на розгляд в Управління  патрульної поліції і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
+Реєстраційний номер заяви: ${reestr_numb};<br />
+<br />
+Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
+	${sNameOrganTransfer} <br> 
+	${sAddress} <br> 
+	${sPhoneOrgan} <br>
+	${sWorkTime} <br> 
+[pattern/mail/new_design/_common_signature_start.html]
+	${sNameOrganTransfer}<br />
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask9" name="Відмова перевірка" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA["${email}"]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
+<p align="left">На жаль, Ваше звернення щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів відхилено через недостатню або неправильну інформацію.<br />
+${comment_1}<br />
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">iGov.org.ua</a><br /></p>
+	${sNameOrganTransfer} <br> 
+	${sAddress} <br> 
+	${sPhoneOrgan} <br>
+	${sWorkTime} <br> 
+[pattern/mail/new_design/_common_signature_start.html]
+	${sNameOrganTransfer}<br />
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask11" name="Лист в  МВС" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний колего!</b><br /><br />
+У черзі на обробку зареєстровано нове звернення.<br />
+Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
+Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
+[pattern/mail/new_design/_common_signature.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="sNameOrganTransfer" name="Назва органу" type="string" writable="false"></activiti:formProperty>
@@ -386,6 +498,7 @@
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="reestr_numb" name="Реєстраційний номер" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="date_reestr" name="Укажіть дату реєстрації звернення" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="pib_admin" name="Прізвище та ініціали адміністратора" type="string" default=" "></activiti:formProperty>
@@ -394,6 +507,7 @@
           <activiti:value id="reject" name="Дані заповнені невірно, відхилити звернення (обов'язково впишіть коментар нижче)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="comment_2" name="У разі відхилення запиту внесіть, будь ласка, коментар" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -402,7 +516,9 @@
         <activiti:formProperty id="sPhoneOrgan" name="телефон для справок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka228" name="шапки принтформ ; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sBody_1" name="[pattern/print/mvs/mvs_121_TransferPathAgreement_print_skv.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява (погодження дорожнього перевезення небезпечного вантажу)" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="markers1" name="m1" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_Lines.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="m2" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_ST01.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="m3" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_ST02.json')}"></activiti:formProperty>
@@ -411,6 +527,28 @@
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
+    <serviceTask id="servicetask12" name="Лист в ЦНАП після рішення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<b>Шановний колего!</b><br /><br />
+У черзі на обробку зареєстровано нове звернення.<br />
+Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
+Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
+[pattern/mail/new_design/_common_signature.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
     <userTask id="usertask2" name="ЦНАП - Видача рішення (3-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="sNameOrganTransfer" name="Назва органу" type="string" writable="false"></activiti:formProperty>
@@ -529,85 +667,8 @@
       </extensionElements>
     </userTask>
     <endEvent id="endevent2" name="End"></endEvent>
-    <serviceTask id="servicetask7" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний колего!</b><br /><br />
-У черзі на обробку зареєстровано нове звернення.<br />
-Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
-[pattern/mail/new_design/_common_signature.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <serviceTask id="servicetask2" name="Перевірка ОК" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
-      <extensionElements>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA["${email}"]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p align="left">Ваше звернення [sID_Order] щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів передано на розгляд в Управління  патрульної поліції і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
-Реєстраційний номер заяви: ${reestr_numb};<br />
-<br />
-Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
-	${sNameOrganTransfer} <br> 
-	${sAddress} <br> 
-	${sPhoneOrgan} <br>
-	${sWorkTime} <br> 
-[pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrganTransfer}<br />
-[pattern/mail/new_design/_common_signature_end.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <serviceTask id="servicetask9" name="Відмова перевірка" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
-      <extensionElements>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA["${email}"]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p align="left">На жаль, Ваше звернення щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів відхилено через недостатню або неправильну інформацію.<br />
-${comment_1}<br />
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">iGov.org.ua</a><br /></p>
-	${sNameOrganTransfer} <br> 
-	${sAddress} <br> 
-	${sPhoneOrgan} <br>
-	${sWorkTime} <br> 
-[pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrganTransfer}<br />
-[pattern/mail/new_design/_common_signature_end.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
+    
+    
     <serviceTask id="servicetask4" name="Позитивне рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
@@ -652,13 +713,7 @@ ${comment_1}<br />
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <sequenceFlow id="flow19" name="Перевірка ОК" sourceRef="exclusivegateway2" targetRef="servicetask2">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='accept'}]]></conditionExpression>
-    </sequenceFlow>
     <sequenceFlow id="flow22" sourceRef="servicetask2" targetRef="servicetask11"></sequenceFlow>
-    <sequenceFlow id="flow44" name="Відмова" sourceRef="exclusivegateway2" targetRef="servicetask9">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='reject'}]]></conditionExpression>
-    </sequenceFlow>
     <sequenceFlow id="flow45" sourceRef="servicetask9" targetRef="endevent2"></sequenceFlow>
     <sequenceFlow id="flow50" sourceRef="usertask2" targetRef="exclusivegateway3"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
@@ -719,51 +774,9 @@ ${comment_1}<br />
     </sequenceFlow>
     <sequenceFlow id="flow65" sourceRef="servicetask4" targetRef="endevent3"></sequenceFlow>
     <sequenceFlow id="flow66" sourceRef="servicetask10" targetRef="endevent3"></sequenceFlow>
-    <serviceTask id="servicetask11" name="Лист в  МВС" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний колего!</b><br /><br />
-У черзі на обробку зареєстровано нове звернення.<br />
-Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
-[pattern/mail/new_design/_common_signature.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
+    
     <sequenceFlow id="flow67" sourceRef="servicetask11" targetRef="usertask3"></sequenceFlow>
-    <serviceTask id="servicetask12" name="Лист в ЦНАП після рішення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний колего!</b><br /><br />
-У черзі на обробку зареєстровано нове звернення.<br />
-Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
-[pattern/mail/new_design/_common_signature.html]
-[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
+    
     <sequenceFlow id="flow68" sourceRef="servicetask13" targetRef="usertask1"></sequenceFlow>
     <sequenceFlow id="flow69" sourceRef="servicetask12" targetRef="usertask2"></sequenceFlow>
     <sequenceFlow id="flow70" sourceRef="startevent1" targetRef="servicetask7"></sequenceFlow>

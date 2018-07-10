@@ -454,7 +454,7 @@ execution.setVariable('sID_Payment', Payment)
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamAccept' && asVidpovid == 'sEnamPost'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow29" name="БЕЗ ПОШТИ" sourceRef="exclusivegateway2" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamAccept' && asVidpovid == 'sEnamnarochno'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamAccept' && asVidpovid != 'sEnamPost'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow84" name="Додатковий час на розгляд" sourceRef="exclusivegateway2" targetRef="servicetask21">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecide == 'sEnamDodChas'}]]></conditionExpression>

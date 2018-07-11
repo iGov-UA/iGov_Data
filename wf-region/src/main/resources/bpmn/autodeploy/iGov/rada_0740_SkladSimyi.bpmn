@@ -6,7 +6,7 @@
         <activiti:formProperty id="sLabeID" name=" ; ;labelType=info" type="label" default="Увага! &lt;br&gt;Якщо Вам потрібна довідка для отримання ID-картки, то скористайтесь &lt;a href=&quot; https://igov.org.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;іншою послугою&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="form3_Organs" type="markers" default="${markerService.loadFromFile('form3/form3_Organs.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Ви бажаєте отримати рішення" type="select" default="0"></activiti:formProperty>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Ви бажаєте отримати рішення" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="sVizitData" name="Оберіть день коли ви хочете прийти за довідкою" type="date" required="true"></activiti:formProperty>
         
@@ -59,7 +59,7 @@
         <activiti:formProperty id="markersLine_F" name="Сканкопії документів" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeFile&quot;],&quot;sValue&quot;:&quot;Сканкопії документів&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabeFile" name=" ; ;labelType=info" type="label" default="Увага! Для замовлення послуги, буде необідно завантажувати кольорові сканкопії(фото) документів. Розширення має не перевищувати 150 dpi(2700*1800 пікселів). Документ з декількома сторінками необхідно завантажувати одним файлом формату PDF або ZIP архівом."></activiti:formProperty>
         <activiti:formProperty id="nFile_PasportZay" name="Паспорт заявника;(1, 2 сторінка, та сторінка з місцем реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Vlasnist" name="Право власності;(документ що підтверджує право власності на нерухомість);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Vlasnist" name="Право власності;(документ що підтверджує право власності на нерухомість, якщо нерухомість неприватизована завантажте документ, що підтверджує право користування);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DomKniga" name="Домова книга;(сторінки де вказано хто власник);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_PasportSoj" name="Паспорти зареєстрованих співмешканців;(1, 2 сторінка, всі сторінки з фото, та сторінка з місцем реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidNar" name="Свідоцтва про народження дітей; ;bNew=true" type="file" required="true"></activiti:formProperty>

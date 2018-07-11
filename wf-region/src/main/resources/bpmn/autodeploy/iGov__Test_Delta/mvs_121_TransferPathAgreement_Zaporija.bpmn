@@ -164,7 +164,7 @@
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+          <activiti:expression><![CDATA[Нова заявка про: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -186,17 +186,18 @@
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+          <activiti:expression><![CDATA[Звернення на тему: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<p align="left">Ваше звернення [sID_Order] щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів передано на розгляд в Управління  патрульної поліції і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
+[pattern/mail/new_design/_common_content_start.html]
+<p align="left">Ваше звернення №[sID_Order] зареєстровано в ЦНАПі і буде опрацьовано протягом 3х робочих днів.</h3><br /><br />
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
-	${sNameOrganTransfer} <br> 
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
 	${sWorkTime} <br> 
+[pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrganTransfer}<br />
 [pattern/mail/new_design/_common_signature_end.html]
@@ -296,14 +297,13 @@
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="reestr_numb" name="Реєстраційний номер" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="date_reestr" name="Укажіть дату реєстрації звернення" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="pib_admin" name="Прізвище та ініціали адміністратора" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="decision_1" name="Прийняття рішення про надання послуги" type="enum" required="true">
-          <activiti:value id="accept" name="Заповнені дані вірні, інформація направлена на розгляд, очікується рішення"></activiti:value>
-          <activiti:value id="reject" name="Дані заповнені невірно, відхилити звернення (обов'язково впишіть коментар нижче)"></activiti:value>
+        <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
+          <activiti:value id="sEnum_ok" name="Перевірка успішна. Прийняти до роботи."></activiti:value>
+          <activiti:value id="sEnum_bad" name="Відмова на етапі перевірки"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="comment_1" name="У разі відхилення запиту внесіть, будь ласка, коментар" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="tComment" name="Коментар про причину відмови" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_ComRegN.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -323,12 +323,12 @@
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow44" name="Відмова" sourceRef="exclusivegateway2" targetRef="servicetask9">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='reject'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_ok'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow19" name="Перевірка ОК" sourceRef="exclusivegateway2" targetRef="servicetask2">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_1=='accept'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_bad'}]]></conditionExpression>
     </sequenceFlow>
-    <serviceTask id="servicetask2" name="Перевірка ОК" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+    <serviceTask id="servicetask2" name="Перевірка ОК" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
@@ -337,51 +337,68 @@
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+          <activiti:expression><![CDATA[Звернення на тему: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p align="left">Ваше звернення [sID_Order] щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів передано на розгляд в Управління  патрульної поліції і буде опрацьовано протягом 10 робочих днів.</h3><br /><br />
-Реєстраційний номер заяви: ${reestr_numb};<br />
+[pattern/mail/new_design/_common_content_start.html]
+<p>
+<p align="left">Ваше звернення [sID_Order] передано на розгляд в Управління  патрульної поліції і буде опрацьовано протягом 3х робочих днів.</h3><br /><br />
+Реєстраційний номер заяви: ${sRNumber};<br />
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
-	${sNameOrganTransfer} <br> 
-	${sAddress} <br> 
-	${sPhoneOrgan} <br>
-	${sWorkTime} <br> 
+</p>
+[pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrganTransfer}<br />
+${sNameOrganTransfer},<br>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno.Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <serviceTask id="servicetask9" name="Відмова перевірка" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+    <serviceTask id="servicetask9" name="Відмова перевірка" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+          <activiti:expression><![CDATA[Звернення на тему: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p align="left">На жаль, Ваше звернення щодо погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів відхилено через недостатню або неправильну інформацію.<br />
-${comment_1}<br />
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">iGov.org.ua</a><br /></p>
-	${sNameOrganTransfer} <br> 
-	${sAddress} <br> 
+[pattern/mail/new_design/_common_content_start.html]
+<p>На жаль, змушені Вам відмовити у реєстрації запиту.</p>
+<p>Причина:<br>
+${tComment}</p>
+[pattern/mail/new_design/_common_content_end.html]
+    ${sAddress} <br> 
 	${sPhoneOrgan} <br>
 	${sWorkTime} <br> 
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrganTransfer}<br />
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -394,7 +411,7 @@ ${comment_1}<br />
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+          <activiti:expression><![CDATA[Нова заявка про: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -409,6 +426,7 @@ ${comment_1}<br />
     </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
+        <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNameOrganTransfer" name="Назва органу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -499,14 +517,13 @@ ${comment_1}<br />
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="reestr_numb" name="Реєстраційний номер" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="date_reestr" name="Укажіть дату реєстрації звернення" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="pib_admin" name="Прізвище та ініціали адміністратора" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="decision_2" name="Прийняття рішення про надання послуги" type="enum" required="true">
-          <activiti:value id="accept" name="Заповнені дані вірні, інформація направлена на розгляд, очікується рішення"></activiti:value>
-          <activiti:value id="reject" name="Дані заповнені невірно, відхилити звернення (обов'язково впишіть коментар нижче)"></activiti:value>
+        <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
+          <activiti:value id="sEnum_ok" name="Заяву задоволено, запросити громадянина"></activiti:value>
+          <activiti:value id="sEnum_bad" name="Відмовлено у наданні послуги"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="comment_2" name="У разі відхилення запиту внесіть, будь ласка, коментар" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="tComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="fVidpovid" name="Відповідь (сканкопія); ;bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="markerDash2" name="markerDash2" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash2_Com.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -536,12 +553,12 @@ ${comment_1}<br />
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове  звернення. Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
+          <activiti:expression><![CDATA[МВС обробило заявку по: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 <b>Шановний колего!</b><br /><br />
-У черзі на обробку зареєстровано нове звернення.<br />
+МВС опрацювало звернення №[sID_Order].<br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
 Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
 [pattern/mail/new_design/_common_signature.html]
@@ -551,6 +568,7 @@ ${comment_1}<br />
     </serviceTask>
     <userTask id="usertask2" name="ЦНАП - Видача рішення (3-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
+        <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNameOrganTransfer" name="Назва органу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -640,15 +658,15 @@ ${comment_1}<br />
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="reestr_numb" name="Реєстраційний номер" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="date_reestr" name="Укажіть дату реєстрації звернення" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="pib_admin" name="Прізвище та ініціали адміністратора" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="decision_2" name="Прийняття рішення про погодження маршрутів дорожнього перевезення небезпечного вантажу" type="enum" required="true">
-          <activiti:value id="accept" name="погоджено"></activiti:value>
-          <activiti:value id="reject" name="відхилено"></activiti:value>
+        
+        <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
+          <activiti:value id="sEnum_ok" name="Задовольнити звернення"></activiti:value>
+          <activiti:value id="sEnum_bad" name="Відмовлено у наданні послуги"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="rishen" name="Завантажте копію рішення ; ;bNew=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="comment_2" name="У разі відмови у наданні дозволу внесіть, будь ласка, коментар" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="tComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="fVidpovid" name="Відповідь Поліції (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -666,10 +684,14 @@ ${comment_1}<br />
         <activiti:formProperty id="markers5" name="переключашка в принтформе" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_Print.json')}"></activiti:formProperty>
       </extensionElements>
     </userTask>
+    <sequenceFlow id="flow63" name="Позитивне рішення" sourceRef="exclusivegateway3" targetRef="servicetask4">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_ok'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow64" name="Негативне рішення" sourceRef="exclusivegateway3" targetRef="servicetask10">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_bad'}]]></conditionExpression>
+    </sequenceFlow>
     <endEvent id="endevent2" name="End"></endEvent>
-    
-    
-    <serviceTask id="servicetask4" name="Позитивне рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
+    <serviceTask id="servicetask4" name="Позитивне рішення" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
@@ -678,38 +700,39 @@ ${comment_1}<br />
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA["${rishen}",${PrintForm_1}]]></activiti:expression>
+          <activiti:expression><![CDATA[Звернення на тему: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p align="left">Маршрут перевезення небезпечного вантажу enum{[decision_2]}.<br />  <br />  
-Копія рішення знаходиться у додатку до листа.<br />
+[pattern/mail/new_design/_common_content_start.html]
+<p>Ваше звернення №[sID_Order] - задоволено. <br><br>
+
+Копія відповіді знаходиться у додатку до листа.<br><br>
 Ви або уповноважена Вами особа (при наявності довіреності) можете отримати рішення собисто під підпис у ЦНАПі.<br /><br />
 При собі треба мати:<br />
 1. Документ, що посвідчує особу.<br />
 2. Для уповоноваженої особи - довіренність.<br />
-3. Заяву, що знаходиться у додатку до листа (завантажте і роздрукуйте), засвідчена особистим  підписом  керівника  юридичної  особи, фізичної особи - підприємця  або  уповноваженої  ними  особи.<br />
-4. Копію свідоцтва про допущення транспортного засобу до перевезення небезпечних вантажів.<br />
-5. Копію ДОПНВ - свідоцтва про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі.<br />
-6. Копію чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок негативних наслідків під час перевезення небезпечних вантажів.<br />
-7. Письмові інструкції у разі аварії чи надзвичайної ситуації.<br />
-8. Копію свідоцтва про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів.<br />
-9. У разі перевезення небезпечних речовин або виробів, на перевезення яких необхідне додаткове погодження або дозвіл інших компетентних органів, відповідні копії цього погодження або дозволу.<br />
-10. Платіжний документ (квитанція) про оплату вартості послуги.<br /><br />
+3. Оригінали документів, сканкопії яких були завантажені при поданні заяви.
+4. Платіжний документ (квитанція) про оплату вартості послуги.<br /><br />
 </p>
-	${sNameOrganTransfer} <br> 
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
 	${sWorkTime} <br> 
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrganTransfer}<br />
 [pattern/mail/new_design/_common_signature_end.html]   
-[pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${fVidpovid}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -721,7 +744,7 @@ ${comment_1}<br />
     <sequenceFlow id="flow57" sourceRef="servicetask7" targetRef="servicetask13"></sequenceFlow>
     <sequenceFlow id="flow62" sourceRef="usertask3" targetRef="servicetask12"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
-    <serviceTask id="servicetask10" name="Негативне рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
+    <serviceTask id="servicetask10" name="Негативне рішення" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
@@ -730,48 +753,38 @@ ${comment_1}<br />
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA["${rishen}",${PrintForm_1}]]></activiti:expression>
+          <activiti:expression><![CDATA[Звернення на тему: ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-<b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p align="left">Маршрут перевезення небезпечного вантажу enum{[decision_2]}.<br />  <br />  
-Копія рішення знаходиться у додатку до листа.<br />
+[pattern/mail/new_design/_common_content_start.html]
+<p>Ваше звернення №[sID_Order] - отримало відмову. <br><br>
+
+Копія рішення з відмовою знаходиться у додатку до листа.<br />
 Ви або уповноважена Вами особа (при наявності довіреності) можете отримати рішення собисто під підпис у ЦНАПі.<br /><br />
-При собі треба мати:<br />
-1. Документ, що посвідчує особу.<br />
-2. Для уповоноваженої особи - довіренність.<br />
-3. Заяву, що знаходиться у додатку до листа (завантажте і роздрукуйте), засвідчена особистим  підписом  керівника  юридичної  особи, фізичної особи - підприємця  або  уповноваженої  ними  особи.<br />
-4. Копію свідоцтва про допущення транспортного засобу до перевезення небезпечних вантажів.<br />
-5. Копію ДОПНВ - свідоцтва про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі.<br />
-6. Копію чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок негативних наслідків під час перевезення небезпечних вантажів.<br />
-7. Письмові інструкції у разі аварії чи надзвичайної ситуації.<br />
-8. Копію свідоцтва про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів.<br />
-9. У разі перевезення небезпечних речовин або виробів, на перевезення яких необхідне додаткове погодження або дозвіл інших компетентних органів, відповідні копії цього погодження або дозволу.<br />
-10. Платіжний документ (квитанція) про оплату вартості послуги.<br /><br />
 </p>
-	${sNameOrganTransfer} <br> 
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
 	${sWorkTime} <br> 
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_feedback.html]	
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrganTransfer}<br />
 [pattern/mail/new_design/_common_signature_end.html]   
-[pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${fVidpovid}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
     <endEvent id="endevent3" name="End"></endEvent>
-    <sequenceFlow id="flow63" name="Позитивне рішення" sourceRef="exclusivegateway3" targetRef="servicetask4">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_2=='accept'}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="flow64" name="Негативне рішення" sourceRef="exclusivegateway3" targetRef="servicetask10">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decision_2=='reject'}]]></conditionExpression>
-    </sequenceFlow>
     <sequenceFlow id="flow65" sourceRef="servicetask4" targetRef="endevent3"></sequenceFlow>
     <sequenceFlow id="flow66" sourceRef="servicetask10" targetRef="endevent3"></sequenceFlow>
     

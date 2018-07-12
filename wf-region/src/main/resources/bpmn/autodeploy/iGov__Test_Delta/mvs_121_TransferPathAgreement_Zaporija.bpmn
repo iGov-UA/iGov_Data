@@ -19,7 +19,7 @@
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="info_TypeRegistrationAction" name="Зверніть увагу: Повторне подання розглядається у тому випадку, якщо суб’єкт звернення отримав відмову від адміністративного органу при первинному поданні документів на конкретну послугу і (докладаючи відмову до пакету документів) згідно закону, отримує результат послуги не за 10 робочих днів, а за 5 робочих днів"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DocReject" name="Cканована копія відмови від адміністративного органу при первинному поданні документів; ;bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DocReject" name="Відмова від адміністративного органу при первинному поданні документів; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="asEnumDelivery_Document" name="Спосіб отримання відповіді" type="enum" default="sElementEmail_doc" required="true">
           <activiti:value id="sElementEmail_doc" name="В електронному вигляді (на вказаний E-Mail)"></activiti:value>
           <activiti:value id="sElementPaper_doc" name="У паперовому вигляді (у відповідному ЦНАП)"></activiti:value>
@@ -52,7 +52,7 @@
         </activiti:formProperty>
         <activiti:formProperty id="sConfidant_pib" name="Прізвище Ім'я та По батькові довіреної особи" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sConfidant_passport" name="Паспортні дані довіреної особи (серія, номер, дата, ким виданий)" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи;(довіренність або інший документ);bNew=true" type="file" default=" "></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи;(довіренність або інший документ);bNew=true" type="file" default=" "></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) " type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="sShortName_SubjectOrgan_appl" name="Коротке найменування" type="string" default=" "></activiti:formProperty>
@@ -105,10 +105,10 @@
         <activiti:formProperty id="sLocation_SubjectOrgan_recipient03" name="Юридична адреса організації" type="textArea" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_recipient03" name="Телефон" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sDateActual_SubjectOrgan_recipient03" name="Дата отримання даних з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
-        <activiti:formProperty id="pidgotovka" name="Копія свідоцтва про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dopnv" name="Копія ДОПНВ - свідоцтва про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dopusk" name="Копія свідоцтва про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="pidgotovka" name="Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dopnv" name="ДОПНВ - свідоцтво про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dopusk" name="Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="insurance" name="Чинний договір обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" required="true"></activiti:formProperty>
@@ -263,14 +263,14 @@
         <activiti:formProperty id="sFullName_SubjectOrgan_recipient03" name="Найменування; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_recipient03" name="Юридична адреса організації; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_recipient03" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="pidgotovka" name="Копія свідоцтва про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dopnv" name="Копія ДОПНВ - свідоцтва про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dopusk" name="Копія свідоцтва про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="pidgotovka" name="Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dopnv" name="ДОПНВ - свідоцтво про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dopusk" name="Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="insurance" name="Чинний договір обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dodatkovo" name="Додаткове погодження або дозвіл інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Перевірка успішна. Прийняти до роботи."></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмова на етапі перевірки"></activiti:value>
@@ -457,14 +457,14 @@ ${tComment}</p>
         <activiti:formProperty id="sFullName_SubjectOrgan_recipient03" name="Найменування; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_recipient03" name="Юридична адреса організації; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_recipient03" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="pidgotovka" name="Копія свідоцтва про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dopnv" name="Копія ДОПНВ - свідоцтва про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dopusk" name="Копія свідоцтва про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="pidgotovka" name="Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dopnv" name="ДОПНВ - свідоцтво про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dopusk" name="Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="insurance" name="Чинний договір обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dodatkovo" name="Додаткове погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         
         
@@ -597,20 +597,24 @@ ${tComment}</p>
         <activiti:formProperty id="sFullName_SubjectOrgan_recipient03" name="Найменування; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_recipient03" name="Юридична адреса організації; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_recipient03" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="pidgotovka" name="Копія свідоцтва про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dopnv" name="Копія ДОПНВ - свідоцтва про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dopusk" name="Копія свідоцтва про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="pidgotovka" name="Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dopnv" name="ДОПНВ - свідоцтво про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dopusk" name="Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="insurance" name="Чинний договір обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="dodatkovo" name="Додаткове погодження або дозвіл інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Документу, що засвідчує повноваження довіреної особи (довіренність або інший документ); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Задовольнити звернення"></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмовлено у наданні послуги"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="tComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="markerDash2" name="markerDash2" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash2_Com.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="fVidpovid" name="Відповідь Поліції (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>

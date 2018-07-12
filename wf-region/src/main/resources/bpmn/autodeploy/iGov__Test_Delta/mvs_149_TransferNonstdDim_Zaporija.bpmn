@@ -603,10 +603,10 @@ ${tComment}</p>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow62" name="Негативне рішення" sourceRef="exclusivegateway3" targetRef="servicetask4">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_ok'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_bad'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow63" name="Позитивне рішення" sourceRef="exclusivegateway3" targetRef="servicetask10">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_bad'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asVidpovid=='sEnum_ok'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask10" name="Позитивне рішення" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>

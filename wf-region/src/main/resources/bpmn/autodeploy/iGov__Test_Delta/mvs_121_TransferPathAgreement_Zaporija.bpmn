@@ -323,10 +323,10 @@
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow44" name="Відмова" sourceRef="exclusivegateway2" targetRef="servicetask9">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_ok'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_bad'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow19" name="Перевірка ОК" sourceRef="exclusivegateway2" targetRef="servicetask2">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_bad'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_ok'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask2" name="Перевірка ОК" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>

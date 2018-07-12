@@ -112,6 +112,7 @@
         <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -122,6 +123,7 @@
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerkMVDTransfer" name="Пошта МВД ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka228" name="шапки принтформ ; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="markers1" name="m1" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_Lines.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="m2" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_ST01.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="m3" type="markers" default="${markerService.loadFromFile('mvs/mvs_121_TransferPathAgreementCargo_ST02.json')}"></activiti:formProperty>
@@ -221,7 +223,6 @@
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) ; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування ; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectActionKVED_SubjectOrgan_appl" name="Основний КВЕД ; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNote_ID_SubjectActionKVED_SubjectOrgan_appl" type="label"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації ; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_appl" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ur_fax_appl" name="Факс; ;writable=false" type="string"></activiti:formProperty>
@@ -268,8 +269,8 @@
         <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Перевірка успішна. Прийняти до роботи."></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмова на етапі перевірки"></activiti:value>
@@ -416,7 +417,6 @@ ${tComment}</p>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) ; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування ; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectActionKVED_SubjectOrgan_appl" name="Основний КВЕД ; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNote_ID_SubjectActionKVED_SubjectOrgan_appl" type="label"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації ; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_appl" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ur_fax_appl" name="Факс; ;writable=false" type="string"></activiti:formProperty>
@@ -463,8 +463,11 @@ ${tComment}</p>
         <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+        
+        
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Заяву задоволено, запросити громадянина"></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмовлено у наданні послуги"></activiti:value>
@@ -472,6 +475,7 @@ ${tComment}</p>
         <activiti:formProperty id="tComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="fVidpovid" name="Відповідь (сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerDash2" name="markerDash2" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash2_Com.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -553,7 +557,6 @@ ${tComment}</p>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) ; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування ; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectActionKVED_SubjectOrgan_appl" name="Основний КВЕД ; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNote_ID_SubjectActionKVED_SubjectOrgan_appl" type="label"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації ; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_appl" name="Телефон; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ur_fax_appl" name="Факс; ;writable=false" type="string"></activiti:formProperty>
@@ -600,8 +603,8 @@ ${tComment}</p>
         <activiti:formProperty id="insurance" name="Копія чинного договору обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ);bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ConfidantDoc" name="Копія документу, що засвідчує повноваження довіреної особи (довіренність або інший документ); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Задовольнити звернення"></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмовлено у наданні послуги"></activiti:value>

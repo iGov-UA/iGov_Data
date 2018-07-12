@@ -223,13 +223,11 @@
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) " type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectActionKVED_SubjectOrgan_appl" name="Основний КВЕД" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sNote_ID_SubjectActionKVED_SubjectOrgan_appl" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_appl" name="Телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_fax_appl" name="Факс" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_appl" name="ПІБ керівника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_post_appl" name="Посада керівника" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sDateActual_SubjectOrgan_appl" name="Дата отримання даних з ЄДРПОУ" type="label" writable="false"></activiti:formProperty>
         <activiti:formProperty id="inn_fiz" name="ІПН фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="imya_fiz" name="У давальному відмінку П.І.Б.фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="adres_fiz" name="Місце проживання фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
@@ -404,13 +402,11 @@ ${tComment}</p>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) " type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectActionKVED_SubjectOrgan_appl" name="Основний КВЕД" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sNote_ID_SubjectActionKVED_SubjectOrgan_appl" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_appl" name="Телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_fax_appl" name="Факс" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_appl" name="ПІБ керівника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_post_appl" name="Посада керівника" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sDateActual_SubjectOrgan_appl" name="Дата отримання даних з ЄДРПОУ" type="label" writable="false"></activiti:formProperty>
         <activiti:formProperty id="inn_fiz" name="ІПН фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="imya_fiz" name="У давальному відмінку П.І.Б.фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="adres_fiz" name="Місце проживання фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
@@ -526,13 +522,11 @@ ${tComment}</p>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Ідентифікаційний код згідно з Єдиним державним реєстром підприємств та організацій України (ЄДРПОУ) " type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectActionKVED_SubjectOrgan_appl" name="Основний КВЕД" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sNote_ID_SubjectActionKVED_SubjectOrgan_appl" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_tel_appl" name="Телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_fax_appl" name="Факс" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_appl" name="ПІБ керівника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ur_post_appl" name="Посада керівника" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sDateActual_SubjectOrgan_appl" name="Дата отримання даних з ЄДРПОУ" type="label" writable="false"></activiti:formProperty>
         <activiti:formProperty id="inn_fiz" name="ІПН фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="imya_fiz" name="У давальному відмінку П.І.Б.фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="adres_fiz" name="Місце проживання фізичної особи–підприємця" type="string" writable="false"></activiti:formProperty>

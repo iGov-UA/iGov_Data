@@ -22,23 +22,12 @@
     },
     "ShowFieldsOnCondition__Lay_Registr": {
       "aField_ID": [
-        "sLabeRegistr3",
-        "sLabeZayava",
         "sLabeRegistr2"
       ],
       "asID_Field": {
         "sCondit1": "sFlag"
       },
       "sCondition": "[sCondit1] == 'registr1'"
-    },
-    "ShowFieldsOnCondition__Lay_null": {
-      "aField_ID": [
-        "sLabeRayon"
-      ],
-      "asID_Field": {
-        "sCondit1": "sFlag"
-      },
-      "sCondition": "[sCondit1] != 'true'&&[sCondit1] != 'registr1'"
     }
   }
 }

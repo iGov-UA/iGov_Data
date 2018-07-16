@@ -45,6 +45,7 @@
     },
     "ShowFieldsOnCondition_sPrivSectorF": {
       "aField_ID": [
+        "sLabe_NODomovKnig",
         "nFile_DomovKnig",
         "nFile_DK_KartReestr",
         "sLabe_DomovKnig"        

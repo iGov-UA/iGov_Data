@@ -1,0 +1,22 @@
+{
+  "validate": {
+    "[FileExtensions_1": {
+      "aField_ID": [
+        "nFile_ZminPrizv",
+        "nFile_ZayPasp",
+        "nFile_ZayIPN",
+        "nFile_Dovirenist",
+        "nFile_DovirutPasp",
+        "nFile_DovirutIPN",
+        "nFile_DomovKnig",
+        "nFile_DK_KartReestr",
+        "nFile_JutVlasn",
+        "nFile_ZarPasports",
+        "nFile_ZarIPNs",
+        "nFile_NarSvid"
+      ],
+      "saExtension": "pdf,zip,rar", 
+      "sMessage": "Недопустимий формат файлу! Повинно бути: {saExtension}"
+    }
+  }
+}

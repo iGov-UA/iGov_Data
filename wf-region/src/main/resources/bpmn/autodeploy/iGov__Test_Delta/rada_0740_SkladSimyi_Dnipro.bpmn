@@ -134,6 +134,7 @@
         <activiti:formProperty id="ScriptInn" name="IПН; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptPassport" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptAdress" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="ScriptGroup" name="Группа; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddressForPost" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkDay" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
@@ -445,6 +446,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="ScriptInn" name="IПН; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptPassport" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptAdress" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="ScriptGroup" name="Группа; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -750,7 +752,6 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="ScriptInn" name="IПН; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptPassport" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptAdress" name="Адреса; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="ScriptGroup" name="Группа; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>

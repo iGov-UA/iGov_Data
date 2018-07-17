@@ -6,7 +6,7 @@
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП району (міста), де зручно отримати результат послуги" type="select" default="0" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_OP" name="Інформація про оплату" type="markers" default="{&quot;attributes&quot;:{&quot;Line_OP&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeOplata&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_OP" name="Інформація про оплату" type="markers" default="{&quot;attributes&quot;:{&quot;Line_OP&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeOplata&quot;],&quot;sValue&quot;:&quot;Інформація про оплату&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabeOplata" name=" ; ;labelType=info" type="label" default="Увага! Ця послуга є платною (95 грн.), при заповненні полів треба буде завантажити документ, що засвідчує внесення оплати.  &lt;br&gt; Ви можете здійснити оплату зручним для Вас способом за - &lt;a href=&quot;http://cnapzmr.gov.ua/transport/14_2/ &quot; target=&quot;_blank&quot;&gt;реквізитами&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; можна завантажити електронну квітанцію, сформовану в інтернет-банку ;bNew=true" type="file" required="true"></activiti:formProperty>

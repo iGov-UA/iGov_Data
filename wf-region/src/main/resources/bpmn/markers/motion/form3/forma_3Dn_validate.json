@@ -1,6 +1,6 @@
 {
   "validate": {
-    "[FileExtensions_1": {
+    "FileExtensions_1": {
       "aField_ID": [
         "nFile_ZminPrizv",
         "nFile_ZayPasp",

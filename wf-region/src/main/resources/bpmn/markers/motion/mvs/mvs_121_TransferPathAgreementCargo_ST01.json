@@ -1,53 +1,92 @@
 {
-	"motion": 
-    {
-		"ShowFieldsOnCondition_1":
-		{
-			"aField_ID": 	["sFullName_SubjectOrgan_appl", "sShortName_SubjectOrgan_appl","sID_SubjectActionKVED_SubjectOrgan_appl", "sNote_ID_SubjectActionKVED_SubjectOrgan_appl", "sDateActual_SubjectOrgan_appl", "sLocation_SubjectOrgan_appl", "ur_tel_appl", "ur_fax_appl","sID_SubjectOrgan_OKPO_appl","sCEOName_SubjectOrgan_appl","ur_post_appl"],
-			"asID_Field": 	{"sClient": "subekt"},
-			"sCondition": 	"[sClient] == 'ur'"
-		},
-		"RequiredFieldsOnCondition_1": 
-		{
-			"aField_ID": 	["sFullName_SubjectOrgan_appl", "sShortName_SubjectOrgan_appl","sID_SubjectActionKVED_SubjectOrgan_appl", "sNote_ID_SubjectActionKVED_SubjectOrgan_appl", "sDateActual_SubjectOrgan_appl", "sLocation_SubjectOrgan_appl", "ur_tel_appl", "sID_SubjectOrgan_OKPO_appl","sCEOName_SubjectOrgan_appl","ur_post_appl"],
-			"asID_Field": 	{"sClient": "subekt"},
-			"sCondition": 	"[sClient] == 'ur'"
-		},
-		"ShowFieldsOnCondition_2":
-		{
-        	"aField_ID": 	["imya_fiz","adres_fiz","inn_fiz"],
-        	"asID_Field": 	{"sClient": "subekt"},
-         	"sCondition": 	"[sClient] == 'fiz'"
-		},
-		"RequiredFieldsOnCondition_2": 
-		{
-        	"aField_ID": 	["imya_fiz","adres_fiz","inn_fiz"],
-        	"asID_Field": 	{"sClient": "subekt"},
-         	"sCondition": 	"[sClient] == 'fiz'"
-		},
-		"ShowFieldsOnCondition_3":
-		{
-        	"aField_ID": 	["sMarkaTrailer","sNomerTrailer"],
-        	"asID_Field": 	{"sClient": "TypeConsist"},
-         	"sCondition": 	"[sClient] == 'Avto_Trailer'"
-		},
-		"RequiredFieldsOnCondition_3": 
-		{
-        	"aField_ID": 	["sMarkaTrailer","sNomerTrailer"],
-        	"asID_Field": 	{"sClient": "TypeConsist"},
-         	"sCondition": 	"[sClient] == 'Avto_Trailer'"
-		},
-		"ShowFieldsOnCondition_4":
-		{
-        	"aField_ID": 	["sDescriptionRoute02","sID_SubjectOrgan_OKPO_sender02","sFullName_SubjectOrgan_sender02","sLocation_SubjectOrgan_sender02","ur_tel_sender02","sDateActual_SubjectOrgan_sender02","sID_SubjectOrgan_OKPO_recipient02","sFullName_SubjectOrgan_recipient02","sLocation_SubjectOrgan_recipient02","ur_tel_recipient02","sDateActual_SubjectOrgan_recipient02"],
-        	"asID_Field": 	{"sClient": "enumCountRoute"},
-         	"sCondition": 	"[sClient] == 'CountRoute_2'"
-		},
-		"RequiredFieldsOnCondition_4": 
-		{
-        	"aField_ID": 	["sDescriptionRoute02","sID_SubjectOrgan_OKPO_sender02","sFullName_SubjectOrgan_sender02","sLocation_SubjectOrgan_sender02","ur_tel_sender02","sDateActual_SubjectOrgan_sender02","sID_SubjectOrgan_OKPO_recipient02","sFullName_SubjectOrgan_recipient02","sLocation_SubjectOrgan_recipient02","ur_tel_recipient02","sDateActual_SubjectOrgan_recipient02"],
-        	"asID_Field": 	{"sClient": "enumCountRoute"},
-         	"sCondition": 	"[sClient] == 'CountRoute_2'"
-		}
-     }
+  "motion": {
+    "ShowFieldsOnCondition_1": {
+      "aField_ID": [
+        "sFullName_SubjectOrgan_appl",
+        "sShortName_SubjectOrgan_appl",
+        "sID_SubjectActionKVED_SubjectOrgan_appl",
+        "sDateActual_SubjectOrgan_appl",
+        "sLocation_SubjectOrgan_appl",
+        "ur_tel_appl",
+        "ur_fax_appl",
+        "sID_SubjectOrgan_OKPO_appl",
+        "sCEOName_SubjectOrgan_appl",
+        "ur_post_appl"
+      ],
+      "asID_Field": {
+        "sClient": "subekt"
+      },
+      "sCondition": "[sClient] == 'ur'"
+    },
+    "ShowFieldsOnCondition_2": {
+      "aField_ID": [
+        "imya_fiz",
+        "adres_fiz",
+        "inn_fiz",
+        "nFile_ConfidantDoc"
+      ],
+      "asID_Field": {
+        "sClient": "subekt"
+      },
+      "sCondition": "[sClient] == 'fizDov'"
+    },
+    "ShowFieldsOnCondition_3": {
+      "aField_ID": [
+        "sMarkaTrailer",
+        "sNomerTrailer"
+      ],
+      "asID_Field": {
+        "sClient": "TypeConsist"
+      },
+      "sCondition": "[sClient] == 'Avto_Trailer'"
+    },
+    "RequiredFieldsOnCondition_3": {
+      "aField_ID": [
+        "sMarkaTrailer",
+        "sNomerTrailer"
+      ],
+      "asID_Field": {
+        "sClient": "TypeConsist"
+      },
+      "sCondition": "[sClient] == 'Avto_Trailer'"
+    },
+    "ShowFieldsOnCondition_4": {
+      "aField_ID": [
+        "sDescriptionRoute02",
+        "sID_SubjectOrgan_OKPO_sender02",
+        "sFullName_SubjectOrgan_sender02",
+        "sLocation_SubjectOrgan_sender02",
+        "ur_tel_sender02",
+        "sDateActual_SubjectOrgan_sender02",
+        "sID_SubjectOrgan_OKPO_recipient02",
+        "sFullName_SubjectOrgan_recipient02",
+        "sLocation_SubjectOrgan_recipient02",
+        "ur_tel_recipient02",
+        "sDateActual_SubjectOrgan_recipient02"
+      ],
+      "asID_Field": {
+        "sClient": "enumCountRoute"
+      },
+      "sCondition": "[sClient] == 'CountRoute_2'"
+    },
+    "RequiredFieldsOnCondition_4": {
+      "aField_ID": [
+        "sDescriptionRoute02",
+        "sID_SubjectOrgan_OKPO_sender02",
+        "sFullName_SubjectOrgan_sender02",
+        "sLocation_SubjectOrgan_sender02",
+        "ur_tel_sender02",
+        "sDateActual_SubjectOrgan_sender02",
+        "sID_SubjectOrgan_OKPO_recipient02",
+        "sFullName_SubjectOrgan_recipient02",
+        "sLocation_SubjectOrgan_recipient02",
+        "ur_tel_recipient02",
+        "sDateActual_SubjectOrgan_recipient02"
+      ],
+      "asID_Field": {
+        "sClient": "enumCountRoute"
+      },
+      "sCondition": "[sClient] == 'CountRoute_2'"
+    }
+  }
 }

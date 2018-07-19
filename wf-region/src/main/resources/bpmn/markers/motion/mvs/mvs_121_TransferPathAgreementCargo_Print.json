@@ -15,7 +15,7 @@
 		},
 		"ShowElementsOnTrue_222": 
 		{
-			"aElement_ID":	["s_dfz_p01","s_dfz_p02","s_dfz_p03","s_dfz_p04","s_dfz_p05","s_dfz_p06","s_dfz_p07","s_dfz_p08"],
+			"aElement_ID":	["s_dfz_p01","s_dfz_p02","s_dfz_p05","s_dfz_p06","s_dfz_p07","s_dfz_p08"],
 			"asID_Field":	{"sClient":"subekt"},
 			"sCondition":	"[sClient] == 'fizDov' || [sClient] == 'Представник фізичної особи-підприємця'"
 		},

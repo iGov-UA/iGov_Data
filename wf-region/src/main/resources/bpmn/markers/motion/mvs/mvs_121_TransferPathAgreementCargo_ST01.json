@@ -16,7 +16,7 @@
       "asID_Field": {
         "sClient": "subekt"
       },
-      "sCondition": "[sClient] == 'ur'"
+      "sCondition": "[sClient] == 'ur' || [sClient] == 'Юридична особа'"
     },
     "ShowFieldsOnCondition_2": {
       "aField_ID": [
@@ -28,7 +28,7 @@
       "asID_Field": {
         "sClient": "subekt"
       },
-      "sCondition": "[sClient] == 'fizDov'"
+      "sCondition": "[sClient] == 'fizDov'|| [sClient] == 'Представник фізичної особи-підприємця'"
     },
     "ShowFieldsOnCondition_2222": {
       "aField_ID": [
@@ -37,7 +37,7 @@
       "asID_Field": {
         "sClient": "subekt"
       },
-      "sCondition": "[sClient] == 'fiz'"
+      "sCondition": "[sClient] == 'fiz'|| [sClient] == 'Фізична особа-підприємець'"
     },
     "ShowFieldsOnCondition_3": {
       "aField_ID": [

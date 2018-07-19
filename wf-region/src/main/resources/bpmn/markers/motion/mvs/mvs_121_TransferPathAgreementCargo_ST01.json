@@ -30,6 +30,15 @@
       },
       "sCondition": "[sClient] == 'fizDov'"
     },
+    "ShowFieldsOnCondition_2222": {
+      "aField_ID": [
+        "sZayAdress"
+      ],
+      "asID_Field": {
+        "sClient": "subekt"
+      },
+      "sCondition": "[sClient] == 'fiz'"
+    },
     "ShowFieldsOnCondition_3": {
       "aField_ID": [
         "sMarkaTrailer",

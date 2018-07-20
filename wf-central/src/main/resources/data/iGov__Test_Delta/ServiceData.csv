@@ -39,7 +39,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 38;6;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 39;109;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 40;478;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
-41;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+41;740;111;111;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;255;true;;BankID,EDS,mpbds;0
 42;9;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 43;474;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0
 44;475;19;19;NULL;1;{};http://my.vmr.gov.ua;FALSE;1;FALSE;Замовити послугу можна на сайті Вінницької міськради після реєстрації в Персональному кабінеті;BankID,EDS,mpbds;0

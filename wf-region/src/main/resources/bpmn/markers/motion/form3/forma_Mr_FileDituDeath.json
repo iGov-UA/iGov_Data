@@ -1,0 +1,55 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sDeath": {
+      "aField_ID": [
+        "sPibDeath",
+        "dBirthDeath",
+        "dDeath",
+        "nFile_SvidDeath"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamPomer'||[sCondit1]=='sEnamZRPomer'"
+    },
+    "ShowFieldsOnCondition_sDomKnig": {
+      "aField_ID": [
+        "nFile_DomovKnig"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType",
+        "sCondit2": "asBudType"
+      },
+      "sCondition": "([sCondit1]=='sEnamBatDit'||[sCondit1]=='sEnamNasPunkt'||[sCondit1]=='sEnamZRPomer')&&[sCondit2]=='sPrivSector'"
+    },
+    "ShowFieldsOnCondition_nFile_JutVlasn": {
+      "aField_ID": [
+        "nFile_JutVlasn"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType",
+        "sCondit2": "asStatus"
+      },
+      "sCondition": "([sCondit1]=='sEnamKilkZr'||[sCondit1]=='sEnamVidMal')&&([sCondit2]=='sVlasn'||[sCondit2]=='sVlasnDov')"
+    },
+    "ShowFieldsOnCondition_sEnamBatDit": {
+      "aField_ID": [
+        "DituTable",
+        "nFile_DitSvidNar"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamBatDit'"
+    },
+    "ShowFieldsOnCondition_sEnamNasPunkt": {
+      "aField_ID": [
+        "nFile_ZayNar"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamNasPunkt'"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "aField": [
+    {
+      "id": "nTable1",
+      "name": "ПІБ дитини",
+      "type": "string",
+      "required": "true",
+      "nWidth": "60%"
+    },
+    {
+      "id": "nTable2",
+      "name": "Дата народження",
+      "type": "date",
+      "required": "true",
+      "nWidth": "40%"
+    }
+  ]
+}

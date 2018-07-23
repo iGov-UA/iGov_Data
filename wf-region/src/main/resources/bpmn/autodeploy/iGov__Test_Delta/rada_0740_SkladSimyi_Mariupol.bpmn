@@ -3,32 +3,43 @@
   <process id="rada_0740_SkladSimyi_Mariupol" name="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб" isExecutable="true">
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, до якого належить місце реєстрації особи, яка буде отримувати довідку" type="select" default="0" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="asDovidkaType" name="Яка довідка потрібна" type="enum" required="true">
+          <activiti:value id="sEnamRMP" name="Про зареєстроване місце проживання"></activiti:value>
+          <activiti:value id="sEnamZMP" name="Про зняття з реєстрації місця проживання"></activiti:value>
+          <activiti:value id="sEnamKilkZr" name="Про кількість зареєстрованих у житловому приміщенні/будинку осіб"></activiti:value>
+          <activiti:value id="sEnamBatDit" name="Про реєстрацію матері/батька/опікуна (піклувальника) з дитиною/(дітьми)"></activiti:value>
+          <activiti:value id="sEnamNasPunkt" name="Про те, що місце проживання особи було зареєстровано на території даного населенного пункту"></activiti:value>
+          <activiti:value id="sEnamPomer" name="Про останнє місце реєстрації померлого"></activiti:value>
+          <activiti:value id="sEnamZRPomer" name="Про те, що особа була зареєстрована разом з померлим на день його смерті"></activiti:value>
+          <activiti:value id="sEnamVidMal" name="Про відсутність малолітніх та неповнолітніх дітей у житловому приміщенні/будинку"></activiti:value>
+        </activiti:formProperty>
         
-        <activiti:formProperty id="markerzayvnik" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zayvnik.json')}"></activiti:formProperty>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdbirthDay" name="День народження заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника;(вкажіть повністю свою адресу реэстрації)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdAddressFactual" name="Адреса реєстрації заявника; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdAddress" name="markerBankIdAddress" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdAddress.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" required="true">
           <activiti:value id="sVlasn" name="Власник житла"></activiti:value>
           <activiti:value id="sZarey" name="Зареєстрована особа, що не є власником"></activiti:value>
           <activiti:value id="sVlasnDov" name="Представник власника"></activiti:value>
           <activiti:value id="sZareyDov" name="Представник зареєстрованої особи, що не є влаником"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPrizv" name="Чи змінювали ви прізвище?" type="enum" required="true">
+        <activiti:formProperty id="asPrizv" name="Чи змінювали ви прізвище або ім'я?" type="enum" required="true">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища;(сканкопія оригіналу, наприклад - свідоцтво про шлюб);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sLabePasport" name=" ; ;labelType=info" type="label" default="Увага! Завантажте всі заповнені сторінки паспорта (крім сторінок зі штампами старих місць реєстрації)"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації або повністю відскануйте посвідку);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZayIPN" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу, обов'язково завантажте всі сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
@@ -44,7 +55,7 @@
         <activiti:formProperty id="DovirutdInn" name="IПН довірителя;(якщо ІПН з якихось причин відсутній, вкажіть причину)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DovirutdPassport" name="Паспорт довірителя; (тип, серія та номер документу, дата і орган, що його видав)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirutIPN" name="ІПН довірителя; ;bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="markerzayvnik" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_Mr_zayvnik.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Інформація про місце реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про місце реєстрації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Вкажіть тип вашого будинку" type="enum" required="true">
@@ -78,12 +89,29 @@
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sLabe_NODomovKnig" name=" ; ;labelType=warning" type="label" default="Якщо домова книга відсутня, зверніться до відповідного відділу реєстрації особисто, для уточнення даних."></activiti:formProperty>
-        <activiti:formProperty id="nFile_DomovKnig" name="Домова книга;(сканкопія оригіналу, завантажте всі заповнені сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DK_KartReestr" name="Картка реєстрації особи;(якщо додатково до домової книги маєте цей документ, завантажте його сканкопію, обов'язково відскануйте картку з двох сторін);bNew=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="sLabe_DomovKnig" name=" ; ;labelType=info" type="label" default="Коли будете отримувати довідку, обов'язково візьміть з собою оригінал домової книги та картку реєстрації особи (за наявністю)."></activiti:formProperty>
-        <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zutlo.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Mr_zutlo.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_DIT" name="Інформація про дітей" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DIT&quot;:{&quot;aElement_ID&quot;:[&quot;DituTable&quot;],&quot;sValue&quot;:&quot;Інформація про дітей&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="DituTable" name="Інформація про дітей; ;bNew=true" type="table" default="${markerService.loadFromFile('table/registr/form3_DituTable.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sPibDeath" name="ПІБ особи що померла" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dBirthDeath" name="Дата народження особи що померла" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dDeath" name="Дата смерті" type="date" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;nFile_ZayPasp&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації або повністю відскануйте посвідку);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища/імені;(сканкопія оригіналу, наприклад - свідоцтво про шлюб);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу, обов'язково завантажте всі сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="nFile_ZayNar" name="Свідоцтво про народження заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_SvidDeath" name="Свідоцтво про смерть; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DitSvidNar" name="Свідоцтва про народження дітей; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="nFile_DomovKnig" name="Домова книга;(сканкопія оригіналу, завантажте всі заповнені сторінки);bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file"></activiti:formProperty>
+        
+        <activiti:formProperty id="markerFileDituDeath" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_Mr_FileDituDeath.json')}"></activiti:formProperty>
         
         
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>

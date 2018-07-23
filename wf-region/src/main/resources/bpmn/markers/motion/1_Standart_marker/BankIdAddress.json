@@ -1,0 +1,19 @@
+{
+  "motion": {
+    "ValuesFieldsOnCondition_BankIdAddress": {
+      "aField_ID": [
+        "tAddressFactual",
+        "FlagBankId"
+      ],
+      "asID_Field_sValue": [
+        "[bankIdAddressFactual]",
+        "1234567890"
+      ],
+      "asID_Field": {
+        "sCondit1": "bankIdlastName",
+        "sCondit2": "FlagBankId"
+      },
+      "sCondition": "[sCondit1] != '1234567890'&&[sCondit2] != '1234567890'"
+    }
+  }
+}

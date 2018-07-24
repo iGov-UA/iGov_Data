@@ -299,7 +299,7 @@ if(execution.getVariable('asBudType') == 'sPrivSector')
 execution.setVariable('ScriptAdress', Adres)
 
 var ScrDistrict = execution.getVariable('asDistrict');
-var ScrGroup = ' ';
+var ScrGroup = ScrDistrict;
 if(execution.getVariable('asRegistr') == 'no'){
   ScrGroup='new'+ScrDistrict
 }

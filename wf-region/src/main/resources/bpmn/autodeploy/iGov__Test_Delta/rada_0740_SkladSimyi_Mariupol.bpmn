@@ -93,13 +93,13 @@
         <activiti:formProperty id="markersLine_DIT" name="Інформація про дітей" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DIT&quot;:{&quot;aElement_ID&quot;:[&quot;DituTable&quot;],&quot;sValue&quot;:&quot;Інформація про дітей&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DituTable" name="Інформація про дітей; ;bNew=true" type="table" default="${markerService.loadFromFile('table/registr/form3_DituTable.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про померлого&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPibDeath" name="ПІБ особи що померла" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="dBirthDeath" name="Дата народження особи що померла" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="dDeath" name="Дата смерті" type="date" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeFile&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sLabeFile" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Якщо один документ складається з кількох зображень або файлів, завантажте його у форматі PDF або ZIP архівом"></activiti:formProperty>
+        <activiti:formProperty id="sLabeFile" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Якщо один документ складається з кількох зображень або файлів, завантажте його у форматі PDF або ZIP архівом."></activiti:formProperty>
         
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації або повністю відскануйте посвідку);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища/імені;(сканкопія оригіналу, наприклад - свідоцтво про шлюб);bNew=true" type="file" required="true"></activiti:formProperty>
@@ -253,7 +253,7 @@ ${sNameOrgan}.<br />
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask3" name="Попередня перевірка" activiti:candidateGroups="dnepr_mvk_form3_${ScriptGroup}">
+    <userTask id="usertask3" name="Попередня перевірка" activiti:candidateGroups="forma3_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="asDovidkaType" name="Яка довідка потрібна" type="enum" writable="false">
           <activiti:value id="sEnamRMP" name="Про зареєстроване місце проживання"></activiti:value>
@@ -328,7 +328,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markersLine_DIT" name="Інформація про дітей" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DIT&quot;:{&quot;aElement_ID&quot;:[&quot;DituTable&quot;],&quot;sValue&quot;:&quot;Інформація про дітей&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DituTable" name="Інформація про дітей; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про померлого&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPibDeath" name="ПІБ особи що померла; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="dBirthDeath" name="Дата народження особи що померла" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="dDeath" name="Дата смерті" type="date" writable="false"></activiti:formProperty>
@@ -453,7 +453,7 @@ ${sNameOrgan}<br>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask4" name="Видача довідки Заявнику" activiti:candidateGroups="dnepr_mvk_form3_${ScriptGroup}">
+    <userTask id="usertask4" name="Видача довідки Заявнику" activiti:candidateGroups="forma3_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="asDovidkaType" name="Яка довідка потрібна" type="enum" writable="false">
           <activiti:value id="sEnamRMP" name="Про зареєстроване місце проживання"></activiti:value>
@@ -528,7 +528,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="markersLine_DIT" name="Інформація про дітей" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DIT&quot;:{&quot;aElement_ID&quot;:[&quot;DituTable&quot;],&quot;sValue&quot;:&quot;Інформація про дітей&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DituTable" name="Інформація про дітей; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_DTH" name="Інформація про померлого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DTH&quot;:{&quot;aElement_ID&quot;:[&quot;sPibDeath&quot;],&quot;sValue&quot;:&quot;Інформація про померлого&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPibDeath" name="ПІБ особи що померла; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="dBirthDeath" name="Дата народження особи що померла" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="dDeath" name="Дата смерті" type="date" writable="false"></activiti:formProperty>

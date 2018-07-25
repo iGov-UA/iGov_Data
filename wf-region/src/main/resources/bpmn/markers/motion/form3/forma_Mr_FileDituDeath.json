@@ -47,9 +47,20 @@
         "nFile_ZayNar"
       ],
       "asID_Field": {
-        "sCondit1": "asDovidkaType"
+        "sCondit1": "asDovidkaType",
+        "sCondit2": "asStatus"
       },
-      "sCondition": "[sCondit1]=='sEnamNasPunkt'"
+      "sCondition": "[sCondit1]=='sEnamNasPunkt'&&([sCondit2]=='sVlasn'||[sCondit2]=='sZarey')"
+    },
+    "ShowFieldsOnCondition_nFileDovirutNar": {
+      "aField_ID": [
+        "nFile_DovirutNar"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType",
+        "sCondit2": "asStatus"
+      },
+      "sCondition": "[sCondit1]=='sEnamNasPunkt'&&([sCondit2]=='sVlasnDov'||[sCondit2]=='sZareyDov')"
     }
   }
 }

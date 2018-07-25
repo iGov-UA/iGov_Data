@@ -104,6 +104,7 @@
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації або повністю відскануйте посвідку);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища/імені;(сканкопія оригіналу, наприклад - свідоцтво про шлюб);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirutNar" name="Свідоцтво про народження довірителя; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу, обов'язково завантажте всі сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="nFile_ZayNar" name="Свідоцтво про народження заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>

@@ -54,7 +54,6 @@
         <activiti:formProperty id="DovirutMiddleName" name="По батькові довірителя;(якщо по батькові з якихось причин відсутнє, вкажіть це)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DovirutdInn" name="IПН довірителя;(якщо ІПН з якихось причин відсутній, вкажіть причину)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DovirutdPassport" name="Паспорт довірителя; (тип, серія та номер документу, дата і орган, що його видав)" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerzayvnik" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Mr_zayvnik.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Інформація про місце реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про місце реєстрації&quot;}}}"></activiti:formProperty>
@@ -99,9 +98,12 @@
         <activiti:formProperty id="dBirthDeath" name="Дата народження особи що померла" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="dDeath" name="Дата смерті" type="date" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;nFile_ZayPasp&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeFile&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sLabeFile" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Якщо один документ складається з кількох зображень або файлів, завантажте його у форматі PDF або ZIP архівом"></activiti:formProperty>
+        
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації або повністю відскануйте посвідку);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища/імені;(сканкопія оригіналу, наприклад - свідоцтво про шлюб);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника;(сканкопія оригіналу, обов'язково завантажте всі сторінки);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="nFile_ZayNar" name="Свідоцтво про народження заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>

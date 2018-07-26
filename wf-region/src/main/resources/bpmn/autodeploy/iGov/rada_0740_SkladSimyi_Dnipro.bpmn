@@ -22,7 +22,7 @@
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів та підписати їх ЕЦП. Документи мають бути виключно формату PDF,ZIP,RAR. Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний формат&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів та підписати їх ЕЦП. Документи мають бути виключно формату PDF. Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний формат&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerzayvnik" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zayvnik.json')}"></activiti:formProperty>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище заявника" type="string" required="true"></activiti:formProperty>
@@ -110,9 +110,9 @@
           <activiti:value id="sYesDorDit" name="Так, зареєстровані діти і повнолітні особи (є і паспорти і свідоцтва)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" default="${markerService.loadFromFile('table/registr/form3_table_Dnipro.json')}"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб (або Посвідки на проживання);(сканкопії оригіналу, перша, друга та сторінка з реєстрацією, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб (або Посвідки на проживання);(сканкопії оригіналу, перша, друга та сторінка з реєстрацією, завантажте єдиним PDF файлом);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб;(сканкопії оригіналу, якщо у ваших дітей вже є ІПН завантажте ці сканкопії теж);bNew=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження;(сканкопії оригіналу, завантажте єдиним ZIP архівом);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_NarSvid" name="Свідоцтва про народження;(сканкопії оригіналу, завантажте єдиним PDF файлом);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersInOs" name="ShowFields" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_inOs.json')}"></activiti:formProperty>
         <activiti:formProperty id="markersLine_4" name="Спосіб отримання довідки заявником" type="markers" default="{&quot;attributes&quot;:{&quot;Line_4&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Спосіб отримання довідки заявником&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як ви хочете отримати відповідь" type="enum" required="true">
@@ -299,7 +299,7 @@ if(execution.getVariable('asBudType') == 'sPrivSector')
 execution.setVariable('ScriptAdress', Adres)
 
 var ScrDistrict = execution.getVariable('asDistrict');
-var ScrGroup = ' ';
+var ScrGroup = ScrDistrict;
 if(execution.getVariable('asRegistr') == 'no'){
   ScrGroup='new'+ScrDistrict
 }

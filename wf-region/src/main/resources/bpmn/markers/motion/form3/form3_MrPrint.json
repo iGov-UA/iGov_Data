@@ -1,0 +1,76 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sBody_ZayavaMrRMP": {
+      "aField_ID": [
+        "sBody_ZayavaMrRMP"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamRMP'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrZMP": {
+      "aField_ID": [
+        "sBody_ZayavaMrZMP"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamZMP'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrKilkZr": {
+      "aField_ID": [
+        "sBody_ZayavaMrKilkZr"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamKilkZr'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrBatDit": {
+      "aField_ID": [
+        "sBody_ZayavaMrBatDit"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamBatDit'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrNasPunkt": {
+      "aField_ID": [
+        "sBody_ZayavaMrNasPunkt"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamNasPunkt'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrPomer": {
+      "aField_ID": [
+        "sBody_ZayavaMrPomer"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamPomer'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrZRPomer": {
+      "aField_ID": [
+        "sBody_ZayavaMrZRPomer"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamZRPomer'"
+    },
+    "ShowFieldsOnCondition_sBody_ZayavaMrVidMal": {
+      "aField_ID": [
+        "sBody_ZayavaMrVidMal"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDovidkaType"
+      },
+      "sCondition": "[sCondit1]=='sEnamVidMal'"
+    }
+  }
+}

@@ -15,7 +15,7 @@
         "nFile_ZarIPNs",
         "nFile_NarSvid"
       ],
-      "saExtension": "pdf,zip,rar", 
+      "saExtension": "pdf", 
       "sMessage": "Недопустимий формат файлу! Повинно бути: {saExtension}"
     }
   }

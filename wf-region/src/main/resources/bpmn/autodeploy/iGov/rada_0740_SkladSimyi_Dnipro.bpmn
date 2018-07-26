@@ -61,7 +61,6 @@
         <activiti:formProperty id="DovirutdPassport" name="Паспорт довірителя; (тип, серія та номер документу, дата і орган, що його видав)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutIPN" name="ІПН довірителя; ;bNew=true" type="file"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Вкажіть тип вашого будинку" type="enum" required="true">
           <activiti:value id="sBagkvatur" name="багатоквартирний"></activiti:value>
@@ -100,7 +99,6 @@
         <activiti:formProperty id="sLabe_DomovKnig" name=" ; ;labelType=info" type="label" default="Коли будете отримувати довідку, обов'язково візьміть з собою оригінал домової книги та картку реєстрації особи (за наявністю)."></activiti:formProperty>
         <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zutlo.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_3" name="Інші зареєстровані особи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;chekReestrOsob&quot;],&quot;sValue&quot;:&quot;Інші зареєстровані особи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="chekReestrOsob" name="Чи зареєстровані по цій адресі інші особи?;(окрім заявника або довірителя)" type="enum" required="true">
           <activiti:value id="sNoReg" name="За зазначеною адресою ніхто не зареєстрований"></activiti:value>
@@ -127,7 +125,6 @@
         <activiti:formProperty id="form_signed_all_1" name=" ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="markerPost" name="Post" type="markers" default="${markerService.loadFromFile('form3/Dnipro_Post_ECP.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerValidate" name="Validate" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_validate.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptMiddleName" name="По батькові; ;bVisible=false" type="string"></activiti:formProperty>
@@ -148,8 +145,8 @@
         <activiti:formProperty id="sSum" name="сумма платежа; ;bVisible=false" type="string" default="55.59"></activiti:formProperty>
         <activiti:formProperty id="sID_Currency" name="ИД-строковой валюты; ;bVisible=false" type="string" default="UAH"></activiti:formProperty>
         <activiti:formProperty id="sDescription" name="строка-описание платежа; ;bVisible=false" type="string" default="сплата за отримання листа"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про склад сім'ї"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="довідку про склад сім'ї"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="довідку про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
@@ -1047,6 +1044,34 @@ ${sNameOrgan}<br>
         </activiti:field>
       </extensionElements>
     </serviceTask>
+    <serviceTask id="servicetask22" name="Лист Укрпошті" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[romanovska-oh@ukrposhta.ua]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[Нова заявка на доставку поштою. ${sPosluga_name}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+Запит №[sID_Order] оброблено. <br>  
+Необхідно здійснити поштову доставку.<br><br/>   
+Заявник: ${clFio}<br/>
+Індекс: ${sIndex}<br/>
+Поштова адреса заявника: ${sPostAdress}<br/><br/> 
+Номер транзакції платежу: ${sID_Payment}<br/>
+Орган де забирати: ${sNameOrgan}<br/>
+Адреса органу: ${sAddressForPost}<br/>  <br/>     
+
+[pattern/mail/new_design/_common_signature_start.html]
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
     <userTask id="usertask2" name="УкрПошта" activiti:candidateGroups="UkrPost_prav">
       <extensionElements>
         <activiti:formProperty id="sPosluga_name" name="Назва послуги" type="string" writable="false"></activiti:formProperty>
@@ -1105,7 +1130,7 @@ ${sNameOrgan}<br>
     <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
     <parallelGateway id="parallelgateway1" name="Parallel Gateway"></parallelGateway>
     <sequenceFlow id="flow40" sourceRef="parallelgateway1" targetRef="usertask1"></sequenceFlow>
-    <sequenceFlow id="flow41" sourceRef="parallelgateway1" targetRef="usertask2"></sequenceFlow>
+    <sequenceFlow id="flow41" sourceRef="parallelgateway1" targetRef="servicetask22"></sequenceFlow>
     <parallelGateway id="parallelgateway2" name="Parallel Gateway"></parallelGateway>
     <sequenceFlow id="flow42" sourceRef="servicetask12" targetRef="parallelgateway2"></sequenceFlow>
     <sequenceFlow id="flow43" sourceRef="usertask2" targetRef="parallelgateway2"></sequenceFlow>
@@ -1145,6 +1170,7 @@ ${sNameOrgan}<br>
     <sequenceFlow id="flow82" sourceRef="scripttask3" targetRef="exclusivegateway2"></sequenceFlow>
     <sequenceFlow id="flow83" sourceRef="servicetask20" targetRef="parallelgateway1"></sequenceFlow>
     <sequenceFlow id="flow85" sourceRef="servicetask21" targetRef="usertask3"></sequenceFlow>
+    <sequenceFlow id="flow86" sourceRef="servicetask22" targetRef="usertask2"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_rada_0740_SkladSimyi_Dnipro">
     <bpmndi:BPMNPlane bpmnElement="rada_0740_SkladSimyi_Dnipro" id="BPMNPlane_rada_0740_SkladSimyi_Dnipro">
@@ -1221,7 +1247,7 @@ ${sNameOrgan}<br>
         <omgdc:Bounds height="55.0" width="105.0" x="393.0" y="875.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
-        <omgdc:Bounds height="55.0" width="105.0" x="519.0" y="730.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="519.0" y="804.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask5" id="BPMNShape_servicetask5">
         <omgdc:Bounds height="55.0" width="105.0" x="680.0" y="875.0"></omgdc:Bounds>
@@ -1261,6 +1287,9 @@ ${sNameOrgan}<br>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent8" id="BPMNShape_endevent8">
         <omgdc:Bounds height="35.0" width="35.0" x="12.0" y="561.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask22" id="BPMNShape_servicetask22">
+        <omgdc:Bounds height="55.0" width="105.0" x="519.0" y="730.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
         <omgdi:waypoint x="74.0" y="100.0"></omgdi:waypoint>
@@ -1371,7 +1400,7 @@ ${sNameOrgan}<br>
         <omgdi:waypoint x="551.0" y="902.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow43" id="BPMNEdge_flow43">
-        <omgdi:waypoint x="571.0" y="785.0"></omgdi:waypoint>
+        <omgdi:waypoint x="571.0" y="859.0"></omgdi:waypoint>
         <omgdi:waypoint x="571.0" y="882.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow47" id="BPMNEdge_flow47">
@@ -1469,6 +1498,10 @@ ${sNameOrgan}<br>
       <bpmndi:BPMNEdge bpmnElement="flow85" id="BPMNEdge_flow85">
         <omgdi:waypoint x="592.0" y="180.0"></omgdi:waypoint>
         <omgdi:waypoint x="498.0" y="180.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow86" id="BPMNEdge_flow86">
+        <omgdi:waypoint x="571.0" y="785.0"></omgdi:waypoint>
+        <omgdi:waypoint x="571.0" y="804.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

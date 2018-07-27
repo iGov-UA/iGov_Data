@@ -768,7 +768,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 828;628;50006;NULL;6;4;{"processDefinitionId":"ternopil_obl_284:1:1"};;false;231;true;;BankID,EDS,mpbds;0
 829;102;26;26;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 830;568;1;1;NULL;4;{"processDefinitionId":"DABI_568_DekVukPid:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-831;957;154;154;NULL;4;{"processDefinitionId":"demo:1:58"};;true;1;true;;BankID,EDS,mpbds;0
+831;1388;50006;NULL;6;4;{"processDefinitionId":"ternopol_oda_207:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 832;956;182;182;NULL;4;{"processDefinitionId":"dnepr_cnap_238:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 833;956;28;28;NULL;4;{"processDefinitionId":"dnepr_cnap_238:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 834;956;102;102;NULL;4;{"processDefinitionId":"dnepr_cnap_238:1:1"};;false;225;true;;BankID,EDS,mpbds;0

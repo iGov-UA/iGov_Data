@@ -5130,11 +5130,11 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5263;173;648;648;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5264;175;648;648;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5265;1431;648;648;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5266;28;115;115;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5267;25;115;115;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5268;173;115;115;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5269;175;115;115;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
-5270;1431;115;115;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5266;28;115;115;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5267;25;115;115;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5268;173;115;115;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5269;175;115;115;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5270;1431;115;115;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5271;179;50006;NULL;6;4;{"processDefinitionId":"dms_0179_zagranLost_DMSiGov:1:1"};;false;288;false;;BankID,EDS,mpbds;0
 5272;1557;50018;NULL;18;4;{"processDefinitionId":"oda_invest:1:1"};;false;209;false;;BankID,EDS,mpbds;0
 5273;28;661;661;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;225;true;;BankID,EDS,mpbds;0

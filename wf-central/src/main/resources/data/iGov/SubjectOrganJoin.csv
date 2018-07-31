@@ -3194,7 +3194,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3524;161;Виноградівська ОТГ (Олешківський район);Виноградівська ОТГ (Олешківський район);khers_VinogrOTG;khers_VinogrOTG; ; ;NULL;NULL;6500000000
 3525;161;Кочубеївська ОТГ (Високопільський район);Кочубеївська ОТГ (Високопільський район);khers_KochubOTG;khers_KochubOTG; ; ;NULL;NULL;6500000000
 3526;205;Каховський міський ЦНАП;Каховський міський ЦНАП;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6510400000
-3527;2;Каховський міський ЦНАП;Каховський міський ЦНАП;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6500000000
+3527;228;Каховський міський ЦНАП;Каховський міський ЦНАП;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6500000000
 3528;205;Олешківський районний ЦНАП при РДА;Олешківський районний ЦНАП при РДА;khers_oleshkiR;khers_oleshkiR; ; ;NULL;NULL;6525000000
 3529;288;Олешківський районний ЦНАП при РДА;Олешківський районний ЦНАП при РДА;khers_oleshkiR;khers_oleshkiR; ; ;NULL;NULL;6500000000
 3530;225;ЦНАП м.Обухів;ЦНАП м.Обухів;kiev_obuhivT;kiev_obuhivT;;;NULL;NULL;3211600000

@@ -1,0 +1,49 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_fop": {
+      "aField_ID": [
+        "bankIdAddressFactual"
+      ],
+      "asID_Field": {
+        "sCondit1": "whoIs"
+      },
+      "sCondition": "[sCondit1]=='fop'"
+    },
+    "ShowFieldsOnCondition_ur": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_appl",
+        "sFullName_SubjectOrgan_appl",
+        "sLocation_SubjectOrgan_appl",
+        "sDateActual_SubjectOrgan_appl"
+      ],
+      "asID_Field": {
+        "sCondit1": "whoIs"
+      },
+      "sCondition": "[sCondit1]=='ur'"
+    },
+    "ValuesFieldsOnCondition_fop": {
+      "aField_ID": [
+        "place"
+      ],
+      "asID_Field_sValue": [
+        " "
+      ],
+      "asID_Field": {
+        "sCondit1": "whoIs"
+      },
+      "sCondition": "[sCondit1] == 'fop'"
+    },
+    "ValuesFieldsOnCondition_ur": {
+      "aField_ID": [
+        "place"
+      ],
+      "asID_Field_sValue": [
+        "[sLocation_SubjectOrgan_appl]"
+      ],
+      "asID_Field": {
+        "sCondit1": "whoIs"
+      },
+      "sCondition": "[sCondit1] == 'ur'"
+    }
+  }
+}

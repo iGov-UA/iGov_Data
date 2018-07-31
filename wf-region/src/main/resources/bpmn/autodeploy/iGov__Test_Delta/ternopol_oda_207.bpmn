@@ -4,29 +4,56 @@
     <documentation>адаптирован для Тернопольской ОГА (ternopil_oda_5 / 6100000000_oda_5), Черниговской ОГА (chern_oda_5 /7400000000_oda_5)</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
+        
+        <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище заявника" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я заявника" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові заявника" type="string"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Контактний телефон" type="string" default="+38" required="true"></activiti:formProperty>
-        <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку " type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" required="true">
           <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
           <activiti:value id="ur" name="юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="orgAddress" name="Місце реєстрації фізичної особи підприємця або юридичної особи" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="orgName" name="Назва підприємства" type="string"></activiti:formProperty>
-        <activiti:formProperty id="organ" name="Надіслати звернення до" type="enum" required="true">
-          <activiti:value id="dept" name="Департаменту економічного розвитку, інвестиційної діяльності та міжнародного співробітництва облдержадміністрації"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="problem" name="Суть звернення" type="textArea" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника;(вкажіть повністю свою адресу реэстрації)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdAddressFactual" name="Адреса реєстрації заявника; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdAddress" name="markerBankIdAddress" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdAddress.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UR" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UR&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_appl&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Код ЄДРПОУ" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування" type="textArea" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації" type="textArea" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDateActual_SubjectOrgan_appl" name="Дата отримання даних з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
+        
+        <activiti:formProperty id="markerUrFiz" name="markerUrFiz" type="markers" default="${markerService.loadFromFile('ODA_invest/ODA_1388_ZahBiz.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="place" name="Місце знаходження підприємства;(зазначте адресу підприємства, звертаємо увагу, що юридична адреса юридичної особи може відрізнятись від фактичного місцезнаходження підприємства або його підрозділу)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="place1" name="Координати підприємства;(у форматі: https://www.google.ua/maps/@хх.хххххх,хх.хххххх,хх.ххz)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sLabelZemCoord" name=" ; ;labelType=info" type="label" default="Інформація про те, як правильно визначити координати - &lt;a href=&quot;http://bit.ly/1NNaEzN &quot; target=&quot;_blank&quot;&gt;знаходиться за посиланням &lt;/a&gt;"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="problem" name="Суть звернення;(коротко сформулюйте проблему одним реченням)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sZaputOpus" name="Детально опишіть проблему;(максимально конкретизуйте ситуацію, вказуйте факти, обставни та прізвища)" type="fileHTML" required="true"></activiti:formProperty>
+        <activiti:formProperty id="doc" name="Документи що стоються звернення;(за наявності, якщо документів багато завантажте ZIP архівом);bNew=true" type="file"></activiti:formProperty>
+        
         <activiti:formProperty id="resultWay" name="Спосіб отримання відповіді" type="enum" required="true">
           <activiti:value id="fizic" name="Надіслати поштою"></activiti:value>
           <activiti:value id="digit" name="Отримати електронну копію"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="doc" name="Супроводжуючі документи; за наявності;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="postV1" name="електронна пошта ОДА1; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="marker1" name="назва підприємства" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_1&quot;:{&quot;aField_ID&quot;:[&quot;orgName&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;whoIs&quot;},&quot;sCondition&quot;:&quot;[sService]=='ur'&quot;}}}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <scriptTask id="scripttask1" name="Передача значений" scriptFormat="javascript" activiti:autoStoreVariables="false">
@@ -109,9 +136,18 @@ execution.setVariable('postV1', per3)
     <sequenceFlow id="flow4" sourceRef="servicetask4" targetRef="usertask1"></sequenceFlow>
     <userTask id="usertask1" name="Перевірка документів" activiti:candidateGroups="${sID_UA}_oda_5">
       <extensionElements>
+        <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
+        
+        
+        
+        
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
           <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
           <activiti:value id="ur" name="юридична особа"></activiti:value>

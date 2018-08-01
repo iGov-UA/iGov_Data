@@ -38,7 +38,7 @@
         <activiti:formProperty id="markerUrFiz" name="markerUrFiz" type="markers" default="${markerService.loadFromFile('ODA_invest/ODA_1388_ZahBiz.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="place" name="Місце знаходження підприємства;(зазначте адресу підприємства, звертаємо увагу, що юридична адреса юридичної особи може відрізнятись від фактичного місцезнаходження підприємства або його підрозділу)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="place" name="Місце знаходження підприємства;(зазначте адресу підприємства, звертаємо увагу, що юридична адреса юридичної особи може відрізнятись від фактичного місцезнаходження підприємства або його підрозділу)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства;(у форматі: https://www.google.ua/maps/@хх.хххххх,хх.хххххх,хх.ххz)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sLabelZemCoord" name=" ; ;labelType=info" type="label" default="Інформація про те, як правильно визначити координати - &lt;a href=&quot;http://bit.ly/1NNaEzN &quot; target=&quot;_blank&quot;&gt;знаходиться за посиланням &lt;/a&gt;"></activiti:formProperty>
         
@@ -52,7 +52,12 @@
           <activiti:value id="digit" name="Отримати електронну копію"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="postV1" name="електронна пошта ОДА1; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="електронна пошта ОДА1; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="Довідку про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <scriptTask id="scripttask1" name="Передача значений" scriptFormat="javascript" activiti:autoStoreVariables="false">
@@ -85,50 +90,58 @@ per2 = 'Херсонська обласна держана адміністра�
 var per3 = 'kanc@khoda.gov.ua'
 
 }
-execution.setVariable('obl', per1)
-execution.setVariable('rekv', per2)
-execution.setVariable('postV1', per3)
+execution.setVariable('sNameOrgan', per1)
+execution.setVariable('sAddress', per2)
+execution.setVariable('sMailClerk', per3)
 	  </script>
     </scriptTask>
     <sequenceFlow id="flow25" sourceRef="scripttask1" targetRef="servicetask5"></sequenceFlow>
     <serviceTask id="servicetask5" name="Лист в ОДА" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${postV1}]]></activiti:expression>
-        </activiti:field>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове звернення на тему: Захисти свій бізнес]]></activiti:string>
+          <activiti:expression><![CDATA[Нова заявка про ${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/_common_employee_notify.html]]]></activiti:expression>
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <serviceTask id="servicetask4" name="Лист громадянину" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+    <serviceTask id="servicetask4" name="Лист громадянину" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення на тему: Захисти свій бізнес]]></activiti:string>
+          <activiti:expression><![CDATA[${sPosluga_name}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
-									<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
-                                    <p>
-										Ваш запит був успішно зареєстрований у нашій системі.<br /> 	
-										Спеціалісти ОДА повинні дати відповідь найближчим часом.
-									</p>
-                                    [pattern/mail/_common_signature_start.html]
-									[pattern_dictonary:ternopol_oda_209_mailer.csv:value{[sID_UA]}:3]
-                                    [pattern/mail/_common_signature_end.html]
-									[pattern/mail/_common_footer.html]]]></activiti:expression>
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+[pattern/mail/new_design/_common_content_start.html]
+<p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br/><br/>
+Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p>
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan}.<br />
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

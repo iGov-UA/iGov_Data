@@ -28,7 +28,6 @@
         
         <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника;(вкажіть повністю свою адресу реэстрації)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdAddressFactual" name="Адреса реєстрації заявника; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markerBankIdAddress" name="markerBankIdAddress" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdAddress.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" required="true">
           <activiti:value id="sVlasn" name="Власник житла"></activiti:value>
@@ -46,7 +45,7 @@
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmailAdress" name="markerBankIdPasportPhoneEmailAdress" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmailAdress.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_D" name="Інформація про довірителя" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;DovirutLastName&quot;],&quot;sValue&quot;:&quot;Інформація про довірителя&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="DovirutLastName" name="Прізвище довірителя" type="string" required="true"></activiti:formProperty>

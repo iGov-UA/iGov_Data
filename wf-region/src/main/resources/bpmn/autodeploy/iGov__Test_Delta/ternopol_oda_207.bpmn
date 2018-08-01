@@ -19,7 +19,7 @@
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmailAdress" name="markerBankIdPasportPhoneEmailAdress" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmailAdress.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" required="true">
           <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
@@ -28,7 +28,6 @@
         
         <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника;(вкажіть повністю свою адресу реэстрації)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdAddressFactual" name="Адреса реєстрації заявника; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markerBankIdAddress" name="markerBankIdAddress" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdAddress.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_UR" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UR&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_appl&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Код ЄДРПОУ" type="string" default=" " required="true"></activiti:formProperty>

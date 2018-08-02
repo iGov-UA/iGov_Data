@@ -54,10 +54,10 @@
         
         
         <activiti:formProperty id="sFlag" name="sFlag; ;bVisible=false" type="string" default="two"></activiti:formProperty>
-        <activiti:formProperty id="markersFlag" name="markersFlag" type="markers" default="${markerService.loadFromFile('ODA_invest/ODA_1388_sFlag.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="електронна пошта ОДА1; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk_DFS" name="електронна пошта ДФС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Захисти свій бізнес"></activiti:formProperty>
@@ -69,7 +69,8 @@
 var per1 = 'Obl'
 var per2 = 'Rekv'
 var per3 = 'post1'
-var per4 = 'post2'
+var per4 = 'akylish88@gmail.com'
+var flag = 'three'
 if (execution.getVariable('sID_UA') == '6100000000'){
 per1 = 'Тернопільської обласної державної адміністрації'
 per2 = 'adres'
@@ -79,24 +80,26 @@ var per3 = 'ternopil_vrp@ukr.net'
 if (execution.getVariable('sID_UA') == '4800000000'){
 per1 = 'Миколаївської обласної державної адміністрації'
 per2 = 'Миколаївська обласна держана адміністрація 54001, м. Миколаїв, вул. Адміральська, 22'
-var per3 = 'akylish88@gmail.com '
+per3 = 'akylish88@gmail.com '
 
 }
 if (execution.getVariable('sID_UA') == '7400000000'){
 per1 = 'Чернігівської обласної державної адміністрації'
 per2 = 'Чернігівська обласна держана адміністрація, м. Чернігів, вул. Шевченка, 7'
-var per3 = 'svyrydenko.yulia@gmail.com'
+per3 = 'svyrydenko.yulia@gmail.com'
 
 }
 if (execution.getVariable('sID_UA') == '6500000000'){
 per1 = 'Херсонської обласної державної адміністрації'
-per2 = 'Херсонська обласна держана адміністрація, м. Чернігів, вул. Шевченка, 7'
-var per3 = 'kanc@khoda.gov.ua'
-
+per2 = 'Херсонська обласна держана адміністрація, 73000, Херсонська область, м.Херсон, площа Свободи, 1'
+per3 = 'kanc@khoda.gov.ua'
+per4 = 'elena.chalay@gmail.com'
+execution.setVariable('sFlag', flag)
 }
 execution.setVariable('sNameOrgan', per1)
 execution.setVariable('sAddress', per2)
 execution.setVariable('sMailClerk', per3)
+execution.setVariable('sMailClerk_DFS', per3)
 	  </script>
     </scriptTask>
     <sequenceFlow id="flow25" sourceRef="scripttask1" targetRef="servicetask5"></sequenceFlow>
@@ -132,6 +135,7 @@ execution.setVariable('sMailClerk', per3)
 [pattern/mail/new_design/_common_content_start.html]
 <p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br/><br/>
 Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p>
+
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}.<br />
@@ -160,8 +164,8 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
-          <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
-          <activiti:value id="ur" name="юридична особа"></activiti:value>
+          <activiti:value id="fop" name="Фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="Юридична особа"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
@@ -174,6 +178,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
@@ -195,6 +200,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_ComRegN.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sBody_1" name="[pattern/print/ternopil/ternopil_oda_207.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -225,7 +231,6 @@ ${sNameOrgan}.<br />
 <p>Причина:<br>
 ${tComment}</p>
 [pattern/mail/new_design/_common_content_end.html]
-    ${sAddress} <br> 
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrgan}<br />
 [pattern/mail/new_design/_common_signature_end.html]
@@ -296,8 +301,8 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
-          <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
-          <activiti:value id="ur" name="юридична особа"></activiti:value>
+          <activiti:value id="fop" name="Фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="Юридична особа"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
@@ -356,10 +361,10 @@ ${sNameOrgan},<br>
 Електронна сканкопія відповіді знаходиться у додатку до листа.<br><br>
 
 Якщо вам знадобиться оригінал, його можна буде отримати за адресою:<br>
-	${sAddress} <br> 
+${sAddress} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrgan}<br />
+${sNameOrgan}<br />
 [pattern/mail/new_design/_common_signature_end.html]   
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -396,10 +401,10 @@ ${sNameOrgan},<br>
 
 Також у додатку до листа знаходиться електронна сканкопія відповіді.<br>
 Якщо вам знадобиться оригінал, його можна буде отримати за адресою:<br>
-    ${sAddress} <br> 
+${sAddress} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrgan}<br />
+${sNameOrgan}<br />
 [pattern/mail/new_design/_common_signature_end.html]   
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -423,7 +428,7 @@ ${sNameOrgan},<br>
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+          <activiti:expression><![CDATA[${sMailClerk_DFS}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нова заявка. Послуга: ${sPosluga_name}]]></activiti:expression>
@@ -450,8 +455,8 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
-          <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
-          <activiti:value id="ur" name="юридична особа"></activiti:value>
+          <activiti:value id="fop" name="Фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="Юридична особа"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
@@ -479,6 +484,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="fVidpovid" name="Відповідь. (Сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="sBody_1" name="[pattern/print/ternopil/ternopil_oda_207.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <serviceTask id="servicetask9" name="Лист в ОДА після податкової" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -514,8 +520,8 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
-          <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
-          <activiti:value id="ur" name="юридична особа"></activiti:value>
+          <activiti:value id="fop" name="Фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="Юридична особа"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>

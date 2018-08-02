@@ -199,6 +199,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_ComRegN.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sBody_1" name="[pattern/print/ternopil/ternopil_oda_207.html]; ;bVisible=false" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -330,7 +331,6 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="nFile_Dodatok" name="Документи що стоються звернення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="fVidpovid" name="Відповідь. (Сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow21" name="Цифрова Відповідь " sourceRef="exclusivegateway2" targetRef="servicetask2">

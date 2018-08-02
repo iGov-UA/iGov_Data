@@ -1,0 +1,14 @@
+{
+  "motion": {
+    "RequiredFieldsOnCondition_2D": {
+      "aField_ID": [
+        "sIndex",
+        "sPostAdress"
+      ],
+      "asID_Field": {
+        "sCondit1": "asVidpovid"
+      },
+      "sCondition": "[sCondit1]=='sEnamPost'"
+    }
+  }
+}

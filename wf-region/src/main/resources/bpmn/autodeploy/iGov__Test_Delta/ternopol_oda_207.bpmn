@@ -174,7 +174,6 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
-        <
         <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
@@ -182,6 +181,9 @@ ${sNameOrgan}.<br />
           <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
           <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="sIndex" name="Індекс; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь; ;writable=false" type="string"></activiti:formProperty>
+        
         
         <activiti:formProperty id="nFile_Dodatok" name="Документи що стоються звернення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
@@ -284,9 +286,6 @@ ${sNameOrgan},<br>
     <sequenceFlow id="flow20" name="2 етапи" sourceRef="exclusivegateway3" targetRef="usertask2">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag=='two'}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow29" name="3 етапи" sourceRef="exclusivegateway3" targetRef="servicetask8">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag=='three'}]]></conditionExpression>
-    </sequenceFlow>
     <userTask id="usertask2" name="2й етап. ОДА. Надання відповіді." activiti:candidateGroups="${sID_UA}_oda_5">
       <extensionElements>
         <activiti:formProperty id="sRNumber" name="Реєстраційний номер" type="string" writable="false"></activiti:formProperty>
@@ -313,7 +312,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
-        <
+        
         <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
@@ -322,9 +321,11 @@ ${sNameOrgan},<br>
           <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
           <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="sIndex" name="Індекс; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь; ;writable=false" type="string"></activiti:formProperty>
+        
         
         <activiti:formProperty id="nFile_Dodatok" name="Документи що стоються звернення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        
         
         <activiti:formProperty id="fVidpovid" name="Відповідь. (Сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
       </extensionElements>
@@ -352,9 +353,11 @@ ${sNameOrgan},<br>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-<p>Ваше звернення - оброблене. <br><br>
+Ваше звернення - оброблене. <br><br>
 
 Електронна сканкопія відповіді знаходиться у додатку до листа.<br><br>
+
+Якщо вам знадобиться оригінал, його можна буде отримати за адресою:<br>
 	${sAddress} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -375,7 +378,7 @@ ${sNameOrgan},<br>
     </serviceTask>
     <sequenceFlow id="flow14" sourceRef="servicetask2" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
-    <serviceTask id="servicetask3" name="Відповідь пошта" activiti:delegateExpression="#{MailTaskWithAttachments}">
+    <serviceTask id="servicetask3" name="Відповідь пошта" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
           <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
@@ -391,16 +394,11 @@ ${sNameOrgan},<br>
 [pattern/mail/new_design/_common_content_start.html]
 <p>Ваше звернення - оброблене. <br><br>
 
-Відповідь 
-Електронна сканкопія відповіді знаходиться у додатку до листа.<br><br>
-Ви або уповноважена Вами особа (при наявності довіреності) можете отримати рішення або завірену адміністратором копію рішення у відповідній філії ЦНАП.<br /><br />
-При собі треба мати:<br />
-1. Документ, що посвідчує особу.<br />
-2. Для уповоноваженої особи - довіренність.<br />
-3. Оригінали документів, сканкопії яких були завантажені при поданні заяви.
-4. Платіжний документ (квитанція) про оплату вартості послуги.<br /><br />
-</p>
-	${sAddress} <br> 
+Відповідь надіслано поштою на вказану вами адресу.<br>
+
+Також у додатку до листа знаходиться електронна сканкопія відповіді.<br>
+Якщо вам знадобиться оригінал, його можна буде отримати за адресою:<br>
+    ${sAddress} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrgan}<br />
@@ -418,17 +416,142 @@ ${sNameOrgan},<br>
         </activiti:field>
       </extensionElements>
     </serviceTask>
+    <sequenceFlow id="flow29" name="3 етапи" sourceRef="exclusivegateway3" targetRef="servicetask8">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sFlag=='three'}]]></conditionExpression>
+    </sequenceFlow>
+    <serviceTask id="servicetask8" name="Лист в Податкову" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[Нова заявка. Послуга: ${sPosluga_name}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<p>Опрацюйте звернення на порталі <a href="https://region.igov.org.ua/">iGov.org.ua</a>
+
+[pattern/mail/new_design/_common_signature_start.html]
+[pattern/mail/new_design/_common_signature_end.html]   
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <userTask id="usertask3" name="2й етап. Податкова. Опрацюваня звернення." activiti:candidateGroups="${sID_UA}_oda_dfs">
+      <extensionElements>
+        <activiti:formProperty id="sRNumber" name="Реєстраційний номер" type="string" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
+          <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="юридична особа"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UR" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UR&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_appl&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Код ЄДРПОУ" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації; ;writable=false" type="textArea"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
+        
+        <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" writable="false">
+          <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
+          <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="nFile_Dodatok" name="Документи що стоються звернення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="fVidpovid" name="Відповідь. (Сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
+        
+      </extensionElements>
+    </userTask>
+    <serviceTask id="servicetask9" name="Лист в ОДА після податкової" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[Звернення оброблене. Послуга: ${sPosluga_name}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+<p>Опрацюйте звернення після податкової на порталі <a href="https://region.igov.org.ua/">iGov.org.ua</a>
+
+[pattern/mail/new_design/_common_signature_start.html]
+[pattern/mail/new_design/_common_signature_end.html]   
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <userTask id="usertask4" name="3й етап. ОДА. Надання відповіді." activiti:candidateGroups="${sID_UA}_oda_5">
+      <extensionElements>
+        <activiti:formProperty id="sRNumber" name="Реєстраційний номер" type="string" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="whoIs" name="Суб'єкт звернення" type="enum" writable="false">
+          <activiti:value id="fop" name="фізична особа-підприємець"></activiti:value>
+          <activiti:value id="ur" name="юридична особа"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UR" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UR&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_appl&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Код ЄДРПОУ" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_appl" name="Найменування; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sLocation_SubjectOrgan_appl" name="Юридична адреса організації; ;writable=false" type="textArea"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_2" name="Місце знаходження бізнесу що потребує захисту" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place&quot;],&quot;sValue&quot;:&quot;Місце знаходження бізнесу що потребує захисту&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
+        
+        <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" writable="false">
+          <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
+          <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sIndex" name="Індекс; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="fVidpovid" name="Відповідь. (Сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+      </extensionElements>
+    </userTask>
     <sequenceFlow id="flow23" sourceRef="servicetask3" targetRef="endevent3"></sequenceFlow>
     <sequenceFlow id="flow26" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
     <sequenceFlow id="flow27" sourceRef="servicetask5" targetRef="servicetask4"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway3" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="flow28" sourceRef="servicetask7" targetRef="exclusivegateway3"></sequenceFlow>
-    <serviceTask id="servicetask8" name="Лист в Податкову"></serviceTask>
-    <userTask id="usertask3" name="2й етап. Податкова. Опрацюваня звернення."></userTask>
     <sequenceFlow id="flow30" sourceRef="servicetask8" targetRef="usertask3"></sequenceFlow>
-    <serviceTask id="servicetask9" name="Лист в ОДА після податкової"></serviceTask>
     <sequenceFlow id="flow31" sourceRef="usertask3" targetRef="servicetask9"></sequenceFlow>
-    <userTask id="usertask4" name="3й етап. ОДА. Надання відповіді."></userTask>
     <sequenceFlow id="flow32" sourceRef="servicetask9" targetRef="usertask4"></sequenceFlow>
     <sequenceFlow id="flow33" sourceRef="usertask4" targetRef="exclusivegateway2"></sequenceFlow>
   </process>

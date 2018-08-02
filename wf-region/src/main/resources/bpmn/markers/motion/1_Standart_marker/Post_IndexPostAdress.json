@@ -1,6 +1,6 @@
 {
   "motion": {
-    "RequiredFieldsOnCondition_2D": {
+    "ShowFieldsOnCondition_2D": {
       "aField_ID": [
         "sIndex",
         "sPostAdress"

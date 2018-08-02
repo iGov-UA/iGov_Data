@@ -58,6 +58,7 @@
         
         <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="електронна пошта ОДА1; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk_DFS" name="електронна пошта ДФС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Захисти свій бізнес"></activiti:formProperty>
@@ -69,7 +70,7 @@
 var per1 = 'Obl'
 var per2 = 'Rekv'
 var per3 = 'post1'
-var per4 = 'post2'
+var per4 = 'akylish88@gmail.com'
 if (execution.getVariable('sID_UA') == '6100000000'){
 per1 = 'Тернопільської обласної державної адміністрації'
 per2 = 'adres'
@@ -79,24 +80,26 @@ var per3 = 'ternopil_vrp@ukr.net'
 if (execution.getVariable('sID_UA') == '4800000000'){
 per1 = 'Миколаївської обласної державної адміністрації'
 per2 = 'Миколаївська обласна держана адміністрація 54001, м. Миколаїв, вул. Адміральська, 22'
-var per3 = 'akylish88@gmail.com '
+per3 = 'akylish88@gmail.com '
 
 }
 if (execution.getVariable('sID_UA') == '7400000000'){
 per1 = 'Чернігівської обласної державної адміністрації'
 per2 = 'Чернігівська обласна держана адміністрація, м. Чернігів, вул. Шевченка, 7'
-var per3 = 'svyrydenko.yulia@gmail.com'
+per3 = 'svyrydenko.yulia@gmail.com'
 
 }
 if (execution.getVariable('sID_UA') == '6500000000'){
 per1 = 'Херсонської обласної державної адміністрації'
 per2 = 'Херсонська обласна держана адміністрація, м. Чернігів, вул. Шевченка, 7'
-var per3 = 'kanc@khoda.gov.ua'
+per3 = 'kanc@khoda.gov.ua'
+per4 = 'elena.chalay@gmail.com'
 
 }
 execution.setVariable('sNameOrgan', per1)
 execution.setVariable('sAddress', per2)
 execution.setVariable('sMailClerk', per3)
+execution.setVariable('sMailClerk_DFS', per3)
 	  </script>
     </scriptTask>
     <sequenceFlow id="flow25" sourceRef="scripttask1" targetRef="servicetask5"></sequenceFlow>
@@ -425,7 +428,7 @@ ${sNameOrgan},<br>
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+          <activiti:expression><![CDATA[${sMailClerk_DFS}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нова заявка. Послуга: ${sPosluga_name}]]></activiti:expression>

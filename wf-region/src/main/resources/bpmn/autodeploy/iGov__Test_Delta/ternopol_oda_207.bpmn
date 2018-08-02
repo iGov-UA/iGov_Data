@@ -135,6 +135,7 @@ execution.setVariable('sMailClerk_DFS', per3)
 [pattern/mail/new_design/_common_content_start.html]
 <p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br/><br/>
 Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p>
+
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}.<br />
@@ -230,7 +231,6 @@ ${sNameOrgan}.<br />
 <p>Причина:<br>
 ${tComment}</p>
 [pattern/mail/new_design/_common_content_end.html]
-    ${sAddress} <br> 
 [pattern/mail/new_design/_common_signature_start.html]
 	${sNameOrgan}<br />
 [pattern/mail/new_design/_common_signature_end.html]
@@ -361,10 +361,10 @@ ${sNameOrgan},<br>
 Електронна сканкопія відповіді знаходиться у додатку до листа.<br><br>
 
 Якщо вам знадобиться оригінал, його можна буде отримати за адресою:<br>
-	${sAddress} <br> 
+${sAddress} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrgan}<br />
+${sNameOrgan}<br />
 [pattern/mail/new_design/_common_signature_end.html]   
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -401,10 +401,10 @@ ${sNameOrgan},<br>
 
 Також у додатку до листа знаходиться електронна сканкопія відповіді.<br>
 Якщо вам знадобиться оригінал, його можна буде отримати за адресою:<br>
-    ${sAddress} <br> 
+${sAddress} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrgan}<br />
+${sNameOrgan}<br />
 [pattern/mail/new_design/_common_signature_end.html]   
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

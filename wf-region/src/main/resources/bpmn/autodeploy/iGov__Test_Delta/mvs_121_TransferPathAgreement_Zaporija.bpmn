@@ -41,7 +41,6 @@
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
         
-        
         <activiti:formProperty id="subekt" name="Статус заявника" type="enum" default="ur" required="true">
           <activiti:value id="ur" name="Юридична особа"></activiti:value>
           <activiti:value id="fiz" name="Фізична особа-підприємець"></activiti:value>
@@ -59,7 +58,7 @@
         <activiti:formProperty id="ur_fax_appl" name="Факс" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_appl" name="ПІБ керівника" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="ur_post_appl" name="Посада керівника" type="string" default=" " required="true"></activiti:formProperty>
-        <activiti:formProperty id="sDateActual_SubjectOrgan_appl" name="Дата отримання даних з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
+        <activiti:formProperty id="sDateActual_SubjectOrgan_appl" name="Дата отримання даних з ЄДРПОУ" type="label"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_DOV" name="Інформація про довірителя" type="markers" default="{&quot;attributes&quot;:{&quot;Line_DOV&quot;:{&quot;aElement_ID&quot;:[&quot;imya_fiz&quot;],&quot;sValue&quot;:&quot;Інформація про довірителя&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="imya_fiz" name="ПІБ довірителя (Фізичної особи-підприємця)" type="string" default=" " required="true"></activiti:formProperty>

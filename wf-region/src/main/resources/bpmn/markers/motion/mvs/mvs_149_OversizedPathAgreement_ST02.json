@@ -1,55 +1,65 @@
 {
-	"motion": 
-    {
-		"ShowFieldsOnCondition_6":
-		{
-        	"aField_ID": 	["sConfidant_pib","sConfidant_passport","nFile_ConfidantDoc"],
-        	"asID_Field": 	{"sClient": "subekt_2"},
-         	"sCondition": 	"[sClient] == 'confidant'"
-		},
-		"RequiredFieldsOnCondition_6": 
-		{
-        	"aField_ID": 	["sConfidant_pib","sConfidant_passport","nFile_ConfidantDoc"],
-        	"asID_Field": 	{"sClient": "subekt_2"},
-         	"sCondition": 	"[sClient] == 'confidant'"
-		},
-		"ValuesFieldsOnCondition_7":
-		{
-			"aField_ID":	["sNumberDaysToReview"],
-			"asID_Field_sValue": ["10"],
-			"asID_Field":	{"sReason": "TypeRegistrationAction"},
-			"sCondition": 	"[sReason] == 'First'"
-		},
-		"ValuesFieldsOnCondition_8":
-		{
-			"aField_ID":	["sNumberDaysToReview"],
-			"asID_Field_sValue": ["5"],
-			"asID_Field":	{"sReason": "TypeRegistrationAction"},
-			"sCondition": 	"[sReason] == 'Second'"
-		},
-		"ShowFieldsOnCondition_9":
-		{
-        	"aField_ID": 	["info_TypeRegistrationAction","nFile_DocReject"],
-        	"asID_Field": 	{"sClient": "TypeRegistrationAction"},
-         	"sCondition": 	"[sClient] == 'Second'"
-		},
-		"RequiredFieldsOnCondition_9": 
-		{
-        	"aField_ID": 	["nFile_DocReject"],
-        	"asID_Field": 	{"sClient": "TypeRegistrationAction"},
-         	"sCondition": 	"[sClient] == 'Second'"
-		},
-		"ShowFieldsOnCondition_10":
-		{
-        	"aField_ID": 	["sPaperPost_Adress"],
-        	"asID_Field": 	{"sClient": "asEnumDelivery_Document"},
-         	"sCondition": 	"[sClient] == 'sElementPaperPost_doc'"
-		},
-		"RequiredFieldsOnCondition_10": 
-		{
-        	"aField_ID": 	["sPaperPost_Adress"],
-        	"asID_Field": 	{"sClient": "asEnumDelivery_Document"},
-         	"sCondition": 	"[sClient] == 'sElementPaperPost_doc'"
-		}
-     }
+  "motion": {
+    "ValuesFieldsOnCondition_7": {
+      "aField_ID": [
+        "sNumberDaysToReview"
+      ],
+      "asID_Field_sValue": [
+        "10"
+      ],
+      "asID_Field": {
+        "sReason": "TypeRegistrationAction"
+      },
+      "sCondition": "[sReason] == 'First'"
+    },
+    "ValuesFieldsOnCondition_8": {
+      "aField_ID": [
+        "sNumberDaysToReview"
+      ],
+      "asID_Field_sValue": [
+        "5"
+      ],
+      "asID_Field": {
+        "sReason": "TypeRegistrationAction"
+      },
+      "sCondition": "[sReason] == 'Second'"
+    },
+    "ShowFieldsOnCondition_9": {
+      "aField_ID": [
+        "info_TypeRegistrationAction",
+        "nFile_DocReject"
+      ],
+      "asID_Field": {
+        "sClient": "TypeRegistrationAction"
+      },
+      "sCondition": "[sClient] == 'Second'"
+    },
+    "RequiredFieldsOnCondition_9": {
+      "aField_ID": [
+        "nFile_DocReject"
+      ],
+      "asID_Field": {
+        "sClient": "TypeRegistrationAction"
+      },
+      "sCondition": "[sClient] == 'Second'"
+    },
+    "ShowFieldsOnCondition_10": {
+      "aField_ID": [
+        "sPaperPost_Adress"
+      ],
+      "asID_Field": {
+        "sClient": "asEnumDelivery_Document"
+      },
+      "sCondition": "[sClient] == 'sElementPaperPost_doc'"
+    },
+    "RequiredFieldsOnCondition_10": {
+      "aField_ID": [
+        "sPaperPost_Adress"
+      ],
+      "asID_Field": {
+        "sClient": "asEnumDelivery_Document"
+      },
+      "sCondition": "[sClient] == 'sElementPaperPost_doc'"
+    }
+  }
 }

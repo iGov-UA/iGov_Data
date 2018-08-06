@@ -199,7 +199,7 @@
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="nFile_DocReject" name="Відмова від адміністративного органу при первинному поданні документів; ;bNew=true" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DocReject" name="Відмова від адміністративного органу при первинному поданні документів; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asEnumDelivery_Document" name="Спосіб отримання відповіді" type="enum" writable="false">
           <activiti:value id="sElementEmail_doc" name="В електронному вигляді (на вказаний E-Mail)"></activiti:value>
@@ -407,7 +407,7 @@ ${tComment}</p>
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="nFile_DocReject" name="Відмова від адміністративного органу при первинному поданні документів; ;bNew=true" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DocReject" name="Відмова від адміністративного органу при первинному поданні документів; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNameOrganTransfer" name="Назва органу" type="string" writable="false"></activiti:formProperty>
         

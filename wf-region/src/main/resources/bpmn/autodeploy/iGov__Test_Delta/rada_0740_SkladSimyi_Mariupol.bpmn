@@ -270,7 +270,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="bankIdbirthDay" name="День народження заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" writable="false">
@@ -334,7 +334,7 @@ ${sNameOrgan}.<br />
         
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища/імені; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutNar" name="Свідоцтво про народження довірителя; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayNar" name="Свідоцтво про народження заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -470,7 +470,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="bankIdbirthDay" name="День народження заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tAddressFactual" name="Адреса реєстрації заявника; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asStatus" name="Статус заявника" type="enum" writable="false">
@@ -534,7 +534,7 @@ ${sNameOrgan}<br>
         
         <activiti:formProperty id="nFile_ZayPasp" name="Паспорт заявника (або Посвідка на проживання); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZminPrizv" name="Документ про зміну прізвища/імені; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirutPasp" name="Паспорт довірителя; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovirutNar" name="Свідоцтво про народження довірителя; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dovirenist" name="Довіреність на представника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZayNar" name="Свідоцтво про народження заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>

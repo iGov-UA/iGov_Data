@@ -177,7 +177,7 @@
     <endEvent id="endevent2" name="End"></endEvent>
     <userTask id="usertask1" name="ЦНАП - Перевірка (1-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
-        <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" default="First" writable="false">
+        <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
         </activiti:formProperty>
@@ -367,7 +367,7 @@ ${tComment}</p>
     </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
-        <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" default="First" writable="false">
+        <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
         </activiti:formProperty>

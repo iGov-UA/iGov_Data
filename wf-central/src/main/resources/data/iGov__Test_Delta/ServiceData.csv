@@ -5150,8 +5150,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5284;1576;133;133;NULL;4;{"processDefinitionId":"DABI_1576_ZminBudBP:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5285;628;61;61;NULL;4;{"processDefinitionId":"ternopil_obl_284:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5286;149;14;14;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim_Zaporija:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5287;121;14;14;NULL;4;{"processDefinitionId":"mvs_121_TransferPathAgreement_Zaporija:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5288;1404;14;14;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim_Zaporija:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5287;121;14;14;NULL;4;{"processDefinitionId":"mvs_121_TransferPathAgreement_Zaporija:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5288;1404;14;14;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim_Zaporija:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5289;1568;50003;NULL;3;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5290;1569;50003;NULL;3;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5291;54;50003;NULL;3;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0

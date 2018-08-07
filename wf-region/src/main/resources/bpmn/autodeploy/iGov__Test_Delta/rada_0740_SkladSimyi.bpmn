@@ -75,8 +75,8 @@
         <activiti:formProperty id="sNameOrgan" name="підпис; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="Шапка заяви ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptAdress" name="Адреса; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="Pasportyst" name="в прінтформу 1; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="Nachalnyk" name="в прінтформу 2; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="Pasportyst" name="в прінтформу 1; ;bVisible=false" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="Nachalnyk" name="в прінтформу 2; ;bVisible=false" type="string" default=" "></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask4" name="Повідомлення про нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">

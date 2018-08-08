@@ -273,7 +273,6 @@
         
         <activiti:formProperty id="sWorkTime" name="графік роботи ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="адреса адміністративного органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="пошта посадовця ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka228" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sListDocumentsPrint" name="перелік у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -689,7 +688,6 @@ ${tComment}</p>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Район або місто ; ;bVisible=false" type="select"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="графік роботи ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="адреса адміністративного органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="пошта посадовця ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka228" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sListDocumentsPrint" name="перелік у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>

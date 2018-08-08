@@ -311,7 +311,6 @@
         
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Район або місто ; ;bVisible=false" type="select"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="графік роботи ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для справок ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -752,7 +751,6 @@ ${tComment}</p>
         
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Район або місто ; ;bVisible=false" type="select"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="графік роботи ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для справок ; ;bVisible=false" type="string"></activiti:formProperty>

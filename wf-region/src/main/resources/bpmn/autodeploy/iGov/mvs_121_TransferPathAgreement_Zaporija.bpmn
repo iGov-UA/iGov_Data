@@ -127,6 +127,7 @@
         <activiti:formProperty id="insurance" name="Чинний договір обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів ; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="dodatkovo" name="Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів (за необхідності); ;bNew=true" type="file"></activiti:formProperty>
         
+        <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rNumber" name="номер району ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="rmail" name="пошти ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -402,7 +403,7 @@ ${tComment}</p>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_${sID_Public_SubjectOrganJoin}">
+    <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_Tr_${sID_UA}">
       <extensionElements>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>

@@ -103,6 +103,7 @@
         <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та, за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="sDocBuild" name="Висновок за результатами проведення спеціалізованого обстеження або випробування будівель, споруд і мереж на маршруті ; (якщо загальна маса великовагового транспортного засобу перевищує 60 тонн) ;bNew=true" type="file"></activiti:formProperty>
         
+        <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrganTransfer" name="назва адміністративного органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNumberDaysToReview" name="Кількість днів щодо розгляду звернення; ;bVisible=false" type="string" default="10"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="графік роботи ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -366,7 +367,7 @@ ${tComment}</p>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_${sID_Public_SubjectOrganJoin}">
+    <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_Tr_${sID_UA}">
       <extensionElements>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>

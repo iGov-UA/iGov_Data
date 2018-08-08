@@ -14013,7 +14013,7 @@ nID_SubjectOrganJoin;sName;sValue
 3507;sRozkladPriyom;=[sPosada]=='0'?'Понеділок 8.00-12.00 П`ятниця 8.00-12.00':''
 3507;sMailClerk226;wywkoelena@ukr.net
 3507;sShapkaGolova;Голові Великокопанівської ОТГ
-3507;nID_Department_visitDay;247
+3507;nID_Department_visitDay;345
 3507;sArea;Великокопанівська ОТГ 
 3507;sRegistrationOrgan;Відділ формування та ведення реєстру тер. громади 
 3507;sOrganType;органу реєстрації

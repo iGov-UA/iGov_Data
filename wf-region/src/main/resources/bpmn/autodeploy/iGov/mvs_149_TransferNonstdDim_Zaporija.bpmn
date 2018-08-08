@@ -177,6 +177,7 @@
     <endEvent id="endevent2" name="End"></endEvent>
     <userTask id="usertask1" name="ЦНАП - Перевірка (1-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Район (міста), де заявнику зручно отримати результат послуги" type="select" writable="false"></activiti:formProperty>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
@@ -586,6 +587,7 @@ ${tComment}</p>
     </serviceTask>
     <userTask id="usertask2" name="ЦНАП - Видача рішення (3-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Район (міста), де заявнику зручно отримати результат послуги" type="select" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asEnumDelivery_Document" name="Спосіб отримання відповіді" type="enum" writable="false">
           <activiti:value id="sElementEmail_doc" name="В електронному вигляді (на вказаний E-Mail)"></activiti:value>

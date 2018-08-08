@@ -223,7 +223,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="sPost_Adress" name="Поштова адреса; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerPost" name="markerPost" type="markers" default="${markerService.loadFromFile('Zaputu_i_Zvernenia/161_Post.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="decide" name="Рішення про прийом запиту" type="enum" required="true">
+        <activiti:formProperty id="decide" name="Рішення про прийом запиту" type="enum">
           <activiti:value id="accept" name="Запит прийнято до розгляду"></activiti:value>
           <activiti:value id="reject" name="Відмовити у реєстрації запиту"></activiti:value>
         </activiti:formProperty>

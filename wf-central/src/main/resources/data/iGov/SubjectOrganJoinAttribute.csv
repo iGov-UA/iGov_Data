@@ -14339,3 +14339,17 @@ nID_SubjectOrganJoin;sName;sValue
 3545;sWorkTime;<b>Графік роботи:</b> понеділок - п'ятниця 9.00 - 18.00 <br>  субота,неділя – вихідний<br>
 3545;sMailClerk;arkhiv_dkng@ukr.net
 3545;sShapka;Дрогобицький коледж нафти і газу
+
+3546;nID_Department_visitDay;158
+3546;sNameOrgan;Відділ реєстрації місця проживання осіб Каховської міської ради
+3546;sMailClerk;reestr_projiv@kakhovka-rada.gov.ua 
+3546;sArea;м. Каховка
+3546;sOrganType;Відділ реєстрації місця проживання осіб
+3546;sPhoneOrgan;<b>Телефони для довідок: </b> (05536) 2-01-05
+3546;sAddress;м.Каховка, вул. Велика Куликовська (К.Маркса), 103 каб. 301
+3546;sKab89;адміністратора
+3546;sRegistrationOrgan;Відділ реєстрації місця проживання осіб Каховської міської ради
+3546;sRecvizitiAdmin;<a href="http://kakhovka-rada.gov.ua/ua/rekviziti_dlja_zdijsnennja_oplati" target="_blank">реквізити для оплати</a>
+3546;sWorkTime;<b>Графік роботи:</b> Понеділок - п’ятниця: з 09.00 до 16.00 <br>Вихідні дні — субота, неділя, святкові та неробочі дні.
+3546;sFioClerk_SignDovidka;Державний реєстратор 
+3546;sShapka;Відділ реєстрації місця проживання осіб Каховської міської ради

@@ -1080,6 +1080,8 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="bankIdbirthDay" name="День народження заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Контактний телефон заявника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_VP" name="Інформація про поштову доставку" type="markers" default="{&quot;attributes&quot;:{&quot;Line_VP&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Інформація про поштову доставку&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як заявник хоче отримати відповідь" type="enum" writable="false">
           <activiti:value id="sEnamPost" name="Поштою"></activiti:value>

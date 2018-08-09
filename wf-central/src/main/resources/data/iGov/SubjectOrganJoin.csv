@@ -3214,3 +3214,5 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3544;225;Проспект Моторобудівників, 34 (Шевченківський район);Проспект Моторобудівників, 34 (Шевченківський район);zp_zpT_Motobud;zp_zpT_Motobud; ; ;NULL;NULL;2310100000
 3545;555;Дрогобицький коледж нафти і газу;Дрогобицький коледж нафти і газу;Drog_NaftaGaz;Drog_NaftaGaz; ; ;NULL;NULL;4610600000
 3546;89;Відділ реєстрації місця проживання осіб м. Каховка;Відділ реєстрації місця проживання осіб м. Каховка;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6510400000
+3547;89;Великокопанівська ОТГ (Олешківський район);Великокопанівська ОТГ (Олешківський район);khers_VelikokopOTG;khers_VelikokopOTG; ; ;NULL;NULL;6525080501
+

@@ -5326,11 +5326,11 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5460;177;50008;NULL;8;4;{"processDefinitionId":"dms_0177_zagranChild_DMSiGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
 5461;179;50008;NULL;8;4;{"processDefinitionId":"dms_0179_zagranLost_DMSiGov:1:1"};;false;288;true;;BankID,EDS,mpbds;0
 5462;1473;133;133;NULL;4;{"processDefinitionId":"DGK_1473_VusnZeml:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-5463;29;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-89:1:1"};;false;89;true;;BankID,EDS,mpbds;0
-5464;26;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-89s:1:1"};;false;89;true;;BankID,EDS,mpbds;0
-5465;24;653;653;NULL;4;{"processDefinitionId":"rada_0024_dovidka_live_place_2_step_Dnepr:1:1"};;false;89;true;;BankID,EDS,mpbds;0
-5466;184;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-212:1:1"};;false;89;true;;BankID,EDS,mpbds;0
-5467;185;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-212s:1:1"};;false;89;true;;BankID,EDS,mpbds;0
-5468;144;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-89sd:1:1"};;false;89;true;;BankID,EDS,mpbds;0
+5463;29;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-89:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5464;26;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-89s:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5465;24;653;653;NULL;4;{"processDefinitionId":"rada_0024_dovidka_live_place_2_step_Dnepr:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5466;184;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-212:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5467;185;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-212s:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5468;144;653;653;NULL;4;{"processDefinitionId":"dnepr_dms-89sd:1:1"};;false;89;false;;BankID,EDS,mpbds;0
 5469;740;115;115;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;89;false;;BankID,EDS,mpbds;0
 5470;740;653;653;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;89;false;;BankID,EDS,mpbds;0

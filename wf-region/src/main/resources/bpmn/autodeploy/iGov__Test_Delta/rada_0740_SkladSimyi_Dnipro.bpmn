@@ -998,9 +998,6 @@ ${sNameOrgan}<br/>
         </activiti:formProperty>
         <activiti:formProperty id="sIndex" name="Індекс; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asLust" name="Вартість поштового відправлення" type="enum" default="sEnamLustKur" writable="false">
-          <activiti:value id="sEnamLustKur" name="Доставка листа 54.60 грн (1,8% комісія Лікпей)"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="Номер транзакції платежу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name="Заява з ЕЦП; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asResult" name="Результат обробки" type="enum" required="true">
@@ -1089,9 +1086,6 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="sIndex" name="Індекс; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="asLust" name="Вартість поштового відправлення" type="enum" default="sEnamLustKur" writable="false">
-          <activiti:value id="sEnamLustKur" name="Доставка листа 54.60 грн (1,8% комісія Лікпей)"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="Номер транзакції платежу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_Org" name="Де отримати документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Org&quot;:{&quot;aElement_ID&quot;:[&quot;sNameOrgan&quot;],&quot;sValue&quot;:&quot;Де отримати документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу що надає послугу" type="string" writable="false"></activiti:formProperty>

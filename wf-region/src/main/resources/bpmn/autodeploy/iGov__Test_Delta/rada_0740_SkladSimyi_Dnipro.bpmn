@@ -1097,6 +1097,10 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="sNameOrgan" name="Назва органу що надає послугу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sAddressForPost" name="Адреса підрозділу де забрати документ" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sPostIdentif" name="Ідентифікатор поштового відправлення" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="sBody_Post_check" name="[pattern/print/rada/Post_check.html]; ;bVisible=false ,bPrintform=true" type="string" default="Квитанція про оплату" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="sSum" name="сумма платежа; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <serviceTask id="servicetask5" name="Фідбек після пошти" activiti:delegateExpression="#{MailTaskWithoutAttachment}">

@@ -1,0 +1,87 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_asRobota": {
+      "aField_ID": [
+        "sNamePidpruemstvo",
+        "sNamePosada",
+        "RobotaData",
+        "nFile_RobotZay"
+      ],
+      "asID_Field": {
+        "sReason": "asRobota"
+      },
+      "sCondition": "[sReason]=='yes'||[sReason]=='так'"
+    },
+    "ShowFieldsOnCondition_asKilkOsib": {
+      "aField_ID": [
+        "nFile_PasportRod",
+        "nFile_IPNRod",
+        "asTipOsib"
+      ],
+      "asID_Field": {
+        "sReason": "asKilkOsib"
+      },
+      "sCondition": "[sReason]!='sEnam1'"
+    },
+    "ShowFieldsOnCondition_asTipOsib": {
+      "aField_ID": [
+        "asOdrujenia",
+        "asPracuuciRod"
+      ],
+      "asID_Field": {
+        "sReason": "asTipOsib"
+      },
+      "sCondition": "[sReason]=='sEnamDorosli'||[sReason]=='sEnamDituDorosli'"
+    },
+    "ShowFieldsOnCondition_asVlasnist": {
+      "aField_ID": [
+        "nFile_Vlasnist"
+      ],
+      "asID_Field": {
+        "sReason": "asVlasnist"
+      },
+      "sCondition": "[sReason]=='sEnamPrivat'||[sReason]=='sEnamChastPrivat'"
+    },
+    "ShowFieldsOnCondition_asOdrujenia": {
+      "aField_ID": [
+        "nFile_SvidOdroj"
+      ],
+      "asID_Field": {
+        "sReason": "asOdrujenia",
+        "sReasonK": "asKilkOsib",
+        "sReasonT": "asTipOsib"
+      },
+      "sCondition": "([sReason]=='yes'||[sReason]=='так')&&[sReasonK]!='sEnam1'&&([sReasonT]=='sEnamDorosli'||[sReasonT]=='sEnamDituDorosli')"
+    },
+    "ShowFieldsOnCondition_asDitu": {
+      "aField_ID": [
+        "nFile_NarodDitey"
+      ],
+      "asID_Field": {
+        "sReason": "asTipOsib",
+        "sReasonK": "asKilkOsib"
+      },
+      "sCondition": "([sReason]=='sEnamDitu'||[sReason]=='sEnamDituDorosli')&&[sReasonK]!='sEnam1'"
+    },
+    "ShowFieldsOnCondition_asPracuuciRod": {
+      "aField_ID": [
+        "nFile_RobotRod"
+      ],
+      "asID_Field": {
+        "sReason": "asPracuuciRod",
+        "sReasonK": "asKilkOsib",
+        "sReasonT": "asTipOsib"
+      },
+      "sCondition": "([sReason]=='yes'||[sReason]=='так')&&[sReasonK]!='sEnam1'&&([sReasonT]=='sEnamDorosli'||[sReasonT]=='sEnamDituDorosli')"
+    },
+    "ShowFieldsOnCondition_asPilgu": {
+      "aField_ID": [
+        "nFile_Pilgu"
+      ],
+      "asID_Field": {
+        "sReason": "asPilgu"
+      },
+      "sCondition": "[sReason]=='yes'||[sReason]=='так'"
+    }
+  }
+}

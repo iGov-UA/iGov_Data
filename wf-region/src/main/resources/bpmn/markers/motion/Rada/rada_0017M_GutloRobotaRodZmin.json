@@ -1,0 +1,73 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_TipUslugi": {
+      "aField_ID": [
+        "asStatus",
+        "asRobota",
+        "asVlasnist",
+        "asPlRegistr",
+        "chekReestrOsob",
+        "lKimnatu",
+        "dPlosha",
+        "dLiveBegin"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi"
+      },
+      "sCondition": "[sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo'"
+    },
+    "ShowFieldsOnCondition_PlLivVlasnist": {
+      "aField_ID": [
+        "asPlLivVlasnist"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "asVlasnist"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='yes'"
+    },
+    "ShowFieldsOnCondition_Work": {
+      "aField_ID": [
+        "sWorkPlace",
+        "sPosada",
+        "dWorkBegin"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "asRobota"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='yes'"
+    },
+    "ShowFieldsOnCondition_LiveAdress": {
+      "aField_ID": [
+        "sLiveAdress"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "asPlRegistr"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='no'"
+    },
+    "ShowFieldsOnCondition_KilkOsob": {
+      "aField_ID": [
+        "lKilkMeshkanciv"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "chekReestrOsob"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&([sReason2]=='sYesDor'||[sReason2]=='sYesDit'||[sReason2]=='sYesDorDit')"
+    },
+    "ShowFieldsOnCondition_Zminu": {
+      "aField_ID": [
+        "sSpravaNumber",
+        "tZminu",
+        "nFile_Zminu"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi"
+      },
+      "sCondition": "[sReason]=='sEnamZminuOblik'"
+    }
+  }
+}

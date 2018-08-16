@@ -99,9 +99,6 @@
         <activiti:formProperty id="nFile_Posvidchenia" name="Посвідчення встановленого зразка; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovReestrPilg" name="Довідка органу соціального захисту населення про перебування на обліку в Єдиному державному автоматизованому реєстрі осіб, які мають  право  на  пільги; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="довідку про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
-      
         <activiti:formProperty id="markerFiles" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/rada_0017M_Files.json')}"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="Шапка; ;bVisible=false" type="string"></activiti:formProperty>

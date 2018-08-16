@@ -1,0 +1,18 @@
+{
+  "aField": [
+    {
+      "id": "nTable1",
+      "name": "Назва додатку",
+      "type": "string",
+      "required": "true",
+      "nWidth": "50%"
+    },
+    {
+      "id": "nTable2",
+      "name": "Файл додатку",
+      "type": "file",
+      "required": "true",
+      "nWidth": "20%"
+    }
+  ]
+}

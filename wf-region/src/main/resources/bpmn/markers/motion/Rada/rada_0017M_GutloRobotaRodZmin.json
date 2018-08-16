@@ -30,7 +30,8 @@
       "aField_ID": [
         "sWorkPlace",
         "sPosada",
-        "dWorkBegin"
+        "dWorkBegin",
+        "nFile_DohZay"
       ],
       "asID_Field": {
         "sReason": "asTipUslugi",

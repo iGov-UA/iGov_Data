@@ -1,87 +1,99 @@
 {
   "motion": {
-    "ShowFieldsOnCondition_asRobota": {
+    "ShowFieldsOnCondition_UpdGutlo": {
       "aField_ID": [
-        "sNamePidpruemstvo",
-        "sNamePosada",
-        "RobotaData",
-        "nFile_RobotZay"
+        "nFile_SS",
+        "nFile_DovReestrPilg"
       ],
       "asID_Field": {
-        "sReason": "asRobota"
+        "sReason": "asTipUslugi"
       },
-      "sCondition": "[sReason]=='yes'||[sReason]=='так'"
+      "sCondition": "[sReason]=='sEnamUpdGutlo'"
     },
-    "ShowFieldsOnCondition_asKilkOsib": {
+    "ShowFieldsOnCondition_SocGutlo": {
       "aField_ID": [
-        "nFile_PasportRod",
-        "nFile_IPNRod",
-        "asTipOsib"
+        "nFile_SS",
+        "nFile_VartistMaina"
       ],
       "asID_Field": {
-        "sReason": "asKilkOsib"
+        "sReason": "asTipUslugi"
       },
-      "sCondition": "[sReason]!='sEnam1'"
+      "sCondition": "[sReason]=='sEnamSocGutlo'"
     },
-    "ShowFieldsOnCondition_asTipOsib": {
+    "ShowFieldsOnCondition_TumchGutlo": {
       "aField_ID": [
-        "asOdrujenia",
-        "asPracuuciRod"
+        "nFile_SS",
+        "nFile_DovOblPeresel",
+        "nFile_PodatkiDohodu",
+        "nFile_ReestrNeruhom"
       ],
       "asID_Field": {
-        "sReason": "asTipOsib"
+        "sReason": "asTipUslugi"
       },
-      "sCondition": "[sReason]=='sEnamDorosli'||[sReason]=='sEnamDituDorosli'"
+      "sCondition": "[sReason]=='sEnamTumchGutlo'"
     },
-    "ShowFieldsOnCondition_asVlasnist": {
+    "ShowFieldsOnCondition_RodPasp": {
       "aField_ID": [
-        "nFile_Vlasnist"
+        "nFile_RodPasp",
+        "nFile_RodIPN"
       ],
       "asID_Field": {
-        "sReason": "asVlasnist"
+        "sReason": "asTipUslugi",
+        "sReason2": "chekReestrOsob"
       },
-      "sCondition": "[sReason]=='sEnamPrivat'||[sReason]=='sEnamChastPrivat'"
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&([sReason2]=='sYesDor'||[sReason2]=='sYesDorDit')"
     },
-    "ShowFieldsOnCondition_asOdrujenia": {
+    "ShowFieldsOnCondition_SvidNar": {
       "aField_ID": [
-        "nFile_SvidOdroj"
+        "nFile_SvidNar"
       ],
       "asID_Field": {
-        "sReason": "asOdrujenia",
-        "sReasonK": "asKilkOsib",
-        "sReasonT": "asTipOsib"
+        "sReason": "asTipUslugi",
+        "sReason2": "chekReestrOsob"
       },
-      "sCondition": "([sReason]=='yes'||[sReason]=='так')&&[sReasonK]!='sEnam1'&&([sReasonT]=='sEnamDorosli'||[sReasonT]=='sEnamDituDorosli')"
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&([sReason2]=='sYesDit'||[sReason2]=='sYesDorDit')"
     },
-    "ShowFieldsOnCondition_asDitu": {
+    "ShowFieldsOnCondition_RodDoh": {
       "aField_ID": [
-        "nFile_NarodDitey"
+        "nFile_RodDoh"
       ],
       "asID_Field": {
-        "sReason": "asTipOsib",
-        "sReasonK": "asKilkOsib"
+        "sReason": "asTipUslugi",
+        "sReason2": "chekReestrOsob"
       },
-      "sCondition": "([sReason]=='sEnamDitu'||[sReason]=='sEnamDituDorosli')&&[sReasonK]!='sEnam1'"
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamTumchGutlo')&&([sReason2]=='sYesDor'||[sReason2]=='sYesDorDit')"
     },
-    "ShowFieldsOnCondition_asPracuuciRod": {
+    "ShowFieldsOnCondition_DohRik": {
       "aField_ID": [
-        "nFile_RobotRod"
+        "nFile_DohRik"
       ],
       "asID_Field": {
-        "sReason": "asPracuuciRod",
-        "sReasonK": "asKilkOsib",
-        "sReasonT": "asTipOsib"
+        "sReason": "asTipUslugi",
+        "sReason2": "chekReestrOsob"
       },
-      "sCondition": "([sReason]=='yes'||[sReason]=='так')&&[sReasonK]!='sEnam1'&&([sReasonT]=='sEnamDorosli'||[sReasonT]=='sEnamDituDorosli')"
+      "sCondition": "[sReason]=='sEnamSocGutlo'&&([sReason2]=='sYesDor'||[sReason2]=='sYesDorDit')"
     },
-    "ShowFieldsOnCondition_asPilgu": {
+    "ShowFieldsOnCondition_DovATO": {
       "aField_ID": [
-        "nFile_Pilgu"
+        "nFile_DovATO",
+        "nFile_Posvidchenia"
       ],
       "asID_Field": {
-        "sReason": "asPilgu"
+        "sReason": "asTipUslugi",
+        "sReason2": "asStatus"
       },
-      "sCondition": "[sReason]=='yes'||[sReason]=='так'"
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='sEnamATO'"
+    },
+    "ShowFieldsOnCondition_Peresel": {
+      "aField_ID": [
+        "nFile_DovOblPeresel",
+        "nFile_Posvidchenia"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "asStatus"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo')&&[sReason2]=='sEnamPerers'||[sReason2]=='sEnamPeresInvalid'"
     }
   }
 }

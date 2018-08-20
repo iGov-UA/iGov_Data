@@ -128,7 +128,9 @@
 		},
     "ShowFieldsOnCondition_18":{
 		"aField_ID":[
-		"sNameRVK2"
+		"sNameRVK2",
+		"sMilitaryRank2",
+		"sMilitaryID2"
 		],
 		"asID_Field":{
 		"sCondit":"asMilitary2"
@@ -137,7 +139,9 @@
 		},
     "ShowFieldsOnCondition_19":{
 		"aField_ID":[
-		"sPlaceMilitary2"
+		"sPlaceMilitary2",
+		"sMilitaryRank2",
+		"sMilitaryID2"
 		],
 		"asID_Field":{
 		"sCondit":"asMilitary2"

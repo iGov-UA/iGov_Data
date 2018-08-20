@@ -111,10 +111,10 @@
           <activiti:value id="sEnumRegistered" name="перебуваю на обліку"></activiti:value>
           <activiti:value id="sEnumMilitary" name="перебуваю на військовій службі"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="sNameRVK2" name="Назва та адреса РВК де перебуваєте на обліку" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sPlaceMilitary2" name="Назва міста та номер поштової скриньки військової частини" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sMilitaryRank2" name="Військове звання (категорія); Стосовно призовників зазначається - «призовник»" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sMilitaryID2" name="Серія та номер військового квитка (тимчасового посвідчення) або посвідчення про приписку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameRVK2" name="Назва та адреса РВК де перебуваєте на обліку" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sPlaceMilitary2" name="Назва міста та номер поштової скриньки військової частини" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMilitaryRank2" name="Військове звання (категорія); Стосовно призовників зазначається - «призовник»" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMilitaryID2" name="Серія та номер військового квитка (тимчасового посвідчення) або посвідчення про приписку" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMarriage2" name="Сімейний стан" type="enum">
           <activiti:value id="sEnum1" name="у шлюбі не перебувала"></activiti:value>
           <activiti:value id="sEnum3" name="шлюб розірвано"></activiti:value>

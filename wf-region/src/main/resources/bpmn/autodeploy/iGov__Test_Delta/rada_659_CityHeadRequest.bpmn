@@ -63,8 +63,6 @@
           <activiti:value id="no" name="Ні"></activiti:value>
           <activiti:value id="yes" name="Так"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="FileDodatok" name="Додаткові документи;(якщо декілька сторінок об'єднайте у pdf-файл або zip архів);bNew=true" type="file" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="FilesTable" name="Додаткові документи; ;bNew=true" type="table" default="${markerService.loadFromFile('1_Standart_marker/TableS_Files.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="asResultWay" name="Як ви хочете отримати відповідь?" type="enum" required="true">
@@ -192,7 +190,6 @@ ${sNameOrgan}<br>
           <activiti:value id="sEnumPost" name="Лист поштою, на вище вказану адресу реєстрації"></activiti:value>
           <activiti:value id="sEnumOsoba" name="Видати на руки в канцелярії"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="FileDodatok" name="Додаткові документи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="FilesTable" name="Додаткові документи; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="marker659" name="marker659" type="markers" default="${markerService.loadFromFile('Rada/rada_659_CityHeadRequest.json')}"></activiti:formProperty>

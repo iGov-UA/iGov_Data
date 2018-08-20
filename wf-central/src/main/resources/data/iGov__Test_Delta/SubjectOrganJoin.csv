@@ -143,7 +143,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 473;2;Луцький район;м.Луцьк (УПСЗН Луцької райдержадміністрації);subsidi;s93; ; ;NULL;NULL;700000000
 474;2;Любешівський район;смт.Любешів;subsidi;s94; ; ;NULL;NULL;700000000
 475;2;Любомльський район;м.Любомль;subsidi;s95; ; ;NULL;NULL;700000000
-476;2;Маневицький район;смт.Маневичі;subsidi;s96; ; ;NULL;NULL;700000000
+476;14;Маневицький район;смт.Маневичі;subsidi;s96; ; ;NULL;NULL;700000000
 477;2;Ратнівський район;cмт.Ратне;subsidi;s97; ; ;NULL;NULL;700000000
 478;2;Рожищенський район;м.Рожище;subsidi;s98; ; ;NULL;NULL;700000000
 479;2;Старовижівський район;смт.Стара Вижівка;subsidi;s99; ; ;NULL;NULL;700000000
@@ -3215,3 +3215,5 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3545;555;Дрогобицький коледж нафти і газу;Дрогобицький коледж нафти і газу;Drog_NaftaGaz;Drog_NaftaGaz; ; ;NULL;NULL;4610600000
 3546;89;Відділ реєстрації місця проживання осіб м. Каховка;Відділ реєстрації місця проживання осіб м. Каховка;khers_kahovT;khers_kahovT; ; ;NULL;NULL;6510400000
 3547;89;Великокопанівська ОТГ (Олешківський район);Великокопанівська ОТГ (Олешківський район);khers_VelikokopOTG;khers_VelikokopOTG; ; ;NULL;NULL;6525080501
+3548;968;Маневицький район;Маневицький район;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000
+3549;14;Маневицький район;Маневицький район;volin_ManivetskaRDA;volin_ManivetskaRDA; ; ;NULL;NULL;0723600000

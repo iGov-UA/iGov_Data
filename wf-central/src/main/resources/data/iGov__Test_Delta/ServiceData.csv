@@ -5339,3 +5339,15 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5473;1407;111;111;NULL;4;{"processDefinitionId":"sanepid_1407_HealthDanger:1:1"};;true;225;false;;BankID,EDS,mpbds;0
 5474;1410;111;111;NULL;4;{"processDefinitionId":"dnepr_cnap_243:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 
+5475;775;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_154:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5476;780;662;662;NULL;4;{"processDefinitionId":"dnepr_soc_help_157:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5477;765;662;662;NULL;4;{"processDefinitionId":"dnepr_soc_help_148:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5478;774;662;662;NULL;4;{"processDefinitionId":"dnepr_soc_144:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5479;777;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_156:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5480;778;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_160:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5481;762;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_139:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5482;759;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_142:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5483;524;662;662;NULL;4;{"processDefinitionId":"chaes_654:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5484;779;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_165:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+5485;1544;662;662;NULL;4;{"processDefinitionId":"vpl_next_help_1125:1:1"};;false;968;true;;BankID,EDS;0
+

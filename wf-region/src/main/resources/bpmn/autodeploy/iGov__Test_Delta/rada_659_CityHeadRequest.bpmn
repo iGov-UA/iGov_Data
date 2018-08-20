@@ -4,6 +4,12 @@
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Ви бажаєте отримати рішення" type="select" default="0" required="true"></activiti:formProperty>
+        <activiti:formProperty id="asResultWay" name="Як ви хочете отримати відповідь?" type="enum" required="true">
+          <activiti:value id="sEnumTnet" name="Інтернетом, на електронну пошту"></activiti:value>
+          <activiti:value id="sEnumPost" name="Лист поштою, на вище вказану адресу реєстрації"></activiti:value>
+          <activiti:value id="sEnumOsoba" name="Забрати особисто в канцелярії"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -65,11 +71,6 @@
         </activiti:formProperty>
         <activiti:formProperty id="FilesTable" name="Додаткові документи; ;bNew=true" type="table" default="${markerService.loadFromFile('1_Standart_marker/TableS_Files.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="asResultWay" name="Як ви хочете отримати відповідь?" type="enum" required="true">
-          <activiti:value id="sEnumTnet" name="Інтернетом, на електронну пошту"></activiti:value>
-          <activiti:value id="sEnumPost" name="Лист поштою, на вище вказану адресу реєстрації"></activiti:value>
-          <activiti:value id="sEnumOsoba" name="Забрати особисто в канцелярії"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="marker659" name="marker659" type="markers" default="${markerService.loadFromFile('Rada/rada_659_CityHeadRequest.json')}"></activiti:formProperty>
         <activiti:formProperty id="sOrgan" name="назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса органу; ;bVisible=false" type="string"></activiti:formProperty>

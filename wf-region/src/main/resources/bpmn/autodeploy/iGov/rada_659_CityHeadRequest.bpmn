@@ -54,14 +54,17 @@
           <activiti:value id="sEnumCat19" name="Дитина"></activiti:value>
           <activiti:value id="sEnumCat20" name="Інші категорії"></activiti:value>
         </activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_3" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sTopic&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sTopic" name="Тема звернення" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sMessageText" name="Текст звернення" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sMessageText" name="Текст звернення;(коротко і по суті, опишіть проблему і пропозиції щодо її вирішення)" type="fileHTML" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="sMoreFiles" name="Чи бажаєте завантажити додаткові документи?" type="enum" required="true">
           <activiti:value id="no" name="Ні"></activiti:value>
           <activiti:value id="yes" name="Так"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="FileDodatok" name="Додаткові документи;(якщо декілька сторінок об'єднайте у pdf-файл або zip архів);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="FilesTable" name="Додаткові документи; ;bNew=true" type="table" default="${markerService.loadFromFile('1_Standart_marker/TableS_Files.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="asResultWay" name="Як ви хочете отримати відповідь?" type="enum" required="true">
           <activiti:value id="sEnumTnet" name="Інтернетом, на електронну пошту"></activiti:value>
           <activiti:value id="sEnumPost" name="Лист поштою, на вище вказану адресу реєстрації"></activiti:value>
@@ -181,13 +184,14 @@ ${sNameOrgan}<br>
         </activiti:formProperty>
         <activiti:formProperty id="markersLine_3" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sTopic&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sTopic" name="Тема звернення" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sMessageText" name="Текст звернення" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sMessageText" name="Текст звернення; ;writable=false" type="fileHTML"></activiti:formProperty>
         <activiti:formProperty id="asResultWay" name="Відповідь заявнику" type="enum" writable="false">
           <activiti:value id="sEnumTnet" name="Інтернетом, на електронну пошту"></activiti:value>
           <activiti:value id="sEnumPost" name="Лист поштою, на вище вказану адресу реєстрації"></activiti:value>
           <activiti:value id="sEnumOsoba" name="Видати на руки в канцелярії"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="FileDodatok" name="Додаткові документи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="FilesTable" name="Додаткові документи; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="marker659" name="marker659" type="markers" default="${markerService.loadFromFile('Rada/rada_659_CityHeadRequest.json')}"></activiti:formProperty>
         <activiti:formProperty id="decide" name="Рішення про реєстрацію звернення" type="enum" required="true">
           <activiti:value id="accept" name="Зареєструвати та взяти в роботу"></activiti:value>
@@ -295,7 +299,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="sPlase_of_reg" name="Адреса реєстрації" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_3" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sTopic&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sTopic" name="Тема звернення" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sMessageText" name="Текст звернення" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sMessageText" name="Текст звернення; ;writable=false" type="fileHTML"></activiti:formProperty>
         <activiti:formProperty id="asResultWay" name="Відповідь заявнику" type="enum" writable="false">
           <activiti:value id="sEnumTnet" name="Інтернетом, на електронну пошту"></activiti:value>
           <activiti:value id="sEnumPost" name="Лист поштою, на вище вказану адресу реєстрації"></activiti:value>

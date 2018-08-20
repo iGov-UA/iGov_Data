@@ -2,14 +2,14 @@
   "aField": [
     {
       "id": "nTable1",
-      "name": "Назва додатку",
+      "name": "Назва документа",
       "type": "string",
       "required": "true",
       "nWidth": "50%"
     },
     {
       "id": "nTable2",
-      "name": "Файл додатку",
+      "name": "Сканкопія документа",
       "type": "file",
       "required": "true",
       "nWidth": "20%"

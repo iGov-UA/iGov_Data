@@ -142,6 +142,7 @@
         <activiti:formProperty id="nID_Subject" name="ИД-номер субъекта; ;bVisible=false" type="string" default="0"></activiti:formProperty>
         <activiti:formProperty id="sID_Merchant" name="ИД-строковой мерчанта (магазина); ;bVisible=false" type="string" default="i75116857714"></activiti:formProperty>
         <activiti:formProperty id="sSum" name="сумма платежа; ;bVisible=false" type="string" default="55.59"></activiti:formProperty>
+        <activiti:formProperty id="sRekvDp" name="Реквізи Укрпошта Дніпро; ;bVisible=false" type="string" default="ПАТ Укрпошта &lt;/b&gt;р/р 26005301643532 &lt;/b&gt;Банк Філія – ДОУ АТ «Ощадбанк»&lt;/b&gt;Код Банку 305482&lt;/b&gt;ЄДРПОУ 25771603"></activiti:formProperty>
         <activiti:formProperty id="sID_Currency" name="ИД-строковой валюты; ;bVisible=false" type="string" default="UAH"></activiti:formProperty>
         <activiti:formProperty id="sDescription" name="строка-описание платежа; ;bVisible=false" type="string" default="сплата за отримання листа"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб"></activiti:formProperty>
@@ -1086,6 +1087,7 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="sIndex" name="Індекс; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="Номер транзакції платежу" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sRekvDp" name="Реквізи Укрпошта Дніпро; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markersLine_Org" name="Де отримати документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Org&quot;:{&quot;aElement_ID&quot;:[&quot;sNameOrgan&quot;],&quot;sValue&quot;:&quot;Де отримати документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу що надає послугу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sAddressForPost" name="Адреса підрозділу де забрати документ" type="string" writable="false"></activiti:formProperty>

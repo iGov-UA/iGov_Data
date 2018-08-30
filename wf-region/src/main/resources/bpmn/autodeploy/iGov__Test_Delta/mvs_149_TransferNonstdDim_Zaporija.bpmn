@@ -800,7 +800,6 @@ ${sNameOrganTransfer}<br />
     <sequenceFlow id="flow69" sourceRef="usertask2" targetRef="exclusivegateway4"></sequenceFlow>
     <sequenceFlow id="flow72" sourceRef="servicetask15" targetRef="endevent3"></sequenceFlow>
     <sequenceFlow id="flow73" sourceRef="servicetask14" targetRef="endevent3"></sequenceFlow>
-    <scriptTask id="scripttask1" name="Скріпт файл" activiti:autoStoreVariables="false"></scriptTask>
     <sequenceFlow id="flow74" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_mvs_149_TransferNonstdDim_Zaporija">

@@ -362,6 +362,7 @@ execution.setVariable('tDokumentsList', res)
         <activiti:formProperty id="sShapka228" name="шапки принтформ ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Дозвіл на участь у дорожньому русі транспортних засобів, вагові або габаритні параметри яких перевищують нормативні"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/mvs/mvs_121_TransferPathAgreement_print_skv.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява (погодження дорожнього перевезення небезпечного вантажу)" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>
@@ -557,6 +558,7 @@ ${tComment}</p>
         <activiti:formProperty id="sShapka228" name="шапки принтформ ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Дозвіл на участь у дорожньому русі транспортних засобів, вагові або габаритні параметри яких перевищують нормативні"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/mvs/mvs_121_TransferPathAgreement_print_skv.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява (погодження дорожнього перевезення небезпечного вантажу)" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>

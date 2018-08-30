@@ -10,12 +10,22 @@
         <activiti:formProperty id="bankIdlastName" name="Прізвище; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Ваш контактний номер телефону" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="Е-Mail для зворотнього зв'язку;на цей e-mail Ви отримаєте результат обробки Вашого звернення;" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sDateDecisionKnown" name="Дата " type="date" required="true"></activiti:formProperty>
-        <activiti:formProperty id="form_signed_all_1" name="Заява громадянина з ЕЦП; ;bNew=true, bPrintFormFileAsPDF=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sFirstField" name="Доп.информация;это должна быть подсказка и ее можно видеть" type="string"></activiti:formProperty>
+        <activiti:formProperty id="asTypeComplaint" name="Тип скаржника" type="enum" required="true">
+          <activiti:value id="sIndividual" name="фізична особа"></activiti:value>
+          <activiti:value id="sRepresentativeIndividual" name="представник фізичної особи"></activiti:value>
+          <activiti:value id="sLegalEntity" name="юридична особа в особі директора"></activiti:value>
+          <activiti:value id="sRepresentativeLegalEntity" name="юридична особа в особі іншого представника"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sDateDecisionKnown" name="Дата прийняття рішення, що оскаржується, або вчинення державним реєстратором/суб'єктом державної реєстрації оскаржуваної дії чи бездіяльності" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sEssence" name="Зміст оскаржуваного рішення, дії чи бездіяльності;приклади дій або бездіяльності, які можна оскаржити, а також роз’яснення щодо змісту рішення" type="fileHTML" required="true"></activiti:formProperty>
+        <activiti:formProperty id="form_signed_all_1" name="Перша Заява громадянина з ЕЦП; ;bNew=true, bPrintFormFileAsPDF=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для наложения ЭЦП; ;bVisible=false" type="string" default="pattern/print/testPrint2.html"></activiti:formProperty>
-        <activiti:formProperty id="sTableDocInt" name="Таблиця з документами реквайр фолс; ;bNew=true" type="table" default="{&quot;aField&quot;:[{&quot;id&quot;:&quot;sDoc&quot;,&quot;name&quot;:&quot;Дата; ;bNew=true&quot;,&quot;type&quot;:&quot;date&quot;,&quot;required&quot;:&quot;false&quot;,&quot;writable&quot;:&quot;true&quot;,&quot;nWidth&quot;:&quot;20%&quot;}]}" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile1" name="Файл для накладення підпису; ;bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="markerValidate" name="Validate" type="markers" default="{&quot;validate&quot;:{&quot;FileExtensions_1&quot;:{&quot;aField_ID&quot;:[&quot;nFile1&quot;],&quot;saExtension&quot;:&quot;pdf&quot;,&quot;bLowercase&quot;:&quot;true&quot;,&quot;sMessage&quot;:&quot;Недопустимий формат файлу! Повинно бути: {saExtension}&quot;}}}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask1" name="Е-mail" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -40,10 +50,20 @@
     </serviceTask>
     <userTask id="usertask1" name="User Task" activiti:assignee="quotes">
       <extensionElements>
+        <activiti:formProperty id="sFirstField" name="Доп.информация;это должна быть подсказка и ее можно видеть" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCountry_0" name="Країна призначення" type="select"></activiti:formProperty>
+        <activiti:formProperty id="sID_UA_Country_0" name="Код країни призначення;(заповниться автоматично)" type="string"></activiti:formProperty>
         <activiti:formProperty id="email" name="Е-Mail для зворотнього зв'язку;на цей e-mail Ви отримаєте результат обробки Вашого звернення;" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name="Перша Заява громадянина з ЕЦП; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTypeComplaint" name="Тип скаржника" type="enum" writable="false">
+          <activiti:value id="sIndividual" name="фізична особа"></activiti:value>
+          <activiti:value id="sRepresentativeIndividual" name="представник фізичної особи"></activiti:value>
+          <activiti:value id="sLegalEntity" name="юридична особа в особі директора"></activiti:value>
+          <activiti:value id="sRepresentativeLegalEntity" name="юридична особа в особі іншого представника"></activiti:value>
+        </activiti:formProperty>
         <activiti:formProperty id="sDateDecisionKnown" name="Дата прийняття рішення, що оскаржується, або вчинення державним реєстратором/суб'єктом державної реєстрації оскаржуваної дії чи бездіяльності" type="date" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sTableDocInt" name="Таблиця з документами реквайр фолс; ;bNew=true" type="table" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sEssence" name="Зміст оскаржуваного рішення, дії чи бездіяльності;приклади дій або бездіяльності, які можна оскаржити, а також роз’яснення щодо змісту рішення" type="fileHTML" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile1" name="Файл для накладення підпису; ;bNew=true" type="file" writable="false"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <endEvent id="endevent1" name="End"></endEvent>

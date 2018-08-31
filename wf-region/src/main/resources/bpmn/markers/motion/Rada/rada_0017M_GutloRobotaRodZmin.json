@@ -3,6 +3,7 @@
     "ShowFieldsOnCondition_TipUslugi": {
       "aField_ID": [
         "asStatus",
+        "asShlub",
         "asRobota",
         "asVlasnist",
         "asPlRegistr",

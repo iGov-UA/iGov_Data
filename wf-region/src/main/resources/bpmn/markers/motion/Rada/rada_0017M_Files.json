@@ -13,7 +13,8 @@
     "ShowFieldsOnCondition_SocGutlo": {
       "aField_ID": [
         "nFile_SS",
-        "nFile_VartistMaina"
+        "nFile_VartistMaina",
+        "nFile_PilgPravo"
       ],
       "asID_Field": {
         "sReason": "asTipUslugi"
@@ -25,12 +26,24 @@
         "nFile_SS",
         "nFile_DovOblPeresel",
         "nFile_PodatkiDohodu",
-        "nFile_ReestrNeruhom"
+        "nFile_ReestrNeruhom",
+        "nFile_RobDovTP",
+        "nFile_BaluForPrumishen"
       ],
       "asID_Field": {
         "sReason": "asTipUslugi"
       },
       "sCondition": "[sReason]=='sEnamTumchGutlo'"
+    },
+    "ShowFieldsOnCondition_Shlub": {
+      "aField_ID": [
+        "nFile_Shlub"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi", +
+        "sReason2": "asShlub"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo')&&([sReason2]=='yes'||[sReason2]=='так')"
     },
     "ShowFieldsOnCondition_RodPasp": {
       "aField_ID": [
@@ -83,6 +96,16 @@
         "sReason2": "asStatus"
       },
       "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='sEnamATO'"
+    },
+    "ShowFieldsOnCondition_SvidochSmert": {
+      "aField_ID": [
+        "nFile_SvidochSmert"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "asStatus"
+      },
+      "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='sEnamRodichZagub'"
     },
     "ShowFieldsOnCondition_Peresel": {
       "aField_ID": [

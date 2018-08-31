@@ -34,6 +34,10 @@
           <activiti:value id="sEnamPeresInvalid" name="Внутрішньо переміщена особа з інвалідністю внаслідок війни"></activiti:value>
           <activiti:value id="sEnamNo" name="Не відношусь до жодної з перелічених категорій"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="asShlub" name="Ви є(були) в шлюбі?;позначте галочкою - якщо ви одружений/одружена або були одружені;sID_CheckboxTrue=yes" type="enum" required="true" default="no">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
         <activiti:formProperty id="asRobota" name="Чи є у вас робота?;позначте галочкою - якщо працевлаштовані в даний момент;sID_CheckboxTrue=yes" type="enum" required="true" default="no">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
@@ -84,6 +88,8 @@
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_inn" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="nFile_Shlub" name="Свідоцтво про шлюб/Свідоцтво про розлучення; ;bNew=true" type="file" required="true"></activiti:formProperty>
+                
         <activiti:formProperty id="nFile_SS" name="Довідка про склад сім'ї; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_RodPasp" name="Паспорти членів родини;(людей, які проживають разом з заявником, (1, 2 та всі сторінки з відмітками про реєстрацію та приватизацію)) ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidNar" name="Свідоцтва про народження;(дітей, які проживають разом з заявником);bNew=true" type="file" required="true"></activiti:formProperty>
@@ -91,10 +97,20 @@
         <activiti:formProperty id="nFile_DohZay" name="Довідка про доходи з місця роботи заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_RodDoh" name="Довідки про доходи з місця роботи родичів заявника;(людей, які проживають разом з заявником);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="nFile_DohRik" name="Довідка про доходи усіх членів родини за минулий рік (з січня по грудень);(з податкової);bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="nFile_RobDovTP" name="Довідки з місця роботи всіх працюючих членів родини;(для пенсіонерів пенсійні посвідчення);bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="nFile_VartistMaina" name="Відомості про вартість майна, що перебуває у власності громадянина та членів його сім'ї на момент взяття на соціальний квартирний облік ; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovOblPeresel" name="Довідка про взяття на облік внутрішньо переміщених осіб; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_PodatkiDohodu" name="Відомості з Державного реєстру фізичних осіб – платників податків  про суми виплачених доходів та утриманих податків/джерела за останні 6 місяців; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ReestrNeruhom" name="Інформаційна довідка з державного реєстру речових прав на нерухоме майно, про наявність (відсутність) власності у заявника та дорослих членів сім’ї; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="nFile_PilgPravo" name="Підтвердження права громадянина та члена його сім'ї на надання пільг під час взяття на облік;(завантажте документ що підтверджує право на пільги згідно законодавства);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_BaluForPrumishen" name="Документи, що підтверджують наявність підстав нарахування балів для надання житлових приміщень для тимчасового проживання, пільг та/або майнових прав" type="file" required="true"></activiti:formProperty>
+        
+        
+        <activiti:formProperty id="nFile_SvidochSmert" name="Звістка про загибель родича/Свідоцтво про загибель; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="nFile_DovATO" name="Довідка про безпосередню участь особи в АТО; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Posvidchenia" name="Посвідчення встановленого зразка; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovReestrPilg" name="Довідка органу соціального захисту населення про перебування на обліку в Єдиному державному автоматизованому реєстрі осіб, які мають  право  на  пільги; ;bNew=true" type="file" required="true"></activiti:formProperty>

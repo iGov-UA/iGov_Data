@@ -120,7 +120,7 @@ execution.setVariable('sEndDay', timerEnd)</script>
 [pattern/mail/new_design/_common_content_start.html]
 <p><b> Дякуємо, що скористалися iGov для запису в електронну чергу на замовлення паспорту для виїзду закордон! </b></p><br>
 <p>
-	<b>Деталі візіту</b>
+	<b>Деталі візиту</b>
 <ul>
 	<li>Адреса:  ${sAddress}.</li>
 	<li>Дата та час: ${sNotification_day}. Номер талону - ${sTicketNumber}. </li>
@@ -222,7 +222,7 @@ ${sNameOrgan},<br>
 [pattern/mail/new_design/_common_content_start.html]
 <p><b> Дякуємо, що скористалися iGov для запису в електронну чергу на замовлення паспорту для виїзду закордон! </b></p><br>
 <p>
-	<b>Деталі візіту</b>
+	<b>Деталі візиту</b>
 <ul>
 	<li>Адреса:  ${sAddress}.</li>
 	<li>Дата та час: ${sNotification_day1}</li>
@@ -380,7 +380,7 @@ ${sNameOrgan}<br>
 [pattern/mail/new_design/_common_content_start.html]
 Ви не зв'явились для отримання послуги у обраний вами час.<br> 
 <p>
-	<b>Деталі візіту</b>
+	<b>Деталі візиту</b>
 <ul>
 	<li>Адреса:  ${sAddress}.</li>
 	<li>Дата та час: ${sNotification_day1}</li>

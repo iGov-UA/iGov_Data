@@ -40,7 +40,7 @@
         "nFile_Shlub"
       ],
       "asID_Field": {
-        "sReason": "asTipUslugi", +
+        "sReason": "asTipUslugi", 
         "sReason2": "asShlub"
       },
       "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo')&&([sReason2]=='yes'||[sReason2]=='так')"

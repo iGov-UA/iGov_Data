@@ -3,7 +3,7 @@
   <process id="rada_0740_SkladSimyi_Dnipro" name="Довідка про склад сім'ї або про зареєстрованих у приміщенні осіб" isExecutable="true">
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
-        <activiti:formProperty id="asDistrict" name="Оберіть район до якого належить Ваш будинок;" type="enum" required="true">
+        <activiti:formProperty id="asDistrict" name="Оберіть район до якого належить Ваш будинок" type="enum" required="true">
           <activiti:value id="sAND" name="Амур-Нижньодніпровський"></activiti:value>
           <activiti:value id="sIndus" name="Індустріальний"></activiti:value>
           <activiti:value id="sNovok" name="Новокодацький"></activiti:value>
@@ -358,7 +358,18 @@ ${sNameOrgan}.<br />
     </serviceTask>
     <userTask id="usertask3" name="Попередня перевірка" activiti:candidateGroups="dnepr_mvk_form3_${ScriptGroup}">
       <extensionElements>
-        <activiti:formProperty id="asRegistr" name="Чи надавали ви вже раніше документи для внесення інформації в реєстр;поначте галочкою - якщо так" type="enum" writable="false">
+        <activiti:formProperty id="asDistrict" name="Район" type="enum" writable="false">
+          <activiti:value id="sAND" name="Амур-Нижньодніпровський"></activiti:value>
+          <activiti:value id="sIndus" name="Індустріальний"></activiti:value>
+          <activiti:value id="sNovok" name="Новокодацький"></activiti:value>
+          <activiti:value id="sSamar" name="Самарський"></activiti:value>
+          <activiti:value id="sSobor" name="Соборний"></activiti:value>
+          <activiti:value id="sCentr" name="Центральний"></activiti:value>
+          <activiti:value id="sChech" name="Чечелівський"></activiti:value>
+          <activiti:value id="sShevch" name="Шевченковський"></activiti:value>
+          <activiti:value id="sTaromske" name="Таромське"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asRegistr" name="Чи надавав заявник раніше документи для внесення інформації в реєстр;поначте галочкою - якщо так" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -672,6 +683,17 @@ ${sNameOrgan}<br>
     </serviceTask>
     <userTask id="usertask4" name="Видача довідки Заявнику" activiti:candidateGroups="dnepr_mvk_form3_${ScriptGroup}">
       <extensionElements>
+        <activiti:formProperty id="asDistrict" name="Район" type="enum" writable="false">
+          <activiti:value id="sAND" name="Амур-Нижньодніпровський"></activiti:value>
+          <activiti:value id="sIndus" name="Індустріальний"></activiti:value>
+          <activiti:value id="sNovok" name="Новокодацький"></activiti:value>
+          <activiti:value id="sSamar" name="Самарський"></activiti:value>
+          <activiti:value id="sSobor" name="Соборний"></activiti:value>
+          <activiti:value id="sCentr" name="Центральний"></activiti:value>
+          <activiti:value id="sChech" name="Чечелівський"></activiti:value>
+          <activiti:value id="sShevch" name="Шевченковський"></activiti:value>
+          <activiti:value id="sTaromske" name="Таромське"></activiti:value>
+        </activiti:formProperty>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdbirthDay" name="День народження заявника" type="string" writable="false"></activiti:formProperty>
@@ -933,6 +955,17 @@ ${sNameOrgan}<br/>
     <sequenceFlow id="flow39" sourceRef="servicetask9" targetRef="usertask4"></sequenceFlow>
     <userTask id="usertask1" name="Передача довідки УкрПошті" activiti:candidateGroups="dnepr_mvk_form3_${ScriptGroup}">
       <extensionElements>
+        <activiti:formProperty id="asDistrict" name="Район" type="enum" writable="false">
+          <activiti:value id="sAND" name="Амур-Нижньодніпровський"></activiti:value>
+          <activiti:value id="sIndus" name="Індустріальний"></activiti:value>
+          <activiti:value id="sNovok" name="Новокодацький"></activiti:value>
+          <activiti:value id="sSamar" name="Самарський"></activiti:value>
+          <activiti:value id="sSobor" name="Соборний"></activiti:value>
+          <activiti:value id="sCentr" name="Центральний"></activiti:value>
+          <activiti:value id="sChech" name="Чечелівський"></activiti:value>
+          <activiti:value id="sShevch" name="Шевченковський"></activiti:value>
+          <activiti:value id="sTaromske" name="Таромське"></activiti:value>
+        </activiti:formProperty>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdbirthDay" name="День народження заявника" type="string" writable="false"></activiti:formProperty>

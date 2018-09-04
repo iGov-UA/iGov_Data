@@ -10,6 +10,8 @@
           <activiti:value id="sEnamZminuOblik" name="Внести зміни в інснуючу облікову справу"></activiti:value>
         </activiti:formProperty>
         
+        <activiti:formProperty id="sLabeZaiava" name=" ; ;labelType=info" type="label" default="УВАГА! Для отримання послуги необхідно завантажити сканкопію заяви підписану всіма членами родини. Бланк заяви для завантаження і друку за посиланням - &lt;a href=&quot;http://cnap.mariupolrada.gov.ua/#/service/7/9 &quot; target=&quot;_blank&quot;&gt;Бланк заяви для постановки на облік&lt;/a&gt;&lt;br&gt;&lt;br&gt;"></activiti:formProperty>
+        
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Ви бажаєте отримати рішення" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -46,7 +48,7 @@
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPlLivVlasnist" name="Чи належить вам приміщення в якому ви зараз проживаєте?;позначте галочкою - якщо проживаєте у своъй власності;sID_CheckboxTrue=yes" type="enum" required="true" default="no">
+        <activiti:formProperty id="asPlLivVlasnist" name="Чи належить вам приміщення в якому ви зараз проживаєте?;позначте галочкою - якщо проживаєте у своїй власності;sID_CheckboxTrue=yes" type="enum" required="true" default="no">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -85,6 +87,8 @@
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeFile&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabeFile" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Якщо один документ складається з кількох зображень або файлів, завантажте його у форматі PDF або ZIP архівом."></activiti:formProperty>
         
+        <activiti:formProperty id="nFile_Zaiava" name="Заява (сканкопія);(посилання на бланк заяви на початку форми, роздрукуйте бланк, всі члени родини що стають з вами на облік мають його підписати, завантажте сканкопію підписаної заяви);bNew=true" type="file" required="true"></activiti:formProperty>
+                
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_inn" name="ІПН заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
@@ -206,19 +210,23 @@
           <activiti:value id="sEnamPeresInvalid" name="Внутрішньо переміщена особа з інвалідністю внаслідок війни"></activiti:value>
           <activiti:value id="sEnamNo" name="Не відношусь до жодної з перелічених категорій"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asRobota" name="Чи має заявник роботу?;позначте галочкою - якщо працевлаштовані в даний момент;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asShlub" name="Чи є(був) заявник в шлюбі?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asVlasnist" name="Чи має заявник у власності житлові приміщення?;позначте галочкою - якщо маєте у власності житло;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asRobota" name="Чи має заявник роботу?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPlLivVlasnist" name="Чи належить заявнику приміщення в якому ви зараз проживаєте?;позначте галочкою - якщо проживаєте у своъй власності;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asVlasnist" name="Чи має заявник у власності житлові приміщення?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPlRegistr" name="Чи співпадає місце реєстрації заявника з місцем фактичного проживання?;позначте галочкою - якщо зареєстровані там де проживаєте;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPlLivVlasnist" name="Чи належить заявнику приміщення в якому ви зараз проживаєте?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asPlRegistr" name="Чи співпадає місце реєстрації заявника з місцем фактичного проживання?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -250,8 +258,10 @@
         <activiti:formProperty id="nFile_Zminu" name="Документ що підтверджує зміни; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markerGutloRobotaRodZmin" name="markerGutloRobotaRodZmin" type="markers" default="${markerService.loadFromFile('Rada/rada_0017M_GutloRobotaRodZmin.json')}"></activiti:formProperty>
        
+        <activiti:formProperty id="nFile_Zaiava" name="Заява (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_inn" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Shlub" name="Свідоцтво про шлюб/Свідоцтво про розлучення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SS" name="Довідка про склад сім'ї; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RodPasp" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidNar" name="Свідоцтва про народження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -259,10 +269,15 @@
         <activiti:formProperty id="nFile_DohZay" name="Довідка про доходи з місця роботи заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RodDoh" name="Довідки про доходи з місця роботи родичів заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DohRik" name="Довідка про доходи усіх членів родини за минулий рік (з січня по грудень); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_RobDovTP" name="Довідки з місця роботи всіх працюючих членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_VartistMaina" name="Відомості про вартість майна, що перебуває у власності громадянина та членів його сім'ї на момент взяття на соціальний квартирний облік ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovOblPeresel" name="Довідка про взяття на облік внутрішньо переміщених осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_PodatkiDohodu" name="Відомості з Державного реєстру фізичних осіб – платників податків  про суми виплачених доходів та утриманих податків/джерела за останні 6 місяців; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ReestrNeruhom" name="Інформаційна довідка з державного реєстру речових прав на нерухоме майно, про наявність (відсутність) власності у заявника та дорослих членів сім’ї; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovATO" name="Довідка про безпосередню участь особи в АТО; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_PilgPravo" name="Підтвердження права громадянина та члена його сім'ї на надання пільг під час взяття на облік; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_BaluForPrumishen" name="Документи, що підтверджують наявність підстав нарахування балів для надання житлових приміщень для тимчасового проживання, пільг та/або майнових прав" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_SvidochSmert" name="Звістка про загибель родича/Свідоцтво про загибель; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovATO" name="Довідка про безпосередню участь особи в АТО; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Posvidchenia" name="Посвідчення встановленого зразка; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovReestrPilg" name="Довідка органу соціального захисту населення про перебування на обліку в Єдиному державному автоматизованому реєстрі осіб, які мають  право  на  пільги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -273,12 +288,6 @@
         </activiti:formProperty>
         <activiti:formProperty id="sComment" name="В разі відмови в наданні послуги зазначте підставу для відмови" type="textArea"></activiti:formProperty>
         
-        <activiti:formProperty id="sAddress" name="адреса органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sShapka" name="Шапка; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNameOrgan" name="підпис; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sPhoneOrgan" name="телефон ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sWorkTime" name="графік роботи ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -402,19 +411,23 @@
           <activiti:value id="sEnamPeresInvalid" name="Внутрішньо переміщена особа з інвалідністю внаслідок війни"></activiti:value>
           <activiti:value id="sEnamNo" name="Не відношусь до жодної з перелічених категорій"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asRobota" name="Чи має заявник роботу?;позначте галочкою - якщо працевлаштовані в даний момент;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asShlub" name="Чи є(був) заявник в шлюбі?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asVlasnist" name="Чи має заявник у власності житлові приміщення?;позначте галочкою - якщо маєте у власності житло;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asRobota" name="Чи має заявник роботу?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPlLivVlasnist" name="Чи належить заявнику приміщення в якому ви зараз проживаєте?;позначте галочкою - якщо проживаєте у своъй власності;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asVlasnist" name="Чи має заявник у власності житлові приміщення?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPlRegistr" name="Чи співпадає місце реєстрації заявника з місцем фактичного проживання?;позначте галочкою - якщо зареєстровані там де проживаєте;sID_CheckboxTrue=yes" type="enum" writable="false">
+        <activiti:formProperty id="asPlLivVlasnist" name="Чи належить заявнику приміщення в якому ви зараз проживаєте?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
+          <activiti:value id="yes" name="так"></activiti:value>
+          <activiti:value id="no" name="ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asPlRegistr" name="Чи співпадає місце реєстрації заявника з місцем фактичного проживання?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -446,8 +459,10 @@
         <activiti:formProperty id="nFile_Zminu" name="Документ що підтверджує зміни; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markerGutloRobotaRodZmin" name="markerGutloRobotaRodZmin" type="markers" default="${markerService.loadFromFile('Rada/rada_0017M_GutloRobotaRodZmin.json')}"></activiti:formProperty>
        
+        <activiti:formProperty id="nFile_Zaiava" name="Заява (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_inn" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Shlub" name="Свідоцтво про шлюб/Свідоцтво про розлучення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SS" name="Довідка про склад сім'ї; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RodPasp" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidNar" name="Свідоцтва про народження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -455,10 +470,15 @@
         <activiti:formProperty id="nFile_DohZay" name="Довідка про доходи з місця роботи заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RodDoh" name="Довідки про доходи з місця роботи родичів заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DohRik" name="Довідка про доходи усіх членів родини за минулий рік (з січня по грудень); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_RobDovTP" name="Довідки з місця роботи всіх працюючих членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_VartistMaina" name="Відомості про вартість майна, що перебуває у власності громадянина та членів його сім'ї на момент взяття на соціальний квартирний облік ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovOblPeresel" name="Довідка про взяття на облік внутрішньо переміщених осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_PodatkiDohodu" name="Відомості з Державного реєстру фізичних осіб – платників податків  про суми виплачених доходів та утриманих податків/джерела за останні 6 місяців; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ReestrNeruhom" name="Інформаційна довідка з державного реєстру речових прав на нерухоме майно, про наявність (відсутність) власності у заявника та дорослих членів сім’ї; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovATO" name="Довідка про безпосередню участь особи в АТО; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_PilgPravo" name="Підтвердження права громадянина та члена його сім'ї на надання пільг під час взяття на облік; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_BaluForPrumishen" name="Документи, що підтверджують наявність підстав нарахування балів для надання житлових приміщень для тимчасового проживання, пільг та/або майнових прав" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_SvidochSmert" name="Звістка про загибель родича/Свідоцтво про загибель; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovATO" name="Довідка про безпосередню участь особи в АТО; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Posvidchenia" name="Посвідчення встановленого зразка; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_DovReestrPilg" name="Довідка органу соціального захисту населення про перебування на обліку в Єдиному державному автоматизованому реєстрі осіб, які мають  право  на  пільги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -469,12 +489,6 @@
         </activiti:formProperty>
         <activiti:formProperty id="sComment" name="В разі відмови в наданні послуги зазначте підставу для відмови" type="textArea"></activiti:formProperty>
         
-        <activiti:formProperty id="sBody_1" name="[pattern/print/mvk/nikolaev_mvk_408_print.html]; ;bVisible=false" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_2" name="Заява;Заява громадянина;pattern/print/mvk/nikolaev_mvk_408_print.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="markers2" name="hide fields Status" type="markers" default="${markerService.loadFromFile('mvk/show_fill_status.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers_For_Print_1" name="hide-show fields adult" type="markers" default="${markerService.loadFromFile('mvk/nikolaev_mvk_408_hide-show_for_print_1.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers_For_Print_2" name="hide-show fields table" type="markers" default="${markerService.loadFromFile('mvk/nikolaev_mvk_408_hide-show_for_print_2.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers_For_Print_3" name="hide-show fields sFIO" type="markers" default="${markerService.loadFromFile('mvk/nikolaev_mvk_408_hide-show_for_print_3.json')}"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>

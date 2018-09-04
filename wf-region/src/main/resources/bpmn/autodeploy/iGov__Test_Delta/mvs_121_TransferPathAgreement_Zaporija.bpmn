@@ -144,9 +144,8 @@
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="погодження маршруту руху транспортного засобу під час дорожнього перевезення небезпечних вантажів"></activiti:formProperty>
       </extensionElements>
     </startEvent>
-    <scriptTask id="scripttask1" name="Скріпт файл" activiti:autoStoreVariables="false">
+    <scriptTask id="scripttask1" name="Скріпт файл" scriptFormat="javascript" activiti:autoStoreVariables="false">
 <script>
-var num = '1'
 var file1 = '&lt;li&gt;1.Заява.&lt;/li&gt;'
 var file2 = ' '
 var file3 = ' '
@@ -159,40 +158,31 @@ var file9 = ' '
 var file10 = ' '
 var res = 'res'
 if(execution.getVariable('oplata') != null){
-  num = num + 1
-  file2 = '&lt;li&gt;'+num+'. Квитанція про оплату вартості послуги.&lt;/li&gt;'
+  file2 = '&lt;li&gt; Квитанція про оплату вартості послуги.&lt;/li&gt;'
 }
 if(execution.getVariable('bankId_scan_passport') != null){
-  num = num + 1
-  file3 = '&lt;li&gt;'+num+'. Паспорт заявника.&lt;/li&gt;'
+  file3 = '&lt;li&gt; Паспорт заявника.&lt;/li&gt;'
 }
 if(execution.getVariable('nFile_DocReject') != null){
-  num = num + 1
-  file4 = '&lt;li&gt;'+num+'. Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
+  file4 = '&lt;li&gt; Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
 }
 if(execution.getVariable('nFile_ConfidantDoc') != null){
-  num = num + 1
-  file5 = '&lt;li&gt;'+num+'. Довіреність на представника.&lt;/li&gt;'
+  file5 = '&lt;li&gt; Довіреність на представника.&lt;/li&gt;'
 }
 if(execution.getVariable('pidgotovka') != null){
-  num = num + 1
-  file6 = '&lt;li&gt;'+num+'. Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів.&lt;/li&gt;'
+  file6 = '&lt;li&gt; Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів.&lt;/li&gt;'
 }
 if(execution.getVariable('dopnv') != null){
-  num = num + 1
-  file7 = '&lt;li&gt;'+num+'. ДОПНВ - свідоцтво про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі.&lt;/li&gt;'
+  file7 = '&lt;li&gt; ДОПНВ - свідоцтво про підготовку водіїв транспортних засобів, що перевозять небезпечні вантажі.&lt;/li&gt;'
 }
 if(execution.getVariable('dopusk') != null){
-  num = num + 1
-  file8 = '&lt;li&gt;'+num+'. Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів.&lt;/li&gt;'
+  file8 = '&lt;li&gt; Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів.&lt;/li&gt;'
 }
 if(execution.getVariable('insurance') != null){
-  num = num + 1
-  file9 = '&lt;li&gt;'+num+'. Чинний договір обов’язкового страхування.&lt;/li&gt;'
+  file9 = '&lt;li&gt; Чинний договір обов’язкового страхування.&lt;/li&gt;'
 }
 if(execution.getVariable('dodatkovo') != null){
-  num = num + 1
-  file10 = '&lt;li&gt;'+num+'. Копії додаткового погодження або дозволу.&lt;/li&gt;'
+  file10 = '&lt;li&gt; Копії додаткового погодження або дозволу.&lt;/li&gt;'
 }
 
 res = '&lt;ol&gt;'+file1+file2+file3+file4+file5+file6+file7+file8+file9+file10+'&lt;/ol&gt;'
@@ -362,7 +352,8 @@ execution.setVariable('tDokumentsList', res)
         <activiti:formProperty id="sShapka228" name="шапки принтформ ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Дозвіл на участь у дорожньому русі транспортних засобів, вагові або габаритні параметри яких перевищують нормативні"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/mvs/mvs_121_TransferPathAgreement_print_skv.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява (погодження дорожнього перевезення небезпечного вантажу)" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>
@@ -559,6 +550,7 @@ ${tComment}</p>
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Дозвіл на участь у дорожньому русі транспортних засобів, вагові або габаритні параметри яких перевищують нормативні"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/mvs/mvs_121_TransferPathAgreement_print_skv.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява (погодження дорожнього перевезення небезпечного вантажу)" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>

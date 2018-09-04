@@ -120,9 +120,8 @@
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="дозвіл на участь у дорожньому русі транспортних засобів, вагові або габаритні параметри яких перевищують нормативні"></activiti:formProperty>
       </extensionElements>
     </startEvent>
-    <scriptTask id="scripttask1" name="Скріпт файл" activiti:autoStoreVariables="false">
+    <scriptTask id="scripttask1" name="Скріпт файл" scriptFormat="javascript" activiti:autoStoreVariables="false">
 <script>
-var num = '1'
 var file1 = '&lt;li&gt;1.Заява.&lt;/li&gt;'
 var file2 = ' '
 var file3 = ' '
@@ -133,32 +132,25 @@ var file7 = ' '
 var file8 = ' '
 var res = 'res'
 if(execution.getVariable('oplata') != null){
-  num = num + 1
-  file2 = '&lt;li&gt;'+num+'. Квитанція про оплату вартості послуги.&lt;/li&gt;'
+  file2 = '&lt;li&gt; Квитанція про оплату вартості послуги.&lt;/li&gt;'
 }
 if(execution.getVariable('bankId_scan_passport') != null){
-  num = num + 1
-  file3 = '&lt;li&gt;'+num+'. Паспорт заявника.&lt;/li&gt;'
+  file3 = '&lt;li&gt; Паспорт заявника.&lt;/li&gt;'
 }
 if(execution.getVariable('nFile_DocReject') != null){
-  num = num + 1
-  file4 = '&lt;li&gt;'+num+'. Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
+  file4 = '&lt;li&gt; Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
 }
 if(execution.getVariable('nFile_ConfidantDoc') != null){
-  num = num + 1
-  file5 = '&lt;li&gt;'+num+'. Довіреність на представника.&lt;/li&gt;'
+  file5 = '&lt;li&gt; Довіреність на представника.&lt;/li&gt;'
 }
 if(execution.getVariable('sDocCommunal') != null){
-  num = num + 1
-  file6 = '&lt;li&gt;'+num+'. Визначений та погоджений маршрут руху.&lt;/li&gt;'
+  file6 = '&lt;li&gt; Визначений та погоджений маршрут руху.&lt;/li&gt;'
 }
 if(execution.getVariable('sDocRailway') != null){
-  num = num + 1
-  file7 = '&lt;li&gt;'+num+'. Погодження власників залізничних переїздів, мостового господарства, та інших.&lt;/li&gt;'
+  file7 = '&lt;li&gt; Погодження власників залізничних переїздів, мостового господарства, та інших.&lt;/li&gt;'
 }
 if(execution.getVariable('sDocBuild') != null){
-  num = num + 1
-  file8 = '&lt;li&gt;'+num+'. Висновок за результатами проведення спеціалізованого обстеження.&lt;/li&gt;'
+  file8 = '&lt;li&gt; Висновок за результатами проведення спеціалізованого обстеження.&lt;/li&gt;'
 }
 
 res = '&lt;ol&gt;'+file1+file2+file3+file4+file5+file6+file7+file8+'&lt;/ol&gt;'
@@ -315,7 +307,7 @@ execution.setVariable('tDokumentsList', res)
         <activiti:formProperty id="sListDocumentsPrint" name="перелік у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу; ;bVisible=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Дозвіл на участь у дорожньому русі транспортних засобів, вагові або габаритні параметри яких перевищують нормативні"></activiti:formProperty>
         <activiti:formProperty id="sBody_1" name="[pattern/print/mvs/mvs_121_OversizedPathAgreement_print_skv.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява (дозвіл на перевезення великогабаритного та великовагового вантажу)" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>

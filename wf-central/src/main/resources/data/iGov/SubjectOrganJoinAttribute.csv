@@ -14398,3 +14398,95 @@ nID_SubjectOrganJoin;sName;sValue
 3552;nID_ServiceCustomPrivate_visitDay;657
 3552;sAddress;м. Мерефа, вул. Дніпровська, 251
 3552;sNameOrgan;Харківський районний відділ ДМС у Харківській обл.
+
+3553;nID_ServiceCustomPrivate_visitDay;1553
+3553;sAddress;м. Василівка, вул. Ліхачова, 2   
+3553;sNameOrgan;Василівський РВ ДМСУ в Запорізькій області
+         
+3554;nID_ServiceCustomPrivate_visitDay;1555      
+3554;sAddress;с. Велика Білозерка, вул. Центральна, 92      
+3554;sNameOrgan;Великобілозерський РС ДМСУ в Запорізькій області
+
+3555;nID_ServiceCustomPrivate_visitDay;1549      
+3555;sAddress;м. Енергодар, просп. Будівельників, 17-а      
+3555;sNameOrgan;Енергодарський МВ ДМСУ в Запорізькій області
+
+3556;nID_ServiceCustomPrivate_visitDay;1543      
+3556;sAddress;м. Запоріжжя, вул. Посадочна, 3-а      
+3556;sNameOrgan;Заводський РВ ДМСУ у м.Запоріжжі
+
+3557;nID_ServiceCustomPrivate_visitDay;1541      
+3557;sAddress;м. Запоріжжя, вул. Українська, 4      
+3557;sNameOrgan;Олександрівський РВ ДМСУ у м.Запоріжжі
+
+3558;nID_ServiceCustomPrivate_visitDay;1547      
+3558;sAddress;м. Запоріжжя, вул. Новгородська, 26-б      
+3558;sNameOrgan;Хортицький РВ ДМСУ у м.Запоріжжі
+
+3559;nID_ServiceCustomPrivate_visitDay;1551      
+3559;sAddress;смт. Якимівка, вул. Пушкіна, 21      
+3559;sNameOrgan;Якимівський РС ДМСУ в Запорізькій області
+
+3560;nID_ServiceCustomPrivate_visitDay;1567      
+3560;sAddress;смт. Куйбишеве, пров. Соборний, 29      
+3560;sNameOrgan;Більмацький РС ДМСУ в Запорізькій області
+
+3561;nID_ServiceCustomPrivate_visitDay;1557      
+3561;sAddress;смт. Веселе, вул. Козацька, 46      
+3561;sNameOrgan;Веселівський РС ДМСУ в Запорізькій області
+
+3562;nID_ServiceCustomPrivate_visitDay;1559      
+3562;sAddress;м. Вільнянськ, вул. Бочарова, 17      
+3562;sNameOrgan;Вільнянський РС ДМСУ в Запорізькій області
+
+3563;nID_ServiceCustomPrivate_visitDay;1561      
+3563;sAddress;м. Гуляйполе, вул. Соборна, 103      
+3563;sNameOrgan;Гуляйпільський РС ДМСУ в Запорізькій області
+
+3564;nID_ServiceCustomPrivate_visitDay;1563      
+3564;sAddress;м. Запоріжжя, вул. Шушенська, 12-б      
+3564;sNameOrgan;Запорізький РС ДМСУ у м.Запоріжжі
+
+3565;nID_ServiceCustomPrivate_visitDay;1565      
+3565;sAddress;м. Кам`янка-Дніпровська, просп. 9 Травня, 2      
+3565;sNameOrgan;Кам'янсько-Дніпровський РС ДМСУ в Запорізькій області
+
+3566;nID_ServiceCustomPrivate_visitDay;1569      
+3566;sAddress;смт. Михайлівка, вул. Коноваленко, 2      
+3566;sNameOrgan;Михайлівський РС ДМСУ в Запорізькій області
+
+3567;nID_ServiceCustomPrivate_visitDay;1571      
+3567;sAddress;смт. Новомиколаївка, вул. Запорізька, 81      
+3567;sNameOrgan;Новомиколаївський РС ДМСУ в Запорізькій області
+
+3568;nID_ServiceCustomPrivate_visitDay;1573      
+3568;sAddress;м. Оріхів, вул. Шевченко, 12      
+3568;sNameOrgan;Оріхівський РС ДМСУ в Запорізькій області
+
+3569;nID_ServiceCustomPrivate_visitDay;1575      
+3569;sAddress;м. Пологи, вул. Івана Чеберка, 61      
+3569;sNameOrgan;Пологівський РС ДМСУ в Запорізькій області
+
+3570;nID_ServiceCustomPrivate_visitDay;1577      
+3570;sAddress;смт. Приазовське, вул. Дружби, 2      
+3570;sNameOrgan;Приазовський РС ДМСУ в Запорізькій області
+
+3571;nID_ServiceCustomPrivate_visitDay;1579      
+3571;sAddress;м. Приморськ, вул. Морська, 64      
+3571;sNameOrgan;Приморський РС ДМСУ в Запорізькій області
+
+3572;nID_ServiceCustomPrivate_visitDay;1581      
+3572;sAddress;смт. Розівка, вул. Центральна, 111      
+3572;sNameOrgan;Розівський РС ДМСУ в Запорізькій області
+
+3573;nID_ServiceCustomPrivate_visitDay;1587      
+3573;sAddress;м. Запоріжжя, пр-т Металургів, 25      
+3573;sNameOrgan;Сектор оформлення документів №2 ДМСУ у м.Запоріжжі
+
+3574;nID_ServiceCustomPrivate_visitDay;1583      
+3574;sAddress;м. Токмак, вул. Центральна, 55      
+3574;sNameOrgan;Токмацький РВ ДМСУ в Запорізькій області
+
+3575;nID_ServiceCustomPrivate_visitDay;1585      
+3575;sAddress;смт. Чернігівка, вул. Слобідська, 7-б      
+3575;sNameOrgan;Чернігівський РС ДМСУ в Запорізькій області

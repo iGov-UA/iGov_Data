@@ -5349,3 +5349,9 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5483;524;662;662;NULL;4;{"processDefinitionId":"chaes_654:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 5484;779;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_165:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 5485;1544;662;662;NULL;4;{"processDefinitionId":"vpl_next_help_1125:1:1"};;false;968;false;;BankID,EDS;0
+5486;25;475;475;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5487;28;475;475;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5488;173;475;475;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5489;175;475;475;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5490;1431;475;475;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+

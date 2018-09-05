@@ -274,20 +274,19 @@ ${sMail_Signature}<br /><br />
           <activiti:string><![CDATA[Заява про державну реєстрацію розірвання шлюбу]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
-          <activiti:expression><![CDATA[<br>[pattern/mail/_common_header.html]
-<h3>Шановний (а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+[pattern/mail/new_design/_common_content_start.html]
 <br />
 На жаль, Вам відмовлено в наданні послуги.<br>
 Підстава: <br>
 ${comment}<br><br>
 
 Телефон для довідок: ${sPhoneOrgan} <br>
-[pattern/mail/_common_signature_start.html]
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_signature_start.html]
 ${sMail_Signature}<br /><br />
-[pattern/mail/_common_signature_end.html] 
- 
-
-[pattern/mail/_common_footer.html]]]></activiti:expression>
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>

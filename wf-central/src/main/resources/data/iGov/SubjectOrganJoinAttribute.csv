@@ -14490,3 +14490,96 @@ nID_SubjectOrganJoin;sName;sValue
 3575;nID_ServiceCustomPrivate_visitDay;1585      
 3575;sAddress;смт. Чернігівка, вул. Слобідська, 7-б      
 3575;sNameOrgan;Чернігівський РС ДМСУ в Запорізькій області
+
+3576;nID_ServiceCustomPrivate_visitDay;1554      
+3576;sAddress;м. Василівка, вул. Ліхачова, 2      
+3576;sNameOrgan;Василівський РВ ДМСУ в Запорізькій області
+
+3577;nID_ServiceCustomPrivate_visitDay;1556      
+3577;sAddress;с. Велика Білозерка, вул. Центральна, 92      
+3577;sNameOrgan;Великобілозерський РС ДМСУ в Запорізькій області
+
+3578;nID_ServiceCustomPrivate_visitDay;1550      
+3578;sAddress;м. Енергодар, просп. Будівельників, 17-а      
+3578;sNameOrgan;Енергодарський МВ ДМСУ в Запорізькій області
+
+3579;nID_ServiceCustomPrivate_visitDay;1544      
+3579;sAddress;м. Запоріжжя, вул. Посадочна, 3-а      
+3579;sNameOrgan;Заводський РВ ДМСУ у м.Запоріжжі
+
+3580;nID_ServiceCustomPrivate_visitDay;1542      
+3580;sAddress;м. Запоріжжя, вул. Українська, 4      
+3580;sNameOrgan;Олександрівський РВ ДМСУ у м.Запоріжжі
+
+3581;nID_ServiceCustomPrivate_visitDay;1548      
+3581;sAddress;м. Запоріжжя, вул. Новгородська, 26-б      
+3581;sNameOrgan;Хортицький РВ ДМСУ у м.Запоріжжі
+
+3582;nID_ServiceCustomPrivate_visitDay;1552      
+3582;sAddress;смт. Якимівка, вул. Пушкіна, 21      
+3582;sNameOrgan;Якимівський РС ДМСУ в Запорізькій області
+
+3583;nID_ServiceCustomPrivate_visitDay;1568      
+3583;sAddress;смт. Куйбишеве, пров. Соборний, 29      
+3583;sNameOrgan;Більмацький РС ДМСУ в Запорізькій області
+
+3584;nID_ServiceCustomPrivate_visitDay;1558      
+3584;sAddress;смт. Веселе, вул. Козацька, 46      
+3584;sNameOrgan;Веселівський РС ДМСУ в Запорізькій області
+
+3585;nID_ServiceCustomPrivate_visitDay;1560      
+3585;sAddress;м. Вільнянськ, вул. Бочарова, 17      
+3585;sNameOrgan;Вільнянський РС ДМСУ в Запорізькій області
+
+3586;nID_ServiceCustomPrivate_visitDay;1562      
+3586;sAddress;м. Гуляйполе, вул. Соборна, 103      
+3586;sNameOrgan;Гуляйпільський РС ДМСУ в Запорізькій області
+
+3587;nID_ServiceCustomPrivate_visitDay;1564      
+3587;sAddress;м. Запоріжжя, вул. Шушенська, 12-б      
+3587;sNameOrgan;Запорізький РС ДМСУ у м.Запоріжжі
+
+3588;nID_ServiceCustomPrivate_visitDay;1566      
+3588;sAddress;м. Кам`янка-Дніпровська, просп. 9 Травня, 2      
+3588;sNameOrgan;Кам'янсько-Дніпровський РС ДМСУ в Запорізькій області
+
+3589;nID_ServiceCustomPrivate_visitDay;1570      
+3589;sAddress;смт. Михайлівка, вул. Коноваленко, 2      
+3589;sNameOrgan;Михайлівський РС ДМСУ в Запорізькій області
+
+3590;nID_ServiceCustomPrivate_visitDay;1572      
+3590;sAddress;смт. Новомиколаївка, вул. Запорізька, 81      
+3590;sNameOrgan;Новомиколаївський РС ДМСУ в Запорізькій області
+
+3591;nID_ServiceCustomPrivate_visitDay;1574      
+3591;sAddress;м. Оріхів, вул. Шевченко, 12      
+3591;sNameOrgan;Оріхівський РС ДМСУ в Запорізькій області
+
+3592;nID_ServiceCustomPrivate_visitDay;1576      
+3592;sAddress;м. Пологи, вул. Івана Чеберка, 61      
+3592;sNameOrgan;Пологівський РС ДМСУ в Запорізькій області
+
+3593;nID_ServiceCustomPrivate_visitDay;1578      
+3593;sAddress;смт. Приазовське, вул. Дружби, 2      
+3593;sNameOrgan;Приазовський РС ДМСУ в Запорізькій області
+
+3594;nID_ServiceCustomPrivate_visitDay;1580      
+3594;sAddress;м. Приморськ, вул. Морська, 64      
+3594;sNameOrgan;Приморський РС ДМСУ в Запорізькій області
+
+3595;nID_ServiceCustomPrivate_visitDay;1582      
+3595;sAddress;смт. Розівка, вул. Центральна, 111      
+3595;sNameOrgan;Розівський РС ДМСУ в Запорізькій області
+
+3596;nID_ServiceCustomPrivate_visitDay;1588      
+3596;sAddress;м. Запоріжжя, пр-т Металургів, 25      
+3596;sNameOrgan;Сектор оформлення документів №2 ДМСУ у м.Запоріжжі
+
+3597;nID_ServiceCustomPrivate_visitDay;1584      
+3597;sAddress;м. Токмак, вул. Центральна, 55      
+3597;sNameOrgan;Токмацький РВ ДМСУ в Запорізькій області
+
+3598;nID_ServiceCustomPrivate_visitDay;1586      
+3598;sAddress;смт. Чернігівка, вул. Слобідська, 7-б      
+3598;sNameOrgan;Чернігівський РС ДМСУ в Запорізькій області
+

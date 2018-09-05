@@ -14382,3 +14382,20 @@ nID_SubjectOrganJoin;sName;sValue
 3548;sNameOrgan;Управління соціального захисту населення Маневицької районної державної адміністрації
 3548;sWorkTime;<b>Графік роботи:</b> Понеділок-Четвер: з 8.00 до 17.15 <br>П'ятниця: з 8.00 до 16.00<br>Обід  13.00-14.00
 3548;sPhoneOrgan;<b>Телефон(и):</b> 2-25-61
+
+3549;nID_ServiceCustomPrivate_visitDay;659
+3549;sAddress;м. Харків, вул. Ромена Ролана ,13
+3549;sNameOrgan;Шевченківський районний відділ ДМС у м.Харкові
+
+3550;nID_ServiceCustomPrivate_visitDay;729
+3550;sAddress;м. Харків, вул. Євгена Котляра, 7
+3550;sNameOrgan;Холодногірський районний відділ ДМС у м.Харкові
+
+3551;nID_ServiceCustomPrivate_visitDay;728
+3551;sAddress;м. Харків, вул. Євгена Котляра, 7
+3551;sNameOrgan;Холодногірський районний відділ ДМС у м.Харкові
+
+3552;nID_ServiceCustomPrivate_visitDay;657
+3552;sAddress;м. Мерефа, вул. Дніпровська, 251
+3552;sNameOrgan;Харківський районний відділ ДМС у Харк обл
+

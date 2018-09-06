@@ -14583,3 +14583,10 @@ nID_SubjectOrganJoin;sName;sValue
 3598;sAddress;смт. Чернігівка, вул. Слобідська, 7-б      
 3598;sNameOrgan;Чернігівський РС ДМСУ в Запорізькій області
 
+3599;nID_ServiceCustomPrivate_visitDay;822      
+3599;sAddress;м. Мукачево, вул. Ярослава Мудрого, 87     
+3599;sNameOrgan;Мукачівський міський відділ ДМС
+
+3600;nID_ServiceCustomPrivate_visitDay;823      
+3600;sAddress;м. Мукачево, вул. Ярослава Мудрого, 87     
+3600;sNameOrgan;Мукачівський міський відділ ДМС

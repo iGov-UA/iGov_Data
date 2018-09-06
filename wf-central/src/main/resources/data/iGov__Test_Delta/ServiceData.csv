@@ -5464,3 +5464,6 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5598;173;59;59;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5599;175;59;59;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5600;1431;59;59;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5601;176;50011;NULL;5;4;{"processDefinitionId":"dms_0176_Zagran_DMS:1:1"};;false;288;false;;BankID,EDS,mpbds;0
+5602;177;50011;NULL;5;4;{"processDefinitionId":"dms_0177_zagranChild_DMS:1:1"};;false;288;false;;BankID,EDS,mpbds;0
+5603;179;50011;NULL;21;4;{"processDefinitionId":"dms_0179_zagranLost_DMS:1:1"};;false;288;false;;BankID,EDS,mpbds;0

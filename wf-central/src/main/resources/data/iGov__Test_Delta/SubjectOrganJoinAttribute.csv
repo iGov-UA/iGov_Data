@@ -14726,3 +14726,131 @@ nID_SubjectOrganJoin;sName;sValue
 3634;nID_ServiceCustomPrivate_visitDay;1111	
 3634;sAddress;м. Ямпіль, вул. Свободи, 120	
 3634;sNameOrgan;Ямпільський РС ДМСУ у Вінницькій області
+
+3635;nID_ServiceCustomPrivate_visitDay;1050	
+3635;sAddress;м. Вінниця, вул. Івана Миколайчука 19	
+3635;sNameOrgan;1-й міський відділ ДМСУ у м.Вінниці
+
+3636;nID_ServiceCustomPrivate_visitDay;1052	
+3636;sAddress;м. Вінниця, вул. Київська, 31	
+3636;sNameOrgan;2-й міський відділ ДМСУ у м.Вінниці
+
+3637;nID_ServiceCustomPrivate_visitDay;1054	
+3637;sAddress;м. Вінниця, вул. Олександра Довженка, 73	
+3637;sNameOrgan;3-й міський відділ ДМСУ у м.Вінниці
+
+3638;nID_ServiceCustomPrivate_visitDay;1056	
+3638;sAddress;м. Бар, вул. Майдан Св`ятого Миколая, 14	
+3638;sNameOrgan;Барський РС ДМСУ у Вінницькій області
+
+3639;nID_ServiceCustomPrivate_visitDay;1058	
+3639;sAddress;м. Бершадь, вул. Будкевича, 13	
+3639;sNameOrgan;Бершадський РС ДМСУ у Вінницькій області
+
+3640;nID_ServiceCustomPrivate_visitDay;1060	
+3640;sAddress;м. Вінниця, вул. Хмельницьке шосе 7	
+3640;sNameOrgan;Вінницькій РС ДМСУ у Вінницькій області
+
+3641;nID_ServiceCustomPrivate_visitDay;1062	
+3641;sAddress;смт. Гайсин, вул. Волонтарська, 20	
+3641;sNameOrgan;Гайсинський РС ДМСУ у Вінницькій області
+
+3642;nID_ServiceCustomPrivate_visitDay;1064	
+3642;sAddress;м. Гнівань, вул. Фрунзе, 3	
+3642;sNameOrgan;Гніванський МС ДМСУ у Вінницькій області
+
+3643;nID_ServiceCustomPrivate_visitDay;1066	
+3643;sAddress;м. Жмеринка, вул. Соборна, 58	
+3643;sNameOrgan;Жмеринський РС ДМСУ у Вінницькій області
+
+3644;nID_ServiceCustomPrivate_visitDay;1068	
+3644;sAddress;м. Іллінці, вул. Соборна 15-а	
+3644;sNameOrgan;Іллінецький РС ДМСУ у Вінницькій області
+
+3645;nID_ServiceCustomPrivate_visitDay;1070	
+3645;sAddress;м. Калинівка, вул. Вадима Нестерчука, 64	
+3645;sNameOrgan;Калинівський РС ДМСУ у Вінницькій області
+
+3646;nID_ServiceCustomPrivate_visitDay;1072	
+3646;sAddress;м. Козятин, пров. Кондрацького, 1	
+3646;sNameOrgan;Козятинський РС ДМСУ у Вінницькій області
+
+3647;nID_ServiceCustomPrivate_visitDay;1074	
+3647;sAddress;смт. Крижопіль, вул. полковника Зеленського, 3	
+3647;sNameOrgan;Крижопільський РС ДМСУ у Вінницькій області
+
+3648;nID_ServiceCustomPrivate_visitDay;1076	
+3648;sAddress;м. Ладижин, вул. Петра Кравчика, 33	
+3648;sNameOrgan;Ладижинський МС ДМСУ у Вінницькій області
+
+3649;nID_ServiceCustomPrivate_visitDay;1078	
+3649;sAddress;м. Липовець, вул. Героїв Майдану, 75	
+3649;sNameOrgan;Липовецький РС ДМСУ у Вінницькій області
+
+3650;nID_ServiceCustomPrivate_visitDay;1080	
+3650;sAddress;смт. Літин, вул. Соборна, 32	
+3650;sNameOrgan;Літинський РС ДМСУ у Вінницькій області
+
+3651;nID_ServiceCustomPrivate_visitDay;1082	
+3651;sAddress;м. Могилів-Подільський, вул. Сагайдачного, 6	
+3651;sNameOrgan;Могилів-Подільський РС ДМСУ у Вінницькій області
+
+3652;nID_ServiceCustomPrivate_visitDay;1084	
+3652;sAddress;смт. Муровані-Курилівці, вул. Комарова, 6	
+3652;sNameOrgan;Муровано-Куриловецький РС ДМСУ у Вінницькій області
+
+3653;nID_ServiceCustomPrivate_visitDay;1086	
+3653;sAddress;м. Немирів, вул. Луначарського, 32	
+3653;sNameOrgan;Немирівський РС ДМСУ у Вінницькій області
+
+3654;nID_ServiceCustomPrivate_visitDay;1088	
+3654;sAddress;смт. Оратів, вул. Івана Франка, 43	
+3654;sNameOrgan;Оратівський РС ДМСУ у Вінницькій області
+
+3655;nID_ServiceCustomPrivate_visitDay;1090	
+3655;sAddress;смт. Піщанка, вул. Центральна, 48	
+3655;sNameOrgan;Піщанський РС ДМСУ у Вінницькій області
+
+3656;nID_ServiceCustomPrivate_visitDay;1092	
+3656;sAddress;м. Погребище, вул. Богдана Хмельницького, 81-г	
+3656;sNameOrgan;Погребищанський РС ДМСУ у Вінницькій області
+
+3657;nID_ServiceCustomPrivate_visitDay;1094	
+3657;sAddress;смт. Теплик, вул. Незалежності, 14	
+3657;sNameOrgan;Теплицький РС ДМСУ у Вінницькій області
+
+3658;nID_ServiceCustomPrivate_visitDay;1096	
+3658;sAddress;смт. Тиврів, вул. Шевченка, 2	
+3658;sNameOrgan;Тиврівський РС ДМСУ у Вінницькій області
+
+3659;nID_ServiceCustomPrivate_visitDay;1098	
+3659;sAddress;смт. Томашпіль, вул. Ігоря Гаврилюка, 51	
+3659;sNameOrgan;Томашпільський РС ДМСУ у Вінницькій області
+
+3660;nID_ServiceCustomPrivate_visitDay;1100	
+3660;sAddress;смт. Тростянець, вул. Соборна, 102	
+3660;sNameOrgan;Тростянецький РС ДМСУ у Вінницькій області
+
+3661;nID_ServiceCustomPrivate_visitDay;1102	
+3661;sAddress;м. Тульчин, вул. Успенська, 3	
+3661;sNameOrgan;Тульчинський РС ДМСУ у Вінницькій області
+
+3662;nID_ServiceCustomPrivate_visitDay;1104	
+3662;sAddress;м. Хмільник, вул. Небесної Сотні, 47	
+3662;sNameOrgan;Хмільникський РС ДМСУ у Вінницькій обл
+
+3663;nID_ServiceCustomPrivate_visitDay;1106	
+3663;sAddress;с. Мазурівка, вул. Леніна, 39	
+3663;sNameOrgan;Чернівецький РС ДМСУ у Вінницькій області
+
+3664;nID_ServiceCustomPrivate_visitDay;1108	
+3664;sAddress;смт. Чечельник, вул. Героїв Майдану, 30	
+3664;sNameOrgan;Чечельницький РС ДМСУ у Вінницькій області
+
+3665;nID_ServiceCustomPrivate_visitDay;1110	
+3665;sAddress;м. Шаргород, вул. Героїв Майдану, 296	
+3665;sNameOrgan;Шаргородський РС ДМСУ у Вінницькій області
+
+3666;nID_ServiceCustomPrivate_visitDay;1112	
+3666;sAddress;м. Ямпіль, вул. Свободи, 120	
+3666;sNameOrgan;Ямпільський РС ДМСУ у Вінницькій області

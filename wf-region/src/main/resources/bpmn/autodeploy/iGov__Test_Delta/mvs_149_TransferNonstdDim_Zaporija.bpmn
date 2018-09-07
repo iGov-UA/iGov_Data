@@ -96,7 +96,7 @@
         <activiti:formProperty id="sDescriptionRoute" name="Опис маршруту" type="textArea" default=" " required="true"></activiti:formProperty>
         
         <activiti:formProperty id="sDocCommunal" name="Визначений та погоджений з власниками (комунальними і дорожніми організаціями) вулично-дорожніх мереж маршруту руху ; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та, за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="sDocBuild" name="Висновок за результатами проведення спеціалізованого обстеження або випробування будівель, споруд і мереж на маршруті ; (якщо загальна маса великовагового транспортного засобу перевищує 60 тонн) ;bNew=true" type="file"></activiti:formProperty>
         
         <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
@@ -108,7 +108,8 @@
         <activiti:formProperty id="sMailClerk" name="пошта посадовця ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka228" name="шапка у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sListDocumentsPrint" name="перелік у принтформу ; ;bVisible=false" type="string"></activiti:formProperty>
-        
+        <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
+                
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string" default="Управління патрульної поліції в Запорізькій області Департаменту патрульної поліції "></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string" default="3х "></activiti:formProperty>
         <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
@@ -122,7 +123,7 @@
     </startEvent>
     <scriptTask id="scripttask1" name="Скріпт файл" scriptFormat="javascript" activiti:autoStoreVariables="false">
 <script>
-var file1 = '&lt;li&gt;1.Заява.&lt;/li&gt;'
+var file1 = '&lt;li&gt;Заява.&lt;/li&gt;'
 var file2 = ' '
 var file3 = ' '
 var file4 = ' '
@@ -141,16 +142,16 @@ if(execution.getVariable('nFile_DocReject') != null){
   file4 = '&lt;li&gt; Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
 }
 if(execution.getVariable('nFile_ConfidantDoc') != null){
-  file5 = '&lt;li&gt; Довіреність на представника.&lt;/li&gt;'
+  file5 = '&lt;li&gt; Документ, що засвідчує повноваження довіреної особи.&lt;/li&gt;'
 }
 if(execution.getVariable('sDocCommunal') != null){
-  file6 = '&lt;li&gt; Визначений та погоджений маршрут руху.&lt;/li&gt;'
+  file6 = '&lt;li&gt; Визначений та погоджений з власниками (комунальними і дорожніми організаціями) вулично-дорожніх мереж маршруту руху.&lt;/li&gt;'
 }
 if(execution.getVariable('sDocRailway') != null){
-  file7 = '&lt;li&gt; Погодження власників залізничних переїздів, мостового господарства, та інших.&lt;/li&gt;'
+  file7 = '&lt;li&gt; Погодження власників залізничних переїздів, мостового господарства, та за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку.&lt;/li&gt;'
 }
 if(execution.getVariable('sDocBuild') != null){
-  file8 = '&lt;li&gt; Висновок за результатами проведення спеціалізованого обстеження.&lt;/li&gt;'
+  file8 = '&lt;li&gt; Висновок за результатами проведення спеціалізованого обстеження або випробування будівель, споруд і мереж на маршруті.&lt;/li&gt;'
 }
 
 res = '&lt;ol&gt;'+file1+file2+file3+file4+file5+file6+file7+file8+'&lt;/ol&gt;'
@@ -193,6 +194,8 @@ execution.setVariable('tDokumentsList', res)
 [pattern/mail/new_design/_common_content_start.html]
 <p align="left">Ваше звернення зареєстровано в ЦНАПі і буде опрацьовано протягом ${sStrokOrg} робочих днів.</h3><br /><br />
 <br />
+У разі потреби ви можете скасувати заявку.<br />
+<p>[cancelTask]</p> 
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
@@ -217,6 +220,8 @@ execution.setVariable('tDokumentsList', res)
     <endEvent id="endevent2" name="End"></endEvent>
     <userTask id="usertask1" name="ЦНАП - Перевірка (1-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sAddress" name="Адреса де заявник хоче отримати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
@@ -291,7 +296,7 @@ execution.setVariable('tDokumentsList', res)
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDocCommunal" name="Визначений та погоджений з власниками (комунальними і дорожніми організаціями) вулично-дорожніх мереж маршрут руху ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та, за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDocBuild" name="Висновок за результатами проведення спеціалізованого обстеження або випробування будівель, споруд і мереж на маршруті ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Перевірка успішна. Прийняти до роботи."></activiti:value>
@@ -346,6 +351,8 @@ execution.setVariable('tDokumentsList', res)
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 </p>
+У разі потреби ви можете скасувати заявку.<br />
+<p>[cancelTask]</p> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrganTransfer},<br>
@@ -402,6 +409,8 @@ ${tComment}</p>
     </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_Tr_${sID_UA}">
       <extensionElements>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>
@@ -471,7 +480,7 @@ ${tComment}</p>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDocCommunal" name="Визначений та погоджений з власниками (комунальними і дорожніми організаціями) вулично-дорожніх мереж маршрут руху ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та, за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDocBuild" name="Висновок за результатами проведення спеціалізованого обстеження або випробування будівель, споруд і мереж на маршруті ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Заяву задоволено, запросити громадянина"></activiti:value>
@@ -685,7 +694,7 @@ ${tComment}</p>
         <activiti:formProperty id="oplata_number" name="№ платіжного доручення (квитанції)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="oplata" name="Платіжний документи (квитанція) про оплату вартості послуги; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDocCommunal" name="Визначений та погоджений з власниками (комунальними і дорожніми організаціями) вулично-дорожніх мереж маршрут руху ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та, за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sDocRailway" name="Погодження власників залізничних переїздів, мостового господарства, та за необхідності, служб міського електротранспорту, електромереж, електрифікації, електрозв’язку ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDocBuild" name="Висновок за результатами проведення спеціалізованого обстеження або випробування будівель, споруд і мереж на маршруті ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_R3" name="Результат обробки в поліції" type="markers" default="{&quot;attributes&quot;:{&quot;Line_R3&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Результат обробки в поліції&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" writable="false">

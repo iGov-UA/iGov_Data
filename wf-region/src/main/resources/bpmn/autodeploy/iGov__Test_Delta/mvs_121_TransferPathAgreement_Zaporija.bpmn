@@ -131,7 +131,8 @@
         <activiti:formProperty id="sPhoneOrgan" name="телефон для справок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapka228" name="шапки принтформ ; ;bVisible=false" type="string"></activiti:formProperty>
-        
+        <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
+                
         <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string" default="Управління патрульної поліції в Запорізькій області Департаменту патрульної поліції "></activiti:formProperty>
         <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string" default="10 "></activiti:formProperty>
         <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
@@ -146,7 +147,7 @@
     </startEvent>
     <scriptTask id="scripttask1" name="Скріпт файл" scriptFormat="javascript" activiti:autoStoreVariables="false">
 <script>
-var file1 = '&lt;li&gt;1.Заява.&lt;/li&gt;'
+var file1 = '&lt;li&gt;Заява.&lt;/li&gt;'
 var file2 = ' '
 var file3 = ' '
 var file4 = ' '
@@ -167,7 +168,7 @@ if(execution.getVariable('nFile_DocReject') != null){
   file4 = '&lt;li&gt; Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
 }
 if(execution.getVariable('nFile_ConfidantDoc') != null){
-  file5 = '&lt;li&gt; Довіреність на представника.&lt;/li&gt;'
+  file5 = '&lt;li&gt; Документ, що засвідчує повноваження довіреної особи.&lt;/li&gt;'
 }
 if(execution.getVariable('pidgotovka') != null){
   file6 = '&lt;li&gt; Свідоцтво про підготовку уповноваженого з питань безпеки перевезення небезпечних вантажів.&lt;/li&gt;'
@@ -179,10 +180,10 @@ if(execution.getVariable('dopusk') != null){
   file8 = '&lt;li&gt; Свідоцтво про допущення транспортних засобів до перевезення визначених небезпечних вантажів.&lt;/li&gt;'
 }
 if(execution.getVariable('insurance') != null){
-  file9 = '&lt;li&gt; Чинний договір обов’язкового страхування.&lt;/li&gt;'
+  file9 = '&lt;li&gt; Чинний договір обов’язкового страхування відповідальності суб’єктів перевезення небезпечних вантажів на випадок настання негативних наслідків під час перевезення небезпечних вантажів.&lt;/li&gt;'
 }
 if(execution.getVariable('dodatkovo') != null){
-  file10 = '&lt;li&gt; Копії додаткового погодження або дозволу.&lt;/li&gt;'
+  file10 = '&lt;li&gt; Копії додаткового погодження або дозволу інших компетентних органів у разі перевезення небезпечних речовин або виробів.&lt;/li&gt;'
 }
 
 res = '&lt;ol&gt;'+file1+file2+file3+file4+file5+file6+file7+file8+file9+file10+'&lt;/ol&gt;'
@@ -228,6 +229,8 @@ execution.setVariable('tDokumentsList', res)
 [pattern/mail/new_design/_common_content_start.html]
 <p align="left">Ваше звернення зареєстровано в ЦНАПі і буде опрацьовано протягом ${sStrokOrg} робочих днів.</h3><br /><br />
 <br />
+У разі потреби ви можете скасувати заявку.<br />
+<p>[cancelTask]</p> 
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
@@ -242,6 +245,8 @@ execution.setVariable('tDokumentsList', res)
     </serviceTask>
     <userTask id="usertask1" name="ЦНАП - Перевірка (1-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sAddress" name="Адреса де заявник хоче отримати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
@@ -388,6 +393,8 @@ execution.setVariable('tDokumentsList', res)
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
 </p>
+У разі потреби ви можете скасувати заявку.<br />
+<p>[cancelTask]</p> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrganTransfer},<br>
@@ -444,6 +451,8 @@ ${tComment}</p>
     </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_Tr_${sID_UA}">
       <extensionElements>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>
           <activiti:value id="Second" name="Повторна подача документів"></activiti:value>

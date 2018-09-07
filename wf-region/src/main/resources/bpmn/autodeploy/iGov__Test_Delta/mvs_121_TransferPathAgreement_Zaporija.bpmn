@@ -229,9 +229,11 @@ execution.setVariable('tDokumentsList', res)
 [pattern/mail/new_design/_common_content_start.html]
 <p align="left">Ваше звернення зареєстровано в ЦНАПі і буде опрацьовано протягом ${sStrokOrg} робочих днів.</h3><br /><br />
 <br />
-У разі потреби ви можете скасувати заявку.<br />
-<p>[cancelTask]</p> 
-Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
+
+Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br/><br/>
+
+У разі потреби ви можете скасувати заявку.<br/>
+<p>[cancelTaskSimple]</p><br/> 
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
 	${sWorkTime} <br> 
@@ -245,7 +247,7 @@ execution.setVariable('tDokumentsList', res)
     </serviceTask>
     <userTask id="usertask1" name="ЦНАП - Перевірка (1-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
-        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="sAddress" name="Адреса де заявник хоче отримати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
@@ -392,9 +394,9 @@ execution.setVariable('tDokumentsList', res)
 Реєстраційний номер заяви: ${sRNumber};<br />
 <br />
 Ви отримаєте додаткове повідомлення за результатами розгляду зверення.</p><br />
-</p>
+</p><br />
 У разі потреби ви можете скасувати заявку.<br />
-<p>[cancelTask]</p> 
+<p>[cancelTaskSimple]</p> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrganTransfer},<br>
@@ -451,7 +453,7 @@ ${tComment}</p>
     </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_Tr_${sID_UA}">
       <extensionElements>
-        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>

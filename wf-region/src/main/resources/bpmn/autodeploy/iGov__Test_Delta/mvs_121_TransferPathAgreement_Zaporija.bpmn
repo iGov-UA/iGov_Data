@@ -247,7 +247,7 @@ execution.setVariable('tDokumentsList', res)
     </serviceTask>
     <userTask id="usertask1" name="ЦНАП - Перевірка (1-й крок)" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
-        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка ; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="sAddress" name="Адреса де заявник хоче отримати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
@@ -453,7 +453,7 @@ ${tComment}</p>
     </serviceTask>
     <userTask id="usertask3" name="МВС - Прийняття рішення (2-й крок)" activiti:candidateGroups="MVS_Tr_${sID_UA}">
       <extensionElements>
-        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка ; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="TypeRegistrationAction" name="Реєстраційна дія" type="enum" writable="false">
           <activiti:value id="First" name="Первинна подача документів"></activiti:value>

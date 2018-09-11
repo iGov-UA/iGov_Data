@@ -849,7 +849,7 @@ ${sMail_Signature}<br>
 <br>
 [paymentButton_LiqPay]
 <br>
-Якщо впродовж двох днів з моменту подання звернення оплата не надійде, ваше звернення буде відхілено.<br>
+Якщо впродовж двох днів з моменту подання звернення оплата не надійде, ваше звернення буде відхилено.<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 [pattern/mail/new_design/_common_signature_end.html]

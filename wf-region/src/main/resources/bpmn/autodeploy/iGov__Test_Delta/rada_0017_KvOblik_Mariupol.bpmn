@@ -7,7 +7,6 @@
           <activiti:value id="sEnamUpdGutlo" name="Встати на облік для поліпшення житлових умов за місцем мешкання"></activiti:value>
           <activiti:value id="sEnamSocGutlo" name="Встати на облік для отримання соціального житла"></activiti:value>
           <activiti:value id="sEnamTumchGutlo" name="Встати на облік щоб отримати житлове приміщення для тимчасового проживання внутрішньо переміщених осіб"></activiti:value>
-          <activiti:value id="sEnamZminuOblik" name="Внести зміни в інснуючу облікову справу"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="sLabeZaiava" name=" ; ;labelType=info" type="label" default="УВАГА! Для отримання послуги необхідно завантажити сканкопію заяви підписану всіма членами родини. Бланк заяви для завантаження і друку за посиланням - &lt;a href=&quot;http://cnap.mariupolrada.gov.ua/#/service/7/9 &quot; target=&quot;_blank&quot;&gt;Бланк заяви для постановки на облік&lt;/a&gt;&lt;br&gt;&lt;br&gt;"></activiti:formProperty>
@@ -60,14 +59,14 @@
         <activiti:formProperty id="markersLine_W" name="Інформація про роботу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_W&quot;:{&quot;aElement_ID&quot;:[&quot;sWorkPlace&quot;],&quot;sValue&quot;:&quot;Інформація про роботу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sWorkPlace" name="Місце роботи;(вкажіть повне найменування підприємства)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPosada" name="Посада" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dWorkBegin" name="Дата з якої працюєте за даною посадою" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dWorkBegin" name="Дата з якої працюєте за даною посадою" type="date"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_A" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_A&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrAdress&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sRegistrAdress" name="Місце реєстрації заявника;(вкажіть повну адресу включаючи місто)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sLiveAdress" name="Місце фактичного проживання;(вкажіть повну адресу включаючи місто)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="lKimnatu" name="Кількість кімнат;(за місцем фактичного проживання)" type="long" required="true"></activiti:formProperty>
         <activiti:formProperty id="dPlosha" name="Житлова площа (м.кв);(за місцем фактичного проживання)" type="double" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dLiveBegin" name="Дата з якої проживаэте за даною адресою" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="dLiveBegin" name="Дата з якої проживаэте за даною адресою" type="date"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_R" name="Інформація про родину" type="markers" default="{&quot;attributes&quot;:{&quot;Line_R&quot;:{&quot;aElement_ID&quot;:[&quot;chekReestrOsob&quot;],&quot;sValue&quot;:&quot;Інформація про родину&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="chekReestrOsob" name="Чи проживають разом з вами інші особи" type="enum" required="true">
@@ -78,12 +77,8 @@
         </activiti:formProperty>
         <activiti:formProperty id="lKilkMeshkanciv" name="Кількість людей що мешкає разом з вами;(за місцем фактичного проживання)" type="long" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_Z" name="Інформація про зміни" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Z&quot;:{&quot;aElement_ID&quot;:[&quot;sSpravaNumber&quot;],&quot;sValue&quot;:&quot;Інформація про зміни&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sSpravaNumber" name="Номер облікової справи" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="tZminu" name="Що змінилось;(вкажіть що було зазначено до цього і що змінилось на даний момент)" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Zminu" name="Документ що підтверджує зміни; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerGutloRobotaRodZmin" name="markerGutloRobotaRodZmin" type="markers" default="${markerService.loadFromFile('Rada/rada_0017M_GutloRobotaRodZmin.json')}"></activiti:formProperty>
-       
+        
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeFile&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabeFile" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Якщо один документ складається з кількох зображень або файлів, завантажте його у форматі PDF або ZIP архівом."></activiti:formProperty>
         
@@ -192,7 +187,6 @@
           <activiti:value id="sEnamUpdGutlo" name="Встати на облік для поліпшення житлових умов за місцем мешкання"></activiti:value>
           <activiti:value id="sEnamSocGutlo" name="Встати на облік для отримання соціального житла"></activiti:value>
           <activiti:value id="sEnamTumchGutlo" name="Встати на облік щоб отримати житлове приміщення для тимчасового проживання внутрішньо переміщених осіб"></activiti:value>
-          <activiti:value id="sEnamZminuOblik" name="Внести зміни в інснуючу облікову справу"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -252,10 +246,6 @@
         </activiti:formProperty>
         <activiti:formProperty id="lKilkMeshkanciv" name="Кількість людей що мешкає разом з заявником; ;writable=false" type="long"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_Z" name="Інформація про зміни" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Z&quot;:{&quot;aElement_ID&quot;:[&quot;sSpravaNumber&quot;],&quot;sValue&quot;:&quot;Інформація про зміни&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sSpravaNumber" name="Номер облікової справи; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tZminu" name="Що змінилось; ;writable=false" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Zminu" name="Документ що підтверджує зміни; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markerGutloRobotaRodZmin" name="markerGutloRobotaRodZmin" type="markers" default="${markerService.loadFromFile('Rada/rada_0017M_GutloRobotaRodZmin.json')}"></activiti:formProperty>
        
         <activiti:formProperty id="nFile_Zaiava" name="Заява (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -393,7 +383,6 @@
           <activiti:value id="sEnamUpdGutlo" name="Встати на облік для поліпшення житлових умов за місцем мешкання"></activiti:value>
           <activiti:value id="sEnamSocGutlo" name="Встати на облік для отримання соціального житла"></activiti:value>
           <activiti:value id="sEnamTumchGutlo" name="Встати на облік щоб отримати житлове приміщення для тимчасового проживання внутрішньо переміщених осіб"></activiti:value>
-          <activiti:value id="sEnamZminuOblik" name="Внести зміни в інснуючу облікову справу"></activiti:value>
         </activiti:formProperty>
         
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -453,10 +442,6 @@
         </activiti:formProperty>
         <activiti:formProperty id="lKilkMeshkanciv" name="Кількість людей що мешкає разом з заявником; ;writable=false" type="long"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_Z" name="Інформація про зміни" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Z&quot;:{&quot;aElement_ID&quot;:[&quot;sSpravaNumber&quot;],&quot;sValue&quot;:&quot;Інформація про зміни&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sSpravaNumber" name="Номер облікової справи; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tZminu" name="Що змінилось; ;writable=false" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Zminu" name="Документ що підтверджує зміни; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markerGutloRobotaRodZmin" name="markerGutloRobotaRodZmin" type="markers" default="${markerService.loadFromFile('Rada/rada_0017M_GutloRobotaRodZmin.json')}"></activiti:formProperty>
        
         <activiti:formProperty id="nFile_Zaiava" name="Заява (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>

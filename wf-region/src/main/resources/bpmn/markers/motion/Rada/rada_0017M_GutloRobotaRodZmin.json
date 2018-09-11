@@ -9,13 +9,21 @@
         "asPlRegistr",
         "chekReestrOsob",
         "lKimnatu",
-        "dPlosha",
-        "dLiveBegin"
+        "dPlosha"
       ],
       "asID_Field": {
         "sReason": "asTipUslugi"
       },
       "sCondition": "[sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo'"
+    },
+    "ShowFieldsOnCondition_dLiveBegin": {
+      "aField_ID": [
+        "dLiveBegin"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi"
+      },
+      "sCondition": "[sReason]=='sEnamSocGutlo'"
     },
     "ShowFieldsOnCondition_PlLivVlasnist": {
       "aField_ID": [
@@ -31,7 +39,6 @@
       "aField_ID": [
         "sWorkPlace",
         "sPosada",
-        "dWorkBegin",
         "nFile_DohZay"
       ],
       "asID_Field": {
@@ -39,6 +46,16 @@
         "sReason2": "asRobota"
       },
       "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&[sReason2]=='yes'"
+    },
+    "ShowFieldsOnCondition_dWorkBegin": {
+      "aField_ID": [
+        "dWorkBegin"
+      ],
+      "asID_Field": {
+        "sReason": "asTipUslugi",
+        "sReason2": "asRobota"
+      },
+      "sCondition": "[sReason]=='sEnamSocGutlo'&&[sReason2]=='yes'"
     },
     "ShowFieldsOnCondition_LiveAdress": {
       "aField_ID": [
@@ -59,17 +76,6 @@
         "sReason2": "chekReestrOsob"
       },
       "sCondition": "([sReason]=='sEnamUpdGutlo'||[sReason]=='sEnamSocGutlo'||[sReason]=='sEnamTumchGutlo')&&([sReason2]=='sYesDor'||[sReason2]=='sYesDit'||[sReason2]=='sYesDorDit')"
-    },
-    "ShowFieldsOnCondition_Zminu": {
-      "aField_ID": [
-        "sSpravaNumber",
-        "tZminu",
-        "nFile_Zminu"
-      ],
-      "asID_Field": {
-        "sReason": "asTipUslugi"
-      },
-      "sCondition": "[sReason]=='sEnamZminuOblik'"
     }
   }
 }

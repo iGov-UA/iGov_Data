@@ -43,7 +43,7 @@
 		</tr>
 		<tr>
 			<td id="jur1" colspan="2"><span style="font-size:16px"> <br/>
-			Відповідно до ст.46 Закону Україні "Про нотаріат" прошу  надати інформацію про  власність згідно матеріалів інвентаризаційної справи за наступними адресами реєстрації (або за іншою особою):<br/> 
+			<div id="Zakon"></div>
 			
 			
 			<span id="address1j">[sAskedAddress1]<br/></span>
@@ -142,7 +142,7 @@
 		
 		
 		<tr>
-			<td colspan="2"><span style="font-size:16px"> 	<br/>		<br/></td>
+			<td colspan="2"><span style="font-size:16px"></span><br/><br/></td>
 		</tr>
 		<tr>
 			<td><span style="font-size:16px">[sDateCreateProcess]</span></td>
@@ -163,6 +163,19 @@
 </table>
 </div>
 
+ <script type="text/javascript">
+  
+  var SCQuestion2 = "[saQuestion2]";
+  
+   if(SCQuestion2 == 'ДЕРЖАВНИЙ РЕЄСТРАТОР'||SCQuestion2 == 'type4'){
+  document.getElementById("Zakon").innerHTML += "Відповідно до ст.46 ЗУ ''Про державну реєстрацію речових прав на нерухоме майно та їх обтяжень'' прошу  надати інформацію про  власність згідно матеріалів інвентаризаційної справи за наступними адресами реєстрації (або за іншою особою):"+SCdGospPlosh;}
+  else {
+  document.getElementById("Zakon").innerHTML += "Відповідно до п.3 ч.3 ст.10 ЗУ ''Про нотаріат'' прошу  надати інформацію про  власність згідно матеріалів інвентаризаційної справи за наступними адресами реєстрації (або за іншою особою):";
+  }
+</script>  
+  
+  
+  
 
 </body>
 </html>

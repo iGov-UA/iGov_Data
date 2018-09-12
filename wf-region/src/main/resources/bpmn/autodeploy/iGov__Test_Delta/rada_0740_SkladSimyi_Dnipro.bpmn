@@ -131,6 +131,9 @@
         <activiti:formProperty id="ScriptPassport" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptAdress" name="Паспорт; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptGroup" name="Группа; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sDaysPosluga" name="Строк надання послуги; ;bVisible=false" type="string" default="5(п'яти)"></activiti:formProperty>
+        
         <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddressForPost" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkDay" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
@@ -302,6 +305,12 @@ if(execution.getVariable('asRegistr') == 'no'){
 }
 execution.setVariable('ScriptGroup', ScrGroup)
 
+var Days510 = '';
+if(execution.getVariable('asRegistr') == 'no')
+  {  
+  Days510 = '10(десяти)' 
+  execution.setVariable('sDaysPosluga', Days510) 
+  } 
       </script>
     </scriptTask>
     <serviceTask id="servicetask11" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -335,7 +344,7 @@ execution.setVariable('ScriptGroup', ScrGroup)
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 <p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br />
-Видача Довідки здійснюється протягом 5(п'яти) календарних днів з дня отримання вами цього повідомлення.<br />
+Видача Довідки здійснюється протягом ${sDaysPosluga} календарних днів з дня отримання вами цього повідомлення.<br />
 Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p>
 У разі обрання доставки відповіді поштою, вам буде необхідно оплатити поштову доставку протягом 2х діб з дня отримання на e-mail листа про можливість видати довідку.<br />
 Після оплати вам надійде лист з довідкою.<br />

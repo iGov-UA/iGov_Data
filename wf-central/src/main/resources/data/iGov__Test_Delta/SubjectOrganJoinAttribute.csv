@@ -14300,6 +14300,7 @@ nID_SubjectOrganJoin;sName;sValue
 3540;sWorkTime;<b>Графік роботи:</b> Понеділок, Вівторок, Середа, П'ятниця: з 8.00 до 15.00 <br>Четвер: з 8.00 до 20.00
 3540;sPhoneOrgan;<b>Телефон(и):</b> УТОЧНИТИ
 3540;nID_Department_visitDay;343
+3540;sRekvIDZagranPos;<a href="https://docs.google.com/document/d/1TguJ2BukPosBuKN9C7WifNirNpwfv_cLgivcFNlMTXo/edit?usp=sharing" target="_blank">доступні за посиланням</a>
 
 3541;sShapka;Центр надання адміністративних послуг Маневицької РДА
 3541;shapka;Центр надання адміністративних послуг Маневицької РДА
@@ -14309,6 +14310,7 @@ nID_SubjectOrganJoin;sName;sValue
 3541;sWorkTime;<b>Графік роботи:</b> Понеділок, Вівторок, Середа, П'ятниця: з 8.00 до 15.00 <br>Четвер: з 8.00 до 20.00
 3541;sPhoneOrgan;<b>Телефон(и):</b> УТОЧНИТИ
 3541;nID_Department_visitDay1;343
+3541;sRekvIDZagranPos;<a href="https://docs.google.com/document/d/1TguJ2BukPosBuKN9C7WifNirNpwfv_cLgivcFNlMTXo/edit?usp=sharing" target="_blank">доступні за посиланням</a>
 
 3542;sOrgan;міського голови м. Володимир-Волинський
 3542;sAddress;<b>Адреса:</b> 44700, Волинська область, м. Володимир-Волинський, вул. Данила Галицького, 5

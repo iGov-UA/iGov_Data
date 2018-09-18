@@ -161,7 +161,8 @@
         <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="Графік роботи ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="nArea" name="Графік роботи ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nArea" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="subsidies_ECP_Valid" name="Маркер валідації" type="markers" default="${markerService.loadFromFile('soczah/subsidies_ECP_Valid.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask9" name="Повідомлення службовця" activiti:delegateExpression="#{MailTaskWithoutAttachment}">

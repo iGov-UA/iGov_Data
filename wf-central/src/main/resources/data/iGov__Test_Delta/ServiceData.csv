@@ -371,7 +371,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 431;161;50009;NULL;9;4;{"processDefinitionId":"Rada_0161_InfoZaput:1:1"};;false;209;false;;BankID,EDS,mpbds;0
 432;102;50009;NULL;9;4;{"processDefinitionId":"ternopol_rcnap_208:1:1"};;false;1;false;;BankID,EDS,mpbds;0
 433;767;491;491;NULL;4;{"processDefinitionId":"dnepr_soc_help_150:1:1"};;false;14;false;;BankID,EDS,mpbds;0
-434;1558;1;1;NULL;4;{"processDefinitionId":"OSBB_1558_ZvitKazn:1:1"};;false;665;false;;BankID,EDS,mpbds;0
+434;1558;1;1;NULL;4;{"processDefinitionId":"OSBB_1558_ZvitKazn:1:1"};;false;665;true;;BankID,EDS,mpbds;0
 435;87;50002;NULL;2;4;{"processDefinitionId":"justice_0087_FOPclose:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 436;126;134;134;NULL;4;{"processDefinitionId":"ZemRada_126_ZemVlasn:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 437;128;134;134;NULL;4;{"processDefinitionId":"ZemRada_128_ZemKoryst:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -382,8 +382,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 442;149;28;28;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 443;149;2;2;NULL;4;{"processDefinitionId":"mvs_149_TransferNonstdDim:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 444;126;472;472;NULL;4;{"processDefinitionId":"ZemRada_0126_ZemVlasn:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-445;1552;1;1;NULL;4;{"processDefinitionId":"OSBB_1552_Inishiativ:1:1"};;false;666;false;;BankID,EDS,mpbds;0
-446;1553;1;1;NULL;4;{"processDefinitionId":"OSBB_1553_PeredDokov:1:1"};;false;666;false;;BankID,EDS,mpbds;0
+445;1552;1;1;NULL;4;{"processDefinitionId":"OSBB_1552_Inishiativ:1:1"};;false;666;true;;BankID,EDS,mpbds;0
+446;1553;1;1;NULL;4;{"processDefinitionId":"OSBB_1553_PeredDokov:1:1"};;false;666;true;;BankID,EDS,mpbds;0
 447;786;6;6;NULL;4;{"processDefinitionId":"kiev_soc_help_177:1:1"};;false;16;true;;BankID,EDS,mpbds;0
 448;28;1;1;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 449;102;466;466;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -5321,7 +5321,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5455;25;662;662;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5456;173;662;662;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5457;175;662;662;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5458;1431;662;662;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5458;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5459;176;50008;NULL;8;4;{"processDefinitionId":"dms_0176_Zagran_DMSiGov:1:1"};;false;288;false;;BankID,EDS,mpbds;0
 5460;177;50008;NULL;8;4;{"processDefinitionId":"dms_0177_zagranChild_DMSiGov:1:1"};;false;288;false;;BankID,EDS,mpbds;0
 5461;179;50008;NULL;8;4;{"processDefinitionId":"dms_0179_zagranLost_DMSiGov:1:1"};;false;288;false;;BankID,EDS,mpbds;0
@@ -5617,4 +5617,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5751;173;468;468;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5752;175;468;468;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5753;1431;468;468;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-
+5754;39;16;16;NULL;4;{"processDefinitionId":"upszn_0039:1:1"};;false;1;true;;BankID,EDS,mpbds;0

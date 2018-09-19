@@ -1,0 +1,13 @@
+{
+  "validate": {
+    "FileExtensions_1": {
+      "aField_ID": [
+        "ScanPassport",
+        "rent",
+        "sTable14"
+      ],
+      "saExtension": "pdf", 
+      "sMessage": "Недопустимий формат файлу! Повинно бути: {saExtension}"
+    }
+  }
+}

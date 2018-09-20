@@ -336,14 +336,12 @@ ${sNameOrgan},<br>
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
 <p>
-Ви отримали послугу "Довідка про склад сім'ї".<br>
-Будь ласка, оцініть якість надання цієї послуги за допомогою форми нижче.<br>
-Дякуємо.
+Послугу надано.<br>
 </p>
 [pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan},<br>
-[pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

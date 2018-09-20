@@ -5617,4 +5617,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5751;173;468;468;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5752;175;468;468;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5753;1431;468;468;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5754;39;16;16;NULL;4;{"processDefinitionId":"upszn_0039:1:1"};;false;1;true;;BankID,EDS,mpbds;0
+5754;39;16;16;NULL;4;{"processDefinitionId":"upszn_0039:1:1"};;false;14;true;;BankID,EDS,mpbds;0

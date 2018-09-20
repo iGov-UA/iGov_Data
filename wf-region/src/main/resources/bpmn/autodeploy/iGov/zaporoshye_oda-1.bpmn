@@ -219,7 +219,7 @@
 &lt;/html&gt;</activiti:expression>
         </activiti:field>
         <activiti:field name="bcc">
-          <activiti:string><![CDATA[kyrbatsky@gmail.com]]></activiti:string>
+          <activiti:string><![CDATA[Akylish88@gmail.com]]></activiti:string>
         </activiti:field>
       </extensionElements>
     </serviceTask>

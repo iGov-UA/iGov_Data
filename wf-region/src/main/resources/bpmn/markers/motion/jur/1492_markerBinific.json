@@ -1,0 +1,26 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_BinificType": {
+      "aField_ID": [
+        "markersLine_Ben_UO",
+        "tBenif_UO"
+      ],
+      "asID_Field": {
+        "sClient": "asBinificType"
+      },
+      "sCondition": "[sClient] == 'asEnamOposeredkov'"
+    },
+    "ValuesFieldsOnCondition_asEnamPriame": {
+      "aField_ID": [
+        "asBinificType"
+      ],
+      "asID_Field_sValue": [
+        "asEnamPriame"
+      ],
+      "asID_Field": {
+        "sClient": "asSelectBenef"
+      },
+      "sCondition": "[sClient] == 'tf1702_1'"
+    }
+  }
+}

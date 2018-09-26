@@ -44,11 +44,9 @@
           <activiti:value id="sEnamDFS" name="Державна фіскальна служба"></activiti:value>
           <activiti:value id="sEnamMU" name="Міністерство юстиції"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="markersLine_33" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення;(коротко сформулюйте проблему одним реченням)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детально опишіть проблему;(максимально конкретизуйте ситуацію, вказуйте факти, обставни та прізвища)" type="fileHTML" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dodatok" name="Документи що стосуються звернення;(за наявності, якщо документів багато завантажте ZIP архівом);bNew=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="markersID_UA" name="markersID_UA" type="markers" default="${markerService.loadFromFile('ODA_invest/ODA_1388_ID_UA.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_V" name="Зворотній зв'язок" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Зворотній зв'язок&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" required="true">
@@ -192,7 +190,7 @@ ${sNameOrgan}.<br />
     <sequenceFlow id="flow4" sourceRef="servicetask4" targetRef="usertask1"></sequenceFlow>
     <userTask id="usertask1" name="1й етап. ОДА. Перевірка документів." activiti:candidateGroups="${sID_UA}_oda_5">
       <extensionElements>
-        <activiti:formProperty id="asOrgan" name="Орган до якого хоче звернутись заявник" type="enum" required="true">
+        <activiti:formProperty id="asOrgan" name="Орган до якого хоче звернутись заявник через ОДА" type="enum" writable="false">
           <activiti:value id="sEnamDFS" name="Державна фіскальна служба"></activiti:value>
           <activiti:value id="sEnamMU" name="Міністерство юстиції"></activiti:value>
         </activiti:formProperty>
@@ -220,7 +218,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_333" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_333&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
         
@@ -359,7 +357,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_33" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
         
@@ -514,7 +512,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_33" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
         
@@ -574,7 +572,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_33" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
         

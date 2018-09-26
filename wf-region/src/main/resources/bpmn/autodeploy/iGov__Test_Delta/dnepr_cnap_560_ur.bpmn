@@ -550,14 +550,6 @@
           <activiti:value id="tf1702_1" name="Так"></activiti:value>
           <activiti:value id="tf1702_2" name="Ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="sBinificCapital" name="Відсоток частки статутного капіталу або відсоток права голосу в юридичній особі у бенефіціара" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="asBinificType" name="Тип бенефіціарного володіння" type="enum" required="true">
-          <activiti:value id="asEnamPriame" name="Пряме"></activiti:value>
-          <activiti:value id="asEnamOposeredkov" name="Опосередковане"></activiti:value>
-          <activiti:value id="asEnamPredstavn" name="Представництво"></activiti:value>
-          <activiti:value id="asEnamInshe" name="Контроль здійснюється за допомогою іншого засобу"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="markerBinific" name="markerBinific" type="markers" default="${markerService.loadFromFile('jur/1492_markerBinific.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="Info9_2" name="Прізвище, ім’я, по батькові (за наявності)" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sVarLastName_0003" name="Прізвище" type="string"></activiti:formProperty>

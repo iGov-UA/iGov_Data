@@ -39,15 +39,18 @@
         <activiti:formProperty id="place1" name="Координати підприємства;(у форматі: https://www.google.ua/maps/@хх.хххххх,хх.хххххх,хх.ххz)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sLabelZemCoord" name=" ; ;labelType=info" type="label" default="Інформація про те, як правильно визначити координати - &lt;a href=&quot;http://bit.ly/1NNaEzN &quot; target=&quot;_blank&quot;&gt;знаходиться за посиланням &lt;/a&gt;"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;asOrgan&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asOrgan" name="Орган до якого ви хочете звернутись" type="enum" required="true">
+        <activiti:formProperty id="markersLine_3" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;asOrgan&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="asOrgan" name="Орган до якого ви хочете звернутись через ОДА;(звернення буде розглянуто в ОДА і надіслано до обраного вами органу)" type="enum" required="true">
           <activiti:value id="sEnamDFS" name="Державна фіскальна служба"></activiti:value>
           <activiti:value id="sEnamMU" name="Міністерство юстиції"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення;(коротко сформулюйте проблему одним реченням)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детально опишіть проблему;(максимально конкретизуйте ситуацію, вказуйте факти, обставни та прізвища)" type="fileHTML" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dodatok" name="Документи що стосуються звернення;(за наявності, якщо документів багато завантажте ZIP архівом);bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="markersID_UA" name="markersID_UA" type="markers" default="${markerService.loadFromFile('ODA_invest/ODA_1388_ID_UA.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_V" name="Зворотній зв'язок" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Зворотній зв'язок&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" required="true">
           <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
           <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
@@ -189,6 +192,11 @@ ${sNameOrgan}.<br />
     <sequenceFlow id="flow4" sourceRef="servicetask4" targetRef="usertask1"></sequenceFlow>
     <userTask id="usertask1" name="1й етап. ОДА. Перевірка документів." activiti:candidateGroups="${sID_UA}_oda_5">
       <extensionElements>
+        <activiti:formProperty id="asOrgan" name="Орган до якого хоче звернутись заявник" type="enum" required="true">
+          <activiti:value id="sEnamDFS" name="Державна фіскальна служба"></activiti:value>
+          <activiti:value id="sEnamMU" name="Міністерство юстиції"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" writable="false"></activiti:formProperty>
@@ -212,13 +220,11 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="place" name="Місце знаходження підприємства; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="place1" name="Координати підприємства; ;writable=false" type="string"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_3" name="Інформація про проблему" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;asOrgan&quot;],&quot;sValue&quot;:&quot;Інформація про проблему&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asOrgan" name="Орган до якого хоче звернутись заявник" type="enum" required="true">
-          <activiti:value id="sEnamDFS" name="Державна фіскальна служба"></activiti:value>
-          <activiti:value id="sEnamMU" name="Міністерство юстиції"></activiti:value>
-        </activiti:formProperty>
+        <activiti:formProperty id="markersLine_333" name="Опис проблеми" type="markers" default="{&quot;attributes&quot;:{&quot;Line_333&quot;:{&quot;aElement_ID&quot;:[&quot;problem&quot;],&quot;sValue&quot;:&quot;Опис проблеми&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_V" name="Зворотній зв'язок" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Зворотній зв'язок&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" writable="false">
           <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
           <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
@@ -357,6 +363,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_V" name="Зворотній зв'язок" type="markers" default="{&quot;attributes&quot;:{&quot;Line_V&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Зворотній зв'язок&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" writable="false">
           <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
           <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
@@ -511,12 +518,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="problem" name="Суть звернення; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sZaputOpus" name="Детальний опис проблеми; ;writable=false" type="fileHTML"></activiti:formProperty>
         
-        <activiti:formProperty id="asVidpovid" name="Спосіб отримання відповіді" type="enum" writable="false">
-          <activiti:value id="sEnamPost" name="Надіслати поштою"></activiti:value>
-          <activiti:value id="sEnamDigital" name="Отримати електронну копію"></activiti:value>
-        </activiti:formProperty>
-        
-        <activiti:formProperty id="nFile_Dodatok" name="Документи що стоються звернення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Dodatok" name="Документи що стосуються звернення; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="fVidpovid" name="Відповідь. (Сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
         

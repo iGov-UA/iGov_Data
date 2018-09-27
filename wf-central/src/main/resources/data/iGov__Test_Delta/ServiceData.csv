@@ -786,7 +786,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 846;102;28;28;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 847;102;102;102;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 848;102;37;37;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-849;102;154;154;NULL;4;{"processDefinitionId":"demo:1:58"};;true;1;true;;BankID,EDS,mpbds;0
+849;675;662;662;NULL;4;{"processDefinitionId":"archiv_0675_dovidki:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 850;102;67;67;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 851;790;1;1;NULL;4;{"processDefinitionId":"ZemRada_790_OrendPonov_Sd:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 852;1464;50002;NULL;2;4;{"processDefinitionId":"common_mreo_4:1:1"};;false;12;false;;BankID,EDS,mpbds;0

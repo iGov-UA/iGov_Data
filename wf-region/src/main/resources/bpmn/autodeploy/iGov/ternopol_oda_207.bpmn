@@ -166,6 +166,9 @@ execution.setVariable('sDFS_MU_Group', perO3)
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
+
+${POMILKA}
+
 <p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br/><br/>
 Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p>
 

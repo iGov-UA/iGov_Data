@@ -5306,8 +5306,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5440;55;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5441;1575;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
 5442;1576;50028;NULL;28;1;{};http://www.dabi.gov.ua/;false;1;false;Ви можете отримати послугу для цієї області через офіційний сайт ДАБІ. Обов’язковою умовою отримання доступу до інформації є  електронна ідентифікація заявника з використанням електронного цифрового підпису;BankID,EDS,mpbds;0
-5443;455;662;662;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5444;725;662;662;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5443;455;662;662;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5444;725;662;662;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5445;725;133;133;NULL;4;{"processDefinitionId":"Ark_725_MbudUmObm:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5446;455;133;133;NULL;4;{"processDefinitionId":"Ark_455_BudPasp:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5447;1476;133;133;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -5365,7 +5365,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5499;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5500;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5501;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
-5502;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+5502;102;662;662;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5503;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5504;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5505;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0

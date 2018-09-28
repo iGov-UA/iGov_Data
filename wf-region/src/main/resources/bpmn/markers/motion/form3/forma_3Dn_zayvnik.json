@@ -103,6 +103,24 @@
         "sCondit3": "asStatus"
       },
       "sCondition": "[sCondit1]=='true'&&[sCondit2]=='no'&&([sCondit3]=='sVlasnDov'||[sCondit3]=='sZareyDov')"
+    },
+    "ShowFieldsOnCondition_Mariupol_CNAP": {
+      "aField_ID": [
+        "lable_Mariupol_CNAP"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'don_mariupolR'"
+    },
+    "ShowFieldsOnCondition_Mariupol_Lev": {
+      "aField_ID": [
+        "lable_Mariupol_Lev"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'don_mariupol_LevR'"
     }
   }
 }

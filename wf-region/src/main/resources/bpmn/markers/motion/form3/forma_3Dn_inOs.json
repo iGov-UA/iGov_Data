@@ -1,23 +1,13 @@
 {
   "motion": {
-    "ShowFieldsOnCondition_chekReestrOsob": {
-      "aField_ID": [
-        "chekReestrOsob"
-      ],
-      "asID_Field": {
-        "sConditF": "sFlag"
-      },
-      "sCondition": "([sConditF] == 'true'||[sConditF] == 'registr1')"
-    },
     "ShowFieldsOnCondition_sDorDitYes": {
       "aField_ID": [
         "PeopleTable"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sCondit1": "chekReestrOsob"
       },
-      "sCondition": "([sCondit1]=='sYesDor'||[sCondit1]=='sYesDit'||[sCondit1]=='sYesDorDit')&&([sConditF] == 'true'||[sConditF] == 'registr1')"
+      "sCondition": "[sCondit1]=='sYesDor'||[sCondit1]=='sYesDit'||[sCondit1]=='sYesDorDit'"
     },
     "ShowFieldsOnCondition_sDor": {
       "aField_ID": [
@@ -25,11 +15,10 @@
         "nFile_ZarIPNs"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sConditR": "asRegistr",
         "sCondit1": "chekReestrOsob"
       },
-      "sCondition": "[sCondit1] == 'sYesDor'&&[sConditF] == 'true'&&[sConditR] == 'no'"
+      "sCondition": "[sCondit1] == 'sYesDor'&&[sConditR] == 'no'"
     },
     "ShowFieldsOnCondition_sDit": {
       "aField_ID": [
@@ -37,11 +26,10 @@
         "nFile_ZarIPNs"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sConditR": "asRegistr",
         "sCondit1": "chekReestrOsob"
       },
-      "sCondition": "[sCondit1] == 'sYesDit'&&[sConditF] == 'true'&&[sConditR] == 'no'"
+      "sCondition": "[sCondit1] == 'sYesDit'&&[sConditR] == 'no'"
     },
     "ShowFieldsOnCondition_sDorDit": {
       "aField_ID": [
@@ -50,22 +38,20 @@
         "nFile_ZarIPNs"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sConditR": "asRegistr",
         "sCondit1": "chekReestrOsob"
       },
-      "sCondition": "[sCondit1] == 'sYesDorDit'&&[sConditF] == 'true'&&[sConditR] == 'no'"
+      "sCondition": "[sCondit1] == 'sYesDorDit'&&[sConditR] == 'no'"
     },
     "RequiredFieldsOnCondition_sDorDit": {
       "aField_ID": [
         "nFile_ZarIPNs"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sConditR": "asRegistr",
         "sCondit1": "chekReestrOsob"
       },
-      "sCondition": "([sCondit1] == 'sYesDor'||[sCondit1] == 'sYesDorDit')&&[sConditF] == 'true'&&[sConditR] == 'no'"
+      "sCondition": "([sCondit1] == 'sYesDor'||[sCondit1] == 'sYesDorDit')&&[sConditR] == 'no'"
     }
   }
 }

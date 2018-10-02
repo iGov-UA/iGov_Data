@@ -6,42 +6,38 @@
         "lRegistrationKvart"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sCondit1": "asBudType"
       },
-      "sCondition": "[sCondit1]=='sBagkvatur'&&([sConditF] == 'true'||[sConditF] == 'registr1')"
+      "sCondition": "[sCondit1]=='sBagkvatur'"
     },
     "ShowFieldsOnCondition_sBagkvaturKorp": {
       "aField_ID": [
         "lRegistrationKorp"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sCondit1": "asKorp",
         "sCondit2": "asBudType"
       },
-      "sCondition": "[sCondit1]=='yes'&&[sCondit2]=='sBagkvatur'&&([sConditF] == 'true'||[sConditF] == 'registr1')"
+      "sCondition": "[sCondit1]=='yes'&&[sCondit2]=='sBagkvatur'"
     },
     "ShowFieldsOnCondition_sPrivSector": {
       "aField_ID": [
         "asKvart"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sCondit1": "asBudType"
       },
-      "sCondition": "[sCondit1]=='sPrivSector'&&([sConditF] == 'true'||[sConditF] == 'registr1')"
+      "sCondition": "[sCondit1]=='sPrivSector'"
     },
     "ShowFieldsOnCondition_sPrivSectorKvart": {
       "aField_ID": [
         "lRegistrationKvart"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sCondit1": "asBudType",
         "sCondit2": "asKvart"
       },
-      "sCondition": "[sCondit1]=='sPrivSector'&&[sCondit2]=='yes'&&([sConditF] == 'true'||[sConditF] == 'registr1')"
+      "sCondition": "[sCondit1]=='sPrivSector'&&[sCondit2]=='yes'"
     },
     "ShowFieldsOnCondition_sPrivSectorF": {
       "aField_ID": [
@@ -52,32 +48,18 @@
       ],
       "asID_Field": {
         "sCondit1": "asBudType",
-        "sConditF": "sFlag",
         "sCondit2": "asRegistr"
       },
-      "sCondition": "[sCondit1]=='sPrivSector'&&[sConditF]=='true'&&[sCondit2] == 'no'"
+      "sCondition": "[sCondit1]=='sPrivSector'&&[sCondit2] == 'no'"
     },
     "ShowFieldsOnCondition_VlasnF": {
       "aField_ID": [
         "nFile_JutVlasn"
       ],
       "asID_Field": {
-        "sConditF": "sFlag",
         "sCondit2": "asRegistr"
       },
-      "sCondition": "[sConditF] == 'true'&&[sCondit2] == 'no'"
-    },
-    "ShowFieldsOnCondition_Zutl": {
-      "aField_ID": [
-        "asBudType",
-        "asTypeVul",
-        "sRegistrationVul",
-        "sRegistrationBud"
-      ],
-      "asID_Field": {
-        "sConditF": "sFlag"
-      },
-      "sCondition": "([sConditF] == 'true'||[sConditF] == 'registr1')"
+      "sCondition": "[sCondit2] == 'no'"
     }
   }
 }

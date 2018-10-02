@@ -24,10 +24,6 @@
           <activiti:value id="tf1702_1" name="Так"></activiti:value>
           <activiti:value id="tf1702_2" name="Ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asSelectBenef" name="Ви будете бенефіціаром (вигодонабувачем)?" type="enum" default="tf1702_1" required="true">
-          <activiti:value id="tf1702_1" name="Так"></activiti:value>
-          <activiti:value id="tf1702_2" name="Ні"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="asSelectUstDoc" name="Оберіть вид установчого документа" type="enum" default="tf003" required="true">
           <activiti:value id="tf001" name="Статут"></activiti:value>
           <activiti:value id="tf002" name="Засновницький договір"></activiti:value>
@@ -548,7 +544,13 @@
         <activiti:formProperty id="sVarTypePom_0002_DZ2" name="Тип приміщення; квартира, кімната, кабінет або офіс тощо" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sVarPomNum_0002_DZ2" name="Номер приміщення" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sVarSum02_DZ2" name="Розмір частки статутного (складеного) капіталу (пайового фонду) (грн)" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="Info9_1" name="Розділ; ;bVisible=false" type="markers" default="{&quot;attributes&quot;:{&quot;Line_mInfo9_1&quot;:{&quot;aElement_ID&quot;:[&quot;Info9_2&quot;],&quot;sValue&quot;:&quot;Бенефіціарні власники (контролери)&quot;}}}"></activiti:formProperty>
+        
+        <activiti:formProperty id="Info9_1" name="Розділ; ;bVisible=false" type="markers" default="{&quot;attributes&quot;:{&quot;Line_mInfo9_1&quot;:{&quot;aElement_ID&quot;:[&quot;asSelectBenef&quot;],&quot;sValue&quot;:&quot;Бенефіціарні власники (контролери)&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="asSelectBenef" name="Ви будете бенефіціаром (вигодонабувачем)?" type="enum" default="tf1702_1" required="true">
+          <activiti:value id="tf1702_1" name="Так"></activiti:value>
+          <activiti:value id="tf1702_2" name="Ні"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="Info9_2" name="Прізвище, ім’я, по батькові (за наявності)" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sVarLastName_0003" name="Прізвище" type="string"></activiti:formProperty>
         <activiti:formProperty id="sVarFirstName_0003" name="Ім'я" type="string"></activiti:formProperty>
@@ -653,6 +655,12 @@
         <activiti:formProperty id="sVarKvNum_0003" name="Корпус" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sVarTypePom_0003" name="Тип приміщення; квартира, кімната, кабінет або офіс тощо" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sVarPomNum_0003" name="Номер приміщення" type="string" default=" "></activiti:formProperty>
+        
+        
+        <activiti:formProperty id="markersLine_Ben_UO" name="Юридичні особи, що опосередковано впливають" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Ben_UO&quot;:{&quot;aElement_ID&quot;:[&quot;tBenif_UO&quot;],&quot;sValue&quot;:&quot;Юридичні особи, що опосередковано впливають&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="tBenif_UO" name="Відомості про юридичних осіб, через яких здійснюється опосередкований вплив на юридичеу особу;У разі обрання опосередкованого способу впливу на юридичну особу обов'язково зазначаються відомості про повне найменування та ідентифікаційний код (для резидента) усіх юридичних осіб, через яких фізична особа, що є кінцевим бенефіціарним власником (контролером), здійснює володіння часткою в юридичній особі у розмірі 25 чи більше відсотків статутного капіталу або прав голосу в юридичній особі." type="textArea" default=" "></activiti:formProperty>
+        
+        
         <activiti:formProperty id="Info8_2" name="Розділ; ;bVisible=false" type="markers" default="{&quot;attributes&quot;:{&quot;Line_mInfo8_2&quot;:{&quot;aElement_ID&quot;:[&quot;Info8&quot;],&quot;sValue&quot;:&quot;&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="Info8" name="Код виду економічної діяльності" type="label" default="перелік існуючих кодів можна знайти за &lt;a href=&quot;http://sfs.gov.ua/dovidniki--reestri--perelik/pereliki-/128651.html&quot; target=&quot;_blank&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="asSelectNumKVED" name="Оберіть кількість видів діяльності Вашого підприємства та введіть їхній код" type="enum" default="tf1600">

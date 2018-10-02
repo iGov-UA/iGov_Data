@@ -5,8 +5,8 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить місце реєстрації особи, яка буде отримувати довідку" type="select" default="0" required="true"></activiti:formProperty>
-        <activiti:formProperty id="lable_Mariupol_CNAP" name=" " type="label" default="&lt;b&gt;Зверніть увагу! Центральний ЦНАП м.Маріуполь видає довідку особам, що зареєстровані виключно в Центральному, Приморському та Кальміуському районах&lt;/b&gt;"></activiti:formProperty>
-        <activiti:formProperty id="lable_Mariupol_Lev" name=" " type="label" default="&lt;b&gt;Зверніть увагу! Лівобережний районний відділ надання адміністративних послуг видає довідку особам, що зареєстровані виключно в Лівобережному районі&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="lable_Mariupol_CNAP" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Зверніть увагу! Відділ реєстрації місця проживання видає довідку особам, що зареєстровані виключно в Центральному, Приморському та Кальміуському районах&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="lable_Mariupol_Lev" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Зверніть увагу! Лівобережний відділ реєстрації місця проживання видає довідку особам, що зареєстровані виключно в Лівобережному районі&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>

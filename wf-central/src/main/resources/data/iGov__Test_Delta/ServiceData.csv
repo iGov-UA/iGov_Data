@@ -267,7 +267,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 327;102;488;488;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 328;96;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap-44:1:60054"};;false;1;false;;BankID,EDS,mpbds;0
 329;724;26;26;NULL;4;{"processDefinitionId":"Uzhgorod_dmg_1:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-330;148;1;1;NULL;4;{"processDefinitionId":"dnepr_vcnap-50:1:60054"};;false;1;true;;BankID,EDS,mpbds;0
+330;148;14;14;NULL;4;{"processDefinitionId":"DerPr_0148_EksplnebMexanizm:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 331;92;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap_42:1:1"};;false;42;true;;BankID,EDS,mpbds;0
 332;368;50001;NULL;1;4;{"processDefinitionId":"gni_69:1:1"};;false;285;false;;BankID,EDS,mpbds;0
 333;1495;50009;NULL;9;4;{"processDefinitionId":"dnepr_cnap_560_fop:1:1"};;false;1;false;;BankID,EDS,mpbds;0
@@ -277,7 +277,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 337;740;44;44;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 338;27;108;108;NULL;4;{"processDefinitionId":"uzhgorod_cnap_112:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 339;1507;50005;NULL;5;4;{"processDefinitionId":"kiev_mda_832budad:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-340;115;50001;NULL;1;4;{"processDefinitionId":"dnepr_cnap-57:1:1"};;true;305;true;;BankID,EDS,mpbds;0
+340;115;14;14;NULL;4;{"processDefinitionId":"DerPr_0115_TexBazaRobotodavca:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 341;956;109;109;NULL;4;{"processDefinitionId":"dnepr_cnap_238:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 342;94;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap_46:1:60054"};;false;1;true;;BankID,EDS,mpbds;0
 343;747;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap_46_ur:1:60054"};;false;1;true;;BankID,EDS,mpbds;0

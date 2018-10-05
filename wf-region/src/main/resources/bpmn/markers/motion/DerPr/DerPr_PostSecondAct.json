@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_RegistrationActio": {
+      "aField_ID": [
+        "nFile_DocReject"
+      ],
+      "asID_Field": {
+        "sCond": "TypeRegistrationAction"
+      },
+      "sCondition": "[sCond]=='Second'"
+    },
+    "ShowFieldsOnCondition_PostAdress": {
+      "aField_ID": [
+        "sPaperPost_Adress"
+      ],
+      "asID_Field": {
+        "sCond": "asEnumDelivery_Document"
+      },
+      "sCondition": "[sCond]=='sElementPaperPost_doc'"
+    }
+  }
+}

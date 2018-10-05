@@ -18,6 +18,7 @@
           <activiti:value id="sElementPaperPost_doc" name="Надіслати відповідь у паперовому вигляді на поштову адресу"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sPaperPost_Adress" name="Поштова адреса для надсилання відповіді" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="markerDerPr_PostSecondAct" name="markerDerPr_PostSecondAct" type="markers" default="${markerService.loadFromFile('DerPr/DerPr_PostSecondAct.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1Z" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1Z&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string"></activiti:formProperty>
@@ -62,7 +63,7 @@
         <activiti:formProperty id="tNenezpRob" name="Вид(и) робіт підвищеної небезпеки;(вкажіть найменування всіх типів таких робіт, якщо такі роботи не проводяться - ставте прочерк)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="tNenezpMex" name="Технічні засоби підвищеної небезпеки;(найменування машин, механізмів, устаткування підвищеної небезпеки, їх повний перелік, якщо такі механізми відсутні - ставте прочерк)" type="textArea" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_E" name="Інформація про експертизу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_E&quot;:{&quot;aElement_ID&quot;:[&quot;imya_fiz&quot;],&quot;sValue&quot;:&quot;Інформація про експертизу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_E" name="Інформація про експертизу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_E&quot;:{&quot;aElement_ID&quot;:[&quot;sEkspOrgName&quot;],&quot;sValue&quot;:&quot;Інформація про експертизу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sEkspOrgName" name="Повне найменування експертної організації" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="EkspData" name="Дата проведення експертизи" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sEkspNumber" name="Номер експертизи" type="string" required="true"></activiti:formProperty>

@@ -18,6 +18,7 @@
           <activiti:value id="sElementPaperPost_doc" name="Надіслати відповідь у паперовому вигляді на поштову адресу"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sPaperPost_Adress" name="Поштова адреса для надсилання відповіді" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="markerDerPr_PostSecondAct" name="markerDerPr_PostSecondAct" type="markers" default="${markerService.loadFromFile('DerPr/DerPr_PostSecondAct.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1Z" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1Z&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string"></activiti:formProperty>

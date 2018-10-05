@@ -59,10 +59,21 @@
         <activiti:formProperty id="adres_FizDov" name="Адреса реєстрації довірителя (Фізичної особи-підприємця)" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи;(довіренність або інший документ);bNew=true" type="file" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_N" name="Інформація про об'єкт небезпеки" type="markers" default="{&quot;attributes&quot;:{&quot;Line_N&quot;:{&quot;aElement_ID&quot;:[&quot;sNenezpPlace&quot;],&quot;sValue&quot;:&quot;Інформація про об'єкт небезпеки&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpPlace" name="Місце виконання робіт підвищеної небезпеки;(вкажіть повну адресу)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tNebezpMex" name="Опис робіт або приладів підвищеної небезпеки;(найменування виду робіт підвищеної небезпеки та/або машин, механізмів, устатковання підвищеної небезпеки, тип або марка (за наявності), номер партії, дата виготовлення, країна походження, які виконуються та/або експлуатуються (застосовуються) без отримання відповідного дозволу) " type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpRobMisc" name="Кількість робочих місць на яких існує підвищений ризик виникнення травм" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sKilkRobObj" name="Кількість виробничих об’єктів; (будівель і споруд, приміщень, цехів, дільниць, структурних підрозділів)" type="string" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_S" name="Інформація про договір страхування" type="markers" default="{&quot;attributes&quot;:{&quot;Line_S&quot;:{&quot;aElement_ID&quot;:[&quot;sStrahKompany&quot;],&quot;sValue&quot;:&quot;Інформація про договір страхування&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sStrahKompany" name="Назва страхової компанії;(з якою укладено договор страхування цивільної відповідальності перед третіми особами стосовно відшкодування наслідків можливої шкоди)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sStrahNumber" name="Номер договору" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="StrahData" name="Дата укладення договору" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="StrahDataDii" name="Строк дії страхового полісу;(вкажіть дату до якої він діє)" type="date" required="true"></activiti:formProperty>
         
-        
-        
+        <activiti:formProperty id="markersLine_A" name="Інформація щодо заходів охорони праці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_A&quot;:{&quot;aElement_ID&quot;:[&quot;AuditOhData&quot;],&quot;sValue&quot;:&quot;Інформація щодо заходів охорони праці&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="AuditOhData" name="Дата проведення аудиту з охорони праці" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tOhPrInfo" name="Відомості про охорону праці на підприємстві;(прізвище, ім’я та по батькові осіб, які відповідають, за дотриманням вимог законодавства з питань охорони праці та промислової безпеки, наявність служби охорони праці, інструкцій про проведення навчання та інструктажу з питань охорони праці, експлуатаційної документації, засобів індивідуального захисту, нормативно-правової та матеріально-технічної бази навчально-методичного забезпечення)" type="textArea" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="form_signed_1" name="Заява з ЕЦП; ;bPrintFormFileAsPDF=true,bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для наложения ЭЦП ; ;bVisible=false" type="string" default="pattern/print/DerPr/DerPr_0115_TexBazaRobotodavca.html"></activiti:formProperty>
@@ -82,7 +93,7 @@
     </startEvent>
     <scriptTask id="scripttask1" name="Скріпт файл" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
-var file1 = ' '
+var Name = ' '
       </script>
     </scriptTask>
     <serviceTask id="servicetask7" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -156,6 +167,7 @@ var file1 = ' '
         </activiti:formProperty>
         <activiti:formProperty id="sPaperPost_Adress" name="Поштова адреса для надсилання відповіді; ;writable=false" type="textArea"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_1ZZ" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Серія та номер паспорту" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
@@ -185,9 +197,21 @@ var file1 = ' '
         <activiti:formProperty id="adres_FizDov" name="Адреса реєстрації довірителя (Фізичної особи-підприємця); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_N" name="Інформація про об'єкт небезпеки" type="markers" default="{&quot;attributes&quot;:{&quot;Line_N&quot;:{&quot;aElement_ID&quot;:[&quot;sNenezpPlace&quot;],&quot;sValue&quot;:&quot;Інформація про об'єкт небезпеки&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpPlace" name="Місце виконання робіт підвищеної небезпеки; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tNebezpMex" name="Опис робіт або приладів підвищеної небезпеки; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpRobMisc" name="Кількість робочих місць на яких існує підвищений ризик виникнення травм; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKilkRobObj" name="Кількість виробничих об’єктів; ;writable=false" type="string"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_S" name="Інформація про договір страхування" type="markers" default="{&quot;attributes&quot;:{&quot;Line_S&quot;:{&quot;aElement_ID&quot;:[&quot;sStrahKompany&quot;],&quot;sValue&quot;:&quot;Інформація про договір страхування&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sStrahKompany" name="Назва страхової компанії; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sStrahNumber" name="Номер договору; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="StrahData" name="Дата укладення договору" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="StrahDataDii" name="Строк дії страхового полісу" type="date" writable="false"></activiti:formProperty>
         
-        
+        <activiti:formProperty id="markersLine_A" name="Інформація щодо заходів охорони праці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_A&quot;:{&quot;aElement_ID&quot;:[&quot;AuditOhData&quot;],&quot;sValue&quot;:&quot;Інформація щодо заходів охорони праці&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="AuditOhData" name="Дата проведення аудиту з охорони праці" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tOhPrInfo" name="Відомості про охорону праці на підприємстві; ;writable=false" type="textArea"></activiti:formProperty>
         
         
         <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
@@ -303,6 +327,7 @@ ${tComment}</p>
         </activiti:formProperty>
         <activiti:formProperty id="sPaperPost_Adress" name="Поштова адреса для надсилання відповіді; ;writable=false" type="textArea"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_1ZZ" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Серія та номер паспорту" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
@@ -332,6 +357,21 @@ ${tComment}</p>
         <activiti:formProperty id="adres_FizDov" name="Адреса реєстрації довірителя (Фізичної особи-підприємця); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_N" name="Інформація про об'єкт небезпеки" type="markers" default="{&quot;attributes&quot;:{&quot;Line_N&quot;:{&quot;aElement_ID&quot;:[&quot;sNenezpPlace&quot;],&quot;sValue&quot;:&quot;Інформація про об'єкт небезпеки&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpPlace" name="Місце виконання робіт підвищеної небезпеки; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tNebezpMex" name="Опис робіт або приладів підвищеної небезпеки; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpRobMisc" name="Кількість робочих місць на яких існує підвищений ризик виникнення травм; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKilkRobObj" name="Кількість виробничих об’єктів; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_S" name="Інформація про договір страхування" type="markers" default="{&quot;attributes&quot;:{&quot;Line_S&quot;:{&quot;aElement_ID&quot;:[&quot;sStrahKompany&quot;],&quot;sValue&quot;:&quot;Інформація про договір страхування&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sStrahKompany" name="Назва страхової компанії; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sStrahNumber" name="Номер договору; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="StrahData" name="Дата укладення договору" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="StrahDataDii" name="Строк дії страхового полісу" type="date" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_A" name="Інформація щодо заходів охорони праці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_A&quot;:{&quot;aElement_ID&quot;:[&quot;AuditOhData&quot;],&quot;sValue&quot;:&quot;Інформація щодо заходів охорони праці&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="AuditOhData" name="Дата проведення аудиту з охорони праці" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tOhPrInfo" name="Відомості про охорону праці на підприємстві; ;writable=false" type="textArea"></activiti:formProperty>
         
         
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
@@ -481,6 +521,7 @@ ${tComment}</p>
         </activiti:formProperty>
         <activiti:formProperty id="sPaperPost_Adress" name="Поштова адреса для надсилання відповіді; ;writable=false" type="textArea"></activiti:formProperty>
         
+        <activiti:formProperty id="markersLine_1ZZ" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="Автор звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Серія та номер паспорту" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="ІПН" type="string" writable="false"></activiti:formProperty>
@@ -509,6 +550,22 @@ ${tComment}</p>
         <activiti:formProperty id="passport_FizDov" name="Паспорт довірителя (Фізичної особи-підприємця); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="adres_FizDov" name="Адреса реєстрації довірителя (Фізичної особи-підприємця); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_N" name="Інформація про об'єкт небезпеки" type="markers" default="{&quot;attributes&quot;:{&quot;Line_N&quot;:{&quot;aElement_ID&quot;:[&quot;sNenezpPlace&quot;],&quot;sValue&quot;:&quot;Інформація про об'єкт небезпеки&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpPlace" name="Місце виконання робіт підвищеної небезпеки; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tNebezpMex" name="Опис робіт або приладів підвищеної небезпеки; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sNenezpRobMisc" name="Кількість робочих місць на яких існує підвищений ризик виникнення травм; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sKilkRobObj" name="Кількість виробничих об’єктів; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_S" name="Інформація про договір страхування" type="markers" default="{&quot;attributes&quot;:{&quot;Line_S&quot;:{&quot;aElement_ID&quot;:[&quot;sStrahKompany&quot;],&quot;sValue&quot;:&quot;Інформація про договір страхування&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sStrahKompany" name="Назва страхової компанії; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sStrahNumber" name="Номер договору; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="StrahData" name="Дата укладення договору" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="StrahDataDii" name="Строк дії страхового полісу" type="date" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_A" name="Інформація щодо заходів охорони праці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_A&quot;:{&quot;aElement_ID&quot;:[&quot;AuditOhData&quot;],&quot;sValue&quot;:&quot;Інформація щодо заходів охорони праці&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="AuditOhData" name="Дата проведення аудиту з охорони праці" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tOhPrInfo" name="Відомості про охорону праці на підприємстві; ;writable=false" type="textArea"></activiti:formProperty>
         
         
         <activiti:formProperty id="markersLine_R3" name="Результат обробки в Держпраці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_R3&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Результат обробки в поліції&quot;}}}"></activiti:formProperty>

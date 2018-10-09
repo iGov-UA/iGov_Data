@@ -96,11 +96,11 @@
 			<p>
        			Ваша заявка на видачу ліцензії на перевезення пасажирів, небезпечних вантажів та небезпечних відходів річковим, 
        			морським транспортом успішно зареєстрована на порталі №[sID_Order].<br>
-				Спеціалісти Державної служби України з безпеки на транспорті повинні дати відповідь найближчим часом.
+				Спеціалісти Державної служби морського та річкового транспорту України повинні дати відповідь найближчим часом.
             </p>
 			[pattern/mail/new_design/_common_content_end.html] 
 			[pattern/mail/new_design/_common_signature_start.html]
-			Державна служба України з безпеки на транспорті,<br>
+			Державна служба морського та річкового транспорту України (Морська адміністрація),<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -205,7 +205,7 @@
 			
 			[pattern/mail/new_design/_common_content_end.html] 
 			[pattern/mail/new_design/_common_signature_start.html]
-			Державна служба України з безпеки на транспорті,<br>
+			Державна служба морського та річкового транспорту України (Морська адміністрація),<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -248,7 +248,7 @@
 				Для того щоб закінчити процедуру видачі сліцензії на перевезення пасажирів, небезпечних вантажів та небезпечних відходів річковим, морським транспортом необхідно:<br>
 				<ul>
 					<li>Роздрукувати та підписати заяву з файлу, що додається.</li>
-					<li>Надіслати заяву та оригінали документів, які Ви додавали зручним для Вас способом за адресою: 01135, м. Київ, пр. Перемоги, 14 (для Державної служби України з безпеки на транспорті) до засідання комісії.</li>
+					<li>Надіслати заяву та оригінали документів, які Ви додавали зручним для Вас способом за адресою: 01135, м. Київ, пр. Перемоги, 14 (для Державної служби морського та річкового транспорту України) до засідання комісії.</li>
 				</ul>
 			</p> 
 			<p>
@@ -261,7 +261,7 @@
 			</p>
 			[pattern/mail/new_design/_common_content_end.html] 
 			[pattern/mail/new_design/_common_signature_start.html]
-			Державна служба України з безпеки на транспорті,<br>
+			Державна служба морського та річкового транспорту України (Морська адміністрація),<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -347,7 +347,7 @@
 			[pattern/mail/new_design/_common_content_end.html] 
 			[pattern/mail/new_design/_common_feedback.html]   	
 			[pattern/mail/new_design/_common_signature_start.html]
-			Державна служба України з безпеки на транспорті,<br>
+			Державна служба морського та річкового транспорту України (Морська адміністрація),<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

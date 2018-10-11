@@ -3470,7 +3470,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 3591;113;50009;NULL;9;4;{"processDefinitionId":"dvs_739:1:1"};;false;128;false;;BankID,EDS,mpbds;0
 3592;117;50009;NULL;9;4;{"processDefinitionId":"dvs_737:1:1"};;false;128;false;;BankID,EDS,mpbds;0
 3593;1563;10;10;NULL;4;{"processDefinitionId":"med_1563_zbroya"};;false;22;false;;BankID,EDS,mpbds;0
-3594;740;16;16;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi_Mariupol:1:1"};;false;89;true;;BankID,EDS,mpbds;0
+3594;740;16;16;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi_Mariupol:1:1"};;false;89;false;;BankID,EDS,mpbds;0
 3595;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;89;true;;BankID,EDS,mpbds;0
 3596;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;89;true;;BankID,EDS,mpbds;0
 3597;29;635;635;NULL;4;{"processDefinitionId":"dnepr_dms-89:1:1"};;false;212;false;;BankID,EDS,mpbds;0

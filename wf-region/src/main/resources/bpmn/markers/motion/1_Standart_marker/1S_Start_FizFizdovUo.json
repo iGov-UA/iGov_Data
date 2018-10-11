@@ -1,0 +1,39 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamUrK": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_appl",
+        "sFullName_SubjectOrgan_appl",
+        "sLocation_SubjectOrgan_appl",
+        "sCEOName_SubjectOrgan_appl",
+        "sDateActual_SubjectOrgan_appl"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrK'||[sCond]=='Юридична особа'"
+    },
+    "ShowFieldsOnCondition_sEnamFop": {
+      "aField_ID": [
+        "sZayAdress"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFiz'||[sCond]=='Фізична особа'"
+    },
+    "ShowFieldsOnCondition_sEnamFizDov": {
+      "aField_ID": [
+        "imya_FizDov",
+        "inn_FizDov",
+        "passport_FizDov",
+        "adres_FizDov",
+        "nFile_ConfidantDoc"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFizDov'||[sCond]=='Представник фізичної особи'"
+    }
+  }
+}

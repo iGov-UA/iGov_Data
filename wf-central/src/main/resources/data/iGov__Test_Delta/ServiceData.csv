@@ -4065,7 +4065,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4186;1431;137;137;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4187;25;137;137;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4188;1473;104;104;NULL;4;{"processDefinitionId":"DGK_1473_VusnZeml:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-4189;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+4189;555;61;61;NULL;4;{"processDefinitionId":"Skarga_0555_NaPosadovca:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4190;25;509;509;NULL;4;{"processDefinitionId":"dms_0025_ID2545_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4191;1383;561;561;NULL;4;{"processDefinitionId":"dnepr_soc_help_176:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4192;767;561;561;NULL;4;{"processDefinitionId":"dnepr_soc_help_150:1:1"};;false;14;false;;BankID,EDS,mpbds;0

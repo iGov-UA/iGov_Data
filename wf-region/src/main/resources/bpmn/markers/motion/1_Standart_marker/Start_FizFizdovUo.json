@@ -13,7 +13,7 @@
       },
       "sCondition": "[sCond]=='sEnamUrK'||[sCond]=='Юридична особа'"
     },
-    "ShowFieldsOnCondition_sEnamFop": {
+    "ShowFieldsOnCondition_sEnamFiz": {
       "aField_ID": [
         "sZayAdress"
       ],

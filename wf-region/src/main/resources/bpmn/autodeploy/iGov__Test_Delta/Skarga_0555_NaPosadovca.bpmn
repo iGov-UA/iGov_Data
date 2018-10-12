@@ -25,7 +25,7 @@
           <activiti:value id="sEnamFizDov" name="Представник фізичної особи"></activiti:value>
           <activiti:value id="sEnamUrK" name="Юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="1S_Start_FizFizdovUo" name="1S_Start_FizFizdovUo" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FizFizdovUo.json')}"></activiti:formProperty>
+        <activiti:formProperty id="Start_FizFizdovUo" name="Start_FizFizdovUo" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FizFizdovUo.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sZayAdress" name="Адреса заявника" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersLine_UR" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UR&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_appl&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
@@ -141,7 +141,7 @@
           <activiti:value id="sEnamFizDov" name="Представник фізичної особи"></activiti:value>
           <activiti:value id="sEnamUrK" name="Юридична особа"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="1S_Start_FizFizdovUo" name="1S_Start_FizFizdovUo" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Start_FizFizdovUo.json')}"></activiti:formProperty>
+        <activiti:formProperty id="Start_FizFizdovUo" name="Start_FizFizdovUo" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FizFizdovUo.json')}"></activiti:formProperty>
         <activiti:formProperty id="sZayAdress" name="Адреса заявника" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_UR" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UR&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_appl&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_appl" name="Код ЄДРПОУ" type="string" writable="false"></activiti:formProperty>

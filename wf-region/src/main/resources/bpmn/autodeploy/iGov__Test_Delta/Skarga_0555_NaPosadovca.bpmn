@@ -44,7 +44,7 @@
         
         <activiti:formProperty id="markersLine_SSS" name="Деталі скарги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_SSS&quot;:{&quot;aElement_ID&quot;:[&quot;sBadPIB&quot;],&quot;sValue&quot;:&quot;Деталі скарги&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sBadPIB" name="ПІБ та посада особи на яку скарга" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sBadOrgan" name="Місце роботи особи на яку скарга" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sBadOrgan" name="Місце роботи особи на яку скарга;(повна назва органу)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="ProblemData" name="Дата винекнення ситуації" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="asTema" name="Тема повідомлення / питання" type="enum" required="true">
           <activiti:value id="sEnamTemaZSS" name="Зловживання службовим становищем"></activiti:value>
@@ -58,8 +58,9 @@
           <activiti:value id="sEnamTemaNP" name="Неетична поведінка"></activiti:value>
           <activiti:value id="sEnamTemaI" name="Інше"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="tProblem" name="Опис ситуації" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Dop" name="Додаткові документи;(завантажте документи що стосуються справи));bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="tProblem" name="Опис ситуації;(детально опишіть проблему)" type="fileHTML" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Dop" name="Додаткові документи;(завантажте документи що стосуються справи);bNew=true" type="file"></activiti:formProperty>
+        
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="графік роботи ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для справок ; ;bVisible=false" type="string"></activiti:formProperty>

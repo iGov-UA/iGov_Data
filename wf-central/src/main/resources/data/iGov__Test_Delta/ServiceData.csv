@@ -1494,7 +1494,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 1555;719;501;501;NULL;4;{"processDefinitionId":"dnepr_cnap_59:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1556;1419;137;137;NULL;4;{"processDefinitionId":"cnap_514:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1557;1419;104;104;NULL;4;{"processDefinitionId":"cnap_514:1:1"};;false;225;false;;BankID,EDS,mpbds;0
-1558;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+1558;740;7;7;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;212;true;;BankID,EDS,mpbds;0
 1559;78;NULL;NULL;NULL;1;{};https://goo.gl/86hxCM;false;1;false;Ви можете отримати зразки заяв у документі за посиланням;BankID,EDS,mpbds;0
 1560;1419;37;37;NULL;4;{"processDefinitionId":"dnepr_mvk_501:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 1561;1419;102;102;NULL;4;{"processDefinitionId":"dnepr_mvk_501:1:1"};;false;225;false;;BankID,EDS,mpbds;0

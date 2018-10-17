@@ -13210,6 +13210,8 @@ nID_SubjectOrganJoin;sName;sValue
 3381;sMailClerkSocCent;drogterzentr@ukr.net
 3381;sShapkaSocCent;Дрогобичський міський територіальний центр соціального обслуговування
 3381;sPhoneOrganSocCent;<b>Телефон(и):</b> (03244) 3-83-38
+3381;sNameOrganVK;Виконавчий комітет дрогобицької міської ради
+3381;sMailClerkVK;itadrohobych@gmail.com
 
 3382;sNameOrgan;Архів Херсонського Національного Технічного Університету
 3382;sAddress;<b>Адреса:</b> Україна, 73008 м.Херсон, Бериславське шосе, 24

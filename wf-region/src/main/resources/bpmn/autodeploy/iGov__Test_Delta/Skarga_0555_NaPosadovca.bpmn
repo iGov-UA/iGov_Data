@@ -61,12 +61,12 @@
         <activiti:formProperty id="tProblem" name="Опис ситуації;(детально опишіть проблему)" type="fileHTML" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_Dop" name="Додаткові документи;(завантажте документи що стосуються справи);bNew=true" type="file"></activiti:formProperty>
         
-        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sWorkTime" name="графік роботи ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganVK" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerkVK" name="Пошта ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для справок ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
+        
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Скарга на посадову особу"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="скаргу на посадову особу"></activiti:formProperty>
       </extensionElements>
@@ -74,7 +74,7 @@
     <serviceTask id="servicetask1" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+          <activiti:expression><![CDATA[${sMailClerkVK}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
@@ -115,19 +115,17 @@
 
 У разі потреби ви можете скасувати заявку.<br/>
 <p>[cancelTaskSimple]</p><br/> 
-	${sAddress} <br> 
-	${sPhoneOrgan} <br>
-	${sWorkTime} <br> 
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
-	${sNameOrgan}<br />
+	${sNameOrganVK}<br/>
+	${sPhoneOrgan} <br>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow2" sourceRef="servicetask1" targetRef="servicetask2"></sequenceFlow>
-    <userTask id="usertask1" name="Обробка звернення" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
+    <userTask id="usertask1" name="Обробка звернення" activiti:candidateGroups="SkargaPO_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="sCancelInfo" name="Чи актуальна заявка ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markersLine_1ZZ" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -155,10 +153,63 @@
         <activiti:formProperty id="passport_FizDov" name="Паспорт довірителя (Фізичної особи-підприємця); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="adres_FizDov" name="Адреса реєстрації довірителя (Фізичної особи-підприємця); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nFile_ConfidantDoc" name="Документ, що засвідчує повноваження довіреної особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_SSS" name="Деталі скарги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_SSS&quot;:{&quot;aElement_ID&quot;:[&quot;sBadPIB&quot;],&quot;sValue&quot;:&quot;Деталі скарги&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sBadPIB" name="ПІБ та посада особи на яку скарга; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBadOrgan" name="Місце роботи особи на яку скарга; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="ProblemData" name="Дата винекнення ситуації" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="asTema" name="Тема повідомлення / питання" type="enum" writable="false">
+          <activiti:value id="sEnamTemaZSS" name="Зловживання службовим становищем"></activiti:value>
+          <activiti:value id="sEnamTemaNKI" name="Неналежні дії з конфіденційною та/або інсайдерською інформацією"></activiti:value>
+          <activiti:value id="sEnamTemaPFP" name="Представник фізичної особи-підприємця"></activiti:value>
+          <activiti:value id="sEnamTemaPH" name="Отримання чи провокація хабара"></activiti:value>
+          <activiti:value id="sEnamTemaZP" name="Зловживання подарунками"></activiti:value>
+          <activiti:value id="sEnamTemaKI" name="Приховування конфлікту інтересів"></activiti:value>
+          <activiti:value id="sEnamTemaRR" name="Робота родичів"></activiti:value>
+          <activiti:value id="sEnamTemaSPP" name="Сприяння в просуванні за посадою"></activiti:value>
+          <activiti:value id="sEnamTemaNP" name="Неетична поведінка"></activiti:value>
+          <activiti:value id="sEnamTemaI" name="Інше"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="tProblem" name="Опис ситуації;(детально опишіть проблему)" type="fileHTML" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Dop" name="Додаткові документи;(завантажте документи що стосуються справи);bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="fileVidpov" name="Відповідь на скаргу; ;bNew=true" type="file" required="true"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow3" sourceRef="servicetask2" targetRef="usertask1"></sequenceFlow>
-    <serviceTask id="servicetask3" name="Лист Відповідь" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}"></serviceTask>
+    <serviceTask id="servicetask3" name="Лист Відповідь" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:expression><![CDATA[Відповідь на скаргу.]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+[pattern/mail/new_design/_common_content_start.html]
+Надаємо відповідь по вашому зверненню. Відповідь у додатку до листа.<br>
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_signature_start.html]
+	${sNameOrganVK}<br>
+	${sPhoneOrgan}<br>
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${fileVidpov}]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
     <sequenceFlow id="flow4" sourceRef="usertask1" targetRef="servicetask3"></sequenceFlow>
     <endEvent id="endevent1" name="End"></endEvent>
     <sequenceFlow id="flow5" sourceRef="servicetask3" targetRef="endevent1"></sequenceFlow>

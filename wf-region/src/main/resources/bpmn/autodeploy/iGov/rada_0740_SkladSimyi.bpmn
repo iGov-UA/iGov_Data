@@ -236,9 +236,9 @@ ${sNameOrgan}<br>
 Вашу заявку успішно опрацювли, послугу можливо надати.<br>
 Для отримання довідки про склад сім'ї необхідно звернутись до органу за адресою:<br>
 ${sAddress}<br>
-${sWorkTime}.
+${sWorkTime}
 </p>
-Дата коли можливо отримати довідку: <b>${dateVuzit}</b><br>
+Дата коли можливо отримати довідку: <b>${[dateVuzit]}</b><br>
 Також довідку можливо отримати в будь який день після цієї дати.
 <p>
 <b>З собою необхідно мати оригінали документів, сканкопії яких ви надавали:</b><br>
@@ -341,7 +341,7 @@ ${sNameOrgan},<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_feedback.html]
 [pattern/mail/new_design/_common_signature_start.html]
-${sNameOrgan},<br>
+${sNameOrgan}<br>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

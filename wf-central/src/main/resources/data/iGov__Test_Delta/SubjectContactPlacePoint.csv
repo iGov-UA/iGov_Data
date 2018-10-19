@@ -1,5 +1,5 @@
 nID;nID_Subject;nID_SubjectContactPlacePointType;nID_Place;nID_Place_Region;nID_PlaceBranch;nID_PlaceBuild;nID_PlaceBuildPart;nID_PlaceBuildPartCell
-1;2;1;2;1;1;1;1;1
-2;2;2;2;1;2;2;2;2
-3;2;1;2;1;3;3;3;3
-4;2;2;2;1;4;4;4;4
+1;257990;1;2;1;1;1;1;1
+2;257990;2;2;1;2;2;2;2
+3;257990;1;2;1;3;3;3;3
+4;257990;2;2;1;4;4;4;4

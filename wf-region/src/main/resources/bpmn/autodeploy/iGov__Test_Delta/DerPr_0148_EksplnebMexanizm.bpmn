@@ -67,7 +67,7 @@
         <activiti:formProperty id="sEkspOrgName" name="Повне найменування експертної організації" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="EkspData" name="Дата проведення експертизи" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sEkspNumber" name="Номер експертизи" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Eksp" name="Висновок експертизи стану охорони праці та безпеки промислового виробництва суб’єкта господарювання;( );bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Eksp" name="Висновок експертизи стану охорони праці та безпеки промислового виробництва суб’єкта господарювання; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="form_signed_1" name="Заява з ЕЦП; ;bPrintFormFileAsPDF=true,bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для наложения ЭЦП ; ;bVisible=false" type="string" default="pattern/print/DerPr/DerPr_0148_EksplnebMexanizm.html"></activiti:formProperty>
@@ -79,6 +79,10 @@
         <activiti:formProperty id="sAddress" name="адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_UA" name="sID_UA; ;bVisible=false" type="string"></activiti:formProperty>
         
+        <activiti:formProperty id="sName2Organ" name="шапка у принтформу ; ;bVisible=false" type="string" default="Головне управління Держпраці в області"></activiti:formProperty>
+        <activiti:formProperty id="sStrokOrg" name="шапка у принтформу ; ;bVisible=false" type="string" default="10"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="шапка у принтформу ; ;bVisible=false" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Дозвіл на початок виконання робіт підвищеної небезпеки та на експлуатацію (застосування) машин, механізмів, устаткування підвищеної небезпеки"></activiti:formProperty>
@@ -87,7 +91,20 @@
     </startEvent>
     <scriptTask id="scripttask1" name="Скріпт файл" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
-var file1 = ' '
+var file1 = '&lt;li&gt;Заява.&lt;/li&gt;'
+var file3 = ' '
+var file4 = ' '
+var res = 'res'
+if(execution.getVariable('nFile_ConfidantDoc') != null){
+  file3 = '&lt;li&gt; Документ, що засвідчує повноваження довіреної особи.&lt;/li&gt;'
+}
+if(execution.getVariable('nFile_DocReject') != null){
+  file4 = '&lt;li&gt; Відмова від адміністративного органу при первинному поданні документів.&lt;/li&gt;'
+}
+
+res = '&lt;ol&gt;'+file1+file3+file4+'&lt;/ol&gt;'
+
+execution.setVariable('tDokumentsList', res)
       </script>
     </scriptTask>
     <serviceTask id="servicetask7" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -211,7 +228,12 @@ var file1 = ' '
         <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_ComRegN.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="sName2Organ" name="sName2Organ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sStrokOrg" name="sStrokOrg; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="tDokumentsList; ;bVisible=false" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="form_signed_1" name="Заява з ЕЦП;;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>
         
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
@@ -364,7 +386,12 @@ ${tComment}</p>
         <activiti:formProperty id="fVidpovid" name="Відповідь (сканкопія); ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerDash2" name="markerDash2" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash2_Com.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="sName2Organ" name="sName2Organ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sStrokOrg" name="sStrokOrg; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="tDokumentsList" name="tDokumentsList; ;bVisible=false" type="textArea"></activiti:formProperty>
+        
         <activiti:formProperty id="form_signed_1" name="Заява з ЕЦП;;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/mvs/Opis_Zaporija.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Опис" writable="false"></activiti:formProperty>
         
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
@@ -419,7 +446,6 @@ ${tComment}</p>
 1. Документ, що посвідчує особу.<br />
 2. Для уповоноваженої особи - довіренність.<br />
 3. Оригінали документів, сканкопії яких були завантажені при поданні заяви.
-4. Платіжний документ (квитанція) про оплату вартості послуги.<br /><br />
 </p>
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>
@@ -543,13 +569,13 @@ ${tComment}</p>
         <activiti:formProperty id="sEkspNumber" name="Номер експертизи; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nFile_Eksp" name="Висновок експертизи стану охорони праці та безпеки промислового виробництва суб’єкта господарювання;( );bNew=true" type="file" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_R3" name="Результат обробки в Держпраці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_R3&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Результат обробки в поліції&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_R3" name="Результат обробки в Держпраці" type="markers" default="{&quot;attributes&quot;:{&quot;Line_R3&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Результат обробки в Держпраці&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" writable="false">
           <activiti:value id="sEnum_ok" name="Звернення задоволено"></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмовлено у наданні послуги"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="tComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі" type="textArea" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="fVidpovid" name="Відповідь Поліції (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fVidpovid" name="Відповідь Держпраці (сканкопія); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asVudacha" name="Чи видано відповідь заявнику?" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Заявник отримав відповідь"></activiti:value>
@@ -589,7 +615,6 @@ ${tComment}</p>
 1. Документ, що посвідчує особу.<br />
 2. Для уповоноваженої особи - довіренність.<br />
 3. Оригінали документів, сканкопії яких були завантажені при поданні заяви.
-4. Платіжний документ (квитанція) про оплату вартості послуги.<br /><br />
 </p>
 	${sAddress} <br> 
 	${sPhoneOrgan} <br>

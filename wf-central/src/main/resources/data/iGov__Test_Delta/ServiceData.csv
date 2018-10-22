@@ -910,8 +910,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 971;184;92;92;NULL;4;{"processDefinitionId":"dnepr_dms-212:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 972;185;92;92;NULL;4;{"processDefinitionId":"dnepr_dms-212s:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 973;286;50001;NULL;1;4;{"processDefinitionId":"_test_fields_address:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-974;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-975;2;50001;NULL;1;4;{"processDefinitionId":"demo:1:1"};;false;1;true;;BankID,EDS,mpbds;0
+974;1499;50012;NULL;9;4;{"processDefinitionId":"justice_1499_ChangeJuristic:1:1"};;false;1;true;;BankID,EDS,mpbds;0
+975;1488;50012;NULL;9;4;{"processDefinitionId":"dnepr_cnap_561:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 976;503;1;1;NULL;4;{"processDefinitionId":"rada_0503_RegistrRestTorg:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 977;178;92;92;NULL;4;{"processDefinitionId":"dms_0178_2545:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 978;659;92;92;NULL;4;{"processDefinitionId":"rada_659_CityHeadRequest:1:1"};;false;212;false;;BankID,EDS,mpbds;0

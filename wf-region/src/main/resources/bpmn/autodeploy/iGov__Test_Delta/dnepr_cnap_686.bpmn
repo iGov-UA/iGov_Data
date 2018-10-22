@@ -547,6 +547,18 @@
 				execution.setVariable('sVarPayGetSchet','31419501700049')
 				execution.setVariable('sVarSumPay','180.00')
           	}
+          if (sVarCNAP=='kramatorsk_jur')
+          	{
+          		execution.setVariable('sID_Merchant','i76592566863')
+          		execution.setVariable('sVarBankOut','Казначейство України (ЕАП)')
+          		execution.setVariable('sVarBankOplata','Краматор.УК/м.Краматорськ')
+          		execution.setVariable('sVarBankMFO','899998')
+          		execution.setVariable('sVarPayCode','22010300')
+          		execution.setVariable('sVarWhoPayGetCode','37944338')
+          		execution.setVariable('sVarWhoPayGet','Краматор.УК/м.Краматорськ')
+          		execution.setVariable('sVarPayGetSchet','31412501005059')
+          		execution.setVariable('sVarSumPay','180.00')
+          	}
           if (sVarCNAP=='charichanka_jur')
           	{
           		execution.setVariable('sID_Merchant','i76592566863')

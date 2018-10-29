@@ -549,7 +549,7 @@
           	}
           if (sVarCNAP=='kramatorsk_jur')
           	{
-          		execution.setVariable('sID_Merchant','i76592566863')
+          		execution.setVariable('sID_Merchant','i53983105691')
           		execution.setVariable('sVarBankOut','Казначейство України (ЕАП)')
           		execution.setVariable('sVarBankOplata','Краматор.УК/м.Краматорськ')
           		execution.setVariable('sVarBankMFO','899998')

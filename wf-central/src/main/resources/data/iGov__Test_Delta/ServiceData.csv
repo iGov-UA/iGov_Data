@@ -5335,8 +5335,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5469;740;115;115;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;89;false;;BankID,EDS,mpbds;0
 5470;740;653;653;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;89;false;;BankID,EDS,mpbds;0
 5471;1401;111;111;NULL;4;{"processDefinitionId":"sanepid_1401_TechDocs:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5472;1406;111;111;NULL;4;{"processDefinitionId":"sanepid_1406_ForeignSubstances:1:1"};;true;225;false;;BankID,EDS,mpbds;0
-5473;1407;111;111;NULL;4;{"processDefinitionId":"sanepid_1407_HealthDanger:1:1"};;true;225;false;;BankID,EDS,mpbds;0
+5472;1406;111;111;NULL;4;{"processDefinitionId":"sanepid_1406_ForeignSubstances:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5473;1407;111;111;NULL;4;{"processDefinitionId":"sanepid_1407_HealthDanger:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5474;1410;111;111;NULL;4;{"processDefinitionId":"dnepr_cnap_243:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5475;775;662;662;NULL;4;{"processDefinitionId":"dnepr_soczah_154:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 5476;780;662;662;NULL;4;{"processDefinitionId":"dnepr_soc_help_157:1:1"};;false;14;false;;BankID,EDS,mpbds;0

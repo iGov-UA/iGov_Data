@@ -3912,7 +3912,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4033;1481;40;40;NULL;4;{"processDefinitionId":"ZemRada_1481_OrendZmin_Sd:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4034;1392;40;40;NULL;4;{"processDefinitionId":"cnap_417:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 4035;17;16;16;NULL;4;{"processDefinitionId":"rada_0017_KvOblik_Mariupol:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-4036;848;NULL;NULL;NULL;4;{"processDefinitionId":"infrastr_1073_minStaff:1:1"};;false;1;false;;BankID,EDS,mpbds;0
+4036;848;NULL;NULL;NULL;4;{"processDefinitionId":"infrastr_1073_minStaff:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 4037;1437;577;577;NULL;4;{"processDefinitionId":"soc_815:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4038;8;577;577;NULL;4;{"processDefinitionId":"kalush_upszn_398:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4039;30;577;577;NULL;4;{"processDefinitionId":"kalush_soczah_401:1:1"};;false;14;false;;BankID,EDS,mpbds;0

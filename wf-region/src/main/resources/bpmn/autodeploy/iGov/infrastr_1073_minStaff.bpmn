@@ -36,7 +36,7 @@
           <activiti:value id="sCourier" name="кур’єрською доставкою (за Ваш рахунок)"></activiti:value>
           <activiti:value id="sOffline" name="особисто"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="warning0" name="Зверніть увагу" type="label" default="Вам потрібно завантажити та заповнити &lt;a href=&quot;https://drive.google.com/open?id=0B68lQ-z45GpYaFExblNOTUFnaEdMUE5Ycl9Qc2REanNScHhn&quot;  target=&quot;_blank&quot;&gt;обґрунтування і розрахунок мінімального складу екіпажу судна&lt;/a&gt;."></activiti:formProperty>
+        <activiti:formProperty id="warning0" name=" ; ;labelType=info" type="label" default="Зверніть увагу!  Вам потрібно завантажити та заповнити &lt;a href=&quot;https://drive.google.com/open?id=0B68lQ-z45GpYaFExblNOTUFnaEdMUE5Ycl9Qc2REanNScHhn &quot; target=&quot;_blank&quot;&gt;обґрунтування і розрахунок мінімального складу екіпажу судна&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nDocAnketa" name="Обґрунтування і розрахунок мінімального складу екіпажу судна; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nDocTO" name="Копія класифікаційного свідоцтва або копія акта технічного нагляду судна для здійснення його державної реєстрації; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nDocFlag" name="Копія свідоцтва про право плавання під Державним Прапором України; ;bNew=true" type="file" required="true"></activiti:formProperty>
@@ -54,7 +54,7 @@
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[sku_76@ukr.net]]></activiti:expression>
+          <activiti:expression><![CDATA[dept.admin@marad.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нова заявка. Свідоцтво про мінімальний склад екіпажу]]></activiti:expression>

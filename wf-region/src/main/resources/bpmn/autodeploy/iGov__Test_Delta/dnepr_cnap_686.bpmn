@@ -551,11 +551,11 @@
           	{
           		execution.setVariable('sID_Merchant','i53983105691')
           		execution.setVariable('sVarBankOut','Казначейство України (ЕАП)')
-          		execution.setVariable('sVarBankOplata','Краматор.УК/м.Краматорськ')
+          		execution.setVariable('sVarBankOplata','Краматор.УК м.Краматорськ')
           		execution.setVariable('sVarBankMFO','899998')
           		execution.setVariable('sVarPayCode','22010300')
           		execution.setVariable('sVarWhoPayGetCode','37944338')
-          		execution.setVariable('sVarWhoPayGet','Краматор.УК/м.Краматорськ')
+          		execution.setVariable('sVarWhoPayGet','Краматор.УК м.Краматорськ')
           		execution.setVariable('sVarPayGetSchet','31412501005059')
           		execution.setVariable('sVarSumPay','180.00')
           	}

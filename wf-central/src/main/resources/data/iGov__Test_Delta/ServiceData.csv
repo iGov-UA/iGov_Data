@@ -4896,7 +4896,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5030;368;198;198;NULL;4;{"processDefinitionId":"dfs_0368_extSingleTax_kherson:1:1"};;false;285;true;;BankID,EDS,mpbds;0
 5031;376;198;198;NULL;4;{"processDefinitionId":"dfs_0376_RefNoDebt_kherson:1:1"};;false;285;true;;BankID,EDS,mpbds;0
 5032;655;198;198;NULL;4;{"processDefinitionId":"dfs_0655_spravkaDoxod_2018:1:1"};;false;285;true;;BankID,EDS,mpbds;0
-5033;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
+3287;55;2;2;NULL;4;{"processDefinitionId":"DABI_0055_GotEkspluatSUD:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5034;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5035;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0
 5036;2;2;2;NULL;4;{"processDefinitionId":"demo:1:1"};;true;1;true;;BankID,EDS,mpbds;0

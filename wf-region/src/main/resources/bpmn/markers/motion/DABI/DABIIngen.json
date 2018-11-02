@@ -8,6 +8,16 @@
         "sCond": "chekOpal"
       },
       "sCondition": "[sCond]=='yes'"
+    },
+    "ShowFieldsOnCondition_OpalIndTip": {
+      "aField_ID": [
+        "sOpalIndTip"
+      ],
+      "asID_Field": {
+        "sCond1": "chekOpal",
+        "sCond2": "asOpal"
+      },
+      "sCondition": "[sCond1]=='yes' && [sCond2]=='sEnamOpalInd'"
     }
   }
 }

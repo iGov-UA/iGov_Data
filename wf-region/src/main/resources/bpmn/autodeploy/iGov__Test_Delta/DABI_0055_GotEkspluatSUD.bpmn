@@ -74,7 +74,7 @@
         <activiti:formProperty id="sLabelDK2000" name=" ; ;labelType=info" type="label" default="посилання на &lt;a href=&quot;http://zakon5.rada.gov.ua/rada/show/va507565-00 &quot; target=&quot;_blank&quot;&gt;класифікатор будівель та споруд ДК 018-2000&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="asKlasNasl" name="Клас наслідків (відповідальності)" type="enum" required="true">
           <activiti:value id="sEnamCC1" name="СС1"></activiti:value>
-          <activiti:value id="sEnamCC1" name="СС2"></activiti:value>
+          <activiti:value id="sEnamCC2" name="СС2"></activiti:value>
           <activiti:value id="sEnamCC3" name="СС3"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sInfoBudBeg" name="Дата початку будівництва" type="date" required="true"></activiti:formProperty>
@@ -392,7 +392,7 @@ ${sNameOrgan}<br />
         <activiti:formProperty id="sDK2000kode" name="Код об’єкта згідно з Державним класифікатором будівель та споруд ДК 018-2000" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asKlasNasl" name="Клас наслідків (відповідальності)" type="enum" writable="false">
           <activiti:value id="sEnamCC1" name="СС1"></activiti:value>
-          <activiti:value id="sEnamCC1" name="СС2"></activiti:value>
+          <activiti:value id="sEnamCC2" name="СС2"></activiti:value>
           <activiti:value id="sEnamCC3" name="СС3"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sInfoBudBeg" name="Дата початку будівництва" type="date" writable="false"></activiti:formProperty>

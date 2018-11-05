@@ -5650,3 +5650,10 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5784;185;38;38;NULL;4;{"processDefinitionId":"dnepr_dms-212s:1:1"};;false;89;true;;BankID,EDS,mpbds;0
 5785;24;38;38;NULL;4;{"processDefinitionId":"rada_0024_dovidka_live_place_2_step_Dnepr:1:1"};;false;89;true;;BankID,EDS,mpbds;0
 5786;740;38;38;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5787;54;2;2;NULL;4;{"processDefinitionId":"DABI_0054_GotEkspluat:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5788;56;2;2;NULL;4;{"processDefinitionId":"DABI_0056_GotEkspluatBP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5789;1568;2;2;NULL;4;{"processDefinitionId":"DABI_1568_DekVukBud:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5790;1569;2;2;NULL;4;{"processDefinitionId":"DABI_1569_PovVukBudBP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5791;1575;2;2;NULL;4;{"processDefinitionId":"DABI_1575_ZminBudSS1:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5792;1576;2;2;NULL;4;{"processDefinitionId":"DABI_1576_ZminBudBP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+

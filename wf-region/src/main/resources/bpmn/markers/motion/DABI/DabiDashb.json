@@ -1,0 +1,40 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_DabiOk": {
+      "aField_ID": [
+        "fileVidpov"
+      ],
+      "asID_Field": {
+        "sReason": "asDabiVidp"
+      },
+      "sCondition": "[sReason]=='sEnamOk'"
+    },
+    "RequiredFieldsOnCondition_DabiOk": {
+      "aField_ID": [
+        "fileVidpov"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDabiVidp"
+      },
+      "sCondition": "[sCondit1]=='sEnamOk'"
+    },
+    "ShowFieldsOnCondition_DabiBad": {
+      "aField_ID": [
+        "sRegistrNumber"
+      ],
+      "asID_Field": {
+        "sReason": "asDabiVidp"
+      },
+      "sCondition": "[sReason]=='sEnamBad'"
+    },
+    "RequiredFieldsOnCondition_DabiBad": {
+      "aField_ID": [
+        "sRegistrNumber"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDabiVidp"
+      },
+      "sCondition": "[sCondit1]=='sEnamBad'"
+    }
+  }
+}

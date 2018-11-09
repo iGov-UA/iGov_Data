@@ -445,7 +445,7 @@ ${sNameOrgan}<br>
 Візьміть з собою оригінали документів які ви додали до заявки.<br><br>
 ${sPhoneOrgan}<br>
 ${sAddress}<br>
-${sWorkDay}<br>
+${sWorkTime}<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br>
@@ -600,7 +600,7 @@ ${sNameOrgan}<br>
 У разі отримання довідки представником – довіреність, що підтверджує повноваження особи як представника, та її завірена в установленому порядку копія, (крім випадків, коли законними представниками є батьки (усиновителі)).
 
 ${sAddress}<br>
-${sWorkDay}<br>
+${sWorkTime}<br>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br>

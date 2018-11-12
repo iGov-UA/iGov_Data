@@ -211,7 +211,7 @@ execution.setVariable('sNotification_day', timer)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[tanyazol@gmail.com]]></activiti:expression>
+          <activiti:expression><![CDATA[akylish88@gmail.com]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення. Дозвіл на всі види досліджень та експериментальні роботи з мікроорганізмами ІІІ-IV групи патогенності (небезпеки) або матеріалом підозрілим на їх вміст.]]></activiti:string>

@@ -1,7 +1,7 @@
 nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunction
 1;rada_0627_DovKvOblik;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 2;rada_0627_DovKvOblik;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:14, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
-3;cherkasy_lmg_415;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:1, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+3;cherkasy_lmg_415;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:1, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 4;Chernigov_RecoveryConsumerRights_798;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 5;Chernigov_RecoveryConsumerRights_798;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:10, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 6;cnap_293;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
@@ -64,14 +64,14 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 64;DGK_0102_6Zem;"usertask1";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']}";"escalation/escalation_template.html";1
 65;DGK_0102_6Zem;"usertask1";"(nDays >= nDaysLimit)&&(bAssigned==false)";"{nDaysLimit:3}";"escalation/escalation_template.html";2
 
-78;dnepr_cnap_220;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-79;dnepr_cnap_220;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-80;dnepr_cnap_221;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-81;dnepr_cnap_221;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-82;dnepr_cnap_222;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-83;dnepr_cnap_222;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-84;dnepr_cnap_223;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-85;dnepr_cnap_223;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+78;dnepr_cnap_220;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+79;dnepr_cnap_220;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+80;dnepr_cnap_221;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+81;dnepr_cnap_221;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+82;dnepr_cnap_222;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+83;dnepr_cnap_222;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+84;dnepr_cnap_223;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+85;dnepr_cnap_223;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 
 88;DGK_0041_VupPomulok;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
 89;DGK_0041_VupPomulok;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:4, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
@@ -87,31 +87,31 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 105;dnepr_cnap_238;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:18, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
 106;dnepr_cnap_238a;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
 107;dnepr_cnap_238a;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:18, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
-108;dnepr_cnap_240;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-109;dnepr_cnap_240;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-110;dnepr_cnap_241;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-111;dnepr_cnap_241;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-112;dnepr_cnap_242;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-113;dnepr_cnap_242;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-114;dnepr_cnap_243;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-115;dnepr_cnap_243;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-116;dnepr_cnap_244;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-117;dnepr_cnap_244;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-120;dnepr_cnap_248;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-121;dnepr_cnap_248;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-122;dnepr_cnap_251;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-123;dnepr_cnap_251;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-124;dnepr_cnap_252;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-125;dnepr_cnap_252;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-126;dnepr_cnap_253;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-127;dnepr_cnap_253;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+108;dnepr_cnap_240;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+109;dnepr_cnap_240;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+110;dnepr_cnap_241;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+111;dnepr_cnap_241;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+112;dnepr_cnap_242;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+113;dnepr_cnap_242;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+114;dnepr_cnap_243;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+115;dnepr_cnap_243;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+116;dnepr_cnap_244;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+117;dnepr_cnap_244;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+120;dnepr_cnap_248;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+121;dnepr_cnap_248;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+122;dnepr_cnap_251;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+123;dnepr_cnap_251;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:35, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+124;dnepr_cnap_252;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+125;dnepr_cnap_252;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+126;dnepr_cnap_253;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+127;dnepr_cnap_253;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 128;dnepr_cnap_254;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
 129;dnepr_cnap_254;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:13, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
-130;dnepr_cnap_256;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-131;dnepr_cnap_256;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:28, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+130;dnepr_cnap_256;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+131;dnepr_cnap_256;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:28, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 
-136;dnepr_cnap_264;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-137;dnepr_cnap_264;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:20, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+136;dnepr_cnap_264;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+137;dnepr_cnap_264;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:20, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 
 144;dnepr_cnap_268;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 145;dnepr_cnap_268;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:28, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
@@ -143,8 +143,8 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 177;dnepr_cnap_529_mode_worktime;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 178;dnepr_cnap_529_mode_worktime;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:7, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 
-181;dnepr_cnap_54_55;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-182;dnepr_cnap_54_55;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:7, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+181;dnepr_cnap_54_55;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+182;dnepr_cnap_54_55;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:7, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 
 185;dnepr_cnap_59;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
 186;dnepr_cnap_59;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:7, asRecipientMail:['Akylish88@gmail.com']};escalation/escalation_template.html;1
@@ -202,22 +202,22 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 249;dnepr_soczah_165;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:60, asRecipientMail:[ 'gupczn@adm.dp.ua']};escalation/escalation_template.html;1
 250;dnepr_soczah_165;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:14, asRecipientMail:[ 'gupczn@adm.dp.ua']};escalation/escalation_template.html;1
 251;dfs_0655_spravkaDoxod_onlyDnepr;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['dmitrij.zabrudskij@privatbank.ua']};escalation/escalation_template.html;1
-252;dvs_619;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
-253;dvs_619;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:30, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
-254;dvs_621;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
-255;dvs_732;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
-256;dvs_737;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
-257;dvs_739;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
+252;dvs_619;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
+253;dvs_619;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:30, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
+254;dvs_621;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
+255;dvs_732;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
+256;dvs_737;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
+257;dvs_739;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua','sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
 258;gni_69;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['valery.stavitsky@gmail.com',  'KovalevaAI@ua.fm']};escalation/escalation_template.html;1
-259;dvs_0150;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com','info@dp.dvs.gov.ua']};escalation/escalation_template.html;1
+259;dvs_0150;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com','info@dp.dvs.gov.ua']};escalation/escalation_template.html;1
 275;infrastr_384;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:1, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 276;infrastr_1073_minStaff;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:1, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
-277;kalush_soczah_401;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-278;kalush_upszn_398;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+277;kalush_soczah_401;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+278;kalush_upszn_398;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 279;kalush_uszn_400;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 280;ZemRada_0657_ZemNajavnist;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 281;ZemRada_0657_ZemNajavnist;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
-282;kiev_mda_subsidies;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:60, asRecipientMail:[ 'tanyazol@gmail.com']};escalation/escalation_template.html;1
+282;kiev_mda_subsidies;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:60, asRecipientMail:[ 'akylish88@gmail.com']};escalation/escalation_template.html;1
 283;kiev_mda-2;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:[ 'agerman.ua@gmail.com']};escalation/escalation_template.html;1
 284;kiev_mda-2;usertask3;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:[ 'agerman.ua@gmail.com']};escalation/escalation_template.html;1
 285;kiev_mda-2;usertask4;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:[ 'agerman.ua@gmail.com']};escalation/escalation_template.html;1
@@ -265,8 +265,8 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 330;Rada_0161_InfoZaput;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:30, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 331;ternopol_oda_226;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 332;ternopol_oda_239;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
-333;ternopol_rcnap_117;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
-334;ternopol_rcnap_117;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:10, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+333;ternopol_rcnap_117;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
+334;ternopol_rcnap_117;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:10, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 335;ternopol_rcnap_208;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com', 'sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
 336;ternopol_rcnap_208;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:10, asRecipientMail:['akylish88@gmail.com', 'sofia.danylevych@gmail.com']};escalation/escalation_template.html;1
 340;uzhgorod_cnap_112;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:7, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
@@ -289,7 +289,7 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 367;zhytomyr_mvk_families-3;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['l_ydochka@ukr.net']};escalation/escalation_template.html;1
 368;zhytomyr_mvk_families-6;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['l_ydochka@ukr.net']};escalation/escalation_template.html;1
 369;zhytomyr_mvk_families-7;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['l_ydochka@ukr.net']};escalation/escalation_template.html;1
-370;zhytomyr_mvk_families-8;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+370;zhytomyr_mvk_families-8;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 
 372;Uzgorod_618;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:4, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 373;Uzgorod_618;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:15, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
@@ -691,7 +691,7 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 784;subsidiesUkraine;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:30};escalation/escalation_template.html;2
 785;subsidiesUkraine;usertask2;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:30};escalation/escalation_template.html;2
 786;dnepr_dms-89sd;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
-787;kalush_minsoc_399;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['tanyazol@gmail.com']};escalation/escalation_template.html;1
+787;kalush_minsoc_399;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1
 788;kalush_minsoc_399;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==false);{nDaysLimit:3};escalation/escalation_template.html;2
 789;kalush_minsoc_399;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:10};escalation/escalation_template.html;2
 790;justice_989;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['akylish88@gmail.com']};escalation/escalation_template.html;1

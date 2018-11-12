@@ -109,7 +109,7 @@
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[tanyazol@gmail.com]]></activiti:expression>
+          <activiti:expression><![CDATA[akylish88@gmail.com]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення. Дозвіл на проведення  робіт на підприємствах, діяльність яких пов`язана з джерелами неіонізуючого випромінювання]]></activiti:string>
@@ -302,7 +302,7 @@
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[tanyazol@gmail.com]]></activiti:expression>
+          <activiti:expression><![CDATA[akylish88@gmail.com]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення. Дозвіл на проведення  робіт на підприємствах, діяльність яких пов`язана з джерелами неіонізуючого випромінювання]]></activiti:string>

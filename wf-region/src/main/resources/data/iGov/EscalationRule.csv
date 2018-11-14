@@ -156,16 +156,16 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 193;dfs_0376_RefNoDebt;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['valery.stavitsky@gmail.com',  'KovalevaAI@ua.fm']};escalation/escalation_template.html;1
 194;rada_0790_PonovDogOrend;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 195;rada_0790_PonovDogOrend;usertask3;nElapsedDays >= nDaysLimit;{nDaysLimit:25, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
-196;dnepr_dms-212;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
-197;dnepr_dms-212s;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
+196;Registr_0184_RegistrDo14;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
+197;Registr_0185_ZniatDo14;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 198;rada_0023_dovidkaOSG;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 199;rada_0956_DovidkZemChast;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 200;rada_0956_DovidkZemChast;usertask2;nElapsedDays >= nDaysLimit;{nDaysLimit:10, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 201;rada_1429_OperAdrBud_Kropiv;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:5, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 202;rada_1429_OperAdrBud_Kropiv;usertask3;nElapsedDays >= nDaysLimit;{nDaysLimit:10, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 203;justice_0353_PervDopom;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
-204;dnepr_dms-89;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
-205;dnepr_dms-89s;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
+204;Registr_0029_RegistrZniatMP;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
+205;Registr_0026_ZniatMP;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 206;APU_734_Vuk500_Dnp;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:3, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 207;dnepr_GlavAPU_259;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:10, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 208;dnepr_mvd_199;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:1, asRecipientMail:['agerman.ua@gmail.com ']};escalation/escalation_template.html;1
@@ -690,7 +690,7 @@ nID;sID_BP;sID_UserTask;sCondition;soData;sPatternFile;nID_EscalationRuleFunctio
 783;socialhelp_kidsUkraine;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:10};escalation/escalation_template.html;2
 784;subsidiesUkraine;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:30};escalation/escalation_template.html;2
 785;subsidiesUkraine;usertask2;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:30};escalation/escalation_template.html;2
-786;dnepr_dms-89sd;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
+786;Registr_0144_ZniatSmert;usertask1;nElapsedDays >= nDaysLimit;{nDaysLimit:3, asRecipientMail:['smoktii.igov@gmail.com']};escalation/escalation_template.html;1
 787;kalush_minsoc_399;usertask1;nElapsedDays > nDaysLimit;{nDaysLimit:5, asRecipientMail:['AigovTestMeta@meta.ua']};escalation/escalation_template.html;1
 788;kalush_minsoc_399;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==false);{nDaysLimit:3};escalation/escalation_template.html;2
 789;kalush_minsoc_399;usertask1;(nElapsedDays >= nDaysLimit)&&(bAssigned==true);{nDaysLimit:10};escalation/escalation_template.html;2

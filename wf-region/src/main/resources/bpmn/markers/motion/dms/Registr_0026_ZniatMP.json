@@ -1,0 +1,33 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_2": {
+      "aField_ID": [
+        "lastName_UA1",
+        "firstName_UA1",
+        "middleName_UA1"
+      ],
+      "asID_Field": {
+        "sReason": "asPrevName"
+      },
+      "sCondition": "[sReason]=='sYes'"
+    },
+    "ShowFieldsOnCondition_7": {
+      "aField_ID": [
+        "nMilit"
+      ],
+      "asID_Field": {
+        "sReason1": "asMilitStatus"
+      },
+      "sCondition": "[sReason1]=='sYesM'"
+    },
+    "ShowFieldsOnCondition_16": {
+      "aField_ID": [
+        "sNameOtherDocument"
+      ],
+      "asID_Field": {
+        "sClient": "asEnumTypeDocument"
+      },
+      "sCondition": "[sClient] == 'sEnumElement_Other'"
+    }
+  }
+}

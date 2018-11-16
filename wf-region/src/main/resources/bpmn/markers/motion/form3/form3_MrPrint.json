@@ -7,7 +7,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamRMP'"
+      "sCondition": "[sCondit1]=='sEnamRMP'||[sCondit1]=='Про зареєстроване місце проживання'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrZMP": {
       "aField_ID": [
@@ -16,7 +16,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamZMP'"
+      "sCondition": "[sCondit1]=='sEnamZMP'||[sCondit1]=='Про зняття з реєстрації місця проживання'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrKilkZr": {
       "aField_ID": [
@@ -25,7 +25,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamKilkZr'"
+      "sCondition": "[sCondit1]=='sEnamKilkZr'||[sCondit1]=='Про кількість зареєстрованих у житловому приміщенні/будинку осіб'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrBatDit": {
       "aField_ID": [
@@ -34,7 +34,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamBatDit'"
+      "sCondition": "[sCondit1]=='sEnamBatDit'||[sCondit1]=='Про реєстрацію матері/батька/опікуна (піклувальника) з дитиною/(дітьми)'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrNasPunkt": {
       "aField_ID": [
@@ -43,7 +43,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamNasPunkt'"
+      "sCondition": "[sCondit1]=='sEnamNasPunkt'||[sCondit1]=='Про те, що місце проживання особи було зареєстровано на території даного населенного пункту'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrPomer": {
       "aField_ID": [
@@ -52,7 +52,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamPomer'"
+      "sCondition": "[sCondit1]=='sEnamPomer'||[sCondit1]=='Про останнє місце реєстрації померлого'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrZRPomer": {
       "aField_ID": [
@@ -61,7 +61,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamZRPomer'"
+      "sCondition": "[sCondit1]=='sEnamZRPomer'||[sCondit1]=='Про те, що особа була зареєстрована разом з померлим на день його смерті'"
     },
     "ShowFieldsOnCondition_sBody_ZayavaMrVidMal": {
       "aField_ID": [
@@ -70,7 +70,7 @@
       "asID_Field": {
         "sCondit1": "asDovidkaType"
       },
-      "sCondition": "[sCondit1]=='sEnamVidMal'"
+      "sCondition": "[sCondit1]=='sEnamVidMal'||[sCondit1]=='Про відсутність малолітніх та неповнолітніх дітей у житловому приміщенні/будинку'"
     }
   }
 }

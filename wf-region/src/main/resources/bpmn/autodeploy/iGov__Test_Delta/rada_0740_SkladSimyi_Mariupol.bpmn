@@ -119,7 +119,6 @@
         
         <activiti:formProperty id="markerFileDituDeath" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_Mr_FileDituDeath.json')}"></activiti:formProperty>
         
-        
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptMiddleName" name="По батькові; ;bVisible=false" type="string"></activiti:formProperty>
@@ -184,8 +183,21 @@ if(execution.getVariable('asStatus') == 'sZareyDov')
   execution.setVariable('ScriptPassport', pasD5)
   }
 
+var TypeVul = ' '
+if(execution.getVariable('asTypeVul') == 'sEnamVul'){TypeVul='вулиця'}
+if(execution.getVariable('asTypeVul') == 'sEnamProv'){TypeVul='провулок'}
+if(execution.getVariable('asTypeVul') == 'sEnamProsp'){TypeVul='проспект'}
+if(execution.getVariable('asTypeVul') == 'sEnamBulv'){TypeVul='бульвар'}
+if(execution.getVariable('asTypeVul') == 'sEnamNaber'){TypeVul='набережна'}
+if(execution.getVariable('asTypeVul') == 'sEnamUzviz'){TypeVul='узвіз'}
+if(execution.getVariable('asTypeVul') == 'sEnamTupik'){TypeVul='тупик'}
+if(execution.getVariable('asTypeVul') == 'sEnamStanc'){TypeVul='станція'}
+if(execution.getVariable('asTypeVul') == 'sEnamSose'){TypeVul='шосе'}
+if(execution.getVariable('asTypeVul') == 'sEnamPlosh'){TypeVul='площа'}
+if(execution.getVariable('asTypeVul') == 'sEnamGM'){TypeVul='жилий масив'}
+if(execution.getVariable('asTypeVul') == 'sEnamProy'){TypeVul='проїзд'}
+if(execution.getVariable('asTypeVul') == 'sEnamSpusk'){TypeVul='спуск'}
 
-var TypeVul = execution.getVariable('asTypeVul')
 var Vul = execution.getVariable('sRegistrationVul')
 var Bud = execution.getVariable('sRegistrationBud')
 var Korp = execution.getVariable('lRegistrationKorp')
@@ -371,6 +383,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="sBody_ZayavaMrVidMal" name="[pattern/print/rada/SkladSimyi_ZayavaMrVidMal.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про відсутність малолітніх та неповнолітніх дітей у житловому приміщенні/будинку" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('form3/form3_MrPrint.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptMiddleName" name="По батькові; ;bVisible=false" type="string"></activiti:formProperty>
@@ -559,8 +572,17 @@ ${sNameOrgan}<br>
           <activiti:value id="sEnamNejavka" name="Заявник, не з'явився"></activiti:value>
         </activiti:formProperty>
         
-        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/SkladSimyi_Zayava.html]; ;bVisible=false ,bPrintform=true" type="string" default="Заява на довідку" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrRMP" name="[pattern/print/rada/SkladSimyi_ZayavaMrRMP.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про зареєстроване місце проживання" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrZMP" name="[pattern/print/rada/SkladSimyi_ZayavaMrZMP.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про зняття з реєстрації місця проживання" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrKilkZr" name="[pattern/print/rada/SkladSimyi_ZayavaMrKilkZr.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про кількість зареєстрованих у житловому приміщенні/будинку осіб" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrBatDit" name="[pattern/print/rada/SkladSimyi_ZayavaMrBatDit.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про реєстрацію матері/батька/опікуна (піклувальника) з дитиною/(дітьми)" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrNasPunkt" name="[pattern/print/rada/SkladSimyi_ZayavaMrNasPunkt.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про те, що місце проживання особи було зареєстровано на території даного населенного пункту" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrPomer" name="[pattern/print/rada/SkladSimyi_ZayavaMrPomer.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про останнє місце реєстрації померлого" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrZRPomer" name="[pattern/print/rada/SkladSimyi_ZayavaMrZRPomer.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про те, що особа була зареєстрована разом з померлим на день його смерті" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_ZayavaMrVidMal" name="[pattern/print/rada/SkladSimyi_ZayavaMrVidMal.html]; ;bVisible=false ,bPrintform=true" type="string" default="Про відсутність малолітніх та неповнолітніх дітей у житловому приміщенні/будинку" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('form3/form3_MrPrint.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptMiddleName" name="По батькові; ;bVisible=false" type="string"></activiti:formProperty>

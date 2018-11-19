@@ -16,7 +16,7 @@
           <activiti:value id="sEnumElement_Other" name="Інший документ"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sBankIdPassport" name="Документ, що посвідчує заявника; Серія та номер документу, дата і орган, що його видав" type="textArea" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника; Серія та номер документу, дата і орган, що його видав" type="textArea" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" default="+380" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDate_of_birth" name="Дата народження; Формат - ДД.ММ.PPPP" type="string" required="true"></activiti:formProperty>
@@ -56,7 +56,6 @@
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Тип органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sKab89" name="Номер кабінету ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sArea" name="район/місто звернення ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -74,30 +73,17 @@
         <activiti:formProperty id="markers11" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/registration_1.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
-    <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
-    <serviceTask id="servicetask1" name="Для очереди" activiti:delegateExpression="#{procedQueueTickets}"></serviceTask>
-    <boundaryEvent id="boundaryerror1" name="Error" attachedToRef="servicetask1">
-      <errorEventDefinition></errorEventDefinition>
-    </boundaryEvent>
-    <sequenceFlow id="flow1" sourceRef="boundaryerror1" targetRef="endevent2"></sequenceFlow>
-    <endEvent id="endevent2" name="End"></endEvent>
+    <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
     <scriptTask id="scripttask1" name="Передача значений" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
-      var src=execution.getVariable('date_of_visit')
-var year=src.substr(0,4)
-var month=src.substr(5,2)
-var day=src.substr(8,2)
+var minpay='13,60'
+var maxpay='40,80'
 
-minpay='13,60'
-maxpay='40,80'
-
-if (year=='2017') {
-	minpay='27,20'
-    maxpay='81,60'
-
-	minpay='13,60'
-    maxpay='40,80'    
-}
+if(execution.getVariable('sID_Public_SubjectOrganJoin') == 'khers_khersT')
+  {
+  minpay='15,65'
+  maxpay='46,95'
+  }
 
 execution.setVariable('sMinPay', minpay)
 execution.setVariable('sMaxPay', maxpay)
@@ -207,7 +193,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sNoR" name="Ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sWhenCome" name="Дата зняття з реєстрації з попереднього місця проживання; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sBankIdPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="asDecision" name="Рішення держслужбовця" type="enum" required="true">
           <activiti:value id="sAccept" name="Призначити зустріч у відділенні"></activiti:value>
           <activiti:value id="sDecline" name="Відмовити в наданні послуги"></activiti:value>
@@ -313,7 +299,7 @@ execution.setVariable('sMaxPay', maxpay)
 							<li>у розмірі ${sMinPay} грн, якщо Ви звертаєтесь для реєстрації у термін до 30 календарних днів після зняття з попереднього місця реєстрації</li>
 							<li>у розмірі ${sMaxPay} грн, якщо Ви звертаєтесь для реєстрації після 30 календарних днів після зняття з попереднього місця реєстрації</li>
 						</ul>
-						<li>Прийти до ${sOrganType} за адресою: ${sAddress} з необхідними документами та звернутись до ${sKab89}.</li>
+						<li>Прийти до ${sOrganType} за адресою: ${sAddress}</li>
 						<li>Підписати необхідні документи та отримати печатку у паспортний документ.</li>
 					</ul>
 				</p>
@@ -400,7 +386,7 @@ execution.setVariable('sMaxPay', maxpay)
 							<li>у розмірі ${sMinPay} грн, якщо Ви звертаєтесь для реєстрації у термін до 30 календарних днів після зняття з попереднього місця реєстрації</li>
 							<li>у розмірі ${sMaxPay} грн, якщо Ви звертаєтесь для реєстрації після 30 календарних днів після зняття з попереднього місця реєстрації</li>
 						</ul>
-						<li>Прийти до ${sOrganType} за адресою: ${sAddress} з необхідними документами та звернутись до ${sKab89}.</li>
+						<li>Прийти до ${sOrganType} за адресою: ${sAddress}</li>
 						<li>Підписати необхідні документи та отримати печатку у паспортний документ.</li>
 					</ul>
 				</p>
@@ -494,7 +480,7 @@ execution.setVariable('sMaxPay', maxpay)
         </activiti:formProperty>
         <activiti:formProperty id="sWhenCome" name="Дата зняття з реєстрації з попереднього місця проживання" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює реєстрацію ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBankIdPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="asResult" name="Результат зустрічі" type="enum" required="true">
           <activiti:value id="sReestr" name="Дитина зареєстрована"></activiti:value>
           <activiti:value id="sNejav" name="Громадянин не з'явився"></activiti:value>
@@ -577,7 +563,6 @@ execution.setVariable('sMaxPay', maxpay)
     <sequenceFlow id="flow38" name="${sIsCancellCustomeVizite!='False'}" sourceRef="exclusivegateway3" targetRef="endevent3">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sIsCancellCustomeVizite!='False'}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow39" sourceRef="servicetask1" targetRef="scripttask1"></sequenceFlow>
     <scriptTask id="scripttask3" name="Script Task (groovy)" scriptFormat="groovy" activiti:autoStoreVariables="false">
       <script>execution.setVariable('sDateCreate', new Date().format("dd.MM.yyyy").toString())</script>
     </scriptTask>
@@ -587,15 +572,6 @@ execution.setVariable('sMaxPay', maxpay)
     <bpmndi:BPMNPlane bpmnElement="Registr_0185_ZniatDo14" id="BPMNPlane_Registr_0185_ZniatDo14">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="40.0" y="125.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
-        <omgdc:Bounds height="71.0" width="121.0" x="100.0" y="107.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="boundaryerror1" id="BPMNShape_boundaryerror1">
-        <omgdc:Bounds height="30.0" width="30.0" x="100.0" y="148.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
-        <omgdc:Bounds height="35.0" width="35.0" x="51.0" y="216.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
         <omgdc:Bounds height="65.0" width="113.0" x="104.0" y="14.0"></omgdc:Bounds>
@@ -649,12 +625,8 @@ execution.setVariable('sMaxPay', maxpay)
         <omgdc:Bounds height="72.0" width="155.0" x="239.0" y="11.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
-        <omgdi:waypoint x="75.0" y="142.0"></omgdi:waypoint>
-        <omgdi:waypoint x="100.0" y="142.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
-        <omgdi:waypoint x="115.0" y="178.0"></omgdi:waypoint>
-        <omgdi:waypoint x="68.0" y="216.0"></omgdi:waypoint>
+        <omgdi:waypoint x="57.0" y="125.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="79.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow33" id="BPMNEdge_flow33">
         <omgdi:waypoint x="217.0" y="46.0"></omgdi:waypoint>
@@ -755,10 +727,6 @@ execution.setVariable('sMaxPay', maxpay)
         <bpmndi:BPMNLabel>
           <omgdc:Bounds height="42.0" width="100.0" x="807.0" y="264.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow39" id="BPMNEdge_flow39">
-        <omgdi:waypoint x="160.0" y="107.0"></omgdi:waypoint>
-        <omgdi:waypoint x="160.0" y="79.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow40" id="BPMNEdge_flow40">
         <omgdi:waypoint x="316.0" y="83.0"></omgdi:waypoint>

@@ -206,13 +206,13 @@ var Adres = ' '
   
 if(execution.getVariable('asBudType') == 'sBagkvatur')
   {
-  if(execution.getVariable('asKorp') == 'yes'){Adres='м.Дніпро, '+TypeVul+' '+Vul+', б. '+Bud+', корп. '+Korp+', кв. '+Kvart}
-  if(execution.getVariable('asKorp') == 'no'){Adres='м.Дніпро, '+TypeVul+' '+Vul+', б. '+Bud+', кв. '+Kvart}
+  if(execution.getVariable('asKorp') == 'yes'){Adres='м.Маріуполь, '+TypeVul+' '+Vul+', б. '+Bud+', корп. '+Korp+', кв. '+Kvart}
+  if(execution.getVariable('asKorp') == 'no'){Adres='м.Маріуполь, '+TypeVul+' '+Vul+', б. '+Bud+', кв. '+Kvart}
   }
 if(execution.getVariable('asBudType') == 'sPrivSector')
   {
-  if(execution.getVariable('asKvart') == 'yes'){Adres='м.Дніпро, '+TypeVul+' '+Vul+', б. '+Bud+', кв. '+Kvart}
-  if(execution.getVariable('asKvart') == 'no'){Adres='м.Дніпро, '+TypeVul+' '+Vul+', б. '+Bud}
+  if(execution.getVariable('asKvart') == 'yes'){Adres='м.Маріуполь, '+TypeVul+' '+Vul+', б. '+Bud+', кв. '+Kvart}
+  if(execution.getVariable('asKvart') == 'no'){Adres='м.Маріуполь, '+TypeVul+' '+Vul+', б. '+Bud}
   }  
 execution.setVariable('ScriptAdress', Adres)
 

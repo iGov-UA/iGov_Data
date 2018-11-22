@@ -11,6 +11,27 @@
         "sClient": "sID_Public_SubjectOrganJoin"
       },
       "sCondition": "[sClient]=='dnepr_and' || [sClient]=='dnepr_shev_chech' || [sClient]=='dnepr_centr_sob' || [sClient]=='dnepr_and_ind' || [sClient]=='dnepr_centr' || [sClient]=='dnepr_chech' || [sClient]=='dnepr_novokod' || [sClient]=='dnepr_samars' || [sClient]=='dnepr_taroms'"
+    },
+    "ShowFieldsOnCondition_KhersonLabel": {
+      "aField_ID": [
+        "labelKhersonVK"
+      ],
+      "asID_Field": {
+        "sReason": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sReason]=='khers_khersT'"
+    },
+    "ValuesFieldsOnCondition_KhersVK_TextinEmail": {
+      "aField_ID": [
+        "sAdd_TextinEmail_KhersVK"
+      ],
+      "asID_Field_sValue": [
+        "Нагадуємо, чоловікам треба відвідати військомат з Карткою реєстрації особи перш ніж йти до реєстратора. <a href=\"https://docs.google.com/document/d/1rreCKeFu1no1Cr65QJ_MPjXGbwqoQf61pfcS-N4BH2Y/edit\">Картка реєстрації особи для друку</a><br>"
+      ],
+      "asID_Field": {
+        "sReason": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sReason]=='khers_khersT'"
     }
   }
 }

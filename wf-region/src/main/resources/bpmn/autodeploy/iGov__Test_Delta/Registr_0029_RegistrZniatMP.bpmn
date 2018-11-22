@@ -9,6 +9,8 @@
         
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить Ваше нове місце реєстрації" type="select" default="0" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="labelKhersonVK" name=" ; ;labelType=info" type="label" default="Чоловіки, увага Військомат! &lt;br&gt;Для отримання послуги вам треба роздрукувати Картку реєстрації особи за посиланням та відвідати з нею військомат. Після чого реєстратор буде чекати вас у обрану дату та час.&lt;br&gt; &lt;a href=&quot;https://docs.google.com/document/d/1rreCKeFu1no1Cr65QJ_MPjXGbwqoQf61pfcS-N4BH2Y/edit &quot;&gt;Картка реєстрації особи для друку&lt;/a&gt;"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -47,7 +49,7 @@
         </activiti:formProperty>
         <activiti:formProperty id="nMilit" name="Завантажте копію військового квитка, свідоцтва про приписку або документу що їм відповідають;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" " required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація щодо реэстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реэстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Інформація щодо реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реєстрації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Стара адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
         
@@ -99,7 +101,6 @@
         <activiti:formProperty id="warning_Drogobich" name="Зверніть увагу" type="label" default="&lt;b&gt;УВАГА!&lt;/b&gt; При необхідності (під час перевірки документів) у Вас можуть бути запрошені скан-копії документів, що підтверджують стару адресу реєстрації"></activiti:formProperty>
         
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sOrganType" name="Тип органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -110,7 +111,8 @@
         <activiti:formProperty id="sEddrNum" name="Номер у Єдиному державному демографічному реєстрі ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sStamp_Print" name="Боярка-Текст для друку в лівому верхньому куту довідки про реєстрацію ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAdd_SpecText_inEmail" name="Боярка-Текст для додаткового додання в email; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        
+        <activiti:formProperty id="sAdd_TextinEmail_KhersVK" name="Херсон-Текст в email військомат; ;bVisible=false" type="string" default=" "></activiti:formProperty>
+                
         <activiti:formProperty id="sIsCancellCustomeVizite" name="Прапор скасованої заявки громадянином ; ;bVisible=false" type="string" default="False"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo ; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
@@ -161,9 +163,10 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
-					Ваше звернення [sID_Order] успішно зареєстровано. <br> Спеціалісти ${sOrganType} (район або ЦНАП району (міста) - ${sArea}) оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти до ${sOrganType} у обраний час <b> ${date_of_visit}</b>, реквізитами та сумою для сплати адміністративного збору, короткою інструкцією щодо процедури реєстрації.<br>
+					Ваше звернення [sID_Order] успішно зареєстровано. <br> Спеціалісти оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти у обраний час <b> ${date_of_visit}</b>, реквізитами та сумою для сплати адміністративного збору, короткою інструкцією щодо процедури реєстрації.<br>
 					<br>
-					<b> Адреса ${sOrganType}</b>: ${sAddress}.<br> 
+					${sAdd_TextinEmail_KhersVK}
+					${sAddress}.<br> 
 					${sPhoneOrgan}<br>
 				</p>
 				<br>
@@ -343,7 +346,7 @@ execution.setVariable('sMaxPay', maxpay)
     <sequenceFlow id="flow31" sourceRef="servicetask8" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
     <sequenceFlow id="flow10" name="${asDecision=='sAccept'}" sourceRef="exclusivegateway1" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag!='true'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag!='dnepr'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask6" name="Повідомлення громадянина про призначення візиту + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
@@ -360,7 +363,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
-                	Спеціалісти ${sOrganType} успішно опрацювали Вашу заяву [sID_Order].<br>
+                	Спеціалісти успішно опрацювали Вашу заяву [sID_Order].<br>
 					Для того щоб закінчити процедуру реєстрації необхідно:<br>
 					<ul>
 						<li>У будь-якому банку сплатити адміністративний збір і отримати квитанцію про сплату.</li>
@@ -368,7 +371,7 @@ execution.setVariable('sMaxPay', maxpay)
 							<li>у розмірі ${sMinPay} грн, якщо Ви звертаєтесь для реєстрації у термін до 30 календарних днів після зняття з попереднього місця реєстрації</li>
 							<li>у розмірі ${sMaxPay} грн, якщо Ви звертаєтесь для реєстрації після 30 календарних днів після зняття з попереднього місця реєстрації ${sAdd_SpecText_inEmail}</li> 
 						</ul>
-						<li>Прийти до ${sOrganType} за адресою: ${sAddress}</li>
+						<li>Прийти за адресою: ${sAddress}</li>
 						<li>Підписати необхідні документи та отримати печатку у громадянський паспорт або паспортний документ.</li>
 					</ul>
 				</p>
@@ -381,8 +384,9 @@ execution.setVariable('sMaxPay', maxpay)
 					<b>Деталі зустрічі:</b><br>
 					День та час - ${date_of_visit}
 				</p>
+				${sAdd_TextinEmail_KhersVK}
 				<p>
-					<b>Необхідні документи, які треба принести до ${sOrganType} при реєстраціі місця проживання:</b><br>
+					<b>Необхідні документи, які треба принести при реєстраціі місця проживання:</b><br>
 					<ul>
 						<li>оригінал та копію документа, до якого вносяться відомості про місце проживання;</li>
 						<li>квитанцію про сплату адміністративного збору;</li>
@@ -398,7 +402,7 @@ execution.setVariable('sMaxPay', maxpay)
 				<p>	
 					<b>Зверніть увагу:</b> 
 					<ul>
-						<li>У разі здійснення реєстрації за згодою власника/співвласників житла, наймача та членів його сім’ї, власник або власники житла повинні прийти до ${sOrganType} разом із Вами, та принести з собою паспорт та оригінали документів, які підтверджують право властності.</li>
+						<li>У разі здійснення реєстрації за згодою власника/співвласників житла, наймача та членів його сім’ї, власник або власники житла повинні прийти разом із Вами, та принести з собою паспорт та оригінали документів, які підтверджують право властності.</li>
 					</ul>
 				</p>
 				<p>
@@ -447,7 +451,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
-					Спеціалісти ${sOrganType} успішно опрацювли Вашу заяву [sID_Order].<br>
+					Спеціалісти успішно опрацювли Вашу заяву [sID_Order].<br>
 					Для того щоб закінчити процедуру реєстрації необхідно:<br>
 					<ul>
 						<li>У будь-якому банку сплатити адміністративний збір і отримати квитанцію про сплату.</li>
@@ -455,7 +459,7 @@ execution.setVariable('sMaxPay', maxpay)
 							<li>у розмірі ${sMinPay} грн, якщо Ви звертаєтесь для реєстрації у термін до 30 календарних днів після зняття з попереднього місця реєстрації</li>
 							<li>у розмірі ${sMaxPay} грн, якщо Ви звертаєтесь для реєстрації після 30 календарних днів після зняття з попереднього місця реєстрації ${sAdd_SpecText_inEmail}</li> 
 						</ul>
-						<li>Прийти до ${sOrganType} за адресою: ${sAddress}</li>
+						<li>Прийти до за адресою: ${sAddress}</li>
 						<li>Підписати необхідні документи та отримати печатку у громадянський паспорт або паспортний документ.</li>
 					</ul>
 				</p>
@@ -469,7 +473,7 @@ execution.setVariable('sMaxPay', maxpay)
 					День та час - ${date_of_visit}
 				</p>
 				<p>
-					<b>Необхідні документи, які треба принести до ${sOrganType} при реєстраціі місця проживання:</b><br>
+					<b>Необхідні документи, які треба принести при реєстраціі місця проживання:</b><br>
 					<ul>
 						<li>оригінал та копію документа, до якого вносяться відомості про місце проживання;</li>
 						<li>квитанцію про сплату адміністративного збору з мокрою печаткою банку;</li>
@@ -487,9 +491,9 @@ execution.setVariable('sMaxPay', maxpay)
 				<p>	
 					<b>Зверніть увагу:</b> 
 					<ul>
-						<li>У разі здійснення реєстрації за згодою власника/співвласників житла, наймача та членів його сім’ї, власник або власники житла повинні прийти до ${sOrganType} разом із Вами, та принести з собою паспорт та оригінали документів, які підтверджують право властності.</li>
+						<li>У разі здійснення реєстрації за згодою власника/співвласників житла, наймача та членів його сім’ї, власник або власники житла повинні прийти разом із Вами, та принести з собою паспорт та оригінали документів, які підтверджують право властності.</li>
 						<li>Якщо картотека зареєстрованих осіб Вашого району ще не передана реєстраторам, то Вам може знадобитися Картка реєстрації особи (раніше мала назву "Форма А") з ЖЕКу (ОСББ) або будинкова книга з попереднього місця реєстрації (це стосується лише громадян у яких попереднє місце реєстрації є місто Дніпро)</li>
-						<li>Після візиту до до ${sOrganType} для завершення процесу реєстрації військовозобов'язані повинні встати на військовіий облік до військомату.</li>
+						<li>Після візиту для завершення процесу реєстрації військовозобов'язані повинні встати на військовіий облік до військомату.</li>
 					</ul>
 				</p>
 				<p>

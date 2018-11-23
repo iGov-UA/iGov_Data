@@ -70,6 +70,8 @@
         <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина; скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="markerRegistr_0184_RegistrDo14" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0184_RegistrDo14.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="sFlag" name="Flag Місто; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>
         

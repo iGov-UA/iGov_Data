@@ -84,8 +84,6 @@
         <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
         
-        <activiti:formProperty id="markerRegistr_0029_RegistrZniatMP" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0029_RegistrZniatMP.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeZIP&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Завантажте їх ZIP архівом або у форматі PDF. &lt;br&gt;&lt;br&gt;Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний ZIP архів або PDF файл&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="warning_Drogobich" name=" ; ;labelType=info" type="label" default="&lt;b&gt;УВАГА!&lt;/b&gt; При необхідності (під час перевірки документів) у Вас можуть бути запрошені скан-копії документів, що підтверджують адресу реєстрації дитини"></activiti:formProperty>
@@ -94,6 +92,8 @@
         <activiti:formProperty id="nForma3" name="Довідка про склад сім'ї або зареєстрованих осіб; ;bNew=true" type="file" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="nDocNaim" name="Договір найму / піднайму / оренди;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="nOther" name="Документ, на основі якого буде здійснюватись реєстрація;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" " required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="markerRegistr_0029_RegistrZniatMP" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0029_RegistrZniatMP.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sFlag" name="Flag Місто; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>

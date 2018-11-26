@@ -19,7 +19,6 @@
         
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
@@ -42,7 +41,6 @@
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації померлого;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDate_of_death" name="Дата смерті;Формат - ДД.ММ.PPPP" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDeathDoc" name="Номер актового запису, серія та номер свідоцтва про смерть, дата видачі документа" type="textArea" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="nSvidDeath" name="Свідоцтво про смерть;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
@@ -61,7 +59,6 @@
         <activiti:formProperty id="sArea" name="район/місто звернення ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationOrgan" name="Орган реєстрації ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="sEddrNum" name="Номер у Єдиному державному демографічному реєстрі ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sEddrNumChild" name="Номер у Єдиному державному демографічному реєстрі ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAdd_FormaA" name="Додаток до email; ;bVisible=false" type="string" default=" &lt;li&gt;оригінал картки реєстрації (Форма А) з ЖЕК чи ОСМД або будинкову книгу;&lt;/li&gt;"></activiti:formProperty>
@@ -75,7 +72,7 @@
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </startEvent>
-    <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="servicetask10" targetRef="scripttask1"></sequenceFlow>
     <scriptTask id="scripttask1" name="Передача значений" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
 var minpay='13,60'
@@ -217,7 +214,6 @@ if (execution.getVariable('sHide_FormaA')=='True') {
         <activiti:formProperty id="sBody_13" name="[pattern/print/dms/Zayava_Person_Data.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява щодо персональних даних" writable="false"></activiti:formProperty>
         <activiti:formProperty id="PrintForm_3" name="File label;File title;sPrintFormFileAsPDF=pattern/print/dms/zajava_znFrDeath.html,sFileName=Zayava_znyattya_z_reyestratsiyi_Page1_of_2,bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="PrintForm_4" name="File label;File title;sPrintFormFileAsPDF=pattern/print/dms/zajava_znBk.html,sFileName=Zayava_znyattya_z_reyestratsiyi_Page2_of_2,bNew=true" type="file" writable="false"></activiti:formProperty>
-        
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -455,17 +451,18 @@ if (execution.getVariable('sHide_FormaA')=='True') {
         <activiti:formProperty id="sArea" name="Місто або район, до якого належить місце проживання померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації померлого; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sDeathDoc" name="Номер актового запису, серія та номер свідоцтва про смерть; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює зняття з реєстрації ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="nSvidDeath" name="Свідоцтво про смерть;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sWhenCome" name="Вкажіть дату зняття з реєстрації" type="string" default=" "></activiti:formProperty>
+        
         <activiti:formProperty id="asResult" name="Результат зустрічі" type="enum" required="true">
           <activiti:value id="sReestr" name="Померлого знято з реєстрації"></activiti:value>
           <activiti:value id="sNejav" name="Громадянин не з'явився"></activiti:value>
         </activiti:formProperty>
         
+        <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює зняття з реєстрації ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -540,6 +537,13 @@ if (execution.getVariable('sHide_FormaA')=='True') {
       <script>execution.setVariable('sDateCreate', new Date().format("dd.MM.yyyy").toString())</script>
     </scriptTask>
     <sequenceFlow id="flow39" sourceRef="scripttask3" targetRef="servicetask4"></sequenceFlow>
+    <serviceTask id="servicetask10" name="для очереди" activiti:delegateExpression="#{procedQueueTickets}"></serviceTask>
+    <sequenceFlow id="flow40" sourceRef="startevent1" targetRef="servicetask10"></sequenceFlow>
+    <boundaryEvent id="boundaryerror1" name="Error" attachedToRef="servicetask10">
+      <errorEventDefinition></errorEventDefinition>
+    </boundaryEvent>
+    <endEvent id="endevent5" name="End"></endEvent>
+    <sequenceFlow id="flow41" sourceRef="boundaryerror1" targetRef="endevent5"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0144_ZniatSmert">
     <bpmndi:BPMNPlane bpmnElement="Registr_0144_ZniatSmert" id="BPMNPlane_Registr_0144_ZniatSmert">
@@ -597,8 +601,17 @@ if (execution.getVariable('sHide_FormaA')=='True') {
       <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
         <omgdc:Bounds height="71.0" width="131.0" x="237.0" y="7.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask10" id="BPMNShape_servicetask10">
+        <omgdc:Bounds height="55.0" width="105.0" x="108.0" y="115.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="boundaryerror1" id="BPMNShape_boundaryerror1">
+        <omgdc:Bounds height="30.0" width="30.0" x="146.0" y="159.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent5" id="BPMNShape_endevent5">
+        <omgdc:Bounds height="35.0" width="35.0" x="143.0" y="220.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
-        <omgdi:waypoint x="57.0" y="125.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="115.0"></omgdi:waypoint>
         <omgdi:waypoint x="160.0" y="76.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow33" id="BPMNEdge_flow33">
@@ -704,6 +717,14 @@ if (execution.getVariable('sHide_FormaA')=='True') {
       <bpmndi:BPMNEdge bpmnElement="flow39" id="BPMNEdge_flow39">
         <omgdi:waypoint x="302.0" y="78.0"></omgdi:waypoint>
         <omgdi:waypoint x="303.0" y="106.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow40" id="BPMNEdge_flow40">
+        <omgdi:waypoint x="75.0" y="142.0"></omgdi:waypoint>
+        <omgdi:waypoint x="108.0" y="142.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow41" id="BPMNEdge_flow41">
+        <omgdi:waypoint x="161.0" y="189.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="220.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

@@ -6,9 +6,7 @@
       <extensionElements>
         <activiti:formProperty id="warning1" name=" ; ;labelType=warning" type="label" default="&lt;b&gt;Зверніть увагу! Послуга надається лише для однієї особи, що подає звернення! &lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="warning2" name=" ; ;labelType=info" type="label" default="УВАГА! Для реєстрації місця проживання дитини віком до 14 років використовуйте, будь ласка, &lt;a href=&quot; https://igov.org.ua/service/184/general&quot; target=&quot;_blank&quot;&gt;іншу &lt;/a&gt; послугу!"></activiti:formProperty>
-        
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить Ваше нове місце реєстрації" type="select" default="0" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="labelKhersonVK" name=" ; ;labelType=info" type="label" default="Чоловіки, увага Військомат! &lt;br&gt;Для отримання послуги вам треба роздрукувати Картку реєстрації особи за посиланням та відвідати з нею військомат. Після чого реєстратор буде чекати вас у обрану дату та час.&lt;br&gt; &lt;a href=&quot;https://docs.google.com/document/d/1rreCKeFu1no1Cr65QJ_MPjXGbwqoQf61pfcS-N4BH2Y/edit &quot;&gt;Картка реєстрації особи для друку&lt;/a&gt;"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -24,7 +22,6 @@
         
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
@@ -39,7 +36,6 @@
         <activiti:formProperty id="lastName_UA1" name="Попереднє прізвище" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="firstName_UA1" name="Попереднє ім'я" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="Попереднє ім'я по батькові" type="string" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="sDate_of_birth" name="Дата народження" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sAreabirth" name="Місце народження; Країна, область, район і населений пункт" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNationality" name="Громадянство" type="string" default="Україна" required="true"></activiti:formProperty>
@@ -52,7 +48,6 @@
         <activiti:formProperty id="markersLine_2" name="Інформація щодо реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реєстрації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Стара адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="asRegistrationType" name="Реєстрація здійснюється Вами" type="enum" required="true">
           <activiti:value id="sOwner" name="до власного житлового приміщення"></activiti:value>
           <activiti:value id="sRent" name="до орендованого житла"></activiti:value>
@@ -71,7 +66,6 @@
         <activiti:formProperty id="sVlasnName" name="ПІБ власника житла, за згодою якого здійснюється реєстрація" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="sVlasnDoc" name="Дані документа, що засвідчує особу власника житла;Вид, серія, номер, дата видачі, найменування органу, який його видав" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="sMilitDoc" name="Реквізити довідки, виданої командиром військової частини" type="string" default=" " required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="asRegistr" name="Чи потрібно Вам здійснити реєстрацію з одночасним зняттям з реєстрації?" type="enum" required="true">
           <activiti:value id="sYesR" name="Так"></activiti:value>
           <activiti:value id="sNoR" name="Ні"></activiti:value>
@@ -110,7 +104,7 @@
         <activiti:formProperty id="sStamp_Print" name="Боярка-Текст для друку в лівому верхньому куту довідки про реєстрацію ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAdd_SpecText_inEmail" name="Боярка-Текст для додаткового додання в email; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sAdd_TextinEmail_KhersVK" name="Херсон-Текст в email військомат; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-                
+        
         <activiti:formProperty id="sIsCancellCustomeVizite" name="Прапор скасованої заявки громадянином ; ;bVisible=false" type="string" default="False"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo ; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
@@ -119,7 +113,7 @@
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </startEvent>
-    <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="scripttask3"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="servicetask11" targetRef="scripttask3"></sequenceFlow>
     <scriptTask id="scripttask1" name="Передача значений" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
 var minpay='13,60'
@@ -261,7 +255,7 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="nForma3" name="Довідка про склад сім'ї або зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nDocNaim" name="Договір найму / піднайму / оренди;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nOther" name="Документ, на основі якого буде здійснюватись реєстрація;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
-                
+        
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="asDecision" name="Рішення держслужбовця" type="enum" required="true">
@@ -270,8 +264,8 @@ execution.setVariable('sMaxPay', maxpay)
         </activiti:formProperty>
         <activiti:formProperty id="sDecisionComment" name="Коментар до рішення: наприклад, пояснення чому громадянину було відмовлено в наданні цієї послуги АБО додаткові деталі для закінчення процессу реєстрації" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для сплати адмінсбору" type="textArea"></activiti:formProperty>
-        
         <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює реєстрацію ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -287,7 +281,6 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="PrintForm_2" name="File label;File title;sPrintFormFileAsPDF=pattern/print/dms/zajava_regBk.html,sFileName=Zayava_pro_reyestratsiyu_Page2_of_2,bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="PrintForm_3" name="File label;File title;sPrintFormFileAsPDF=pattern/print/dms/1zajava_znFr.html,sFileName=Zayava_znyattya_z_reyestratsiyi_Page1_of_2,bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="PrintForm_4" name="File label;File title;sPrintFormFileAsPDF=pattern/print/dms/zajava_znBk.html,sFileName=Zayava_znyattya_z_reyestratsiyi_Page2_of_2,bNew=true" type="file" writable="false"></activiti:formProperty>
-        
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -578,7 +571,6 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="nOrder" name="Ордер, або копія ордеру з печаткою ЖЕКу;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nForma3" name="Довідка про склад сім'ї або зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nDocNaim" name="Договір найму / піднайму / оренди;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sStamp_Print" name="Текст для другу в лівому верхньому куту довідки про реєстрацію ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nOther" name="Документ, на основі якого буде здійснюватись реєстрація;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
@@ -586,12 +578,13 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sReestr" name="Громадянин зареєстрований"></activiti:value>
           <activiti:value id="sNejav" name="Громадянин не з'явився"></activiti:value>
         </activiti:formProperty>
-        
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
+        
         <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює реєстрацію ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEddrNum" name="Номер у Єдиному державному демографічному реєстрі ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sStamp_Print" name="Текст для другу в лівому верхньому куту довідки про реєстрацію ; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="sBody_1" name="[pattern/print/dms/1zajava_regFr.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява для реєстрації лицьова" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_2" name="[pattern/print/dms/zajava_regBk.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява для реєстрації зворотня" writable="false"></activiti:formProperty>
@@ -668,11 +661,18 @@ execution.setVariable('sMaxPay', maxpay)
     </scriptTask>
     <sequenceFlow id="flow40" sourceRef="scripttask3" targetRef="scripttask1"></sequenceFlow>
     <sequenceFlow id="flow41" sourceRef="servicetask4" targetRef="servicetask3"></sequenceFlow>
+    <serviceTask id="servicetask11" name="для очереди" activiti:delegateExpression="#{procedQueueTickets}"></serviceTask>
+    <sequenceFlow id="flow42" sourceRef="startevent1" targetRef="servicetask11"></sequenceFlow>
+    <boundaryEvent id="boundaryerror1" name="Error" attachedToRef="servicetask11">
+      <errorEventDefinition></errorEventDefinition>
+    </boundaryEvent>
+    <endEvent id="endevent5" name="End"></endEvent>
+    <sequenceFlow id="flow43" sourceRef="boundaryerror1" targetRef="endevent5"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0029_RegistrZniatMP">
     <bpmndi:BPMNPlane bpmnElement="Registr_0029_RegistrZniatMP" id="BPMNPlane_Registr_0029_RegistrZniatMP">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
-        <omgdc:Bounds height="35.0" width="35.0" x="14.0" y="127.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="10.0" y="127.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
         <omgdc:Bounds height="71.0" width="118.0" x="224.0" y="12.0"></omgdc:Bounds>
@@ -725,8 +725,17 @@ execution.setVariable('sMaxPay', maxpay)
       <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
         <omgdc:Bounds height="55.0" width="105.0" x="80.0" y="20.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask11" id="BPMNShape_servicetask11">
+        <omgdc:Bounds height="55.0" width="105.0" x="80.0" y="117.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="boundaryerror1" id="BPMNShape_boundaryerror1">
+        <omgdc:Bounds height="30.0" width="30.0" x="118.0" y="156.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent5" id="BPMNShape_endevent5">
+        <omgdc:Bounds height="35.0" width="35.0" x="115.0" y="213.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
-        <omgdi:waypoint x="31.0" y="127.0"></omgdi:waypoint>
+        <omgdi:waypoint x="132.0" y="117.0"></omgdi:waypoint>
         <omgdi:waypoint x="132.0" y="75.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow33" id="BPMNEdge_flow33">
@@ -832,6 +841,14 @@ execution.setVariable('sMaxPay', maxpay)
       <bpmndi:BPMNEdge bpmnElement="flow41" id="BPMNEdge_flow41">
         <omgdi:waypoint x="335.0" y="145.0"></omgdi:waypoint>
         <omgdi:waypoint x="360.0" y="145.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow42" id="BPMNEdge_flow42">
+        <omgdi:waypoint x="45.0" y="144.0"></omgdi:waypoint>
+        <omgdi:waypoint x="80.0" y="144.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow43" id="BPMNEdge_flow43">
+        <omgdi:waypoint x="133.0" y="186.0"></omgdi:waypoint>
+        <omgdi:waypoint x="132.0" y="213.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

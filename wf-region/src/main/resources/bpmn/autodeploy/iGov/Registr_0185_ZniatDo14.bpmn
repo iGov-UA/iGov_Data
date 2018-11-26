@@ -22,7 +22,6 @@
         
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
@@ -49,7 +48,6 @@
         <activiti:formProperty id="sChildPOB" name="Місце народження дитини; Країна, область, район і населений пункт" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sChildDoc" name="Свідоцтво про народження дитини; Серія та номер документу, дата і орган, що його видав" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sChildCitizenship" name="Громадянство дитини" type="string" default="Україна" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_3" name="Інформація щодо реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реєстрації&quot;}}}"></activiti:formProperty>
@@ -210,8 +208,8 @@ execution.setVariable('sMaxPay', maxpay)
         </activiti:formProperty>
         <activiti:formProperty id="sDecisionComment" name="Коментар до рішення; Наприклад, пояснення чому громадянину було відмовлено в наданні цієї послуги &lt;br /&gt; АБО &lt;br /&gt; Додаткові деталі для закінчення процессу реєстрації" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для сплати адмінсбору" type="textArea"></activiti:formProperty>
-        
         <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює реєстрацію ; ;bVisible=false" type="string" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -468,11 +466,10 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="sArea" name="Місто або район, до якого належить нове місце проживання дитини; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації дитини; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації дитини; ;writable=false" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="sWhenCome" name="Вкажіть дату зняття з реєстрації" type="string" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sWhenCome" name="Вкажіть дату зняття з реєстрації" type="string" default=" "></activiti:formProperty>
         
         <activiti:formProperty id="asResult" name="Результат зустрічі" type="enum" required="true">
           <activiti:value id="sReestr" name="Дитину знято з реєстрації"></activiti:value>
@@ -553,7 +550,14 @@ execution.setVariable('sMaxPay', maxpay)
       <script>execution.setVariable('sDateCreate', new Date().format("dd.MM.yyyy").toString())</script>
     </scriptTask>
     <sequenceFlow id="flow40" sourceRef="scripttask3" targetRef="servicetask4"></sequenceFlow>
-    <sequenceFlow id="flow41" sourceRef="startevent1" targetRef="scripttask1"></sequenceFlow>
+    <sequenceFlow id="flow41" sourceRef="servicetask10" targetRef="scripttask1"></sequenceFlow>
+    <serviceTask id="servicetask10" name="для очереди" activiti:delegateExpression="#{procedQueueTickets}"></serviceTask>
+    <sequenceFlow id="flow42" sourceRef="startevent1" targetRef="servicetask10"></sequenceFlow>
+    <boundaryEvent id="boundaryerror1" name="Error" attachedToRef="servicetask10">
+      <errorEventDefinition></errorEventDefinition>
+    </boundaryEvent>
+    <endEvent id="endevent5" name="End"></endEvent>
+    <sequenceFlow id="flow43" sourceRef="boundaryerror1" targetRef="endevent5"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0185_ZniatDo14">
     <bpmndi:BPMNPlane bpmnElement="Registr_0185_ZniatDo14" id="BPMNPlane_Registr_0185_ZniatDo14">
@@ -610,6 +614,15 @@ execution.setVariable('sMaxPay', maxpay)
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
         <omgdc:Bounds height="65.0" width="141.0" x="244.0" y="19.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask10" id="BPMNShape_servicetask10">
+        <omgdc:Bounds height="55.0" width="105.0" x="108.0" y="115.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="boundaryerror1" id="BPMNShape_boundaryerror1">
+        <omgdc:Bounds height="30.0" width="30.0" x="146.0" y="158.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent5" id="BPMNShape_endevent5">
+        <omgdc:Bounds height="35.0" width="35.0" x="143.0" y="211.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow33" id="BPMNEdge_flow33">
         <omgdi:waypoint x="224.0" y="52.0"></omgdi:waypoint>
@@ -716,8 +729,16 @@ execution.setVariable('sMaxPay', maxpay)
         <omgdi:waypoint x="315.0" y="106.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow41" id="BPMNEdge_flow41">
-        <omgdi:waypoint x="57.0" y="125.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="115.0"></omgdi:waypoint>
         <omgdi:waypoint x="161.0" y="84.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow42" id="BPMNEdge_flow42">
+        <omgdi:waypoint x="75.0" y="142.0"></omgdi:waypoint>
+        <omgdi:waypoint x="108.0" y="142.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow43" id="BPMNEdge_flow43">
+        <omgdi:waypoint x="161.0" y="188.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="211.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

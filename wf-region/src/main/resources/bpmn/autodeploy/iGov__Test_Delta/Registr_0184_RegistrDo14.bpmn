@@ -511,7 +511,6 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина; скан-копія всіх заповнених сторінок, у форматі pdf;bNew=true" type="file" writable="false"></activiti:formProperty>
         
-        
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="asResult" name="Результат зустрічі" type="enum" required="true">

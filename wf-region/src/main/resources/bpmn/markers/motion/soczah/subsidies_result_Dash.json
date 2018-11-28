@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "RequiredFieldsOnCondition_result": {
+      "aField_ID": [
+        "result"
+      ],
+      "asID_Field": {
+        "sClient": "asDecide"
+      },
+      "sCondition": "[sClient] == 'sEnamSubsOK'||[sClient] == 'sEnamSubsBad'"
+    },
+    "ShowFieldsOnCondition_result": {
+      "aField_ID": [
+        "result"
+      ],
+      "asID_Field": {
+        "sClient": "asDecide"
+      },
+      "sCondition": "[sClient] == 'sEnamSubsOK'||[sClient] == 'sEnamSubsBad'"
+    }
+  }
+}

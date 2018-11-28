@@ -1,22 +1,40 @@
 {
   "motion": {
-    "RequiredFieldsOnCondition_result": {
+    "RequiredFieldsOnCondition_Result": {
       "aField_ID": [
-        "result"
+        "file_Result"
       ],
       "asID_Field": {
         "sClient": "asDecide"
       },
-      "sCondition": "[sClient] == 'sEnamSubsOK'||[sClient] == 'sEnamSubsBad'"
+      "sCondition": "[sClient] == 'sEnamSubsOK'||[sClient] == 'Субсидія призначена (додайте файл з розрахунком)'"
     },
-    "ShowFieldsOnCondition_result": {
+    "ShowFieldsOnCondition_Result": {
       "aField_ID": [
-        "result"
+        "file_Result"
       ],
       "asID_Field": {
         "sClient": "asDecide"
       },
-      "sCondition": "[sClient] == 'sEnamSubsOK'||[sClient] == 'sEnamSubsBad'"
+      "sCondition": "[sClient] == 'sEnamSubsOK'||[sClient] == 'Субсидія призначена (додайте файл з розрахунком)'"
+    },
+    "RequiredFieldsOnCondition_Vidmova": {
+      "aField_ID": [
+        "file_Vidmova"
+      ],
+      "asID_Field": {
+        "sClient": "asDecide"
+      },
+      "sCondition": "[sClient] == 'Відмовлено у призначенні субсидії'||[sClient] == 'sEnamSubsBad'"
+    },
+    "ShowFieldsOnCondition_Vidmova": {
+      "aField_ID": [
+        "file_Vidmova"
+      ],
+      "asID_Field": {
+        "sClient": "asDecide"
+      },
+      "sCondition": "[sClient] == 'Відмовлено у призначенні субсидії'||[sClient] == 'sEnamSubsBad'"
     }
   }
 }

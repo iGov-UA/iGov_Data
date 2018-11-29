@@ -37,6 +37,16 @@
         "sClient": "asEnumTypeDocument"
       },
       "sCondition": "[sClient] == 'sEnumElement_Other'"
+    },
+    "ShowFieldsOnCondition_FileSlav": {
+      "aField_ID": [
+        "nFile_RegDov_Slaviansk"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin",
+        "sClient2": "asRegistr"
+      },
+      "sCondition": "[sClient] == 'don_SlavT' && [sClient2] == 'sYesR'"
     }
   }
 }

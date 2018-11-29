@@ -29,8 +29,8 @@
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sDate_of_birth" name="Дата народження; Формат - ДД.ММ.PPPP" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sAreabirth" name="Місце народження; Країна, область, район і населений пункт" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDate_of_birth" name="Дата народження;(формат - ДД.ММ.PPPP)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sAreabirth" name="Місце народження;(країна, область, район і населений пункт)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNationality" name="Громадянство" type="string" default="Україна" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Інформація про дитину" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;lastName_UA2&quot;],&quot;sValue&quot;:&quot;Інформація про дитину&quot;}}}"></activiti:formProperty>
@@ -44,14 +44,14 @@
         <activiti:formProperty id="lastName_UA1" name="Попереднє прізвище дитини" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="firstName_UA1" name="Попереднє ім'я дитини" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="Попереднє ім'я по батькові дитини" type="string" default=" " required="true"></activiti:formProperty>
-        <activiti:formProperty id="sChildBirth" name="Дата народження дитини; Формат - ДД.ММ.PPPP" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sChildPOB" name="Місце народження дитини; Країна, область, район і населений пункт" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sChildDoc" name="Свідоцтво про народження дитини; Серія та номер документу, дата і орган, що його видав" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sChildBirth" name="Дата народження дитини;(формат - ДД.ММ.PPPP)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sChildPOB" name="Місце народження дитини;(країна, область, район і населений пункт)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sChildDoc" name="Свідоцтво про народження дитини;(серія та номер документу, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sChildCitizenship" name="Громадянство дитини" type="string" default="Україна" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_3" name="Інформація щодо реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реєстрації&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sRegistrationAddress" name="Стара адреса реєстрації дитини;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sRegistrationAddress" name="Стара адреса реєстрації дитини;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" default=" "></activiti:formProperty>
+        <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="asRegistr" name="Чи потрібна реєстрація з одночасним зняттям з реєстрації?" type="enum" required="true">
           <activiti:value id="sYesR" name="Так"></activiti:value>
           <activiti:value id="sNoR" name="Ні"></activiti:value>
@@ -59,16 +59,18 @@
         <activiti:formProperty id="warning3" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого батька на реєстрацію місця проживання дитини"></activiti:formProperty>
         <activiti:formProperty id="sWhenCome" name="Дата зняття з попереднього місця реєстрації; у форматі - ДД.ММ.PPPP" type="string" default=" "></activiti:formProperty>
         
-        <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeZIP&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Завантажте їх ZIP архівом або у форматі PDF. &lt;br&gt;&lt;br&gt;Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний ZIP архів або PDF файл&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="warning_Drogobich" name=" ; ;labelType=info" type="label" default="&lt;b&gt;УВАГА!&lt;/b&gt; При необхідності (під час перевірки документів) у Вас можуть бути запрошені скан-копії документів, що підтверджують адресу реєстрації дитини"></activiti:formProperty>
-        <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина; скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;(якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина;(скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання;(або картка реєстрації особи чи будинкова книга);bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markerRegistr_0184_RegistrDo14" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0184_RegistrDo14.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
         
         <activiti:formProperty id="sFlag" name="Flag Місто; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>
@@ -214,8 +216,9 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="sWhenCome" name="Дата зняття з реєстрації з попереднього місця проживання; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="День та час зустрічі: " type="queueData" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина; скан-копія всіх заповнених сторінок, у форматі pdf;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         
@@ -507,6 +510,7 @@ execution.setVariable('sMaxPay', maxpay)
         
         <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина; скан-копія всіх заповнених сторінок, у форматі pdf;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sWhenCome" name="Дата зняття з реєстрації з попереднього місця проживання" type="string"></activiti:formProperty>

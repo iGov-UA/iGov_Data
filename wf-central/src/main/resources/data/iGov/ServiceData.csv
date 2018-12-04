@@ -5643,3 +5643,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5777;4;30;30;NULL;4;{"processDefinitionId":"cnap_293:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5778;956;30;30;NULL;4;{"processDefinitionId":"dnepr_cnap_238:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5779;102;30;30;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5780;29;38;38;NULL;4;{"processDefinitionId":"Registr_0029_RegistrZniatMP:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5781;26;38;38;NULL;4;{"processDefinitionId":"Registr_0026_ZniatMP:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5782;184;38;38;NULL;4;{"processDefinitionId":"Registr_0184_RegistrDo14:1:1"};;false;89;false;;BankID,EDS,mpbds;0
+5783;185;38;38;NULL;4;{"processDefinitionId":"Registr_0185_ZniatDo14:1:1"};;false;89;false;;BankID,EDS,mpbds;0

@@ -5657,3 +5657,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5791;175;93;93;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;89;true;;BankID,EDS,mpbds;0
 5792;1431;93;93;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;89;true;;BankID,EDS,mpbds;0
 4093;734;61;61;NULL;4;{"processDefinitionId":"APU_734_Vuk500_Dnp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+4094;1379;61;61;NULL;4;{"processDefinitionId":"dndz_cnap_201:1:1"};;false;225;true;;BankID,EDS,mpbds;0

@@ -993,7 +993,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 1323;209;Козельщинська РДА;Козельщинcкая РГА;polt_KozelchRda;polt_KozelchRda; ; ;NULL;NULL;5300000000
 1324;212;Козельщинська РДА;Козельщинcкая РГА;polt_KozelchRda;polt_KozelchRda; ; ;NULL;NULL;5322000000
 1325;288;Житомир, вул. Пушкінська, 44;Житомир, ул. Пушкинская, 44;zhit_zhitT;zhit_zhitT; ; ;NULL;NULL;1810100000
-1326;89;Відділ реєстрації м.Херсон;Отдел регистрации г.Херсон;khers_khersT;khers_khersT; ; ;NULL;NULL;6510100000
+1326;89;Відділ реєстрації м.Херсон;Відділ реєстрації м.Херсон;khers_khersT;khers_khersT; ; ;NULL;NULL;6510100000
 1327;225;ЦНАП м. Косів;Косовский РО;if_kosivT;if_kosivT; ; ;NULL;NULL;2623610100
 1328;227;Кременецький РВ у м.Кременець;Кременецкий РВ у г.Кременец;ter_kremen;ter_kremen; ; ;NULL;NULL;6123400000
 1329;227;Тернопільський РВ у м.Тернополі;Тернопольский РВ у г.Тернополе;ter_pass;ter_pass; ; ;NULL;NULL;6110100000

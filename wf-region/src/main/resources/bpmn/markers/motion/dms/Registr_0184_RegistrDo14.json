@@ -47,6 +47,24 @@
         "sClient2": "asRegistr"
       },
       "sCondition": "[sClient] == 'don_SlavT' && [sClient2] == 'sYesR'"
+    },
+    "ShowFieldsOnCondition_2Pasp_NoKher": {
+      "aField_ID": [
+        "nFile_scan_passport"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] != 'khers_khersT'"
+    },
+    "ShowFieldsOnCondition_2Pasp_Kher": {
+      "aField_ID": [
+        "nFile_scan_2passport_Kher"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'khers_khersT'"
     }
   }
 }

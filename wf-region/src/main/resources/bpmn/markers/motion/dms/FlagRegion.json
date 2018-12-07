@@ -32,6 +32,15 @@
         "sReason": "sID_Public_SubjectOrganJoin"
       },
       "sCondition": "[sReason]=='khers_khersT'"
+    },
+    "ShowFieldsOnCondition_FileKherPasp": {
+      "aField_ID": [
+        "nFile_ZayPasp_Kher"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'khers_khersT'"
     }
   }
 }

@@ -8,6 +8,24 @@
         "sClient": "asEnumTypeDocument"
       },
       "sCondition": "[sClient] == 'sEnumElement_Other'"
+    },
+    "ShowFieldsOnCondition_sDeathDoc_NoKher": {
+      "aField_ID": [
+        "sDeathDoc"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] != 'khers_khersT'"
+    },
+    "ShowFieldsOnCondition_2Pasp_Kher": {
+      "aField_ID": [
+        "warning1d_Kher"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'khers_khersT'"
     }
   }
 }

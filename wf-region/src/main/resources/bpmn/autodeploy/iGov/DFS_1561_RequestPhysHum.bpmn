@@ -21,26 +21,26 @@
         <activiti:formProperty id="sHCORP" name="Корпус;за місцем реєстрації;writable=true,sID_Field_SWinEd=HCORP" type="string"></activiti:formProperty>
         <activiti:formProperty id="sHAPT" name="Номер квартири;за місцем реєстрації;writable=true,sID_Field_SWinEd=HAPT" type="string"></activiti:formProperty>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;sWarning1&quot;],&quot;sValue&quot;:&quot;Період, за який будуть надані відомості&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sWarning1" name=" ; ;labelType=info" type="label" default="Дані про суми виплачених доходів та утриманих податків доступні з 1 кварталу 2015 року до 1 кварталу 2018 року включно. Відомості за 2 квартал 2018 року будуть доступні з 20 серпня 2018 року. Просимо враховувати це при виборі періоду, за який бажаєте отримати інформацію"></activiti:formProperty>
-        <activiti:formProperty id="asStartPeriod" name="Квартал;початок періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R01G01" type="enum" required="true">
+        <activiti:formProperty id="sWarning1" name=" ; ;labelType=info" type="label" default="Дані про суми виплачених доходів та утриманих податків доступні з 1 кварталу 2015 року до 2 кварталу 2018 року включно. Відомості за 3 квартал 2018 року будуть доступні з 20 грудня 2018 року. Просимо враховувати це при виборі періоду, за який бажаєте отримати інформацію"></activiti:formProperty>
+        <activiti:formProperty id="asStartPeriod" name="Квартал;початок періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R0401G1" type="enum" required="true">
           <activiti:value id="1" name="1"></activiti:value>
           <activiti:value id="2" name="2"></activiti:value>
           <activiti:value id="3" name="3"></activiti:value>
           <activiti:value id="4" name="4"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asStartYear" name="Рік;початок періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R01G02" type="enum" required="true">
+        <activiti:formProperty id="asStartYear" name="Рік;початок періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R0401G2" type="enum" required="true">
           <activiti:value id="2015" name="2015"></activiti:value>
           <activiti:value id="2016" name="2016"></activiti:value>
           <activiti:value id="2017" name="2017"></activiti:value>
           <activiti:value id="2018" name="2018"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asEndPeriod" name="Квартал;кінець періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R02G01" type="enum" required="true">
+        <activiti:formProperty id="asEndPeriod" name="Квартал;кінець періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R0401G3" type="enum" required="true">
           <activiti:value id="1" name="1"></activiti:value>
           <activiti:value id="2" name="2"></activiti:value>
           <activiti:value id="3" name="3"></activiti:value>
           <activiti:value id="4" name="4"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asEndYear" name="Рік;кінець періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R02G02" type="enum" required="true">
+        <activiti:formProperty id="asEndYear" name="Рік;кінець періоду за який бажаєте отримати відомості;writable=true,sID_Field_SWinEd=R0401G4" type="enum" required="true">
           <activiti:value id="2015" name="2015"></activiti:value>
           <activiti:value id="2016" name="2016"></activiti:value>
           <activiti:value id="2017" name="2017"></activiti:value>
@@ -59,11 +59,11 @@
         <activiti:formProperty id="PERIOD_MONTH" name="PERIOD_MONTH;system;writable=true,sID_Field_SWinEd=PERIOD_MONTH" type="string" default="12"></activiti:formProperty>
         <activiti:formProperty id="PERIOD_YEAR" name="PERIOD_YEAR;system;writable=true,sID_Field_SWinEd=PERIOD_YEAR" type="string" default="2015"></activiti:formProperty>
         <activiti:formProperty id="C_STI_ORIG" name="C_STI_ORIG;system;writable=true,sID_Field_SWinEd=C_STI_ORIG" type="string" default="0463"></activiti:formProperty>
-        <activiti:formProperty id="oFile_XML_SWinEd" name="File;system;bNew=true" type="file" default="F1301801"></activiti:formProperty>
+        <activiti:formProperty id="oFile_XML_SWinEd" name="File;system;bNew=true" type="file" default="F1301802"></activiti:formProperty>
         <activiti:formProperty id="markers1" name="Confer" type="markers" default="${markerService.loadFromFile('DFS_1374/DFS_writable_1_2.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="Inv" type="markers" default="${markerService.loadFromFile('DFS_1374/DFS_writable_1_2_3.json')}"></activiti:formProperty>
         <activiti:formProperty id="sFileName_XML_SWinEd_Answer" name="Название шаблона с ответом" type="string" default="F1401801" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sFileName_XML_SWinEd_Answer_1" name="Название шаблона с ответом" type="string" default="F1301801" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sFileName_XML_SWinEd_Answer_1" name="Название шаблона с ответом" type="string" default="F1301802" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sCounter" name="Счетчик для закрытия (при отказе)" type="string" default="0"></activiti:formProperty>
         <activiti:formProperty id="sWarning2" name=" ; ;labelType=info" type="label" default="Після натискання &quot;Замовити послугу&quot; Вас буде перенаправлено на сторінку підпису вашої заявки електронно-цифровим підписом."></activiti:formProperty>
       </extensionElements>

@@ -25,6 +25,16 @@
       },
       "sCondition": "[sReason]=='sNo'"
     },
+    "ShowFieldsOnCondition_4": {
+      "aField_ID": [
+        "asEnumTypeDocument1"
+      ],
+      "asID_Field": {
+        "sReason": "asForMySelf",
+        "sReason2": "asTargetGetDovidka"
+      },
+      "sCondition": "[sReason]=='sNo' && ([sReason2] == 'sEnum_EchangePassport' || [sReason2] == 'sEnum_AnotheReason')"
+    },
     "ShowFieldsOnCondition_5": {
       "aField_ID": [
         "sNameOtherDocument1"
@@ -43,27 +53,7 @@
       },
       "sCondition": "[sClient] == 'sEnum_AnotheReason'"
     },
-    "RequiredFieldsOnCondition_6": {
-      "aField_ID": [
-        "sNameAnotheReason_GetDovidka"
-      ],
-      "asID_Field": {
-        "sClient": "asTargetGetDovidka"
-      },
-      "sCondition": "[sClient] == 'sEnum_AnotheReason'"
-    },
     "ShowFieldsOnCondition_7": {
-      "aField_ID": [
-        "nFile_SvidoztvoNarodzennya"
-      ],
-      "asID_Field": {
-        "sClient": "asTargetGetDovidka",
-        "sTerm2": "asEnumTypeDocument1",
-        "sTerm3": "asForMySelf"
-      },
-      "sCondition": "([sTerm3]== 'sNo'  && ([sClient] == 'sEnum_GetPassport_First' || [sTerm2] == 'sEnumElement_SvidoztvoNarodz'))"
-    },
-    "RequiredFieldsOnCondition_7": {
       "aField_ID": [
         "nFile_SvidoztvoNarodzennya"
       ],
@@ -85,27 +75,7 @@
       },
       "sCondition": "([sClient] == 'sNo' && ([sTerm2] == 'sEnumElement_Passport' || [sTerm2] == 'sEnumElement_ID_Passport' || [sTerm2] == 'sEnumElement_Other'))"
     },
-    "RequiredFieldsOnCondition_8": {
-      "aField_ID": [
-        "nFile_CopyPassport"
-      ],
-      "asID_Field": {
-        "sClient": "asForMySelf",
-        "sTerm2": "asEnumTypeDocument1"
-      },
-      "sCondition": "([sClient] == 'sNo' && ([sTerm2] == 'sEnumElement_Passport' || [sTerm2] == 'sEnumElement_ID_Passport' || [sTerm2] == 'sEnumElement_Other'))"
-    },
     "ShowFieldsOnCondition_9": {
-      "aField_ID": [
-        "sPIB_osoba2",
-        "sDateBirth_osoba2"
-      ],
-      "asID_Field": {
-        "sClient": "asForMySelf"
-      },
-      "sCondition": "[sClient] == 'sNo'"
-    },
-    "RequiredFieldsOnCondition_9": {
       "aField_ID": [
         "sPIB_osoba2",
         "sDateBirth_osoba2"

@@ -46,8 +46,8 @@
         <activiti:formProperty id="sDocPredstavnika" name="Документ, що підтверджує статус законного представника особи; Серія та номер документу, дата і орган, що його видав" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="nFile_DocPredstavnika" name="Документ, що підтверджує статус законного представника особи; Наприклад, свідоцтво про народження (для батьків) або оформлена довіреність. Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" "></activiti:formProperty>
         
-        <activiti:formProperty id="sPIB_osoba2" name="Прізвище, ім'я, по батькові другого з батьків / іншого законного представника особи" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="sDateBirth_osoba2" name="Дата народження другого з батьків / іншого законного представника особи" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPIB_osoba2" name="Прізвище, ім'я, по батькові другого з батьків / іншого законного представника особи" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDateBirth_osoba2" name="Дата народження другого з батьків / іншого законного представника особи" type="string" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_D" name="Інформація про особу, якій буде видано довідку" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;lastName_UA1&quot;],&quot;sValue&quot;:&quot;Інформація про особу, якій буде видано довідку&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lastName_UA1" name="Прізвище особи" type="string" default=" " required="true"></activiti:formProperty>
@@ -62,22 +62,20 @@
         <activiti:formProperty id="sNameOtherDocument1" name="Назва іншого документу, що посвідчує особу" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="sBankIdPassport1" name="Документ, що посвідчує особу;Серія та номер документу, дата і орган, що його видав" type="textArea" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="nFile_CopyPassport" name="Паспорт (інший документ), що посвідчує особу; ;bNew=true" type="file" default=" "></activiti:formProperty>
-        <activiti:formProperty id="nFile_SvidoztvoNarodzennya" name="Свідоцтво про народження; ;bNew=true" type="file" default=" "></activiti:formProperty>
+        <activiti:formProperty id="nFile_CopyPassport" name="Паспорт (інший документ), що посвідчує особу; ;bNew=true" type="file" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_SvidoztvoNarodzennya" name="Свідоцтво про народження; ;bNew=true" type="file" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="sDate_of_birth" name="Дата народження" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sAreabirth" name="Місце народження; Країна, область, район і населений пункт" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNationality" name="Громадянство" type="string" default="Україна" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabelFoundEDDR" name=" " type="label" default="Якщо у Особи є оформлений паспорт громадянина України (у вигляді ID-картки) або паспорт громадянина України для виїзду за кордон, то вкажіть номер запису в Єдиному державному демографічному реєстрі (ЄДДР) (як його знайти дивіться &lt;a href=&quot;https://goo.gl/6hYJVf&quot; target=&quot;_blank&quot;&gt; тут &lt;/a&gt; &lt;/b&gt;)"></activiti:formProperty>
+        <activiti:formProperty id="sLabelFoundEDDR" name=" ; ;labelType=info" type="label" default="Якщо у Особи є оформлений паспорт громадянина України (у вигляді ID-картки) або паспорт громадянина України для виїзду за кордон, то вкажіть номер запису в Єдиному державному демографічному реєстрі (ЄДДР) (як його знайти дивіться &lt;a href=&quot;https://goo.gl/6hYJVf&quot; target=&quot;_blank&quot;&gt; тут &lt;/a&gt; &lt;/b&gt;)"></activiti:formProperty>
+        
         <activiti:formProperty id="sEddrNum" name="Номер запису в Єдиному державному демографічному реєстрі (ЄДДР)" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="nFile_ReeCard" name="Картка реєстрації особи або будинкова книга;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" "></activiti:formProperty>
         <activiti:formProperty id="sCommentOsoba" name="Коментарі щодо наданих документів або отримання довідки (в разі необхідності)" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="nFile_Other" name="Копії інших документів (в разі необхідності); завантажте одним файлом формату PDF або архівом (формату zip, rar, 7z);bNew=true" type="file" default=" "></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo ; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
-        
-        <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeZIP&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Завантажте їх ZIP архівом або у форматі PDF. &lt;br&gt;&lt;br&gt;Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний ZIP архів або PDF файл&lt;/a&gt;"></activiti:formProperty>
         
         <activiti:formProperty id="markerRada_0024_LivePlace_2Step" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Rada_0024_LivePlace_2Step.json')}"></activiti:formProperty>
         

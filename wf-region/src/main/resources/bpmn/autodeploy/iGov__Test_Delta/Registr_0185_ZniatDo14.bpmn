@@ -56,7 +56,8 @@
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації дитини;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" default=" "></activiti:formProperty>
         <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання;(або картка реєстрації особи чи будинкова книга);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="warning3" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого батька на реєстрацію місця проживання дитини"></activiti:formProperty>
+        <activiti:formProperty id="warning3" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого з батьків на реєстрацію місця проживання дитини та копія його паспорта."></activiti:formProperty>
+        <activiti:formProperty id="nFile_scan_2passport_Kher" name="Паспорт другого з батьків;(скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z));bNew=true" type="file"></activiti:formProperty>
         
         <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>

@@ -8,25 +8,27 @@
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Ваш телефон;заповніть перед обранням підрозділу ДМС" type="string" default="+380" required="true"></activiti:formProperty>
-        <activiti:formProperty id="email" name="Ваша електронна пошта" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupol" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
-          <activiti:value id="sEnumCentral" name="Центральний район"></activiti:value>
-          <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
-          <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
-          <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
-          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
-        </activiti:formProperty>
+        
         <activiti:formProperty id="sInfoFAQ" name=" ; ;labelType=info" type="label" default="Відповіді на найчастіші питання по закордонних паспортах (в т.ч. про наявність черги) Ви можете знайти за &lt;a href=&quot;https://docs.google.com/document/d/12tTbPz081dMJPxPicyXEe8xMMQdYNUet4Qx04VNCnys/edit?usp=sharing&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
+		
 		<activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="53"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
@@ -35,8 +37,6 @@
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sDistrictMariupol" name="Юзер-група щодо опрацювання заявки; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markers3" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers31" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic_25.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
@@ -93,18 +93,6 @@ else
      }
 var timerEnd=year+'-'+month+'-'+day+'T'+'19'+':'+'00'+':'+seconds
 execution.setVariable('sEndDay', timerEnd)
-
-var GrpUserName = execution.getVariable('sID_Public_SubjectOrganJoin')
-var GrpUserNameResult = ''
-if (GrpUserName=='don_mariupolR' || GrpUserName=='don_mariupol_LevR')
-{
-	GrpUserNameResult = execution.getVariable('asEnumDistrictMariupol')
-}
-if (GrpUserName=='don_mariupolMVC')
-{
-	GrpUserNameResult = execution.getVariable('asEnumDistrictMariupolMVC')
-}
-execution.setVariable('sDistrictMariupol', GrpUserNameResult)
 
 </script>
     </scriptTask>
@@ -174,24 +162,16 @@ ${sNameOrgan},<br>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow25" sourceRef="servicetask3" targetRef="usertask2"></sequenceFlow>
-    <userTask id="usertask2" name="Заявка прийнята ДМС" activiti:candidateGroups="dms_zagran_${sID_Public_SubjectOrganJoin}_${sDistrictMariupol}">
+    <userTask id="usertask2" name="Заявка прийнята ДМС" activiti:candidateGroups="dms_zagran_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Дата та час візиту - " type="queueData" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupol" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum" writable="false">
-          <activiti:value id="sEnumCentral" name="Центральний район"></activiti:value>
-          <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
-          <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
-          <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum" writable="false">
-          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
-        </activiti:formProperty>
+        
         <activiti:formProperty id="finish" name="Результат візиту" type="enum" required="true">
           <activiti:value id="attr1_ok" name="Громадянин з'явився у призначений час"></activiti:value>
           <activiti:value id="attr2_missed" name="Громадянин не з'явився"></activiti:value>

@@ -37,7 +37,7 @@
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markers31" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic_25.json')}"></activiti:formProperty>
+        <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_FIO.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>

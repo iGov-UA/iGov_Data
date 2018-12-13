@@ -55,6 +55,7 @@
         <activiti:formProperty id="sServiceId_visitDay_Qlogic" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="1"></activiti:formProperty>
         <activiti:formProperty id="visitDay_Qlogic" name="Оберіть зручний день та час з доступних місць у черзі, коли Вам буде зручно з'явитись для отримання послуги" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_FIO.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markerRegistr_0026_ZniatMP" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0026_ZniatMP-Qlogic.json')}"></activiti:formProperty>
         
@@ -67,8 +68,7 @@
         <activiti:formProperty id="sRegistrationOrgan" name="Орган реєстрації ; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="sEddrNum" name="Номер у Єдиному державному демографічному реєстрі ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sStamp_Print" name="Боярка-Текст для друку в лівому верхньому куту довідки про реєстрацію ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sAdd_TextinEmail_KhersVK" name="Херсон-Текст в email військомат; ;bVisible=false" type="string" default=" "></activiti:formProperty>
+        <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="sIsCancellCustomeVizite" name="Прапор скасованої заявки громадянином ; ;bVisible=false" type="string" default="False"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
@@ -192,7 +192,6 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sNoM" name="Ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="visitDay" name="День та час зустрічі: " type="queueData" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nMilit" name="Копія військового квитка або свідоцтва про приписку; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="asDecision" name="Рішення держслужбовця" type="enum" required="true">

@@ -49,11 +49,11 @@
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" default=" "></activiti:formProperty>
         <activiti:formProperty id="warning2" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Місце проживання дитини молодше 14 років не може бути зареєстровано окремо від батьків, тому якщо Ви знімаєтесь з реєстрації та другий із батьків зареєстрований за іншою адресою, дитина повина бути знята з реєстрації разом із Вами. Для цього скористайтесь окремою &lt;a href=&quot;https://igov.org.ua/service/185/general&quot;&gt;послугою&lt;/a&gt;"></activiti:formProperty>
         
-        <activiti:formProperty id="sID_Type_visitDay_Qlogic" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
-        <activiti:formProperty id="sOrganizatonGuid_visitDay_Qlogic" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sServiceCenterId_visitDay_Qlogic" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sServiceId_visitDay_Qlogic" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="1"></activiti:formProperty>
-        <activiti:formProperty id="visitDay_Qlogic" name="Оберіть зручний день та час з доступних місць у черзі, коли Вам буде зручно з'явитись для отримання послуги" type="queueData" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
+        <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="47"></activiti:formProperty>
+        <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі, коли Вам буде зручно з'явитись для отримання послуги" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_FIO.json')}"></activiti:formProperty>
         

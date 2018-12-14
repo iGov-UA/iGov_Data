@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_NameOtherDocument": {
+      "aField_ID": [
+        "lableMariupolR"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'don_mariupolR'"
+    },
+    "ShowFieldsOnCondition_3": {
+      "aField_ID": [
+        "lableMariupol_LevR"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient]=='don_mariupol_LevR'"
+    }
+  }
+}

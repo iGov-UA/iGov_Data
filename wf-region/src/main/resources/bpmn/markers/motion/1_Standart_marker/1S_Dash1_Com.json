@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sReason": "asPerevirka"
+      },
+      "sCondition": "[sReason]=='sEnum_bad'"
+    },
+    "RequiredFieldsOnCondition_2D": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sCondit1": "asPerevirka"
+      },
+      "sCondition": "[sCondit1]=='sEnum_bad'"
+    }
+  }
+}

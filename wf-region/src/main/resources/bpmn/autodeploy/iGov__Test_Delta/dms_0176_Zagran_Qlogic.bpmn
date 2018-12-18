@@ -212,7 +212,6 @@ ${sNameOrgan},<br>
 
 <p><b>Що Вам потрібно мати з собою на цей візит:</b><br>
 	<ol>
-		<li>Квитанція про сплату збору.</li>
 		<li>Оригінал громадянського паспорту та його копія (перші два развороти, усі сторінки із місцем реєстрації, інші сторінки, де є особливі відмітки).</li>
 		<li>Оригінал та копія індивідуального податкового номеру (ІПН).</li>
 		<li>(за наявності) Оригінал та копія закордонного паспорту.</li>
@@ -225,12 +224,12 @@ ${sNameOrgan},<br>
 <li>Якщо Ви є внутрішньо переміщеною особою (адреса Вашої реєстрації відноситься до тимчасово окупованої території або районів проведення АТО), візьміть з собою ксерокопію та оригінал довідки переселенця і ксерокопію та оригінал посвідчення водія, якщо вони у Вас є.</li>		
 	</ul>
 </p>
-			[pattern/mail/new_design/_common_content_end.html]
-			[pattern/mail/new_design/_common_feedback.html]   	 
-			[pattern/mail/new_design/_common_signature_start.html]
-                ${sNameOrgan},<br/>
-            [pattern/mail/new_design/_common_signature_end.html]
-			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_feedback.html]   	 
+[pattern/mail/new_design/_common_signature_start.html]
+    ${sNameOrgan},<br/>
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>

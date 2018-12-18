@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="dms_0179_zagranLost_Qlogic" name="Паспорт громадянина України для виїзду за кордон" isExecutable="true">
-    <documentation>Смоктій К.В. QLogic Последние правки: 16.05.2018</documentation>
+  <process id="dms_0179_zagranLost_Qlogic" name="Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого" isExecutable="true">
+    <documentation>QLogic</documentation>
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
-        <activiti:formProperty id="sWarning0" name=" ; ;labelType=info" type="label" default="Для оформлення закордонного паспорту для дитини до 16 років існує окрема &lt;a href=&quot;https://igov.org.ua/service/177/general&quot;&gt;послуга&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" required="true"></activiti:formProperty>
-        
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;bVisible=false" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
@@ -31,6 +29,7 @@
         <activiti:formProperty id="lableMariupol_LevR" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Лівобережний район.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerMariupolRaion" name="markerMariupolRaion" type="markers" default="${markerService.loadFromFile('1_Standart_marker/MariupolRaion.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="sInfoZapis" name=" ; ;labelType=info" type="label" default="ВАЖЛИВО! При здійснені попереднього запису на послугу – запис може проводиться виключно на себе та на близьких родичів – діти, чоловік/дружина (при наявності свідоцтва про шлюб та свідоцтва про народження."></activiti:formProperty>
         <activiti:formProperty id="sInfoFAQ" name=" ; ;labelType=info" type="label" default="Відповіді на найчастіші питання по закордонних паспортах (в т.ч. про наявність черги) Ви можете знайти за &lt;a href=&quot;https://docs.google.com/document/d/12tTbPz081dMJPxPicyXEe8xMMQdYNUet4Qx04VNCnys/edit?usp=sharing&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
         
         <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
@@ -38,16 +37,18 @@
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="53"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_FIO.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sPaymentDMS" name="Реквізити для сплати; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта органу ; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
@@ -58,56 +59,40 @@
     <sequenceFlow id="flow23" sourceRef="boundaryerror1" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
     <sequenceFlow id="flow34" sourceRef="servicetask1" targetRef="scripttask2"></sequenceFlow>
-    <scriptTask id="scripttask2" name="Script Task" scriptFormat="javascript" activiti:autoStoreVariables="false">
+    <scriptTask id="scripttask2" name="Передача значений" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
+var type_queue=execution.getVariable('sID_Type_visitDay')
 
-var src=execution.getVariable('visitDay')
-var date_of_visit=src.substr(src.indexOf('"sDate":"')+9,16)
-
-var tickNum=src.substr(src.indexOf('"receiptNum":')+13,src.indexOf(',',src.indexOf('"receiptNum":')+13)-(src.indexOf('"receiptNum":')+13))
-var tickCode=src.substr(src.indexOf('"id":"')+6,src.indexOf('"',src.indexOf('"id":"')+6)-(src.indexOf('"id":"')+6))
-
-execution.setVariable('sNotification_day', date_of_visit)
-execution.setVariable('sTicketNumber', tickNum)
-execution.setVariable('sTicketCode', tickCode)
-
-var src=date_of_visit
-var year=src.substr(0,4)
-var month=src.substr(5,2)
-var day=src.substr(8,2)
-var hour=src.substr(11,2)
-var minutes=src.substr(14,2)
-var seconds='00'
-var delta=1
-var day1=day
-var month1=month
-if (day!='01')
-    {
-        day1=+day-delta
-    }
-else
-    {
-        if ((month!='01')&amp;&amp;(month!='03'))
-          {
-              month1=+month-1
-              day1=30
-          }
-        else
-          {
-            if (month=='03')
-            {
-              month1='02'
-              day1='28'
-            }            
-          }
-     }
-var timerEnd=year+'-'+month+'-'+day+'T'+'19'+':'+'00'+':'+seconds
-execution.setVariable('sEndDay', timerEnd)
-
-</script>
+var srcQ=execution.getVariable('visitDay')
+var date_of_visit=srcQ.substr(srcQ.indexOf('"sDate":"')+9,16);
+var tickNum=srcQ.substr(srcQ.indexOf('"receiptNum":')+13,srcQ.indexOf(',',srcQ.indexOf('"receiptNum":')+13)-(srcQ.indexOf('"receiptNum":')+13))
+var tickCode=srcQ.substr(srcQ.indexOf('"id":"')+6,srcQ.indexOf('"',srcQ.indexOf('"id":"')+6)-(srcQ.indexOf('"id":"')+6))
+var srcQNotif = ' ' + date_of_visit + ', номер талону - ' + tickNum
+execution.setVariable('sNotification_day', srcQNotif)
+execution.setVariable('date_of_visit', date_of_visit)
+      </script>
     </scriptTask>
-    <sequenceFlow id="flow40" sourceRef="scripttask2" targetRef="servicetask3"></sequenceFlow>
-    <serviceTask id="servicetask3" name="біометричний не терміновий" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
+    <scriptTask id="scripttask3" name="Script Task (groovy)" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>execution.setVariable('sDateCreate', new Date().format("dd.MM.yyyy").toString())</script>
+    </scriptTask>
+    <sequenceFlow id="flow40" sourceRef="scripttask3" targetRef="servicetask3"></sequenceFlow>
+    <serviceTask id="servicetask3" name="Лист чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Нове звернення на тему: Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask4" name="Лист громадянину" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
       <extensionElements>
         <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
@@ -122,27 +107,119 @@ execution.setVariable('sEndDay', timerEnd)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон]]></activiti:string>
+          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
+<p>
+Ваше звернення [sID_Order] успішно зареєстровано. Спеціалісти оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти у обраний час ${date_of_visit}.<br>
+</p>
+[pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan},<br>
+[pattern/mail/new_design/_common_signature_end.html]
+[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow25" sourceRef="servicetask4" targetRef="usertask2"></sequenceFlow>
+    <userTask id="usertask2" name="Перевірка заявки" activiti:candidateGroups="dms_zagran_${sID_Public_SubjectOrganJoin}">
+      <extensionElements>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Телефон громадянина" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="email" name="Електронна пошта громадянина" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="visitDay" name="Дата та час візиту - " type="queueData" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="asKind_passport" name="Паспорт будете отримувати замість" type="enum" writable="false">
+          <activiti:value id="sLost" name="втраченого"></activiti:value>
+          <activiti:value id="sStolen" name="викраденого"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="asPerevirka" name="Результат візиту" type="enum" required="true">
+          <activiti:value id="sEnum_ok" name="Запросити громадянина"></activiti:value>
+          <activiti:value id="sEnum_bad" name="Відмова в наданні послуги"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="tComment" name="Коментар до рішення (вкажіть причину відмови)" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="marker1S_Dash1_Com" name="marker1S_Dash1_Com" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_Com.json')}"></activiti:formProperty>
+        
+        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow44" name="Запрошення" sourceRef="exclusivegateway1" targetRef="servicetask6">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_ok'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow43" name="Відмова" sourceRef="exclusivegateway1" targetRef="servicetask5">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asPerevirka=='sEnum_bad'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow41" sourceRef="servicetask3" targetRef="servicetask4"></sequenceFlow>
+    <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="flow42" sourceRef="usertask2" targetRef="exclusivegateway1"></sequenceFlow>
+    <serviceTask id="servicetask5" name="Відмова" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Відхилено звернення: Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+			[pattern/mail/new_design/_common_content_start.html]
+				<p>
+					На жаль, вам відмовлено у надані послуги.<br>
+					При необхідності ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">iGov.org.ua</a>
+				</p>
+				<p>
+					Причина відмови:<br />
+					<b><i>${tComment}</i></b>
+				</p>
+			[pattern/mail/new_design/_common_content_end.html]
+			[pattern/mail/new_design/_common_feedback.html]   	 
+			[pattern/mail/new_design/_common_signature_start.html]
+                ${sNameOrgan},<br/>
+            [pattern/mail/new_design/_common_signature_end.html]
+			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidkhyleno. Detalno na igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
+        </activiti:field>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="servicetask6" name="Запрошення прийти" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:expression><![CDATA[${email}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Призначено зустріч: Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="text">
+          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
+			[pattern/mail/new_design/_common_content_start.html]
 <p><b> Дякуємо, що скористалися iGov для запису в електронну чергу на замовлення паспорту для виїзду закордон! </b></p><br>
 <p>
-	<b>Деталі візиту</b>
-<ul>
-	<li>Адреса:  ${sAddress}.</li>
-	<li>Дата та час: ${sNotification_day}. Номер талону - ${sTicketNumber}. </li>
-</ul>
+<b>Деталі візиту</b><br>
+Адреса:  ${sAddress}.<br>
 </p>
 
-<p><b>Сплата адміністративного збору:</b>
-Перейдіть за <a href="https://dmsu.gov.ua/services/payment.html" target="_blank">цим посиланням на сайт ДМС</a> , оберіть бажаний термін отримання паспорту та свій район. Ви отримаєте платіжні реквізити. Вам необхідно зробити платіж за цими реквізитами. <br>
-Зверніть увагу, що у призначенні платежу обов'язково має бути присутнім код (цифри та символи, з якого починається текст поля “Призначення платежу”), а ім'я платника має бути написано українською мовою.
-</p><br>
 <p><b>Що Вам потрібно мати з собою на цей візит:</b><br>
 	<ol>
-		<li>Квитанція про сплату збору.</li>
 		<li>Оригінал громадянського паспорту та його копія (перші два развороти, усі сторінки із місцем реєстрації, інші сторінки, де є особливі відмітки).</li>
 		<li>Оригінал та копія індивідуального податкового номеру (ІПН).</li>
 		<li>(за наявності) Оригінал та копія закордонного паспорту.</li>
@@ -155,134 +232,123 @@ execution.setVariable('sEndDay', timerEnd)
 <li>Якщо Ви є внутрішньо переміщеною особою (адреса Вашої реєстрації відноситься до тимчасово окупованої території або районів проведення АТО), візьміть з собою ксерокопію та оригінал довідки переселенця і ксерокопію та оригінал посвідчення водія, якщо вони у Вас є.</li>		
 	</ul>
 </p>
-
-<p>
-Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> 
-</p>
-
- <p>Ознайомтесь з частими запитаннями по цьому сервісу за <a href="https://docs.google.com/document/d/12tTbPz081dMJPxPicyXEe8xMMQdYNUet4Qx04VNCnys/edit?usp=sharing"> цим посиланням</a></p>    
-<br>							
 [pattern/mail/new_design/_common_content_end.html]
+[pattern/mail/new_design/_common_feedback.html]   	 
 [pattern/mail/new_design/_common_signature_start.html]
-${sNameOrgan},<br>
+    ${sNameOrgan},<br/>
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
+        <activiti:field name="sPhone_SMS">
+          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="sText_SMS">
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detalno na igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
+        </activiti:field>
       </extensionElements>
     </serviceTask>
-    <sequenceFlow id="flow25" sourceRef="servicetask3" targetRef="usertask2"></sequenceFlow>
-    <userTask id="usertask2" name="Заявка прийнята ДМС" activiti:candidateGroups="dms_zagran_${sID_Public_SubjectOrganJoin}">
-      <extensionElements>
-        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="tPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Телефон громадянина" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="email" name="Електронна пошта громадянина" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asKind_passport" name="Паспорт будете отримувати замість" type="enum" writable="false">
-          <activiti:value id="sLost" name="втраченого"></activiti:value>
-          <activiti:value id="sStolen" name="викраденого"></activiti:value>
-        </activiti:formProperty>
-        
-        <activiti:formProperty id="visitDay" name="Дата та час візиту - " type="queueData" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="finish" name="Результат візиту" type="enum" required="true">
-          <activiti:value id="attr1_ok" name="Громадянин з'явився у призначений час"></activiti:value>
-          <activiti:value id="attr2_missed" name="Громадянин не з'явився"></activiti:value>
-        </activiti:formProperty>
-        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
-      </extensionElements>
-    </userTask>
-    <endEvent id="endevent2" name="End">
-      <extensionElements>
-        <activiti:executionListener event="start" delegateExpression="${updateStatus_HistoryServiceEvent}"></activiti:executionListener>
-      </extensionElements>
-    </endEvent>
-    <scriptTask id="scripttask3" name="Формировка даты" scriptFormat="javascript" activiti:autoStoreVariables="false">
-      <script>var delta='10';
-var unixdate= Math.round((new Date()).getTime());
-var unixdate=unixdate+86400*1000*delta;
-var new_src = new Date(unixdate);
-var d = new_src.getDate();
-if (d &lt; 10) d = "0"+d;
-var m = new_src.getMonth();
-var m = (+m + +1);
-if (m &lt; 10) m = "0"+m;
-
-var new_year = new_src.getFullYear();
-var new_hour = new_src.getHours();
-var new_minutes = new_src.getMinutes();
-var timer = new_year+'-'+m+'-'+d+'T'+new_hour+':'+new_minutes+':00';
-execution.setVariable('sNotification_day', timer)
-</script>
-    </scriptTask>
-    <boundaryEvent id="escalationTimer" name="Timer" attachedToRef="usertask2" cancelActivity="true">
-      <timerEventDefinition>
-        <timeDate>${sEndDay}</timeDate>
-      </timerEventDefinition>
-    </boundaryEvent>
-    <sequenceFlow id="flow41" sourceRef="escalationTimer" targetRef="scripttask3"></sequenceFlow>
-    <sequenceFlow id="flow42" sourceRef="scripttask3" targetRef="endevent2"></sequenceFlow>
+    <endEvent id="endevent4" name="End"></endEvent>
+    <sequenceFlow id="flow45" sourceRef="servicetask6" targetRef="endevent4"></sequenceFlow>
+    <sequenceFlow id="flow46" sourceRef="servicetask5" targetRef="endevent4"></sequenceFlow>
+    <sequenceFlow id="flow47" sourceRef="scripttask2" targetRef="scripttask3"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0179_zagranLost_Qlogic">
     <bpmndi:BPMNPlane bpmnElement="dms_0179_zagranLost_Qlogic" id="BPMNPlane_dms_0179_zagranLost_Qlogic">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
-        <omgdc:Bounds height="35.0" width="35.0" x="13.0" y="95.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="13.0" y="100.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
-        <omgdc:Bounds height="55.0" width="105.0" x="63.0" y="85.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="63.0" y="90.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="boundaryerror1" id="BPMNShape_boundaryerror1">
-        <omgdc:Bounds height="30.0" width="30.0" x="139.0" y="76.0"></omgdc:Bounds>
+        <omgdc:Bounds height="30.0" width="30.0" x="101.0" y="131.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
-        <omgdc:Bounds height="35.0" width="35.0" x="90.0" y="50.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="98.0" y="189.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask2" id="BPMNShape_scripttask2">
-        <omgdc:Bounds height="55.0" width="105.0" x="185.0" y="85.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask3" id="BPMNShape_servicetask3">
-        <omgdc:Bounds height="55.0" width="105.0" x="310.0" y="85.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
-        <omgdc:Bounds height="55.0" width="105.0" x="440.0" y="85.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="escalationTimer" id="BPMNShape_escalationTimer">
-        <omgdc:Bounds height="30.0" width="30.0" x="515.0" y="76.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
-        <omgdc:Bounds height="35.0" width="35.0" x="835.0" y="150.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="63.0" y="10.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
-        <omgdc:Bounds height="55.0" width="105.0" x="562.0" y="85.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="200.0" y="10.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask3" id="BPMNShape_servicetask3">
+        <omgdc:Bounds height="55.0" width="105.0" x="200.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask4" id="BPMNShape_servicetask4">
+        <omgdc:Bounds height="55.0" width="105.0" x="328.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="55.0" width="105.0" x="460.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
+        <omgdc:Bounds height="40.0" width="40.0" x="492.0" y="186.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask5" id="BPMNShape_servicetask5">
+        <omgdc:Bounds height="55.0" width="105.0" x="356.0" y="179.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask6" id="BPMNShape_servicetask6">
+        <omgdc:Bounds height="55.0" width="105.0" x="564.0" y="179.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent4" id="BPMNShape_endevent4">
+        <omgdc:Bounds height="35.0" width="35.0" x="495.0" y="266.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
-        <omgdi:waypoint x="48.0" y="112.0"></omgdi:waypoint>
-        <omgdi:waypoint x="63.0" y="112.0"></omgdi:waypoint>
+        <omgdi:waypoint x="48.0" y="117.0"></omgdi:waypoint>
+        <omgdi:waypoint x="63.0" y="117.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
-        <omgdi:waypoint x="139.0" y="91.0"></omgdi:waypoint>
-        <omgdi:waypoint x="125.0" y="67.0"></omgdi:waypoint>
+        <omgdi:waypoint x="116.0" y="161.0"></omgdi:waypoint>
+        <omgdi:waypoint x="115.0" y="189.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
-        <omgdi:waypoint x="168.0" y="112.0"></omgdi:waypoint>
-        <omgdi:waypoint x="185.0" y="112.0"></omgdi:waypoint>
+        <omgdi:waypoint x="115.0" y="90.0"></omgdi:waypoint>
+        <omgdi:waypoint x="115.0" y="65.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow40" id="BPMNEdge_flow40">
-        <omgdi:waypoint x="290.0" y="112.0"></omgdi:waypoint>
-        <omgdi:waypoint x="310.0" y="112.0"></omgdi:waypoint>
+        <omgdi:waypoint x="252.0" y="65.0"></omgdi:waypoint>
+        <omgdi:waypoint x="252.0" y="90.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
-        <omgdi:waypoint x="415.0" y="112.0"></omgdi:waypoint>
-        <omgdi:waypoint x="440.0" y="112.0"></omgdi:waypoint>
+        <omgdi:waypoint x="433.0" y="117.0"></omgdi:waypoint>
+        <omgdi:waypoint x="460.0" y="117.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow44" id="BPMNEdge_flow44">
+        <omgdi:waypoint x="532.0" y="206.0"></omgdi:waypoint>
+        <omgdi:waypoint x="564.0" y="206.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="63.0" x="577.0" y="166.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow43" id="BPMNEdge_flow43">
+        <omgdi:waypoint x="492.0" y="206.0"></omgdi:waypoint>
+        <omgdi:waypoint x="461.0" y="206.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="42.0" x="362.0" y="166.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow41" id="BPMNEdge_flow41">
-        <omgdi:waypoint x="545.0" y="91.0"></omgdi:waypoint>
-        <omgdi:waypoint x="562.0" y="112.0"></omgdi:waypoint>
+        <omgdi:waypoint x="305.0" y="117.0"></omgdi:waypoint>
+        <omgdi:waypoint x="328.0" y="117.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow42" id="BPMNEdge_flow42">
-        <omgdi:waypoint x="667.0" y="112.0"></omgdi:waypoint>
-        <omgdi:waypoint x="852.0" y="112.0"></omgdi:waypoint>
-        <omgdi:waypoint x="852.0" y="150.0"></omgdi:waypoint>
+        <omgdi:waypoint x="512.0" y="145.0"></omgdi:waypoint>
+        <omgdi:waypoint x="512.0" y="186.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow45" id="BPMNEdge_flow45">
+        <omgdi:waypoint x="616.0" y="234.0"></omgdi:waypoint>
+        <omgdi:waypoint x="512.0" y="266.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow46" id="BPMNEdge_flow46">
+        <omgdi:waypoint x="408.0" y="234.0"></omgdi:waypoint>
+        <omgdi:waypoint x="512.0" y="266.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow47" id="BPMNEdge_flow47">
+        <omgdi:waypoint x="168.0" y="37.0"></omgdi:waypoint>
+        <omgdi:waypoint x="200.0" y="37.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

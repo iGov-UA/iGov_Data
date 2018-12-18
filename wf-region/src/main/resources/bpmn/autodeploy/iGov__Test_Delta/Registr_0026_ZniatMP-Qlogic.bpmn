@@ -145,7 +145,6 @@ execution.setVariable('sMaxPay', maxpay)
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
 					Ваше звернення [sID_Order] успішно зареєстровано. Спеціалісти оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти у обраний час ${date_of_visit}, реквізитами та сумою для сплати адміністративного збору, короткою інструкцією щодо процедури зняття з реєстрації.<br>
-					${sAdd_TextinEmail_KhersVK}
 					${sAddress}.<br> 
 					${sPhoneOrgan}<br>
 				</p>

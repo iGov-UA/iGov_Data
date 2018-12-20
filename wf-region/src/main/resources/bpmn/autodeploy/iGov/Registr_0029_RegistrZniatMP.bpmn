@@ -7,7 +7,7 @@
         <activiti:formProperty id="warning1" name=" ; ;labelType=warning" type="label" default="&lt;b&gt;Зверніть увагу! Послуга надається лише для однієї особи, що подає звернення! &lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="warning2" name=" ; ;labelType=info" type="label" default="УВАГА! Для реєстрації місця проживання дитини віком до 14 років використовуйте, будь ласка, &lt;a href=&quot; https://igov.org.ua/service/184/general&quot; target=&quot;_blank&quot;&gt;іншу &lt;/a&gt; послугу!"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить Ваше нове місце реєстрації" type="select" default="0" required="true"></activiti:formProperty>
-        <activiti:formProperty id="labelKhersonVK" name=" ; ;labelType=info" type="label" default="Чоловіки, увага Військомат! &lt;br&gt;Для отримання послуги вам треба роздрукувати Картку реєстрації особи за посиланням та відвідати з нею військомат. Після чого реєстратор буде чекати вас у обрану дату та час.&lt;br&gt; &lt;a href=&quot;https://docs.google.com/document/d/1rreCKeFu1no1Cr65QJ_MPjXGbwqoQf61pfcS-N4BH2Y/edit &quot;&gt;Картка реєстрації особи для друку&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="labelKhersonVK" name=" ; ;labelType=info" type="label" default="УВАГА військовозобов'язані! &lt;br&gt;Для отримання послуги вам треба роздрукувати Картку реєстрації особи за посиланням та відвідати з нею військомат. Після чого реєстратор буде чекати вас у обрану дату та час.&lt;br&gt; &lt;a href=&quot;https://docs.google.com/document/d/1YNT2bUeFb61aCKtwrvqA4a-MUBU_Id9gfImwdzs9IQs/edit?usp=sharing &quot;&gt;Картка реєстрації особи для друку&lt;/a&gt;"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
@@ -20,7 +20,9 @@
         </activiti:formProperty>
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника" type="string" default=" "></activiti:formProperty>
         
-        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="tPassport" name="Паспортні дані заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
@@ -46,8 +48,8 @@
         <activiti:formProperty id="nMilit" name="Завантажте копію військового квитка, свідоцтва про приписку або документу що їм відповідають;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" " required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Інформація щодо реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реєстрації&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sRegistrationAddress" name="Стара адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;Область, Населений пункт, Вулиця, Будинок, Корпус, Квартира" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sRegistrationAddress" name="Стара адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="asRegistrationType" name="Реєстрація здійснюється Вами" type="enum" required="true">
           <activiti:value id="sOwner" name="до власного житлового приміщення"></activiti:value>
           <activiti:value id="sRent" name="до орендованого житла"></activiti:value>
@@ -118,12 +120,6 @@
       <script>
 var minpay='13,60'
 var maxpay='40,80'
-
-if(execution.getVariable('sID_Public_SubjectOrganJoin') == 'khers_khersT')
-  {
-  minpay='15,65'
-  maxpay='46,95'
-  }
 
 execution.setVariable('sMinPay', minpay)
 execution.setVariable('sMaxPay', maxpay)
@@ -249,6 +245,7 @@ execution.setVariable('sMaxPay', maxpay)
         </activiti:formProperty>
         <activiti:formProperty id="visitDay" name="День та час зустрічі: " type="queueData" writable="false"></activiti:formProperty>
         
+        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nMilit" name="Завантажте копію військового квитка, свідоцтва про приписку або документу що їм відповідають;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nSvidOwn" name="Документ щодо права властності; cвідоцтво про право власності, договір куплі/продажу та витяг з державного реєстру речових прав на нерухоме майно. Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nOrder" name="Ордер, або копія ордеру з печаткою ЖЕКу;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
@@ -566,6 +563,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sNoR" name="Ні"></activiti:value>
         </activiti:formProperty>
         
+        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ); ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nMilit" name="Завантажте копію військового квитка, свідоцтва про приписку або документу що їм відповідають;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nSvidOwn" name="Документ щодо права властності; cвідоцтво про право власності, договір куплі/продажу та витяг з державного реєстру речових прав на нерухоме майно. Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nOrder" name="Ордер, або копія ордеру з печаткою ЖЕКу;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" writable="false"></activiti:formProperty>

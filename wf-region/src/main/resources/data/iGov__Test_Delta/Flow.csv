@@ -525,5 +525,5 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 
 501;Відділ реєстрації Станіславська ОТГ;5007;344;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 502;Відділ реєстрації Великокопанівської ОТГ;5463;345;dnepr_dms-89_auto;40;REGISTRATION_DAY5
-503;ЦНАП Вишневої міської ради Києво-Святошинського району;4524;346;dms_0176_Zagran_DMSiGov;NULL;
+503;ЦНАП Вишневої міської ради Києво-Святошинського району;4524;346;dms_0176_Zagran_DMSiGov_auto;15;DMS_VUSHNEVE
 504;Слов'янський відділ реєстрації фізичних осіб;5780;347;dnepr_dms-89_auto;40;REGISTRATION_DAY5

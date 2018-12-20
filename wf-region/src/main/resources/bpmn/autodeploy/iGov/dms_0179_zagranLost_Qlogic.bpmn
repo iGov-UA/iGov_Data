@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="dms_0176_Zagran_Qlogic" name="Паспорт громадянина України для виїзду за кордон" isExecutable="true">
+  <process id="dms_0179_zagranLost_Qlogic" name="Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого" isExecutable="true">
     <documentation>QLogic</documentation>
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
@@ -17,6 +17,13 @@
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="asKind_passport" name="Паспорт будете отримувати замість" type="enum" required="true">
+          <activiti:value id="sLost" name="втраченого"></activiti:value>
+          <activiti:value id="sStolen" name="викраденого"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sWarning3" name=" ; ;labelType=info" type="label" default="При подачі заявки Вам потрібно буде принести довідку з поліції про викрадення паспорту"></activiti:formProperty>
+        <activiti:formProperty id="markers2" name="flow data" type="markers" default="${markerService.loadFromFile('dms/dmsZagran179.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="sInfoZapis" name=" ; ;labelType=info" type="label" default="ВАЖЛИВО! При здійснені попереднього запису на послугу – запис може проводиться виключно на себе та на близьких родичів – діти, чоловік/дружина (при наявності свідоцтва про шлюб та свідоцтва про народження."></activiti:formProperty>
@@ -32,8 +39,8 @@
         
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
         
+        <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
@@ -111,7 +118,7 @@ execution.setVariable('sEndDay', timerEnd)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон]]></activiti:string>
+          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон замість втраченого чи викраденого замість втраченого чи викраденого]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -121,20 +128,19 @@ execution.setVariable('sEndDay', timerEnd)
 <b>Деталі візиту</b><br>
   <ol>
 <li>Адреса:  ${sAddress}.</li>
-<li>Дата та час візиту - ${sNotification_day}.</li>
+<li>Орієнтовна дата та час візиту - ${sNotification_day}.</li>
   </ol>
 </p>
 
-<p><b>Сплата адміністративного збору здійснюється безпосередньо перед оформленням паспарту громадянина України для виїзду закордон</b></p>
+<b>Сплата адміністративного збору здійснюється безпосередньо перед оформленням паспарту громадянина України для виїзду закордон</b><br>
 
 <p><b>Що Вам потрібно мати з собою на цей візит:</b><br>
 	<ol>
 		<li>Оригінал громадянського паспорту та його копія (перші два развороти, усі сторінки із місцем реєстрації, інші сторінки, де є особливі відмітки).</li>
 		<li>Оригінал та копія індивідуального податкового номеру (ІПН).</li>
-		<li>Оригінал та копія закордонного паспорту. (за наявності)</li>
+		<li>(за наявності) Оригінал та копія закордонного паспорту.</li>
 		<li>Квитанція про сплату адміністративного збору, яка сплачується перед оформленням паспарту громадянина України для виїзду закордон.</li>
 	</ol>
-
 <p><b>Зверніть увагу:</b>
   <ul>
     <li>Дуже важливо не запізнюватись, бо Ваше місце може “згоріти”. Краще перестрахуйтесь та прийдіть трохи раніше.</li>
@@ -185,8 +191,8 @@ ${sNameOrgan},<br>
     <sequenceFlow id="flow48" sourceRef="escalationTimer" targetRef="endevent4"></sequenceFlow>
     <sequenceFlow id="flow49" sourceRef="usertask2" targetRef="endevent4"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0176_Zagran_Qlogic">
-    <bpmndi:BPMNPlane bpmnElement="dms_0176_Zagran_Qlogic" id="BPMNPlane_dms_0176_Zagran_Qlogic">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0179_zagranLost_Qlogic">
+    <bpmndi:BPMNPlane bpmnElement="dms_0179_zagranLost_Qlogic" id="BPMNPlane_dms_0179_zagranLost_Qlogic">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="163.0" y="280.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>

@@ -2542,8 +2542,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 2603;1431;50005;NULL;5;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 2604;1510;50005;NULL;5;4;{"processDefinitionId":"kiev_mda_834:1:1"};;false;18;true;;BankID,EDS,mpbds;0
 2605;729;26;26;NULL;4;{"processDefinitionId":"cnap_541:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-2606;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0
-2607;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0
+2606;676;3;3;NULL;4;{"processDefinitionId":"ostroh_mvk_481:1:1"};;false;212;true;;BankID,EDS,mpbds;0
+2607;161;3;3;NULL;4;{"processDefinitionId":"Rada_0161_InfoZaput:1:1"};;false;212;true;;BankID,EDS,mpbds;0
 2608;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0
 2609;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0
 2610;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0

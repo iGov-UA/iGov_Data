@@ -1,0 +1,46 @@
+{
+  "aField": [
+    {
+      "id": "sTableAl_1",
+      "name": "Прізвище, ініціали платника аліментів",
+      "type": "string",
+      "default": " ",
+      "nWidth": "28%"
+    },
+    {
+      "id": "sTableAl_2",
+      "name": "Прізвище, ініціали отримувача аліментів",
+      "type": "string",
+      "default": " ",
+      "nWidth": "28%"
+    },
+    {
+      "id": "sTableAl_3",
+      "name": "Сума, грн",
+      "type": "string",
+      "default": " ",
+      "nWidth": "19%"
+    },
+    {
+      "id": "sTableAl_4",
+      "name": "Відмітка про наявність заборгованості понад три місяці за виконавчим провадженням",
+      "type": "enum",
+      "default": "default",
+      "a": [
+        {
+          "id": "default",
+          "name": " "
+        },
+        {
+          "id": "no",
+          "name": "ні"
+        },
+        {
+          "id": "yes",
+          "name": "так"
+        }
+      ],
+      "nWidth": "25%"
+    }
+  ]
+}

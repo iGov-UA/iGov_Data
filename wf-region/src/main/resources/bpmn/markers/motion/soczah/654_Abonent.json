@@ -1,0 +1,92 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_KomOblTE": {
+      "aField_ID": [
+        "KomOblTE_number1",
+        "KomOblTE_name",
+        "KomOblTE_notice"
+      ],
+      "asID_Field": {
+        "sService": "KomOblTE"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_KomOblGV": {
+      "aField_ID": [
+        "KomOblGV_number1",
+        "KomOblGV_name",
+        "KomOblGV_notice"
+      ],
+      "asID_Field": {
+        "sService": "KomOblGV"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_KomOblPV": {
+      "aField_ID": [
+        "KomOblPV_number1",
+        "KomOblPV_name",
+        "KomOblPV_notice"
+      ],
+      "asID_Field": {
+        "sService": "KomOblPV"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_AbonObslCVP": {
+      "aField_ID": [
+        "AbonObslCVP_number1",
+        "AbonObslCVP_name",
+        "AbonObslCVP_notice"
+      ],
+      "asID_Field": {
+        "sService": "AbonObslCVP"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_AbonObslCVV": {
+      "aField_ID": [
+        "AbonObslCVV_number1",
+        "AbonObslCVV_name",
+        "AbonObslCVV_notice"
+      ],
+      "asID_Field": {
+        "sService": "AbonObslCVV"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_AbonObslGV": {
+      "aField_ID": [
+        "AbonObslGV_number1",
+        "AbonObslGV_name",
+        "AbonObslGV_notice"
+      ],
+      "asID_Field": {
+        "sService": "AbonObslGV"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_AbonObslTE": {
+      "aField_ID": [
+        "AbonObslTE_number1",
+        "AbonObslTE_name",
+        "AbonObslTE_notice"
+      ],
+      "asID_Field": {
+        "sService": "AbonObslTE"
+      },
+      "sCondition": "[sService]=='attr1'"
+    },
+    "ShowFieldsOnCondition_AbonObslVidh": {
+      "aField_ID": [
+        "AbonObslVidh_number1",
+        "AbonObslVidh_name",
+        "AbonObslVidh_notice"
+      ],
+      "asID_Field": {
+        "sService": "AbonObslVidh"
+      },
+      "sCondition": "[sService]=='attr1'"
+    }
+  }
+}

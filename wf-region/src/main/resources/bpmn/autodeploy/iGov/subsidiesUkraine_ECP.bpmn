@@ -216,9 +216,9 @@
           <activiti:value id="ecp_no" name="без ЕЦП (погоджуєтесь на особистий візит після перевірки правильності даних)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name="Заява з ЕЦП; ;bNew=true,bPrintFormFileAsPDF=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для наложения ЭЦП ; ;bVisible=false" type="string" default="pattern/print/UPSZN/subsidy_zayava_201805.html"></activiti:formProperty>
+        <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для наложения ЭЦП ; ;bVisible=false" type="string" default="pattern/print/UPSZN/subsidy_zayava_201901.html"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_2" name="Декларація з ЕЦП; ;bNew=true,bPrintFormFileAsPDF=true" type="file"></activiti:formProperty>
-        <activiti:formProperty id="PrintFormAutoSign_2" name="Шаблон для наложения ЭЦП ; ;bVisible=false" type="string" default="pattern/print/UPSZN/subsidy_declaration_201805.html"></activiti:formProperty>
+        <activiti:formProperty id="PrintFormAutoSign_2" name="Шаблон для наложения ЭЦП ; ;bVisible=false" type="string" default="pattern/print/UPSZN/subsidy_declaration_201901.html"></activiti:formProperty>
         <activiti:formProperty id="markerWritable" name="WritableFields" type="markers" default="{&quot;motion&quot;:{&quot;WritableFieldsOnCondition_187&quot;:{&quot;aField_ID&quot;:[&quot;bankIdbirthDay&quot;],&quot;asID_Field&quot;:{&quot;sOverload&quot;:&quot;bankIdlastName&quot;},&quot;sCondition&quot;:&quot;[sOverload]!='null'&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="підпис ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="електронна пошта ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -440,10 +440,10 @@
           <activiti:value id="reject" name="відмова в обробці (обов'язково вкажіть причину в коментарі)"></activiti:value>
           <activiti:value id="sign" name="запросити громадянина до підписання (якщо заявка без ЕЦП)"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="PrintForm_1" name="Заява;Заява;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201805.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_2" name="Декларація;Декларація;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201805.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_1" name="[pattern/print/UPSZN/subsidy_zayava_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_2" name="[pattern/print/UPSZN/subsidy_declaration_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Декларація" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_1" name="Заява;Заява;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201901.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_2" name="Декларація;Декларація;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201901.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/UPSZN/subsidy_zayava_201901.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/UPSZN/subsidy_declaration_201901.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Декларація" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ScanPassport" name="Скан-копія паспорта;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="rent" name="Договір найму (оренди) житла;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sRegistrTable" name="Зареєстровані;bNew=true" type="table" writable="false"></activiti:formProperty>
@@ -736,10 +736,10 @@ ${sNameOrgan}<br/>
           <activiti:value id="attr5" name="субсидія потребує розгляду комісії"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="decision" name="Рішення про надання субсидії; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_1" name="Заява;Заява;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201805.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_2" name="Декларація;Декларація;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201805.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_1" name="[pattern/print/UPSZN/subsidy_zayava_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sBody_2" name="[pattern/print/UPSZN/subsidy_declaration_201805.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Декларація" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_1" name="Заява;Заява;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_zayava_201901.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="PrintForm_2" name="Декларація;Декларація;sPrintFormFileAsPDF=pattern/print/UPSZN/subsidy_declaration_201901.html" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/UPSZN/subsidy_zayava_201901.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_2" name="[pattern/print/UPSZN/subsidy_declaration_201901.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Декларація" writable="false"></activiti:formProperty>
         <activiti:formProperty id="ScanPassport" name="Скан-копія паспорта;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="rent" name="Договір найму (оренди) житла;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sRegistrTable" name="Зареєстровані;bNew=true" type="table" writable="false"></activiti:formProperty>

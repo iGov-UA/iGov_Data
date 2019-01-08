@@ -241,6 +241,11 @@ ${sNameOrgan},<br>
 		<li>оригінал та копію паспорта одного з батьків;</li>
 	</ul>
 </p>
+<b>Зверніть увагу:</b> 
+<ul>
+<li><b>При видачі карти видається спеціальний лист що містить PIN-коди і PUК-коди</b></li>
+</ul>
+
 <p>Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </p>          
 <p>[cancelTask]</p>                
 [pattern/mail/new_design/_common_content_end.html]

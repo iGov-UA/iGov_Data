@@ -1,0 +1,24 @@
+{
+  "motion": {
+    "RequiredFieldsOnCondition_accept": {
+      "aField_ID": [
+        "visitDay1",
+        "NumbPers"
+      ],
+      "asID_Field": {
+        "sCondit": "decide"
+      },
+      "sCondition": "[sCondit]=='accept'"
+    },
+    "ShowFieldsOnCondition_accept": {
+      "aField_ID": [
+        "visitDay1",
+        "NumbPers"
+      ],
+      "asID_Field": {
+        "sCondit": "decide"
+      },
+      "sCondition": "[sCondit] == 'accept'"
+    }
+  }
+}

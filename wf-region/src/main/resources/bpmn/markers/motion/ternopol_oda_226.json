@@ -2,7 +2,8 @@
   "motion": {
     "RequiredFieldsOnCondition_1":{
   "aField_ID":[
-     "visitDay1"
+     "visitDay1",
+     "NumbPers"
   ],
   "asID_Field":{
   "sCondit":"decide"

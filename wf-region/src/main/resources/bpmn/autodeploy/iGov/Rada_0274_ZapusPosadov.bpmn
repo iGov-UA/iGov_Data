@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="Rada_0274_ZapusPosadov" name="Запис на прийом до посадовця " isExecutable="true">
-    <documentation>переменные из атрибутов sNameOrgan, sMailClerk226, sPhoneOrgan, sAddress, sPosada</documentation>
+    <documentation>переменные из атрибутов sNameOrgan, sMailClerk226, sPhoneOrgan, sAddress, sPosada, sRozkladPriyom</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, до посадовців якого Ви бажаєте записатись на прийом" type="select" default="0" required="true"></activiti:formProperty>
@@ -60,7 +60,7 @@
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json)}"></activiti:formProperty>
+        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_3" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sPosada&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPosada" name="До кого саме Ви маєте намір записатись на прийом" type="enum"></activiti:formProperty>

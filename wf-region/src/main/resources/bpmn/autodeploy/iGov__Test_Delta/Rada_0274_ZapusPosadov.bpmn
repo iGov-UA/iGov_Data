@@ -60,7 +60,7 @@
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json)}"></activiti:formProperty>
+        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_3" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sPosada&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPosada" name="До кого саме Ви маєте намір записатись на прийом" type="enum"></activiti:formProperty>

@@ -1,47 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="dms_0177_zagranChild_Qlogic" name="Паспорт громадянина для виїзду за кордон для дитини" isExecutable="true">
-    <documentation>Смоктій К.В. QLogic Последние правки: 16.05.2018</documentation>
+  <process id="dms_0177_zagranChild_Qlogic" name="Паспорт громадянина України для виїзду за кордон" isExecutable="true">
+    <documentation>QLogic</documentation>
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
-        <activiti:formProperty id="sWarning0" name=" ; ;labelType=info" type="label" default="Для оформлення закордонного паспорту для дорослого існує окрема &lt;a href=&quot;https://igov.org.ua/service/176/general&quot;&gt;послуга&lt;/a&gt;"></activiti:formProperty>
-        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string"></activiti:formProperty>
-        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string"></activiti:formProperty>
-        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Ваш телефон;заповніть перед обранням підрозділу ДМС" type="string" default="+380" required="true"></activiti:formProperty>
-        <activiti:formProperty id="email" name="Ваша електронна пошта" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markersLine_1" name="Початок-блок для кого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;lastName_UA1&quot;],&quot;sValue&quot;:&quot;Дані особи, яка буде отримувати паспорт&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_1" name="Дані дитини, яка буде отримувати паспорт" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;lastName_UA1&quot;],&quot;sValue&quot;:&quot;Дані дитини, яка буде отримувати паспорт&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lastName_UA1" name="Прізвище дитини" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="firstName_UA1" name="Ім'я дитини" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="По батькові дитини" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markersLine_2" name="Кынець-блок для кого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sID_Public_SubjectOrganJoin&quot;],&quot;sValue&quot;:&quot; &quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sInfoZapis" name=" ; ;labelType=info" type="label" default="ВАЖЛИВО! При здійснені попереднього запису на послугу – запис може проводиться виключно на себе та на близьких родичів – діти, чоловік/дружина (при наявності свідоцтва про шлюб та свідоцтва про народження."></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupol" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
-          <activiti:value id="sEnumCentral" name="Центральний район"></activiti:value>
-          <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
-          <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
-          <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum">
-          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="sInfoFAQ" name=" ; ;labelType=info" type="label" default="Відповіді на найчастіші питання по закордонних паспортах (в т.ч. про наявність черги) Ви можете знайти за &lt;a href=&quot;https://docs.google.com/document/d/12tTbPz081dMJPxPicyXEe8xMMQdYNUet4Qx04VNCnys/edit?usp=sharing&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
-		<activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
+        <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string" default="53"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_DutFIO.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEndDay" name="Запуск таймера юзертаски; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sDistrictMariupol" name="Юзер-група щодо опрацювання заявки; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="markers3" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers21" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/dms_Qlogic_28.json')}"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
@@ -51,17 +42,19 @@
     </boundaryEvent>
     <sequenceFlow id="flow23" sourceRef="boundaryerror1" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
-    <sequenceFlow id="flow10" sourceRef="servicetask1" targetRef="scripttask1"></sequenceFlow>
-    <scriptTask id="scripttask1" name="Формировка даты" scriptFormat="javascript" activiti:autoStoreVariables="false">
-      <script>var src=execution.getVariable('visitDay')
-var date_of_visit=src.substr(src.indexOf('"sDate":"')+9,16);
+    <sequenceFlow id="flow34" sourceRef="servicetask1" targetRef="scripttask2"></sequenceFlow>
+    <scriptTask id="scripttask2" name="script" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <script>
+var srcQ=execution.getVariable('visitDay')
+var date_of_visit=srcQ.substr(srcQ.indexOf('"sDate":"')+9,16);
 
-var tickNum=src.substr(src.indexOf('"receiptNum":')+13,src.indexOf(',',src.indexOf('"receiptNum":')+13)-(src.indexOf('"receiptNum":')+13))
-var tickCode=src.substr(src.indexOf('"id":"')+6,src.indexOf('"',src.indexOf('"id":"')+6)-(src.indexOf('"id":"')+6))
+var tickNum=srcQ.substr(srcQ.indexOf('"receiptNum":')+13,srcQ.indexOf(',',srcQ.indexOf('"receiptNum":')+13)-(srcQ.indexOf('"receiptNum":')+13))
+var tickCode=srcQ.substr(srcQ.indexOf('"id":"')+6,srcQ.indexOf('"',srcQ.indexOf('"id":"')+6)-(srcQ.indexOf('"id":"')+6))
 
-execution.setVariable('sNotification_day', date_of_visit)
-execution.setVariable('sTicketNumber', tickNum)
-execution.setVariable('sTicketCode', tickCode)
+var srcQNotif = ' ' + date_of_visit + ', номер талону - ' + tickNum
+execution.setVariable('sNotification_day', srcQNotif)
+execution.setVariable('date_of_visit', date_of_visit)
+
 var src=date_of_visit
 var year=src.substr(0,4)
 var month=src.substr(5,2)
@@ -94,25 +87,15 @@ else
      }
 var timerEnd=year+'-'+month+'-'+day+'T'+'19'+':'+'00'+':'+seconds
 execution.setVariable('sEndDay', timerEnd)
-
-var GrpUserName = execution.getVariable('sID_Public_SubjectOrganJoin')
-var GrpUserNameResult = ''
-if (GrpUserName=='don_mariupolR' || GrpUserName=='don_mariupol_LevR')
-{
-	GrpUserNameResult = execution.getVariable('asEnumDistrictMariupol')
-}
-if (GrpUserName=='don_mariupolMVC')
-{
-	GrpUserNameResult = execution.getVariable('asEnumDistrictMariupolMVC')
-}
-execution.setVariable('sDistrictMariupol', GrpUserNameResult)
-
 </script>
     </scriptTask>
-    <sequenceFlow id="flow28" sourceRef="scripttask1" targetRef="servicetask3"></sequenceFlow>
-    <serviceTask id="servicetask3" name="біометричний не терміновий" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
+    <scriptTask id="scripttask3" name="Script Task (groovy)" scriptFormat="groovy" activiti:autoStoreVariables="false">
+      <script>execution.setVariable('sDateCreate', new Date().format("dd.MM.yyyy").toString())</script>
+    </scriptTask>
+    <sequenceFlow id="flow40" sourceRef="scripttask3" targetRef="servicetask4"></sequenceFlow>
+    <serviceTask id="servicetask4" name="Лист громадянину" activiti:delegateExpression="#{MailTaskWithoutAttachmentAndWithSms}">
       <extensionElements>
-              <activiti:field name="sPhone_SMS">
+        <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
@@ -125,67 +108,60 @@ execution.setVariable('sDistrictMariupol', GrpUserNameResult)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон для дитини]]></activiti:string>
+          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-
-Ім'я дитини для якої зареєтровано місце в черзі: <b>${lastName_UA1} ${firstName_UA1} ${middleName_UA1}.</b><br>
-
-<p>Відповіді на найчастіші питання по закордонних паспортах Ви можете знайти за <a href="https://docs.google.com/document/d/12tTbPz081dMJPxPicyXEe8xMMQdYNUet4Qx04VNCnys/edit?usp=sharing">посиланням</a></p><br>
-
-										Для того щоб закінчити процедуру необхідно:<br>
-										<ul>
-											<li>У будь-якому банку сплатити адмінсбір та отримати квитанцію про сплату.Реквізити для сплати адмінсбору доступні за <b><a href="https://dmsu.gov.ua/services/payment.html" target="_blank">посиланням</a> </b> </li>
-											<li>Прийти за адресою: ${sAddress} з необхідними документами.</li>
-										</ul>
-									</p>
-									<p>
-																			<b>Деталі зустрічі:</b><br>
-	Номер талону - ${sTicketNumber}, орієнтовна дата та час візиту - ${sNotification_day}. 
+<p><b> Дякуємо, що скористалися iGov для запису в електронну чергу на замовлення паспорту для виїзду закордон! </b></p><br>
+<p>
+<b>Деталі візиту</b><br>
+  <ol>
+<li>Адреса:  ${sAddress}.</li>
+<li>Дата та час візиту - ${sNotification_day}.</li>
+  </ol>
 </p>
-									
-									</p>
-									<p>
-										<b>Необхідні документи, які треба принести для оформлення паспорта громадянина України для виїзду за кордон для дитини:</b>
-										<ul>
-<br>
-<li>свідоцтво про народження або паспорт громадянина України (для громадян, які досягли 14-річного віку);</li>
 
-<br>
-<li> якщо батьки або один із батьків дитини на момент її народження були іноземцями або особами без громадянства, також подається довідка про реєстрацію особи громадянином України (у разі оформлення вперше паспорта для виїзду за кордон із застосуванням засобів Реєстру);</li>	
+<p><b>Сплата адміністративного збору здійснюється безпосередньо перед оформленням паспарту громадянина України для виїзду закордон</b></p>
 
-<br>							
-<li>квитанцію про сплату з мокрою печаткою банку, яка оформлена на одного з батьків з ким дитина зареєстрована (У призначенні платежу слід вказати ПІБ дитини, для якої буде оформлюватись закордонний паспорт!);</li>
-
-<br>
-<li>якщо на момент подання документів дитині виповнилось 12 років присутність дитини є обов'язковою! (якщо дитині не виповнилось 12 років потрібно надати одну фотокартку розміром 10х15 сантиметрів для внесення відцифрованого зображення особи шляхом сканування (обов'язково матове фото виконане на білому фоні, обличчя дитини займає не менше 80% фотографії,<a href="https://drive.google.com/open?id=0B68lQ-z45GpYZ01rS3ZFQUFvQ0FJWGRxcC05Rk5laUgzOGdN">зразок</a>), присутність дитини не обов'язкова);</li>
-
-<br>
-<li>потрібна присутність одного з батьків (усиновлювачів), опікунів, піклувальників або інших законних представників з оригіналом та копією його паспорта;</li>
-
-<br>
-</ul>
+<p><b>Що Вам потрібно мати з собою на цей візит:</b><br>
+	<ol>
+		<li>Оригінал громадянського паспорту та його копія (перші два развороти, усі сторінки із місцем реєстрації, інші сторінки, де є особливі відмітки).</li>
+		<li>Оригінал та копія індивідуального податкового номеру (ІПН).</li>
+		<li>Оригінал та копія закордонного паспорту. (за наявності)</li>
+		<li>Квитанція про сплату адміністративного збору, яка сплачується перед оформленням паспарту громадянина України для виїзду закордон.</li>
+		<li>Для оформлення паспорта громадянина України для виїзду за кордон особі, яка не досягла 10-річного віку додатково подається одна фотокартка розміром 10*15 сантиметрів для внесення відцифрованого образу обличчя особи шляхом сканування із застосування засобів Реєстру.</li>
+	</ol>
 </p>
-<p>	
-<b>Зверніть увагу:</b> 
-<ul>
-<li>Оплата здійснюється від імені одного з батьків, чиї дані потрібно внести при формуванні квитанції;</li>
-<br>
-<li style="color:red">У призначенні платежу слід вказати ПІБ дитини, для якої буде оформлюватись закордонний паспорт;</li>
-<br>										
-<li>Вам не потрібно буде реєструватися у черзі на місці. Вашого запису через iGov на вказаний час достатньо. Але дуже просимо Вас не запізнюватись, бо електронна черга має доволі чіткий крок.</li>
-<br>
-<li>У випадку, якщо Ви не зможете з`явитися ${sNotification_day} , Ви можете скасувати запис </li>
-<br>
-<li>Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> </li>
-<br>
-<li>Паспорт для виїзду за кордон, оформлений особі у віці від 12 до 16 років, може бути виданий особі, уповноваженій на це законним представником на підставі довіреності, засвідченої в установленому порядку, за умови присутності особи, на ім’я якої оформлено паспорт для виїзду за кордон.</li>
-</ul>
-</p>
-<br>
 
+<p>Фотокартка(для п.5) повинна відповідати вимогам:
+  <ul>
+    <li>Дитина на фотокартці повинна бути зображена одна, спинка стільця чи іграшки не має бути видно.</li>
+    <li>Дитина має дивитись в камеру з нейтральним виразом обличчя і закритим ротом.</li>
+    <li>Фотокартка немовляти по можливості має бути зроблена у відповідності до вищезазначених вимог. Немовля має бути сфотографоване у вертикальному положенні, однак допускається фотографування немовляти, що лежить на білому покривалі. Очі дитини мають бути відкриті, рот закритий, а руки особи, що підтримує її, не повинно бути видно.</li>
+    <li>На фотокартці має бути зображено 80% обличчя, чіткі контури, білий фон, на матовому папері високої якості без дефектів.<br>
+  </ul>	
+</p>
+
+<p><b>Зверніть увагу:</b>
+  <ul>
+    <li>Дуже важливо не запізнюватись, бо Ваше місце може “згоріти”. Краще перестрахуйтесь та прийдіть трохи раніше.</li>
+    <li>Вам не потрібно буде реєструватися у черзі на місці. Вашого запису через iGov достатньо.</li>
+    <li>Якщо Ви замінюєте паспорт після зміни прізвища, ім'я або по батькові, то Вам необхідно мати з собою оригінал та копію документу про зміну прізвища, ім'я або по батькові.</li>
+    <li>Якщо Ви є внутрішньо переміщеною особою, у разі, якщо Ви не маєте паспорту громадянина України для виїзду закордон, то необхідно надати наступний пакет документів:<br>
+    - паспорт громадянина України оригінал + 1 копія;<br>
+    - ідентифікаційний код оригінал + 1копія;<br>
+    - попередній закордонний паспорт (при наявності) оригінал + копія першої сторінки;<br>
+    - документи міжнародного зразка (для правильності транслітерації, при наявності);<br>
+    - витяг з реєстру виборців;<br>
+    - будь-які додаткові документи, що містять фотозображення, наприклад: дипломатичний паспорт України, службовий паспорт України, посвідчення особи моряка, посвідчення члена екіпажу, посвідчення особи на повернення в Україну, посвідчення водія, військовий квиток, пенсійне посвідчення, пільгове посвідчення, перепустку на роботу та інші документи;<br>
+    - За відсутності документів, що містять фотозображення Вам необхідно надати: свідоцтво про народження, свідоцтво про шлюб, свідоцтво про розірвання шлюбу, дипломи про закінчення ВНЗ та інші документи.</li>		
+  </ul>
+</p>
+
+<p>
+Після подання документів Ви зможете перевіряти готовність свого паспорта за цим <a href="https://dmsu.gov.ua/services/docstate.html" target="_blank">посиланням</a> 
+</p>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan},<br>
@@ -194,142 +170,98 @@ ${sNameOrgan},<br>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <sequenceFlow id="flow25" sourceRef="servicetask3" targetRef="usertask1"></sequenceFlow>
-    <userTask id="usertask1" name="Заявка прийнята ДМС" activiti:candidateGroups="dms_zagran_${sID_Public_SubjectOrganJoin}_${sDistrictMariupol}">
+    <sequenceFlow id="flow25" sourceRef="servicetask4" targetRef="usertask2"></sequenceFlow>
+    <userTask id="usertask2" name="Перевірка заявки" activiti:candidateGroups="zagran_Mariupol_texGroup">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Телефон громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="Електронна пошта громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="lastName_UA1" name="Прізвище дитини" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="firstName_UA1" name="Ім'я дитини" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="По батькові дитини" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Дата та час візиту - " type="queueData" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asResult" name="Результат візиту" type="enum" required="true">
-          <activiti:value id="attr1_ok" name="Громадянин з'явився у призначений час"></activiti:value>
-          <activiti:value id="attr2_missed" name="Громадянин не з'явився"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="sCustom" name="Запуск таймера юзертаски" type="string" default="Auto"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
-    <boundaryEvent id="escalationTimer" name="Timer" attachedToRef="usertask1" cancelActivity="true">
+    <endEvent id="endevent4" name="End"></endEvent>
+    <sequenceFlow id="flow47" sourceRef="scripttask2" targetRef="scripttask3"></sequenceFlow>
+    <boundaryEvent id="escalationTimer" name="Timer" attachedToRef="usertask2" cancelActivity="true">
       <timerEventDefinition>
         <timeDate>${sEndDay}</timeDate>
       </timerEventDefinition>
     </boundaryEvent>
-    <sequenceFlow id="flow42" sourceRef="escalationTimer" targetRef="scripttask2"></sequenceFlow>
-    <scriptTask id="scripttask2" name="Формировка даты" scriptFormat="javascript" activiti:autoStoreVariables="false">
-      <script>var src=execution.getVariable('visitDay')
-var date_of_visit=src.substr(27,16)
-var tickNum=src.substr(99,3)
-var tickCode=src.substr(119,9)
-execution.setVariable('sNotification_day', date_of_visit)
-execution.setVariable('sTicketNumber', tickNum)
-execution.setVariable('sTicketCode', tickCode)
-var src=execution.getVariable('date_of_visit')
-var year=src.substr(0,4)
-var month=src.substr(5,2)
-var day=src.substr(8,2)
-var hour=src.substr(11,2)
-var minutes=src.substr(14,2)
-var seconds='00'
-var delta=1
-var day1=day
-var month1=month
-if (day!='01')
-    {
-        day1=+day-delta
-    }
-else
-    {
-        if ((month!='01')&amp;&amp;(month!='03'))
-          {
-              month1=+month-1
-              day1=30
-          }
-        else
-          {
-            if (month=='03')
-            {
-              month1='02'
-              day1='28'
-            }            
-          }
-     }
-var timerEnd=year+'-'+month+'-'+day+'T'+'19'+':'+'00'+':'+seconds
-execution.setVariable('sEndDay', timerEnd)</script>
-    </scriptTask>
-    <endEvent id="endevent2" name="End">
-      <extensionElements>
-        <activiti:executionListener event="start" delegateExpression="${updateStatus_HistoryServiceEvent}"></activiti:executionListener>
-      </extensionElements>
-    </endEvent>
-    <sequenceFlow id="flow43" sourceRef="scripttask2" targetRef="endevent2"></sequenceFlow>
+    <sequenceFlow id="flow48" sourceRef="escalationTimer" targetRef="endevent4"></sequenceFlow>
+    <sequenceFlow id="flow49" sourceRef="usertask2" targetRef="endevent4"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0177_zagranChild_DMS">
-    <bpmndi:BPMNPlane bpmnElement="dms_0177_zagranChild_DMS" id="BPMNPlane_dms_0177_zagranChild_DMS">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_dms_0177_zagranChild_Qlogic">
+    <bpmndi:BPMNPlane bpmnElement="dms_0177_zagranChild_Qlogic" id="BPMNPlane_dms_0177_zagranChild_Qlogic">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
-        <omgdc:Bounds height="35.0" width="35.0" x="16.0" y="90.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="163.0" y="280.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
-        <omgdc:Bounds height="55.0" width="105.0" x="80.0" y="80.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="213.0" y="270.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="boundaryerror1" id="BPMNShape_boundaryerror1">
-        <omgdc:Bounds height="30.0" width="30.0" x="156.0" y="79.0"></omgdc:Bounds>
+        <omgdc:Bounds height="30.0" width="30.0" x="251.0" y="311.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
-        <omgdc:Bounds height="35.0" width="35.0" x="115.0" y="34.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="scripttask1" id="BPMNShape_scripttask1">
-        <omgdc:Bounds height="55.0" width="105.0" x="210.0" y="80.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask3" id="BPMNShape_servicetask3">
-        <omgdc:Bounds height="65.0" width="105.0" x="331.0" y="75.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="60.0" width="105.0" x="456.0" y="78.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="escalationTimer" id="BPMNShape_escalationTimer">
-        <omgdc:Bounds height="30.0" width="30.0" x="532.0" y="70.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="248.0" y="369.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="scripttask2" id="BPMNShape_scripttask2">
-        <omgdc:Bounds height="55.0" width="105.0" x="575.0" y="81.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="213.0" y="190.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
-        <omgdc:Bounds height="35.0" width="35.0" x="800.0" y="150.0"></omgdc:Bounds>
+      <bpmndi:BPMNShape bpmnElement="scripttask3" id="BPMNShape_scripttask3">
+        <omgdc:Bounds height="55.0" width="105.0" x="350.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask4" id="BPMNShape_servicetask4">
+        <omgdc:Bounds height="55.0" width="105.0" x="478.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
+        <omgdc:Bounds height="55.0" width="105.0" x="610.0" y="270.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="escalationTimer" id="BPMNShape_escalationTimer">
+        <omgdc:Bounds height="30.0" width="30.0" x="648.0" y="255.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent4" id="BPMNShape_endevent4">
+        <omgdc:Bounds height="35.0" width="35.0" x="760.0" y="280.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
-        <omgdi:waypoint x="51.0" y="107.0"></omgdi:waypoint>
-        <omgdi:waypoint x="80.0" y="107.0"></omgdi:waypoint>
+        <omgdi:waypoint x="198.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="213.0" y="297.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow23" id="BPMNEdge_flow23">
-        <omgdi:waypoint x="156.0" y="94.0"></omgdi:waypoint>
-        <omgdi:waypoint x="132.0" y="69.0"></omgdi:waypoint>
+        <omgdi:waypoint x="266.0" y="341.0"></omgdi:waypoint>
+        <omgdi:waypoint x="265.0" y="369.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
-        <omgdi:waypoint x="185.0" y="107.0"></omgdi:waypoint>
-        <omgdi:waypoint x="210.0" y="107.0"></omgdi:waypoint>
+      <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
+        <omgdi:waypoint x="265.0" y="270.0"></omgdi:waypoint>
+        <omgdi:waypoint x="265.0" y="245.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
-        <omgdi:waypoint x="315.0" y="107.0"></omgdi:waypoint>
-        <omgdi:waypoint x="331.0" y="107.0"></omgdi:waypoint>
+      <bpmndi:BPMNEdge bpmnElement="flow40" id="BPMNEdge_flow40">
+        <omgdi:waypoint x="455.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="478.0" y="297.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow25" id="BPMNEdge_flow25">
-        <omgdi:waypoint x="436.0" y="107.0"></omgdi:waypoint>
-        <omgdi:waypoint x="456.0" y="108.0"></omgdi:waypoint>
+        <omgdi:waypoint x="583.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="610.0" y="297.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow42" id="BPMNEdge_flow42">
-        <omgdi:waypoint x="547.0" y="70.0"></omgdi:waypoint>
-        <omgdi:waypoint x="571.0" y="46.0"></omgdi:waypoint>
-        <omgdi:waypoint x="627.0" y="81.0"></omgdi:waypoint>
+      <bpmndi:BPMNEdge bpmnElement="flow47" id="BPMNEdge_flow47">
+        <omgdi:waypoint x="318.0" y="217.0"></omgdi:waypoint>
+        <omgdi:waypoint x="402.0" y="217.0"></omgdi:waypoint>
+        <omgdi:waypoint x="402.0" y="270.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow43" id="BPMNEdge_flow43">
-        <omgdi:waypoint x="680.0" y="108.0"></omgdi:waypoint>
-        <omgdi:waypoint x="817.0" y="108.0"></omgdi:waypoint>
-        <omgdi:waypoint x="817.0" y="150.0"></omgdi:waypoint>
+      <bpmndi:BPMNEdge bpmnElement="flow48" id="BPMNEdge_flow48">
+        <omgdi:waypoint x="663.0" y="255.0"></omgdi:waypoint>
+        <omgdi:waypoint x="662.0" y="225.0"></omgdi:waypoint>
+        <omgdi:waypoint x="777.0" y="225.0"></omgdi:waypoint>
+        <omgdi:waypoint x="777.0" y="280.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow49" id="BPMNEdge_flow49">
+        <omgdi:waypoint x="715.0" y="297.0"></omgdi:waypoint>
+        <omgdi:waypoint x="760.0" y="297.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

@@ -24,9 +24,9 @@
         <activiti:formProperty id="sWarning3" name=" ; ;labelType=info" type="label" default="При подачі заявки Вам потрібно буде принести довідку з поліції про викрадення паспорту"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="flow data" type="markers" default="${markerService.loadFromFile('dms/dmsZagran179.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="sInfoZapis" name=" ; ;labelType=info" type="label" default="ВАЖЛИВО! При здійснені попереднього запису на послугу – запис може проводиться виключно на себе та на близьких родичів – діти, чоловік/дружина (при наявності свідоцтва про шлюб та свідоцтва про народження."></activiti:formProperty>
+        
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>

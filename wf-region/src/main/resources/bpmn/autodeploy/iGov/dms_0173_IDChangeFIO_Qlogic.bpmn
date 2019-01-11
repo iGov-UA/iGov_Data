@@ -32,6 +32,7 @@
         <activiti:formProperty id="sServiceId_visitDay" name="ID сервіса за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса ДМС; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sDovidkaInfo13" name="sDovidkaInfo13; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNotification_day" name="sNotification_day; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketNumber" name="Номер талону; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sTicketCode" name="Код талону; ;bVisible=false" type="string"></activiti:formProperty>
@@ -134,7 +135,7 @@ execution.setVariable('sDistrictMariupol', GrpUserNameResult)
 <p>
 	Для того щоб закінчити процедуру необхідно:
 	<ul>
-		<li>У будь-якому банку сплатити адмінсбір та отримати квитанцію про сплату. Реквізити для сплати адмінсбору доступні за <a href="https://docs.google.com/document/d/1RzwMgK9KqOfeN7jnKcLUj2OO1nJI_q2vGj-yQLl4ocM/edit?usp=sharing" target="_blank">посиланням</a>.</li>
+		<li>У будь-якому банку сплатити адмінсбір та отримати квитанцію про сплату. Реквізити для сплати адмінсбору можливо отримати в Центрі надання адміністративних послуг.</li>
 		<li>Прийти з необхідними документами (перелік нижче) за адресою: ${sAddress}
 	</ul>
 </p>
@@ -153,6 +154,7 @@ execution.setVariable('sDistrictMariupol', GrpUserNameResult)
 		<li>паспорт, що підлягає обміну;</li>
 		<li>оригінал та копію ІПН;</li>
 		<li>квитанцію про сплату з мокрою печаткою банку, де Ви зазначені, як платник;</li>
+		<li>довідка про підтвердження місця реєстрації (додаток 13), яку необхідно отримати в ${sDovidkaInfo13};</li>
 	</ul>
 </p>
 <p>

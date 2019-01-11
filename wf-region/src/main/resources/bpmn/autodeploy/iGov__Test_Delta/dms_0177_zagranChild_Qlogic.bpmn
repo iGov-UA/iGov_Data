@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="dms_0177_zagranChild_Qlogic" name="Паспорт громадянина України для виїзду за кордон" isExecutable="true">
+  <process id="dms_0177_zagranChild_Qlogic" name="Паспорт громадянина України для виїзду за кордон для дитини" isExecutable="true">
     <documentation>QLogic</documentation>
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані; ;bVisible=false" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
@@ -15,6 +16,7 @@
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Дані дитини, яка буде отримувати паспорт" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;lastName_UA1&quot;],&quot;sValue&quot;:&quot;Дані дитини, яка буде отримувати паспорт&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lastName_UA1" name="Прізвище дитини" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="firstName_UA1" name="Ім'я дитини" type="string" required="true"></activiti:formProperty>
@@ -108,7 +110,7 @@ execution.setVariable('sEndDay', timerEnd)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон]]></activiti:string>
+          <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон для дитини]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -119,6 +121,7 @@ execution.setVariable('sEndDay', timerEnd)
   <ol>
 <li>Адреса:  ${sAddress}.</li>
 <li>Дата та час візиту - ${sNotification_day}.</li>
+<li>Ім'я дитини для якої зареєтровано місце в черзі: <b>${lastName_UA1} ${firstName_UA1} ${middleName_UA1}.</b></li>
   </ol>
 </p>
 
@@ -126,9 +129,9 @@ execution.setVariable('sEndDay', timerEnd)
 
 <p><b>Що Вам потрібно мати з собою на цей візит:</b><br>
 	<ol>
-		<li>Оригінал громадянського паспорту та його копія (перші два развороти, усі сторінки із місцем реєстрації, інші сторінки, де є особливі відмітки).</li>
-		<li>Оригінал та копія індивідуального податкового номеру (ІПН).</li>
-		<li>Оригінал та копія закордонного паспорту. (за наявності)</li>
+		<li>Cвідоцтво про народження або паспорт громадянина України (для громадян, які досягли 14-річного віку).</li>
+		<li>Якщо батьки або один із батьків дитини на момент її народження були іноземцями або особами без громадянства, також подається довідка про реєстрацію особи громадянином України (у разі оформлення вперше паспорта для виїзду за кордон із застосуванням засобів Реєстру).</li>
+		<li>Якщо на момент подання документів дитині виповнилось 12 років присутність дитини є обов'язковою!</li>
 		<li>Квитанція про сплату адміністративного збору, яка сплачується перед оформленням паспарту громадянина України для виїзду закордон.</li>
 		<li>Для оформлення паспорта громадянина України для виїзду за кордон особі, яка не досягла 10-річного віку додатково подається одна фотокартка розміром 10*15 сантиметрів для внесення відцифрованого образу обличчя особи шляхом сканування із застосування засобів Реєстру.</li>
 	</ol>
@@ -147,7 +150,6 @@ execution.setVariable('sEndDay', timerEnd)
   <ul>
     <li>Дуже важливо не запізнюватись, бо Ваше місце може “згоріти”. Краще перестрахуйтесь та прийдіть трохи раніше.</li>
     <li>Вам не потрібно буде реєструватися у черзі на місці. Вашого запису через iGov достатньо.</li>
-    <li>Якщо Ви замінюєте паспорт після зміни прізвища, ім'я або по батькові, то Вам необхідно мати з собою оригінал та копію документу про зміну прізвища, ім'я або по батькові.</li>
     <li>Якщо Ви є внутрішньо переміщеною особою, у разі, якщо Ви не маєте паспорту громадянина України для виїзду закордон, то необхідно надати наступний пакет документів:<br>
     - паспорт громадянина України оригінал + 1 копія;<br>
     - ідентифікаційний код оригінал + 1копія;<br>

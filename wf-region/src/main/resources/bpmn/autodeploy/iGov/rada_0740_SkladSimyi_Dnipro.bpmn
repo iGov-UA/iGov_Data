@@ -342,10 +342,10 @@ if(execution.getVariable('asRegistr') == 'no')
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-<p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br />
+<p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br/>
 Видача Довідки здійснюється протягом ${sDaysPosluga} календарних днів з дня отримання вами цього повідомлення.<br />
-Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p>
-У разі обрання отримання відповіді з ЕЦП, довідка буде надіслана вам наступним листом в електронному форматі.<br />
+Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p><br/>
+У разі обрання отримання відповіді з ЕЦП, довідка буде надіслана вам наступним листом в електронному форматі.<br /><br/>
 Якщо ви обрали отримати паперовий документ, для отримання відповіді вам треба буде з'явитись за відповідною адресою у вашому районі.<br />
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -441,7 +441,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_44" name="Тип відповіді" type="markers" default="{&quot;attributes&quot;:{&quot;Line_44&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Тип відповіді&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asVidpovid" name="В якому форматі заявник хоче отримати довідку" type="enum" required="true">
+        <activiti:formProperty id="asVidpovid" name="В якому форматі заявник хоче отримати довідку" type="enum" writable="false">
           <activiti:value id="sEnamECP" name="Електронний документ з ЕЦП"></activiti:value>
           <activiti:value id="sEnamPapir" name="Паперовий документ"></activiti:value>
         </activiti:formProperty>

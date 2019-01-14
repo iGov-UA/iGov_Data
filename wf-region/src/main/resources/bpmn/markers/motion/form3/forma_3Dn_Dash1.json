@@ -18,25 +18,43 @@
       },
       "sCondition": "[sCondit1] == 'sEnamReject'"
     },
-    "ShowFieldsOnCondition_DashOtr": {
+    "ShowFieldsOnCondition_Accept": {
       "aField_ID": [
         "dateVuzit"
       ],
       "asID_Field": {
-        "sCondit1": "asDecide",
-        "sCondit2": "asVidpovid"
+        "sCondit1": "asDecide"
       },
-      "sCondition": "[sCondit1] == 'sEnamAccept' && ([sCondit2] != 'sEnamPost'||[sCondit2] != 'Поштою')"
+      "sCondition": "[sCondit1] == 'sEnamAccept'"
     },
-    "RequiredFieldsOnCondition_DashOtr": {
+    "RequiredFieldsOnCondition_Accept": {
       "aField_ID": [
         "dateVuzit"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecide"
+      },
+      "sCondition": "[sCondit1] == 'sEnamAccept'"
+    },
+    "ShowFieldsOnCondition_AcceptECP": {
+      "aField_ID": [
+        "nFile_VidpovidECP"
       ],
       "asID_Field": {
         "sCondit1": "asDecide",
         "sCondit2": "asVidpovid"
       },
-      "sCondition": "[sCondit1] == 'sEnamAccept' && ([sCondit2] != 'sEnamPost'||[sCondit2] != 'Поштою')"
+      "sCondition": "[sCondit1] == 'sEnamAcceptECP' && ([sCondit2] == 'sEnamECP'||[sCondit2] == 'Електронний документ з ЕЦП')"
+    },
+    "RequiredFieldsOnCondition_AcceptECP": {
+      "aField_ID": [
+        "nFile_VidpovidECP"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecide",
+        "sCondit2": "asVidpovid"
+      },
+      "sCondition": "[sCondit1] == 'sEnamAcceptECP' && ([sCondit2] != 'sEnamECP'||[sCondit2] != 'Електронний документ з ЕЦП')"
     }
   }
 }

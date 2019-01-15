@@ -54,7 +54,7 @@
         "sCondit1": "asDecide",
         "sCondit2": "asVidpovid"
       },
-      "sCondition": "[sCondit1] == 'sEnamAcceptECP' && ([sCondit2] != 'sEnamECP'||[sCondit2] != 'Електронний документ з ЕЦП')"
+      "sCondition": "[sCondit1] == 'sEnamAcceptECP' && ([sCondit2] == 'sEnamECP'||[sCondit2] == 'Електронний документ з ЕЦП')"
     }
   }
 }

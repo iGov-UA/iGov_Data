@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="Registr_0026_ZniatMP-Qlogic" name="Зняття з реєстрації місця проживання особи" isExecutable="true">
+  <process id="Registr_0029_RegistrZniatMP-Qlogic" name="Реєстрація місця проживання особи (із опцією одночасного зняття з реєстрації з попереднього місця)" isExecutable="true">
     <documentation>Смоктій К.В. (получено на сопровождение от Жигана Ромы) Последние правки: 16.01.2018</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="warning1" name=" ; ;labelType=info" type="label" default="Увага! Послуга надається лише для однієї особи, що подає звернення!"></activiti:formProperty>
         <activiti:formProperty id="warning0" name=" ; ;labelType=info" type="label" default="Увага! Якщо Ви будете реєструвати нове місце проживання у межах міста,у якому вже працює послуга &lt;a href=&quot;https://igov.org.ua/service/29/general&quot;&gt;реєстрації місця проживання&lt;/a&gt;, рекомендуємо Вам замовити реєстрацію із одночасним зняттям. Це зменшить кількість візитів і збереже Ваш час."></activiti:formProperty>
-        
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить Ваше поточне місце реєстрації" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="lableMariupolR" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Центральний, Кальміуський та Приморський райони.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="lableMariupol_LevR" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Лівобережний район.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerMariupolRaion" name="markerMariupolRaion" type="markers" default="${markerService.loadFromFile('1_Standart_marker/MariupolRaion.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asEnumTypeDocument" name="Тип посвідення особи" type="enum" default="sEnumElement_Passport" required="true">
           <activiti:value id="sEnumElement_Passport" name="Паспорт"></activiti:value>
           <activiti:value id="sEnumElement_ID_Passport" name="ID-карта (паспорт)"></activiti:value>
           <activiti:value id="sEnumElement_Other" name="Інший документ"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника" type="string" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="tPassport" name="Паспортні дані заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
@@ -32,7 +28,6 @@
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="asPrevName" name="Ви змінювали прізвище, ім’я та по батькові?" type="enum" required="true">
           <activiti:value id="sYes" name="Так"></activiti:value>
           <activiti:value id="sNo" name="Ні"></activiti:value>
@@ -48,12 +43,10 @@
           <activiti:value id="sNoM" name="Ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="nMilit" name="Копія військового квитка або свідоцтва про приписку;(якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_2" name="Інформація про адреси реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація про адреси реєстрації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" default=" "></activiti:formProperty>
         <activiti:formProperty id="warning2" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Місце проживання дитини молодше 14 років не може бути зареєстровано окремо від батьків, тому якщо Ви знімаєтесь з реєстрації та другий із батьків зареєстрований за іншою адресою, дитина повина бути знята з реєстрації разом із Вами. Для цього скористайтесь окремою &lt;a href=&quot;https://igov.org.ua/service/185/general&quot;&gt;послугою&lt;/a&gt;"></activiti:formProperty>
-        
         <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
@@ -62,7 +55,6 @@
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_FIO.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerRegistr_0026_ZniatMP" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0026_ZniatMP-Qlogic.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -75,12 +67,8 @@
         <activiti:formProperty id="sIsCancellCustomeVizite" name="Прапор скасованої заявки громадянином ; ;bVisible=false" type="string" default="False"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
-        
-        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Зняття з реєстрації місця проживання особи"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="зняття з реєстрації місця проживання особи"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow2" sourceRef="servicetask10" targetRef="scripttask1"></sequenceFlow>
@@ -114,7 +102,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове звернення на тему: ${sPosluga_name}]]></activiti:string>
+          <activiti:string><![CDATA[Нове звернення на тему: Зняття з реєстрації місця проживання особи]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
@@ -131,7 +119,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[${sPosluga_name}]]></activiti:string>
+          <activiti:string><![CDATA[Нове звернення на тему: Зняття з реєстрації місця проживання особи]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -165,9 +153,9 @@ execution.setVariable('sMaxPay', maxpay)
       <extensionElements>
         <activiti:formProperty id="info" name="На цьому етапі:" type="label" default="Ви перевіряєте дані громадянина і вирішуєте чи всі вони вірні. Якщо все добре, то громадянин має прийти до Вас у вказаний день і час для отримання штампу про зняття з реєстрації"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="Чи скасована заявка (заповнюється громадянином лише у разі відміни запису, за замовчуванням вказано &quot;Заявка актуальна&quot;)" type="string" writable="false"></activiti:formProperty>
-        
-        <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asEnumTypeDocument" name="Тип документа, що посвідчує заявника" type="enum" writable="false">
           <activiti:value id="sEnumElement_Passport" name="Паспорт"></activiti:value>
           <activiti:value id="sEnumElement_ID_Passport" name="ID-карта (паспорт)"></activiti:value>
@@ -176,7 +164,6 @@ execution.setVariable('sMaxPay', maxpay)
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail громадянина" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="sPrevName" name="Попереднє ПІБ громадянина; ;writable=false" type="string" default="${lastName_UA1} ${firstName_UA1} ${middleName_UA1}"></activiti:formProperty>
         <activiti:formProperty id="sDate_of_birth" name="Дата народження; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAreabirth" name="Місце народження; ;writable=false" type="textArea"></activiti:formProperty>
@@ -189,26 +176,20 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:value id="sNoM" name="Ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="visitDay" name="День та час зустрічі: " type="queueData" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="nMilit" name="Копія військового квитка або свідоцтва про приписку; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        
-        
         <activiti:formProperty id="tPassport" name="Документ, що посвідчує заявника" type="textArea" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="asDecision" name="Рішення держслужбовця" type="enum" required="true">
           <activiti:value id="sAccept" name="Призначити зустріч у відділенні"></activiti:value>
           <activiti:value id="sDecline" name="Відмовити в наданні послуги"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sDecisionComment" name="Коментар до рішення: наприклад, пояснення чому громадянину було відмовлено в наданні цієї послуги АБО додаткові деталі для закінчення процессу зняття з реєстрації" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для сплати адмінсбору" type="textArea"></activiti:formProperty>
-        
         <activiti:formProperty id="sRegistrationOrgan" name="Орган, що оформлює реєстрацію ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sEddrNum" name="Номер у Єдиному державному демографічному реєстрі ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sStamp_Print" name="Текст для другу в лівому верхньому куту довідки про реєстрацію ; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="sBody_3" name="[pattern/print/dms/1zajava_znFr.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява для зняття з реєстрації лицьова" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_4" name="[pattern/print/dms/zajava_znBk.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява для зняття з реєстрації зворотня" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody_13" name="[pattern/print/dms/Zayava_Person_Data.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Заява щодо персональних даних" writable="false"></activiti:formProperty>
@@ -222,9 +203,6 @@ execution.setVariable('sMaxPay', maxpay)
     <sequenceFlow id="flow11" name="Відмова" sourceRef="exclusivegateway1" targetRef="servicetask5">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sDecline'}]]></conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="flow10" name="Послугу надано" sourceRef="exclusivegateway1" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'}]]></conditionExpression>
-    </sequenceFlow>
     <serviceTask id="servicetask5" name="Повідомлення громадянина про відхилення звернення + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="to">
@@ -234,14 +212,14 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Відхилено звернення на тему: ${sPosluga_name}]]></activiti:string>
+          <activiti:string><![CDATA[Відхилено звернення на тему: Зняття з реєстрації місця проживання особи]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
 					На жаль, Вам відмовлено у надані послуги або Ви скасували заявку [sID_Order].<br>
-					При необхідності Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">iGov.org.ua</a>
+					При необхідності зняття з реєстрації місця проживання Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">iGov.org.ua</a>
 				</p>
 				<p>
 					Коментар Державного службовця:<br />
@@ -270,6 +248,9 @@ execution.setVariable('sMaxPay', maxpay)
     </serviceTask>
     <sequenceFlow id="flow16" sourceRef="servicetask5" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
+    <sequenceFlow id="flow10" name="Послугу надано" sourceRef="exclusivegateway1" targetRef="servicetask6">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'}]]></conditionExpression>
+    </sequenceFlow>
     <serviceTask id="servicetask6" name="Повідомлення громадянина про призначення візиту + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="to">
@@ -279,14 +260,14 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Призначено зустріч у відділенні. ${sPosluga_name}]]></activiti:string>
+          <activiti:string><![CDATA[Призначено зустріч у відділенні, звернення на тему: Зняття з реєстрації місця проживання особи]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
                 	Спеціалісти успішно опрацювли Вашу заяву [sID_Order].<br>
-					Для того щоб закінчити процедуру:<br>
+					Для того щоб закінчити процедуру зняття з реєстрації необхідно:<br>
 					<ul>
 						<li>У будь-якому банку сплатити адміністративний збір у розмірі ${sMinPay} грн і отримати квитанцію про сплату.</li>
 						<li>Прийти за адресою: ${sAddress}</li>
@@ -301,7 +282,7 @@ execution.setVariable('sMaxPay', maxpay)
 				<p>
 				   <b>Деталі зустрічі:</b><br>
 					День та час - ${date_of_visit}
-				    <b>Необхідні документи, які треба принести:</b><br>
+				    <b>Необхідні документи, які треба принести при знятті з реєстраціі місця проживання:</b><br>
 					<ul>
 						<li>документ, до якого вносяться відомості про місце проживання, якщо дитина не досягла 16 - річного віку, подається свідоцтво про народження або свідоцтво про належність до громадянства України;</li>
 						<li>квитанцію про сплату адміністративного збору;</li>
@@ -352,8 +333,8 @@ execution.setVariable('sMaxPay', maxpay)
     <sequenceFlow id="flow35" sourceRef="boundaryerror1" targetRef="endevent5"></sequenceFlow>
     <sequenceFlow id="flow36" sourceRef="servicetask6" targetRef="endevent3"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0026_ZniatMP-Qlogic">
-    <bpmndi:BPMNPlane bpmnElement="Registr_0026_ZniatMP-Qlogic" id="BPMNPlane_Registr_0026_ZniatMP-Qlogic">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0029_RegistrZniatMP-Qlogic">
+    <bpmndi:BPMNPlane bpmnElement="Registr_0029_RegistrZniatMP-Qlogic" id="BPMNPlane_Registr_0029_RegistrZniatMP-Qlogic">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="40.0" y="130.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>

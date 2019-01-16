@@ -78,7 +78,7 @@
         <activiti:formProperty id="visitDay" name="Оберіть зручний день та час з доступних місць у черзі, коли Вам буде зручно з'явитись для отримання послуги" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNameParam_Qlogic" name="Текстова зміна щодо передачі відповідного параметру Name в Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="marker_sNameParamQlogic_FIO" name="marker_sNameParamQlogic_FIO" type="markers" default="${markerService.loadFromFile('dms/dms_sNameParamQlogic_FIO.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markerRegistr_0029_RegistrZniatMP" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0029_RegistrZniatMP.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerRegistr_0029_RegistrZniatMP" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0029_RegistrZniatMP-Qlogic.json')}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>

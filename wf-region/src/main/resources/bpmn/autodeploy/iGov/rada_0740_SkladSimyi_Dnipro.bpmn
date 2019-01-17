@@ -123,6 +123,7 @@
           <activiti:value id="sEnamECP" name="Електронний документ з ЕЦП"></activiti:value>
           <activiti:value id="sEnamPapir" name="Паперовий документ"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="markerVidpovid" name="Validate" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_Vidpovid.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
@@ -342,7 +343,7 @@ if(execution.getVariable('asRegistr') == 'no')
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-<p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br/>
+<p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br />
 Видача Довідки здійснюється протягом ${sDaysPosluga} календарних днів з дня отримання вами цього повідомлення.<br />
 Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p><br/>
 У разі обрання отримання відповіді з ЕЦП, довідка буде надіслана вам наступним листом в електронному форматі.<br /><br/>

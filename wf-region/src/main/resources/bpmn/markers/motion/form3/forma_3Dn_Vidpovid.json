@@ -1,0 +1,14 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_Vidpovid": {
+      "aField_ID": [
+        "sLabeDashECP",
+        "asVidpovid"
+      ],
+      "asID_Field": {
+        "sCondit1": "asRegistr"
+      },
+      "sCondition": "[sCondit1]=='yes'"
+    }
+  }
+}

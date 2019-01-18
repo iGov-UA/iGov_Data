@@ -73,7 +73,7 @@ nID;sName;sGroup_Activiti;nID_SubjectOrgan
 68;ЦНАП при Куп'янській РДА (dnepr_dms-89);demoavir;2
 69;ЦНАП м. Нетішин (scadovsk_mvk-302);mvk_forma3_skadovsk;2
 70;ЦНАП м. Кривий Ріг (dnepr_dms-89);demoavir;2
-71;ЦНАП м. Марганець (dnepr_dms-89);demoavir;2
+71;ЦНАП м. Марганця;demoavir;2
 72;ЦНАП м. Нікополь (dnepr_dms-89);demoavir;2
 73;ЦНАП м. Павлоград (dnepr_dms-89);demoavir;2
 74;ЦНАП м. Синельникове (dnepr_dms-89);demoavir;2
@@ -363,4 +363,3 @@ nID;sName;sGroup_Activiti;nID_SubjectOrgan
 345;Великокопанівська ОТГ,регистрация;registration_khers_VelikokopOTG;2
 346;ЦНАП Вишневої міської ради Києво-Святошинського району РДА;demoavir;2
 347;Слов'янський відділ реєстрації фізичних осіб;demoavir;2
-348;ЦНАП м. Марганця;demoavir;2

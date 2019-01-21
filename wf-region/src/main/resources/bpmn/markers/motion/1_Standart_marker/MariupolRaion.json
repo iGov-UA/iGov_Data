@@ -1,6 +1,6 @@
 {
   "motion": {
-    "ShowFieldsOnCondition_NameOtherDocument": {
+    "ShowFieldsOnCondition_donmariupolR": {
       "aField_ID": [
         "lableMariupolR"
       ],
@@ -9,7 +9,7 @@
       },
       "sCondition": "[sClient] == 'don_mariupolR'"
     },
-    "ShowFieldsOnCondition_3": {
+    "ShowFieldsOnCondition_donmariupolLevR": {
       "aField_ID": [
         "lableMariupol_LevR"
       ],

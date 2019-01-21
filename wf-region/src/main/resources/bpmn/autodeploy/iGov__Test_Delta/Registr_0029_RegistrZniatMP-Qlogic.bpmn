@@ -8,7 +8,9 @@
         <activiti:formProperty id="warning184" name=" ; ;labelType=info" type="label" default="УВАГА! Для реєстрації місця проживання дитини віком до 14 років використовуйте, будь ласка, &lt;a href=&quot; https://igov.org.ua/service/184/general&quot; target=&quot;_blank&quot;&gt;іншу &lt;/a&gt; послугу!"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить Ваше поточне місце реєстрації" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="lableMariupolR" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Центральний, Кальміуський та Приморський райони.&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="lableMariupol_LevR" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Лівобережний район.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerMariupolRaion" name="markerMariupolRaion" type="markers" default="${markerService.loadFromFile('1_Standart_marker/MariupolRaion.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>

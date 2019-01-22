@@ -81,7 +81,7 @@
         <activiti:formProperty id="document" name="Назва документу; ;bVisible=false" type="string" default="експлуатаційний дозвіл операторам потужностей (об’єктів), що здійснюють в Україні діяльність з виробництва та/або обігу харчових продуктів, підконтрольних санітарній службі"></activiti:formProperty>
         <activiti:formProperty id="term" name="Строк виконання; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="status" name="Обробка заяви" type="enum">
-          <activiti:value id="attr1_wait" name="Документи передані в держсанепідслужбу"></activiti:value>
+          <activiti:value id="attr1_wait" name="Документи передані в держпродспоживслужбу"></activiti:value>
           <activiti:value id="attr2_finish" name="Відмова громадянину у разі надання неповного пакету документів"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="decisionComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі." type="textArea"></activiti:formProperty>
@@ -102,7 +102,7 @@
     <sequenceFlow id="flow8" name="status == 'attr1_wait'" sourceRef="exclusivegateway1" targetRef="servicetask5">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${status == 'attr1_wait'}]]></conditionExpression>
     </sequenceFlow>
-    <userTask id="usertask2" name="Підготовка відповіді після рішення держсанепідслужби (2-й крок)" activiti:candidateGroups="dnepr_cnap_${sID_Public_SubjectOrganJoin}">
+    <userTask id="usertask2" name="Підготовка відповіді після рішення держпродспоживслужби (2-й крок)" activiti:candidateGroups="dnepr_cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="clFio" name="Суб’єкт звернення" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані" type="string" writable="false"></activiti:formProperty>
@@ -132,10 +132,10 @@
         <activiti:formProperty id="date_registrastion" name="Вкажіть дату реєстрації (у форматі ДД/ММ/РРРР)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="status2" name="Статус дозволу (санітарного паспорту)" type="enum">
           <activiti:value id="attr3_finish" name="дозволу (санітарного паспорту) або рішення про анулювання готове, запросити громадянина"></activiti:value>
-          <activiti:value id="attr4_finish" name="Відмова громадянину у видачі висновку держсанепідслужбой"></activiti:value>
+          <activiti:value id="attr4_finish" name="Відмова громадянину у видачі висновку держпродспоживслужбой"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="decisionComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі." type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="file10" name="Завантажте скановану копию дозволу (або рішення) держсанепідслужби; ;bNew=true" type="file" default=" "></activiti:formProperty>
+        <activiti:formProperty id="file10" name="Завантажте скановану копию дозволу (або рішення) держпродспоживслужби; ;bNew=true" type="file" default=" "></activiti:formProperty>
       </extensionElements>
     </userTask>
     <serviceTask id="servicetask2" name="Повідомлення адміністратора ЦНАПу" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
@@ -227,7 +227,7 @@
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 <b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
-<p>Ваше звернення щодо ${substance_3} експлуатаційного дозволу операторам потужностей (об’єктів), що здійснюють в Україні діяльність з виробництва та/або обігу харчових продуктів, підконтрольних санітарній службі - відправлене в держсанепідслужбу.<br />
+<p>Ваше звернення щодо ${substance_3} експлуатаційного дозволу операторам потужностей (об’єктів), що здійснюють в Україні діяльність з виробництва та/або обігу харчових продуктів, підконтрольних санітарній службі - відправлене в держпродспоживслужбу.<br />
 Спеціалісти повинні дати відповідь протягом ${term} з дня реєстрації заяви.<br /> 
 <p>Номер Вашого замовлення: ${number_cnap}</p>.
 </p>

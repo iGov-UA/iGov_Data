@@ -21,8 +21,8 @@
           <activiti:value id="sEnumConfidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saSubectOrgan" name="Оберіть суб'єкт надання адміністративних послуг" type="enum" required="true">
-          <activiti:value id="sEnumSubectOrgan1" name="Головне управління Держсанепідслужби у Дніпроперовській області"></activiti:value>
-          <activiti:value id="sEnumSubectOrgan2" name="Управління на Придніпровській залізниці Головного управління Держсанепідслужби на залізничному транспорті"></activiti:value>
+          <activiti:value id="sEnumSubectOrgan1" name="Головне управління Держпродспоживслужби у Дніпроперовській області"></activiti:value>
+          <activiti:value id="sEnumSubectOrgan2" name="Управління на Придніпровській залізниці Головного управління Держпродспоживслужби на залізничному транспорті"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saGroup" name="До якої групи належить об'єкт" type="enum" required="true">
           <activiti:value id="second" name="другої"></activiti:value>
@@ -72,8 +72,8 @@
           <activiti:value id="sEnumConfidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saSubectOrgan" name="Оберіть суб'єкт надання адміністративних послуг" type="enum" writable="false">
-          <activiti:value id="sEnumSubectOrgan1" name="Головне управління Держсанепідслужби у Дніпроперовській області"></activiti:value>
-          <activiti:value id="sEnumSubectOrgan2" name="Управління на Придніпровській залізниці Головного управління Держсанепідслужби на залізничному транспорті"></activiti:value>
+          <activiti:value id="sEnumSubectOrgan1" name="Головне управління Держпродспоживслужби у Дніпроперовській області"></activiti:value>
+          <activiti:value id="sEnumSubectOrgan2" name="Управління на Придніпровській залізниці Головного управління Держпродспоживслужби на залізничному транспорті"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saGroup" name="До якої групи належить об'єкт" type="enum" writable="false">
           <activiti:value id="second" name="другої"></activiti:value>
@@ -126,8 +126,8 @@
           <activiti:value id="sEnumConfidant" name="довірена особа"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saSubectOrgan" name="Оберіть суб'єкт надання адміністративних послуг" type="enum" writable="false">
-          <activiti:value id="sEnumSubectOrgan1" name="Головне управління Держсанепідслужби у Дніпроперовській області"></activiti:value>
-          <activiti:value id="sEnumSubectOrgan2" name="Управління на Придніпровській залізниці Головного управління Держсанепідслужби на залізничному транспорті"></activiti:value>
+          <activiti:value id="sEnumSubectOrgan1" name="Головне управління Держпродспоживслужби у Дніпроперовській області"></activiti:value>
+          <activiti:value id="sEnumSubectOrgan2" name="Управління на Придніпровській залізниці Головного управління Держпродспоживслужби на залізничному транспорті"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saGroup" name="До якої групи належить об'єкт" type="enum" writable="false">
           <activiti:value id="second" name="другої"></activiti:value>

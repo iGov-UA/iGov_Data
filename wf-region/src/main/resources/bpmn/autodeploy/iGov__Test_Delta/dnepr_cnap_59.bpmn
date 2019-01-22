@@ -100,7 +100,7 @@ ${sNameOrgan}<br />
         
       </extensionElements>
     </userTask>
-    <userTask id="usertask2" name="Підготовка відповіді після рішення держсанепідслужби (2-й крок) " activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
+    <userTask id="usertask2" name="Підготовка відповіді після рішення держпродспоживслужби (2-й крок) " activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="clFIO" name="Прізвище, ім`я, по батькові заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Серія та номер паспорту" type="string" writable="false"></activiti:formProperty>

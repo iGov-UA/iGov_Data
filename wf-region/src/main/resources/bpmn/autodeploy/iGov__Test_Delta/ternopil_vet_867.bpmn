@@ -536,10 +536,10 @@ Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:formProperty>
         <activiti:formProperty id="status2" name="Статус висновку" type="enum" required="true">
           <activiti:value id="attr3_finish" name="Висновок (або рішення) готове, запросити громадянина"></activiti:value>
-          <activiti:value id="attr4_finish" name="Відмова громадянину у видачі висновку держсанепідслужбой"></activiti:value>
+          <activiti:value id="attr4_finish" name="Відмова громадянину у видачі висновку держпродспоживслужбой"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="decisionComment" name="Якщо ви відмовляєте замовнику у наданні послуги, обов'язково вкажіть підставу у цьому полі." type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="nFile_1" name="Завантажте скановану копию висновку (або рішення) держсанепідслужби; ;bNew=true" type="file" default=" "></activiti:formProperty>
+        <activiti:formProperty id="nFile_1" name="Завантажте скановану копию висновку (або рішення) держпродспоживслужби; ;bNew=true" type="file" default=" "></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow7" sourceRef="servicetask4" targetRef="usertask2"></sequenceFlow>

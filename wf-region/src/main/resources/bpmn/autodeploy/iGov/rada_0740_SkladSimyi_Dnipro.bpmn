@@ -117,14 +117,6 @@
         <activiti:formProperty id="markerPost" name="Post" type="markers" default="${markerService.loadFromFile('form3/Dnipro_Post_ECP.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerValidate" name="Validate" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_validate.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_4" name="Тип відповіді" type="markers" default="{&quot;attributes&quot;:{&quot;Line_4&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeDashECP&quot;],&quot;sValue&quot;:&quot;Тип відповіді&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sLabeDashECP" name=" ; ;labelType=info" type="label" default="УВАГА! Ви можете замовити довідку в електронному вигляді з ЕЦП. В такому випадку, паперовий документ не буде надано. Якщо вам достатньо електронного документу з ЕЦП оберіть відповідний варіант."></activiti:formProperty>
-        <activiti:formProperty id="asVidpovid" name="В якому форматі ви хочете отримати довідку" type="enum" required="true">
-          <activiti:value id="sEnamECP" name="Електронний документ з ЕЦП"></activiti:value>
-          <activiti:value id="sEnamPapir" name="Паперовий документ"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="markerVidpovid" name="Validate" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_Vidpovid.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="ScriptLastName" name="Прізвище довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptFirstName" name="Ім'я довірителя; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="ScriptMiddleName" name="По батькові; ;bVisible=false" type="string"></activiti:formProperty>
@@ -440,12 +432,6 @@ ${sNameOrgan}.<br />
         </activiti:formProperty>
         
         <activiti:formProperty id="PeopleTable" name="Перелік зареєстрованих осіб; ;bNew=true" type="table" writable="false"></activiti:formProperty>
-        
-        <activiti:formProperty id="markersLine_44" name="Тип відповіді" type="markers" default="{&quot;attributes&quot;:{&quot;Line_44&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Тип відповіді&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asVidpovid" name="В якому форматі заявник хоче отримати довідку" type="enum" writable="false">
-          <activiti:value id="sEnamECP" name="Електронний документ з ЕЦП"></activiti:value>
-          <activiti:value id="sEnamPapir" name="Паперовий документ"></activiti:value>
-        </activiti:formProperty>
         
         <activiti:formProperty id="nFile_ZarPasports" name="Паспорти зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZarIPNs" name="ІПНи зареєстрованих осіб; ;bNew=true" type="file" writable="false"></activiti:formProperty>

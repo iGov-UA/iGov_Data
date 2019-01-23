@@ -5658,8 +5658,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5792;1431;93;93;NULL;4;{"processDefinitionId":"dms_1431_IDLost_iGov:1:1"};;false;89;true;;BankID,EDS,mpbds;0
 5793;734;93;93;NULL;4;{"processDefinitionId":"APU_734_Vuk500_Dnp:1:1"};;false;225;true;;BankID,EDS,mpbds;0
 5794;1379;93;93;NULL;4;{"processDefinitionId":"dndz_cnap_201:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5795;29;102;102;NULL;4;{"processDefinitionId":"Registr_0029_RegistrZniatMP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5796;26;102;102;NULL;4;{"processDefinitionId":"Registr_0026_ZniatMP:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5797;184;102;102;NULL;4;{"processDefinitionId":"Registr_0184_RegistrDo14:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5798;185;102;102;NULL;4;{"processDefinitionId":"Registr_0185_ZniatDo14:1:1"};;false;225;true;;BankID,EDS,mpbds;0
-5799;144;102;102;NULL;4;{"processDefinitionId":"Registr_0144_ZniatSmert:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5795;29;102;102;NULL;4;{"processDefinitionId":"Registr_0029_RegistrZniatMP:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5796;26;102;102;NULL;4;{"processDefinitionId":"Registr_0026_ZniatMP:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5797;184;102;102;NULL;4;{"processDefinitionId":"Registr_0184_RegistrDo14:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5798;185;102;102;NULL;4;{"processDefinitionId":"Registr_0185_ZniatDo14:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5799;144;102;102;NULL;4;{"processDefinitionId":"Registr_0144_ZniatSmert:1:1"};;false;225;false;;BankID,EDS,mpbds;0

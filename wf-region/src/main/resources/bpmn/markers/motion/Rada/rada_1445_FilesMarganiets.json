@@ -1,0 +1,25 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_NemarganTVuk500": {
+      "aField_ID": [
+        "fileVuk500"
+      ],
+      "asID_Field": {
+        "sReason": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sReason]!='marganT' && [sReason]!='NULL'"
+    },
+    "ShowFieldsOnCondition_FmarganT": {
+      "aField_ID": [
+        "fileSxemRozm",
+        "fileSxemTer",
+        "fileSvіdUrFOP",
+        "fileFasad50"
+      ],
+      "asID_Field": {
+        "sCondit1": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sCondit1]=='marganT'"
+    }
+  }
+}

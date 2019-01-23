@@ -30,7 +30,14 @@
         
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;bankId_scan_passport&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника;(завантажте всі заповнені сторінки починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="doc" name="Викопіювання з ситуаційного плану міста М 1:500;(з зазначенням бажаного місця розташування тимчасової споруди, погоджене з балансоутримувачами інженерних мереж міста);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="fileVuk500" name="Викопіювання з ситуаційного плану міста, М 1:500;(з зазначенням бажаного місця розташування тимчасової споруди, погоджене з балансоутримувачами інженерних мереж міста);bNew=true" type="file" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="fileSxemRozm" name="Cхема розміщення ТС з погодженням відповідних служб міста;(газ, електроенергія, опалення, вода, ЖКП на території якого розміщюється споруда);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="fileSxemTer" name="Cхема благоустрою прилеглої території; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="fileSvіdUrFOP" name="Cвідоцтво державної реєстрації юридичної особи або ФОП; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="fileFasad50" name="Ескізи фасадів ТС, М 1:50;(обов'язково у кольорі);bNew=true" type="file"></activiti:formProperty>
+        
+        <activiti:formProperty id="markerFilesMarganiets" name="markerFilesMarganiets" type="markers" default="${markerService.loadFromFile('Rada/rada_1445_FilesMarganiets.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sNameOrgan" name="название органа в подписи письма; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="график работы; ;bVisible=false" type="string"></activiti:formProperty>
@@ -108,6 +115,12 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="sNameSporuda" name="Найменування тимчасової споруди; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAdresSporuda" name="Адреса розміщення тимчасової споруди; ;writable=false" type="string"></activiti:formProperty>
         
+        <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileVuk500" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSxemRozm" name="Cхема розміщення ТС з погодженням служб міста; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSxemTer" name="Cхема благоустрою прилеглої території; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSvіdUrFOP" name="Cвідоцтво реєстрації особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileFasad50" name="Ескізи фасадів ТС, М 1:50; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Перевірка успішна. Прийняти до роботи."></activiti:value>
@@ -116,9 +129,6 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="tComment" name="Коментар про причину відмови" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sRNumber" name="Номер реєстрації звернення" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_ComRegN.json')}"></activiti:formProperty>
-        
-        <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="doc" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="sBody_1" name="[pattern/print/architecture/rada_1445_PogTumchSporud.html]; ;bVisible=false ,bPrintform=true" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sShapka" name="шапка принтформы; ;bVisible=false" type="string"></activiti:formProperty>
@@ -220,7 +230,11 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="sAdresSporuda" name="Адреса розміщення тимчасової споруди; ;writable=false" type="string"></activiti:formProperty>
         
         <activiti:formProperty id="bankId_scan_passport" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="doc" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileVuk500" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSxemRozm" name="Cхема розміщення ТС з погодженням служб міста; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSxemTer" name="Cхема благоустрою прилеглої території; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSvіdUrFOP" name="Cвідоцтво реєстрації особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileFasad50" name="Ескізи фасадів ТС, М 1:50; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Заяву задоволено, запросити громадянина"></activiti:value>

@@ -7,13 +7,13 @@
       "asID_Field": {
         "sReason": "sID_Public_SubjectOrganJoin"
       },
-      "sCondition": "[sReason]!='marganT' && [sReason]!='NULL'"
+      "sCondition": "[sReason]!='marganT' && [sReason]!='NULL' && [sReason]!=' ' && [sReason]!='0'"
     },
     "ShowFieldsOnCondition_FmarganT": {
       "aField_ID": [
         "fileSxemRozm",
         "fileSxemTer",
-        "fileSvіdUrFOP",
+        "fileSvidUrFOP",
         "fileFasad50"
       ],
       "asID_Field": {

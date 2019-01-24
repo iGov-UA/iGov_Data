@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sDecline": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecision"
+      },
+      "sCondition": "[sCondit1]=='sDecline'"
+    },
+    "RequiredFieldsOnCondition_sDecline": {
+      "aField_ID": [
+        "tComment"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecision"
+      },
+      "sCondition": "[sCondit1]=='sDecline'"
+    }
+  }
+}

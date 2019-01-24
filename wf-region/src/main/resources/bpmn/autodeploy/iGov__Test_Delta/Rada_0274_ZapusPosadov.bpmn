@@ -64,7 +64,7 @@
         
         <activiti:formProperty id="markersLine_3" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sPosada&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPosada" name="До кого саме Ви маєте намір записатись на прийом" type="enum" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sPosadaName" name="Посада" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sPosadaName" name="Посада; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sLabelHerson" name="Зони відповідальності у Херсонському МВК" type="label" default="можна переглянути за &lt;a href=&quot;https://docs.google.com/document/d/1z6oUvwWnzqacgJbfZn3-ogh9f-KwcmvnH-2-LwEnkB0/edit?usp=sharing&quot; target=&quot;_blank&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="sRozkladPriyom" name="Розклад прийому" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Вкажіть день, у який Ви бажаєте записатись на прийом" type="date" required="true"></activiti:formProperty>
@@ -73,8 +73,8 @@
         <activiti:formProperty id="markerPosadaName" name="markerPosadaName" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_PosadaName.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers" name="markers_herson" type="markers" default="${markerService.loadFromFile('ternopol_oda_226_herson.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sNameOrgan" name="підпис ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sMailClerk226" name="електронна пошта; для тестування отримання пошти працівником відповідального органу ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk226" name="електронна пошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу; ;bVisible=false" type="string"></activiti:formProperty>
         

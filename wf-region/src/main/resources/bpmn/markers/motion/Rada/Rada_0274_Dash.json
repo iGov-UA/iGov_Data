@@ -1,24 +1,43 @@
 {
   "motion": {
-    "RequiredFieldsOnCondition_accept": {
+    "RequiredFieldsOnCondition_sEnumAccept": {
       "aField_ID": [
         "visitDay1",
         "NumbPers"
       ],
       "asID_Field": {
-        "sCondit": "decide"
+        "sCondit": "asRisheniaj"
       },
-      "sCondition": "[sCondit]=='accept'"
+      "sCondition": "[sCondit]=='sEnumAccept'"
     },
-    "ShowFieldsOnCondition_accept": {
+    "ShowFieldsOnCondition_sEnumAccept": {
       "aField_ID": [
         "visitDay1",
-        "NumbPers"
+        "NumbPers",
+        "tComment"
       ],
       "asID_Field": {
-        "sCondit": "decide"
+        "sCondit": "asRisheniaj"
       },
-      "sCondition": "[sCondit] == 'accept'"
+      "sCondition": "[sCondit] == 'sEnumAccept'"
+    },
+    "RequiredFieldsOnCondition_sEnumReject": {
+      "aField_ID": [
+        "tCommentVidm"
+      ],
+      "asID_Field": {
+        "sCondit": "asRisheniaj"
+      },
+      "sCondition": "[sCondit]=='sEnumReject'"
+    },
+    "ShowFieldsOnCondition_sEnumReject": {
+      "aField_ID": [
+        "tCommentVidm"
+      ],
+      "asID_Field": {
+        "sCondit": "asRisheniaj"
+      },
+      "sCondition": "[sCondit] == 'sEnumReject'"
     }
   }
 }

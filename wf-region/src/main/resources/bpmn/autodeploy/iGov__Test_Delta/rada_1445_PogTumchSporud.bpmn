@@ -34,7 +34,7 @@
         
         <activiti:formProperty id="fileSxemRozm" name="Cхема розміщення ТС з погодженням відповідних служб міста;(газ, електроенергія, опалення, вода, ЖКП на території якого розміщюється споруда);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fileSxemTer" name="Cхема благоустрою прилеглої території; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="fileSvіdUrFOP" name="Cвідоцтво державної реєстрації юридичної особи або ФОП; ;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="fileSvidUrFOP" name="Cвідоцтво державної реєстрації юридичної особи або ФОП; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="fileFasad50" name="Ескізи фасадів ТС, М 1:50;(обов'язково у кольорі);bNew=true" type="file"></activiti:formProperty>
         
         <activiti:formProperty id="markerFilesMarganiets" name="markerFilesMarganiets" type="markers" default="${markerService.loadFromFile('Rada/rada_1445_FilesMarganiets.json')}"></activiti:formProperty>
@@ -119,7 +119,7 @@ ${sNameOrgan}.<br />
         <activiti:formProperty id="fileVuk500" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fileSxemRozm" name="Cхема розміщення ТС з погодженням служб міста; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fileSxemTer" name="Cхема благоустрою прилеглої території; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="fileSvіdUrFOP" name="Cвідоцтво реєстрації особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSvidUrFOP" name="Cвідоцтво реєстрації особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fileFasad50" name="Ескізи фасадів ТС, М 1:50; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asPerevirka" name="Рішення про прийняття заяви" type="enum" required="true">
@@ -233,7 +233,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="fileVuk500" name="Викопіювання 1:500 з плану міста ; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fileSxemRozm" name="Cхема розміщення ТС з погодженням служб міста; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fileSxemTer" name="Cхема благоустрою прилеглої території; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="fileSvіdUrFOP" name="Cвідоцтво реєстрації особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="fileSvidUrFOP" name="Cвідоцтво реєстрації особи; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="fileFasad50" name="Ескізи фасадів ТС, М 1:50; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asVidpovid" name="Результат обробки заяви" type="enum" required="true">

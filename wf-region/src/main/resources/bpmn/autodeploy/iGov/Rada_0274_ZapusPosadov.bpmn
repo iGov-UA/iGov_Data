@@ -63,16 +63,18 @@
         <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_3" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sPosada&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sPosada" name="До кого саме Ви маєте намір записатись на прийом" type="enum"></activiti:formProperty>
+        <activiti:formProperty id="sPosada" name="До кого саме Ви маєте намір записатись на прийом" type="enum" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sPosadaName" name="Посада; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sLabelHerson" name="Зони відповідальності у Херсонському МВК" type="label" default="можна переглянути за &lt;a href=&quot;https://docs.google.com/document/d/1z6oUvwWnzqacgJbfZn3-ogh9f-KwcmvnH-2-LwEnkB0/edit?usp=sharing&quot; target=&quot;_blank&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="sRozkladPriyom" name="Розклад прийому" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Вкажіть день, у який Ви бажаєте записатись на прийом" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sMessageText" name="Стислий зміст питання" type="textArea" required="true"></activiti:formProperty>
         
+        <activiti:formProperty id="markerPosadaName" name="markerPosadaName" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_PosadaName.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers" name="markers_herson" type="markers" default="${markerService.loadFromFile('ternopol_oda_226_herson.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="sNameOrgan" name="підпис ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sMailClerk226" name="електронна пошта; для тестування отримання пошти працівником відповідального органу ;bVisible=false" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk226" name="електронна пошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу; ;bVisible=false" type="string"></activiti:formProperty>
         
@@ -149,7 +151,7 @@ ${sNameOrgan},<br>
           <activiti:value id="sBagkvatur" name="багатоквартирний"></activiti:value>
           <activiti:value id="sPrivSector" name="приватний"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asTypeVul" name="Тип вулиці" type="enum" required="true" writable="false">
+        <activiti:formProperty id="asTypeVul" name="Тип вулиці" type="enum" writable="false">
           <activiti:value id="sEnamVul" name="вулиця"></activiti:value>
           <activiti:value id="sEnamProv" name="провулок"></activiti:value>
           <activiti:value id="sEnamProsp" name="проспект"></activiti:value>
@@ -178,25 +180,29 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_3" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sPosada&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sPosada" name="До кого заявник має намір записатись на прийом" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;sPosadaName&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sPosadaName" name="До кого заявник має намір записатись на прийом" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Бажаний день прийому" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sMessageText" name="Стислий зміст питання" type="textArea" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="decide" name="Рішення про прийняття або відхилення заяви" type="enum" required="true">
-          <activiti:value id="accept" name="Записати громадянина"></activiti:value>
-          <activiti:value id="reject" name="Скасувати запис"></activiti:value>
+        <activiti:formProperty id="asRisheniaj" name="Рішення про прийняття або відхилення заяви" type="enum" required="true">
+          <activiti:value id="sEnumAccept" name="Записати громадянина"></activiti:value>
+          <activiti:value id="sEnumReject" name="Скасувати запис"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="visitDay1" name="Призначений день прийому" type="date"></activiti:formProperty>
         <activiti:formProperty id="NumbPers" name="Номер особи в черзі" type="string"></activiti:formProperty>
-        <activiti:formProperty id="comment" name="Якщо громадянину відмовлено, вкажіть причину у цьому полі або додайте коментар стосовно прийому при запрошенні громадянина" type="textArea" default=" "></activiti:formProperty>
-        <activiti:formProperty id="markers" name="markers_required" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_Dash.json')}"></activiti:formProperty>
+        <activiti:formProperty id="tComment" name="Коментар державного службовця" type="textArea" default=" "></activiti:formProperty>
+        <activiti:formProperty id="tCommentVidm" name="Вкажіть причину відмови" type="textArea" default=" "></activiti:formProperty>
+        <activiti:formProperty id="markerDash" name="markerDash" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_Dash.json')}"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow2" sourceRef="usertask1" targetRef="exclusivegateway1"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="flow3" name="Відмова" sourceRef="exclusivegateway1" targetRef="servicetask4">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide=='reject'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asRisheniaj=='sEnumReject'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow4" name="Запрошення" sourceRef="exclusivegateway1" targetRef="servicetask3">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asRisheniaj=='sEnumAccept'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask4" name="Відмова" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
@@ -214,7 +220,7 @@ ${sNameOrgan},<br>
 [pattern/mail/new_design/_common_content_start.html]
 <p>
 <p>Ваше звернення щодо запису на прийом було відхилено.</p>
-<p>Причина у наступному:<br> ${comment}</p>
+<p>Причина у наступному:<br> ${tCommentVidm}</p>
 За необхідності Ви можете подати ще одну заяву на порталі <a href="https://igov.org.ua/" target="_blank">igov.org.ua</a>
 </p>
 [pattern/mail/new_design/_common_content_end.html]
@@ -235,9 +241,6 @@ ${sNameOrgan},<br>
       </extensionElements>
     </serviceTask>
     <endEvent id="endevent2" name="End"></endEvent>
-    <sequenceFlow id="flow4" name="Запрошення" sourceRef="exclusivegateway1" targetRef="servicetask3">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${decide=='accept'}]]></conditionExpression>
-    </sequenceFlow>
     <serviceTask id="servicetask3" name="Лист з запрошенням" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
@@ -257,7 +260,7 @@ ${sNameOrgan},<br>
 value{[visitDay1]}<br>
 Місце в черзі - ${NumbPers}</p>
 
-<p>Коментар державного службовця (за наявністю):<br> ${comment}</p>
+<p>Коментар державного службовця (за наявністю):<br> ${tComment}</p>
 <p>${sPhoneOrgan}</p>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -298,7 +301,7 @@ ${sNameOrgan},<br>
           <activiti:value id="sBagkvatur" name="багатоквартирний"></activiti:value>
           <activiti:value id="sPrivSector" name="приватний"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asTypeVul" name="Тип вулиці" type="enum" required="true" writable="false">
+        <activiti:formProperty id="asTypeVul" name="Тип вулиці" type="enum" writable="false">
           <activiti:value id="sEnamVul" name="вулиця"></activiti:value>
           <activiti:value id="sEnamProv" name="провулок"></activiti:value>
           <activiti:value id="sEnamProsp" name="проспект"></activiti:value>
@@ -327,8 +330,8 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="lRegistrationKvart" name="Номер квартири; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('Rada/Rada_0274_zutlo.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_3" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sPosada&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sPosada" name="До кого заявник має намір записатись на прийом" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_33" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;sPosadaName&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sPosadaName" name="До кого заявник має намір записатись на прийом" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Бажаний день прийому" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sMessageText" name="Стислий зміст питання" type="textArea" writable="false"></activiti:formProperty>
         

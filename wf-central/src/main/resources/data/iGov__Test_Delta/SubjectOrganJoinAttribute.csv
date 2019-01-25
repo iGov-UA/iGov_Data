@@ -14976,5 +14976,5 @@ nID_SubjectOrganJoin;sName;sValue
 3677;sPhoneOrgan;<b>Телефон(и):</b> 05447 6 33 19, 05447 6 33 96
 3677;sWorkTime;<b>Графік роботи:</b> Понеділок, середа, п'ятниця, субота: з 08.00 до 15.00 <br>Вівторок: з 8.00 до 19.00<br>Четвер: з 8.00 до 20.00<br>Без перерви
 3677;sMailClerk;cnap_konotop@ukr.net
-3677;nID_Department_visitDay;505
+3677;nID_Department_visitDay;348
 

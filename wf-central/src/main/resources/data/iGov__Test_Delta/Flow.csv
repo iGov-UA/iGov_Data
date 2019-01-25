@@ -82,7 +82,7 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 81;ЦНАП м. Лозова;1220;67;dnepr_dms-89_auto;40;REGISTRATION_DAY6
 82;ДМС, смт. Солоне, Загран;627;54;dms_0177_zagranChild_iGov;NULL;
 83;Пока стопЦНАП м. Кривий Ріг;1618;70;dms_0173_changeFIONoID;NULL;
-84;ЦНАП м. Марганця;5795;348;dnepr_dms-89_auto;40;REGISTRATION_DAY5
+84;ЦНАП м. Марганця;5795;71;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 85;ЦНАП м. Нікополь;1800;72;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 86;ЦНАП м. Павлоград;1804;73;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 87;ЦНАП м. Синельникове;1816;74;dnepr_dms-89_auto;40;REGISTRATION_DAY6

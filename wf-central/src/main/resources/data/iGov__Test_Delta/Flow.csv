@@ -82,7 +82,7 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 81;ЦНАП м. Лозова;1220;67;dnepr_dms-89_auto;40;REGISTRATION_DAY6
 82;ДМС, смт. Солоне, Загран;627;54;dms_0177_zagranChild_iGov;NULL;
 83;Пока стопЦНАП м. Кривий Ріг;1618;70;dms_0173_changeFIONoID;NULL;
-84;Пока стопЦНАП м. Марганець;1624;71;dms_0173_changeFIONoID;NULL;
+84;ЦНАП м. Марганця;5795;348;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 85;ЦНАП м. Нікополь;1800;72;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 86;ЦНАП м. Павлоград;1804;73;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 87;ЦНАП м. Синельникове;1816;74;dnepr_dms-89_auto;40;REGISTRATION_DAY6
@@ -167,13 +167,13 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 166;Днепр, регистрация, Центр_Собор;125;151;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 167;Днепр, регистрация, Новокодацкий;125;152;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 168;Днепр, регистрация, Самарский;125;153;dnepr_dms-89_auto;40;REGISTRATION_DAY5
-169;МРЕО м.Львів, вул. Данила Апостола, 11 (водійське посвідчення);2123;156;common_mreo_3;80;MREO
-170;МРЕО м Самбір, вул Східна 216 (водійське посвідчення);2123;157;common_mreo_3;80;MREO
+169;МРЕО м.Львів, вул. Данила Апостола, 11 (водійське посвідчення);2123;156;common_mreo_3;NULL;
+170;МРЕО м Самбір, вул Східна 216 (водійське посвідчення);2123;157;common_mreo_3;NULL;
 171;Каховка, регистрация;2506;158;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 172;АПІ ДМС, Тернопільський район, вул.Степова,45, Загран;1179;159;dms_0176_Zagran_iGov;NULL;
 173;АПІ ДМС, м. Чортків, вул. Горбачевського,5, Загран;1179;160;dms_0176_Zagran_iGov;NULL;
 174;Кременець, реєстрація;2552;161;dnepr_dms-89_auto;40;REGISTRATION_DAY5
-175;МРЕО м Чернігів (водійське посвідчення);2568;162;common_mreo_3;NULL;
+175;МРЕО м Чернігів (водійське посвідчення);2568;162;common_mreo_3_auto;15;MREO
 176;АПІ ДМС, Тернопіль, вул.Є.Коновальця,6,ID-карти;1914;65;dms_0028_ID14_iGov;NULL;
 177;КрРог, регистрация, Тернівський;2584;163;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 178;КрРог, регистрация, Покровський (Жовтневий);2584;164;dnepr_dms-89_auto;40;REGISTRATION_DAY5
@@ -519,12 +519,12 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 496;ДМС, м. Шумськ, вул. Українська, 47, Загран;1179;339;dms_0176_Zagran_iGov;NULL;
 
 497;ЦНАП м. Каховка;4534;340;dms_0176_Zagran_DMSiGov_auto;15;DMS
-498;ЦНАП м. Олешки(район);4535;341;dms_0176_Zagran_DMSiGov_auto;15;DMS
+498;ЦНАП м. Олешки(район);4535;341;dms_0176_Zagran_DMSiGov_auto;15;DMS_OLESHKI
 499;ЦНАП Кочубеївської ОТГ;4535;342;dms_0176_Zagran_DMSiGov_auto;15;DMS_OTG
 500;ЦНАП Маневицької РДА;5459;343;dms_0176_Zagran_DMSiGov_auto;15;DMS
 
 501;Відділ реєстрації Станіславська ОТГ;5007;344;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 502;Відділ реєстрації Великокопанівської ОТГ;5463;345;dnepr_dms-89_auto;40;REGISTRATION_DAY5
-503;ЦНАП Вишневої міської ради Києво-Святошинського району;4524;346;dms_0176_Zagran_DMSiGov_auto;15;DMS
+503;ЦНАП Вишневої міської ради Києво-Святошинського району;4524;346;dms_0176_Zagran_DMSiGov_auto;15;DMS_VUSHNEVE
 504;Слов'янський відділ реєстрації фізичних осіб;5780;347;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 505;ЦНАП м. Конотоп, реєстрація;5800;348;dnepr_dms-89_auto;40;REGISTRATION_DAY5

@@ -14977,3 +14977,6 @@ nID_SubjectOrganJoin;sName;sValue
 3677;sWorkTime;<b>Графік роботи:</b> Понеділок, середа, п'ятниця, субота: з 08.00 до 15.00 <br>Вівторок: з 8.00 до 19.00<br>Четвер: з 8.00 до 20.00<br>Без перерви
 3677;sMailClerk;cnap_konotop@ukr.net
 3677;nID_Department_visitDay;348
+3677;sRecvizitiAdmin;Банк отримувача р/р 33210879018008, МФО 899998, код отримувача 37784555
+3677;sArea;м. Конотоп
+3677;sRegistrationOrgan;Центр надання адміністративних послуг м. Конотоп

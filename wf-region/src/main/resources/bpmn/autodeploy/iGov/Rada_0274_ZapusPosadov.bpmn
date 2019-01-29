@@ -220,7 +220,7 @@ ${sNameOrgan},<br>
         
         <activiti:formProperty id="ScriptAdress" name="назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/Rada_0274_ZapusPosadov.html]; ;bVisible=false ,bPrintform=true" type="string" default="Звернення" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/Rada_0274_Zvernenia.html]; ;bVisible=false ,bPrintform=true" type="string" default="Звернення" writable="false"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow2" sourceRef="usertask1" targetRef="exclusivegateway1"></sequenceFlow>
@@ -372,7 +372,7 @@ ${sNameOrgan},<br>
         
         <activiti:formProperty id="ScriptAdress" name="назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/Rada_0274_ZapusPosadov.html]; ;bVisible=false ,bPrintform=true" type="string" default="Звернення" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sBody_1" name="[pattern/print/rada/Rada_0274_Zvernenia.html]; ;bVisible=false ,bPrintform=true" type="string" default="Звернення" writable="false"></activiti:formProperty>
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow19" sourceRef="usertask2" targetRef="exclusivegateway2"></sequenceFlow>

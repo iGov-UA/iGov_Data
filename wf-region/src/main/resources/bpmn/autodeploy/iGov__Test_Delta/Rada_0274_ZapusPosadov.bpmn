@@ -82,13 +82,27 @@
     <scriptTask id="scripttask1" name="Скріпт таска" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
 var Misto = execution.getVariable('sPoselName')
-var TipeVul = execution.getVariable('asTypeVul')      
+var TipeVul = ' '
 var Vul = execution.getVariable('sRegistrationVul')
 var Bud = execution.getVariable('sRegistrationBud')
 var Korp = execution.getVariable('lRegistrationKorp')
 var Kvart = execution.getVariable('lRegistrationKvart')
 var Adres = ' ' 
-  
+
+if(execution.getVariable('asTypeVul') == 'sEnamVul'){TipeVul = 'вулиця'}
+if(execution.getVariable('asTypeVul') == 'sEnamProv'){TipeVul = 'провулок'}
+if(execution.getVariable('asTypeVul') == 'sEnamProsp'){TipeVul = 'проспект'}
+if(execution.getVariable('asTypeVul') == 'sEnamBulv'){TipeVul = 'бульвар'}
+if(execution.getVariable('asTypeVul') == 'sEnamNaber'){TipeVul = 'набережна'}
+if(execution.getVariable('asTypeVul') == 'sEnamUzviz'){TipeVul = 'узвіз'}
+if(execution.getVariable('asTypeVul') == 'sEnamTupik'){TipeVul = 'тупик'}
+if(execution.getVariable('asTypeVul') == 'sEnamStanc'){TipeVul = 'станція'}
+if(execution.getVariable('asTypeVul') == 'sEnamSose'){TipeVul = 'шосе'}
+if(execution.getVariable('asTypeVul') == 'sEnamPlosh'){TipeVul = 'площа'}
+if(execution.getVariable('asTypeVul') == 'sEnamGM'){TipeVul = 'жилий масив'}
+if(execution.getVariable('asTypeVul') == 'sEnamProy'){TipeVul = 'проїзд'}
+if(execution.getVariable('asTypeVul') == 'sEnamSpusk'){TipeVul = 'спуск'}
+
 if(execution.getVariable('asBudType') == 'sBagkvatur')
   {
   if(execution.getVariable('asKorp') == 'yes'){Adres = Misto+', '+TipeVul+' '+Vul+', б. '+Bud+', корп. '+Korp+', кв. '+Kvart}
@@ -206,7 +220,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="markersLine_33" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;sPosadaName&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPosadaName" name="До кого заявник має намір записатись на прийом" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Бажаний день прийому" type="date" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sMessageText" name="Стислий зміст питання" type="fileHTML" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sMessageText" name="Стислий зміст питання; ;writable=false" type="fileHTML"></activiti:formProperty>
         
         <activiti:formProperty id="asRisheniaj" name="Рішення про прийняття або відхилення заяви" type="enum" required="true">
           <activiti:value id="sEnumAccept" name="Записати громадянина"></activiti:value>
@@ -361,7 +375,7 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="markersLine_33" name="Інформація про звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;sPosadaName&quot;],&quot;sValue&quot;:&quot;Інформація про звернення&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPosadaName" name="До кого заявник має намір записатись на прийом" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Бажаний день прийому" type="date" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sMessageText" name="Стислий зміст питання" type="fileHTML" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sMessageText" name="Стислий зміст питання; ;writable=false" type="fileHTML"></activiti:formProperty>
         
         <activiti:formProperty id="vizit" name="Результат розгляду" type="enum" required="true">
           <activiti:value id="ok" name="Вирішено позитивно"></activiti:value>

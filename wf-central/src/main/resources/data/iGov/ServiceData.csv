@@ -5672,3 +5672,5 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5803;184;51;51;NULL;4;{"processDefinitionId":"Registr_0184_RegistrDo14:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5804;185;51;51;NULL;4;{"processDefinitionId":"Registr_0185_ZniatDo14:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5805;144;51;51;NULL;4;{"processDefinitionId":"Registr_0144_ZniatSmert:1:1"};;false;225;false;;BankID,EDS,mpbds;0
+5806;676;375;375;NULL;4;{"processDefinitionId":"ostroh_mvk_481:1:1"};;false;212;false;;BankID,EDS,mpbds;0
+5807;161;375;375;NULL;4;{"processDefinitionId":"Rada_0161_InfoZaput:1:1"};;false;212;false;;BankID,EDS,mpbds;0

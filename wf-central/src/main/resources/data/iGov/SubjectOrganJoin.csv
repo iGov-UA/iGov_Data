@@ -3345,3 +3345,4 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3675;212;Львівська міська рада;Львівська міська рада;lviv_lvivT;lviv_lvivT; ; ;NULL;NULL;4610100000
 3676;212;Конотопська міська рада;Конотопська міська рада;sumu_Konotop;sumu_Konotop; ; ;NULL;NULL;5910400000
 3677;225;ЦНАП м. Конотоп;ЦНАП м. Конотоп;sumu_Konotop;sumu_Konotop; ; ;NULL;NULL;5910400000
+3678;212;Пустомитівська міська рада;Пустомитівська міська рада;lviv_Pustomutu;lviv_Pustomutu; ; ;NULL;NULL;4623610100

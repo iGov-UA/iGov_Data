@@ -1,0 +1,22 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_donmariupolCentr": {
+      "aField_ID": [
+        "lableMariupolCentr"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient] == 'don_mariupolR'"
+    },
+    "ShowFieldsOnCondition_donmariupolPort": {
+      "aField_ID": [
+        "lableMariupolPort"
+      ],
+      "asID_Field": {
+        "sClient": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sClient]=='don_mariupolMVC'"
+    }
+  }
+}

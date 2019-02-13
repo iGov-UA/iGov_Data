@@ -23,17 +23,13 @@
         <activiti:formProperty id="firstName_UA1" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="По батькові" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersLine_2" name="Кынець-блок для кого" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;lable3&quot;],&quot;sValue&quot;:&quot; &quot;}}}"></activiti:formProperty>
+        
         <activiti:formProperty id="lable3" name=" ; ;labelType=danger" type="label" default="&lt;b&gt;Дана послуга доступна лише за місцем реєстрації. Якщо Ви зробите вибір району не за місцем реєстрації, у наданні послуги Вам буде відмовлено в момент відвідування.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupol" name="Оберіть район, де зареєстровано місце проживання особи, яка буде отримувати паспорт" type="enum">
-          <activiti:value id="sEnumCentral" name="Центральний район"></activiti:value>
-          <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
-          <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
-          <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано місце проживання особи, яка буде отримувати паспорт" type="enum">
-          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
-        </activiti:formProperty>
+        <activiti:formProperty id="lableMariupolCentr" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Лівобережний, Центральний, Кальміуський та Приморський райони.&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="lableMariupolPort" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Центральний район.&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="markerMariupolRaionID" name="markerMariupolRaionID" type="markers" default="${markerService.loadFromFile('1_Standart_marker/MariupolRaionID.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="lablepos" name=" ; ;labelType=info" type="label" default="Необхідним документом для отримання паспорта громадянина України у формі ID-картки є довідка про реєстрацію місця проживання/перебування особи. Її можна отримати особисто у органах реєстрації місця проживання або &lt;a href=&quot;https://igov.org.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;оформити цю довідку через iGov&lt;/a&gt; (працює не для всіх регіонів). Строк надання послуги через iGov - 10 робочих днів."></activiti:formProperty>
         <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
@@ -104,17 +100,6 @@ else
 var timerEnd=year+'-'+month+'-'+day+'T'+'19'+':'+'00'+':'+seconds
 execution.setVariable('sEndDay', timerEnd)
 
-var GrpUserName = execution.getVariable('sID_Public_SubjectOrganJoin')
-var GrpUserNameResult = ''
-if (GrpUserName=='don_mariupolR' || GrpUserName=='don_mariupol_LevR')
-{
-	GrpUserNameResult = execution.getVariable('asEnumDistrictMariupol')
-}
-if (GrpUserName=='don_mariupolMVC')
-{
-	GrpUserNameResult = execution.getVariable('asEnumDistrictMariupolMVC')
-}
-execution.setVariable('sDistrictMariupol', GrpUserNameResult)
 
       </script>
     </scriptTask>
@@ -178,7 +163,7 @@ ${sNameOrgan},<br>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow26" sourceRef="servicetask2" targetRef="usertask1"></sequenceFlow>
-    <userTask id="usertask1" name="Заявка прийнята" activiti:candidateGroups="id_card_${sID_Public_SubjectOrganJoin}_${sDistrictMariupol}">
+    <userTask id="usertask1" name="Заявка прийнята" activiti:candidateGroups="id_card_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="sNameOrgan" name="Назва органу" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="День та час зустрічі " type="queueData" writable="false"></activiti:formProperty>
@@ -189,15 +174,6 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="lastName_UA1" name="Прізвище отримувача паспорта" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="firstName_UA1" name="Ім'я отримувача паспорта" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="По батькові отримувача паспорта" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupol" name="Оберіть район, де зареєстровано Ваше місце проживання" type="enum" writable="false">
-          <activiti:value id="sEnumCentral" name="Центральний район"></activiti:value>
-          <activiti:value id="sEnumKalmius" name="Кальміуський район"></activiti:value>
-          <activiti:value id="sEnumLivoberezniy" name="Лівобережний район"></activiti:value>
-          <activiti:value id="sEnumPrimorsky" name="Приморський район"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asEnumDistrictMariupolMVC" name="Оберіть район, де зареєстровано місце проживання особи, яка буде отримувати паспорт" type="enum" writable="false">
-          <activiti:value id="sEnumCentralMVC" name="Центральний район"></activiti:value>
-        </activiti:formProperty>
         <activiti:formProperty id="result" name="Результат зустрічі" type="enum">
           <activiti:value id="reestr" name="Громадянин подав заяву"></activiti:value>
           <activiti:value id="nejav" name="Громадянин не з'явився"></activiti:value>

@@ -20,6 +20,9 @@
         
         <activiti:formProperty id="lable3" name=" ; ;labelType=danger" type="label" default="&lt;b&gt;Дана послуга доступна лише за місцем реєстрації. Якщо Ви зробите вибір району не за місцем реєстрації, у наданні послуги Вам буде відмовлено в момент відвідування.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть ЦНАП міста, який Вам зручно відвідати" type="select" default="0" required="true"></activiti:formProperty>
+        <activiti:formProperty id="lableMariupolCentr" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Лівобережний, Центральний, Кальміуський та Приморський райони.&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="lableMariupolPort" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Центральний район.&lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="markerMariupolRaionID" name="markerMariupolRaionID" type="markers" default="${markerService.loadFromFile('1_Standart_marker/MariupolRaionID.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
@@ -157,7 +160,7 @@ ${sNameOrgan},<br>
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow25" sourceRef="servicetask3" targetRef="usertask2"></sequenceFlow>
-    <userTask id="usertask2" name="Заявка прийнята ДМС" activiti:candidateGroups="id_card_${sID_Public_SubjectOrganJoin}_${sDistrictMariupol}">
+    <userTask id="usertask2" name="Заявка прийнята ДМС" activiti:candidateGroups="id_card_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>

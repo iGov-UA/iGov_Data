@@ -1,0 +1,52 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamFop": {
+      "aField_ID": [
+        "sAddressRegistr"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFop'||[sCond]=='Фізична особа підприємець'"
+    },
+    "ShowFieldsOnCondition_sEnamFopDov": {
+      "aField_ID": [
+        "lastName_UA1",
+        "firstName_UA1",
+        "middleName_UA1",
+        "DovirutInn",
+        "nFile_DovirFop"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFopDov'||[sCond]=='Довірена особа від ФОП'"
+    },
+    "ShowFieldsOnCondition_sEnamUrK": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sLocation_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrK'||[sCond]=='Юридична особа (подає керівник)'"
+    },
+    "ShowFieldsOnCondition_sEnamUrP": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sLocation_SubjectOrgan_01",
+        "sCEOName_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01",
+        "nFile_DovirUr"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrP'||[sCond]=='Юридична особа (подає представник)'"
+    }
+  }
+}

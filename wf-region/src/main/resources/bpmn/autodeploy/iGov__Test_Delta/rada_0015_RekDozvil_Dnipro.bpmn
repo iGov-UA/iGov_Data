@@ -31,7 +31,7 @@
         <activiti:formProperty id="firstName_UA1" name="Ім'я довірителя;(ФОП)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="middleName_UA1" name="По батькові довірителя;(ФОП)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DovirutInn" name="ІПН довірителя;(ФОП)" type="long" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirFop" name="Довіреність;(сканкопія оригіналу);bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirFop" name="Довіреність;(сканкопія оригіналу);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Введіть код ЄДРПОУ" type="string" required="true"></activiti:formProperty>
@@ -39,7 +39,7 @@
         <activiti:formProperty id="sLocation_SubjectOrgan_01" name="Юридична адреса;(індекс, місто, вулиця, будинок, офіс)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_01" name="ПІБ директора" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
-        <activiti:formProperty id="nFile_DovirUr" name="Повноваження представника ЮО;(сканкопія документу що підтверджує ваше право подавати заяви від імені Юридичної особи);bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_DovirUr" name="Довіреність від юридичної особи;(сканкопія документу що підтверджує ваше право подавати заяви від імені Юридичної особи);bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="marker_FopFopdovUokUop" name="marker_FopFopdovUokUop" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FopFopdovUokUop.json')}"></activiti:formProperty>
         
@@ -60,7 +60,7 @@
         <activiti:formProperty id="nFile_2" name="File_2; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="nFile_3" name="File_3; ;bNew=true" type="file"></activiti:formProperty>
         
-        <activiti:formProperty id="sMailClerk" name="Пошта виконавця" type="string" default="Akylish88@gmail.com"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта виконавця; ;bVisible=false" type="string" default="Akylish88@gmail.com"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string" default="Управління реклами м. Дніпро"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон органу; ;bVisible=false" type="string" default="Телефон органу"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу; ;bVisible=false" type="string" default="Адреса"></activiti:formProperty>
@@ -254,7 +254,7 @@ ${sNameOrgan},<br>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask2" name="Управління реклами " activiti:candidateGroups="Dp_Rek_hudojnik">
+    <userTask id="usertask2" name="Управління реклами " activiti:candidateGroups="Dp_ReklamaUpr">
       <extensionElements>
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
@@ -294,8 +294,8 @@ ${sNameOrgan},<br>
           <activiti:value id="sEnamGov" name="Державна"></activiti:value>
         </activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_XXX" name="Рішення художника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_XXX&quot;:{&quot;aElement_ID&quot;:[&quot;asPerevirka&quot;],&quot;sValue&quot;:&quot;Інформація про об'єкт&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asPerevirka" name="Результат перевірки" type="enum" required="true">
+        <activiti:formProperty id="markersLine_XXX" name="Рішення художника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_XXX&quot;:{&quot;aElement_ID&quot;:[&quot;asPerevirka&quot;],&quot;sValue&quot;:&quot;Рішення художника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="asPerevirka" name="Результат перевірки" type="enum" writable="false">
           <activiti:value id="sEnum_ok" name="Фасад погоджено"></activiti:value>
           <activiti:value id="sEnum_bad" name="Відмовити"></activiti:value>
         </activiti:formProperty>

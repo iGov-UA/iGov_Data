@@ -1,0 +1,25 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamBorg": {
+      "aField_ID": [
+        "sBorgSum",
+        "tBorgDetal"
+        
+      ],
+      "asID_Field": {
+        "sReason": "asDecide"
+      },
+      "sCondition": "[sReason]=='sEnamBorg'"
+    },
+    "RequiredFieldsOnCondition_sEnamBorg": {
+      "aField_ID": [
+        "sBorgSum",
+        "tBorgDetal"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecide"
+      },
+      "sCondition": "[sCondit1]=='sEnamBorg'"
+    }
+  }
+}

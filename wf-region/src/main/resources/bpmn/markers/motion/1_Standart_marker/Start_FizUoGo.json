@@ -1,0 +1,25 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamFiz": {
+      "aField_ID": [
+        "sRegistrationAdresa"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamFiz'||[sCond]=='Громадянин України (фізична особа)'"
+    },
+    "ShowFieldsOnCondition_sEnamUrKsEnamGO": {
+      "aField_ID": [
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sLocation_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrK'||[sCond]=='Юридична особа (подає представник)'||[sCond]=='sEnamGO'||[sCond]=='Громадська організація (подає представник)'"
+    }
+  }
+}

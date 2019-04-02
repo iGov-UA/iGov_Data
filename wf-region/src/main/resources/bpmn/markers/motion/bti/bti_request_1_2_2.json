@@ -3,7 +3,7 @@
 
 		"ValuesFieldsOnCondition_6": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["427.70","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","350.00","70.00","420.00"],				
+		      "asID_Field_sValue": ["529.53","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","433.33","86.67","520.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -12,7 +12,7 @@
     	},
     	"ValuesFieldsOnCondition_7": {
 		     "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["661.91","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","541.67","108.33"," 650.00"],				
+		      "asID_Field_sValue": ["814.66","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","666.67","133.33","800.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -21,7 +21,7 @@
     	},
     			"ValuesFieldsOnCondition_8": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["896.13","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","733.34","146.66","880.00"],				
+		      "asID_Field_sValue": ["1099.80","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","900.00","180.00","1080.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -30,7 +30,7 @@
     	},
     			"ValuesFieldsOnCondition_9": {
 		     "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["1130.35","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","925.01","184.99","1110.00"],				
+		      "asID_Field_sValue": ["1384.93","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","1133.33","226.67","1360.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"
@@ -39,7 +39,7 @@
     	},
     			"ValuesFieldsOnCondition_10": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["1364.56","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","1116.68","223.32","1340.00"],				
+		      "asID_Field_sValue": ["1670.06","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","1366.67","273.33","1640.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"

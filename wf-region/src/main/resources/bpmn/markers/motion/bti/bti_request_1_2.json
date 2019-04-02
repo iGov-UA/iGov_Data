@@ -2,7 +2,7 @@
 	"motion" : {
 		"ValuesFieldsOnCondition_1": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["397.15","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","325","65","390.00"],
+		      "asID_Field_sValue": ["488.80","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","400.00","80.00","480.00"],
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion3"
@@ -11,7 +11,7 @@
     	},
     	"ValuesFieldsOnCondition_2": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["626.27","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","512.5","102.5","615.00"], 				
+		      "asID_Field_sValue": ["773.93","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","633.33","126.67","760.00"], 				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion3"
@@ -20,7 +20,7 @@
     	},
     			"ValuesFieldsOnCondition_3": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["855.40","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","700","140","840"],	 		
+		      "asID_Field_sValue": ["1059.06","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","866.67","173.33","1040.00"],	 		
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion3"
@@ -29,7 +29,7 @@
     	},
     			"ValuesFieldsOnCondition_4": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["1084.52","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","887.5","177.5","1065.00"], 
+		      "asID_Field_sValue": ["1344.20","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","1100.00","220.00","1320.00"], 
 		      "asID_Field": { 
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion3"
@@ -38,7 +38,7 @@
     	},
     		"ValuesFieldsOnCondition_5": {
 		     "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["1313.65","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","1075","215","1290.00"],				
+		      "asID_Field_sValue": ["1629.33","Підготовка відповіді  за зверненнями фізичних або юридичних осіб","1333.33","266.67","1600.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion3"

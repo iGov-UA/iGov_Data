@@ -35,9 +35,6 @@
         <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="markerOsoba" name="markerOsoba" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FizUoGo.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про провадження" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sVPnumber" name="Номер виконавчого провадження" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="dVPdate" name="Дата виконавчого провадження" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="tVPproblem" name="Додаткова інформація; (якщо маєте питання чи важливу інформацію вкажіть це тут)" type="textArea"></activiti:formProperty>
         
         <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string"></activiti:formProperty>
@@ -125,17 +122,14 @@
         <activiti:formProperty id="sLocation_SubjectOrgan_01" name="Юридична адреса; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="markerOsoba" name="markerOsoba" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FizUoGo.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про провадження" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sVPnumber" name="Номер виконавчого провадження; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="dVPdate" name="Дата виконавчого провадження" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tVPproblem" name="Додаткова інформація" type="textArea" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="asDecide" name="Результат розгляду" type="enum" required="true">
           <activiti:value id="sEnamNema" name="Заборгованість відсутня"></activiti:value>
           <activiti:value id="sEnamBorg" name="Наявна заборгованість, вказати деталі"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="sBorgSum" name="Сума заборгованості" type="string"></activiti:formProperty>
-        <activiti:formProperty id="tBorgDetal" name="Деталі винекнення боргу" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Postanova" name="Постанова про відкриття виконавчого провадженя; ;bNew=true" type="file"></activiti:formProperty>
+        
         <activiti:formProperty id="comment" name="Примітки" type="textArea" default=" "></activiti:formProperty>
         <activiti:formProperty id="markerDVSBorg" name="markerDVSBorg" type="markers" default="${markerService.loadFromFile('dvs/301_DVSBorg.json')}"></activiti:formProperty>
         
@@ -206,9 +200,9 @@
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
-					Інформація про заборгованість по провадженню № ${sVPnumber}:<br />
-					Сума боргу: ${sBorgSum}
-					Деталі виникнення заборгованості: ${tBorgDetal}
+					Повідомляємо що відносно вас наявне виконавче провадження.<br />
+					СканКопія постанови про відкриття виконавчого провадженя в додатку до листа.<br /><br />
+					
 					Примітки:<br />
 					${comment}<br />
 					<br />
@@ -229,7 +223,7 @@
           <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[" "]]></activiti:expression>
+          <activiti:expression><![CDATA[${nFile_Postanova}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

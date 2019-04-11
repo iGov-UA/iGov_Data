@@ -3,6 +3,7 @@
   <process id="DVS_0302_Konsult" name="Консультація щодо виконавчого провадження" isExecutable="true">
     <startEvent id="startevent1" name="Start">
       <extensionElements>
+        <activiti:formProperty id="sLabeInfo" name=" ; ;labelType=info" type="label" default="УВАГА! &lt;a href=&quot;https://delta.test.igov.gov.ua/service/302/instruction &quot; target=&quot;_blank&quot;&gt;Питання, що виникають найчастіше (FAQ)&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган надання адмінпослуг" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;asOsoba&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -35,10 +36,9 @@
         
         <activiti:formProperty id="markerOsoba" name="markerOsoba" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Start_FizUoGo.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про провадження" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Інформація про провадження (за наявності відомостей)" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження (за наявності відомостей)&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sVPnumber" name="Номер виконавчого провадження" type="string"></activiti:formProperty>
-        <activiti:formProperty id="dVPdate" name="Дата виконавчого провадження" type="date"></activiti:formProperty>
-        <activiti:formProperty id="sVPPutania" name="Опишіть вашу проблему;(коротко і по суті)" type="fileHTML" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sVPPutania" name="Опишіть вашу проблему;(коротко і по суті)" type="fileHTML"></activiti:formProperty>
         <activiti:formProperty id="nFile_VPDodatok" name="Додаткові документи;(в разі необхідності додайте графічні матеріали або документи, якщо файлів кілька додайте ZIP архівом або PDF файлом);bNew=true" type="file"></activiti:formProperty>
         
         <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string"></activiti:formProperty>
@@ -126,7 +126,6 @@
         
         <activiti:formProperty id="markersLine_2" name="Інформація про провадження" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sVPnumber" name="Номер виконавчого провадження; ;writable=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="dVPdate" name="Дата виконавчого провадження" type="date" writable="false"></activiti:formProperty>
         
         <activiti:formProperty id="sVPPutania" name="Опис проблеми" type="fileHTML" writable="false"></activiti:formProperty>
         

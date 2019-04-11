@@ -2,8 +2,7 @@
   "motion": {
     "ShowFieldsOnCondition_sEnamBorg": {
       "aField_ID": [
-        "sBorgSum",
-        "tBorgDetal"
+        "nFile_Postanova"
         
       ],
       "asID_Field": {
@@ -13,8 +12,7 @@
     },
     "RequiredFieldsOnCondition_sEnamBorg": {
       "aField_ID": [
-        "sBorgSum",
-        "tBorgDetal"
+        "nFile_Postanova"
       ],
       "asID_Field": {
         "sCondit1": "asDecide"

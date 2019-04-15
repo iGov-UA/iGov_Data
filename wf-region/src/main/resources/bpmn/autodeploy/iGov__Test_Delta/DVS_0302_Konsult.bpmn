@@ -126,6 +126,7 @@
         
         <activiti:formProperty id="markersLine_2" name="Інформація про провадження" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sVPnumber" name="Номер виконавчого провадження; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Орган державної виконавчої служби" type="select"  writable="false"></activiti:formProperty>
         <activiti:formProperty id="sVPPutania" name="Опис проблеми" type="fileHTML" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_VPDodatok" name="Додаткові документи від заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         

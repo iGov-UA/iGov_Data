@@ -3,7 +3,6 @@
   <process id="DVS_0301_Borg" name="Перевірка заборгованісті по виконавчому провадженню" isExecutable="true">
     <startEvent id="startevent1" name="Start">
       <extensionElements>
-        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган надання адмінпослуг" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;asOsoba&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">
@@ -37,10 +36,9 @@
         
         <activiti:formProperty id="tVPproblem" name="Додаткова інформація; (якщо маєте питання чи важливу інформацію вкажіть це тут)" type="textArea"></activiti:formProperty>
         
-        <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sPhoneOrgan" name="Контактний телефон; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string" default="cvr@dp.dvs.gov.ua"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string" default="Центр виконання рішень"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrgan" name="Контактний телефон; ;bVisible=false" type="string" default="ТЕЛЕФОН"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Перевірка заборгованісті по виконавчому провадженню"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="перевірки заборгованісті по виконавчому провадженню"></activiti:formProperty>
       </extensionElements>
@@ -84,7 +82,6 @@
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
 				${sNameOrgan},<br />
-				${sAddress}<br />
 				${sPhoneOrgan}<br />
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
@@ -148,7 +145,7 @@
     <serviceTask id="servicetask6" name="Заборгованість відсутня" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -169,8 +166,7 @@
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
                 ${sNameOrgan}<br />
-                ${sAddress}<br />
-				${sPhoneOrgan}<br />
+                ${sPhoneOrgan}<br />
             [pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -211,8 +207,7 @@
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
                 ${sNameOrgan}<br />
-                ${sAddress}<br />
-				${sPhoneOrgan}<br />
+                ${sPhoneOrgan}<br />
             [pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

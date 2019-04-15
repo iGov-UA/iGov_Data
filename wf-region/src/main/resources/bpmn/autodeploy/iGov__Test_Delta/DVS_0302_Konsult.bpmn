@@ -4,7 +4,6 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sLabeInfo" name=" ; ;labelType=info" type="label" default="УВАГА! &lt;a href=&quot;https://delta.test.igov.gov.ua/service/302/instruction &quot; target=&quot;_blank&quot;&gt;Питання, що виникають найчастіше (FAQ)&lt;/a&gt;"></activiti:formProperty>
-        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган надання адмінпослуг" type="select" default="0" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;asOsoba&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">
@@ -38,13 +37,13 @@
         
         <activiti:formProperty id="markersLine_2" name="Інформація про провадження (за наявності відомостей)" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sVPnumber&quot;],&quot;sValue&quot;:&quot;Інформація про провадження (за наявності відомостей)&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sVPnumber" name="Номер виконавчого провадження" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sVPPutania" name="Опишіть вашу проблему;(коротко і по суті)" type="fileHTML"></activiti:formProperty>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Орган державної виконавчої служби" type="select" default="0"></activiti:formProperty>
+        <activiti:formProperty id="sVPPutania" name="Опишіть вашу проблему;(коротко і по суті)" type="fileHTML" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_VPDodatok" name="Додаткові документи;(в разі необхідності додайте графічні матеріали або документи, якщо файлів кілька додайте ZIP архівом або PDF файлом);bNew=true" type="file"></activiti:formProperty>
         
-        <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sPhoneOrgan" name="Контактний телефон; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sAddress" name="Адреса підрозділу; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerkDVS" name="Пошта органу; ;bVisible=false" type="string" default="cvr@dp.dvs.gov.ua"></activiti:formProperty>
+        <activiti:formProperty id="sNameOrganDVS" name="Назва органу; ;bVisible=false" type="string" default="Центр виконання рішень"></activiti:formProperty>
+        <activiti:formProperty id="sPhoneOrganDVS" name="Контактний телефон; ;bVisible=false" type="string" default="ТЕЛЕФОН"></activiti:formProperty>
         
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Консультація щодо виконавчого провадження"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameZV" name="назва послуги; ;bVisible=false" type="string" default="консультацію щодо виконавчого провадження"></activiti:formProperty>
@@ -56,7 +55,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
+          <activiti:expression><![CDATA[${sMailClerkDVS}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нове звернення про ${sPosluga_name}]]></activiti:expression>
@@ -88,9 +87,8 @@
 			</p>	
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br />
-				${sAddress}<br />
-				${sPhoneOrgan}<br />
+				${sNameOrganDVS},<br />
+				${sPhoneOrganDVS}<br />
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -172,9 +170,8 @@
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
-                ${sNameOrgan}<br />
-                ${sAddress}<br />
-				${sPhoneOrgan}<br />
+                ${sNameOrganDVS}<br />
+                ${sPhoneOrganDVS}<br />
             [pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -211,9 +208,8 @@
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
-                ${sNameOrgan}<br />
-                ${sAddress}<br />
-				${sPhoneOrgan}<br />
+                ${sNameOrganDVS}<br />
+                ${sPhoneOrganDVS}<br />
             [pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

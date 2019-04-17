@@ -2654,7 +2654,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 2715;778;111;111;NULL;4;{"processDefinitionId":"dnepr_soczah_156:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 2716;752;111;111;NULL;4;{"processDefinitionId":"socialhelp_kidsUkraine:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 2717;762;111;111;NULL;4;{"processDefinitionId":"dnepr_soczah_139:1:1"};;false;14;true;;BankID,EDS,mpbds;0
-2718;301;50001;NULL;1;4;{"processDefinitionId":"DVS_0301_Borg:1:1"};;false;128;true;;BankID,EDS,mpbds;0
+2718;301;50001;NULL;1;4;{"processDefinitionId":"DVS_0301_Borg:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 2719;302;50001;NULL;1;4;{"processDefinitionId":"DVS_0302_Konsult:1:1"};;false;128;true;;BankID,EDS,mpbds;0
 2720;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0
 2721;2;2;2;NULL;4;{"processDefinitionId":"demo:1:58"};;false;1;true;;BankID,EDS,mpbds;0

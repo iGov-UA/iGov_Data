@@ -1,0 +1,32 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamFile": {
+      "aField_ID": [
+        "nFile_Vidpovid"
+        
+      ],
+      "asID_Field": {
+        "sReason": "asDecide"
+      },
+      "sCondition": "[sReason]=='sEnamFile'"
+    },
+    "RequiredFieldsOnCondition_sEnamFile": {
+      "aField_ID": [
+        "nFile_Vidpovid"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecide"
+      },
+      "sCondition": "[sCondit1]=='sEnamFile'"
+    },
+    "RequiredFieldsOnCondition_sEnamText": {
+      "aField_ID": [
+        "comment"
+      ],
+      "asID_Field": {
+        "sCondit1": "asDecide"
+      },
+      "sCondition": "[sCondit1]=='sEnamText'"
+    }
+  }
+}

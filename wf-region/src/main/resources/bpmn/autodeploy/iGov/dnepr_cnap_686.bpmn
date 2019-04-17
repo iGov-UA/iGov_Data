@@ -10,7 +10,7 @@
 		- bVisible
 		- автозавершение по таймеру с корректировкой статуса в журнале гражданина
 		+ новый дизайн писем
-		+ сумма 180 (+1,83% 183,3) 
+		+ сумма 190 (+1,83% 193,47) 
 		+ корр реквизиты (терновка  код классификации 22012300)
 		+ наличие файла-вложения "по умолчанию"
 		- смс в письмах</documentation>
@@ -483,7 +483,7 @@
         <activiti:formProperty id="sVarPayGetSchet" name="РАХУНОК ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="ИД транзакции платежа ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="nID_Subject" name="ИД-номер субъекта ; ;bVisible=false" type="string" default="0"></activiti:formProperty>
-        <activiti:formProperty id="sSum" name="сумма платежа ; ;bVisible=false" type="string" default="183.30"></activiti:formProperty>
+        <activiti:formProperty id="sSum" name="сумма платежа ; ;bVisible=false" type="string" default="193.47"></activiti:formProperty>
         <activiti:formProperty id="sID_Currency" name="ИД-строковой валюты ; ;bVisible=false" type="string" default="UAH"></activiti:formProperty>
         <activiti:formProperty id="sDescription" name="строка-описание платежа ; ;bVisible=false" type="string" default="101;${bankIdinn};22010300 Адміністративний збір за держреєстрацію змін ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}"></activiti:formProperty>
         <activiti:formProperty id="asDecisionFirst_01" name="Результат аналізу звернення" type="enum" required="true">
@@ -521,7 +521,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37870848')
 				execution.setVariable('sVarWhoPayGet','ВАСИЛЬКІВСЬКЕ УК (ВАСИЛЬКІВСЬКОГО РАЙОНУ)')
 				execution.setVariable('sVarPayGetSchet','31419501700049')
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='agerman')
           	{
@@ -533,7 +533,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37870848')
 				execution.setVariable('sVarWhoPayGet','ВАСИЛЬКІВСЬКЕ УК (ВАСИЛЬКІВСЬКОГО РАЙОНУ)')
 				execution.setVariable('sVarPayGetSchet','31419501700049')
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='temp_test')
           	{
@@ -545,7 +545,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37870848')
 				execution.setVariable('sVarWhoPayGet','ВАСИЛЬКІВСЬКЕ УК (ВАСИЛЬКІВСЬКОГО РАЙОНУ)')
 				execution.setVariable('sVarPayGetSchet','31419501700049')
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='kramatorsk_jur')
           	{
@@ -557,7 +557,7 @@
           		execution.setVariable('sVarWhoPayGetCode','37944338')
           		execution.setVariable('sVarWhoPayGet','Краматор.УК м.Краматорськ')
           		execution.setVariable('sVarPayGetSchet','31412501005059')
-          		execution.setVariable('sVarSumPay','180.00')
+          		execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='charichanka_jur')
           	{
@@ -569,7 +569,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37901650')
 				execution.setVariable('sVarWhoPayGet','ЦАРИЧАНСЬКЕ УК (ЦАРИЧАНСЬКОГО РАЙОНУ)')
 				execution.setVariable('sVarPayGetSchet','31417501700353')
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='vilnogirskT_jur')
           	{
@@ -581,7 +581,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37996805')          			
 				execution.setVariable('sVarWhoPayGet','УДКСУ у м.Вільногірську')          			
 				execution.setVariable('sVarPayGetSchet','31413501700012')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
 		  if (sVarCNAP=='tomak_jur')
           	{
@@ -593,7 +593,7 @@
 				execution.setVariable('sVarWhoPayGetCode','36729802')          			
 				execution.setVariable('sVarWhoPayGet','Томаківське УК (Томаківський р-н)')          			
 				execution.setVariable('sVarPayGetSchet','31118170700339')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='krinichki_jur')
           	{
@@ -605,7 +605,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38052097')          			
 				execution.setVariable('sVarWhoPayGet','УДКСУ у Криничанському районі(місцевий)')          			
 				execution.setVariable('sVarPayGetSchet','31114170700117')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='ordzonikT_jur')
           	{
@@ -617,7 +617,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37691430')          			
 				execution.setVariable('sVarWhoPayGet','УК у м.Орджонiкiдзе(м.Орджон)')          			
 				execution.setVariable('sVarPayGetSchet','31416501700031')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='meziv_jur')
           	{
@@ -629,7 +629,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37909010')          			
 				execution.setVariable('sVarWhoPayGet','УДКСУ у Межівському районі(місцевий)')          			
 				execution.setVariable('sVarPayGetSchet','31415501700162')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='zhvodT_jur')
           	{
@@ -641,7 +641,7 @@
 				execution.setVariable('sVarWhoPayGetCode','36916755')          			
 				execution.setVariable('sVarWhoPayGet','УК у м.Жовтих Водах (місцевий бюджет м.Жовті Води)')          			
 				execution.setVariable('sVarPayGetSchet','31417501700018')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='ternopil_jur')
           	{
@@ -653,7 +653,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38038156')          			
 				execution.setVariable('sVarWhoPayGet','УК у Терноп.р-ні(Тернопіл.р-н)')          			
 				execution.setVariable('sVarPayGetSchet','31417501700513')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='petropavl_jur')
           	{
@@ -665,7 +665,7 @@
 				execution.setVariable('sVarWhoPayGetCode','36725512')          			
 				execution.setVariable('sVarWhoPayGet','Петропавлівське УК/Петро.р-н/')          			
 				execution.setVariable('sVarPayGetSchet','31416501700235')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='nikopol_jur')
           	{
@@ -677,7 +677,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38055606')          			
 				execution.setVariable('sVarWhoPayGet','Нікопольське УК/ Нікопольський р-н/')          			
 				execution.setVariable('sVarPayGetSchet','31414501700174')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='nikopolT_jur')
           	{
@@ -689,7 +689,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38033121')          			
 				execution.setVariable('sVarWhoPayGet','УК у м. Нікополі/ м. Нікополь/')          			
 				execution.setVariable('sVarPayGetSchet','31417501700029')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='dndz_jur')
           	{
@@ -701,7 +701,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38028588')          			
 				execution.setVariable('sVarWhoPayGet','УДКСУ у м. Дніпродзержинську')          			
 				execution.setVariable('sVarPayGetSchet','31412501700013')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
           if (sVarCNAP=='persotravT_jur')
           	{
@@ -713,7 +713,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37804890')          			
 				execution.setVariable('sVarWhoPayGet','УК у м.Першотравенськ')          			
 				execution.setVariable('sVarPayGetSchet','31412501700013')          			
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
           	}
 		  if (sVarCNAP=='cnap_buch_1')
            {
@@ -725,7 +725,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38038030')             
 				execution.setVariable('sVarWhoPayGet','УК у Бучацькому районі')             
 				execution.setVariable('sVarPayGetSchet','31415501700076')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_gus_1')
 			{
@@ -737,7 +737,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37373001')             
 				execution.setVariable('sVarWhoPayGet','УК у Гусятин.  р-н')             
 				execution.setVariable('sVarPayGetSchet','31416501700116')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='zal_re')
 			{
@@ -749,7 +749,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37888326')             
 				execution.setVariable('sVarWhoPayGet','УК у Заліщиц.р-ні')             
 				execution.setVariable('sVarPayGetSchet','31417501700160')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='zbar_re')
 			{
@@ -761,7 +761,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37373001')             
 				execution.setVariable('sVarWhoPayGet','УДКСУ у Збаразькому районі')             
 				execution.setVariable('sVarPayGetSchet','31416501700116')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_zbor_1')
 			{
@@ -773,7 +773,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37943418')             
 				execution.setVariable('sVarWhoPayGet','УК у Зборівському. р-ні/Зборів. р-н')             
 				execution.setVariable('sVarPayGetSchet','31414501700237')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_koziv_1')
 			{
@@ -785,7 +785,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37822731')             
 				execution.setVariable('sVarWhoPayGet','УК у Козівському р-ні/ Козівський р-н')             
 				execution.setVariable('sVarPayGetSchet','31414501700282')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_krem_1')
 			{
@@ -797,7 +797,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37766394')             
 				execution.setVariable('sVarWhoPayGet','УК у Кременецькому районі')             
 				execution.setVariable('sVarPayGetSchet','31410501700316')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_lanov_1')
 			{
@@ -809,7 +809,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37377870')             
 				execution.setVariable('sVarWhoPayGet','УК у Лановецькому районі')             
 				execution.setVariable('sVarPayGetSchet','31412501700347')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_monas_1')
 			{
@@ -821,7 +821,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37382571')             
 				execution.setVariable('sVarWhoPayGet','УК у Монастириському р-ні/Монаст.р-н')             
 				execution.setVariable('sVarPayGetSchet','31417501700375')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='pidvol_re')
 			{
@@ -833,7 +833,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37863778')             
 				execution.setVariable('sVarWhoPayGet','УК у Підволочиському районі')             
 				execution.setVariable('sVarPayGetSchet','31414501700408')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_pidgai_1')
 			{
@@ -845,7 +845,7 @@
 				execution.setVariable('sVarWhoPayGetCode','36084944')             
 				execution.setVariable('sVarWhoPayGet','УК у Підгаєцькому р-ні/Підг.р-н')             
 				execution.setVariable('sVarPayGetSchet','31411501700445')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_tereb_1')
 			{
@@ -857,7 +857,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37625079')             
 				execution.setVariable('sVarWhoPayGet','УК в Теребовл. районі')             
 				execution.setVariable('sVarPayGetSchet','31410501700468')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_chortR_1')
 			{
@@ -869,7 +869,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37938481')             
 				execution.setVariable('sVarWhoPayGet','УК у Чорткiвському районі/Чортківський р-н')             
 				execution.setVariable('sVarPayGetSchet','31410501700554')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_shum_1')
 			{
@@ -881,7 +881,7 @@
 				execution.setVariable('sVarWhoPayGetCode','36488038')             
 				execution.setVariable('sVarWhoPayGet','УК у Шумському р-ні/Шумський р-н')             
 				execution.setVariable('sVarPayGetSchet','31416501700600')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		  if (sVarCNAP=='cnap_chortT_1')
 			{
@@ -893,7 +893,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37938481')             
 				execution.setVariable('sVarWhoPayGet','УДКСУ у Чортківському районі/Чортківський район')             
 				execution.setVariable('sVarPayGetSchet','31419501700555')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}
 		if (sVarCNAP=='berezh_re')
            {
@@ -905,7 +905,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37737751')             
 				execution.setVariable('sVarWhoPayGet','УК у Бережан.р-ні/м.Бережани')             
 				execution.setVariable('sVarPayGetSchet','31410501700004')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
            }
 		if (sVarCNAP=='tern_rai_cnap2')
            {
@@ -917,7 +917,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38038156')
 				execution.setVariable('sVarWhoPayGet','УК у Терноп. р-ні/ Тернопіл. р-н')             
 				execution.setVariable('sVarPayGetSchet','31417501700513')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
            }
 		if (sVarCNAP=='cnap_borsch_1')
            {
@@ -929,7 +929,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37971052')
 				execution.setVariable('sVarWhoPayGet','УК у Борщівському районі/Борщівський р-н')             
 				execution.setVariable('sVarPayGetSchet','31417501700030')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
            }
 		if (sVarCNAP=='krivorogT_jur')
            {
@@ -941,7 +941,7 @@
 				execution.setVariable('sVarWhoPayGetCode','38032510')             
 				execution.setVariable('sVarWhoPayGet','УДКСУ у Металургійному районі м. Кривого Рога')             
 				execution.setVariable('sVarPayGetSchet','31416501700020')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
            }
 		if (sVarCNAP=='ternopilT_jur')
 		   {
@@ -953,7 +953,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37977726')
 				execution.setVariable('sVarWhoPayGet','УК в м. Тернопіль')             
 				execution.setVariable('sVarPayGetSchet','31412501700002')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}		   
 		if (sVarCNAP=='ternT_jur')
 		   {
@@ -965,7 +965,7 @@
 				execution.setVariable('sVarWhoPayGetCode','37463524')
 				execution.setVariable('sVarWhoPayGet','Управління Державної казначейської служби України у м. Тернівці')             
 				execution.setVariable('sVarPayGetSchet','31412501700035')             
-				execution.setVariable('sVarSumPay','180.00')
+				execution.setVariable('sVarSumPay','190.00')
 			}		   
 	   </script>
     </scriptTask>

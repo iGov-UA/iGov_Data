@@ -79,7 +79,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Довідка про доходи (пенсійний фонд)]]></activiti:string>
@@ -141,7 +141,7 @@
                                     <p>
                                         З повагою,<br />
                                         Укрпошта,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -164,7 +164,7 @@
     <serviceTask id="servicetask2" name="відправка імейла для сплати" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -225,7 +225,7 @@
                                     <p>
                                         З повагою,<br />
                                         Укрпошта,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -254,7 +254,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Довідка про доходи (пенсійний фонд)]]></activiti:string>
@@ -305,7 +305,7 @@
                             <tr>
                                 <td style="padding: 35px 120px;">
                                     <h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
-<p>Ваше звернення щодо отримання довідки про доходи фізичних осіб відхилено, так як Ви не сплатили послуги протягом 3-х днів. Ви можете подати ще одну заяву на порталі <a href="https://igov.org.ua/" target="_blank">igov.org.ua</a></p>
+<p>Ваше звернення щодо отримання довідки про доходи фізичних осіб відхилено, так як Ви не сплатили послуги протягом 3-х днів. Ви можете подати ще одну заяву на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a></p>
 
 
                             
@@ -313,7 +313,7 @@
                                     <p>
                                         З повагою,<br />
                                         Укрпошта,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -399,7 +399,7 @@
                                     <p>
                                         З повагою,<br />
                                         Укрпошта,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>

@@ -27,7 +27,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу на виконання робіт підвищеної небезпеки]]></activiti:string>
@@ -74,7 +74,7 @@
             <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                 <!--header line statrs-->
                 <tr>
-                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
                 </tr>
                 <!--header line end-->
                 <!--content statrs-->
@@ -93,7 +93,7 @@
 										З повагою,<br />
 										Центр надання адміністративних послуг<br/> 
 										Дніпропетровської міської ради,<br/>
-										Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+										Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
 
                                 </td>
                             </tr>
@@ -151,7 +151,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу на виконання робіт підвищеної небезпеки]]></activiti:string>
@@ -198,7 +198,7 @@
             <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                 <!--header line statrs-->
                 <tr>
-                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
                 </tr>
                 <!--header line end-->
                 <!--content statrs-->
@@ -248,7 +248,7 @@
     <serviceTask id="servicetask2" name="Відправка опису" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -311,7 +311,7 @@
 										З повагою,<br />
 										Центр надання адміністративних послуг<br/> 
 										Дніпропетровської міської ради,<br/>
-										Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+										Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
 										</p>
                                 </td>
                             </tr>
@@ -368,7 +368,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу на виконання робіт підвищеної небезпеки]]></activiti:string>
@@ -415,7 +415,7 @@
             <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                 <!--header line statrs-->
                 <tr>
-                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
                 </tr>
                 <!--header line end-->
                 <!--content statrs-->
@@ -445,7 +445,7 @@
                                         З повагою,<br />
 										Центр надання адміністративних послуг<br/> 
 										Дніпропетровської міської ради,<br/>
-										Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+										Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                 </td>
                             </tr>
                            
@@ -474,7 +474,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу на виконання робіт підвищеної небезпеки]]></activiti:string>
@@ -521,7 +521,7 @@
             <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                 <!--header line statrs-->
                 <tr>
-                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
                 </tr>
                 <!--header line end-->
                 <!--content statrs-->
@@ -551,7 +551,7 @@
                                         З повагою,<br />
 										Центр надання адміністративних послуг<br/> 
 										Дніпропетровської міської ради,<br/>
-										Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+										Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                 </td>
                             </tr>
                            

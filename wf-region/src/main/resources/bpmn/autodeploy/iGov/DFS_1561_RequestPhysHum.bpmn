@@ -87,7 +87,7 @@
     <serviceTask id="servicetask2" name="Відправка Запиту громадянину" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -102,7 +102,7 @@
 
 <br >
 <ul>
-<li> <b> Крок 1.</b> Перейти на сторінку Вашого звернення   <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a>. </li>
+<li> <b> Крок 1.</b> Перейти на сторінку Вашого звернення   <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a>. </li>
 <br >
 <li><b> Крок 2.</b>Увійти в систему за допомогою свого електронно-цифрового підпису (ЕЦП).</li>
 <br >
@@ -177,7 +177,7 @@
     <serviceTask id="servicetask3" name="Лист громадянину" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -192,7 +192,7 @@
 <br ><br >
 Максимальний час очікування відповіді - 1 доба (але зазвичай відповідь надається швидше). Ви отримаєте повідомлення через SMS та на цей email. 
 <br ><br >
-<p>Документ буде розміщено у розділі <a href="https://igov.org.ua/journal">Мій журнал</a>. Щоб переглянути його, Вам знадобиться той самий електронно-цифровий підпис, який Ви використали для цього запиту.
+<p>Документ буде розміщено у розділі <a href="https://igov.gov.ua/journal">Мій журнал</a>. Щоб переглянути його, Вам знадобиться той самий електронно-цифровий підпис, який Ви використали для цього запиту.
  </p>
 
 
@@ -226,7 +226,7 @@ execution.setVariable('sCounter', src)</script>
     <serviceTask id="servicetask4" name="Негативна відповідь" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -243,7 +243,7 @@ execution.setVariable('sCounter', src)</script>
 
 <br >
 <ul>
-<li> <b> Крок 1.</b> Перейти на сторінку Вашого звернення   <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a>. </li>
+<li> <b> Крок 1.</b> Перейти на сторінку Вашого звернення   <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a>. </li>
 <br >
 <li><b> Крок 2.</b>Увійти в систему за допомогою свого електронно-цифрового підпису (ЕЦП).</li>
 <br >

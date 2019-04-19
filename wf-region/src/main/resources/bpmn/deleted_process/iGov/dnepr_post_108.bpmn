@@ -42,7 +42,7 @@
           <activiti:string>darja.grek@gmail.com</activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.org.ua</activiti:string>
+          <activiti:string>noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Нове  звернення. Призначення державної соціальної допомоги у зв'язку з витратами, зумовленими похованням</activiti:string>
@@ -103,12 +103,12 @@
                                     &lt;p&gt;
 У Вас в черзі на обробку зареєстровано нове звернення щодо призначення державної соціальної допомоги у зв'язку з витратами, зумовленими похованням.&lt;br /&gt;
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}&lt;br /&gt;
-Відпрацюйте це звернення на &lt;a href="https://test.region.igov.org.ua:6948/" target="_blank"&gt;порталі&lt;/a&gt;
+Відпрацюйте це звернення на &lt;a href="https://test.region.igov.gov.ua:6948/" target="_blank"&gt;порталі&lt;/a&gt;
                                     &lt;/p&gt;
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                     &lt;p&gt;
                                      З повагою,&lt;br /&gt;
-					  Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;
+					  Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;
                                         &lt;/p&gt;
                                     &lt;/p&gt;
                                 &lt;/td&gt;
@@ -261,7 +261,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.org.ua</activiti:string>
+          <activiti:string>noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: призначення державної соціальної допомоги у зв'язку з витратами, зумовленими похованням</activiti:string>
@@ -285,7 +285,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.org.ua</activiti:string>
+          <activiti:string>noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: призначення державної соціальної допомоги у зв'язку з витратами, зумовленими похованням</activiti:string>
@@ -375,7 +375,7 @@
     <serviceTask id="servicetask2" name="Повідомлення громадянина про успішне подання зверенння" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string>test_noreply@igov.org.ua</activiti:string>
+          <activiti:string>test_noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -450,7 +450,7 @@
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;
+                                        Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;
                                         &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -489,7 +489,7 @@
     <serviceTask id="servicetask4" name="повідомлення громадянина про призначення компенсації" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string>test_noreply@igov.org.ua</activiti:string>
+          <activiti:string>test_noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -558,7 +558,7 @@
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;
+                                        Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;
                                         &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -611,7 +611,7 @@
     <serviceTask id="servicetask5" name="повідомлення громадянина про необхідність сплати" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string>test_noreply@igov.org.ua</activiti:string>
+          <activiti:string>test_noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -679,7 +679,7 @@
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;
+                                        Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;
                                         &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;

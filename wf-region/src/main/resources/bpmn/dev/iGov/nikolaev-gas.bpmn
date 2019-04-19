@@ -26,13 +26,13 @@
 
 
 З повагою,
-Команда Порталу державних послу iGov.org.ua</activiti:expression>
+Команда Порталу державних послу igov.gov.ua</activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="charset">
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
@@ -45,14 +45,14 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="html">
           <activiti:expression>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}!
 Ваш запит на оформлення договору про надання послуг з газопостачання успішно зареєстровано. Ви отримаєте відповідь протягом десяти робочих днів на цю email-адресу.
 
 З повагою,
-Команда Порталу державних послу iGov.org.ua</activiti:expression>
+Команда Порталу державних послу igov.gov.ua</activiti:expression>
         </activiti:field>
         <activiti:field name="charset">
           <activiti:string><![CDATA[UTF-8]]></activiti:string>

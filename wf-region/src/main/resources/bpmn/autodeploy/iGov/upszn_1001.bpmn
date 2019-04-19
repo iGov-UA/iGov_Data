@@ -69,7 +69,7 @@
         <activiti:formProperty id="nMedic" name="Документ, виданий лікувально-профілактичним закладом про те, що особа не хвора на хронічний алкоголізм, токсикоманію, наркоманію або інші інфекційні захворювання, перелік яких визначено МОЗ; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nSecret" name="Довідку, скріплену печаткою та завірену підписом роботодавця про те, що посада, на якій застосовуватиметься праця іноземця чи особи без громадянства, відповідно до законодавства не пов’язана з належністю до громадянства України і не потребує надання допуску до державної таємниці. У разі наявності в роботодавця режимно-секретного органу зазначена довідка подається також за підписом керівника такого органу; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nCrimeUkr" name="Довідку МВС про те, що іноземець чи особа без громадянства, які на момент оформлення дозволу перебувають на території України, не відбувають покарання за скоєння злочину та стосовно них не здійснюється кримінальне провадження; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="slabel1" name="За бажанням, Ви можете замовити довідку, скориставшись полугою" type="label" default="&lt;a href=&quot;https://igov.org.ua/service/1/general&quot;&gt;Надання довідки про притягнення до кримінальної відповідальності&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="slabel1" name="За бажанням, Ви можете замовити довідку, скориставшись полугою" type="label" default="&lt;a href=&quot;https://igov.gov.ua/service/1/general&quot;&gt;Надання довідки про притягнення до кримінальної відповідальності&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nCrimeForeign" name="Довідку уповноваженого органу країни походження (перебування) про те, що іноземець чи особа без громадянства, які на момент оформлення дозволу перебувають за межами України, не відбувають покарання за скоєння злочину та стосовно них не здійснюється кримінальне провадження; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органа ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -84,7 +84,7 @@
     <serviceTask id="servicetask2" name="Повідомлення держслужбовця про звернення" activiti:async="true" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[akylish88@gmail.com]]></activiti:expression>
@@ -109,7 +109,7 @@
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -214,13 +214,13 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -234,7 +234,7 @@ ${sNameOrgan}<br />
 			<p> На жаль, Ваше звернення на тему: "Дозвіл на застосування праці іноземців та осіб без громадянства" було відхилено.<br/>
 			<p> Причина в наступному:<br/>
 			<p>${comment}</p>
-			<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/ target="_blank">iGov.org.ua</a></p>
+			<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/ target="_blank">igov.gov.ua</a></p>
 			<br />
 			${sPhoneOrgan}<br />
 			[pattern/mail/new_design/_common_content_end.html]
@@ -255,13 +255,13 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -376,13 +376,13 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -396,7 +396,7 @@ ${sNameOrgan}<br />
 			<p> На жаль, Ваше звернення на тему: "Дозвіл на застосування праці іноземців та осіб без громадянства" було відхилено.<br/>
 			<p> Причина в наступному:<br/>
 			<p>${comment1}</p>
-			<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/ target="_blank">iGov.org.ua</a></p>
+			<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/ target="_blank">igov.gov.ua</a></p>
 			<br />
 			${sPhoneOrgan}<br />
 			[pattern/mail/new_design/_common_content_end.html]
@@ -422,7 +422,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obroblyaetsya. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obroblyaetsya. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -431,7 +431,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення щодо Дозволу на застосування праці іноземців та осіб без громадянства]]></activiti:expression>

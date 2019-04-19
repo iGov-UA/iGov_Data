@@ -43,7 +43,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання довідок незайнятому населенню про відсутність земельних ділянок для ведення ОСГ]]></activiti:string>
@@ -90,7 +90,7 @@
             <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                 <!--header line statrs-->
                 <tr>
-                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
                 </tr>
                 <!--header line end-->
                 <!--content statrs-->
@@ -127,7 +127,7 @@
 З повагою,<br />
 
 Виконавчий комітет Кузнецовської міської ради, <br />
-Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
 									
 									
                                 </td>
@@ -159,7 +159,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання довідок незайнятому населенню про відсутність земельних ділянок для ведення ОСГ]]></activiti:string>
@@ -206,7 +206,7 @@
 			<table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
 				<!--header line statrs-->
 				<tr>
-					<td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+					<td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
 				</tr>
 				<!--header line end-->
 				<!--content statrs-->
@@ -242,7 +242,7 @@
 <p>
 З повагою,<br />
 Виконавчий комітет Кузнецовської міської ради, <br />
-Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
 									
 									
 								</td>
@@ -306,7 +306,7 @@
             <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                 <!--header line statrs-->
                 <tr>
-                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">iGov.org.ua</b><br />портал державних послуг</td>
+                    <td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"><b style="font-size: 24px;">igov.gov.ua</b><br />портал державних послуг</td>
                 </tr>
                 <!--header line end-->
                 <!--content statrs-->
@@ -348,7 +348,7 @@
 <p>
 З повагою,<br />
 Виконавчий комітет Кузнецовської міської ради, <br />
-Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
 									
 									
                                 </td>
@@ -373,7 +373,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання довідок незайнятому населенню про відсутність земельних ділянок для ведення ОСГ]]></activiti:string>

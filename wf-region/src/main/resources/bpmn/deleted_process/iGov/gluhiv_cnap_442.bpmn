@@ -130,7 +130,7 @@
 &lt;p&gt;Причина в наступному: 
 &lt;/p&gt;
 &lt;p&gt;${sDecisionComment}&lt;/p&gt;
-&lt;p&gt;Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.org.ua/ target="_blank"&gt;iGov.org.ua&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.gov.ua/ target="_blank"&gt;igov.gov.ua&lt;/a&gt;&lt;/p&gt;
 &lt;br /&gt;
 [pattern_dictonary:dnepr_reg_cnap.csv:427:5]&lt;br /&gt;
 [pattern/mail/_common_signature_start.html]

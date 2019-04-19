@@ -23,7 +23,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення: Запит на публічну інформацію]]></activiti:string>
@@ -45,7 +45,7 @@
 
 З повагою,
 Херсонська ОДА,
-Команда Порталу державних послу iGov.org.ua</activiti:expression>
+Команда Порталу державних послу igov.gov.ua</activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -55,7 +55,7 @@
     <serviceTask id="servicetask1" name="Відправка  запиту до канцелярії" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення громадянина: Запит на публічну інформацію]]></activiti:string>

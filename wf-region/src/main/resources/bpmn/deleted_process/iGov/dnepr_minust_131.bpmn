@@ -28,7 +28,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Зміна видів економічної діяльності]]></activiti:string>
@@ -92,7 +92,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Державна реєстраційна служба,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -175,7 +175,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Зміна видів економічної діяльності]]></activiti:string>
@@ -270,7 +270,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Зміна видів економічної діяльності]]></activiti:string>
@@ -305,7 +305,7 @@
     <serviceTask id="mailtask4" name="Лист посадовцю про нове звернення" activiti:type="mail">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:string><![CDATA[Luda17_@ukr.net, Lyla1710@ukr.net, Hellen5565@mail.ru, lntsu@ukr.net, kamni@i.ua]]></activiti:string>
@@ -358,17 +358,17 @@
                         <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 35px 120px;">
-                                    <h3>На порталі <a href=https://demo.igov.org.ua:6948/>iGov.org.ua</a> зареєстровано нове звернення на тему:</h3>
+                                    <h3>На порталі <a href=https://demo.igov.gov.ua:6948/>igov.gov.ua</a> зареєстровано нове звернення на тему:</h3>
                                     <p>
                                        Зміна видів економічної діяльності</p>
 									<p>
-									Ви можете перейти на <a href=https://demo.igov.org.ua:6948/>портал</a>, щоб почати опрацювання звернення.
+									Ви можете перейти на <a href=https://demo.igov.gov.ua:6948/>портал</a>, щоб почати опрацювання звернення.
                                     </p>
                             
                                     <hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" />
                                     <p>
                                         З повагою,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -391,7 +391,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Зміна видів економічної діяльності]]></activiti:string>
@@ -453,7 +453,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                        Державна реєстраційна служба,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;. &lt;/p&gt;
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;. &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
  &lt;/table&gt;

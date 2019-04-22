@@ -40,7 +40,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.org.ua</activiti:string>
+          <activiti:string>noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: Надання довідки про відсутність або наявніть судимості</activiti:string>
@@ -115,7 +115,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Міністерство Внутрішніх Справ,
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -192,7 +192,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.org.ua</activiti:string>
+          <activiti:string>noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: Надання довідки про відсутність або наявніть судимості </activiti:string>
@@ -262,7 +262,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Міністерство Внутрішніх Справ,
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -293,7 +293,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.org.ua</activiti:string>
+          <activiti:string>noreply@igov.gov.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: Надання довідки про відсутність або наявніть судимості</activiti:string>
@@ -369,7 +369,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Міністерство Внутрішніх Справ,
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;

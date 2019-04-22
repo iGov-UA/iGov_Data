@@ -844,7 +844,7 @@
     <serviceTask id="servicetask2" name="Відпрвка e-mail з відмовою + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -860,7 +860,7 @@
 					Коментар: ${sDecisionComment_Citizen}.<br />
 					Відповідь наведено в додатку до листа <br />
 					<br />
-					Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">iGov.org.ua</a><br />
+					Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a><br />
 					<br />
 					${sNameOrgan}<br />
 					${sAddress}<br />
@@ -881,7 +881,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Vidhileno". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Vidhileno". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -890,7 +890,7 @@
     <serviceTask id="servicetask3" name="Відправка e-mail з позитивним рішенням + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -904,7 +904,7 @@
 				<p>
 					Ваше звернення [sID_Order] щодо погодження режиму роботи об’єктів торгівлі та сфери послуг - опрацьовано.<br />
 					Реєстраційні дані щодо встановлення режиму роботи об’єкта надані у документі, що вкладено в цій email, та який може бути підписано електроним цифровим підписом.<br />
-					Для підтвердження електроного цифрового підпису Ви можете скористуватися <a href="https://igov.org.ua/ecp" target="_blank"> посиланням </a><br /> або отримати рішення у ЦНАПі. 
+					Для підтвердження електроного цифрового підпису Ви можете скористуватися <a href="https://igov.gov.ua/ecp" target="_blank"> посиланням </a><br /> або отримати рішення у ЦНАПі. 
 					<br />
 					${sNameOrgan}<br />
 					${sAddress}<br />
@@ -925,7 +925,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, rezim pogodzeno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, rezim pogodzeno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -943,7 +943,7 @@
     <serviceTask id="servicetask4" name="Повідомлення адміністратора ЦНАПу" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -959,7 +959,7 @@
     <serviceTask id="servicetask5" name="Повідомлення громадянина про успішне подання зверенння + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -1000,7 +1000,7 @@
     <serviceTask id="servicetask6" name="Відправка e-mail в разі відмови + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -1015,7 +1015,7 @@
 					На жаль, Ваше звернення [sID_Order] про надання інформації щодо видачи довідки про встановлення режиму роботи об’єкта відхилено. <br />
 					Причина в наступному: <br />
 					${sDecisionComment_1} <br />
-					Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">iGov.org.ua</a> <br />
+					Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a> <br />
 					<br />
 					${sNameOrgan}<br />
 					${sAddress}<br />
@@ -1033,7 +1033,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Vidhileno". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Vidhileno". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -1043,7 +1043,7 @@
     <serviceTask id="servicetask7" name="лист про прийняття на розгляд замовленної послуги + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -1074,7 +1074,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Perevireno". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Perevireno". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -1084,7 +1084,7 @@
     <serviceTask id="servicetask8" name="Повідомлення спеціаліста місцевої влади" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerkStep2}]]></activiti:expression>

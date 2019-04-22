@@ -19,7 +19,7 @@
     <serviceTask id="mailtask1" name="Повідомлення держслужбовця" activiti:type="mail">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:string><![CDATA[dozvildndz@ukr.net]]></activiti:string>
@@ -73,17 +73,17 @@
                         <table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 35px 120px;">
-                                    <h3>На порталі <a href=https://igov.org.ua>iGov.org.ua</a> зареєстровано нове звернення на тему:</h3>
+                                    <h3>На порталі <a href=https://igov.gov.ua>igov.gov.ua</a> зареєстровано нове звернення на тему:</h3>
                                     <p>
                                        Надання інформації згідно з містобудівною документацією щодо функціонального призначення земельної ділянки</p>
 									<p>
-									Ви можете перейти на <a href=https://region.igov.org.ua>портал</a>, щоб почати опрацювання звернення.
+									Ви можете перейти на <a href=https://region.igov.gov.ua>портал</a>, щоб почати опрацювання звернення.
                                     </p>
                             
                                     <hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" />
                                     <p>
                                         З повагою,<br />
-                                        Команда Порталу державних послуг <a href=https://igov.org.ua>iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href=https://igov.gov.ua>igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -105,7 +105,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання інформації згідно з містобудівною документацією щодо функціонального призначення земельної ділянки]]></activiti:string>
@@ -169,7 +169,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Дніпродзержинськ,<br />
-                                        Команда Порталу державних послуг <a href=https://igov.org.ua>iGov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href=https://igov.gov.ua>igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -222,7 +222,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання інформації згідно з містобудівною документацією щодо функціонального призначення земельної ділянки]]></activiti:string>
@@ -358,7 +358,7 @@
                                     <p>
                                         З повагою,<br />
                                        ЦНАП м. Дніпродзержинськ,<br />
-                                        Команда Порталу державних послуг <a href=https://igov.org.ua>iGov.org.ua</a>. </p>
+                                        Команда Порталу державних послуг <a href=https://igov.gov.ua>igov.gov.ua</a>. </p>
                                 </td>
                             </tr>
  </table>
@@ -380,7 +380,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання інформації згідно з містобудівною документацією щодо функціонального призначення земельної ділянки]]></activiti:string>
@@ -426,7 +426,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="html">
           <activiti:expression><![CDATA[﻿<!DOCTYPE html>
@@ -509,7 +509,7 @@
     <serviceTask id="servicetask3" name="Позитивне рішення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

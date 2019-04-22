@@ -26,10 +26,10 @@
     <serviceTask id="servicetask2" name="Повідомлення держслужбовця про нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[ms@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[ms@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення. Звернення щодо прийняття у комунальну власність територіальної громади міста житлового фонду.]]></activiti:string>
@@ -39,7 +39,7 @@
 <strong>Шановний колего!</strong><br /><br />
 У Вас в черзі на обробку нове звернення щодо прийняття у комунальну власність територіальної громади міста житлового фонду.<br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Відпрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a>
+Відпрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a>
 [pattern/mail/_common_signature.html]
 [pattern/mail/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -48,7 +48,7 @@
     <serviceTask id="servicetask3" name="Повідомлення громадянина про реєстрацію звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -107,7 +107,7 @@
     <serviceTask id="servicetask4" name="Відмова" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -121,7 +121,7 @@
 На жаль, Ваше звернення щодо прийняття у комунальну власність територіальної громади міста житлового фонду було відхилено.</p>
 <p>Причина в наступному:</p>
 <p>${decisionComment}</p>
-<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">iGov.org.ua</a></p>
+<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">igov.gov.ua</a></p>
 <br />
 Телефон для довідок: (056) 778-12-06<br />
 [pattern/mail/_common_signature_start.html]
@@ -138,7 +138,7 @@
     <serviceTask id="servicetask5" name="Позитивне рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -199,7 +199,7 @@
     <serviceTask id="servicetask6" name="Повідомлення про відправку документів на сесію" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

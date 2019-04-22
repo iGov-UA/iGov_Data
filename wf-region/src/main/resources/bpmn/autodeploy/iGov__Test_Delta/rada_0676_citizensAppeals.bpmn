@@ -1104,7 +1104,7 @@ execution.setVariable('sAnswerEmail', res)</script>
           <activiti:value id="sEnumAppeal2" name="Урядова гаряча лінія"></activiti:value>
           <activiti:value id="sEnumAppeal3" name="Колл-центр"></activiti:value>
           <activiti:value id="sEnumAppeal4" name="Фронт-офіс"></activiti:value>
-          <activiti:value id="sEnumAppeal5" name="Портал iGov.org.ua"></activiti:value>
+          <activiti:value id="sEnumAppeal5" name="Портал igov.gov.ua"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sDocument_Body_UkrDoc" name="Відповідь на звернення" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="asSelectionDepartment" name="Оберіть департамент (управління) куди направляється оригінал документу" type="enum" required="true">
@@ -1150,7 +1150,7 @@ execution.setVariable('sAnswerEmail', res)</script>
     <serviceTask id="servicetask4" name="Відповідь громадянину про реєстрацію" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -1202,7 +1202,7 @@ execution.setVariable('sAnswerEmail', res)</script>
     <serviceTask id="servicetask5" name="Відповідь громадянину про відмову" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

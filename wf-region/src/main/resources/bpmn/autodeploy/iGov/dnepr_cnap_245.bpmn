@@ -57,7 +57,7 @@
           <activiti:expression><![CDATA[${sPost}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове  звернення. Прийняття рішення про встановлення опіки (піклування) над дитиною]]></activiti:string>
@@ -67,7 +67,7 @@
 <b>Шановний колего!</b><br /><br />
 У черзі на обробку зареєстровано нове звернення.<br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Опрацюйте це звернення на <a href="http://region.igov.org.ua">порталі</a><br />
+Опрацюйте це звернення на <a href="http://region.igov.gov.ua">порталі</a><br />
 [pattern/mail/_common_signature.html]
 [pattern/mail/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -79,7 +79,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Прийняття рішення про встановлення опіки (піклування) над дитиною]]></activiti:string>
@@ -101,7 +101,7 @@ ${sNameUnit}<br />
     <serviceTask id="servicetask2" name="повідомлення громадянина о прийнятті рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>

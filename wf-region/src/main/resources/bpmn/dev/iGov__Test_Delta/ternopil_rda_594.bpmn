@@ -68,7 +68,7 @@
     <serviceTask id="servicetask8" name="Повідомлення про нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>sofia.danylevych@gmail.com</activiti:expression>
@@ -88,7 +88,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення: Надання дозволу органу опіки та піклування на вчинення правочину з майном, що перебуває у власності неповнолітніх]]></activiti:string>
@@ -183,7 +183,7 @@ ${sNameOrgan},&lt;br&gt;
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу органу опіки та піклування на вчинення правочину з майном, що перебуває у власності неповнолітніх]]></activiti:string>
@@ -212,7 +212,7 @@ ${sNameOrgan},&lt;br&gt;
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу органу опіки та піклування на вчинення правочину з майном, що перебуває у власності неповнолітніх]]></activiti:string>
@@ -306,7 +306,7 @@ ${sNameOrgan},&lt;br&gt;
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу органу опіки та піклування на вчинення правочину з майном, що перебуває у власності неповнолітніх]]></activiti:string>
@@ -343,7 +343,7 @@ ${sNameOrgan},&lt;br&gt;
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Надання дозволу органу опіки та піклування на вчинення правочину з майном, що перебуває у власності неповнолітніх]]></activiti:string>

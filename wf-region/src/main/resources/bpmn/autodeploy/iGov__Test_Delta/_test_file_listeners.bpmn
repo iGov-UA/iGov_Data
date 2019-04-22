@@ -23,7 +23,7 @@
     <serviceTask id="servicetask2" name="Лист клієнту" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -58,7 +58,7 @@
     <serviceTask id="servicetask4" name="Лист-результат" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -72,7 +72,7 @@
 			Ваше звернення щодо запиту на відкриття виконавчого провадження - розглянуте.</p>
 			<p>Прийнято рішення:
 			<p>Коментар держслужбовця (за наявності):  </p>
-			<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/ target="_blank">iGov.org.ua</a></p>
+			<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/ target="_blank">igov.gov.ua</a></p>
 			<br />
 			${sPhoneOrgan}<br />
 			[pattern/mail/_common_signature_start.html]

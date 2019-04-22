@@ -17,7 +17,7 @@
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть регіональне відділення, для отримання послуги; послуга надається у відділенні відповідно до Вашого фактичного місця проживання" type="select" default="0"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="Графік прийому громадян ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон обраного відділення для довідок" type="label" default=" "></activiti:formProperty>
-        <activiti:formProperty id="sNotice2" name="Необхідний пакет документів для отримання послуги" type="label" default="&lt;ul&gt;&lt;li&gt;медична довідка (форма №127)&lt;/li&gt;&lt;li&gt;квитанції про сплату вартості послуги з відміткою банка (додаток 1)&lt;/li&gt;&lt;li&gt;заповнені шаблони заяв (додатки 2,3)&lt;/li&gt;&lt;li&gt;ксерокопія паспорта (стр.1,2 та реєстрація)&lt;/li&gt;&lt;li&gt;довідка про вивчення матеріальної частини зброї, спеціальних засобів, правил поводження з ними та їх застосування&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://igov.org.ua/service/1/general&quot; target=&quot;_balnk&quot;&gt;довідка про відсутність/наявність судимості&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sNotice2" name="Необхідний пакет документів для отримання послуги" type="label" default="&lt;ul&gt;&lt;li&gt;медична довідка (форма №127)&lt;/li&gt;&lt;li&gt;квитанції про сплату вартості послуги з відміткою банка (додаток 1)&lt;/li&gt;&lt;li&gt;заповнені шаблони заяв (додатки 2,3)&lt;/li&gt;&lt;li&gt;ксерокопія паспорта (стр.1,2 та реєстрація)&lt;/li&gt;&lt;li&gt;довідка про вивчення матеріальної частини зброї, спеціальних засобів, правил поводження з ними та їх застосування&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://igov.gov.ua/service/1/general&quot; target=&quot;_balnk&quot;&gt;довідка про відсутність/наявність судимості&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"></activiti:formProperty>
         <activiti:formProperty id="sInvoice1" name=" Додаток 1(зразок)" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sZajava" name=" Додаток 2(зразок);Для нарізної заява подається на ім'я зам.керівника УВС області. Для іншої зброї - на ім'я керівника обраного органу внутрішніх справ" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sKartka" name=" Додаток 3(зразок)" type="label" default=" "></activiti:formProperty>
@@ -139,7 +139,7 @@
     <serviceTask id="servicetask2" name="Повідомлення громадянина про візит для отримання  оригіналу дозволу. Оцінка якості надання послуги" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[norepy@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[norepy@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -179,7 +179,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask4" name="Повідомлення громадянину про успішне подання заяви" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[norepy@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[norepy@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -215,7 +215,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask5" name="Повідомлення громадянина про страхування" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[norepy@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[norepy@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -241,7 +241,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask7" name="Повідомлення громадянина про реєстрацію на навчання" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[norepy@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[norepy@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -277,7 +277,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask8" name="Повідомлення громадянина про медогляд" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[norepy@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[norepy@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

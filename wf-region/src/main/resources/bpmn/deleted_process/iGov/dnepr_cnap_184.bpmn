@@ -284,7 +284,7 @@
           <activiti:string><![CDATA[Нове звернення на тему: Отримання, анулювання, подовження або переоформлення дозволу на розміщення зовнішньої реклами]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression>[pattern/mail/_common_employee_notify.html]</activiti:expression>
@@ -295,7 +295,7 @@
     <serviceTask id="servicetask4" name="Повідомлення громадянина про успішне подання зверенння" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -329,7 +329,7 @@ ${sAddress}&lt;br /&gt;
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Відхилено звернення на тему: Отримання, анулювання, подовження або переоформлення дозволу на розміщення зовнішньої реклами]]></activiti:string>
@@ -340,7 +340,7 @@ ${sAddress}&lt;br /&gt;
 На жаль, Ваше звернення щодо enum{[asPurpose]} відхилено через недостатню або неправильну інформацію.&lt;br /&gt;
 &lt;br /&gt;
 ${sComment_1}&lt;br /&gt;
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov.org.ua&lt;/a&gt;&lt;br /&gt;
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.gov.ua/" target="_blank"&gt;igov.gov.ua&lt;/a&gt;&lt;br /&gt;
 ${sWork_Time}&lt;br /&gt;
 [pattern/mail/_common_signature_start.html]
 ${sAddress}&lt;br /&gt;
@@ -352,7 +352,7 @@ ${sAddress}&lt;br /&gt;
     <serviceTask id="servicetask3" name="повідомлення громадянина про прийняте рішення" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -441,7 +441,7 @@ if (execution.getVariable('asEnum_decision_2') == 'decision_2_1')
 	}	
 	if (execution.getVariable('sID_Public_SubjectOrganJoin') == 'zhvodT')
 	{ 
-		per6 = per6 + "&lt;br /&gt; Додатково Вам потрібно &lt;br /&gt;1. Заповнити та підписати Договор пріоритету на місце розташування, шаблон якого Вам надіслано у цьому email. &lt;br /&gt; 2. Оплатити рахунок на оплату за тимчасове користування місцем розташування рекламного засобу згідно Договору пріоритету та отсканувати сфотографувати відповідну квітанцію про сплату. &lt;br /&gt; Після сканування підписаного договору та квітанції про оплату перейти до наступного етапу (реєстрації документів) за посиланням https://igov.org.ua/service/1484/general"
+		per6 = per6 + "&lt;br /&gt; Додатково Вам потрібно &lt;br /&gt;1. Заповнити та підписати Договор пріоритету на місце розташування, шаблон якого Вам надіслано у цьому email. &lt;br /&gt; 2. Оплатити рахунок на оплату за тимчасове користування місцем розташування рекламного засобу згідно Договору пріоритету та отсканувати сфотографувати відповідну квітанцію про сплату. &lt;br /&gt; Після сканування підписаного договору та квітанції про оплату перейти до наступного етапу (реєстрації документів) за посиланням https://igov.gov.ua/service/1484/general"
 	}
 }		
 execution.setVariable('sLetter', per5)
@@ -474,7 +474,7 @@ execution.setVariable('sAddPrintSpisok', per6)
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Отримання, анулювання, подовження або переоформлення дозволу на розміщення зовнішньої реклами]]></activiti:string>

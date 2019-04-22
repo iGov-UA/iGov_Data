@@ -55,7 +55,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Повідомлення про вдалу відправку документів]]></activiti:string>
@@ -113,7 +113,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -163,7 +163,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Повідомлення щодо призначення тимчасової державної допомоги дітям]]></activiti:string>
@@ -224,7 +224,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -255,7 +255,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Призначення тимчасової державної допомоги дітям]]></activiti:string>
@@ -315,7 +315,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -347,7 +347,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="charset">
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
@@ -396,7 +396,7 @@
                                 &lt;td style="padding: 35px 120px;"&gt;
                                     &lt;h3&gt;Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.&lt;/h3&gt;
 &lt;p&gt;Ваше звернення щодо призначення тимчасової державної допомоги дітям, батьки яких відхиляються від сплати аліментів, не мають можливості утримувати дитину або місце проживання їх невідоме відхилено, оскільки Ви не сплатили послуги протягом 3-х днів.&lt;/p&gt;
-&lt;p&gt;Ви можете подати ще одну заяву на порталі &lt;a href="https://igov.org.ua/" target="_blank"&gt;igov.org.ua&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ви можете подати ще одну заяву на порталі &lt;a href="https://igov.gov.ua/" target="_blank"&gt;igov.gov.ua&lt;/a&gt;&lt;/p&gt;
 
 
                             
@@ -404,7 +404,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -435,7 +435,7 @@
     <serviceTask id="servicetask2" name="E-mail про необхідність оплати" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -496,7 +496,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;iGov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;

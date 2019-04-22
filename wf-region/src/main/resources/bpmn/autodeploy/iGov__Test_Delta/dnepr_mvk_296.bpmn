@@ -36,7 +36,7 @@
     <serviceTask id="servicetask2" name="Повідомлення чиновника про нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[valykanatalia@gmail.com]]></activiti:expression>
@@ -49,7 +49,7 @@
 <strong>Шановний колего!</strong><br /><br />
 У Вас в черзі на обробку нове звернення щодо видачі довідок про використання житлових чеків під час приватизації державного житлового фонду.<br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Відпрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a>
+Відпрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a>
 [pattern/mail/_common_signature.html]
 [pattern/mail/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -58,7 +58,7 @@
     <serviceTask id="servicetask3" name="Повідомлення громадянина про доставку в відділ" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -131,7 +131,7 @@
     <serviceTask id="servicetask4" name="Повідомлення в разі відмови" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -145,7 +145,7 @@
 На жаль, Ваше звернення щодо видачі довідок про використання житлових чеків під час приватизації державного житлового фонду було відхилено.</p>
 <p>Причина в наступному:</p>
 <p>${decisionComment}</p>
-<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">iGov.org.ua</a></p>
+<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">igov.gov.ua</a></p>
 <br />
 Телефон для довідок: (056) 744-88-08<br />
 [pattern/mail/_common_signature_start.html]
@@ -162,7 +162,7 @@
     <serviceTask id="servicetask5" name="Повідомлення громадянина про готовність довідки." activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -201,7 +201,7 @@
     <serviceTask id="servicetask6" name="Відправка в електронному вигляді" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

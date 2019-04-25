@@ -52,7 +52,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Відомча реєстрація великотоннажних та інших технологічних транспортних засобів, що не підлягають експлуатації на вулично-дорожній мережі загального користування.]]></activiti:string>
@@ -138,7 +138,7 @@
                                     <p>
                                         З повагою, <br />
 										Центр надання адміністративних послуг Дніпропетровської міської ради,<br/>
-                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.</br>
+                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.</br>
                                     </p>
                                 </td>
                             </tr>
@@ -195,7 +195,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreplay@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreplay@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Відомча реєстрація великотоннажних та інших технологічних транспортних засобів, що не підлягають експлуатації на вулично-дорожній мережі загального користування.]]></activiti:string>
@@ -282,7 +282,7 @@
                                     <p>
                                         З повагою, <br />
 										Центр надання адміністративних послуг Дніпропетровської міської ради,<br/>
-                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.</br>
+                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.</br>
                                     </p>
                                 </td>
                             </tr>
@@ -307,7 +307,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Відомча реєстрація великотоннажних та інших технологічних транспортних засобів, що не підлягають експлуатації на вулично-дорожній мережі загального користування.]]></activiti:string>
@@ -403,7 +403,7 @@
                                     <p>
                                         З повагою, <br />
 										Центр надання адміністративних послуг Дніпропетровської міської ради,<br/>
-                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.</br>
+                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.</br>
                                     </p>
                                 </td>
                             </tr>
@@ -496,7 +496,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Відомча реєстрація великотоннажних та інших технологічних транспортних засобів, що не підлягають експлуатації на вулично-дорожній мережі загального користування.]]></activiti:string>
@@ -579,7 +579,7 @@
                                     <p>
                                         З повагою, <br />
 										Центр надання адміністративних послуг Дніпропетровської міської ради,<br/>
-                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.</br>
+                                        <br>Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.</br>
                                     </p>
                                 </td>
                             </tr>

@@ -147,7 +147,7 @@
     <serviceTask id="servicetask1" name="mail" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[admin@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[admin@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -169,7 +169,7 @@
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression>Status Vashoho zvernennya № [sID_Order] zmineno.
-Detali: igov.gov.ua/journal abo e-mail
+Detali: igov.org.ua/journal abo e-mail
 </activiti:expression>
         </activiti:field>
       </extensionElements>

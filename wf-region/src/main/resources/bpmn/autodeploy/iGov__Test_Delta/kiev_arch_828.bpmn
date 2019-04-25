@@ -62,7 +62,7 @@
           <activiti:expression><![CDATA[${sMailClerk1}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -80,7 +80,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -89,7 +89,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваша заява № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> відправлена на реєстрацію та перевірку пакету документів.
+				Ваша заява № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> відправлена на реєстрацію та перевірку пакету документів.
 			</p>
 			<br>
 			За наявності питань можете звернутись за наступними контактами<br>
@@ -221,7 +221,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${sMailNachClerk1}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -285,7 +285,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -293,10 +293,10 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 		    <p>
-		    	Вашу Заяву  № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> про прийняття топографо-геодезичних вишукувань та пакет документів  перевірено,  
+		    	Вашу Заяву  № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> про прийняття топографо-геодезичних вишукувань та пакет документів  перевірено,  
 		    	прийнято рішення відмовити на підставі <b><i>enum{[erejectReason]}</i></b>.  Електронний лист-відмова , підписаний ЕЦП знаходиться у вкладенні.
 		    <p>
-		    	Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/service/1509/general">igov.gov.ua</a>.
+		    	Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/service/1509/general">igov.org.ua</a>.
 			</p>
 			<br />
 			За наявності питань можете звернутись за наступними контактами<br>
@@ -312,7 +312,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA["${nFileReject5}"]]></activiti:expression>
@@ -330,7 +330,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -339,7 +339,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 		    <h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваша заява № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> зареєстрована, пакет документів перевірено, 
+				Ваша заява № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> зареєстрована, пакет документів перевірено, 
 				Ви повинні надати паперовий пакет документів до Управління ІТІМ ДМА до ${dArrival}р. 
 			</p>
 			<br />
@@ -356,7 +356,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Zareestrovano". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Zareestrovano". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -408,7 +408,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${sMailZamNachClerk1}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -563,7 +563,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${sMailZamNachClerk1}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -620,7 +620,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -629,7 +629,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
         	<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваша заявка № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> для здачі топографо-геодезичних вишукувань виконана.<br>
+				Ваша заявка № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> для здачі топографо-геодезичних вишукувань виконана.<br>
 				У вкладенні до цього листа знаходиться підписаний начальником управління ІТІМ ДМА, заступник начальника управління ЕЦП файл топографо-геодезичного вишукування. <br>
 			</p>
 			<br>
@@ -646,7 +646,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zminulo status "Na zatverdzhenni". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zminulo status "Na zatverdzhenni". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${nFileApprNach}]]></activiti:expression>
@@ -698,7 +698,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Здача топографо-геодезичних вишукувань]]></activiti:string>
@@ -707,7 +707,7 @@ execution.setVariable('outdocDate', new Date().format("dd.MM.yyyy").toString())
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваша заявка № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> для здачі топографо-геодезичних вишукувань виконана.<br>				
+				Ваша заявка № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> для здачі топографо-геодезичних вишукувань виконана.<br>				
 			</p>
 			<br>
 			[pattern/mail/_common_signature_start.html]

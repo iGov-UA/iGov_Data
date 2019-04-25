@@ -598,7 +598,7 @@
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -609,7 +609,7 @@
     <serviceTask id="servicetask4" name="1.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -642,7 +642,7 @@ ${sNameOrgan01}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 1). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 1). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -652,7 +652,7 @@ ${sNameOrgan01}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо корпоративних прав)]]></activiti:string>
@@ -682,14 +682,14 @@ ${sNameOrgan01}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 1)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 1)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
     <serviceTask id="servicetask3" name="повідомлення про ітогове рішення + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -717,7 +717,7 @@ ${sResultConclusion} <br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, ${sResultConclusionSMS}. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, ${sResultConclusionSMS}. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -736,7 +736,7 @@ ${sResultConclusion} <br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
@@ -773,7 +773,7 @@ ${sResultConclusion} <br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -790,7 +790,7 @@ ${sResultConclusion} <br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -801,7 +801,7 @@ ${sResultConclusion} <br />
     <serviceTask id="servicetask11" name="2.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -834,7 +834,7 @@ ${sNameOrgan02}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 2). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 2). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -844,7 +844,7 @@ ${sNameOrgan02}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо корупційних правопорушень)]]></activiti:string>
@@ -874,7 +874,7 @@ ${sNameOrgan02}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 2)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 2)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -892,7 +892,7 @@ ${sNameOrgan02}<br />
     <serviceTask id="servicetask13" name="3.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -925,7 +925,7 @@ ${sNameOrgan03}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 3). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 3). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -935,7 +935,7 @@ ${sNameOrgan03}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо очищення влади)]]></activiti:string>
@@ -965,7 +965,7 @@ ${sNameOrgan03}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 3)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 3)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -984,7 +984,7 @@ ${sNameOrgan03}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо освіти)]]></activiti:string>
@@ -1014,14 +1014,14 @@ ${sNameOrgan04}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 4)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 4)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
     <serviceTask id="servicetask16" name="4.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1054,7 +1054,7 @@ ${sNameOrgan04}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 4). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 4). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1067,7 +1067,7 @@ ${sNameOrgan04}<br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -1094,7 +1094,7 @@ ${sNameOrgan04}<br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -1106,7 +1106,7 @@ ${sNameOrgan04}<br />
     <serviceTask id="servicetask19" name="5.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1139,7 +1139,7 @@ ${sNameOrgan05}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 5). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 5). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1149,7 +1149,7 @@ ${sNameOrgan05}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо відомостей про стан здоров‘я)]]></activiti:string>
@@ -1179,7 +1179,7 @@ ${sNameOrgan05}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 5)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 5)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1195,7 +1195,7 @@ ${sNameOrgan05}<br />
     <serviceTask id="servicetask21" name="6.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1228,7 +1228,7 @@ ${sNameOrgan06}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 6). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 6). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1238,7 +1238,7 @@ ${sNameOrgan06}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо достовірності відомостей, зазначених у декларації)]]></activiti:string>
@@ -1268,7 +1268,7 @@ ${sNameOrgan06}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 6)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 6)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1282,7 +1282,7 @@ ${sNameOrgan06}<br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -1308,7 +1308,7 @@ ${sNameOrgan06}<br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -1320,7 +1320,7 @@ ${sNameOrgan06}<br />
     <serviceTask id="servicetask25" name="7.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1353,7 +1353,7 @@ ${sNameOrgan07}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 7). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 7). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1363,7 +1363,7 @@ ${sNameOrgan07}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо наявності судимості, її зняття, погашення)]]></activiti:string>
@@ -1393,7 +1393,7 @@ ${sNameOrgan07}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 7)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 7)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1406,7 +1406,7 @@ ${sNameOrgan07}<br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -1423,7 +1423,7 @@ ${sNameOrgan07}<br />
           <activiti:string><![CDATA[Новий запит про перевірку відомостей щодо особи, яка претендує на зайняття посади]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].<br />
@@ -1436,7 +1436,7 @@ ${sNameOrgan07}<br />
     <serviceTask id="servicetask29" name="8.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1469,7 +1469,7 @@ ${sNameOrgan08}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 8). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 8). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1479,7 +1479,7 @@ ${sNameOrgan08}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо наявності в  реєстрі судових рішень відомостей про притягнення до кримінальної відповідальності)]]></activiti:string>
@@ -1509,7 +1509,7 @@ ${sNameOrgan08}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 8)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 8)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1534,7 +1534,7 @@ ${sNameOrgan08}<br />
     <serviceTask id="servicetask31" name="9.1. Повідомлення про успішну перевірку + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1567,7 +1567,7 @@ ${sNameOrgan09}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 9). Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno,pozytyvnyi vysnovok nadano (perevirka N 9). Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1577,7 +1577,7 @@ ${sNameOrgan09}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[НЕ ПРОЙДЕНО перевірку щодо запиту про перевірку відомостей (Щодо відношення особи до військового обов'язку)]]></activiti:string>
@@ -1607,7 +1607,7 @@ ${sNameOrgan09}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 9)! Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Zaput [sID_Order] obrobleno, perevirku NE PROIDENO (perevirka N 9)! Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

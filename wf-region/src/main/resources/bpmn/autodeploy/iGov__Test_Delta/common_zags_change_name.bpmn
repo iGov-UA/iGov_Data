@@ -514,7 +514,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Державна реєстрація зміни імені фізичної особи (прізвища, власного імені та по батькові)]]></activiti:string>
@@ -542,7 +542,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vy zamovyly poslugu zminy imeni. Vam potribno splatyty derzhavne myto. Detali na igov.gov.ua/journal abo u Vashomy email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vy zamovyly poslugu zminy imeni. Vam potribno splatyty derzhavne myto. Detali na igov.org.ua/journal abo u Vashomy email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -555,7 +555,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Державна реєстрація зміни імені фізичної особи (прізвища, власного імені та по батькові)]]></activiti:string>
@@ -565,7 +565,7 @@ ${sNameOrgan}<br />
 [pattern/mail/new_design/_common_content_start.html]
 На жаль, Ваше звернення відхилено.
 Причина: впродовж 2-х днів з моменту подання звернення, не надішла оплата державного мита за отримання послуги.<br />
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a>
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">igov.org.ua</a>
 <br />
 Телефони для довідок: ${sPhoneOrgan}<br />
 [pattern/mail/new_design/_common_content_end.html]
@@ -578,7 +578,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno cherez vidsutnist oplaty. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno cherez vidsutnist oplaty. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -588,7 +588,7 @@ ${sNameOrgan}<br />
     <serviceTask id="servicetask5" name="Повідомлення співробітника держ.органу" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -601,7 +601,7 @@ ${sNameOrgan}<br />
 Шановний колего!<br /><br />
 У Вас в черзі на обробку зареєстровано нове звернення.<br />
 Заявник: ${sName} ${sSurname}<br />
-Опрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a><br />
+Опрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a><br />
 [pattern/mail/new_design/_common_signature.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -613,7 +613,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Державна реєстрація зміни імені фізичної особи (прізвища, власного імені та по батькові)]]></activiti:string>
@@ -623,7 +623,7 @@ ${sNameOrgan}<br />
 [pattern/mail/new_design/_common_content_start.html]
 На жаль, Ваше звернення відхилено через недостатню або неправильну інформацію.<br />
 Коментар співробітника ДРАЦС: ${comment_1}<br />
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a>
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">igov.org.ua</a>
 <br />
 Телефони для довідок: ${sPhoneOrgan}<br />
 [pattern/mail/new_design/_common_content_end.html]
@@ -636,7 +636,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -646,7 +646,7 @@ ${sNameOrgan}<br />
     <serviceTask id="servicetask8" name="Повідомлення громадянина про успішне подання звернення" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -680,7 +680,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${PrintForm_1}]]></activiti:expression>
@@ -690,7 +690,7 @@ ${sNameOrgan}<br />
     <serviceTask id="servicetask12" name="Запрошення громадянина для реєстрації зміни імені" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -712,7 +712,7 @@ ${sNameOrgan}<br />
 останній четвер місяця – санітарний день.<br /><br />
 Адреса: ${sAddress}<br /><br />
 Зазначаємо, що після державної реєстрації зміни імені та отримання свідоцтва про зміну імені паспорт громадянина України підлягає обміну протягом місяця, про що на його першій сторінці буде зроблено відмітку.<br /><br />
-Ви можете подати заявку на обмін паспорту через портал igov.gov.ua (послуга: <a href="https://igov.gov.ua/service/173/general" target="_blank">Обмін паспорта громадянина в разі зміни (переміни) прізвища, імені або по батькові)</a>.<br /><br />
+Ви можете подати заявку на обмін паспорту через портал igov.org.ua (послуга: <a href="https://igov.org.ua/service/173/general" target="_blank">Обмін паспорта громадянина в разі зміни (переміни) прізвища, імені або по батькові)</a>.<br /><br />
 ВАЖЛИВО! Якщо впродовж 90 днів Ви не з'явитесь для проведення державної реєстрації зміни імені та отримання свідоцтва,  дозвіл на зміну імені втратить силу.<br /><br />
 Телефони для довідок: ${sPhoneOrgan}<br />
 [pattern/mail/new_design/_common_content_end.html]
@@ -730,7 +730,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vam nadano dozvil na zminu imeni. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vam nadano dozvil na zminu imeni. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -740,7 +740,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Державна реєстрація зміни імені фізичної особи (прізвища, власного імені та по батькові)]]></activiti:string>
@@ -750,7 +750,7 @@ ${sNameOrgan}<br />
 [pattern/mail/new_design/_common_content_start.html]
 На жаль, Вам відмовлено у зміні імені.<br />
 Копія висновку знаходиться у додатку до листа.<br />
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a>
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">igov.org.ua</a>
 <br />
 Телефони для довідок: ${sPhoneOrgan}<br />
 [pattern/mail/new_design/_common_content_end.html]
@@ -763,7 +763,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vam vidmovleno u zmini imeni. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vam vidmovleno u zmini imeni. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${sDocDecision}]]></activiti:expression>
@@ -776,7 +776,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Державна реєстрація зміни імені фізичної особи (прізвища, власного імені та по батькові)]]></activiti:string>
@@ -800,7 +800,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Dlya reestracii zminy imeni u Vas zalyshylos 10 dniv. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Dlya reestracii zminy imeni u Vas zalyshylos 10 dniv. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>

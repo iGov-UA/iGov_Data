@@ -23,7 +23,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення: Запит на публічну інформацію]]></activiti:string>
@@ -96,7 +96,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Запорізька ОДА,
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -124,7 +124,7 @@
     <serviceTask id="mailtask4" name="Відправка  запиту до канцелярії" activiti:type="mail">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення громадянина: Запит на публічну інформацію]]></activiti:string>
@@ -198,7 +198,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Запорізька ОДА,
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -226,7 +226,7 @@
     <serviceTask id="servicetask1" name="Відправка  запиту до канцелярії" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення громадянина: Запит на публічну інформацію]]></activiti:string>

@@ -226,7 +226,7 @@ execution.setVariable('doclist', res)</script>
     <serviceTask id="servicetask2" name="Відпрвка e-mail &quot;надіслано поштою&quot;" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -262,7 +262,7 @@ execution.setVariable('doclist', res)</script>
     <serviceTask id="servicetask3" name="Відправка e-mail &quot;забери сам&quot;" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -367,7 +367,7 @@ execution.setVariable('doclist', res)</script>
     <serviceTask id="servicetask4" name="Повідомленя адміністратора ЦНАПу" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:string><![CDATA[msvidran@gmail.com]]></activiti:string>
@@ -382,12 +382,12 @@ execution.setVariable('doclist', res)</script>
 У Вас в черзі на обробку зареєстровано нове звернення щодо погодження режиму роботи об’єктів сфери торгівлі та сфери обслуговування населення.<br />
 <br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Опрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a>
+Опрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a>
                                     </p>
                                     <hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" />
                                     <p>
                                     З повагою,<br />
-					  				Команда Порталу державних послуг <a href="https://igov.gov.ua/" target="_blank">iGov</a>
+					  				Команда Порталу державних послуг <a href="https://igov.org.ua/" target="_blank">iGov</a>
                                         </p>
                                     </p>
                                 </td>
@@ -409,7 +409,7 @@ execution.setVariable('doclist', res)</script>
     <serviceTask id="servicetask5" name="Повідомлення про доставку замовлення до ЦНАПу" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -444,7 +444,7 @@ execution.setVariable('doclist', res)</script>
     <serviceTask id="servicetask6" name="Відправка e-mail в разі відмови" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -469,7 +469,7 @@ execution.setVariable('doclist', res)</script>
 Без перерви на обід<br />
 Телефон: (0352) 40-41-93 <br /> 
 <br />
-<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">igov.gov.ua</a></p>
+<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">igov.org.ua</a></p>
 <br />
 <br />
 [pattern/mail/_common_signature_start.html]
@@ -482,7 +482,7 @@ execution.setVariable('doclist', res)</script>
     <serviceTask id="servicetask7" name="лист про успішне замовлення послуги" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

@@ -74,7 +74,7 @@
     <serviceTask id="servicetask4" name="повідомлення громадянина про готовність довідки" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -109,7 +109,7 @@ enum{[content]}<br />
     <serviceTask id="servicetask5" name="Повідомлення співробітника ЦНАП" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:string><![CDATA[cnap_netishyn@ukr.net]]></activiti:string>
@@ -123,7 +123,7 @@ enum{[content]}<br />
 У Вас в черзі на обробку зареєстровано нове звернення щодо видачі довідки:<br />
 enum{[content]} <br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-Опрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a><br />
+Опрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a><br />
 [pattern/mail/_common_signature.html]
 [pattern/mail/_common_footer.html]]]></activiti:expression>
         </activiti:field>

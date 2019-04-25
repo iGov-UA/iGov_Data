@@ -153,7 +153,7 @@
         <activiti:formProperty id="sBody_1" name="[pattern/print/bti/bti_request_1_2.html]; ;bVisible=false" type="string" default="Запит в форматі для друку" writable="false"></activiti:formProperty>
         <activiti:formProperty id="marker4" name="set printform content (jur)" type="markers" default="${markerService.loadFromFile('bti/bti_request_1_4.json')}"></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="ИД транзакции платежа; ;bVisible=false" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="result" name="Запит складено  без помилок?" type="enum">
+        <activiti:formProperty id="result" name="Запит складено  без помилок?" type="enum" required="true">
           <activiti:value id="accept" name="Помилкі відсутні. Надіслати ліст для сплати вартості послуги"></activiti:value>
           <activiti:value id="reject" name="Запит містить помилки. Відмовити в наданні послуги"></activiti:value>
         </activiti:formProperty>

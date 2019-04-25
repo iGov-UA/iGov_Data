@@ -48,7 +48,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Дніпропетровськ ЦНАП - Копія рішення міської ради про надання дозволу на розроблення проекту відведення земельної ділянки]]></activiti:string>
@@ -116,7 +116,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Дніпропетровськ,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -233,7 +233,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Дніпропетровськ,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -257,7 +257,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Дніпропетровськ ЦНАП - Копія рішення міської ради про надання дозволу на розроблення проекту відведення земельної ділянки]]></activiti:string>
@@ -270,7 +270,7 @@
     <serviceTask id="servicetask2" name="Необхідний документ с файлом" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -339,7 +339,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Дніпропетровськ,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
                                     </p>
                                 </td>
                             </tr>

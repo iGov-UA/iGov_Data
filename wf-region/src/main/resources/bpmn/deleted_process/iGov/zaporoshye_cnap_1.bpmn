@@ -21,7 +21,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Декларація про початок виконання підготовчих робіт]]></activiti:string>
@@ -42,7 +42,7 @@
     <serviceTask id="servicetask2" name="Відправка  запиту до канцелярії" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення громадянина: 02_004_002 Декларація про початок виконання підготовчих робіт (2014-10-09)]]></activiti:string>

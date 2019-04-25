@@ -78,7 +78,7 @@
     <serviceTask id="servicetask1" name="Відправка відповіді на запит користувачу" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -123,7 +123,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression>Звернення на тему: Видача копій, витягів з розпоряджень міського голови, рішень, прийнятих міською радою та виконавчим комітетом.</activiti:expression>
@@ -140,7 +140,7 @@
           <activiti:expression>Звернення на тему: Видача копій, витягів з розпоряджень міського голови, рішень, прийнятих міською радою та виконавчим комітетом.</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression>[pattern/mail/_common_header.html]
@@ -161,7 +161,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression>Звернення на тему: Видача копій, витягів з розпоряджень міського голови, рішень, прийнятих міською радою та виконавчим комітетом.</activiti:expression>

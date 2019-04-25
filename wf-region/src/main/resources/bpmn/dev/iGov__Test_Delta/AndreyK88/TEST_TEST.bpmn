@@ -1,4 +1,4 @@
-<activiti:formProperty id="sLabeID" name=" ; ;labelType=info" type="label" default="Увага! &lt;br&gt;Якщо Вам потрібна довідка для отримання ID-картки, то скористайтесь &lt;a href=&quot; https://igov.gov.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;іншою послугою&lt;/a&gt;"></activiti:formProperty>
+<activiti:formProperty id="sLabeID" name=" ; ;labelType=info" type="label" default="Увага! &lt;br&gt;Якщо Вам потрібна довідка для отримання ID-картки, то скористайтесь &lt;a href=&quot; https://igov.org.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;іншою послугою&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="form3_Organs" type="markers" default="${markerService.loadFromFile('form3/form3_Organs.json')}"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Ви бажаєте отримати рішення" type="select" default="0"></activiti:formProperty>
         <activiti:formProperty id="sVizitData" name="Оберіть день коли ви хочете прийти за довідкою" type="date" required="true"></activiti:formProperty>

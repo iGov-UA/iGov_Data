@@ -182,7 +182,7 @@ var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti
     <serviceTask id="servicetask1" name="Письмо с решением" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -195,7 +195,7 @@ var oResult = documentStepService.cloneDocumentStepSubject(snID_Process_Activiti
 Ваша заява на звільнення підпісана.<br>
 Всього найкращого!<br>
 <p>
-    Обов'язково ознайомтесь з наказом за <a href="https://alpha.test.region.igov.gov.ua">посиланням</a>
+    Обов'язково ознайомтесь з наказом за <a href="https://alpha.test.region.igov.org.ua">посиланням</a>
 </p>]]></activiti:expression>
         </activiti:field>
       </extensionElements>

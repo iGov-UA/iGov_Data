@@ -42,7 +42,7 @@
     <serviceTask id="servicetask2" name="Лист в цнап нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:string><![CDATA[${sMailClerk}]]></activiti:string>
@@ -59,7 +59,7 @@
     <serviceTask id="servicetask3" name="Лист заявнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -122,7 +122,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask4" name="лист міськраді від цнап" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:string><![CDATA[akylish88@gmail.com]]></activiti:string>
@@ -136,7 +136,7 @@ ${sNameOrgan}.<br />
 У Вас в черзі на обробку нове звернення на видачу паспорту прив’язки тимчасової споруди.<br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
 ${sSubzvern}<br />
-Опрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a>
+Опрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a>
 [pattern/mail/_common_signature.html]
 [pattern/mail/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -148,7 +148,7 @@ ${sSubzvern}<br />
     <serviceTask id="servicetask5" name="лист заявнику передача до ради" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -212,7 +212,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask6" name="Відмова цнап" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -242,7 +242,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask7" name="відмова міськрада" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -271,7 +271,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask8" name="лист заявнику міськрада все ок" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -334,7 +334,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask9" name="Лист з оцінкою" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

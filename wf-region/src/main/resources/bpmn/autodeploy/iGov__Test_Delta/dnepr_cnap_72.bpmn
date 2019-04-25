@@ -39,7 +39,7 @@
           <activiti:expression><![CDATA[${postprav}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення. Дозвіл на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області.]]></activiti:string>
@@ -103,12 +103,12 @@
                                     <p>
 									У Вас в черзі на обробку зареєстровано нове звернення щодо "Надання дозволу на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області".<br />
 									Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-									Опрацюйте, будь ласка, це звернення на <a href="https://region.igov.gov.ua/admin" target="_blank">порталі</a>
+									Опрацюйте, будь ласка, це звернення на <a href="https://region.igov.org.ua/admin" target="_blank">порталі</a>
                                     </p>
                                     <hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" />
                                     <p>
                                      З повагою,<br />
-					  				 Команда Порталу державних послуг <a href="https://igov.gov.ua/" target="_blank">iGov</a>
+					  				 Команда Порталу державних послуг <a href="https://igov.org.ua/" target="_blank">iGov</a>
                                         </p>
                                     </p>
                                 </td>
@@ -137,7 +137,7 @@
           <activiti:expression><![CDATA[${postlev}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення. Дозвіл на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області.]]></activiti:string>
@@ -201,12 +201,12 @@
                                     <p>
 									У Вас в черзі на обробку зареєстровано нове звернення щодо "Надання дозволу на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області".<br />
 									Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
-									Опрацюйте, будь ласка, це звернення на <a href="https://region.igov.gov.ua/admin" target="_blank">порталі</a>
+									Опрацюйте, будь ласка, це звернення на <a href="https://region.igov.org.ua/admin" target="_blank">порталі</a>
                                     </p>
                                     <hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" />
                                     <p>
                                      З повагою,<br />
-					  				 Команда Порталу державних послуг <a href="https://igov.gov.ua/" target="_blank">iGov</a>
+					  				 Команда Порталу державних послуг <a href="https://igov.org.ua/" target="_blank">iGov</a>
                                         </p>
                                     </p>
                                 </td>
@@ -232,7 +232,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Дозвіл на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області.]]></activiti:string>
@@ -299,7 +299,7 @@
                                         З повагою, <br />
                                         Центр надання адміністративних послуг<br/>
 										Дніпропетровської міської ради,<br/>
-										Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
+										Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -365,7 +365,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreplay@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreplay@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Дозвіл на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області.]]></activiti:string>
@@ -464,7 +464,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Дозвіл на розміщення зовнішньої реклами поза межами населених пунктів Дніпропетровської області.]]></activiti:string>
@@ -531,7 +531,7 @@
                                         З повагою, <br />
 										Центр надання адміністративних послуг<br/>
 										Дніпропетровської міської ради,<br/>
-                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -586,7 +586,7 @@
     <serviceTask id="servicetask3" name="Відправка e-mail о готовности дозволу в правобережному ЦНАП" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -640,7 +640,7 @@
     <serviceTask id="servicetask4" name="Відправка e-mail о готовности дозволу в лівобережному ЦНАП" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -691,7 +691,7 @@
     <serviceTask id="servicetask5" name="Відправка e-mail в разі відмови Управління інфраструктури" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

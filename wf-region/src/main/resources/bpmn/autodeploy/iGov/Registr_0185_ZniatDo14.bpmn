@@ -5,7 +5,7 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="warning1" name=" ; ;labelType=warning" type="label" default="&lt;b&gt;Зверніть увагу! Послуга надається лише для однієї дитини щодо якої заповнюється звернення! &lt;/b&gt;"></activiti:formProperty>
-        <activiti:formProperty id="warning0" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо Ви будете реєструвати нове місце проживання у межах міста,у якому вже працює послуга &lt;a href=&quot;https://igov.gov.ua/service/184/general&quot;&gt;реєстрації місця проживання&lt;/a&gt;, рекомендуємо Вам замовити реєстрацію із одночасним зняттям. Це зменшить кількість візитів і збереже Ваш час."></activiti:formProperty>
+        <activiti:formProperty id="warning0" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо Ви будете реєструвати нове місце проживання у межах міста,у якому вже працює послуга &lt;a href=&quot;https://igov.org.ua/service/184/general&quot;&gt;реєстрації місця проживання&lt;/a&gt;, рекомендуємо Вам замовити реєстрацію із одночасним зняттям. Це зменшить кількість візитів і збереже Ваш час."></activiti:formProperty>
         
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить поточне місце реєстрації дитини" type="select" default="0" required="true"></activiti:formProperty>
         
@@ -113,7 +113,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
@@ -130,7 +130,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
@@ -155,7 +155,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareyestrovano. Detalno na igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareyestrovano. Detalno na igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -236,7 +236,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Відхилено звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
@@ -246,7 +246,7 @@ execution.setVariable('sMaxPay', maxpay)
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
 				На жаль, Вам відмовлено у надані послуги [sID_Order] або Ви скасували заявку.<br>
-				При необхідності зняття з реєстрації місця проживання дитини молодшe 14 років Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
+				При необхідності зняття з реєстрації місця проживання дитини молодшe 14 років Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
 				</p>
 				<p>
 				Коментар Державного службовця:<br />
@@ -266,7 +266,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidkhyleno. Detalno na igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidkhyleno. Detalno na igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -286,7 +286,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Призначено зустріч у відділенні, звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
@@ -352,7 +352,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.gov.ua/journal]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.org.ua/journal]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -366,7 +366,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Призначено зустріч у відділенні, звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
@@ -426,7 +426,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.gov.ua/journal]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.org.ua/journal]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -509,7 +509,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Опрацьовано звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
@@ -533,7 +533,7 @@ execution.setVariable('sMaxPay', maxpay)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] opratsovano, otsinit yakist nadannya posluhy (formu nadislano v email). Detalno igov.gov.ua/journal]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] opratsovano, otsinit yakist nadannya posluhy (formu nadislano v email). Detalno igov.org.ua/journal]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>

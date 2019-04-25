@@ -168,7 +168,7 @@
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нове звернення. Щомісячна компенсаційна виплата непрацюючій особі, яка здійснює догляд за ${sCareHuman}]]></activiti:expression>
@@ -187,7 +187,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Щомісячна компенсаційна виплата непрацюючій особі, яка здійснює догляд за ${sCareHuman}. Зареєстровано]]></activiti:expression>
@@ -216,7 +216,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] napravleno na dopovnennya. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] napravleno na dopovnennya. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -229,7 +229,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
@@ -272,13 +272,13 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="sPhone_SMS">
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] napravleno na dopovnennya. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] napravleno na dopovnennya. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -296,7 +296,7 @@
 				Причина: ${sComment1}
 			</p>
 			<p>
-				Якщо Вам треба додати документи, яких бракує у Вашому першому зверненні - заповніть заявку повторно на порталі <a href="https://igov.gov.ua/service/759/general">igov.gov.ua</a>
+				Якщо Вам треба додати документи, яких бракує у Вашому першому зверненні - заповніть заявку повторно на порталі <a href="https://igov.org.ua/service/759/general">igov.org.ua</a>
 			</p>
 			<br>
 			За наявності додаткових питань - можете звернутись за наступними контактами:<br>
@@ -317,7 +317,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Щомісячна компенсаційна виплата непрацюючій особі, яка здійснює догляд за ${sCareHuman}. Перевірка наданих даних]]></activiti:expression>
@@ -333,7 +333,7 @@
 				Причина: ${sComment1}
 			</p>
 			<p>
-				Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/service/759/general">igov.gov.ua</a>
+				Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/service/759/general">igov.org.ua</a>
 			</p>
 			<br>
 			За наявності додаткових питань - можете звернутись за наступними контактами:<br>
@@ -350,7 +350,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -360,7 +360,7 @@
     <serviceTask id="servicetask4" name="повідомлення громадянина про призначення допомоги" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -396,7 +396,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -406,7 +406,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Щомісячна компенсаційна виплата непрацюючій особі, яка здійснює догляд за ${sCareHuman}. Оброблено]]></activiti:expression>
@@ -427,7 +427,7 @@
 				Відповідь від управління праці та соціального захисту населення знаходиться у додатку до листа.
 			</p>
 			<p>
-				Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/service/759/general">igov.gov.ua</a>.
+				Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/service/759/general">igov.org.ua</a>.
 			</p>
 			<br>
 			За наявності додаткових питань - можете звернутись за наступними контактами:<br>
@@ -447,7 +447,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

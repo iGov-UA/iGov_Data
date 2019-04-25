@@ -62,7 +62,7 @@
     <serviceTask id="servicetask2" name="Лист чиновнику про звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -78,7 +78,7 @@
     <serviceTask id="servicetask3" name="заявка прийнята" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -179,7 +179,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask4" name="Витяг з ЕЦП" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -205,7 +205,7 @@ ${sNameOrgan}.<br />
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno.
-Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${file_ECP}]]></activiti:expression>
@@ -215,7 +215,7 @@ Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
     <serviceTask id="servicetask5" name="Лист про забрати витяг" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -243,7 +243,7 @@ ${sNameOrgan}.<br />
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno.
-Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -277,7 +277,7 @@ Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
     <serviceTask id="servicetask7" name="Лист з оцінкою" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -310,7 +310,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask8" name="Лист нагадування" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -340,7 +340,7 @@ ${sNameOrgan}.<br />
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Nagaduemo Vashe zvernennya [sID_Order] obrobleno.
-Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>

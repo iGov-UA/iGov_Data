@@ -99,7 +99,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Рішення щодо надання державної соціальної допомоги особам, які не мають права на пенсію, та інвалідам]]></activiti:string>
@@ -162,7 +162,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Рішення щодо надання державної соціальної допомоги особам, які не мають права на пенсію, та інвалідам]]></activiti:string>
@@ -202,7 +202,7 @@ ${comment1}&lt;br /&gt;&lt;br /&gt;
     <serviceTask id="servicetask4" name="Повідомлення держслужбовця про новий запит" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -217,12 +217,12 @@ ${comment1}&lt;br /&gt;&lt;br /&gt;
 У Вас в черзі на обробку зареєстровано нове звернення щодо призначення державної соціальної допомоги особам, які не мають права на пенсію, та інвалідам.&lt;br /&gt;
 &lt;br /&gt;
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}&lt;br /&gt;
-Опрацюйте це звернення на &lt;a href="https://region.igov.gov.ua" target="_blank"&gt;порталі&lt;/a&gt;
+Опрацюйте це звернення на &lt;a href="https://region.igov.org.ua" target="_blank"&gt;порталі&lt;/a&gt;
                                     &lt;/p&gt;
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                     &lt;p&gt;
                                     З повагою,&lt;br /&gt;
-					  				Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;
+					  				Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;
                                         &lt;/p&gt;
                                     &lt;/p&gt;
                                 &lt;/td&gt;
@@ -244,7 +244,7 @@ ${comment1}&lt;br /&gt;&lt;br /&gt;
     <serviceTask id="servicetask5" name="E-mail при помилках у документах" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -257,7 +257,7 @@ ${comment1}&lt;br /&gt;&lt;br /&gt;
 &lt;b&gt;Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;p&gt;На жаль, Ваше звернення щодо надання державної соціальної допомоги особам, які не мають права на пенсію, та інвалідам відхилене.&lt;/p&gt;
 &lt;p&gt;Причина: ${comment}&lt;/p&gt;
-&lt;p&gt;Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;&lt;/p&gt;
 &lt;br /&gt;
 [pattern_dictonary:kiev_soc_help.csv:value{[rName]}:5]
 &lt;br /&gt;
@@ -273,7 +273,7 @@ ${comment1}&lt;br /&gt;&lt;br /&gt;
     <serviceTask id="servicetask6" name="E-mail опринятии заявления" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -284,7 +284,7 @@ ${comment1}&lt;br /&gt;&lt;br /&gt;
         <activiti:field name="text">
           <activiti:expression>[pattern/mail/_common_header.html]
 &lt;b&gt;Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;p&gt;Ваше звернення щодо надання державної соціальної допомоги особам, які не мають права на пенсію, та інвалідам в очикуванні недостатніх документів. Протягом трьох місяців Ви повині донести іх в  [pattern_dictonary:kiev_soc_help.csv:value{[rName]}:2] за адресою [pattern_dictonary:kiev_soc_help.csv:value{[rName]}:3] або заповнити заявку повторно на порталі &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;, враховуючи коментар нижче.&lt;/p&gt;
+&lt;p&gt;Ваше звернення щодо надання державної соціальної допомоги особам, які не мають права на пенсію, та інвалідам в очикуванні недостатніх документів. Протягом трьох місяців Ви повині донести іх в  [pattern_dictonary:kiev_soc_help.csv:value{[rName]}:2] за адресою [pattern_dictonary:kiev_soc_help.csv:value{[rName]}:3] або заповнити заявку повторно на порталі &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;, враховуючи коментар нижче.&lt;/p&gt;
 &lt;p&gt;Коментар спеціаліста: ${comment}&lt;/p&gt;
 &lt;br /&gt;
 [pattern_dictonary:kiev_soc_help.csv:value{[rName]}:5]

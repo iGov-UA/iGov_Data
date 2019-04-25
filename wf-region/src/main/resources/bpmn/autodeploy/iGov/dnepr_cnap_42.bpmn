@@ -66,7 +66,7 @@
     <serviceTask id="servicetask2" name="Повідомлення чиновнику" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -80,7 +80,7 @@
 У Вас в черзі на обробку нове звернення щодо реєстрації великотоннажних та інших технологічних транспортних засобів, що не підлягають експлуатації на вулично-дорожній мережі загального користування.<br />
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}<br />
 Номер звернення: [sID_Order]<br />
-Відпрацюйте це звернення на <a href="https://region.igov.gov.ua" target="_blank">порталі</a>
+Відпрацюйте це звернення на <a href="https://region.igov.org.ua" target="_blank">порталі</a>
 [pattern/mail/_common_signature.html]
 [pattern/mail/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -89,7 +89,7 @@
     <serviceTask id="servicetask3" name="Повідомлення громадянину" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -173,7 +173,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask4" name="Повідомлення з відмовою" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -187,7 +187,7 @@ ${sNameOrgan}.<br />
 На жаль, Ваше звернення щодо реєстрації великотоннажних та інших технологічних транспортних засобів, що не підлягають експлуатації на вулично-дорожній мережі загального користування було відхилено.</p>
 <p>Причина в наступному:</p>
 <p>${comment}</p>
-<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">igov.gov.ua</a></p>
+<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="#current-page">igov.org.ua</a></p>
 <br />
 ${sPhoneOrgan}.<br />
 [pattern/mail/_common_signature_start.html]
@@ -205,7 +205,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask5" name="Повідомлення про реєстрацію звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -287,7 +287,7 @@ ${sNameOrgan}.<br />
     <serviceTask id="servicetask6" name="Повідомлення про готовність НЗ та ТП" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -324,7 +324,7 @@ ${sNameOrgan},<br />
     <serviceTask id="servicetask7" name="Повідомлення про відмову Управлінням труда" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

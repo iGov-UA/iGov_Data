@@ -4,7 +4,7 @@
     <documentation>QLogic</documentation>
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
-        <activiti:formProperty id="sLabeDitu" name=" ; ;labelType=info" type="label" default="Увага! Для оформлення закордонного паспорту для дитини до 16 років існує окрема &lt;a href=&quot;https://igov.gov.ua/service/177/general&quot;&gt;послуга&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabeDitu" name=" ; ;labelType=info" type="label" default="Увага! Для оформлення закордонного паспорту для дитини до 16 років існує окрема &lt;a href=&quot;https://igov.org.ua/service/177/general&quot;&gt;послуга&lt;/a&gt;"></activiti:formProperty>
         
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -104,13 +104,13 @@ execution.setVariable('sEndDay', timerEnd)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareiestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareiestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Паспорт громадянина України для виїзду за кордон]]></activiti:string>

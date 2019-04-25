@@ -117,7 +117,7 @@
           <activiti:expression><![CDATA[valery.stavitsky@gmail.com]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -135,7 +135,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -144,7 +144,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваша заява № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> відправлена на реєстрацію та перевірку пакету документів.
+				Ваша заява № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> відправлена на реєстрацію та перевірку пакету документів.
 			</p>
 			<p>
 				Ви отримаєте відповідь протягом 30 календарних днів. 
@@ -381,7 +381,7 @@
           <activiti:expression><![CDATA[${sMailNachClerk1}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -499,7 +499,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -507,14 +507,14 @@
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 		    <p>
-		    	Ваша заява № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> розглянута,  
+		    	Ваша заява № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> розглянута,  
 		    	прийнято рішення відмовити на підставі <b><i>enum{[erejectReason4]}</i></b>.  Електронний лист-відмова , підписаний ЕЦП знаходиться у вкладенні.
 		    <p>
 		    	Коментар чиновника:<br>
 				<b><i>${sCommentReject}</i></b>
 		    </p>
 		    <p>
-		    	Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/service/1508/general">igov.gov.ua</a>
+		    	Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/service/1508/general">igov.org.ua</a>
 			</p>
 			<br />
 			За наявності питань можете звернутись за наступними контактами<br>
@@ -530,7 +530,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA["${nFileReject5}"]]></activiti:expression>
@@ -548,7 +548,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -557,7 +557,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 		    <h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				ПО вашій заявці № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> документи перевірені і
+				ПО вашій заявці № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> документи перевірені і
 				 передані на опрацювання відповідним спеціалістам.<br>
 				Ви отримаєте відповідь у визначений законом термін. 
 			</p>
@@ -575,7 +575,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Perevirka na karti MKK heo pryv'yazky". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Perevirka na karti MKK heo pryv'yazky". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -689,7 +689,7 @@
           <activiti:expression><![CDATA[${sMailZamNachClerk1}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -905,7 +905,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[iGov: Отримання витягу з топографо-геодезичної основи міста та топографо-геодезичних вихідних даних]]></activiti:string>
@@ -914,7 +914,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваша заявка № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> на отримання «Витяга» виконана.<br>
+				Ваша заявка № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> на отримання «Витяга» виконана.<br>
 				Номер вихідного документу ${outdocNum} від ${outdocDate}<br>
 				У вкладенні знаходиться електронний документ «Витяг» та  посилання на сховище зі схемами вихідних даних з топоснови міста Києва . 
 				Ви повинні авторизуватись у сховищі за посиланням <u>${sreposLinks}</u> 
@@ -937,7 +937,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${nFileTopograf},${nFileVutjag}]]></activiti:expression>

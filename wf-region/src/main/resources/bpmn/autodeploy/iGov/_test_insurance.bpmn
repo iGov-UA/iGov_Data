@@ -48,7 +48,7 @@
     <serviceTask id="servicetask5" name="Повідомлення громадянина про страхування" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[norepy@igov.gov.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[norepy@igov.org.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

@@ -32,7 +32,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.gov.ua</activiti:string>
+          <activiti:string>noreply@igov.org.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: Зміни до відомостей про юридичну особу, які не пов'язані із змінами, що вносяться до установчих документів</activiti:string>
@@ -96,7 +96,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Державна реєстраційна служба,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -187,7 +187,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.gov.ua</activiti:string>
+          <activiti:string>noreply@igov.org.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: Зміни до відомостей про юридичну особу, які не пов'язані із змінами, що вносяться до установчих документів</activiti:string>
@@ -276,7 +276,7 @@
     <serviceTask id="servicetask3" name="Повідомлення про рахунок до сплати" activiti:expression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string>admin@igov.gov.ua</activiti:string>
+          <activiti:string>admin@igov.org.ua</activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -293,7 +293,7 @@
 
 З повагою,
 Державна реєстраційна служба
-Команда Порталу державних послу igov.gov.ua</activiti:expression>
+Команда Порталу державних послу igov.org.ua</activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression>"${billToPay}"</activiti:expression>
@@ -309,7 +309,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.gov.ua</activiti:string>
+          <activiti:string>noreply@igov.org.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Звернення на тему: Зміни до відомостей про юридичну особу, які не пов'язані зі змінами, що вносяться до установчих документів</activiti:string>
@@ -350,7 +350,7 @@
             &lt;table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"&gt;
                 &lt;!--header line statrs--&gt;
                 &lt;tr&gt;
-                    &lt;td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"&gt;&lt;b style="font-size: 24px;"&gt;igov.gov.ua&lt;/b&gt;&lt;br /&gt;портал державних послуг&lt;/td&gt;
+                    &lt;td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"&gt;&lt;b style="font-size: 24px;"&gt;igov.org.ua&lt;/b&gt;&lt;br /&gt;портал державних послуг&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;!--header line end--&gt;
                 &lt;!--content statrs--&gt;
@@ -380,7 +380,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Державна реєстраційна служба,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -438,7 +438,7 @@
     <serviceTask id="servicetask4" name="Повідомлення про реєстрацію змін" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.gov.ua</activiti:string>
+          <activiti:string>noreply@igov.org.ua</activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -480,7 +480,7 @@
             &lt;table width="800" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"&gt;
                 &lt;!--header line statrs--&gt;
                 &lt;tr&gt;
-                    &lt;td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"&gt;&lt;b style="font-size: 24px;"&gt;igov.gov.ua&lt;/b&gt;&lt;br /&gt;портал державних послуг&lt;/td&gt;
+                    &lt;td bgcolor="#5CA3CB" style="padding: 35px 120px; color: white;"&gt;&lt;b style="font-size: 24px;"&gt;igov.org.ua&lt;/b&gt;&lt;br /&gt;портал державних послуг&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;!--header line end--&gt;
                 &lt;!--content statrs--&gt;
@@ -495,7 +495,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Державна реєстраційна служба,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;

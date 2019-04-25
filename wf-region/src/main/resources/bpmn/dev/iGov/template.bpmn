@@ -23,7 +23,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему:]]></activiti:string>
@@ -37,7 +37,7 @@
 
 З повагою,
 Міська рада міста _______
-Команда Порталу державних послу igov.gov.ua</activiti:expression>
+Команда Порталу державних послу igov.org.ua</activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -88,7 +88,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему:]]></activiti:string>
@@ -117,7 +117,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему:]]></activiti:string>
@@ -143,7 +143,7 @@
     <serviceTask id="servicetask2" name="Повідомлення про обробку звернення" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[admin@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[admin@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -161,7 +161,7 @@
 
 З повагою,
 Міська рада міста _________________
-Команда Порталу державних послу igov.gov.ua</activiti:expression>
+Команда Порталу державних послу igov.org.ua</activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -178,7 +178,7 @@
     <serviceTask id="servicetask3" name="Повідомлення про рахунок до сплати" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[admin@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[admin@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -196,7 +196,7 @@
 
 З повагою,
 Міська рада міста _________________
-Команда Порталу державних послу igov.gov.ua</activiti:expression>
+Команда Порталу державних послу igov.org.ua</activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

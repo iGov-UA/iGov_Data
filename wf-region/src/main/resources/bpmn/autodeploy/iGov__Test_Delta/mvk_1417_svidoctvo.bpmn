@@ -53,7 +53,7 @@
     <serviceTask id="servicetask2" name="Повідомлення чиновнику про новий запит" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -69,7 +69,7 @@
     <serviceTask id="servicetask3" name="Повідомлення громадянину про реєстрацію в системі" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -148,7 +148,7 @@ ${sPhoneOrgan}</p>
     <serviceTask id="servicetask4" name="Повідомлення громадянина про передачу інформації в архів" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -182,7 +182,7 @@ ${sPhoneOrgan}</p>
     <serviceTask id="servicetask5" name="Повідомлення громадянина про відмову" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -196,7 +196,7 @@ ${sPhoneOrgan}</p>
 По вашому зверненню № [sID_Order] винесено відмову.<br />
 На жаль, Ваше звернення щодо отримання копії свідоцтва про право власності на житло для подальшого оформлення дублікату втраченого документу було відхилено.<br />
 <p>Причина відмови: ${decisionComment}</p>
-Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
+Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br />
@@ -248,7 +248,7 @@ ${sNameOrgan}<br />
     <serviceTask id="servicetask6" name="Повідомлення громадянина про готовність копії" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>

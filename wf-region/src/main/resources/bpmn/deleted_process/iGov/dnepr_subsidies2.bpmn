@@ -52,7 +52,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string>noreply@igov.gov.ua</activiti:string>
+          <activiti:string>noreply@igov.org.ua</activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string>Відповідь на Ваше звернення щодо отримання субсидії на оплату житлово-комунальних послуг</activiti:string>
@@ -68,7 +68,7 @@ ${information}
 
 З повагою,
 Державна Адміністрація Дніпропетровської області,
-Команда Порталу державних послу igov.gov.ua</activiti:expression>
+Команда Порталу державних послу igov.org.ua</activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

@@ -3,7 +3,7 @@
   <process id="kiev_dms_zagran" name="Отримання/заміна паспорта громадянина України для виїзду за кордон" isExecutable="true">
     <startEvent id="startevent1" name="Start" activiti:initiator="initiator">
       <extensionElements>
-        <activiti:formProperty id="sWarning0" name="Зверніть увагу" type="label" default="Для оформлення закордонного паспорту для дитини існує окрема &lt;a href=&quot;https://igov.gov.ua/service/177/general&quot;&gt;послуга&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sWarning0" name="Зверніть увагу" type="label" default="Для оформлення закордонного паспорту для дитини існує окрема &lt;a href=&quot;https://igov.org.ua/service/177/general&quot;&gt;послуга&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
@@ -87,7 +87,7 @@ execution.setVariable('sEndDay', timerEnd)</script>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Отримання паспорта громадянина України для виїзду за кордон]]></activiti:string>

@@ -44,7 +44,7 @@
     <serviceTask id="servicetask5" name="Повідомлення громадянина  про успішну реєстрацію зверення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -74,13 +74,13 @@
     <serviceTask id="servicetask6" name="Повідомлення держслужбовця про нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${clerkPost}</activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:expression>Нове звернення на порталі igov.gov.ua на тему: Підтвердження відомостей про юридичну особу (форма 6). Заявник ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}</activiti:expression>
+          <activiti:expression>Нове звернення на порталі igov.org.ua на тему: Підтвердження відомостей про юридичну особу (форма 6). Заявник ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}</activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression>[pattern/mail/_common_employee_notify.html]</activiti:expression>
@@ -128,7 +128,7 @@
     <serviceTask id="servicetask3" name="Лист з підтвердженням" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -162,7 +162,7 @@
     <serviceTask id="servicetask4" name="Відмова: Недостатньо даних" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -175,7 +175,7 @@
 		    &lt;h3&gt;Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.&lt;/h3&gt;
 			&lt;p&gt;На жаль, Ваше звернення відхилене реєстратором.&lt;/p&gt;
 			&lt;p&gt; додатку до листа міститься офіційна відповідь держреєстратора&lt;/p&gt;
-			За необхідності Ви можете подати ще одне звернення на порталі &lt;a href="https://igov.gov.ua/" target="_blank"&gt;igov.gov.ua&lt;/a&gt;
+			За необхідності Ви можете подати ще одне звернення на порталі &lt;a href="https://igov.org.ua/" target="_blank"&gt;igov.org.ua&lt;/a&gt;
 			&lt;p&gt;Якщо у вас виникли питання, Ви можете звернутись до [pattern_dictonary:value{[regionFile]}:value{[region]}:2]&lt;/p&gt;
 &lt;p&gt;
 [pattern_dictonary:value{[regionFile]}:value{[region]}:3]&lt;br /&gt;
@@ -247,7 +247,7 @@
     <serviceTask id="servicetask7" name="ЦНАП позитив" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -279,7 +279,7 @@
     <serviceTask id="servicetask8" name="Відмова ЦНАП" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -292,7 +292,7 @@
 		    &lt;h3&gt;Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.&lt;/h3&gt;
 			&lt;p&gt;На жаль, Ваше звернення відхилене. &lt;/p&gt;
 			&lt;p&gt;${comment}&lt;br&gt; ${comment1}&lt;/p&gt;
-			За необхідності Ви можете подати ще одне звернення на порталі &lt;a href="https://igov.gov.ua/" target="_blank"&gt;igov.gov.ua&lt;/a&gt;&lt;/p&gt;
+			За необхідності Ви можете подати ще одне звернення на порталі &lt;a href="https://igov.org.ua/" target="_blank"&gt;igov.org.ua&lt;/a&gt;&lt;/p&gt;
 			&lt;p&gt;Якщо у Вас з`явились питання, Ви можете звернутись до [pattern_dictonary:value{[regionFile]}:value{[region]}:2]&lt;br /&gt;
 [pattern_dictonary:value{[regionFile]}:value{[region]}:3]&lt;br /&gt;
 [pattern_dictonary:value{[regionFile]}:value{[region]}:4]&lt;br /&gt;

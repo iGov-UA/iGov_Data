@@ -113,7 +113,7 @@
     <serviceTask id="servicetask2" name="повідомлення громадянина про відмову у наданні дозволу" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -251,7 +251,7 @@ style="border-collapse: collapse;"&gt;
     <serviceTask id="servicetask3" name="повідомлення громадянина о наданні дозволу" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -341,7 +341,7 @@ style="border-collapse: collapse;"&gt;
 
 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
 										З повагою,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;&lt;br /&gt;	
+                                        Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;&lt;br /&gt;	
 										&lt;br /&gt;	
 										Центр надання адміністративних послуг&lt;br /&gt;
 									Запорізької міської ради&lt;br /&gt;	   
@@ -405,7 +405,7 @@ style="border-collapse: collapse;"&gt;
     <serviceTask id="servicetask4" name="Повідомлення громадянина про успішне подання зверенння" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -477,7 +477,7 @@ style="border-collapse: collapse;"&gt;
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                   &lt;p&gt;
                                         З повагою,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;&lt;br /&gt;	
+                                        Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;&lt;br /&gt;	
 										&lt;br /&gt;	
 										Центр надання адміністративних послуг&lt;br /&gt;
 										Запорізької  міської ради&lt;br /&gt;	
@@ -515,7 +515,7 @@ style="border-collapse: collapse;"&gt;
           <activiti:string><![CDATA[Звернення на тему: Дозвіл на розміщення зовнішньої реклами]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression>&lt;!DOCTYPE html&gt;
@@ -570,12 +570,12 @@ style="border-collapse: collapse;"&gt;
                                     &lt;p&gt;
 У Вас в черзі на обробку зареєстровано нове звернення щодо enum{[purpose]}.&lt;br /&gt;
 Заявник: ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}&lt;br /&gt;
-Відпрацюйте це звернення на &lt;a href="https://region.igov.org.ua" target="_blank"&gt;порталі&lt;/a&gt;
+Відпрацюйте це звернення на &lt;a href="https://region.igov.gov.ua" target="_blank"&gt;порталі&lt;/a&gt;
                                     &lt;/p&gt;
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
                                     &lt;p&gt;
                                      З повагою,&lt;br /&gt;
-					  Команда Порталу державних послуг &lt;a href="https://igov.org.ua/" target="_blank"&gt;iGov&lt;/a&gt;
+					  Команда Порталу державних послуг &lt;a href="https://igov.gov.ua/" target="_blank"&gt;iGov&lt;/a&gt;
                                         &lt;/p&gt;
                                     &lt;/p&gt;
                                 &lt;/td&gt;
@@ -606,7 +606,7 @@ style="border-collapse: collapse;"&gt;
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Дозвіл на розміщення зовнішньої реклами]]></activiti:string>
@@ -666,7 +666,7 @@ style="border-collapse: collapse;"&gt;
 &lt;br /&gt;
 Підстава: ${comment_1}    &lt;br /&gt;
     &lt;/p&gt;
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.org.ua/" target="_blank"&gt;igov.org.ua&lt;/a&gt;
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.gov.ua/" target="_blank"&gt;igov.gov.ua&lt;/a&gt;
                                     &lt;/p&gt;
                                     &lt;hr style="width: 100%; height: 0; margin: 30px 0 15px 0; background: #dddddd; border: 0; border-bottom: 1px solid #dddddd;" /&gt;
 									Центр надання адміністративних послуг&lt;br /&gt;

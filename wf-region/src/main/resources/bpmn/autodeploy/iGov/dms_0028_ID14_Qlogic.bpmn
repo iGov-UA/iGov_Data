@@ -30,7 +30,7 @@
         <activiti:formProperty id="lableMariupolPort" name=" ; ;labelType=info" type="label" default="&lt;b&gt;Цей відділ обслуговує Центральний район.&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerMariupolRaionID" name="markerMariupolRaionID" type="markers" default="${markerService.loadFromFile('1_Standart_marker/MariupolRaionID.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="lablepos" name=" ; ;labelType=info" type="label" default="Необхідним документом для отримання паспорта громадянина України у формі ID-картки є довідка про реєстрацію місця проживання/перебування особи. Її можна отримати особисто у органах реєстрації місця проживання або &lt;a href=&quot;https://igov.org.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;оформити цю довідку через iGov&lt;/a&gt; (працює не для всіх регіонів). Строк надання послуги через iGov - 10 робочих днів."></activiti:formProperty>
+        <activiti:formProperty id="lablepos" name=" ; ;labelType=info" type="label" default="Необхідним документом для отримання паспорта громадянина України у формі ID-картки є довідка про реєстрацію місця проживання/перебування особи. Її можна отримати особисто у органах реєстрації місця проживання або &lt;a href=&quot;https://igov.gov.ua/service/24/general&quot; target=&quot;_blank&quot;&gt;оформити цю довідку через iGov&lt;/a&gt; (працює не для всіх регіонів). Строк надання послуги через iGov - 10 робочих днів."></activiti:formProperty>
         <activiti:formProperty id="sID_Type_visitDay" name="Тип електронної черги; ;bVisible=false" type="string" default="Qlogic"></activiti:formProperty>
         <activiti:formProperty id="sOrganizatonGuid_visitDay" name="ID організації за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sServiceCenterId_visitDay" name="ID сервіс-центра за довідником Qlogic; ;bVisible=false" type="string"></activiti:formProperty>
@@ -110,7 +110,7 @@ execution.setVariable('sEndDay', timerEnd)
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareiestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareiestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -119,7 +119,7 @@ execution.setVariable('sEndDay', timerEnd)
           <activiti:string><![CDATA[Паспорт громадянина України особам, які досягли 14-річного віку у формі ID-картки]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -134,7 +134,7 @@ execution.setVariable('sEndDay', timerEnd)
 <p>
 <b>Необхідні документи, які треба принести до Центру надання адміністративних послуг при оформленні паспорта громадянина України по досягненні 14-річного віку у формі ID-картки:</b>
 <ul>
-<li>довідка про реєстрацію місця проживання (Її можна отримати особисто у органах реєстрації  місця проживання або замовити через <a href="https://igov.org.ua/service/24/general" target="_blank">iGov</a> (працює не для всіх регіонів). Строк надання послуги через iGov - 10 робочих днів;</li>
+<li>довідка про реєстрацію місця проживання (Її можна отримати особисто у органах реєстрації  місця проживання або замовити через <a href="https://igov.gov.ua/service/24/general" target="_blank">iGov</a> (працює не для всіх регіонів). Строк надання послуги через iGov - 10 робочих днів;</li>
 <li>свідоцтво про народження оригінал та копія;</li>
 <li>оригінал та копію ІПН дитини (за наявності);</li>
 <li>оригінал та копію паспорта одного з батьків;</li>

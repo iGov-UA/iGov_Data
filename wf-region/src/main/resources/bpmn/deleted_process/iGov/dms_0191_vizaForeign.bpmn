@@ -70,7 +70,7 @@
           <activiti:expression><![CDATA[akylish88@gmail.com ]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Оформлення запрошень іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну за клопотанням юридичних осіб]]></activiti:string>
@@ -87,7 +87,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Оформлення запрошень іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну за клопотанням юридичних осіб]]></activiti:string>
@@ -111,7 +111,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -192,7 +192,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Оформлення запрошень іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну за клопотанням юридичних осіб]]></activiti:string>
@@ -202,7 +202,7 @@
                                     <h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
                                     <p>
 										На жаль, Вам відмовлено у надані послуги або Ви скасували заявку.<br>
-										При необхідності оформлення запрошення іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
+										При необхідності оформлення запрошення іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
 									</p>
 									<p>
 										Коментар Державного службовця:<br>
@@ -219,7 +219,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] vidhileno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -239,7 +239,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Оформлення запрошень іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну за клопотанням юридичних осіб]]></activiti:string>
@@ -288,7 +288,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Ochikuemo vizit. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Ochikuemo vizit. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA["${PrintForm_1},${PrintForm_2},${PrintForm_3},${PrintForm_4}"]]></activiti:expression>
@@ -365,7 +365,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Оформлення запрошень іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну за клопотанням юридичних осіб]]></activiti:string>
@@ -375,7 +375,7 @@
 								  <h3>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</h3>
                                     <p>
                               		Ви не з'явились для оформлення запрошення у термін 10 робочіх днів з моменту погодження документів.<br>
-                              		При необхідності оформлення запрошення іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
+                              		При необхідності оформлення запрошення іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
 									</p>
 									[pattern/mail/_common_signature_start.html]
 									${sNameOrgan},<br>
@@ -438,7 +438,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Оформлення запрошень іноземцям та особам без громадянства на отримання візових документів для в’їзду в Україну за клопотанням юридичних осіб]]></activiti:string>

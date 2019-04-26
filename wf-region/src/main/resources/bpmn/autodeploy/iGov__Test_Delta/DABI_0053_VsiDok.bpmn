@@ -71,27 +71,27 @@
         
         <activiti:formProperty id="nFile_PR" name="Повідомлення про підготовчі роботи; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_BCC1" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/1568/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_BCC1" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/1568/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_BCC1" name="Повідомлення про будівельні роботи (СС1); ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_BBP" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/1569/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_BBP" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/1569/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_BBP" name="Повідомлення про будівельні роботи на підставі будівельного паспорта; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_ECC1" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/54/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_ECC1" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/54/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_ECC1" name="Декларація про введення в експлуатацію (СС1); ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_EBP" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/56/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_EBP" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/56/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_EBP" name="Декларація про введення в експлуатацію на підставі будівельного паспорта; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_ES" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/55/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_ES" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/55/general &quot; target=&quot;_blank&quot;&gt;Заповнити електронний бланк&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_ES" name="Декларація про введення в експлуатацію на підставі рішення суду; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="nFile_ZP" name="Зміни в повідомлення про підготовчі роботи; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_ZBCC1" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/1575/general &quot; target=&quot;_blank&quot;&gt;Декларація про готовність до експлуатації&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_ZBCC1" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/1575/general &quot; target=&quot;_blank&quot;&gt;Декларація про готовність до експлуатації&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZBCC1" name="Зміни в повідомлення про будівельні роботи (СС1); ;bNew=true" type="file" required="true"></activiti:formProperty>
         
-        <activiti:formProperty id="sLabe_ZBBP" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.org.ua/service/1576/general &quot; target=&quot;_blank&quot;&gt;Декларація про готовність до експлуатації&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabe_ZBBP" name=" ; ;labelType=info" type="label" default="Якщо ви хочете заповнити електронну форму, перейдіть за посиланням - &lt;a href=&quot;https://igov.gov.ua/service/1576/general &quot; target=&quot;_blank&quot;&gt;Декларація про готовність до експлуатації&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="nFile_ZBBP" name="Зміни в повідомлення про будівельні роботи на підставі будівельного паспорта; ;bNew=true" type="file" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="nFile_ZECC1" name="Зміни в декларацію про введення в експлуатацію (СС1); ;bNew=true" type="file" required="true"></activiti:formProperty>
@@ -138,13 +138,13 @@ execution.setVariable('sSum', sum);
     <serviceTask id="servicetask2" name="Лист в ЦНАП" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:expression><![CDATA[Нове звернення на порталі igov.org.ua на тему: ${sPosluga_name}. Заявник ${bankIdlastName} ${bankIdfirstName}.]]></activiti:expression>
+          <activiti:expression><![CDATA[Нове звернення на порталі igov.gov.ua на тему: ${sPosluga_name}. Заявник ${bankIdlastName} ${bankIdfirstName}.]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
@@ -157,7 +157,7 @@ execution.setVariable('sSum', sum);
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення зареєстроване. ${sPosluga_name}]]></activiti:expression>
@@ -183,7 +183,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -199,7 +199,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення зареєстроване. ${sPosluga_name}]]></activiti:expression>
@@ -230,7 +230,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -330,7 +330,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення передано в ДАБІ. ${sPosluga_name}]]></activiti:expression>
@@ -350,7 +350,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] peredano v UDABK. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] peredano v UDABK. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -363,7 +363,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Відмова ЦНАП. ${sPosluga_name}]]></activiti:expression>
@@ -374,7 +374,7 @@ ${sNameOrgan}<br />
 По вашому зверненню №[sID_Order] винесено відмову.<br />
 Заява не пройшла перевірку в ЦНАПі.<br />
 <p>Причина відмови: ${comment}</p>
-Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
+Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br />
@@ -385,7 +385,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -398,7 +398,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Відмова ЦНАП. ${sPosluga_name}]]></activiti:expression>
@@ -409,7 +409,7 @@ ${sNameOrgan}<br />
 По вашому зверненню №[sID_Order] винесено відмову.<br />
 Заява не пройшла перевірку в ЦНАПі.<br />
 <p>Причина відмови: ${comment}</p>
-Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
+Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
 ${sNameOrgan}<br />
@@ -468,7 +468,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Відмова ДАБІ. ${sPosluga_name}]]></activiti:expression>
@@ -479,7 +479,7 @@ ${sNameOrgan}<br />
 По вашому зверненню №[sID_Order] винесено відмову.<br />
 Заява не пройшла перевірку в УДАБК.<br />
 <p>Причина відмови: ${commentCN}</p>
-Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
+Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
 У разі подання повторної заявки, при вході під тим же логіном, поля будуть заповнені автоматично.<br />
 Якщо вам потрібен документ з відмовою ви можете отримати його в ЦНАПі.<br /><br />
 ${sAddress}<br />
@@ -495,7 +495,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${fileVidpov}]]></activiti:expression>
@@ -508,7 +508,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Контроль. Відмова ДАБІ. ${sPosluga_name}]]></activiti:expression>
@@ -519,7 +519,7 @@ ${sNameOrgan}<br />
 По вашому зверненню №[sID_Order] винесено відмову.<br />
 Заява не пройшла перевірку в УДАБК.<br />
 <p>Причина відмови: ${commentCN}</p>
-Ви можете подати ще одну заявку на порталі <a href="https://igov.org.ua/">igov.org.ua</a>
+Ви можете подати ще одну заявку на порталі <a href="https://igov.gov.ua/">igov.gov.ua</a>
 У разі подання повторної заявки, при вході під тим же логіном, поля будуть заповнені автоматично.<br />
 Якщо вам потрібен документ з відмовою ви можете отримати його в ЦНАПі.<br /><br />
 ${sAddress}<br />
@@ -539,7 +539,7 @@ ${sNameOrgan}<br />
     <serviceTask id="servicetask8" name="ДАБІ все ОК" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -568,7 +568,7 @@ ${sNameOrgan}<br/>
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -584,7 +584,7 @@ ${sNameOrgan}<br/>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення задоволено. Оплатіть доставку поштою. ${sPosluga_name}]]></activiti:expression>
@@ -612,7 +612,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Oplatit` dostavky poshtoyu. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Oplatit` dostavky poshtoyu. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -638,7 +638,7 @@ execution.setVariable('sCountPayment', src)
     <serviceTask id="servicetask11" name="Нема Оплати" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -667,7 +667,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask16" name="Нема оплати в ЦНАП" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${sMailClerk}]]></activiti:expression>
@@ -693,7 +693,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask14" name="Оплата підтверджена" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -791,7 +791,7 @@ ${sNameOrgan}<br/>
     <serviceTask id="servicetask12" name="ЦНАП передав лист пошті" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -828,7 +828,7 @@ ${sNameOrgan}<br/>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Відповідь надіслано. ${sPosluga_name}]]></activiti:expression>
@@ -852,7 +852,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vidpovid na vashe zvernennya [sID_Order] vidpravleno poshtoyu. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vidpovid na vashe zvernennya [sID_Order] vidpravleno poshtoyu. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>

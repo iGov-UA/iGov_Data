@@ -54,7 +54,7 @@
     <serviceTask id="servicetask1" name="Сповіщення співробітника" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
         <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${sMailClerk_loda}</activiti:expression>
@@ -73,7 +73,7 @@
         
          <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -162,7 +162,7 @@ ${sNameOrgan}<br>
     <serviceTask id="servicetask2" name="Лист-привятання з реєстрацією проекту" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
         <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -185,7 +185,7 @@ ${sNameOrgan}&lt;br&gt;
           <activiti:expression>${privatePhone}</activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression>Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email</activiti:expression>
+          <activiti:expression>Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email</activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression>" "</activiti:expression>
@@ -198,7 +198,7 @@ ${sNameOrgan}&lt;br&gt;
     <serviceTask id="servicetask3" name="Лист-відмова" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
          <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>${email}</activiti:expression>
@@ -212,7 +212,7 @@ ${sNameOrgan}&lt;br&gt;
 &lt;p&gt;На жаль, Ваше звернення було відхилено. &lt;br&gt;
 &lt;p&gt;Причина в наступному:&lt;br&gt;
 ${scomment}&lt;/p&gt;
-&lt;p&gt;Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.org.ua/ target="_blank"&gt;igov.org.ua&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Звертаємо увагу, Ви можете заповнити заявку повторно на порталі &lt;a href="https://igov.gov.ua/ target="_blank"&gt;igov.gov.ua&lt;/a&gt;&lt;/p&gt;
 ${sPhoneOrgan}&lt;br&gt;
 [pattern/mail/_common_signature_start.html]
 ${sNameOrgan}&lt;br&gt;
@@ -224,7 +224,7 @@ ${sNameOrgan}&lt;br&gt;
           <activiti:expression>${privatePhone}</activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression>Za Vashym zvernennyam  [sID_Order]  vyneseno vidmovu v nadanni poslugy. Detali: igov.org.ua/journal abo u Vashomu email</activiti:expression>
+          <activiti:expression>Za Vashym zvernennyam  [sID_Order]  vyneseno vidmovu v nadanni poslugy. Detali: igov.gov.ua/journal abo u Vashomu email</activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression>" "</activiti:expression>

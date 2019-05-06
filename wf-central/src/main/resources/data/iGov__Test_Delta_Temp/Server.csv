@@ -1,7 +1,7 @@
 nID;sID;sType;sURL_Alpha;sURL_Beta;sURL_Omega;sURL
-0;Common_Region_Old;Region;;;;https://beta-old.test.region.igov.org.ua/wf
-1;Common_Central_Old;Region;;;;https://beta-old.test.igov.org.ua/wf
+0;Common_Region_Old;Region;;;;https://beta-old.test.region.igov.gov.ua/wf
+1;Common_Central_Old;Region;;;;https://beta-old.test.igov.gov.ua/wf
 2;Kiev_Region;Region;;;;https://test.admin.es.kievcity.gov.ua/wf
-4;Common_Central;Central;;;;https://delta-temp.test.igov.org.ua/wf
-5;Common_Region;Region;;;;https://delta-temp.test.region.igov.org.ua/wf
-11;MVD_CSC_Region;Region;;;;https://mvs-sc.test.region.igov.org.ua:8443/wf
+4;Common_Central;Central;;;;https://delta-temp.test.igov.gov.ua/wf
+5;Common_Region;Region;;;;https://delta-temp.test.region.igov.gov.ua/wf
+11;MVD_CSC_Region;Region;;;;https://mvs-sc.test.region.igov.gov.ua:8443/wf

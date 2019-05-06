@@ -48,7 +48,7 @@
           <activiti:expression><![CDATA["${sMailClerk1}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нове звернення. Надання довідки про участь в приватизації житла державного житлового фонду]]></activiti:expression>
@@ -75,7 +75,7 @@
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Надання довідки про участь в приватизації житла державного житлового фонду]]></activiti:expression>
@@ -84,7 +84,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а), ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваше звернення № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> 
+				Ваше звернення № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> 
 				на отримання довідки про участь в приватизації житла державного житлового фонду, зареєстровано. 
 			</p>
 			<p>
@@ -152,13 +152,13 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Dani proyshly pervynnu perevirku". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Dani proyshly pervynnu perevirku". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Надання довідки про участь в приватизації житла державного житлового фонду]]></activiti:expression>
@@ -167,7 +167,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а), ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваше звернення № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> було оброблено.<br>			
+				Ваше звернення № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> було оброблено.<br>			
 				Ваші дані пройшли первинну перевірку. <br>
 				На протязі 14-ти днів ми надішлемо Вам електронного листа з рішенням.
 			</p>
@@ -230,13 +230,13 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Za Vashym zvernennyam [sID_Order] vyneseno vidmovu v nadanni poslugy. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Надання довідки про участь в приватизації житла державного житлового фонду]]></activiti:expression>
@@ -245,14 +245,14 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а), ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваше звернення № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> було оброблено.<br>			
+				Ваше звернення № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> було оброблено.<br>			
 			    На жаль, змушені відмовити Вам у наданні послуги: "Надання довідки про участь в приватизації житла державного житлового фонду".
 			</p>
 		    	Причина в наступному:<br>
 				<b><i>${comment}</i></b>
 		    </p>
 		    <p>
-		    	Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/service/668/general">igov.org.ua</a>
+		    	Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/service/668/general">igov.gov.ua</a>
 			</p>
 			<br>
 			За наявності питань можете звернутись за наступними контактами<br>
@@ -279,13 +279,13 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Надання довідки про участь в приватизації житла державного житлового фонду]]></activiti:expression>
@@ -294,7 +294,7 @@
           <activiti:expression><![CDATA[[pattern/mail/_common_header.html]
 			<h3>Шановний(-а), ${bankIdfirstName} ${bankIdmiddleName}.</h3>
 			<p>
-				Ваше звернення № <a href="https://igov.org.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> було оброблено.<br>			
+				Ваше звернення № <a href="https://igov.gov.ua/search?sID_Order=[sID_Order]">[sID_Order]</a> було оброблено.<br>			
 				Підготовка довідки про участь в приватизації житла державного житлового фонду, успішно завершена!
 			</p>
 			Оригінал документу Ви можете отримати в Центрі надання адміністративних послуг<br>

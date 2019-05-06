@@ -412,7 +412,7 @@
     <serviceTask id="servicetask1" name="негативна відповідь" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -469,7 +469,7 @@
                                     <p>
                                         З повагою,<br />
                                         Управління соціального захисту м.Києва<br />
-Команда Порталу державних послуг <a href="http://igov.org.ua">igov.org.ua</a>
+Команда Порталу державних послуг <a href="http://igov.gov.ua">igov.gov.ua</a>
                                     </p>
                                 </td>
                             </tr>
@@ -501,7 +501,7 @@
           <activiti:expression><![CDATA[${decision}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -561,7 +561,7 @@
                                     <p>
                                         З повагою,<br />
                                         Управління соціального захисту м.Києва<br />
-Команда Порталу державних послуг <a href="http://igov.org.ua">igov.org.ua</a>
+Команда Порталу державних послуг <a href="http://igov.gov.ua">igov.gov.ua</a>
                                     </p>
                                 </td>
                             </tr>
@@ -594,7 +594,7 @@
     <serviceTask id="servicetask3" name="відповідь у разі засідання комісії" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${decision}]]></activiti:expression>
@@ -657,7 +657,7 @@
                                     <p>
                                         З повагою,<br />
                                         Управління соціального захисту м.Києва<br />
-Команда Порталу державних послуг <a href="http://igov.org.ua">igov.org.ua</a>
+Команда Порталу державних послуг <a href="http://igov.gov.ua">igov.gov.ua</a>
                                     </p>
                                 </td>
                             </tr>
@@ -683,7 +683,7 @@
           <activiti:expression><![CDATA["${mail_employee}"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нове звернення. (Заявник:  ${bankIdfirstName} ${bankIdmiddleName} ${bankIdlastName})]]></activiti:expression>
@@ -701,7 +701,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення на тему "Отримання субсидії на оплату житлово-комунальних послуг"]]></activiti:expression>
@@ -720,7 +720,7 @@
     <serviceTask id="servicetask6" name="неправильно заповнена заява" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -730,7 +730,7 @@
 <b>Шановний(-а) ${bankIdfirstName} ${bankIdmiddleName}.</b><br /><br />
 <p>На жаль, Ваше звернення щодо отримання  субсидії на оплату житлово-комунальних послуг було відхилено через недостатню або неправильну інформацію.</p>
 <p>${comment}</p>
-<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua">igov.org.ua</a></p>
+<p>Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua">igov.gov.ua</a></p>
 [pattern/mail/_common_signature_start.html]
 Управління соціального захисту м.Києва<br />
 [pattern/mail/_common_signature_end.html]

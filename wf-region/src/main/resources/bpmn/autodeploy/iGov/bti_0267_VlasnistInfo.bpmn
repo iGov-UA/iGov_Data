@@ -79,7 +79,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:expression><![CDATA[noreply@igov.org.ua]]></activiti:expression>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Звернення зареєстроване. ${sPosluga_name}]]></activiti:expression>
@@ -99,7 +99,7 @@
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] zareestrovano. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[" "]]></activiti:expression>
@@ -170,7 +170,7 @@
     <serviceTask id="servicetask4" name="Сповіщення про відмову" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -198,7 +198,7 @@ ${comment}<br/>
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Za Vashym zapytom  [sID_Order]  vyneseno vidmovu v nadanni poslugy. 
-Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -211,7 +211,7 @@ execution.setVariable('sID_Payment', Payment)
     <serviceTask id="servicetask2" name="Лист оплата" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -239,7 +239,7 @@ execution.setVariable('sID_Payment', Payment)
 <br/>
 <font color="#32CD32">Якщо виникає помилка при переході на сторінку оплати, це може бути пов'язано з особливостями вашого поштового сервісу.<br/>
 Спробуйте оплатити за допомогою Журналу.<br/></font>
-<a href="https://igov.org.ua/journal" target="_blank">Посилання на Журнал</a><br/>
+<a href="https://igov.gov.ua/journal" target="_blank">Посилання на Журнал</a><br/>
 
 
 <br/><br/>
@@ -266,7 +266,7 @@ execution.setVariable('sID_Payment', Payment)
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Vash zapyt [sID_Order] ochikuje splaty poslugy.
-Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -294,7 +294,7 @@ execution.setVariable('sCountPayment', src)
     <serviceTask id="servicetask5" name="Немає оплати" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -321,14 +321,14 @@ execution.setVariable('sCountPayment', src)
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Na zhal Za Vashym zapytom  [sID_Order]  vyneseno vidmovu v nadanni poslugy. 
-Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
     <serviceTask id="servicetask7" name="Результат оплати" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -413,7 +413,7 @@ Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
     <serviceTask id="servicetask3" name="Результат опрацювання" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
@@ -457,7 +457,7 @@ ${commentBTI}<br/>
         </activiti:field>
         <activiti:field name="sText_SMS">
           <activiti:expression><![CDATA[Na Vash zapyt [sID_Order] pidhotovleno vidpovid.
-Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

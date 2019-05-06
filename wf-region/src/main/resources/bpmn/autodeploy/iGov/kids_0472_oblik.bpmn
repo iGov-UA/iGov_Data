@@ -36,7 +36,7 @@
         <activiti:formProperty id="sDocHealth" name="Висновок про стан здоров'я заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDocDrug" name="Довідка від нарколога та психіатра для осіб, які проживають разом із заявником; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDocSudimost" name="Довідка про наявність чи відсутність судимості, видана органами внутрішніх справ за місцем проживання заявника; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sInfo_1" name=" " type="label" default="В деяких регіонах Ви можете замовити довідку через портал iGov за &lt;a href=&quot;https://igov.org.ua/service/1/general&quot; target=&quot;_blank&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sInfo_1" name=" " type="label" default="В деяких регіонах Ви можете замовити довідку через портал iGov за &lt;a href=&quot;https://igov.gov.ua/service/1/general&quot; target=&quot;_blank&quot;&gt;посиланням&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="sDocAllAgree" name="Письмова згода всіх повнолітніх членів сім'ї, що проживають разом з особою, яка бажає взяти дитину під опіку; завантажте єдиним архівом;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="sInfo_2" name=" " type="label" default="&lt;a href=&quot;https://docs.google.com/uc?authuser=0&amp;id=0B6mOkUg9oq1zR2MxN2hEYUNETWM&amp;export=download&quot; target=&quot;_blank&quot;&gt;бланк заяви-згоди&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="sInfo_3" name=" " type="label" default="Згідно законодавчо визначеної процедури буде проведено обстеження житлово-побутових умов, про дату та час перевірки Ви отримаєте окреме повідомлення на електронну пошту"></activiti:formProperty>
@@ -165,7 +165,7 @@
           <activiti:expression><![CDATA[middayka@yandex.ru]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове  звернення. Постановка на облік потенційних опікунів, піклувальників, прийомних батьків та батьків-вихователів]]></activiti:string>
@@ -181,7 +181,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Постановка на облік потенційних опікунів, піклувальників, прийомних батьків та батьків-вихователів]]></activiti:string>
@@ -207,7 +207,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Постановка на облік потенційних опікунів, піклувальників, прийомних батьків та батьків-вихователів]]></activiti:string>
@@ -238,7 +238,7 @@ ${sNameOrgan},<br>
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Звернення на тему: Постановка на облік потенційних опікунів, піклувальників, прийомних батьків та батьків-вихователів]]></activiti:string>
@@ -248,7 +248,7 @@ ${sNameOrgan},<br>
 [pattern/mail/new_design/_common_content_start.html]
 На жаль, Ваше звернення щодо постановки на облік потенційних опікунів, піклувальників, прийомних батьків та батьків-вихователів відхилено через недостатню або неправильну інформацію.<br />
 ${comment_1}<br />
-Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.org.ua/" target="_blank">igov.org.ua</a><br />
+Звертаємо увагу, Ви можете заповнити заявку повторно на порталі <a href="https://igov.gov.ua/" target="_blank">igov.gov.ua</a><br />
 ${sPhoneOrgan}<br />
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
@@ -261,7 +261,7 @@ ${sNameOrgan},<br>
     <serviceTask id="servicetask2" name="повідомлення громадянина про постановку на облік" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -294,7 +294,7 @@ ${sNameOrgan},<br>
     <serviceTask id="servicetask7" name="відмова у постановці на облік" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[test_noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[test_noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>

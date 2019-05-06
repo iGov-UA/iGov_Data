@@ -65,7 +65,7 @@
     <serviceTask id="servicetask2" name="Відповідь у разі нехватки документів" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression>"${email}"</activiti:expression>
@@ -126,7 +126,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;
@@ -158,7 +158,7 @@
           <activiti:expression>${email}</activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Державна реєстрація припинення підприємницької діяльності фізичної особи - підприємця за її рішенням.]]></activiti:string>
@@ -220,7 +220,7 @@
                                     &lt;p&gt;
                                         З повагою,&lt;br /&gt;
                                         Укрпошта,&lt;br /&gt;
-                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.org.ua&lt;/a&gt;.
+                                        Команда Порталу державних послуг &lt;a href="#current-page"&gt;igov.gov.ua&lt;/a&gt;.
                                     &lt;/p&gt;
                                 &lt;/td&gt;
                             &lt;/tr&gt;

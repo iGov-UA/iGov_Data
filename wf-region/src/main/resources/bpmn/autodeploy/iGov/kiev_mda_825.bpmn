@@ -1080,7 +1080,7 @@
           <activiti:string><![CDATA[Нове звернення на тему: Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	
@@ -1091,7 +1091,7 @@
     <serviceTask id="servicetask4" name="Повідомлення громадянина про реєстрацію зверенння + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1123,14 +1123,14 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Zareiestrovano". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Zareiestrovano". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
     <serviceTask id="servicetask3" name="повідомлення громадянина про присвоєння поштової адреси + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1165,7 +1165,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, adresa prysvoiena. Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, adresa prysvoiena. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1177,7 +1177,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення на тему: Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
@@ -1206,7 +1206,7 @@ ${sNameOrgan}<br />
     <serviceTask id="servicetask8" name="повідомлення громадянина про підготовлений лист-відмову + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -1241,7 +1241,7 @@ ${sNameOrgan}<br />
           <activiti:expression><![CDATA[${phone}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Vidhileno". Detali: igov.org.ua/journal abo u Vashomu email]]></activiti:expression>
+          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno na "Vidhileno". Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -1263,7 +1263,7 @@ ${sNameOrgan}<br />
           <activiti:string><![CDATA[Потрібно опрацювати (етап Перегляд документів та прийняття рішення Відділом правового забезпечення): Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	
@@ -1280,7 +1280,7 @@ ${sNameOrgan}<br />
           <activiti:string><![CDATA[Потрібно опрацювати (етап Перегляд документів та прийняття рішення Службою містобудівного кадастру): Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	
@@ -1311,7 +1311,7 @@ ${sNameOrgan}<br />
           <activiti:string><![CDATA[Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${nFileVidpovid},${nFileVidpovid_Vyityag}]]></activiti:expression>
@@ -1337,7 +1337,7 @@ ${sNameOrgan_Proccess}<br />
           <activiti:string><![CDATA[Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${nFileVidpovid},${nFileVidpovid_Vyityag}]]></activiti:expression>
@@ -1363,7 +1363,7 @@ ${sNameOrgan_Proccess}<br />
           <activiti:string><![CDATA[Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${nFileVidpovid},${nFileVidpovid_Vyityag}]]></activiti:expression>
@@ -1389,7 +1389,7 @@ ${sNameOrgan_Proccess}<br />
           <activiti:string><![CDATA[Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
           <activiti:expression><![CDATA[${nFileVidpovid},${nFileVidpovid_Vyityag}]]></activiti:expression>
@@ -1440,7 +1440,7 @@ execution.setVariable('Activity', per3)
           <activiti:string><![CDATA[Необхідно підписати документ щодо присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	
@@ -1457,7 +1457,7 @@ execution.setVariable('Activity', per3)
           <activiti:string><![CDATA[Необхідно підписати документ щодо присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	
@@ -1479,7 +1479,7 @@ execution.setVariable('Activity', per3)
           <activiti:string><![CDATA[Необхідно підписати документ щодо присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	
@@ -1509,7 +1509,7 @@ execution.setVariable('Activity', per3)
           <activiti:string><![CDATA[Повідомлення співробітника Служби містобудівного кадастру про підтвердження внесення інформації до реєстру адрес: Присвоєння поштових адрес об'єктам нерухомості (нежитлові приміщення)]]></activiti:string>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[Звернення [sID_Order].	

@@ -155,7 +155,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Дніпропетровськ,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -179,7 +179,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Дніпропетровськ ЦНАП - Копії рішень міської ради про продаж земельних ділянок державної та комунальної власності]]></activiti:string>
@@ -192,7 +192,7 @@
     <serviceTask id="servicetask2" name="Підтвердження опрацювання заяви" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
           <activiti:expression><![CDATA["${email}"]]></activiti:expression>
@@ -261,7 +261,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Дніпропетровськ,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>

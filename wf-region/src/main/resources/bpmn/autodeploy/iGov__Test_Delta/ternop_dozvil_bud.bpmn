@@ -132,7 +132,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Тернопіль,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -156,7 +156,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Тернополь ОДА. Надання містобудівних умов та обмежень забудови земельної ділянки]]></activiti:string>
@@ -228,7 +228,7 @@
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Тернопіль,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -252,7 +252,7 @@
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="charset">
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
@@ -331,7 +331,7 @@ skype: cnap-ternopil
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Тернопіль,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -355,7 +355,7 @@ skype: cnap-ternopil
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="charset">
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
@@ -428,7 +428,7 @@ skype: cnap-ternopil
                                     <p>
                                         З повагою,<br />
                                         ЦНАП м. Тернопіль,<br />
-                                        Команда Порталу державних послуг <a href="#current-page">igov.org.ua</a>.
+                                        Команда Порталу державних послуг <a href="#current-page">igov.gov.ua</a>.
                                     </p>
                                 </td>
                             </tr>
@@ -452,7 +452,7 @@ skype: cnap-ternopil
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
+          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="charset">
           <activiti:string><![CDATA[UTF-8]]></activiti:string>

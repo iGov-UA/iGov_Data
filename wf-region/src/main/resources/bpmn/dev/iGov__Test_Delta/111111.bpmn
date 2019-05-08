@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="common_mvd_3" name="(загальна) - Перереєстрації зброї" isExecutable="true">
+    <subProcess id="eventsubprocess1" name="ВХІДНА КОРЕСПОНДЕНЦІЯ" triggeredByEvent="true">
+      <userTask id="usertask3" name="Реєстрація документа. Канцелярія."></userTask>
+      <userTask id="usertask4" name="Розподілення обов'язків. Накладення резолюції. Призначення виконавців, відповідальних, редакторів та коментаторів."></userTask>
+      <sequenceFlow id="flow7" sourceRef="usertask3" targetRef="usertask4"></sequenceFlow>
+      <sequenceFlow id="flow8" sourceRef="usertask4" targetRef="usertask5"></sequenceFlow>
+    </subProcess>
+    <subProcess id="eventsubprocess2" name="ВИХІДНА КОРЕСПОНДЕНЦІЯ" triggeredByEvent="true">
+      <userTask id="usertask5" name="Створення відповіді або нового вихідного документа. Перевірка, ознаймлення, виправлення помилок. Затвердження документу."></userTask>
+      <userTask id="usertask6" name="Присвоєння вихідного номеру. Надсилання відповаіді. Канцелярія."></userTask>
+      <sequenceFlow id="flow9" sourceRef="usertask5" targetRef="usertask6"></sequenceFlow>
+      <sequenceFlow id="flow10" name="Електронна відповідь або лист громадянину про запрошення" sourceRef="usertask6" targetRef="mailtask2"></sequenceFlow>
+      <startEvent id="startevent4" name="Start"></startEvent>
+      <sequenceFlow id="flow12" sourceRef="startevent4" targetRef="usertask5"></sequenceFlow>
+      <sequenceFlow id="flow13" name="Відповідь поштою" sourceRef="usertask6" targetRef="endevent2"></sequenceFlow>
+    </subProcess>
+    <subProcess id="eventsubprocess3" name="Замовлення послуг на iGov" triggeredByEvent="true">
+      <startEvent id="startevent2" name="Start"></startEvent>
+      <sequenceFlow id="flow2" sourceRef="startevent2" targetRef="mailtask1"></sequenceFlow>
+      <serviceTask id="mailtask1" name="Листи на email" activiti:type="mail"></serviceTask>
+      <startEvent id="startevent1" name="Start"></startEvent>
+      <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="mailtask1"></sequenceFlow>
+      <startEvent id="startevent3" name="Start"></startEvent>
+      <sequenceFlow id="flow3" sourceRef="startevent3" targetRef="mailtask1"></sequenceFlow>
+      <sequenceFlow id="flow6" sourceRef="mailtask1" targetRef="usertask3"></sequenceFlow>
+    </subProcess>
+    <serviceTask id="mailtask2" name="Листи на email
+Електронна відповідь" activiti:type="mail"></serviceTask>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow11" sourceRef="mailtask2" targetRef="endevent1"></sequenceFlow>
+    <endEvent id="endevent2" name="End"></endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_common_mvd_3">
+    <bpmndi:BPMNPlane bpmnElement="common_mvd_3" id="BPMNPlane_common_mvd_3">
+      <bpmndi:BPMNShape bpmnElement="eventsubprocess1" id="BPMNShape_eventsubprocess1">
+        <omgdc:Bounds height="281.0" width="631.0" x="510.0" y="100.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask3" id="BPMNShape_usertask3">
+        <omgdc:Bounds height="111.0" width="121.0" x="540.0" y="188.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask4" id="BPMNShape_usertask4">
+        <omgdc:Bounds height="161.0" width="221.0" x="780.0" y="163.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="eventsubprocess2" id="BPMNShape_eventsubprocess2">
+        <omgdc:Bounds height="261.0" width="631.0" x="510.0" y="460.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask5" id="BPMNShape_usertask5">
+        <omgdc:Bounds height="171.0" width="221.0" x="780.0" y="492.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask6" id="BPMNShape_usertask6">
+        <omgdc:Bounds height="111.0" width="121.0" x="540.0" y="522.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="startevent4" id="BPMNShape_startevent4">
+        <omgdc:Bounds height="35.0" width="35.0" x="1060.0" y="560.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="eventsubprocess3" id="BPMNShape_eventsubprocess3">
+        <omgdc:Bounds height="281.0" width="291.0" x="160.0" y="100.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="startevent2" id="BPMNShape_startevent2">
+        <omgdc:Bounds height="35.0" width="35.0" x="260.0" y="146.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mailtask1" id="BPMNShape_mailtask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="310.0" y="216.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="200.0" y="226.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="startevent3" id="BPMNShape_startevent3">
+        <omgdc:Bounds height="35.0" width="35.0" x="260.0" y="306.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="mailtask2" id="BPMNShape_mailtask2">
+        <omgdc:Bounds height="81.0" width="115.0" x="280.0" y="537.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="200.0" y="560.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent2" id="BPMNShape_endevent2">
+        <omgdc:Bounds height="35.0" width="35.0" x="200.0" y="670.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="661.0" y="243.0"></omgdi:waypoint>
+        <omgdi:waypoint x="780.0" y="243.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow8" id="BPMNEdge_flow8">
+        <omgdi:waypoint x="890.0" y="324.0"></omgdi:waypoint>
+        <omgdi:waypoint x="890.0" y="492.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
+        <omgdi:waypoint x="780.0" y="577.0"></omgdi:waypoint>
+        <omgdi:waypoint x="661.0" y="577.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
+        <omgdi:waypoint x="540.0" y="577.0"></omgdi:waypoint>
+        <omgdi:waypoint x="395.0" y="577.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="70.0" width="100.0" x="310.0" y="444.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow12" id="BPMNEdge_flow12">
+        <omgdi:waypoint x="1060.0" y="577.0"></omgdi:waypoint>
+        <omgdi:waypoint x="1001.0" y="577.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow13" id="BPMNEdge_flow13">
+        <omgdi:waypoint x="600.0" y="633.0"></omgdi:waypoint>
+        <omgdi:waypoint x="599.0" y="687.0"></omgdi:waypoint>
+        <omgdi:waypoint x="235.0" y="687.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="100.0" x="350.0" y="657.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="277.0" y="181.0"></omgdi:waypoint>
+        <omgdi:waypoint x="362.0" y="216.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="235.0" y="243.0"></omgdi:waypoint>
+        <omgdi:waypoint x="310.0" y="243.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="277.0" y="306.0"></omgdi:waypoint>
+        <omgdi:waypoint x="362.0" y="271.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="415.0" y="243.0"></omgdi:waypoint>
+        <omgdi:waypoint x="540.0" y="243.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
+        <omgdi:waypoint x="280.0" y="577.0"></omgdi:waypoint>
+        <omgdi:waypoint x="235.0" y="577.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

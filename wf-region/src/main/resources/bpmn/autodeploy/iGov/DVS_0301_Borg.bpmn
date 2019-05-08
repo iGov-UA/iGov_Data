@@ -97,7 +97,7 @@
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask1" name="Надання інформації" activiti:candidateGroups="DVS_TEST">
+    <userTask id="usertask1" name="Надання інформації" activiti:candidateGroups="DVS_oblast">
       <extensionElements>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;asOsoba&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" writable="false">

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="myProcess" name="My process" isExecutable="true">
+    <startEvent id="startevent1" name="Start">
+      <extensionElements>
+        <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;asOsoba&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdinn" name="Ваш ІПН" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="asStatus" name="Пільгова категорія" type="enum" required="true">
+          <activiti:value id="sStatus1" name="Пільговий статус відсутній"></activiti:value>
+          <activiti:value id="sStatus2" name="Учасник війни"></activiti:value>
+          <activiti:value id="sStatus3" name="Дитина війни"></activiti:value>
+          <activiti:value id="sStatus4" name="Інвалід Великої Вітчізняної війни"></activiti:value>
+          <activiti:value id="sStatus5" name="Інвалід війни"></activiti:value>
+          <activiti:value id="sStatus6" name="Учасник бойових дій"></activiti:value>
+          <activiti:value id="sStatus7" name="Ветеран праці"></activiti:value>
+          <activiti:value id="sStatus8" name="Інвалід І групи"></activiti:value>
+          <activiti:value id="sStatus9" name="Інвалід ІІ групи"></activiti:value>
+          <activiti:value id="sStatus10" name="Інвалід ІІІ групи"></activiti:value>
+          <activiti:value id="sStatus11" name="Дитина-інвалід"></activiti:value>
+          <activiti:value id="sStatus12" name="Одинока мати"></activiti:value>
+          <activiti:value id="sStatus13" name="Мати-героїня"></activiti:value>
+          <activiti:value id="sStatus14" name="Багатодітна сім'я"></activiti:value>
+          <activiti:value id="sStatus15" name="Особа, що потерпіла від Чорнобилської катастрофи"></activiti:value>
+          <activiti:value id="sStatus16" name="Учасник ліквідації наслідків аварії на Чорнобильській АЕС"></activiti:value>
+          <activiti:value id="sStatus17" name="Герой України"></activiti:value>
+          <activiti:value id="sStatus18" name="Герой Радянського Союзу"></activiti:value>
+          <activiti:value id="sStatus19" name="Герой Соціалістичної Праці"></activiti:value>
+          <activiti:value id="sStatus20" name="Дитина"></activiti:value>
+          <activiti:value id="sStatus21" name="Інші категорії"></activiti:value>
+        </activiti:formProperty>
+                
+        <activiti:formProperty id="markersLine_A" name="Інформація про адресу заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_A&quot;:{&quot;aElement_ID&quot;:[&quot;sPostInd&quot;],&quot;sValue&quot;:&quot;Інформація про адресу заявника&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sPostInd" name="Поштовий індекс" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sMisto" name="Місто, селище, тощо" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="asRaion" name="Район міста" type="enum" required="true">
+          <activiti:value id="sAND" name="Амур-Нижньодніпровський"></activiti:value>
+          <activiti:value id="sIndus" name="Індустріальний"></activiti:value>
+          <activiti:value id="sNovok" name="Новокодацький"></activiti:value>
+          <activiti:value id="sSamar" name="Самарський"></activiti:value>
+          <activiti:value id="sSobor" name="Соборний"></activiti:value>
+          <activiti:value id="sCentr" name="Центральний"></activiti:value>
+          <activiti:value id="sChech" name="Чечелівський"></activiti:value>
+          <activiti:value id="sShevch" name="Шевченковський"></activiti:value>
+          <activiti:value id="sTaromske" name="Таромське"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="asVulTipe" name="Тип вулиці" type="enum" required="true">
+          <activiti:value id="VulTipe1" name="алея"></activiti:value>
+          <activiti:value id="VulTipe2" name="балка"></activiti:value>
+          <activiti:value id="VulTipe3" name="бульвар"></activiti:value>
+          <activiti:value id="VulTipe4" name="вул."></activiti:value>
+          <activiti:value id="VulTipe5" name="глухий кут"></activiti:value>
+          <activiti:value id="VulTipe6" name="майдан"></activiti:value>
+          <activiti:value id="VulTipe7" name="наб."></activiti:value>
+          <activiti:value id="VulTipe8" name="пров."></activiti:value>
+          <activiti:value id="VulTipe9" name="просп."></activiti:value>
+          <activiti:value id="VulTipe10" name="спуск"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sBudNum" name="Номер будинку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sKorpNum" name="Номер корпусу" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sRvartNum" name="Номер квартири" type="string" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_2" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sZaputOpus&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sZaputOpus" name="Опишіть ситуацію або підстави запиту;(розгорнутий опис проблеми, це допоможе отримати потрібну вам інформацію)" type="fileHTML" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_Dodatok" name="Додаткові документи;(в разі необхідності додайте графічні матеріали або документи, якщо файлів кілька додайте ZIP архівом або PDF файлом);bNew=true" type="file"></activiti:formProperty>
+      </extensionElements>
+    </startEvent>
+    <serviceTask id="servicetask1" name="Service Task"></serviceTask>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="servicetask1"></sequenceFlow>
+    <userTask id="usertask1" name="User Task"></userTask>
+    <sequenceFlow id="flow2" sourceRef="servicetask1" targetRef="usertask1"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <sequenceFlow id="flow3" sourceRef="usertask1" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_myProcess">
+    <bpmndi:BPMNPlane bpmnElement="myProcess" id="BPMNPlane_myProcess">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="230.0" y="240.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="servicetask1" id="BPMNShape_servicetask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="290.0" y="230.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="55.0" width="105.0" x="430.0" y="230.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="560.0" y="240.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="265.0" y="257.0"></omgdi:waypoint>
+        <omgdi:waypoint x="290.0" y="257.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="395.0" y="257.0"></omgdi:waypoint>
+        <omgdi:waypoint x="430.0" y="257.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="535.0" y="257.0"></omgdi:waypoint>
+        <omgdi:waypoint x="560.0" y="257.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

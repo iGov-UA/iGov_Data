@@ -3,7 +3,7 @@
   <process id="DVS_0302_Konsult" name="Консультація щодо виконавчого провадження" isExecutable="true">
     <startEvent id="startevent1" name="Start">
       <extensionElements>
-        <activiti:formProperty id="sLabeInfo" name=" ; ;labelType=info" type="label" default="УВАГА! &lt;a href=&quot;https://delta.test.igov.gov.ua/service/302/instruction &quot; target=&quot;_blank&quot;&gt;Питання, що виникають найчастіше (FAQ)&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabeInfo" name=" ; ;labelType=info" type="label" default="УВАГА! &lt;a href=&quot;https://igov.gov.ua/service/302/instruction &quot; target=&quot;_blank&quot;&gt;Питання, що виникають найчастіше (FAQ)&lt;/a&gt;"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;asOsoba&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">

@@ -2,7 +2,8 @@
   "motion": {
     "ShowFieldsOnCondition_sEnamBorg": {
       "aField_ID": [
-        "nFile_Postanova"
+        "nFile_Postanova",
+        "comment"
         
       ],
       "asID_Field": {
@@ -12,7 +13,8 @@
     },
     "RequiredFieldsOnCondition_sEnamBorg": {
       "aField_ID": [
-        "nFile_Postanova"
+        "nFile_Postanova",
+        "comment"
       ],
       "asID_Field": {
         "sCondit1": "asDecide"

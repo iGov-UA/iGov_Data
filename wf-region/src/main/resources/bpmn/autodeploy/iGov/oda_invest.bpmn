@@ -9,7 +9,7 @@
         <activiti:formProperty id="sPhoneOrgan" name="телефон для довідок ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="адреса; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sDepartamentOda" name="Департамент; ;bVisible=false" type="string" default="Департамент зовнішніх зносин, зовнішньоекономічної та інвестиційної діяльності, відділ сприяння залученню інвестицій та міжнародних виставок"></activiti:formProperty>
+        <activiti:formProperty id="sDepartamentOda" name="Департамент; ;bVisible=false" type="string" default="Департамент економічного розвитку, зовнішньоекономічної діяльності та туризму, Відділ інвестиційної діяльності та туризму"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>

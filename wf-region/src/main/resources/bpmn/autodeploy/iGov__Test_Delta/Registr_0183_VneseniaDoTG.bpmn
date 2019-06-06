@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="Registr_0022_VneseniaDoTG" name="Внесення до реєстру територіальної громади" isExecutable="true">
+  <process id="Registr_0183_VneseniaDoTG" name="Внесення до реєстру територіальної громади" isExecutable="true">
     <documentation>06.06.19</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
@@ -12,6 +12,11 @@
         <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" default="паспорт " required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="asViysko" name="Чи перебуваєте на військовому обліку" type="enum" required="true">
+          <activiti:value id="sEnamTak" name="Так"></activiti:value>
+          <activiti:value id="sEnamNo" name="Ні"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="tViysko" name="Дані про військовий облік; (звання, дата та номер документу)" type="textArea" required="true"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_2" name="Інформація про житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Вкажіть тип вашого будинку" type="enum" required="true">
@@ -50,7 +55,7 @@
         <activiti:formProperty id="nFile_DK_KartReestr" name="Картка реєстрації особи;(якщо додатково до домової книги маєте цей документ, завантажте його сканкопію, обов'язково відскануйте картку з двох сторін);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="sLabe_DomovKnig" name=" ; ;labelType=info" type="label" default="Коли будете отримувати довідку, обов'язково візьміть з собою оригінал домової книги та картку реєстрації особи (за наявністю)."></activiti:formProperty>
         <activiti:formProperty id="nFile_JutVlasn" name="Право власності на житло;(повна сканкопія всіх сторінок оригіналу, де має бути видно номер і дату документа);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markerZutlo" name="markerFiles" type="markers" default="${markerService.loadFromFile('form3/forma_3Dn_zutlo.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerVneseniaDoTG" name="markerVneseniaDoTG" type="markers" default="${markerService.loadFromFile('dms/VneseniaDoTG.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="markersLine_K" name="Контактні дані" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;phone&quot;],&quot;sValue&quot;:&quot;Контактні дані&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
@@ -59,7 +64,6 @@
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
-        
         
         <activiti:formProperty id="sWorkDay" name="Графік роботи; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта ЦНАП; ;bVisible=false" type="string"></activiti:formProperty>
@@ -87,8 +91,8 @@
     <sequenceFlow id="flow7" sourceRef="servicetask4" targetRef="endevent1"></sequenceFlow>
     <sequenceFlow id="flow8" sourceRef="servicetask3" targetRef="endevent1"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0022_VneseniaDoTG">
-    <bpmndi:BPMNPlane bpmnElement="Registr_0022_VneseniaDoTG" id="BPMNPlane_Registr_0022_VneseniaDoTG">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Registr_0183_VneseniaDoTG">
+    <bpmndi:BPMNPlane bpmnElement="Registr_0183_VneseniaDoTG" id="BPMNPlane_Registr_0183_VneseniaDoTG">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="170.0" y="190.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
@@ -133,14 +137,14 @@
         <omgdi:waypoint x="532.0" y="347.0"></omgdi:waypoint>
         <omgdi:waypoint x="501.0" y="347.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="400.0" y="307.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="42.0" x="400.0" y="307.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
         <omgdi:waypoint x="572.0" y="347.0"></omgdi:waypoint>
         <omgdi:waypoint x="604.0" y="347.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="606.0" y="307.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="80.0" x="606.0" y="307.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">

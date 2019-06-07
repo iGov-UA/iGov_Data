@@ -98,7 +98,7 @@
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 [pattern/mail/new_design/_common_content_start.html]
-<p> Ваше звернення про ${sPosluga_nameZV} прийнято в роботу. <br />
+<p> Ваше звернення про ${sPosluga_name} прийнято в роботу. <br />
 Повідомлення про результат розгляду заяви буде спрямоване на Ваш e-mail.</p><br/>
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]

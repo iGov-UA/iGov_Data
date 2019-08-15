@@ -291,7 +291,7 @@
     <serviceTask id="servicetask12" name="Service Task"></serviceTask>
     <sequenceFlow id="flow47" sourceRef="usertask2" targetRef="servicetask12"></sequenceFlow>
     <sequenceFlow id="flow48" sourceRef="servicetask12" targetRef="usertask1"></sequenceFlow>
-    <sequenceFlow id="flow49" sourceRef="exclusivegateway2" targetRef="exclusivegateway3"></sequenceFlow>
+    <sequenceFlow id="flow49" name="Територіальна компетенція" sourceRef="exclusivegateway2" targetRef="exclusivegateway3"></sequenceFlow>
     <sequenceFlow id="flow52" sourceRef="usertask5" targetRef="usertask4"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram__doc_DPSS_1441_SanEpid">
@@ -497,7 +497,8 @@
         <omgdi:waypoint x="710.0" y="129.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow30" id="BPMNEdge_flow30">
-        <omgdi:waypoint x="762.0" y="207.0"></omgdi:waypoint>
+        <omgdi:waypoint x="782.0" y="227.0"></omgdi:waypoint>
+        <omgdi:waypoint x="815.0" y="227.0"></omgdi:waypoint>
         <omgdi:waypoint x="912.0" y="161.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow31" id="BPMNEdge_flow31">
@@ -557,7 +558,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow46" id="BPMNEdge_flow46">
         <omgdi:waypoint x="762.0" y="247.0"></omgdi:waypoint>
-        <omgdi:waypoint x="761.0" y="499.0"></omgdi:waypoint>
+        <omgdi:waypoint x="761.0" y="480.0"></omgdi:waypoint>
         <omgdi:waypoint x="622.0" y="640.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow47" id="BPMNEdge_flow47">
@@ -574,6 +575,9 @@
         <omgdi:waypoint x="332.0" y="390.0"></omgdi:waypoint>
         <omgdi:waypoint x="474.0" y="390.0"></omgdi:waypoint>
         <omgdi:waypoint x="474.0" y="544.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="42.0" width="100.0" x="332.0" y="390.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow52" id="BPMNEdge_flow52">
         <omgdi:waypoint x="570.0" y="980.0"></omgdi:waypoint>

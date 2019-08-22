@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="Justice_0333_SkargRegistr.bpmn" name="Скарга до Міністерства юстиції України на рішення або дії державного реєстратора, територіального органу Міністерства юстиції України" isExecutable="true">
+  <process id="Justice_0333_SkargRegistr" name="Скарга до Міністерства юстиції України на рішення або дії державного реєстратора, територіального органу Міністерства юстиції України" isExecutable="true">
     <documentation>;bTemplated=true</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
@@ -702,8 +702,8 @@
     <endEvent id="endevent3" name="End"></endEvent>
     <sequenceFlow id="flow20" sourceRef="servicetask9" targetRef="endevent3"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_Justice_0333_SkargRegistr.bpmn">
-    <bpmndi:BPMNPlane bpmnElement="Justice_0333_SkargRegistr.bpmn" id="BPMNPlane_Justice_0333_SkargRegistr.bpmn">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Justice_0333_SkargRegistr">
+    <bpmndi:BPMNPlane bpmnElement="Justice_0333_SkargRegistr" id="BPMNPlane_Justice_0333_SkargRegistr">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
         <omgdc:Bounds height="35.0" width="35.0" x="52.0" y="75.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>

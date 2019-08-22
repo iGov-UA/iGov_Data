@@ -441,7 +441,7 @@
     <tbody>
     <tr>
         <td colspan="2" style="text-align: left;font-size: 15px;padding-bottom: 10px;">
-          Про порушення прав стало відомо [DateInfoPororush] числа наступним чином [tInfoPororush]:
+          Про порушення прав стало відомо [DateInfoPororush] числа наступним чином: [tInfoPororush].
         </td>
     </tr>
     </tbody>
@@ -752,6 +752,13 @@
     </tr>
     </tbody>
 </table>
+  
+<br>
+[FileRegistrRish]<br>
+[FileInshiDoku]<br>
+[FileDovirebist]<br>
+[FileDovirebistUO]<br>
+<br>
  
 <table style="width: 100%; border-collapse: collapse;">
                 <tbody>
@@ -771,25 +778,25 @@
   var ScrOsoba = "[asOsoba]";
   
   switch(ScrOsoba) {
-    case "sEnamFiz":
+    case "Фізична особа":
         document.getElementById("sEnamFiz").style.display = 'table';
         document.getElementById("sEnamFizP").style.display = 'none';
         document.getElementById("sEnamUrK").style.display = 'none';
         document.getElementById("sEnamUrP").style.display = 'none';
         break;
-    case "sEnamFizP":
+    case "Фізична особа (подає представник)":
         document.getElementById("sEnamFiz").style.display = 'none';
         document.getElementById("sEnamFizP").style.display = 'table';
         document.getElementById("sEnamUrK").style.display = 'none';
         document.getElementById("sEnamUrP").style.display = 'none';
         break;
-    case "sEnamUrK":
+    case "Юридична особа (подає керівник)":
         document.getElementById("sEnamFiz").style.display = 'none';
         document.getElementById("sEnamFizP").style.display = 'none';
         document.getElementById("sEnamUrK").style.display = 'table';
         document.getElementById("sEnamUrP").style.display = 'none';
         break;
-    case "sEnamUrP":
+    case "Юридична особа (подає представник)":
         document.getElementById("sEnamFiz").style.display = 'none';
         document.getElementById("sEnamFizP").style.display = 'none';
         document.getElementById("sEnamUrK").style.display = 'none';
@@ -806,35 +813,35 @@
     var ScrCategory = "[asSubjectCategory]";
   
   switch(ScrCategory) {
-    case "sEnamExecutiveCommittee":
+    case "Виконавчий комітет міської, сільської, селищної ради":
         document.getElementById("sEnamExecutiveCommittee").style.display = 'table';
         document.getElementById("sEnamDistrictAdministration").style.display = 'none';
         document.getElementById("sEnamAccredited").style.display = 'none';
         document.getElementById("sEnamNotary").style.display = 'none';
         document.getElementById("sEnamTerMU").style.display = 'none';
         break;
-    case "sEnamDistrictAdministration":
+    case "Районна державна адміністрація":
         document.getElementById("sEnamExecutiveCommittee").style.display = 'none';
         document.getElementById("sEnamDistrictAdministration").style.display = 'table';
         document.getElementById("sEnamAccredited").style.display = 'none';
         document.getElementById("sEnamNotary").style.display = 'none';
         document.getElementById("sEnamTerMU").style.display = 'none';
         break;
-    case "sEnamAccredited":
+    case "Акредитований суб’єкт":
         document.getElementById("sEnamExecutiveCommittee").style.display = 'none';
         document.getElementById("sEnamDistrictAdministration").style.display = 'none';
         document.getElementById("sEnamAccredited").style.display = 'table';
         document.getElementById("sEnamNotary").style.display = 'none';
         document.getElementById("sEnamTerMU").style.display = 'none';
         break;
-    case "sEnamNotary":
+    case "Нотаріус":
         document.getElementById("sEnamExecutiveCommittee").style.display = 'none';
         document.getElementById("sEnamDistrictAdministration").style.display = 'none';
         document.getElementById("sEnamAccredited").style.display = 'none';
         document.getElementById("sEnamNotary").style.display = 'table';
         document.getElementById("sEnamTerMU").style.display = 'none';
         break;
-    case "sEnamTerMU":
+    case "Територіальний орган Міністерства юстиції":
         document.getElementById("sEnamExecutiveCommittee").style.display = 'none';
         document.getElementById("sEnamDistrictAdministration").style.display = 'none';
         document.getElementById("sEnamAccredited").style.display = 'none';
@@ -852,7 +859,7 @@
      var ScrDirection = "[asDirectionOfAppeal]";
 
       switch(ScrDirection) {
-    case "sEnamRealty":
+    case "Реєстрація речових прав на нерухоме майно":
         document.getElementById("sEnamRealty1").style.display = 'table';
         document.getElementById("sEnamRealty2").style.display = 'table';
         document.getElementById("sEnamRealty3").style.display = 'table';
@@ -866,7 +873,7 @@
         document.getElementById("sEnamRegistration45").style.display = 'none';
         document.getElementById("sEnamRegistration5").style.display = 'none';
         break;
-    case "sEnamRegistration":
+    case "Реєстрація юридичних осіб та фізичних осіб – підприємців":
         document.getElementById("sEnamRealty1").style.display = 'none';
         document.getElementById("sEnamRealty2").style.display = 'none';
         document.getElementById("sEnamRealty3").style.display = 'none';

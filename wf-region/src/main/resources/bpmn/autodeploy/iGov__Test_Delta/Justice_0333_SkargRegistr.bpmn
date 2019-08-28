@@ -167,7 +167,7 @@
           <activiti:expression><![CDATA[Vashe zvernennya zareyestrovano. Detalno na igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[" "]]></activiti:expression>
+          <activiti:expression><![CDATA[${form_signed_all_1}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

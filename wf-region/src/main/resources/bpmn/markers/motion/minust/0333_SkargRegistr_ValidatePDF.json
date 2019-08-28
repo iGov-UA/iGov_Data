@@ -1,0 +1,14 @@
+{
+  "validate": {
+    "FileExtensions_1": {
+      "aField_ID": [
+        "FileRegistrRish",
+        "FileInshiDoku",
+        "FileDovirebist",
+        "FileDovirebistUO"
+      ],
+      "saExtension": "pdf", 
+      "sMessage": "Невірний формат файлу! Повинно бути: {saExtension}"
+    }
+  }
+}

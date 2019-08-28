@@ -16,7 +16,7 @@
         "nFile_NarSvid"
       ],
       "saExtension": "pdf", 
-      "sMessage": "Недопустимий формат файлу! Повинно бути: {saExtension}"
+      "sMessage": "Невірний формат файлу! Повинно бути: {saExtension}"
     }
   }
 }

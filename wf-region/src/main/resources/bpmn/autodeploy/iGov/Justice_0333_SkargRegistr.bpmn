@@ -8,7 +8,7 @@
           <activiti:value id="sEnamRealty" name="Реєстрація речових прав на нерухоме майно"></activiti:value>
           <activiti:value id="sEnamRegistration" name="Реєстрація юридичних осіб та фізичних осіб – підприємців"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asVutiag" name="Чи маєте Ви витяг з реєстру, що підтверджує факт неправомірних дій?;(витяг містить інформацію, яка допоможе вірно вказати проблему)" type="enum" required="true">
+        <activiti:formProperty id="asVutiag" name="Чи маєте Ви витяг з реєстру, що підтверджує факт неправомірних дій?;(Витяг містить інформацію, яка допоможе вірно заповнити форму)" type="enum" required="true">
           <activiti:value id="sEnumYes" name="Так"></activiti:value>
           <activiti:value id="sEnumNo" name="Ні"></activiti:value>
         </activiti:formProperty>

@@ -101,18 +101,13 @@
         <activiti:formProperty id="lableZmistUO" name=" ; ;labelType=info" type="label" default="&lt;p align=&quot;justify&quot;&gt;Оскаржувані реєстраційні дії проведені з порушенням вимог Закону України «Про державну реєстрацію юридичних осіб, фізичних осіб - підприємців та громадських формувань» та Порядку державної реєстрації юридичних осіб, фізичних осіб - підприємців та громадських формувань, що не мають статусу юридичної особи затверджений наказом Міністерства юстиції України від 09.02.2016 № 359/5, отже, підлягають скасуванню.&lt;br&gt;Пунктом 7 частини першої статті 3 Закону України «Про державну реєстрацію юридичних осіб, фізичних осіб - підприємців та громадських формувань» встановлено, що державна реєстрація базується, зокрема, на принципі об'єктивності, достовірності та повноти відомостей у Єдиному державному реєстрі.&lt;br&gt;Внесення відомостей до Єдиного державного реєстру юридичних осіб, фізичних осіб - підприємців та громадських формувань виключно на підставі та відповідно до цього Закону «Про державну реєстрацію юридичних осіб, фізичних осіб - підприємців та громадських формувань».&lt;br&gt;Згідно частини першої та другої статті 34 Закону України «Про державну реєстрацію юридичних осіб, фізичних осіб - підприємців та громадських формувань» рішення, дії або бездіяльність державного реєстратора, суб’єкта державної реєстрації можуть бути оскаржені до Міністерства юстиції України та його територіальних органів або до суду. &lt;br&gt;Міністерство юстиції України розглядає скарги:&lt;br&gt;1) на проведені державним реєстратором реєстраційні дії (крім випадків, якщо такі реєстраційні дії проведено на підставі рішення суду);&lt;br&gt;2) на рішення, дії або бездіяльність територіальних органів Міністерства юстиції України.&lt;/p&gt;"></activiti:formProperty>
         <activiti:formProperty id="lableZmistN" name=" ; ;labelType=info" type="label" default="&lt;p align=&quot;justify&quot;&gt;Оскаржуване рішення про державну реєстрацію речових прав та їх обтяжень прийнято з порушенням вимог Закону України «Про державну реєстрацію речових прав на нерухоме майно та їх обтяжень» та Порядку державної реєстрації речових прав на нерухоме майно, затвердженого постановою Кабінету міністрів України від 25.12.2015 № 1127, отже, підлягає скасуванню.&lt;br&gt;Пунктом 1 частини першої статті 3 Закону України «Про державну реєстрацію речових прав на нерухоме майно та їх обтяжень» встановлено, що загальними засадами державної реєстрації речових прав на нерухоме майно є, зокрема, гарантування державою об'єктивності, достовірності та повноти відомостей про зареєстровані права на нерухоме майно та їх обтяження.&lt;br&gt;Статтею 41 Конституції України передбачено, що кожен має право володіти, користуватися і розпоряджатися своєю власністю, результатами своєї інтелектуальної, творчої діяльності. Право приватної власності набувається в порядку, визначеному законом. Ніхто не може бути протиправно позбавлений права власності. Право приватної власності є непорушним.&lt;br&gt;Згідно статті 391 Цивільного кодексу України власник майна має право вимагати усунення перешкод у здійсненні ним права користування та розпорядження своїм майном. &lt;br&gt;Згідно частини першої та другої статті 37 Закону України «Про державну реєстрацію речових прав на нерухоме майно та їх обтяжень» рішення, дії або бездіяльність державного реєстратора, суб’єкта державної реєстрації можуть бути оскаржені до Міністерства юстиції України та його територіальних органів або до суду. &lt;br&gt;Міністерство юстиції України розглядає скарги:&lt;br&gt;1) на рішення державного реєстратора про державну реєстрацію прав (крім випадків, коли таке право набуто на підставі рішення суду, а також коли щодо нерухомого майна наявний судовий спір);&lt;br&gt;2) на рішення, дії або бездіяльність територіальних органів Міністерства юстиції України.&lt;/p&gt;"></activiti:formProperty>
         <activiti:formProperty id="HTMLZmist" name="Зміст оскаржуваного рішення або дії та норми законодавства, які порушено на Вашу думку. Обставини, якими Ви обґрунтовуєте свої вимоги" type="fileHTML" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markersLine_FF" name="Сканкопії документів" type="markers" default="{&quot;attributes&quot;:{&quot;Line_FF&quot;:{&quot;aElement_ID&quot;:[&quot;asECP&quot;],&quot;sValue&quot;:&quot;Сканкопії документів&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asECP" name="Чи маєте Ви ЕЦП?" type="enum" required="true">
-          <activiti:value id="sEnumYes" name="Так"></activiti:value>
-          <activiti:value id="sEnumNo" name="Ні"></activiti:value>
-        </activiti:formProperty>
+        <activiti:formProperty id="markersLine_FF" name="Сканкопії документів" type="markers" default="{&quot;attributes&quot;:{&quot;Line_FF&quot;:{&quot;aElement_ID&quot;:[&quot;FileRegistrRish&quot;],&quot;sValue&quot;:&quot;Сканкопії документів&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="FileRegistrRish" name="Оскаржуване рішення або повідомлення державного реєстратора; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="FileInshiDoku" name="Інші документи, що підтверджують факт порушення прав скаржника;(засвідчені в установленому законодавством порядку);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="FileDovirebist" name="Довіреність представника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="FileDovirebistUO" name="Довіреність представника Юридичної особи; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_1" name="Скарга з ЕЦП; ;bPrintFormFileAsPDF=true,bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для накладення ЕЦП ; ;bVisible=false" type="string" default="pattern/print/minust/Justice_0333_SkargRegistr.html"></activiti:formProperty>
-        <activiti:formProperty id="markerFileECP" name="markerFileECP" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_ECPsEnumYes&quot;:{&quot;aField_ID&quot;:[&quot;FileRegistrRish&quot;,&quot;FileInshiDoku&quot;,&quot;form_signed_all_1&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asECP&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnumYes'||[sCond]=='Так'&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Скарга до Міністерства юстиції України на рішення або дії державного реєстратора, територіального органу Міністерства юстиції України"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameSm" name="назва послуги; ;bVisible=false" type="string" default="Скарга до Міністерства юстиції України на державного реєстратора або територіальний орган МінЮста"></activiti:formProperty>
       </extensionElements>
@@ -120,19 +115,22 @@
     <scriptTask id="scripttask1" name="Script Task" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>var x = ' '</script>
     </scriptTask>
-    <serviceTask id="servicetask8" name="Лист в Орган" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+    <serviceTask id="servicetask8" name="Лист в Орган" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${email}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
+          <activiti:expression><![CDATA[noreply@igov.gov.ua]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Нове звернення: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Нове звернення: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${form_signed_all_1}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -146,7 +144,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Звернення зареєстровано в ситемі: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Звернення зареєстровано в ситемі: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -348,7 +346,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Відмова в задоволенні скарги: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Відмова в задоволенні скарги: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -383,7 +381,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Призначено зустріч: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Призначено зустріч: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -419,7 +417,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Скаргу перенаправлено за належністю: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Скаргу перенаправлено за належністю: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -628,7 +626,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Відмова в задоволенні скарги: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Відмова в задоволенні скарги: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
@@ -663,7 +661,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
-          <activiti:string><![CDATA[Скаргу задоволено: ${sPosluga_nameSm}]]></activiti:string>
+          <activiti:expression><![CDATA[Скаргу задоволено: ${sPosluga_nameSm}]]></activiti:expression>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]

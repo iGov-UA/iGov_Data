@@ -1010,15 +1010,15 @@ if((ScrSkargaTem2 == 'sEnumRegistr2'||ScrSkargaTem2 == 'Реєстраційна
   var ScrDod = " ";  
   
 
-if(ScrFile1 != ' ' || ScrFile2 != ' ' || ScrFile3 != ' ' || ScrFile4 != ' '){
+if(ScrFile1 == '[object Object]' || ScrFile2 == '[object Object]' || ScrFile3 == '[object Object]' || ScrFile4 == '[object Object]'){
   ScrDod += "<b>Додатки: </b><br>";}
-if(ScrFile1 != ' '){
+if(ScrFile1 == '[object Object]'){
   ScrDod += "Оскаржуване рішення або повідомлення державного реєстратора.<br>";}
-if(ScrFile2 != ' '){
+if(ScrFile2 == '[object Object]'){
     ScrDod += "Інші документи, що підтверджують факт порушення прав скаржника.<br>";}
-if(ScrFile3 != ' '){
+if(ScrFile3 == '[object Object]'){
     ScrDod += "Довіреність представника.<br>";}
-if(ScrFile4 != ' '){
+if(ScrFile4 == '[object Object]'){
     ScrDod += "Довіреність представника Юридичної особи.<br>";}
 document.getElementById("ScrDod").innerHTML += ScrDod;  
 

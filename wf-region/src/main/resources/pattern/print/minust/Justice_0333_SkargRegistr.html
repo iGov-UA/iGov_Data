@@ -371,11 +371,22 @@
     </tbody>
 </table>
 
-<table style="width: 100%; padding-top: 1px;">
+<table id="sEnamSkNR" style="width: 100%; padding-top: 1px;">
     <tbody>
     <tr>
         <td colspan="2" style="text-align: center; font-size: 16px;">
-            на рішення державного реєстратора про державну реєстрацію<br>
+            на рішення державного реєстратора про державну реєстрацію речових прав на нерухоме майно<br>
+            від [DateRish] № [sNumberRish]<br><br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+  
+<table id="sEnamSkUO" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            на рішення державного реєстратора про державну реєстрацію юридичних осіб та фізичних осіб – підприємців<br>
             від [DateRish] № [sNumberRish]<br><br>
         </td>
     </tr>
@@ -866,6 +877,8 @@
         document.getElementById("sEnamRegistration4").style.display = 'none';
         document.getElementById("sEnamRegistration45").style.display = 'none';
         document.getElementById("sEnamRegistration5").style.display = 'none';
+        document.getElementById("sEnamSkNR").style.display = 'table';
+        document.getElementById("sEnamSkUO").style.display = 'none';
         break;
     case "Реєстрація юридичних осіб та фізичних осіб – підприємців":
         document.getElementById("sEnamRealty1").style.display = 'none';
@@ -880,6 +893,8 @@
         document.getElementById("sEnamRegistration4").style.display = 'table';
         document.getElementById("sEnamRegistration45").style.display = 'table';
         document.getElementById("sEnamRegistration5").style.display = 'table';
+        document.getElementById("sEnamSkNR").style.display = 'none';
+        document.getElementById("sEnamSkUO").style.display = 'table';
         break;
     default:
         document.getElementById("sEnamRealty1").style.display = 'table';
@@ -894,6 +909,8 @@
         document.getElementById("sEnamRegistration4").style.display = 'none';
         document.getElementById("sEnamRegistration45").style.display = 'none';
         document.getElementById("sEnamRegistration5").style.display = 'none';
+        document.getElementById("sEnamSkNR").style.display = 'table';
+        document.getElementById("sEnamSkUO").style.display = 'none';
     }
   
   var ScrclFio = "[bankIdlastName] [bankIdfirstName] [bankIdmiddleName]";
@@ -947,7 +964,7 @@
   document.getElementById("bSanction_7").style.display = 'none';
   document.getElementById("bSanction_8").style.display = 'none';}
 
- if((ScrSkargaTem1 == 'sEnumDia1'||ScrSkargaTem1 == 'Рішення або дії територіальних органів Мінюсту')&&(ScrCategory == 'sEnamTerMU'||ScrCategory == 'Територіальний орган Міністерства юстиції')){
+ if((ScrSkargaTem1 == 'sEnumDia1'||ScrSkargaTem1 == 'Рішення територіальних органів Мінюсту')&&(ScrCategory == 'sEnamTerMU'||ScrCategory == 'Територіальний орган Міністерства юстиції')){
   document.getElementById("bSanction_1").style.display = 'none';
   document.getElementById("bSanction_2").style.display = 'none';
   document.getElementById("bSanction_3").style.display = 'none';
@@ -987,7 +1004,7 @@ if((ScrSkargaTem2 == 'sEnumRegistr2'||ScrSkargaTem2 == 'Реєстраційна
   document.getElementById("bSanction_7").style.display = 'table';
   document.getElementById("bSanction_8").style.display = 'none';}
 
- if((ScrSkargaTem2 == 'sEnumDia2'||ScrSkargaTem2 == 'Рішення або дії територіальних органів Мінюсту')&&(ScrCategory == 'sEnamTerMU'||ScrCategory == 'Територіальний орган Міністерства юстиції')){
+ if((ScrSkargaTem2 == 'sEnumDia2'||ScrSkargaTem2 == 'Рішення територіальних органів Мінюсту')&&(ScrCategory == 'sEnamTerMU'||ScrCategory == 'Територіальний орган Міністерства юстиції')){
   document.getElementById("bSanction_1").style.display = 'none';
   document.getElementById("bSanction_2").style.display = 'none';
   document.getElementById("bSanction_3").style.display = 'none';

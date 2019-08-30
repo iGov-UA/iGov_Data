@@ -13,6 +13,20 @@
         "sClient": "asSubjectCategory"
       },
       "sCondition": "[sClient] == 'sEnamTerMU'"
+    },
+    "ValuesFieldsOnCondition_TerNOMU": {
+      "aField_ID": [
+        "asSkargaTem1",
+        "asSkargaTem2"
+      ],
+      "asID_Field_sValue": [
+        "sEnumRishenia1",
+        "sEnumRegistr2"
+      ],
+      "asID_Field": {
+        "sClient": "asSubjectCategory"
+      },
+      "sCondition": "[sClient] == 'sEnamExecutiveCommittee'||[sClient] == 'sEnamDistrictAdministration'||[sClient] == 'sEnamAccredited'||[sClient] == 'sEnamNotary'"
     }
   }
 }

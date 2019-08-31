@@ -96,7 +96,7 @@
           <activiti:value id="sEnumNo" name="Ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lableSudDii" name=" ; ;labelType=danger" type="label" default="Скарга на реєстраційні дії, які проведені на підставі судового рішення, Міністерством юстиції України не розглядається"></activiti:formProperty>
-        <activiti:formProperty id="DateRish" name="Дата прийняття рішення, яке оскаржується або дата вчинення оскаржуваної дії;(дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="DateRish" name="Дата прийняття рішення, яке оскаржується;(дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNumberRish" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли Ви дізналися про порушення Ваших прав" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином Ви дізналися про порушення Ваших прав?;(вкажіть обставини, який орган повідомив і при вчиненні яких дій)" type="textArea" required="true"></activiti:formProperty>

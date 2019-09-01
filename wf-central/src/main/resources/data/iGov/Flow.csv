@@ -71,7 +71,7 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 70;ЦНАП м.Дрогобич;190;268;dms_0178_2545_auto;15;DMS
 71;ЦНАП, Новопсковская РДА;177;46;dms_0178_2545;NULL;
 72;ДМС, Житомир, вул. Пушкінська, 44;63;61;dms_0176_Zagran_iGov;NULL;
-73;Регистрация Херсон;788;15;dnepr_dms-89_auto;40;REGISTRATION_DAY5
+73;Регистрация Херсон;788;15;Registr_0029_RegistrZniatMP_Khers_auto;40;REGISTRATION_DAY5
 74;ДМС Косив;793;17;dnepr_dms_227;NULL;
 75;ДМС Миргород, Загран;927;42;dms_0176_Zagran_iGov;NULL;
 76;ДМС Миргород, ID-карти;930;42;dms_0028_ID14_iGov;NULL;
@@ -167,8 +167,8 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 166;Днепр, регистрация, Центр_Собор;125;151;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 167;Днепр, регистрация, Новокодацкий;125;152;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 168;Днепр, регистрация, Самарский;125;153;dnepr_dms-89_auto;40;REGISTRATION_DAY5
-169;МРЕО м.Львів, вул. Данила Апостола, 11 (водійське посвідчення);2123;156;common_mreo_auto;30;MREO
-170;МРЕО м Самбір, вул Східна 216 (водійське посвідчення);2123;157;common_mreo_auto;30;MREO
+169;МРЕО м.Львів, вул. Данила Апостола, 11 (водійське посвідчення);2123;156;common_mreo_3;NULL;
+170;МРЕО м Самбір, вул Східна 216 (водійське посвідчення);2123;157;common_mreo_3;NULL;
 171;Каховка, регистрация;2506;158;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 172;АПІ ДМС, Тернопільський район, вул.Степова,45, Загран;1179;159;dms_0176_Zagran_iGov;NULL;
 173;АПІ ДМС, м. Чортків, вул. Горбачевського,5, Загран;1179;160;dms_0176_Zagran_iGov;NULL;
@@ -528,3 +528,4 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 503;ЦНАП Вишневої міської ради Києво-Святошинського району;4524;346;dms_0176_Zagran_DMSiGov_auto;15;DMS_VUSHNEVE
 504;Слов'янський відділ реєстрації фізичних осіб;5780;347;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 505;ЦНАП м. Конотоп, реєстрація;5800;348;dnepr_dms-89_auto;40;REGISTRATION_DAY5
+506;Регистрация Херсон;790;349;Registr_0144_ZniatSmert_auto;40;REGISTRATION_DAY5

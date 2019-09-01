@@ -65,6 +65,11 @@
         <activiti:formProperty id="nFile_ReeCard" name="Картка реєстрації особи або будинкова книга;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" default=" "></activiti:formProperty>
         <activiti:formProperty id="sCommentOsoba" name="Коментарі щодо наданих документів або отримання довідки (в разі необхідності)" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="nFile_Other" name="Копії інших документів (в разі необхідності); завантажте одним файлом формату PDF або архівом (формату zip, rar, 7z);bNew=true" type="file" default=" "></activiti:formProperty>
+        
+        <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
+        
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo ; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="markerRada_0024_LivePlace_2Step" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Rada_0024_LivePlace_2Step.json')}"></activiti:formProperty>
         <activiti:formProperty id="sFlag" name="Flag Місто; ;bVisible=false" type="string"></activiti:formProperty>
@@ -233,6 +238,7 @@ execution.setVariable('sDateVizite', dDateV);
     <userTask id="usertask1" name="[Етап I] Перевірка вхідних даних (1-й крок)" activiti:candidateGroups="registration_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="info" name="На цьому етапі:" type="label" default="Ви перевіряєте дані громадянина і вирішуєте чи всі вони вірні. Будь ласка, використовуйте функцію &quot;Внести зауваження&quot;, якщо потрібно уточнити надану інформацію! Якщо все добре, то переходимо до наступного етапу формування Довідки"></activiti:formProperty>
+        <activiti:formProperty id="visitDay" name="День та час зустрічі: " type="queueData" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sArea" name="Місто або район, до якого належить місце проживання громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
@@ -383,7 +389,14 @@ execution.setVariable('sDateVizite', dDateV);
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
 					Спеціалісти опрацювали Ваше звернення [sID_Order] та виготовили довідку про реєстрацію місця проживання/перебування особи. <br>
-					Чекаємо на Вас у зручний для Вас час.  <br>
+					
+
+                <p>
+				<b>Деталі зустрічі:</b><br>
+				День та час - ${date_of_visit}
+                </p>
+
+
 					${sAddress}.<br> 
 					${sWorkTime}<br>
 
@@ -510,6 +523,7 @@ execution.setVariable('sDateVizite', dDateV);
     <userTask id="usertask2_green" name="[Етап II] Підтвердження виготовлення довідки (2-й крок)" activiti:candidateGroups="registration_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="info21" name="На цьому етапі:" type="label" default="Ви виготовляєте довідку про реєстрацію місця проживання/перебування особи. Коли вона готова - підтверджуєте, громадянину буде надіслано email, що його чекають для отриманні довідки"></activiti:formProperty>
+        <activiti:formProperty id="visitDay" name="День та час зустрічі: " type="queueData" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sArea" name="Місто або район, до якого належить місце проживання громадянина" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>

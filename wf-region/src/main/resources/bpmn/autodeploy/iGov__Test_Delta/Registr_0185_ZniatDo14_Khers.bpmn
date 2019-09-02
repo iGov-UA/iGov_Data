@@ -7,6 +7,7 @@
         <activiti:formProperty id="warning1" name=" ; ;labelType=warning" type="label" default="&lt;b&gt;Зверніть увагу! Послуга надається лише для однієї дитини щодо якої заповнюється звернення! &lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="warning0" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо Ви будете реєструвати нове місце проживання у межах міста,у якому вже працює послуга &lt;a href=&quot;https://igov.gov.ua/service/184/general&quot;&gt;реєстрації місця проживання&lt;/a&gt;, рекомендуємо Вам замовити реєстрацію із одночасним зняттям. Це зменшить кількість візитів і збереже Ваш час."></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить поточне місце реєстрації дитини" type="select" default="0" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
@@ -29,6 +30,7 @@
         <activiti:formProperty id="sDate_of_birth" name="Дата народження;(формат - ДД.ММ.PPPP)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sAreabirth" name="Місце народження;(країна, область, район і населений пункт)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNationality" name="Громадянство" type="string" default="Україна" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_2" name="Інформація про дитину" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;lastName_UA2&quot;],&quot;sValue&quot;:&quot;Інформація про дитину&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lastName_UA2" name="Прізвище дитини" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="firstName_UA2" name="Ім'я дитини" type="string" required="true"></activiti:formProperty>
@@ -45,18 +47,22 @@
         <activiti:formProperty id="sChildDoc" name="Свідоцтво про народження дитини;(серія та номер документу, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sChildCitizenship" name="Громадянство дитини" type="string" default="Україна" required="true"></activiti:formProperty>
         <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;(якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_3" name="Інформація щодо реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationAddress&quot;],&quot;sValue&quot;:&quot;Інформація щодо реєстрації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації дитини;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" default=" "></activiti:formProperty>
         <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання;(або картка реєстрації особи чи будинкова книга);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="warning3" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого з батьків на реєстрацію місця проживання дитини та копія його паспорта."></activiti:formProperty>
         <activiti:formProperty id="nFile_scan_2passport_Kher" name="Паспорт другого з батьків;(скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z));bNew=true" type="file"></activiti:formProperty>
+        
         <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
         <activiti:formProperty id="markerRegistr_0185_ZniatDo14" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0185_ZniatDo14.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="sFlag" name="Flag Місто; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -84,12 +90,10 @@ execution.setVariable('sMaxPay', maxpay)
     </scriptTask>
     <scriptTask id="scripttask2" name="Script Task (JavaScript)" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
-
     var src=execution.getVariable('sCancelInfo')
 	if (src != "Заявка актуальна") {
 		execution.setVariable('sIsCancellCustomeVizite', 'True')
 	}
-
 	  </script>
     </scriptTask>
     <sequenceFlow id="flow33" sourceRef="scripttask1" targetRef="scripttask3"></sequenceFlow>
@@ -256,88 +260,8 @@ execution.setVariable('sMaxPay', maxpay)
     <serviceTask id="servicetask8" name="Видалення тікета з черги" activiti:delegateExpression="#{releaseTicketsOfQueue}"></serviceTask>
     <sequenceFlow id="flow31" sourceRef="servicetask8" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
-    <sequenceFlow id="flow34" sourceRef="exclusivegateway1" targetRef="servicetask9">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag=='dnepr'}]]></conditionExpression>
-    </sequenceFlow>
-    <serviceTask id="servicetask9" name="Повідомлення громадянина про призначення візиту Днепр + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Призначено зустріч у відділенні, звернення на тему: Зняття з реєстрації місця проживання дитини до чотирнадцяти років]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-			[pattern/mail/new_design/_common_content_start.html]
-            	<p>
-				Спеціалісти успішно опрацювли Вашу заяву [sID_Order].<br>
-				Для того щоб закінчити процедуру зняття з реєстрації необхідно:<br>
-				<ul>
-					<li>У будь-якому банку сплатити адміністративний збір у розмірі ${sMinPay} грн і отримати квитанцію про сплату.</li>
-					<li>Прийти за адресою: ${sAddress}</li>
-					<li>Підписати необхідні документи.</li>
-				</ul>
-				</p>
-				<p>
-					<b>Реквізити для сплати:</b> <br>
-					<i>${sRecvizitiAdmin}<br>
-					Призначення платежу: адмін. збір за зняття з реєстрації місця проживання</i>
-				</p>
-				<p>
-					<b>Деталі зустрічі:</b><br>
-					День та час - ${date_of_visit}
-				</p>
-				<p>
-					<b>Необхідні документи, які треба принести при знятті з реєстрації місця проживання:</b><br />
-					<ul>
-						<li>оригінал паспорту одного з батьків (того, хто подавав заяву);</li>
-						<li>квитанцію про сплату адміністративного збору з мокрою печаткою банку;</li>
-						<li>оригінал свідоцтва про народження або свідоцтва про належність до громадянства України;</li>	
-						<li>заяву про зняття з реєстрації місця проживання, що знаходиться у додатках до листа (розрукуйте на одному аркуші);</li>									
-					</ul>
-				</p>
-				<p>	
-					<b>Зверніть увагу:</b> 
-					<ul>
-						<li>при проживанні батьків за різними адресами для зняття з реєстрації місця проживання дитини, яка не досягла 14 років потрібна присутність обох батьків з паспортами, або нотаріально завірена згода на зняття з реєстрації місця проживання дитини.</li>
-						<li>якщо у свідоцтво про народження батько вписаний зі слів матері, то потрібен оригінал та копія витягу з Державного реєстру актів цивільного стану громадян про народження із зазначенням відомостей про батька відповідно до частини першої статті 135 Сімейного кодексу України;</li>			
-						<li>якщо картотека зареєстрованих осіб району того з батьків, до якого була зареєстрована дитина, ще не передана реєстраторам, то Вам може знадобитися оригінал та копія Картки реєстрації особи (раніше мала назву "Форма А") з ЖЕКу (ОСББ) або будинкової книги того з батьків, до якого була зареєстрована дитина.</li>
-					</ul>
-				</p>
-				<p>
-					Коментар Державного службовця:<br>
-					<b><i>${sDecisionComment}</i></b>
-				</p>
-				<p>
-					При вниникненні питань Ви можете звернутися: ${sPhoneOrgan}
-				</p>
-				<br>
-				<p>[cancelTask]</p>
-                
-			[pattern/mail/new_design/_common_content_end.html]
-			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br>
-			[pattern/mail/new_design/_common_signature_end.html]
-			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${PrintForm_3},${PrintForm_4}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sPhone_SMS">
-          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.gov.ua/journal]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow35" sourceRef="servicetask9" targetRef="usertask2_red"></sequenceFlow>
     <sequenceFlow id="flow10" name="${sWorkerDecision=='sAccept'}" sourceRef="exclusivegateway1" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag!='dnepr'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask6" name="Повідомлення громадянина про призначення візиту + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
@@ -374,14 +298,18 @@ execution.setVariable('sMaxPay', maxpay)
 				<p>
 					<b>Необхідні документи, які треба принести при знятті з реєстрації місця проживання:</b><br />
 					<ul>
-						<li>оригінал паспорту одного з батьків (того, хто подавав заяву);</li>
-						<li>квитанцію про сплату адміністративного збору з мокрою печаткою банку;</li>
-						<li>оригінал свідоцтва про народження або свідоцтва про належність до громадянства України;</li>										
+						<li>свідоцтво про народження дитини;</li>
+						<li>документи, що посвідчують особу батьків (паспорт громадянина України, тимчасове посвідчення особи, посвідка на тимчасове або постійне проживання, тощо);</li>	
+						<li>письмова згода другого з батьків-нотаріально посвідчена заява (у разі відсутності одного з батьків);</li>	
+						<li>рішення суду або рішення органу опіки та піклування (у разі коли місце проживання дитини визначено відповідним рішенням);</li>	
+						<li>витяг з Державного реєстру актів цивільного стану із зазначенням відомостей про батька (ч.1 ст. 135 Сімейного кодексу України (за наявності))</li>	
+						<li>квитанцію про сплату адміністративного збору;</li>									
 					</ul>
 				</p>
 				<p>	
 					<b>Зверніть увагу:</b> 
 					<ul>
+						<li>Обов’язкова присутність обох батьків.</li>
 						<li>при проживанні батьків за різними адресами для зняття з реєстрації місця проживання дитини, яка не досягла 14 років потрібна присутність обох батьків з паспортами, або нотаріально завірена згода на зняття з реєстрації місця проживання дитини.</li>
 						<li>якщо у свідоцтво про народження батько вписаний зі слів матері, то потрібен оригінал та копія витягу з Державного реєстру актів цивільного стану громадян про народження із зазначенням відомостей про батька відповідно до частини першої статті 135 Сімейного кодексу України;</li>			
 					</ul>
@@ -567,9 +495,6 @@ execution.setVariable('sMaxPay', maxpay)
       <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
         <omgdc:Bounds height="35.0" width="35.0" x="942.0" y="430.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask9" id="BPMNShape_servicetask9">
-        <omgdc:Bounds height="55.0" width="105.0" x="426.0" y="278.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask6" id="BPMNShape_servicetask6">
         <omgdc:Bounds height="58.0" width="131.0" x="560.0" y="277.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
@@ -631,16 +556,6 @@ execution.setVariable('sMaxPay', maxpay)
         <omgdi:waypoint x="1044.0" y="421.0"></omgdi:waypoint>
         <omgdi:waypoint x="1043.0" y="447.0"></omgdi:waypoint>
         <omgdi:waypoint x="977.0" y="447.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
-        <omgdi:waypoint x="605.0" y="225.0"></omgdi:waypoint>
-        <omgdi:waypoint x="479.0" y="225.0"></omgdi:waypoint>
-        <omgdi:waypoint x="478.0" y="278.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow35" id="BPMNEdge_flow35">
-        <omgdi:waypoint x="478.0" y="333.0"></omgdi:waypoint>
-        <omgdi:waypoint x="478.0" y="411.0"></omgdi:waypoint>
-        <omgdi:waypoint x="560.0" y="411.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
         <omgdi:waypoint x="625.0" y="245.0"></omgdi:waypoint>

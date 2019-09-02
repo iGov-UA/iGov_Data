@@ -335,38 +335,34 @@ execution.setVariable('sMaxPay', maxpay)
                 	Спеціалісти успішно опрацювали Вашу заяву [sID_Order].<br>
 					Для того щоб закінчити процедуру реєстрації необхідно:<br>
 					<ul>
-						<li>У будь-якому банку сплатити адміністративний збір і отримати квитанцію про сплату.</li>
+						<li>Сплатити адміністративний збір у будь-якому банку та отримайте квитанцію про оплату:</li>
 						<ul>
-							<li>у розмірі ${sMinPay} грн, якщо Ви звертаєтесь для реєстрації у термін до 30 календарних днів після зняття з попереднього місця реєстрації</li>
-							<li>у розмірі ${sMaxPay} грн, якщо Ви звертаєтесь для реєстрації після 30 календарних днів після зняття з попереднього місця реєстрації ${sAdd_SpecText_inEmail}</li> 
+							<li>Вартість адміністративної послуги - 13,60 грн</li> 
 						</ul>
 						<li>Прийти за адресою: ${sAddress}</li>
 						<li>Підписати необхідні документи та отримати печатку у громадянський паспорт або паспортний документ.</li>
 					</ul>
 				</p>
 				<p>
+				    Адміністративний збір стягується лише за одну адміністративну послугу та зараховується до місцевого бюджету за новим місцем реєстрації.<br><br>
 					<b>Реквізити для сплати:</b><br>
 					<i>${sRecvizitiAdmin}<br>
-					Призначення платежу: адмін. збір за реєстрацію місця проживання ...вказати П.І.Б...</i>
+					Призначення платежу: реєстрація ...вказати П.І.Б...</i>
 				</p>
 				<p>
 					<b>Деталі зустрічі:</b><br>
 					День та час - ${date_of_visit}
 				</p>
-				${sAdd_TextinEmail_KhersVK}
 				<p>
-					<b>Необхідні документи, які треба принести при реєстраціі місця проживання:</b><br>
+					<b>Для отримання послуги Вам необхідна наявність оригіналів документів:</b><br>
 					<ul>
-						<li>оригінал документа, до якого вносяться відомості про місце проживання;</li>
-						<li>квитанцію про сплату адміністративного збору;</li>
-						<li>оригінал одного з трьох документів, який підтверджує право на проживання за новим місцем реєстрації:
-						<ul>
-							<li>право на проживання в житлі (ордер, свідоцтво про право власності, договір найму (піднайму, оренди) або інші документи. У разі відсутності зазначених документів реєстрація здійснюється за згодою власника/співвласників житла, наймача та членів його сім’ї на реєстрацію місця проживання</li>
-							<li>перебування або взяття на облік у спеціалізованій соціальній установі, закладі соціального обслуговування та соціального захисту (довідка про прийняття на обслуговування в спеціалізованій соціальній установі, закладі соціального обслуговування та соціального захисту особи, копія посвідчення про взяття на облік бездомної особи),</li>
-							<li>проходження служби у військовій частині (довідка про проходження служби у військовій частині, видана командиром військової частини),</li> 
-						</ul>
-						<li>оригінал військового квитка або посвідчення про приписку (для громадян, які підлягають взяттю на військовий облік або перебувають на військовому обліку);</li>
+						<li>документ, що посвідчує особу (паспорт громадянина України, тимчасове посвідчення особи, посвідка на тимчасове або постійне проживання, тощо);</li>
+						<li>військовий квиток та картку реєстрації особи із відміткою про прийняття на військовий облік (для осіб віком від 17 до 60 років, які підлягають військовому обліку, або перебувають на військовому обліку);</li>
+						<li>квитанцію про оплату адміністративного збору.</li>
 					</ul>
+				</p>
+				<p>
+				   Обов’язковою є присутність власника або співвласників житла в яке Ви реєструєтесь (особисто з оригіналами документів, а саме паспортом та документами що підтверджують право власності на нерухоме майно).
 				</p>
 				<p>	
 					<b>Зверніть увагу:</b> 
@@ -402,96 +398,6 @@ execution.setVariable('sMaxPay', maxpay)
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow34" sourceRef="servicetask6" targetRef="usertask2_red"></sequenceFlow>
-    <sequenceFlow id="flow35" sourceRef="exclusivegateway1" targetRef="servicetask10">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag=='dnepr'}]]></conditionExpression>
-    </sequenceFlow>
-    <serviceTask id="servicetask10" name="Повідомлення громадянина про призначення візиту Днепр + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Призначено зустріч у відділенні, звернення на тему: Реєстрація нового місця проживання]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-			[pattern/mail/new_design/_common_content_start.html]
-				<p>
-					Спеціалісти успішно опрацювли Вашу заяву [sID_Order].<br>
-					Для того щоб закінчити процедуру реєстрації необхідно:<br>
-					<ul>
-						<li>У будь-якому банку сплатити адміністративний збір і отримати квитанцію про сплату.</li>
-						<ul>
-							<li>у розмірі ${sMinPay} грн, якщо Ви звертаєтесь для реєстрації у термін до 30 календарних днів після зняття з попереднього місця реєстрації</li>
-							<li>у розмірі ${sMaxPay} грн, якщо Ви звертаєтесь для реєстрації після 30 календарних днів після зняття з попереднього місця реєстрації ${sAdd_SpecText_inEmail}</li> 
-						</ul>
-						<li>Прийти до за адресою: ${sAddress}</li>
-						<li>Підписати необхідні документи та отримати печатку у громадянський паспорт або паспортний документ.</li>
-					</ul>
-				</p>
-				<p>
-					<b>Реквізити для сплати:</b><br>
-					<i>${sRecvizitiAdmin}<br>
-					Призначення платежу: адмін. збір за реєстрацію місця проживання​ ...вказати П.І.Б...</i>
-				</p>
-				<p>
-					<b>Деталі зустрічі:</b><br>
-					День та час - ${date_of_visit}
-				</p>
-				<p>
-					<b>Необхідні документи, які треба принести при реєстраціі місця проживання:</b><br>
-					<ul>
-						<li>оригінал документа, до якого вносяться відомості про місце проживання;</li>
-						<li>квитанцію про сплату адміністративного збору з мокрою печаткою банку;</li>
-						<li>оригінал одного з трьох документів, який підтверджує право на проживання за новим місцем реєстрації:
-						<ul>
-							<li>право на проживання в житлі (ордер, свідоцтво про право власності, договір найму (піднайму, оренди) або інші документи. У разі відсутності зазначених документів реєстрація здійснюється за згодою власника/співвласників житла, наймача та членів його сім’ї на реєстрацію місця проживання</li>
-							<li>перебування або взяття на облік у спеціалізованій соціальній установі, закладі соціального обслуговування та соціального захисту (довідка про прийняття на обслуговування в спеціалізованій соціальній установі, закладі соціального обслуговування та соціального захисту особи, копія посвідчення про взяття на облік бездомної особи),</li>
-							<li>проходження служби у військовій частині (довідка про проходження служби у військовій частині, видана командиром військової частини),</li> 
-						</ul>
-						<li>оригінал військового квитка або посвідчення про приписку (для громадян, які підлягають взяттю на військовий облік або перебувають на військовому обліку);</li>
-						<li>заяву про реєстрацію місця проживання, що знаходиться у додатках до листа (розрукуйте на одному аркуші);</li>
-						<li>якщо Ви реєструєте нове місце проживання з одночасним зняттям з попередньго, то заяву про зняття з реєстрації (знаходиться у додатках до листа, розрукуйте на одному аркуші);</li>
-					</ul>
-				</p>
-				<p>	
-					<b>Зверніть увагу:</b> 
-					<ul>
-						<li>У разі здійснення реєстрації за згодою власника/співвласників житла, наймача та членів його сім’ї, власник або власники житла повинні прийти разом із Вами, та принести з собою паспорт та оригінали документів, які підтверджують право властності.</li>
-						<li>Якщо картотека зареєстрованих осіб Вашого району ще не передана реєстраторам, то Вам може знадобитися Картка реєстрації особи (раніше мала назву "Форма А") з ЖЕКу (ОСББ) або будинкова книга з попереднього місця реєстрації (це стосується лише громадян у яких попереднє місце реєстрації є місто Дніпро)</li>
-						<li>Після візиту для завершення процесу реєстрації військовозобов'язані повинні встати на військовіий облік до військомату.</li>
-					</ul>
-				</p>
-				<p>
-					Коментар Державного службовця:<br>
-					<b><i>${sDecisionComment}</i></b>
-				</p>
-				<p>
-					При вниникненні питань Ви можете звернутися: ${sPhoneOrgan}
-				</p>
-				<br>
-				<p>[cancelTask]</p> 
-			[pattern/mail/new_design/_common_content_end.html]
-			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br>
-			[pattern/mail/new_design/_common_signature_end.html]
-			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${PrintForm_1},${PrintForm_2},${PrintForm_3},${PrintForm_4}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sPhone_SMS">
-          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.gov.ua/journal]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow36" sourceRef="servicetask10" targetRef="usertask2_red"></sequenceFlow>
     <userTask id="usertask2_red" name="[Етап II] Візит громадянина (2-й крок)" activiti:candidateGroups="registration_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="info1" name="На цьому етапі:" type="label" default="Громадянин приходить до Вас. Ви звіряєте дані з ним, при необхідності вносите зміни. Роздруковуєте прінтформи, підписуєте їх та проставляєте штамп у паспорт громадянина."></activiti:formProperty>
@@ -678,9 +584,6 @@ execution.setVariable('sMaxPay', maxpay)
       <bpmndi:BPMNShape bpmnElement="servicetask6" id="BPMNShape_servicetask6">
         <omgdc:Bounds height="99.0" width="131.0" x="503.0" y="310.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask10" id="BPMNShape_servicetask10">
-        <omgdc:Bounds height="91.0" width="107.0" x="380.0" y="314.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask2_red" id="BPMNShape_usertask2_red">
         <omgdc:Bounds height="78.0" width="131.0" x="503.0" y="432.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
@@ -750,16 +653,6 @@ execution.setVariable('sMaxPay', maxpay)
       <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
         <omgdi:waypoint x="568.0" y="409.0"></omgdi:waypoint>
         <omgdi:waypoint x="568.0" y="432.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow35" id="BPMNEdge_flow35">
-        <omgdi:waypoint x="548.0" y="230.0"></omgdi:waypoint>
-        <omgdi:waypoint x="434.0" y="230.0"></omgdi:waypoint>
-        <omgdi:waypoint x="433.0" y="314.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow36" id="BPMNEdge_flow36">
-        <omgdi:waypoint x="433.0" y="405.0"></omgdi:waypoint>
-        <omgdi:waypoint x="434.0" y="470.0"></omgdi:waypoint>
-        <omgdi:waypoint x="503.0" y="471.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow28" id="BPMNEdge_flow28">
         <omgdi:waypoint x="568.0" y="510.0"></omgdi:waypoint>

@@ -40,11 +40,9 @@
         <activiti:formProperty id="sDate_of_death" name="Дата смерті;Формат - ДД.ММ.PPPP" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDeathDoc" name="Номер актового запису, серія та номер свідоцтва про смерть, дата видачі документа" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="nSvidDeath" name="Свідоцтво про смерть;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
-        
         <activiti:formProperty id="markerRegistr_0144_ZniatSmert" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0144_ZniatSmert.json')}"></activiti:formProperty>
         <activiti:formProperty id="sFlag" name="Flag Місто; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>
@@ -252,80 +250,8 @@ if (execution.getVariable('sHide_FormaA')=='True') {
     <serviceTask id="servicetask8" name="Видалення тікета з черги" activiti:delegateExpression="#{releaseTicketsOfQueue}"></serviceTask>
     <sequenceFlow id="flow31" sourceRef="servicetask8" targetRef="endevent3"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
-    <sequenceFlow id="flow34" sourceRef="exclusivegateway1" targetRef="servicetask9">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag=='dnepr'}]]></conditionExpression>
-    </sequenceFlow>
-    <serviceTask id="servicetask9" name="Повідомлення громадянина про призначення візиту Днепр + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
-      <extensionElements>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:string><![CDATA[Призначено зустріч у відділенні, звернення на тему: Зняття з реєстрації особи у зв'язку зі смертю]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-			[pattern/mail/new_design/_common_content_start.html]
-				<p>
-                	Спеціалісти успішно опрацювли Вашу заяву [sID_Order].<br>
-					Для того щоб закінчити процедуру зняття з реєстрації необхідно:<br>
-					<ul>
-						<li>Прийти за адресою: ${sAddress}</li>
-						<li>Підписати необхідні документи.</li>
-					</ul>
-				</p>
-				<p>
-					<b>Деталі зустрічі:</b><br>
-					День та час - ${date_of_visit}
-				</p>
-				<p>
-					<b>Необхідні документи, які треба принести при знятті з реєстрації місця проживання:</b><br />
-					<ul>
-						<li>оригінал паспорту того, хто подавав заяву;</li>
-						<li>оригінал свідоцтва про смерть;</li>	
-						<li>заяву про зняття з реєстрації місця проживання, що знаходиться у додатках до листа;</li>									
-					</ul>
-				</p>
-				<p>	
-					<b>Зверніть увагу:</b> 
-					<ul>
-						<li>Якщо картотека зареєстрованих осіб району, де була зареєстрована померла особа, ще не передана реєстраторам, то може знадобитися оригінал Картки реєстрації особи (раніше мала назву "Форма А") з ЖЕКу (ОСББ) або будинкова книга померлої особи</li>
-					</ul>
-				</p>
-				<p>
-					Коментар Державного службовця:<br>
-					<b><i>${sDecisionComment}</i></b>
-				</p>
-				<p>
-					При вниникненні питань Ви можете звернутися: <br>
-					${sPhoneOrgan}
-				</p>
-				<br>
-				<p>[cancelTask]</p>
-
-			[pattern/mail/new_design/_common_content_end.html]
-			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br>
-			[pattern/mail/new_design/_common_signature_end.html]
-			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${PrintForm_3},${PrintForm_4}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sPhone_SMS">
-          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno, оchikuemo na Vash vizyt. Vam nadislano email z rekvizytamy ta sumoyu oplaty, neobkhidnymy dokumentamy. Detalno igov.gov.ua/journal]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow35" sourceRef="servicetask9" targetRef="usertask2_red"></sequenceFlow>
     <sequenceFlow id="flow10" name="${sWorkerDecision=='sAccept'}" sourceRef="exclusivegateway1" targetRef="servicetask6">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'&&sFlag!='dnepr'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDecision=='sAccept'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask6" name="Повідомлення громадянина про призначення візиту + СМС" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
@@ -345,6 +271,10 @@ if (execution.getVariable('sHide_FormaA')=='True') {
             	Спеціалісти успішно опрацювли Вашу заяву [sID_Order].<br>
 				Для того щоб закінчити процедуру зняття з реєстрації необхідно:<br>
 				<ul>
+					<li>Сплатити адміністративний збір у будь-якому банку та отримайте квитанцію про оплату:</li>
+						<ul>
+							<li>вартість адміністративної послуги - ${sMinPay} грн.</li>
+						</ul>
 					<li>Прийти за адресою: ${sAddress}</li>
 					<li>Підписати необхідні документи.</li>
 				</ul>
@@ -354,10 +284,12 @@ if (execution.getVariable('sHide_FormaA')=='True') {
 				День та час - ${date_of_visit}
 			</p>
 			<p>
-				<b>Необхідні документи, які треба принести при знятті з реєстрації місця проживання:</b><br />
+				<b>Для отримання послуги Вам необхідна наявність оригіналів документів:</b><br />
 				<ul>
-					<li>оригінал паспорту того, хто подавав заяву;</li>
-					<li>оригінал свідоцтва про смерть;</li>	
+					<li>документ, що посвідчують особу (паспорт громадянина України, тимчасове посвідчення особи, посвідка на тимчасове або постійне проживання, тощо);</li>
+					<li>свідоцтво про смерть;</li>	
+					<li>нотаріальний запит (за наявності);</li>	
+					<li>квитанцію про оплату адміністративного збору.</li>	
 					${sAdd_FormaA}
 				</ul>
 			</p>
@@ -527,7 +459,7 @@ if (execution.getVariable('sHide_FormaA')=='True') {
         <omgdc:Bounds height="71.0" width="141.0" x="390.0" y="107.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="81.0" width="118.0" x="560.0" y="102.0"></omgdc:Bounds>
+        <omgdc:Bounds height="81.0" width="118.0" x="567.0" y="102.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
         <omgdc:Bounds height="40.0" width="40.0" x="605.0" y="205.0"></omgdc:Bounds>
@@ -540,9 +472,6 @@ if (execution.getVariable('sHide_FormaA')=='True') {
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
         <omgdc:Bounds height="35.0" width="35.0" x="915.0" y="390.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask9" id="BPMNShape_servicetask9">
-        <omgdc:Bounds height="100.0" width="105.0" x="426.0" y="278.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="servicetask6" id="BPMNShape_servicetask6">
         <omgdc:Bounds height="84.0" width="131.0" x="560.0" y="262.0"></omgdc:Bounds>
@@ -588,10 +517,10 @@ if (execution.getVariable('sHide_FormaA')=='True') {
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
         <omgdi:waypoint x="531.0" y="142.0"></omgdi:waypoint>
-        <omgdi:waypoint x="560.0" y="142.0"></omgdi:waypoint>
+        <omgdi:waypoint x="567.0" y="142.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
-        <omgdi:waypoint x="619.0" y="183.0"></omgdi:waypoint>
+        <omgdi:waypoint x="626.0" y="183.0"></omgdi:waypoint>
         <omgdi:waypoint x="625.0" y="205.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow11" id="BPMNEdge_flow11">
@@ -609,16 +538,6 @@ if (execution.getVariable('sHide_FormaA')=='True') {
         <omgdi:waypoint x="1018.0" y="391.0"></omgdi:waypoint>
         <omgdi:waypoint x="1012.0" y="407.0"></omgdi:waypoint>
         <omgdi:waypoint x="950.0" y="407.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow34" id="BPMNEdge_flow34">
-        <omgdi:waypoint x="605.0" y="225.0"></omgdi:waypoint>
-        <omgdi:waypoint x="479.0" y="225.0"></omgdi:waypoint>
-        <omgdi:waypoint x="478.0" y="278.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow35" id="BPMNEdge_flow35">
-        <omgdi:waypoint x="478.0" y="378.0"></omgdi:waypoint>
-        <omgdi:waypoint x="478.0" y="411.0"></omgdi:waypoint>
-        <omgdi:waypoint x="560.0" y="411.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">
         <omgdi:waypoint x="625.0" y="245.0"></omgdi:waypoint>

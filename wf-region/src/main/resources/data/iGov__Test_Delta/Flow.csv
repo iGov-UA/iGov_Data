@@ -71,7 +71,7 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 70;ЦНАП м.Дрогобич;190;268;dms_0178_2545_auto;15;DMS
 71;ЦНАП, Новопсковская РДА;177;46;dms_0178_2545;NULL;
 72;ДМС, Житомир, вул. Пушкінська, 44;63;61;dms_0176_Zagran_iGov;NULL;
-73;Регистрация Херсон;788;15;Registr_0029_RegistrZniatMP_Khers_auto;40;REGISTRATION_DAY5
+73;Регистрация Херсон;788;15;Registr_0029_RegistrZniatMP_Khers_auto;15;REGISTRATION_DAY5
 74;ДМС Косив;793;17;dnepr_dms_227;NULL;
 75;ДМС Миргород, Загран;927;42;dms_0176_Zagran_iGov;NULL;
 76;ДМС Миргород, ID-карти;930;42;dms_0028_ID14_iGov;NULL;
@@ -528,4 +528,4 @@ nID;sName;nID_ServiceData;nID_SubjectOrganDepartment;sID_BP;nCountAutoGenerate;s
 503;ЦНАП Вишневої міської ради Києво-Святошинського району;4524;346;dms_0176_Zagran_DMSiGov_auto;15;DMS_VUSHNEVE
 504;Слов'янський відділ реєстрації фізичних осіб;5780;347;dnepr_dms-89_auto;40;REGISTRATION_DAY5
 505;ЦНАП м. Конотоп, реєстрація;5800;348;dnepr_dms-89_auto;40;REGISTRATION_DAY5
-506;Регистрация Херсон;790;349;Registr_0144_ZniatSmert_auto;40;REGISTRATION_DAY5
+506;Регистрация Херсон;790;349;Registr_0144_ZniatSmert_auto;15;REGISTRATION_DAY5

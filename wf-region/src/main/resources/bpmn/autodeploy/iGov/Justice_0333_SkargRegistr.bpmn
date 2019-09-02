@@ -64,7 +64,7 @@
         <activiti:formProperty id="sRegistrPIB" name="Прізвище, ім’я, по батькові державного реєстратора" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNotarPIB" name="Прізвище, ім’я, по батькові нотаріуса" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sTerMUname" name="Назва територіального органу" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asSudSpor" name="Чи наяний судовий спір з цим органом з приводу порушення Ваших прав?" type="enum" required="true">
+        <activiti:formProperty id="asSudSpor" name="Чи наяний судовий спір з цим органом з порушеного у скарзі питання?;(спір що може мати наслідком скасування оскаржуваного рішення державного реєстратора та/або внесення відомостей до державного реєстру)" type="enum" required="true">
           <activiti:value id="sEnamNo" name="Відсутній"></activiti:value>
           <activiti:value id="sEnamYes" name="Наявний"></activiti:value>
         </activiti:formProperty>

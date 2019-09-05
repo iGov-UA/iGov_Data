@@ -165,9 +165,9 @@ execution.setVariable('sMaxPay', maxpay)
 				</p>
 				<br>
 				<p>[cancelTask]</p> 
+				<br>${sAddress}
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-			${sAddress},<br> 
 			${sNameOrgan}.<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
@@ -276,9 +276,6 @@ execution.setVariable('sMaxPay', maxpay)
 				<p>
 					Коментар Державного службовця:<br>
 					<b><i>${sDecisionComment}</i></b>
-				</p>
-				<p>
-					При вниникненні питань Ви можете звернутися: ${sPhoneOrgan}
 				</p>
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_feedback.html]   	 

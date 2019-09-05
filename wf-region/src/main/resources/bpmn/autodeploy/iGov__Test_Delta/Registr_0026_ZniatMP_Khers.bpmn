@@ -137,12 +137,11 @@ execution.setVariable('sMaxPay', maxpay)
 Якщо Вам від 17 до 60 років, і Ви підлягаєте військовому обліку або вже перебуваєте на військовому обліку, Вам необхідно відвідати військкомат та отримати відмітку про зняття та постановку на військовий облік в картці реєстрації особи; <br>
 Картку реєстрації особи для зняття з військового обліку можна отримати у консультанта відділу.<br>
 				</p>
-				<br>
 				<p>[cancelTask]</p>
+				<br>${sAddress}
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-			${sAddress},<br> 
-			${sNameOrgan}.<br>
+			${sNameOrgan},<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -235,13 +234,10 @@ execution.setVariable('sMaxPay', maxpay)
 					Коментар Державного службовця:<br />
 					<b><i>${sDecisionComment}</i></b>
 				</p>
-				<p>
-					При вниникненні питань Ви можете звернутися: ${sPhoneOrgan}
-				</p>
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
-                ${sNameOrgan},<br/>
+             ${sNameOrgan},<br>
             [pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

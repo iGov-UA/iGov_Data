@@ -203,10 +203,10 @@ execution.setVariable('sDateVizite', dDateV);
 
 Якщо Ви досягли 14-ти річного віку  Ви маєте особисто подати та підписати відповідні документи.<br>
 				</p> 
+				<br>${sAddress}
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-			${sAddress},<br> 
-			${sNameOrgan}.<br>
+			${sNameOrgan},<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -351,9 +351,6 @@ execution.setVariable('sDateVizite', dDateV);
 					Коментар працівника органу реєстрації:<br>
 					<b><i>${sDecisionComment}</i></b>
 				</p>
-				<p>
-					При виникненні питань Ви можете звернутися: ${sPhoneOrgan}
-				</p>
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
@@ -408,21 +405,19 @@ execution.setVariable('sDateVizite', dDateV);
 					<b>Для отримання послуги Вам необхідна наявність оригіналів документів:</b><br>
 					<ul>
 						<li>документ, до якого вносяться відомості про місце проживання (паспорт громадянина України, тимчасове посвідчення громадянина України, посвідка на постійне проживання, посвідка на тимчасове проживання, посвідчення біженця, посвідчення особи, яка потребує додаткового захисту, посвідчення особи, якій надано тимчасовий захист, довідка про звернення за захистом в Україні);</li>
-						<li>свідоцтво про народження (для осіб, що не досягли 14-річного віку), або у разі відновлення паспорта громадянина України у разі його втрати.</li>
+						<li>свідоцтво про народження для осіб, що отримують паспорт громадянина України в перше або у разі відновлення паспорта громадянина України у разі його втрати, свідотство про зміну прізвища (за наявності).</li>
 						<li>за необхідності - інші документи, що підтверджують Вашу реєстрацію\проживання.</li>
 					</ul>
 				</p>
-				${sAdd_TextEmail}
 				<p>
 					Коментар працівника органу реєстрації:<br>
 					<b><i>${sDecisionComment}</i></b>
 				</p>
 				<p>
-                	Після отримання послуги "Видача довідки про реєстрацію місця проживання/перебування особи", будь ласка, оцініть якість надання цієї послуги за допомогою форми, що наведена нижче.<br>
-                    Дякуємо.
+					${sWorkTime}
 				</p>
+				
 			[pattern/mail/new_design/_common_content_end.html]
-			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
 				${sNameOrgan},<br>
 			[pattern/mail/new_design/_common_signature_end.html]
@@ -548,13 +543,10 @@ execution.setVariable('sDateVizite', dDateV);
 					
 					Під час візиту до відділу мати при собі Паспорт (свідотство про народження особи яка отримує паспорт вперше або втратила його), свідотство про зміну прізвища (за наявності).<br><br>  
 					
-					${sAddress}.<br> 
-					<p>
-					${sWorkTime}
-			        </p>
+					<br>${sAddress}
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br>
+			${sNameOrgan},<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>

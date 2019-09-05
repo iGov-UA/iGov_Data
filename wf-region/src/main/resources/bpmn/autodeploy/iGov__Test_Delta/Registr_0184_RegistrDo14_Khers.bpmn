@@ -4,7 +4,7 @@
     <documentation>Смоктій К.В. (получено на сопровождение от Жигана Ромы) Последние правки: 16.01.2018</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
-        <activiti:formProperty id="warning1" name=" ; ;labelType=warning" type="label" default="&lt;b&gt;Зверніть увагу! Послуга надається лише для однієї дитини щодо якої заповнюється звернення! &lt;/b&gt;"></activiti:formProperty>
+        <activiti:formProperty id="warning1" name=" ; ;labelType=info" type="label" default="ЗВЕРНІТЬ УВАГУ! &lt;br&gt;Якщо Ви не можете самостійно звернутися до органу реєстрації, адміністративна послуга може бути наданна за зверненням Вашого представника напідставі документа, що посвідчує особу представника та довіреності, посвідченої в установленому законом порядку із зазначенням певної дії. &lt;br&gt;&lt;br&gt;Якщо у відділі реєстрації відсутня будинкова книга або картотека реєстрації місця проживання фізичних осіб, для отримання адміністративної послуги необхідно надати:&lt;br&gt;- документами що підтверджують право власності на нерухоме майно (обов’язкова присутність власника або співвласника, наймача житла із паспортом громадянина України);&lt;br&gt;- будинкову книгу/картотеку реєстрації місця проживання фізичних осіб;&lt;br&gt;- копії документів усіх зареєстрованих за адресою осіб (свідоцтво про народження дітей (у разі реєстрації малолітніх дітей) паспорт громадянина України, та інше);&lt;br&gt;- за необхідності інші документи (наприклад документ , що підтверджує зміну прізвища).&lt;br&gt;&lt;br&gt;Батьки або інші законні представники зобов’язані зареєструвати місце проживання новонародженої дитини протягом трьох місяців з дня державної реєстрації народження дитини;&lt;br&gt;&lt;br&gt;Реєстрацію місця проживання новонародженої дитини Ви можете здійснити через органи державної реєстрації актів цивільного стану протягом трьох місяців з дня державної реєстрації її народження.&lt;br&gt;У разі реєстрації дитини після трьох місяців від дня державної реєстрації її народження, необхідно надати довідку з місця реєстрації батька та матері про те, що дитина з дня народження не була зареєстрована за їх адресою."></activiti:formProperty>
         <activiti:formProperty id="warning2" name=" ; ;labelType=info" type="label" default="&lt;b&gt;УВАГА! Місце проживання дитини віком до 14 років реєструється за місцем проживання одного з батьків (того, який подає заяву)&lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить нове місце реєстрації дитини" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -17,7 +17,7 @@
           <activiti:value id="sEnumElement_Other" name="Інший документ"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи одного з батьків з яким реєструється дитина (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації, в ‎форматі JPEG);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспортні дані заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
@@ -51,13 +51,14 @@
           <activiti:value id="sYesR" name="Так"></activiti:value>
           <activiti:value id="sNoR" name="Ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="warning3" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого з батьків на реєстрацію місця проживання дитини та копія його паспорта."></activiti:formProperty>
+        <activiti:formProperty id="warning3" name=" ; ;labelType=info" type="label" default="Зверніть увагу! Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого з батьків на реєстрацію місця проживання дитини (крім випадків, коли місце проживання дитини визначено відповідним рішенням суду або рішенням органу опіки та піклування).&lt;br&gt;Якщо батьки дитини зареєстровані за однією адресою при реєстрації місця проживання дитини можлива присутність одного з батьків з оригіналами документів обох батьків, або витяг з Державного реєстру актів цивільного стану із зазначенням відомостей про батька (ч.1 ст. 135 Сімейного кодексу України (за наявності))."></activiti:formProperty>
         <activiti:formProperty id="sWhenCome" name="Дата зняття з попереднього місця реєстрації; у форматі - ДД.ММ.PPPP" type="string" default=" "></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_F" name="Додаткові документи" type="markers" default="{&quot;attributes&quot;:{&quot;Line_F&quot;:{&quot;aElement_ID&quot;:[&quot;sLabeZIP&quot;],&quot;sValue&quot;:&quot;Додаткові документи&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів. Завантажте їх ZIP архівом або у форматі PDF. &lt;br&gt;&lt;br&gt;Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний ZIP архів або PDF файл&lt;/a&gt;"></activiti:formProperty>
+        <activiti:formProperty id="sLabeZIP" name=" ; ;labelType=info" type="label" default="УВАГА! Для замовлення послуги, необхідно завантажити сканкопії документів в ‎форматі JPEG. Завантажте їх ZIP архівом. &lt;br&gt;&lt;br&gt;Посилання - &lt;a href=&quot;https://docs.google.com/document/d/1vkTj7DlfjHj8TYylHZKpESU5cGQF5N0R4ck1EBScVdM/edit?usp=sharing &quot; target=&quot;_blank&quot;&gt;Як зробити потрібний ZIP архів&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="warning_Drogobich" name=" ; ;labelType=info" type="label" default="&lt;b&gt;УВАГА!&lt;/b&gt; При необхідності (під час перевірки документів) у Вас можуть бути запрошені скан-копії документів, що підтверджують адресу реєстрації дитини"></activiti:formProperty>
-        <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;(якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина;(скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nSvidChild" name="Свідоцтво про народження;(якщо декілька сторінок у ‎форматі JPEG об'єднайте їх в архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_scan_passport" name="Паспорт особи, до якої реєструється дитина;(скан-копія всіх заповнених сторінок повині бути у ‎форматі JPEG, та обьеднані архівом (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_scan_2passport_Kher" name="Паспорт другого з батьків;(скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z));bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання;(або картка реєстрації особи чи будинкова книга);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerRegistr_0184_RegistrDo14" name="hide fields" type="markers" default="${markerService.loadFromFile('dms/Registr_0184_RegistrDo14.json')}"></activiti:formProperty>
@@ -68,6 +69,7 @@
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Часи роботи; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string"></activiti:formProperty>
@@ -136,15 +138,36 @@ execution.setVariable('sMaxPay', maxpay)
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
 					Ваше звернення [sID_Order] успішно зареєстровано. Спеціалісти оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти у обраний час ${date_of_visit}, реквізитами та сумою для сплати адміністративного збору, короткою інструкцією щодо процедури реєстрації.<br>
-					${sAddress}.<br> 
-					${sPhoneOrgan}<br>
-					<br>
+					
+					ЗВЕРНІТЬ УВАГУ! <br>
+Якщо Ви не можете самостійно звернутися до органу реєстрації, адміністративна послуга може бути наданна за зверненням Вашого представника напідставі документа, що посвідчує особу представника та довіреності, посвідченої в установленому законом порядку із зазначенням певної дії. <br><br>
+
+Якщо у відділі реєстрації відсутня будинкова книга або картотека реєстрації місця проживання фізичних осіб, для отримання адміністративної послуги необхідно надати:<br>
+- документами що підтверджують право власності на нерухоме майно (обов’язкова присутність власника або співвласника, наймача житла із паспортом громадянина України);<br>
+- будинкову книгу/картотеку реєстрації місця проживання фізичних осіб;<br>
+- копії документів усіх зареєстрованих за адресою осіб (свідоцтво про народження дітей (у разі реєстрації малолітніх дітей) паспорт громадянина України, та інше);<br>
+- за необхідності інші документи (наприклад документ , що підтверджує зміну прізвища).<br><br>
+
+Батьки або інші законні представники зобов’язані зареєструвати місце проживання новонародженої дитини протягом трьох місяців з дня державної реєстрації народження дитини;<br><br>
+
+Реєстрацію місця проживання новонародженої дитини Ви можете здійснити через органи державної реєстрації актів цивільного стану протягом трьох місяців з дня державної реєстрації її народження.<br><br>
+
+У разі реєстрації дитини після трьох місяців від дня державної реєстрації її народження, необхідно надати довідку з місця реєстрації батька та матері про те, що дитина з дня народження не була зареєстрована за їх адресою.<br><br>
+
+Місце проживання дитини віком до 14 років реєструється за місцем проживання одного з батьків (того, який подає заяву)<br><br>
+
+Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого з батьків на реєстрацію місця проживання дитини (крім випадків, коли місце проживання дитини визначено відповідним рішенням суду або рішенням органу опіки та піклування).<br><br>
+
+Якщо батьки дитини зареєстровані за однією адресою при реєстрації місця проживання дитини можлива присутність одного з батьків з оригіналами документів обох батьків, або витяг з Державного реєстру актів цивільного стану із зазначенням відомостей про батька (ч.1 ст. 135 Сімейного кодексу України (за наявності)).<br><br>
+					
+					
 				</p>
 				<br>
 				<p>[cancelTask]</p> 
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br>
+			${sAddress},<br> 
+			${sNameOrgan}.<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -313,7 +336,7 @@ execution.setVariable('sMaxPay', maxpay)
 					Адміністративний збір стягується лише за одну адміністративну послугу та зараховується до місцевого бюджету за новим місцем проживання.<br><br>
 					<b>Реквізити для сплати:</b><br>
 					<i>${sRecvizitiAdmin}<br>
-					Призначення платежу: адмін. збір за реєстрацію місця проживання</i>
+					Призначення платежу: адмін. збір за реєстрацію місця проживання (вказати П.І.Б. заявника).</i>
 				</p>
 				<p>
 					<b>Деталі зустрічі:</b><br>
@@ -327,16 +350,16 @@ execution.setVariable('sMaxPay', maxpay)
 						<li>письмова згода другого з батьків-нотаріально посвідчена заява (у разі відсутності одного з батьків);</li>
 						<li>рішення суду або рішення органу опіки та піклування (у разі коли місце проживання дитини визначено відповідним рішенням);</li>
 						<li>витяг з Державного реєстру актів цивільного стану із зазначенням відомостей про батька (ч.1 ст. 135 Сімейного кодексу України (за наявності));</li>
+						<li>довідка про реєстрацію місця проживання (у разі реєстрації місця проживання одночасно із зняттям з попереднього місця проживання з іншої адміністративно-територіальної одиниці);</li>
 						<li>квитанцію про сплату адміністративного збору.</li>
-						<li>довідка про реєстрацію місця проживання (у разі реєстрації місця проживання одночасно із зняттям з попереднього місця проживання з іншої адміністративно-територіальної одиниці).</li>
+						
 					</ul>
 				</p>
 				<p>	
 					<b>Зверніть увагу:</b> 
 					<ul>
-						<li>Для реєстрації місця проживання дитини можлива присутність одного з батьків з оригіналами документів;</li>
-						<li>Обов’язкова присутність обох батьків у разі реєстрації місця проживання дитини, віком до 14 років у разі реєстрації батьків за різними адресами;</li>
-						<li>Обов’язкова присутність обох батьків  у разі реєстрації місця проживання осіб, віком до 14 років одночасно із зняттям з попереднього місця проживання.</li>			
+						<li>Якщо батьки дитини зареєстровані за різними адресами, при реєстрації повинні бути присутні обидва батьки або Вам буде потрібна нотаріально завірена згода другого з батьків на реєстрацію місця проживання дитини (крім випадків, коли місце проживання дитини визначено відповідним рішенням суду або рішенням органу опіки та піклування).</li>
+						<li>Якщо батьки дитини зареєстровані за однією адресою при реєстрації місця проживання дитини можлива присутність одного з батьків з оригіналами документів обох батьків або витяг з Державного реєстру актів цивільного стану із зазначенням відомостей про батька (ч.1 ст. 135 Сімейного кодексу України (за наявності)).</li>			
 					</ul>
 				</p>
 				<p>
@@ -344,8 +367,7 @@ execution.setVariable('sMaxPay', maxpay)
 					<b><i>${sDecisionComment}</i></b>
 				</p>
 				<p>
-					При вниникненні питань Ви можете звернутися: <br>
-					${sPhoneOrgan}
+					${sWorkTime}
 				</p>
 				<br>
 				<p>[cancelTask]</p> 

@@ -1,0 +1,15 @@
+{
+ "validate":{ 
+  "Numbers_Accounts": {
+    "aField_ID": [
+      "!",
+      "sNumberRish",
+      "sNumberRish2",
+      "sNumberRish3",
+      "sNumberRish4",
+      "sNumberRish5"
+    ],
+    "sMessage": "Перевірте правильність введеного номеру (літери не дозволені до заповнення)"
+  }
+ }
+}

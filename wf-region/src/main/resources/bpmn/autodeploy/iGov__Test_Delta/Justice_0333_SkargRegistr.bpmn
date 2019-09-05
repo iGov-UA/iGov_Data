@@ -96,12 +96,30 @@
           <activiti:value id="sEnumNo" name="Ні"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="lableSudDii" name=" ; ;labelType=danger" type="label" default="Скарга на реєстраційні дії, які проведені на підставі судового рішення, Міністерством юстиції України не розглядається"></activiti:formProperty>
+        
+        <activiti:formProperty id="asKilkRish" name="Скільки рішень ви оскаржуєте?;(вкажіть кількість)" type="enum" required="true" default="sEnamR1">
+          <activiti:value id="sEnamR1" name="Одне рішення"></activiti:value>
+          <activiti:value id="sEnamR2" name="Два рішення"></activiti:value>
+          <activiti:value id="sEnamR3" name="Три рішення"></activiti:value>
+          <activiti:value id="sEnamR4" name="Чотири рішення"></activiti:value>
+          <activiti:value id="sEnamR5" name="П'ять рішеннь"></activiti:value>
+        </activiti:formProperty>
         <activiti:formProperty id="DateRish" name="Дата прийняття рішення, яке оскаржується;(дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNumberRish" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="DateRish2" name="Дата прийняття рішення, яке оскаржується;(2ге рішення, дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish2" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="DateRish3" name="Дата прийняття рішення, яке оскаржується;(3те рішення, дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish3" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="DateRish4" name="Дата прийняття рішення, яке оскаржується;(4гте рішення, дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish4" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="DateRish5" name="Дата прийняття рішення, яке оскаржується;(5те рішення, дату можливо дізнатись отримавши Витяг)" type="date" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish5" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли Ви дізналися про порушення Ваших прав" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином Ви дізналися про порушення Ваших прав?;(вкажіть обставини, який орган повідомив і при вчиненні яких дій)" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="markerDirectionOfAppeal" name="markerDirectionOfAppeal" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_sEnamRealty&quot;:{&quot;aField_ID&quot;:[&quot;asSkargaTem1&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnamRealty'&quot;},&quot;ShowFieldsOnCondition_sEnamRegistration&quot;:{&quot;aField_ID&quot;:[&quot;asSkargaTem2&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnamRegistration'&quot;},&quot;ShowFieldsOnCondition_SkargaTem1&quot;:{&quot;aField_ID&quot;:[&quot;asSudNabuto&quot;,&quot;asSudProcces&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;,&quot;sCond2&quot;:&quot;asSkargaTem1&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnamRealty' &amp;&amp; [sCond2]=='sEnumRishenia1'&quot;},&quot;ShowFieldsOnCondition_SkargaTem2&quot;:{&quot;aField_ID&quot;:[&quot;asSudDii&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;,&quot;sCond2&quot;:&quot;asSkargaTem2&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnamRegistration' &amp;&amp; [sCond2]=='sEnumRegistr2'&quot;},&quot;ShowFieldsOnCondition_sEnamRealtyYes&quot;:{&quot;aField_ID&quot;:[&quot;lableSud&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;,&quot;sCond2&quot;:&quot;asSudNabuto&quot;,&quot;sCond3&quot;:&quot;asSudProcces&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnamRealty' &amp;&amp; ([sCond2]=='sEnumYes'||[sCond3]=='sEnumYes')&quot;},&quot;ShowFieldsOnCondition_sEnamRegistrationYes&quot;:{&quot;aField_ID&quot;:[&quot;lableSudDii&quot;],&quot;asID_Field&quot;:{&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;,&quot;sCond2&quot;:&quot;asSudDii&quot;},&quot;sCondition&quot;:&quot;[sCond]=='sEnamRegistration' &amp;&amp; [sCond2]=='sEnumYes'&quot;},&quot;ShowFieldsOnCondition_sEnamRealtyNo&quot;:{&quot;aField_ID&quot;:[&quot;DateRish&quot;,&quot;sNumberRish&quot;,&quot;DateInfoPororush&quot;,&quot;tInfoPororush&quot;],&quot;asID_Field&quot;:{&quot;sCond2&quot;:&quot;asSudNabuto&quot;,&quot;sCond3&quot;:&quot;asSudProcces&quot;,&quot;sCond4&quot;:&quot;asSudDii&quot;,&quot;sCond&quot;:&quot;asDirectionOfAppeal&quot;,&quot;sCondT1&quot;:&quot;asSkargaTem1&quot;,&quot;sCondT2&quot;:&quot;asSkargaTem2&quot;},&quot;sCondition&quot;:&quot;([sCond2]=='sEnumNo' &amp;&amp; [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' &amp;&amp; [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' &amp;&amp; [sCondT2]=='sEnumDia2')&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markerDirectionOfAppeal" name="markerDirectionOfAppeal" type="markers" default="${markerService.loadFromFile('minust/0333_SkargRegistr_DirectionOfAppeal.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerValuesSkargaTem" name="markerValuesSkargaTem" type="markers" default="${markerService.loadFromFile('minust/0333_SkargRegistr_ValuesSkargaTem.json')}"></activiti:formProperty>
+        <activiti:formProperty id="markerNumValidate" name="markerNumValidate" type="markers" default="${markerService.loadFromFile('minust/0333_SkargRegistr_NumValidate.json')}"></activiti:formProperty>
                 
         <activiti:formProperty id="markersLine_Z" name="Зміст скарги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_Z&quot;:{&quot;aElement_ID&quot;:[&quot;lableZmist&quot;],&quot;sValue&quot;:&quot;Зміст скарги&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lableZmist" name=" ; ;labelType=warning" type="label" default="Нижче наведено текст який відповідно до Закону має бути зазначений в скарзі.&lt;br&gt;Щоб спростити заповнення скарги ми вносимо цей текст автоматично. &lt;br&gt; Якщи Ви хочете ще щось додати, напишіть це у полі під цим текстом."></activiti:formProperty>
@@ -111,7 +129,7 @@
         
         <activiti:formProperty id="markersLine_FF" name="Сканкопії документів" type="markers" default="{&quot;attributes&quot;:{&quot;Line_FF&quot;:{&quot;aElement_ID&quot;:[&quot;lablePDF&quot;],&quot;sValue&quot;:&quot;Сканкопії документів&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="lablePDF" name=" ; ;labelType=info" type="label" default="Завантажте всі документи у форматі PDF. Це необхідно для накладення ЕЦП."></activiti:formProperty>
-        <activiti:formProperty id="FileRegistrRish" name="Оскаржуване рішення або повідомлення державного реєстратора; ;bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="FileRegistrRish" name="Оскаржуване рішення або повідомлення державного реєстратора;(якщо рішень кілька завантажте їх одним файлом);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="FileInshiDoku" name="Інші документи, що підтверджують факт порушення прав скаржника;(засвідчені в установленому законодавством порядку);bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="FileDovirebist" name="Довіреність представника; ;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="FileDovirebistUO" name="Довіреність представника Юридичної особи; ;bNew=true" type="file" required="true"></activiti:formProperty>
@@ -180,7 +198,7 @@
           <activiti:expression><![CDATA[Vashe zvernennya zareyestrovano. Detalno na igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[" "]]></activiti:expression>
+          <activiti:expression><![CDATA[${form_signed_all_1}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -260,6 +278,15 @@
         </activiti:formProperty>
         <activiti:formProperty id="DateRish" name="Дата прийняття рішення, яке оскаржується або дата вчинення оскаржуваної дії" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNumberRish" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish2" name="Дата прийняття рішення №2, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish2" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish3" name="Дата прийняття рішення №3, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish3" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish4" name="Дата прийняття рішення №4, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish4" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish5" name="Дата прийняття рішення №5, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish5" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли заявник дізнався про порушення своїх прав" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином заявник дізнався про порушення своїх прав?" type="textArea" writable="false"></activiti:formProperty>
         
@@ -536,8 +563,17 @@
         </activiti:formProperty>
         <activiti:formProperty id="DateRish" name="Дата прийняття рішення, яке оскаржується або дата вчинення оскаржуваної дії" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNumberRish" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish2" name="Дата прийняття рішення №2, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish2" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish3" name="Дата прийняття рішення №3, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish3" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish4" name="Дата прийняття рішення №4, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish4" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="DateRish5" name="Дата прийняття рішення №5, яке оскаржується" type="date" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="sNumberRish5" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли заявник дізнався про порушення своїх прав" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином заявник дізнався про порушення своїх прав?" type="textArea" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_ZZ" name="Зміст скарги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;HTMLZmist&quot;],&quot;sValue&quot;:&quot;Зміст скарги&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="HTMLZmist" name="Зміст оскаржуваного рішення або дії та норми законодавства, які порушено. Обставини, якими обґрунтовуються вимоги" type="fileHTML" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bSanction_1" name="Скасування рішення про державну реєстрацію прав; ;sID_CheckboxTrue=yes" type="enum" default="yes" writable="false">

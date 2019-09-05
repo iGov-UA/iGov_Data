@@ -1,0 +1,82 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_sEnamRealty": {
+      "aField_ID": [
+        "asSkargaTem1"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal"
+      },
+      "sCondition": "[sCond]=='sEnamRealty'"
+    },
+    "ShowFieldsOnCondition_sEnamRegistration": {
+      "aField_ID": [
+        "asSkargaTem2"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal"
+      },
+      "sCondition": "[sCond]=='sEnamRegistration'"
+    },
+    "ShowFieldsOnCondition_SkargaTem1": {
+      "aField_ID": [
+        "asSudNabuto",
+        "asSudProcces"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal",
+        "sCond2": "asSkargaTem1"
+      },
+      "sCondition": "[sCond]=='sEnamRealty' && [sCond2]=='sEnumRishenia1'"
+    },
+    "ShowFieldsOnCondition_SkargaTem2": {
+      "aField_ID": [
+        "asSudDii"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal",
+        "sCond2": "asSkargaTem2"
+      },
+      "sCondition": "[sCond]=='sEnamRegistration' && [sCond2]=='sEnumRegistr2'"
+    },
+    "ShowFieldsOnCondition_sEnamRealtyYes": {
+      "aField_ID": [
+        "lableSud"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal",
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces"
+      },
+      "sCondition": "[sCond]=='sEnamRealty' && ([sCond2]=='sEnumYes'||[sCond3]=='sEnumYes')"
+    },
+    "ShowFieldsOnCondition_sEnamRegistrationYes": {
+      "aField_ID": [
+        "lableSudDii"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal",
+        "sCond2": "asSudDii"
+      },
+      "sCondition": "[sCond]=='sEnamRegistration' && [sCond2]=='sEnumYes'"
+    },
+    "ShowFieldsOnCondition_sEnamRealtyNo": {
+      "aField_ID": [
+        "asKilkRish",
+        "DateRish",
+        "sNumberRish",
+        "DateInfoPororush",
+        "tInfoPororush"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2"
+      },
+      "sCondition": "([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')"
+    }
+  }
+}

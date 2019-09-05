@@ -27,6 +27,82 @@
         "sClient": "asSubjectCategory"
       },
       "sCondition": "[sClient] == 'sEnamExecutiveCommittee'||[sClient] == 'sEnamDistrictAdministration'||[sClient] == 'sEnamAccredited'||[sClient] == 'sEnamNotary'"
+    },
+    "ShowFieldsOnCondition_Kilk2": {
+      "aField_ID": [
+        "DateRish2",
+        "sNumberRish2"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2",
+        "sCondK": "asKilkRish"
+      },
+      "sCondition": "(([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')) && [sCondK]=='sEnamR2'"
+    },
+    "ShowFieldsOnCondition_Kilk3": {
+      "aField_ID": [
+        "DateRish2",
+        "sNumberRish2",
+        "DateRish3",
+        "sNumberRish3"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2",
+        "sCondK": "asKilkRish"
+      },
+      "sCondition": "(([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')) && [sCondK]=='sEnamR3'"
+    },
+    "ShowFieldsOnCondition_Kilk4": {
+      "aField_ID": [
+        "DateRish2",
+        "sNumberRish2",
+        "DateRish3",
+        "sNumberRish3",
+        "DateRish4",
+        "sNumberRish4"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2",
+        "sCondK": "asKilkRish"
+      },
+      "sCondition": "(([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')) && [sCondK]=='sEnamR4'"
+    },
+    "ShowFieldsOnCondition_Kilk5": {
+      "aField_ID": [
+        "DateRish2",
+        "sNumberRish2",
+        "DateRish3",
+        "sNumberRish3",
+        "DateRish4",
+        "sNumberRish4",
+        "DateRish5",
+        "sNumberRish5"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2",
+        "sCondK": "asKilkRish"
+      },
+      "sCondition": "(([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')) && [sCondK]=='sEnamR5'"
     }
   }
 }

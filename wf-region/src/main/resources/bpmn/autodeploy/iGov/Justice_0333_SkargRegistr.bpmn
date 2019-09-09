@@ -753,7 +753,6 @@
     <sequenceFlow id="flow18" sourceRef="servicetask4" targetRef="endevent2"></sequenceFlow>
     <endEvent id="endevent3" name="End"></endEvent>
     <sequenceFlow id="flow20" sourceRef="servicetask9" targetRef="endevent3"></sequenceFlow>
-    <userTask id="usertask3" name="Канцелярія (1й етап)" activiti:candidateGroups="MinUstKancel"></userTask>
     <sequenceFlow id="flow21" sourceRef="servicetask1" targetRef="usertask3"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_Justice_0333_SkargRegistr">

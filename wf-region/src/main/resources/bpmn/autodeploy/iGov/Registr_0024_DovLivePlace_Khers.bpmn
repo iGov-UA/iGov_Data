@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="Registr_0024_DovLivePlace_Khers" name="Довідка про реєстрацію місця проживання/перебування особи (для отримання ID-картки)" isExecutable="true">
-    <documentation>Смоктій К.В. Последние правки: 11.10.2017</documentation>
+    <documentation> </documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="warning222" name=" ; ;labelType=info" type="label" default="ЗВЕРНІТЬ УВАГУ! &lt;br&gt;Якщо Ви не можете самостійно звернутися до органу реєстрації, адміністративна послуга може бути наданна за зверненням Вашого представника напідставі документа, що посвідчує особу представника та довіреності, посвідченої в установленому законом порядку із зазначенням певної дії.&lt;br&gt;&lt;br&gt;Якщо у відділі реєстрації відсутня будинкова книга або картотека реєстрації місця проживання фізичних осіб, для отримання адміністративної послуги необхідно надати:&lt;br&gt;- документами що підтверджують право власності на нерухоме майно (обов’язкова присутність власника або співвласника, наймача житла із паспортом громадянина України);&lt;br&gt;- будинкову книгу/картотеку реєстрації місця проживання фізичних осіб;&lt;br&gt;- копії документів усіх зареєстрованих за адресою осіб (свідоцтво про народження дітей (у разі реєстрації малолітніх дітей) паспорт громадянина України, та інше);&lt;br&gt;- за необхідності інші документи (наприклад документ , що підтверджує зміну прізвища).&lt;br&gt;Якщо Ви досягли 14-ти річного віку  Ви маєте особисто подати та підписати відповідні документи."></activiti:formProperty>
@@ -36,7 +36,7 @@
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="nFile_CopyPassportZ" name="Паспорт (свідотство про народження особи яка отримує паспорт вперше або втратила його), свідотство про зміну прізвища (за наявності);(у ‎форматі JPEG);bNew=true" type="file" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_CopyPassportZ" name="Паспорт (свідотство про народження особи яка отримує паспорт вперше або втратила його), свідотство про зміну прізвища (за наявності);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації в ‎форматі JPEG у ZIP архіві);bNew=true" type="file" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="asForMySelf" name="Ви замовляєте довідку для себе?" type="enum" default="sYes" required="true">
           <activiti:value id="sYes" name="Так, для себе"></activiti:value>
           <activiti:value id="sNo" name="Ні, я законний представник особи"></activiti:value>

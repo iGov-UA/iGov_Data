@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="Registr_0185_ZniatDo14_Khers" name="Зняття з реєстрації місця проживання дитини до чотирнадцяти років" isExecutable="true">
-    <documentation>Смоктій К.В. (получено на сопровождение от Жигана Ромы) Последние правки: 16.01.2018</documentation>
+    <documentation> </documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="warning1" name=" ; ;labelType=warning" type="label" default="&lt;b&gt;Зверніть увагу! Послуга надається лише для однієї дитини щодо якої заповнюється звернення! &lt;/b&gt;"></activiti:formProperty>
@@ -21,7 +21,7 @@
           <activiti:value id="sEnumElement_Other" name="Інший документ"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації в ‎форматі JPEG );bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації в ‎форматі JPEG у ZIP архіві);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспортні дані заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
@@ -55,7 +55,7 @@
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації дитини;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sNewAddress" name="Нова адреса реєстрації;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" default=" "></activiti:formProperty>
         <activiti:formProperty id="nFile_RegDov_Slaviansk" name="Довідка про реєстрацію місця проживання;(або картка реєстрації особи чи будинкова книга);bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nFile_scan_2passport_Kher" name="Паспорт другого з батьків;(скан-копія всіх заповнених сторінок, у форматі pdf або архів (формату zip, rar, 7z));bNew=true" type="file"></activiti:formProperty>
+        <activiti:formProperty id="nFile_scan_2passport_Kher" name="Паспорт другого з батьків;(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації в ‎форматі JPEG у ZIP архіві);bNew=true" type="file"></activiti:formProperty>
         
         <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>

@@ -1,0 +1,44 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_RealtyVutiag": {
+      "aField_ID": [
+        "lableVutiagNer"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal",
+        "sCond2": "asVutiag"
+      },
+      "sCondition": "([sCond]=='sEnamRealty'||[sCond]=='Реєстрація речових прав на нерухоме майно') && ([sCond2]=='sEnumNo'||[sCond2]=='Ні')"
+    },
+    "ShowFieldsOnCondition_RegistrationVutiag": {
+      "aField_ID": [
+        "lableVutiagUO"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal",
+        "sCond2": "asVutiag"
+      },
+      "sCondition": "([sCond]=='sEnamRegistration'||[sCond]=='ФРеєстрація юридичних осіб та фізичних осіб – підприємців') && ([sCond2]=='sEnumNo'||[sCond2]=='Ні')"
+    },
+    "ShowFieldsOnCondition_Realty22": {
+      "aField_ID": [
+        "lableZmistN",
+        "lableZak37"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal"
+      },
+      "sCondition": "[sCond]=='sEnamRealty'||[sCond]=='Реєстрація речових прав на нерухоме майно'"
+    },
+    "ShowFieldsOnCondition_Registration22": {
+      "aField_ID": [
+        "lableZmistUO",
+        "lableZak34"
+      ],
+      "asID_Field": {
+        "sCond": "asDirectionOfAppeal"
+      },
+      "sCondition": "[sCond]=='sEnamRegistration'||[sCond]=='ФРеєстрація юридичних осіб та фізичних осіб – підприємців'"
+    }
+  }
+}

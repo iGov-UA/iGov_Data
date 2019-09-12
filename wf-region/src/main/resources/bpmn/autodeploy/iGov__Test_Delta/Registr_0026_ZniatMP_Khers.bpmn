@@ -71,8 +71,6 @@
         <activiti:formProperty id="sDateCreate" name="Дата подання заявки ; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sMinPay" name="мініальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMaxPay" name="максимальна сума адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
-        
-        <activiti:formProperty id="markers111" name="show-hide" type="markers" default="${markerService.loadFromFile('AK/TEST_marker.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <sequenceFlow id="flow2" sourceRef="servicetask10" targetRef="scripttask1"></sequenceFlow>

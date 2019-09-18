@@ -29,13 +29,17 @@
           <activiti:value id="sEnamNoECP" name="Скасування повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
         </activiti:formProperty>
         
+        <activiti:formProperty id="form_signed_all_1" name="Повідомлення з ЕЦП; ;bPrintFormFileAsPDF=true,bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для накладення ЕЦП ; ;bVisible=false" type="string" default="pattern/print/minust/Justice_0500_RegPovECP.html"></activiti:formProperty>
+        
+        
         <activiti:formProperty id="iMUemail" name="пошта органу; ;bVisible=false" type="string" default="themis@minjust.gov.ua"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="пошта органу; ;bVisible=false" type="string" default="Міністерство юстиції України"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення про реєстрацію змін на підставі рішень в електронній формі"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameSm" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення про реєстрацію змін на підставі рішень в електронній формі"></activiti:formProperty>
       </extensionElements>
     </startEvent>
-    <serviceTask id="servicetask1" name="Лист в орган" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
+    <serviceTask id="servicetask1" name="Лист в орган" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="to">
           <activiti:expression><![CDATA[${iMUemail}]]></activiti:expression>
@@ -48,6 +52,9 @@
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_employee_notify.html]]]></activiti:expression>
+        </activiti:field>
+        <activiti:field name="saAttachmentsForSend">
+          <activiti:expression><![CDATA[${form_signed_all_1}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -81,7 +88,7 @@
           <activiti:expression><![CDATA[Vashe zvernennya zareyestrovano. Detalno na igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[" "]]></activiti:expression>
+          <activiti:expression><![CDATA[${form_signed_all_1}]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
@@ -120,6 +127,8 @@
         </activiti:formProperty>
         <activiti:formProperty id="tComment" name="Коментар про причину відмови" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_Com.json')}"></activiti:formProperty>
+        <activiti:formProperty id="form_signed_all_1" name="Повідомлення з ЕЦП; ;bNew=true,bPrintFormFileAsPDF=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
     <userTask id="usertask1" name="Скасування повідомлення про реєстрацію на підставі рішень в електронній формі" activiti:candidateGroups="MinUstECPOnly">
@@ -147,7 +156,8 @@
         </activiti:formProperty>
         <activiti:formProperty id="tComment" name="Коментар про причину відмови" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="markerDash1" name="markerDash1" type="markers" default="${markerService.loadFromFile('1_Standart_marker/1S_Dash1_Com.json')}"></activiti:formProperty>
-      
+        <activiti:formProperty id="form_signed_all_1" name="Повідомлення з ЕЦП; ;bNew=true,bPrintFormFileAsPDF=true" type="file" writable="false"></activiti:formProperty>
+        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
     <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
@@ -224,7 +234,7 @@ ${sNameOrgan}<br>
           <activiti:expression><![CDATA[Vashe zvernennya [sID_Order] obrobleno. Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${docFile}]]></activiti:expression>
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>

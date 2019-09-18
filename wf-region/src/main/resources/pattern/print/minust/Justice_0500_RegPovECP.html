@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>FORM-1</title>
+
+
+</head>
+
+<body style="font-size: 14px;">
+
+
+  
+<table style="width: 100%; padding-top: 10px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            <b>
+                Повідомлення 
+            </b>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="sEnamРov1" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            про державну реєстрацію змін
+до відомостей про юридичну особу, що містяться в Єдиному державному реєстрію ридичних осіб, фізичних осіб - підприємців та громадських формувань, виключно на підставі рішень в електронній формі, підписаних засновниками (учасниками) з використанням засобів електронної ідентифікаціїз високим рівнем довіри
+о
+        </td>
+    </tr>
+    </tbody>
+</table><br>
+  
+<table id="sEnamSk1" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            про скасування попередження про державну реєстрацію змін до відомостей про юридичну особу, що містяться в Єдиному державному реєстріюридичних осіб, фізичних осіб - підприємців та громадських формувань, виключно на підставі рішень в електронній формі, підписаних засновниками (учасниками) з використанням засобів електронної ідентифікаціїз високим рівнем довіри
+        </td>
+    </tr>
+    </tbody>
+</table><br>
+  
+
+<table id="sEnamРov2" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: left;font-size: 15px;padding-bottom: 10px;">
+          Відомості про юридичну особу, щодо якої вноситься попередження про державну реєстрацію змін до відомостей про юридичну особу, що містяться в Єдиному державному реєстрі юридичних осіб, фізичних осіб - підприємців та громадських формувань, виключно на підставі рішень в електронній формі, підписаних засновниками (учасниками) з використанням засобів електронної ідентифікації з високим рівнем довіри:<br>
+          Найменування: <b>[sFullName_SubjectOrgan_01]</b>,<br>
+          ЕДРПОУ: <b>[sID_SubjectOrgan_OKPO_01]</b>.<br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+  
+  
+<table id="sEnamSk2" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: left;font-size: 15px;padding-bottom: 10px;">
+          Відомості про юридичну особу, щодо якої скасовується попередження про державну реєстрацію змін до відомостей про юридичну особу, що містяться в Єдиному державному реєстрі юридичних осіб, фізичних осіб - підприємців та громадських формувань, виключно на підставі рішень в електронній формі, підписаних засновниками (учасниками) з використанням засобів електронної ідентифікації з високим рівнем довіри:<br>
+          Найменування: <b>[sFullName_SubjectOrgan_01]</b>,<br>
+          ЕДРПОУ: <b>[sID_SubjectOrgan_OKPO_01]</b>.<br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+  
+<table style="width: 100%; border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td style="width: 35%; text-align: center;font-size: 16px;">[sDateCreateProcess]</td>
+                    <td style="width: 20%; text-align: left; padding: 0 15px; font-size: 14px;">Подано через iGov</td>
+                    <td></td>
+                    <td style="width: 20%; text-align: left; padding: 0 15px; font-size: 14px;"><div id="clFio5"> </div></td>
+                    <td></td>
+                </tr>
+                </tbody>
+</table>
+  
+
+  
+<script type="text/javascript">
+  var ScrDia = "[asDia]";
+  
+  switch(ScrDia) {
+    case "Повідомлення про реєстрацію на підставі рішень в електронній формі":
+        document.getElementById("sEnamРov1").style.display = 'table';
+        document.getElementById("sEnamРov2").style.display = 'table';
+        document.getElementById("sEnamSk1").style.display = 'none';
+        document.getElementById("sEnamSk2").style.display = 'none';
+        break;
+    case "Скасування повідомлення про реєстрацію на підставі рішень в електронній формі":
+        document.getElementById("sEnamРov1").style.display = 'none';
+        document.getElementById("sEnamРov2").style.display = 'none';
+        document.getElementById("sEnamSk1").style.display = 'table';
+        document.getElementById("sEnamSk2").style.display = 'table';
+        break;
+    default:
+        document.getElementById("sEnamРov1").style.display = 'table';
+        document.getElementById("sEnamРov2").style.display = 'table';
+        document.getElementById("sEnamSk1").style.display = 'none';
+        document.getElementById("sEnamSk2").style.display = 'none';
+    }
+
+  var ScrclFio = "[bankIdlastName] [bankIdfirstName] [bankIdmiddleName]";
+  document.getElementById("clFio5").innerHTML += ScrclFio;
+
+
+</script> 
+
+
+</body>
+</html>

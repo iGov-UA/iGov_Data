@@ -96,8 +96,7 @@
     },
     "ShowFieldsOnCondition_asKilkRishSkas": {
       "aField_ID": [
-        "lableKilkRishSkas",
-        "asKilkRishSkas"
+        "tRishChastNum"
       ],
       "asID_Field": {
         "sCond2": "asSudNabuto",

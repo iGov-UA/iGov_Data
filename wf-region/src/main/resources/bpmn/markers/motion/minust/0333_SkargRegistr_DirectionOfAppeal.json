@@ -77,6 +77,39 @@
         "sCondT2": "asSkargaTem2"
       },
       "sCondition": "([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')"
+    },
+    "ShowFieldsOnCondition_asKilkRish": {
+      "aField_ID": [
+        "lableKilkRishSkas",
+        "asKilkRishSkas"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2",
+        "sCondKR": "asKilkRish"
+      },
+      "sCondition": "(([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')) && ([sCondKR]=='sEnamR2' || [sCondKR]=='sEnamR3' || [sCondKR]=='sEnamR4' || [sCondKR]=='sEnamR5')"
+    },
+    "ShowFieldsOnCondition_asKilkRishSkas": {
+      "aField_ID": [
+        "lableKilkRishSkas",
+        "asKilkRishSkas"
+      ],
+      "asID_Field": {
+        "sCond2": "asSudNabuto",
+        "sCond3": "asSudProcces",
+        "sCond4": "asSudDii",
+        "sCond": "asDirectionOfAppeal",
+        "sCondT1": "asSkargaTem1",
+        "sCondT2": "asSkargaTem2",
+        "sCondKR": "asKilkRish",
+        "sCondKRS": "asKilkRishSkas"
+      },
+      "sCondition": "(([sCond2]=='sEnumNo' && [sCond3]=='sEnumNo')|| [sCond4]=='sEnumNo'||([sCond]=='sEnamRealty' && [sCondT1]=='sEnumDia1')||([sCond]=='sEnamRegistration' && [sCondT2]=='sEnumDia2')) && ([sCondKR]=='sEnamR2' || [sCondKR]=='sEnamR3' || [sCondKR]=='sEnamR4' || [sCondKR]=='sEnamR5') && ([sCondKRS]=='sEnamKRSpart')"
     }
   }
 }

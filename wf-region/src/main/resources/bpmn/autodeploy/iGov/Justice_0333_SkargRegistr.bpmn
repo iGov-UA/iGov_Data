@@ -118,6 +118,14 @@
         <activiti:formProperty id="sNumberRish5" name="Номер рішення, що оскаржується;(номер можливо дізнатись отримавши Витяг)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли Ви дізналися про порушення Ваших прав" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином Ви дізналися про порушення Ваших прав?;(вкажіть обставини, який орган повідомив і при вчиненні яких дій)" type="textArea" required="true"></activiti:formProperty>
+        
+        <activiti:formProperty id="lableKilkRishSkas" name=" ; ;labelType=warning" type="label" default="У випадку задоволення скарги, всі зазначені вами рішення будуть скасовані.&lt;br&gt;Якщо ви бажаєте скасувати лиш частину рішень, вкажіть це нижче."></activiti:formProperty>
+        <activiti:formProperty id="asKilkRishSkas" name="Що скасувати?;(всі чи частину рішень?)" type="enum" default="sEnamKRSall" required="true">
+          <activiti:value id="sEnamKRSall" name="Всі рішення"></activiti:value>
+          <activiti:value id="sEnamKRSpart" name="Частину рішень"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="tRishChastNum" name="Вкажіть номери рішень які ви хочете скасувати" type="textArea" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markerDirectionOfAppeal" name="markerDirectionOfAppeal" type="markers" default="${markerService.loadFromFile('minust/0333_SkargRegistr_DirectionOfAppeal.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerValuesSkargaTem" name="markerValuesSkargaTem" type="markers" default="${markerService.loadFromFile('minust/0333_SkargRegistr_ValuesSkargaTem.json')}"></activiti:formProperty>
         <activiti:formProperty id="markerNumValidate" name="markerNumValidate" type="markers" default="${markerService.loadFromFile('minust/0333_SkargRegistr_NumValidate.json')}"></activiti:formProperty>
@@ -298,6 +306,7 @@
         <activiti:formProperty id="sNumberRish4" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="DateRish5" name="Дата прийняття рішення №5, яке оскаржується" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNumberRish5" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tRishChastNum" name="Номери рішень, які необхідно скасувати" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли заявник дізнався про порушення своїх прав" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином заявник дізнався про порушення своїх прав?" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_ZZ" name="Зміст скарги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;HTMLZmist&quot;],&quot;sValue&quot;:&quot;Зміст скарги&quot;}}}"></activiti:formProperty>
@@ -579,6 +588,7 @@
         <activiti:formProperty id="sNumberRish4" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="DateRish5" name="Дата прийняття рішення №5, яке оскаржується" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sNumberRish5" name="Номер рішення, що оскаржується" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="tRishChastNum" name="Номери рішень, які необхідно скасувати" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="DateInfoPororush" name="Дата, коли заявник дізнався про порушення своїх прав" type="date" writable="false"></activiti:formProperty>
         <activiti:formProperty id="tInfoPororush" name="Яким чином заявник дізнався про порушення своїх прав?" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="markersLine_ZZ" name="Зміст скарги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_ZZ&quot;:{&quot;aElement_ID&quot;:[&quot;HTMLZmist&quot;],&quot;sValue&quot;:&quot;Зміст скарги&quot;}}}"></activiti:formProperty>

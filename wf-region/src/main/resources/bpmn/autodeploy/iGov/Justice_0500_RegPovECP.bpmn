@@ -34,8 +34,8 @@
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для накладення ЕЦП ; ;bVisible=false" type="string" default="pattern/print/minust/Justice_0500_RegPovECP.html"></activiti:formProperty>
         <activiti:formProperty id="iMUemail" name="пошта органу; ;bVisible=false" type="string" default="themis@minjust.gov.ua"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="пошта органу; ;bVisible=false" type="string" default="Міністерство юстиції України"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення про реєстрацію змін на підставі рішень в електронній формі"></activiti:formProperty>
-        <activiti:formProperty id="sPosluga_nameSm" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення про реєстрацію змін на підставі рішень в електронній формі"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення щодо проведення реєстраційних дій на підставі рішень в електронній формі"></activiti:formProperty>
+        <activiti:formProperty id="sPosluga_nameSm" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення щодо проведення реєстраційних дій на підставі рішень в електронній формі"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask1" name="Лист в орган" activiti:delegateExpression="#{MailTaskWithAttachments}">

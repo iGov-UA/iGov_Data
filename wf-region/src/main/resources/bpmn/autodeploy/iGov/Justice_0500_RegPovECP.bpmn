@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="Justice_0500_RegPovECP" name="Повідомлення про реєстрацію змін на підставі рішень в електронній формі" isExecutable="true">
+  <process id="Justice_0500_RegPovECP" name="Повідомлення щодо проведення реєстраційних дій на підставі рішень в електронній формі" isExecutable="true">
     <documentation>;bTemplated=true</documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
@@ -15,24 +15,23 @@
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="{&quot;motion&quot;:{&quot;ValuesFieldsOnCondition_BankIdPhoneEmail&quot;:{&quot;aField_ID&quot;:[&quot;phone&quot;,&quot;email&quot;,&quot;FlagBankId&quot;],&quot;asID_Field_sValue&quot;:[&quot;[bankIdphone]&quot;,&quot;[bankIdemail]&quot;,&quot;1234567890&quot;],&quot;asID_Field&quot;:{&quot;sCondit1&quot;:&quot;bankIdlastName&quot;,&quot;sCondit2&quot;:&quot;FlagBankId&quot;},&quot;sCondition&quot;:&quot;[sCondit1] != '1234567890'&amp;&amp;[sCondit2] != '1234567890'&quot;}}}"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Введіть код ЄДРПОУ" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_01" name="Юридична адреса;(індекс, місто, вулиця, будинок, офіс)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_01" name="ПІБ директора" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_D" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;asDia&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asDia" name="Оберіть дію" type="enum" required="true">
-          <activiti:value id="sEnamECP" name="Повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
-          <activiti:value id="sEnamNoECP" name="Скасування повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
+        <activiti:formProperty id="asDia" name="Оберіть дію;(що внести в ЄДР)" type="enum" required="true">
+          <activiti:value id="sEnamECP" name="Внести попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі"></activiti:value>
+          <activiti:value id="sEnamNoECP" name="Виключити попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі"></activiti:value>
         </activiti:formProperty>
+        
+        <activiti:formProperty id="tRishEDR" name="Посилання на Онлайн будинок юстиції де розміщено рішення учасників про виключення попередження з ЄДР;(https://online.minjust.gov.ua/)" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="markerRishEDR" name="markerRishEDR" type="markers" default="${markerService.loadFromFile('minust/0500_RishEDR.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="form_signed_all_1" name="Повідомлення з ЕЦП; ;bPrintFormFileAsPDF=true,bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="PrintFormAutoSign_1" name="Шаблон для накладення ЕЦП ; ;bVisible=false" type="string" default="pattern/print/minust/Justice_0500_RegPovECP.html"></activiti:formProperty>
-        
-        
         <activiti:formProperty id="iMUemail" name="пошта органу; ;bVisible=false" type="string" default="themis@minjust.gov.ua"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="пошта органу; ;bVisible=false" type="string" default="Міністерство юстиції України"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Повідомлення про реєстрацію змін на підставі рішень в електронній формі"></activiti:formProperty>
@@ -108,18 +107,18 @@
         <activiti:formProperty id="bankIdinn" name="ІПН заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Код ЄДРПОУ" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_01" name="Юридична адреса;(індекс, місто, вулиця, будинок, офіс)" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_01" name="ПІБ директора" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_D" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;asDia&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asDia" name="Тип звернення" type="enum" required="true">
-          <activiti:value id="sEnamECP" name="Повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
-          <activiti:value id="sEnamNoECP" name="Скасування повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
+        <activiti:formProperty id="asDia" name="Тип звернення" type="enum" writable="false">
+          <activiti:value id="sEnamECP" name="Внести попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі"></activiti:value>
+          <activiti:value id="sEnamNoECP" name="Виключити попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="tRishEDR" name="Посилання на Онлайн будинок юстиції де розміщено рішення учасників про виключення попередження з ЄДР" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markerRishEDR" name="markerRishEDR" type="markers" default="${markerService.loadFromFile('minust/0500_RishEDR.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="asPerevirka" name="Рішення по зверненню" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Внести інформацію до реєстру"></activiti:value>
@@ -137,18 +136,18 @@
         <activiti:formProperty id="bankIdinn" name="ІПН заявника" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Код ЄДРПОУ" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sLocation_SubjectOrgan_01" name="Юридична адреса;(індекс, місто, вулиця, будинок, офіс)" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sCEOName_SubjectOrgan_01" name="ПІБ директора" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_D" name="Суть звернення" type="markers" default="{&quot;attributes&quot;:{&quot;Line_D&quot;:{&quot;aElement_ID&quot;:[&quot;asDia&quot;],&quot;sValue&quot;:&quot;Суть звернення&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asDia" name="Тип звернення" type="enum" required="true">
-          <activiti:value id="sEnamECP" name="Повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
-          <activiti:value id="sEnamNoECP" name="Скасування повідомлення про реєстрацію на підставі рішень в електронній формі"></activiti:value>
+        <activiti:formProperty id="asDia" name="Тип звернення" type="enum" writable="false">
+          <activiti:value id="sEnamECP" name="Внести попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі"></activiti:value>
+          <activiti:value id="sEnamNoECP" name="Виключити попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="tRishEDR" name="Посилання на Онлайн будинок юстиції де розміщено рішення учасників про виключення попередження з ЄДР" type="textArea" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="markerRishEDR" name="markerRishEDR" type="markers" default="${markerService.loadFromFile('minust/0500_RishEDR.json')}"></activiti:formProperty>
         
         <activiti:formProperty id="asPerevirka" name="Рішення по зверненню" type="enum" required="true">
           <activiti:value id="sEnum_ok" name="Внести інформацію до реєстру"></activiti:value>
@@ -256,11 +255,11 @@ ${sNameOrgan}<br>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway1" id="BPMNShape_exclusivegateway1">
         <omgdc:Bounds height="40.0" width="40.0" x="470.0" y="188.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="101.0" width="105.0" x="550.0" y="237.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask2" id="BPMNShape_usertask2">
         <omgdc:Bounds height="101.0" width="105.0" x="322.0" y="237.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
+        <omgdc:Bounds height="101.0" width="105.0" x="550.0" y="237.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
         <omgdc:Bounds height="40.0" width="40.0" x="470.0" y="267.0"></omgdc:Bounds>
@@ -290,14 +289,14 @@ ${sNameOrgan}<br>
         <omgdi:waypoint x="510.0" y="208.0"></omgdi:waypoint>
         <omgdi:waypoint x="602.0" y="237.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="555.0" y="210.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="61.0" x="555.0" y="210.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
         <omgdi:waypoint x="470.0" y="208.0"></omgdi:waypoint>
         <omgdi:waypoint x="374.0" y="237.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="338.0" y="210.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="72.0" x="338.0" y="210.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
@@ -312,14 +311,14 @@ ${sNameOrgan}<br>
         <omgdi:waypoint x="490.0" y="307.0"></omgdi:waypoint>
         <omgdi:waypoint x="374.0" y="400.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="342.0" y="370.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="42.0" x="342.0" y="370.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow9" id="BPMNEdge_flow9">
         <omgdi:waypoint x="490.0" y="307.0"></omgdi:waypoint>
         <omgdi:waypoint x="602.0" y="400.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="100.0" x="564.0" y="370.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="80.0" x="564.0" y="370.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow10" id="BPMNEdge_flow10">

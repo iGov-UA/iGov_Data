@@ -1,0 +1,13 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_asDia": {
+      "aField_ID": [
+        "tRishEDR"
+      ],
+      "asID_Field": {
+        "sCond": "asDia"
+      },
+      "sCondition": "[sCond]=='sEnamNoECP'||[sCond]=='Виключити попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі'"
+    }
+  }
+}

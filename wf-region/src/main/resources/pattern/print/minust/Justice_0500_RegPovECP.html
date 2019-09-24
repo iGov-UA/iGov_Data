@@ -9,7 +9,34 @@
 
 <body style="font-size: 14px;">
 
-
+<table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+    <tr>
+        <td>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tbody>
+                <tr>
+                    <td>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="width: 50%"></td>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="text-align: left; font-size: 15px; text-align: left;">Додаток до Порядку державної реєстрації юридичних осіб, фізичних осіб – підприємців та громадських формувань, що не мають статусу юридичної особи (пункт 7 розділу I)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
   
 <table style="width: 100%; padding-top: 10px;">
     <tbody>
@@ -48,7 +75,7 @@
 <table id="sEnamРov2" style="width: 100%; padding-top: 1px;">
     <tbody>
     <tr>
-        <td colspan="2" style="text-align: left;font-size: 15px;padding-bottom: 10px;">
+        <td colspan="2" style="text-align: justify;font-size: 15px;padding-bottom: 10px;">
           Відомості про юридичну особу, щодо якої вноситься попередження про державну реєстрацію змін до відомостей про юридичну особу, що містяться в Єдиному державному реєстрі юридичних осіб, фізичних осіб - підприємців та громадських формувань, виключно на підставі рішень в електронній формі, підписаних засновниками (учасниками) з використанням засобів електронної ідентифікації з високим рівнем довіри:<br>
           Найменування: <b>[sFullName_SubjectOrgan_01]</b>,<br>
           ЕДРПОУ: <b>[sID_SubjectOrgan_OKPO_01]</b>.<br>
@@ -61,10 +88,12 @@
 <table id="sEnamSk2" style="width: 100%; padding-top: 1px;">
     <tbody>
     <tr>
-        <td colspan="2" style="text-align: left;font-size: 15px;padding-bottom: 10px;">
+        <td colspan="2" style="text-align: justify;font-size: 15px;padding-bottom: 10px;">
           Відомості про юридичну особу, щодо якої скасовується попередження про державну реєстрацію змін до відомостей про юридичну особу, що містяться в Єдиному державному реєстрі юридичних осіб, фізичних осіб - підприємців та громадських формувань, виключно на підставі рішень в електронній формі, підписаних засновниками (учасниками) з використанням засобів електронної ідентифікації з високим рівнем довіри:<br>
           Найменування: <b>[sFullName_SubjectOrgan_01]</b>,<br>
-          ЕДРПОУ: <b>[sID_SubjectOrgan_OKPO_01]</b>.<br>
+          ЕДРПОУ: <b>[sID_SubjectOrgan_OKPO_01]</b>.<br><br>
+
+          Посилання на Онлайн будинок юстиції: [tRishEDR].<br>
         </td>
     </tr>
     </tbody>
@@ -88,13 +117,13 @@
   var ScrDia = "[asDia]";
   
   switch(ScrDia) {
-    case "Повідомлення про реєстрацію на підставі рішень в електронній формі":
+    case "Внести попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній формі":
         document.getElementById("sEnamРov1").style.display = 'table';
         document.getElementById("sEnamРov2").style.display = 'table';
         document.getElementById("sEnamSk1").style.display = 'none';
         document.getElementById("sEnamSk2").style.display = 'none';
         break;
-    case "Скасування повідомлення про реєстрацію на підставі рішень в електронній формі":
+    case "Виключити попередження про реєстрацію змін до відомостей про юридичну особу на підставі рішення в електронній форміі":
         document.getElementById("sEnamРov1").style.display = 'none';
         document.getElementById("sEnamРov2").style.display = 'none';
         document.getElementById("sEnamSk1").style.display = 'table';

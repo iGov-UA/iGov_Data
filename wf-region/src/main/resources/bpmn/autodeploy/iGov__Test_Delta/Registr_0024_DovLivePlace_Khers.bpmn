@@ -306,7 +306,7 @@ execution.setVariable('sDateVizite', dDateV);
         <activiti:formProperty id="sDate_EndRegistration" name="По яку дату зареєстровано місце проживання/перебування особи" type="string" default="теперішній час"></activiti:formProperty>
         
         <activiti:formProperty id="asDecision" name="Рішення працівника" type="enum" required="true">
-          <activiti:value id="sAccept" name="Дані громадянина вірні, починаємо формування довідки"></activiti:value>
+          <activiti:value id="sAccept" name="Перевірка ОК. Запросити заявника на зустріч"></activiti:value>
           <activiti:value id="sDecline" name="Відмовити в наданні послуги"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sDecisionComment" name="Коментар до рішення: наприклад, пояснення чому громадянину було відмовлено в наданні цієї послуги АБО додаткові деталі для закінчення процессу реєстрації" type="textArea"></activiti:formProperty>
@@ -503,11 +503,10 @@ execution.setVariable('sDateVizite', dDateV);
         <activiti:formProperty id="sDate_BegRegistration" name="З якої дати зареєстровано місце проживання/перебування особи" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="sDate_EndRegistration" name="По яку дату зареєстровано місце проживання/перебування особи" type="string" default="теперішній час"></activiti:formProperty>
         <activiti:formProperty id="asDecision2" name="Рішення працівника" type="enum" required="true">
-          <activiti:value id="sAccept" name="Довідка виготовлена, призначаємо зустріч у відділенні"></activiti:value>
-          <activiti:value id="sDecline" name="Відмовити в наданні послуги"></activiti:value>
+          <activiti:value id="sAccept" name="Послугу надано"></activiti:value>
+          <activiti:value id="sDecline" name="Заявник не з'явився у призначений час"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="sDecisionComment" name="Коментар до рішення: наприклад, пояснення чому громадянину було відмовлено в наданні цієї послуги АБО додаткові деталі для закінчення процессу реєстрації" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="sCommentForAdressBuro" name="Текст, який буде додано до запиту в адресне бюро" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="sCommentForAdressBuro" name="Текст, який буде додано до запиту в адресне бюро; ;bVisible=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Орган надання послуги ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAdd_SpisokDocs" name="Перелік додатків файлів-додатков ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAdd_SpisokDocs_Another_Person" name="Перелік додатків файлів-додатков для довіреної особи ; ;bVisible=false" type="string"></activiti:formProperty>

@@ -375,8 +375,7 @@
     <tbody>
     <tr>
         <td colspan="2" style="text-align: center; font-size: 16px;">
-            на рішення державного реєстратора про державну реєстрацію речових прав на нерухоме майно<br>
-            від [DateRish] № [sNumberRish]<br><br>
+            на рішення державного реєстратора про державну реєстрацію речових прав на нерухоме майно
         </td>
     </tr>
     </tbody>
@@ -386,8 +385,67 @@
     <tbody>
     <tr>
         <td colspan="2" style="text-align: center; font-size: 16px;">
-            на рішення державного реєстратора про державну реєстрацію юридичних осіб та фізичних осіб – підприємців<br>
+            на рішення державного реєстратора про державну реєстрацію юридичних осіб та фізичних осіб – підприємців
+        </td>
+    </tr>
+    </tbody>
+</table>
+  
+<table id="sEnamR1" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
             від [DateRish] № [sNumberRish]<br><br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="sEnamR2" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            від [DateRish] № [sNumberRish]<br>
+            від [DateRish2] № [sNumberRish2]<br><br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="sEnamR3" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            від [DateRish] № [sNumberRish]<br>
+            від [DateRish2] № [sNumberRish2]<br>
+            від [DateRish3] № [sNumberRish3]<br><br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="sEnamR4" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            від [DateRish] № [sNumberRish]<br>
+            від [DateRish2] № [sNumberRish2]<br>
+            від [DateRish3] № [sNumberRish3]<br>
+            від [DateRish4] № [sNumberRish4]<br><br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="sEnamR5" style="width: 100%; padding-top: 1px;">
+    <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center; font-size: 16px;">
+            від [DateRish] № [sNumberRish]<br>
+            від [DateRish2] № [sNumberRish2]<br>
+            від [DateRish3] № [sNumberRish3]<br>
+            від [DateRish4] № [sNumberRish4]<br>
+            від [DateRish5] № [sNumberRish5]<br><br>
         </td>
     </tr>
     </tbody>
@@ -812,7 +870,52 @@
         document.getElementById("sEnamFizP").style.display = 'none';
         document.getElementById("sEnamUrK").style.display = 'none';
         document.getElementById("sEnamUrP").style.display = 'none';
-        
+    }
+
+    var ScrKilkRish = "[asKilkRish]";
+
+    switch(ScrKilkRish) {
+    case "Одне рішення":
+        document.getElementById("sEnamR1").style.display = 'table';
+        document.getElementById("sEnamR2").style.display = 'none';
+        document.getElementById("sEnamR3").style.display = 'none';
+        document.getElementById("sEnamR4").style.display = 'none';
+        document.getElementById("sEnamR5").style.display = 'none';
+        break;
+    case "Два рішення":
+        document.getElementById("sEnamR1").style.display = 'none';
+        document.getElementById("sEnamR2").style.display = 'table';
+        document.getElementById("sEnamR3").style.display = 'none';
+        document.getElementById("sEnamR4").style.display = 'none';
+        document.getElementById("sEnamR5").style.display = 'none';
+        break;
+    case "Три рішення":
+        document.getElementById("sEnamR1").style.display = 'none';
+        document.getElementById("sEnamR2").style.display = 'none';
+        document.getElementById("sEnamR3").style.display = 'table';
+        document.getElementById("sEnamR4").style.display = 'none';
+        document.getElementById("sEnamR5").style.display = 'none';
+        break;
+    case "Чотири рішення":
+        document.getElementById("sEnamR1").style.display = 'none';
+        document.getElementById("sEnamR2").style.display = 'none';
+        document.getElementById("sEnamR3").style.display = 'none';
+        document.getElementById("sEnamR4").style.display = 'table';
+        document.getElementById("sEnamR5").style.display = 'none';
+        break;
+    case "П'ять рішеннь":
+        document.getElementById("sEnamR1").style.display = 'none';
+        document.getElementById("sEnamR2").style.display = 'none';
+        document.getElementById("sEnamR3").style.display = 'none';
+        document.getElementById("sEnamR4").style.display = 'none';
+        document.getElementById("sEnamR5").style.display = 'table';
+        break;
+    default:
+        document.getElementById("sEnamR1").style.display = 'table';
+        document.getElementById("sEnamR2").style.display = 'none';
+        document.getElementById("sEnamR3").style.display = 'none';
+        document.getElementById("sEnamR4").style.display = 'none';
+        document.getElementById("sEnamR5").style.display = 'none';
     }
 
     var ScrCategory = "[asSubjectCategory]";

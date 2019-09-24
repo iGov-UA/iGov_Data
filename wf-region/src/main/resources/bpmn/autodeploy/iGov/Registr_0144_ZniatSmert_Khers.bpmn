@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
   <process id="Registr_0144_ZniatSmert_Khers" name="Зняття з реєстрації особи у зв'язку зі смертю" isExecutable="true">
-    <documentation>Смоктій К.В. (получено на сопровождение от Жигана Ромы) Последние правки: 16.01.2018</documentation>
+    <documentation> </documentation>
     <startEvent id="startevent1" name="Start">
       <extensionElements>
+        <activiti:formProperty id="warning222" name=" ; ;labelType=info" type="label" default="ЗВЕРНІТЬ УВАГУ!&lt;br&gt;Якщо Ви не можете самостійно звернутися до органу реєстрації, адміністративна послуга може бути наданна за зверненням Вашого представника напідставі документа, що посвідчує особу представника та довіреності, посвідченої в установленому законом порядку із зазначенням певної дії.&lt;br&gt;&lt;br&gt;Для отримання послуги у зазначений час, з собою треба мати:&lt;br&gt;- документами що підтверджують право власності на нерухоме майно (обов’язкова присутність власника або співвласника, наймача житла із паспортом громадянина України);&lt;br&gt;- копії документів усіх зареєстрованих за адресою осіб (свідоцтво про народження дітей (у разі реєстрації малолітніх дітей) паспорт громадянина України, та інше);&lt;br&gt;- за необхідності інші документи (наприклад документ , що підтверджує зміну прізвища).&lt;br&gt;&lt;br&gt;Послуга надається лише для тих будинків, де до відділу реєстрації передано картотеку реєстрації (для ОСББ, ЖБК) або будинкову книгу (для приватних будинків). &lt;br&gt;&lt;br&gt;Якщо у вашому будинку є ОСББ або ЖБК, треба переконатись, що картотека по вашому будинку передана у відділ реєстрації місця проживання фізичних осіб Херсонської міської ради.&lt;br&gt;Уточніть це питання у вашому ОСББ або ЖБК.&lt;br&gt;&lt;br&gt;Так само власники приватних будинків мають передати до цього відділу будинкові книги.&lt;br&gt;&lt;br&gt;Якщо у відділі реєстрації відсутня будинкова книга або картотека реєстрації місця проживання фізичних осіб, Вам спочатку потрібно отримати талон для передачі будинкової книги/картотеки, який можна отримати через термінал розташований в холі на І поверсі адміністративної будівлі Херсонської міської ради щодня з 07.30 до 17.00 години «сьогодні на сьогодні» або вибрати зручну для Вас дату у терміналі попередньої черги. &lt;br&gt;В інакшому випадку Вам буде відмовлено в надані послуги, так як адміністративні послуги надаються виключно за наявності будинкових книг/картотек у відділі реєстрації місця проживання фізичних осіб Херсонської міської ради."></activiti:formProperty>
+        
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть район або ЦНАП району (міста), до якого належить поточне місце реєстрації померлого" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="warning1d_Kher" name=" ; ;labelType=info" type="label" default="Для зняття померлого при собі мати  картку реестрації особи (форми 16) або будинкову книгу."></activiti:formProperty>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -16,7 +18,7 @@
           <activiti:value id="sEnumElement_Other" name="Інший документ"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sNameOtherDocument" name="Назва іншого документу, що посвідчує заявника" type="string" default=" "></activiti:formProperty>
-        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_ZayPasp_Kher" name="Посвідчення особи (Паспорт або інший документ);(завантажте всі заповнені сторінки паспорта починаючи з першої, а також сторінку з відміткою про місце реєстрації в ‎форматі JPEG у ZIP архіві);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="tPassport" name="Паспортні дані заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
@@ -35,11 +37,10 @@
         <activiti:formProperty id="sChildBirth" name="Дата народження померлого;(формат - ДД.ММ.PPPP)" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sChildPOB" name="Місце народження померлого;(країна, область, район і населений пункт)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sChildCitizenship" name="Громадянство померлого" type="string" default="Україна" required="true"></activiti:formProperty>
-        <activiti:formProperty id="sChildDoc" name="Документ померлого; (тип, серія та номер документу, дата і орган, що його видав)" type="textArea" default="паспорт "></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Поточна адреса реєстрації померлого;(область, населений пункт, вулиця, будинок, корпус, квартира)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDate_of_death" name="Дата смерті;Формат - ДД.ММ.PPPP" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDeathDoc" name="Номер актового запису, серія та номер свідоцтва про смерть, дата видачі документа" type="textArea" required="true"></activiti:formProperty>
-        <activiti:formProperty id="nSvidDeath" name="Свідоцтво про смерть;Якщо декілька сторінок об'єднайте у pdf-файл або архів (формату zip, rar, 7z);bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nSvidDeath" name="Свідоцтво про смерть;(у ‎форматі JPEG, якщо декілька сторінок об'єднайте їх у архів (формату zip, rar, 7z));bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="visitDay" name="Оберіть день та час, коли Вам буде зручно з'явитись для отримання послуги?" type="queueData" required="true"></activiti:formProperty>
         <activiti:formProperty id="nID_Department_visitDay" name="Департамент черги ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="nDiffDays_visitDay" name="Пропуск дней до выбора очереди ; ;bVisible=false" type="string" default="2"></activiti:formProperty>
@@ -48,6 +49,7 @@
         <activiti:formProperty id="markerFlag" name="markerFlag" type="markers" default="${markerService.loadFromFile('dms/FlagRegion.json')}"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sWorkTime" name="Часи роботи; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Тип органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRecvizitiAdmin" name="Реквізити для адмінсбору ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sArea" name="район/місто звернення ; ;bVisible=false" type="string"></activiti:formProperty>
@@ -121,15 +123,34 @@ if (execution.getVariable('sHide_FormaA')=='True') {
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 				<p>
-					Ваше звернення [sID_Order] успішно зареєстровано. Спеціалісти оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти у обраний час ${date_of_visit}, реквізитами та сумою для сплати адміністративного збору, короткою інструкцією щодо процедури зняття з реєстрації.<br>
-					${sAddress}<br> 
-					${sPhoneOrgan}<br>
+					Ваше звернення [sID_Order] успішно зареєстровано. <br> Спеціалісти оброблять Вашу заявку протягом 1-3 днів та надішлють Вам email з підтвердженням та запрошенням прийти у обраний час <b> ${date_of_visit}</b>, реквізитами та сумою для сплати адміністративного збору, короткою інструкцією щодо процедури реєстрації.<br>
+					<br>
+ЗВЕРНІТЬ УВАГУ! <br>
+Якщо Ви не можете самостійно звернутися до органу реєстрації, адміністративна послуга може бути надана за зверненням Вашого представника на підставі документа, що посвідчує особу представника та довіреності, посвідченої в установленому законом порядку із зазначенням певної дії.<br><br>
+
+Для отримання послуги у зазначений час, з собою треба мати:<br>
+- документами що підтверджують право власності на нерухоме майно (обов’язкова присутність власника або співвласника, наймача житла із паспортом громадянина України);<br>
+- копії документів усіх зареєстрованих за адресою осіб (свідоцтво про народження дітей (у разі реєстрації малолітніх дітей) паспорт громадянина України, та інше);<br>
+- за необхідності інші документи (наприклад документ , що підтверджує зміну прізвища).<br><br>
+
+Послуга надається лише для тих будинків, де до відділу реєстрації передано картотеку реєстрації (для ОСББ, ЖБК) або будинкову книгу (для приватних будинків). <br><br>
+
+Якщо у вашому будинку є ОСББ або ЖБК, треба переконатись, що картотека по вашому будинку передана у відділ реєстрації місця проживання фізичних осіб Херсонської міської ради.<br>
+Уточніть це питання у вашому ОСББ або ЖБК.<br><br>
+
+Так само власники приватних будинків мають передати до цього відділу будинкові книги.<br><br>
+
+Якщо у відділі реєстрації відсутня будинкова книга або картотека реєстрації місця проживання фізичних осіб, Вам спочатку потрібно отримати талон для передачі будинкової книги/картотеки, який можна отримати через термінал розташований в холі на І поверсі адміністративної будівлі Херсонської міської ради щодня з 07.30 до 17.00 години «сьогодні на сьогодні» або вибрати зручну для Вас дату у терміналі попередньої черги. <br>
+В інакшому випадку Вам буде відмовлено в надані послуги, так як адміністративні послуги надаються виключно за наявності будинкових книг/картотек у відділі реєстрації місця проживання фізичних осіб Херсонської міської ради.<br><br>
+
+
 				</p>
 				<br>
 				<p>[cancelTask]</p> 
+				<br>${sAddress}
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_signature_start.html]
-				${sNameOrgan},<br>
+			${sNameOrgan}.<br>
 			[pattern/mail/new_design/_common_signature_end.html]
 			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
         </activiti:field>
@@ -169,7 +190,6 @@ if (execution.getVariable('sHide_FormaA')=='True') {
         <activiti:formProperty id="middleName_UA2" name="По батькові померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sChildBirth" name="Дата народження померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sChildPOB" name="Місце народження померлого; ;writable=false" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="sChildDoc" name="Дані документу померлого; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sChildCitizenship" name="Громадянство померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації померлого; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sDeathDoc" name="Номер актового запису, серія та номер свідоцтва про смерть; ;writable=false" type="string"></activiti:formProperty>
@@ -225,9 +245,6 @@ if (execution.getVariable('sHide_FormaA')=='True') {
 					Коментар Державного службовця:<br />
 					<b><i>${sDecisionComment}</i></b>
 				</p>
-				<p>
-					При вниникненні питань Ви можете звернутися: ${sPhoneOrgan}
-				</p>
 			[pattern/mail/new_design/_common_content_end.html]
 			[pattern/mail/new_design/_common_feedback.html]   	 
 			[pattern/mail/new_design/_common_signature_start.html]
@@ -280,6 +297,11 @@ if (execution.getVariable('sHide_FormaA')=='True') {
 				</ul>
 			</p>
 			<p>
+					<b>Реквізити для сплати:</b> <br>
+					<i>${sRecvizitiAdmin}<br>
+					Призначення платежу: адмін. збір за зняття з реєстрації місця проживання (вказати П.І.Б. заявника).</i>
+				</p>
+			<p>
 				<b>Деталі зустрічі:</b><br>
 				День та час - ${date_of_visit}
 			</p>
@@ -288,9 +310,8 @@ if (execution.getVariable('sHide_FormaA')=='True') {
 				<ul>
 					<li>документ, що посвідчують особу (паспорт громадянина України, тимчасове посвідчення особи, посвідка на тимчасове або постійне проживання, тощо);</li>
 					<li>свідоцтво про смерть;</li>	
-					<li>нотаріальний запит (за наявності);</li>	
+					<li>У разі оформлення Вами спадкової справи рекомендуємо заздалегідь отримати у нотаріуса нотаріальний запит та надати його до відділу;</li>	
 					<li>квитанцію про оплату адміністративного збору.</li>	
-					${sAdd_FormaA}
 				</ul>
 			</p>
 			<p>
@@ -298,8 +319,7 @@ if (execution.getVariable('sHide_FormaA')=='True') {
 				<b><i>${sDecisionComment}</i></b>
 			</p>
 			<p>
-				При вниникненні питань Ви можете звернутися: <br>
-				${sPhoneOrgan}
+					${sWorkTime}
 			</p>
 			<br>
 			<p>[cancelTask]</p>
@@ -346,7 +366,6 @@ if (execution.getVariable('sHide_FormaA')=='True') {
         <activiti:formProperty id="middleName_UA2" name="По батькові померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sChildBirth" name="Дата народження померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sChildPOB" name="Місце народження померлого; ;writable=false" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="sChildDoc" name="Дані документу померлого померлого; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="sChildCitizenship" name="Громадянство померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sArea" name="Місто або район, до якого належить місце проживання померлого; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sRegistrationAddress" name="Адреса реєстрації померлого; ;writable=false" type="textArea"></activiti:formProperty>

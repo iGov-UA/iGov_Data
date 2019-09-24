@@ -1,0 +1,13 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_test11": {
+      "aField_ID": [
+        "sDate_of_birth"
+      ],
+      "asID_Field": {
+        "sCondit": "sID_Public_SubjectOrganJoin"
+      },
+      "sCondition": "[sCondit] != 'khers_khersT'"
+    }
+  }
+}

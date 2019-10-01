@@ -3350,3 +3350,5 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3680;88;Відділ реєстрації м.Херсон;Отдел регистрации г.Херсон;khers_khersTR2;khers_khersTR2; ; ;NULL;NULL;6510100000
 3681;225;Новоайдарівська районна рада;Новоайдарівська районна рада;lug_NovoaidR;lug_NovoaidR; ; ;NULL;NULL;4423100000
 3682;212;Новоайдарівська районна рада;Новоайдарівська районна рада;lug_NovoaidR;lug_NovoaidR; ; ;NULL;NULL;4423100000
+3683;210;БТІ м. Дніпро;БТІ м. Дніпро;bti_request1_1;bti_request1_1; ; ;NULL;NULL;1210100000
+3684;210;БТІ м. Херсон;БТІ м. Херсон;bti_kherson;bti_kherson; ; ;NULL;NULL;6510100000

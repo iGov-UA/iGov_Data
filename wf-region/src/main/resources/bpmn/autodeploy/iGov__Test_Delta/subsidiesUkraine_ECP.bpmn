@@ -188,7 +188,7 @@
           <activiti:value id="3" name="після початку опалювального (неопалювального) сезону"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="date_from" name="Період, за який Ви заповнюєте декларацію, з; відповідно до постанови КМУ №848" type="label" default="01.07.18"></activiti:formProperty>
-        <activiti:formProperty id="date_to" name="Період, за який Ви заповнюєте декларацію, по; відповідно до постанови КМУ №848" type="label" default="31.12.18"></activiti:formProperty>
+        <activiti:formProperty id="date_to" name="Період, за який Ви заповнюєте декларацію, по; відповідно до постанови КМУ №848" type="label" default="30.06.19"></activiti:formProperty>
         <activiti:formProperty id="info3" name="; ;labelType=info" type="label" default="Особи, які входять до складу домогосподарства (що зареєстровані разом із Заявником)"></activiti:formProperty>
         <activiti:formProperty id="sRegistrTable" name="Зареєстровані; ;bNew=true" type="table" default="${markerService.loadFromFile('table/upszn/subsidiesUkraine_reg.json')}"></activiti:formProperty>
         <activiti:formProperty id="info4" name="; ;labelType=info" type="label" default="Члени сім'ї осіб зі складу домогосподарства, незалежно від місця проживання; до сім'ї включаються чоловік, дружина та неповнолітні діти."></activiti:formProperty>

@@ -48,6 +48,7 @@
         <activiti:formProperty id="sAddress" name="До якого державного органу звертається заявник; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sShapkaM" name="Шапка заяви; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="підпис; ;bVisible=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markers1" name="show-hide" type="markers" default="${markerService.loadFromFile('dneprMVK/ostroh_mvk_481_1.json')}"></activiti:formProperty>
       </extensionElements>
     </startEvent>
     <serviceTask id="servicetask2" name="Повідомлення виконавця про нове звернення" activiti:delegateExpression="#{MailTaskWithoutAttachment}">

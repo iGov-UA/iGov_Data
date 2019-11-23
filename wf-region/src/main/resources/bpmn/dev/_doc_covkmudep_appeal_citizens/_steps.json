@@ -1,0 +1,78 @@
+{
+  "oProperties":{ 
+      "bSkipStepCreate":true
+       },
+  "_:Watch": {
+    "_default_author": {
+      "oMission": {"sKey_Right": "SignRelease"},
+      "oRights": {
+        "EditFields": {},
+        "SignAnswer": {},
+        "SignComment": {},
+        "TaskAdd": {},
+        "TaskEdit": {},
+      	"AddSignerWriteAccept": {},
+        "AddSignerWriteAgree": {},
+        "AddSignerWriteDirect": {},
+        "Remove": {}
+      }
+    },
+    "_default_consideration": {
+      "oMission": {"sKey_Right": "SignWrite"},
+      "oRights": {
+        "EditFields": {},
+        "SignAnswer": {},
+        "SignComment": {},
+        "TaskAdd": {},
+        "TaskEdit": {},
+      	"AddSignerWriteAccept": {},
+        "AddSignerWriteAgree": {},
+        "AddSignerWriteDirect": {},
+      }
+    },
+    "_default_firstAccept": {
+      "oMission": {"sKey_Right":"SignWrite"},
+      "oRights": {
+        "SignWriteRefuse": {},
+        "SignComment": {},
+        "SignDelegate":{},      	
+      	"ManageSignersRead": {}      
+      }
+    },
+    "_default_accept": {
+      "oMission": {"sKey_Right": "SignWrite"},
+      "oRights": {
+        "SignWriteRefuse": {},
+        "SignComment": {},
+        "SignDelegate":{},      	
+      	"ManageSignersRead": {}
+      }
+    },
+    "_default_agree": {
+      "oMission": {"sKey_Right": "SignWrite"},
+      "oRights": {
+        "SignWriteRefuse": {},
+        "SignComment": {},
+        "SignDelegate":{},      	
+      	"ManageSignersRead": {}
+      },
+      "bNeedECP": true
+    },
+    "_default_seen": {
+      "oMission": {
+        "sKey_Right": "SignRead"
+      },
+      "oRights": {
+        "SignComment": {},
+        "ManageSignersRead": {}
+      }
+    }
+  },
+  "step_create:Create": {},
+  "step_consideration:Consideration": {},
+  "step_firstAccept:FirstAccept": {},
+  "step_accept:Accept": {},
+  "step_agree:Agree": {"property": {"nSubscribersMin": "1"}},
+  "step_edit:Edit": {},
+  "step_seen:Seen": {}
+}

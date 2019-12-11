@@ -196,8 +196,8 @@ switch (asDistrict){
     phoneOrgan = "&lt;b&gt;Телефон для довідок:&lt;/b&gt; (056) 791-10-64";
   break;
   case 'sNovok':
-    mail = "tofankata93@gmail.com";
-    adres = "&lt;b&gt;Адреса:&lt;/b&gt; м. Дніпро, вул. Караваєва, 13";
+    mail = "Novokodackiy@i.ua";
+    adres = "&lt;b&gt;Адреса:&lt;/b&gt; м. Дніпро, вул. Орловська буд. 1Б";
     adresPost = "м. Дніпро, вул. Караваєва, 13";
     workTime = "&lt;b&gt;Графік роботи:&lt;/b&gt; понеділок - четвер з 9:00 до 18:00, пятниця з 9:00 до 17:45";
     phoneOrgan = "&lt;b&gt;Телефон для довідок:&lt;/b&gt; 099 524 87 13";

@@ -1,0 +1,25 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_SubNarah": {
+      "aField_ID": [
+        "sNumPost"
+      ],
+      "asID_Field": {
+        "sCond": "asSubNarah"
+      },
+      "sCondition": "[sCond]=='sEnamPost'"
+    },
+    "ShowFieldsOnCondition_SubNarah2": {
+      "aField_ID": [
+        "sBankNum",
+        "sBankMFO",
+        "sBankKode",
+        "sBankBank"
+      ],
+      "asID_Field": {
+        "sCond": "asSubNarah"
+      },
+      "sCondition": "[sCond]=='sEnamBank'"
+    }
+  }
+}

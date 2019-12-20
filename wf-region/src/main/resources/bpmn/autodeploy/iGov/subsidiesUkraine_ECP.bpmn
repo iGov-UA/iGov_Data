@@ -210,6 +210,18 @@
         <activiti:formProperty id="overload_cost" name="Вартість, гривень" type="string" default="-"></activiti:formProperty>
         <activiti:formProperty id="overload_date" name="Дата придбання; наприклад, 18.01.2016" type="string" default="-"></activiti:formProperty>
         <activiti:formProperty id="marker3" name="имущество свыше 50000 грн и ЭЦП" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_14&quot;:{&quot;aField_ID&quot;:[&quot;overload_fio&quot;,&quot;overload_type&quot;,&quot;overload_cost&quot;,&quot;overload_date&quot;],&quot;asID_Field&quot;:{&quot;sOverload&quot;:&quot;overload&quot;},&quot;sCondition&quot;:&quot;[sOverload]=='attr1_yes'&quot;},&quot;RequiredFieldsOnCondition_15&quot;:{&quot;aField_ID&quot;:[&quot;form_signed_all_1&quot;,&quot;form_signed_all_2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;ECP&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'ecp_yes'&quot;},&quot;ShowFieldsOnCondition_16&quot;:{&quot;aField_ID&quot;:[&quot;form_signed_all_1&quot;,&quot;form_signed_all_2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;ECP&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'ecp_yes'&quot;}}}"></activiti:formProperty>
+        
+        <activiti:formProperty id="asSubNarah" name="Куди перерахувати субсидію у разі її надання у готівковій формі?" type="enum" required="true">
+          <activiti:value id="sEnamPost" name="через національного оператора поштового зв’язку"></activiti:value>
+          <activiti:value id="sEnamBank" name="на рахунок у банку"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumPost" name="Номер оператора поштового зв’язку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sBankNum" name="Номер рахунку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sBankMFO" name="МФО" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sBankKode" name="Код банку" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sBankBank" name="Банк одержувача" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="markerSubNarah" name="markerSubNarah" type="markers" default="${markerService.loadFromFile('soczah/654_SubNarah.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="ECP" name="Чи подаєте звернення з ЕЦП або без ЕЦП?" type="enum" required="true">
           <activiti:value id="ecp_yes" name="з ЕЦП (для отримання електронної послуги про призначення субсидії)"></activiti:value>
           <activiti:value id="ecp_no" name="без ЕЦП (погоджуєтесь на особистий візит після перевірки правильності даних)"></activiti:value>
@@ -433,6 +445,18 @@
         <activiti:formProperty id="overload_type" name="Вид придбаного майна, товарів або оплачених послуг; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="overload_cost" name="Вартість, гривень; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="overload_date" name="Дата придбання (наприклад, 18.01.2016); ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="asSubNarah" name="Куди перерахувати субсидію у разі її надання у готівковій формі?" type="enum" writable="false">
+          <activiti:value id="sEnamPost" name="через національного оператора поштового зв’язку"></activiti:value>
+          <activiti:value id="sEnamBank" name="на рахунок у банку"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumPost" name="Номер оператора поштового зв’язку; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankNum" name="Номер рахунку; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankMFO" name="МФО; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankKode" name="Код банку; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankBank" name="Банк одержувача; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerSubNarah" name="markerSubNarah" type="markers" default="${markerService.loadFromFile('soczah/654_SubNarah.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="comment" name="Примітки" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="decide" name="Стан" type="enum" required="true">
           <activiti:value id="accept" name="відправлені запити, очікують відповіді"></activiti:value>
@@ -727,6 +751,18 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="overload_type" name="Вид придбаного майна, товарів або оплачених послуг" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="overload_cost" name="Вартість, гривень" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="overload_date" name="Дата придбання; наприклад, 18.01.2016" type="string" writable="false"></activiti:formProperty>
+        
+        <activiti:formProperty id="asSubNarah" name="Куди перерахувати субсидію у разі її надання у готівковій формі?" type="enum" writable="false">
+          <activiti:value id="sEnamPost" name="через національного оператора поштового зв’язку"></activiti:value>
+          <activiti:value id="sEnamBank" name="на рахунок у банку"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="sNumPost" name="Номер оператора поштового зв’язку; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankNum" name="Номер рахунку; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankMFO" name="МФО; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankKode" name="Код банку; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sBankBank" name="Банк одержувача; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="markerSubNarah" name="markerSubNarah" type="markers" default="${markerService.loadFromFile('soczah/654_SubNarah.json')}"></activiti:formProperty>
+        
         <activiti:formProperty id="comment" name="Коментарі УПСЗН на першому етапі обробки" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="comment1" name="Примітки" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="selection" name="Стан" type="enum" required="true">

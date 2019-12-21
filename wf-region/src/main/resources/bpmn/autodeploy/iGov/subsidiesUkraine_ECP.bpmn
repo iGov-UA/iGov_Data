@@ -32,7 +32,6 @@
           <activiti:value id="2" name="придбання скрапленого газу, твердого та рідкого пічного побутового палива"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="rent" name="Договір найму (оренди) житла; за наявності ;bNew=true" type="file"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_1" name="Комунальні послуги" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;electricity&quot;],&quot;sValue&quot;:&quot;Комунальні послуги&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="electricity" name="Електроенергія" type="enum" required="true">
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
@@ -107,14 +106,20 @@
           <activiti:value id="yes" name="є лічильник"></activiti:value>
           <activiti:value id="no" name="немає лічильника"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="garbage" name="Вивіз побутових відходів" type="enum" required="true">
+        <activiti:formProperty id="garbage" name="Вивіз побутових відходів (тверді, великогабаритні, ремонтні)" type="enum" required="true">
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
           <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="garbage_number1" name="Номер особового рахунку" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="garbage_name" name="Назва організації, що надає послугу" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="garbage_notice" name="Примітки;наприклад, наявність лічильника" type="string" default=" "></activiti:formProperty>
-        
+        <activiti:formProperty id="garbageR" name="Вивіз побутових відходів (рідких) або вивезення рідких нечистот" type="enum" required="true">
+          <activiti:value id="attr1" name="Користуюсь"></activiti:value>
+          <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="garbageR_number1" name="Номер особового рахунку" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="garbageR_name" name="Назва організації, що надає послугу" type="string" default=" " required="true"></activiti:formProperty>
+        <activiti:formProperty id="garbageR_notice" name="Примітки;наприклад, наявність лічильника" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="KomOblTE" name="Встановлення, осбслуговування та заміна вузлів комерційного обліку теплової енергії" type="enum" required="true">
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
           <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
@@ -171,9 +176,7 @@
         <activiti:formProperty id="AbonObslVidh_number1" name="Номер особового рахунку" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="AbonObslVidh_name" name="Назва організації, що надає послугу" type="string" default=" " required="true"></activiti:formProperty>
         <activiti:formProperty id="AbonObslVidh_notice" name="Примітки" type="string" default=" "></activiti:formProperty>
-        
         <activiti:formProperty id="markerAbonent" name="markerAbonent" type="markers" default="${markerService.loadFromFile('soczah/654_Abonent.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_2" name="Дані для декларації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place_type&quot;],&quot;sValue&quot;:&quot;Дані для декларації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place_type" name="Тип будинку" type="enum" required="true">
           <activiti:value id="1" name="індивідуальний будинок"></activiti:value>
@@ -199,8 +202,7 @@
         <activiti:formProperty id="sAutoTable" name="Транспорт; ;bNew=true" type="table" default="${markerService.loadFromFile('table/upszn/subsidiesUkraine_auto.json')}"></activiti:formProperty>
         <activiti:formProperty id="info7" name="; ;labelType=info" type="label" default="Суми аліментів, сплачених особами, які входять до складу домогосподарства незалежно від реєстрації їхнього місця проживання (фактичного місця проживання)"></activiti:formProperty>
         <activiti:formProperty id="sAlimentuTable" name="Аліменти; ;bNew=true" type="table" default="${markerService.loadFromFile('table/upszn/subsidiesUkraine_alimentu.json')}"></activiti:formProperty>
-        
-        <activiti:formProperty id="marker2" name="маркер динамічної форми - послуги" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_4_1&quot;:{&quot;aField_ID&quot;:[&quot;osbb_number1&quot;,&quot;osbb_name&quot;,&quot;osbb_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;osbb&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_5&quot;:{&quot;aField_ID&quot;:[&quot;gas_number1&quot;,&quot;gas_name&quot;,&quot;gas_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;gas&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_6&quot;:{&quot;aField_ID&quot;:[&quot;coolwater_number1&quot;,&quot;coolwater_name&quot;,&quot;coolwater_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;coolwater&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_7&quot;:{&quot;aField_ID&quot;:[&quot;hotwater_number1&quot;,&quot;hotwater_name&quot;,&quot;hotwater_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;hotwater&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_8&quot;:{&quot;aField_ID&quot;:[&quot;waterback_number1&quot;,&quot;waterback_name&quot;,&quot;waterback_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;waterback&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_9&quot;:{&quot;aField_ID&quot;:[&quot;warming_number1&quot;,&quot;warming_name&quot;,&quot;warming_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;warming&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_10&quot;:{&quot;aField_ID&quot;:[&quot;garbage_number1&quot;,&quot;garbage_name&quot;,&quot;garbage_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;garbage&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_11&quot;:{&quot;aField_ID&quot;:[&quot;electricity_number1&quot;,&quot;electricity_name&quot;,&quot;electricity_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;electricity&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_15&quot;:{&quot;aField_ID&quot;:[&quot;SubsReqv&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;SubsNumber&quot;},&quot;sCondition&quot;:&quot;[sService]=='2'&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="marker2" name="маркер динамічної форми - послуги" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_4_1&quot;:{&quot;aField_ID&quot;:[&quot;osbb_number1&quot;,&quot;osbb_name&quot;,&quot;osbb_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;osbb&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_5&quot;:{&quot;aField_ID&quot;:[&quot;gas_number1&quot;,&quot;gas_name&quot;,&quot;gas_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;gas&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_6&quot;:{&quot;aField_ID&quot;:[&quot;coolwater_number1&quot;,&quot;coolwater_name&quot;,&quot;coolwater_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;coolwater&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_7&quot;:{&quot;aField_ID&quot;:[&quot;hotwater_number1&quot;,&quot;hotwater_name&quot;,&quot;hotwater_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;hotwater&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_8&quot;:{&quot;aField_ID&quot;:[&quot;waterback_number1&quot;,&quot;waterback_name&quot;,&quot;waterback_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;waterback&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_9&quot;:{&quot;aField_ID&quot;:[&quot;warming_number1&quot;,&quot;warming_name&quot;,&quot;warming_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;warming&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_10&quot;:{&quot;aField_ID&quot;:[&quot;garbage_number1&quot;,&quot;garbage_name&quot;,&quot;garbage_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;garbage&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_10R&quot;:{&quot;aField_ID&quot;:[&quot;garbageR_number1&quot;,&quot;garbageR_name&quot;,&quot;garbageR_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;garbageR&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_11&quot;:{&quot;aField_ID&quot;:[&quot;electricity_number1&quot;,&quot;electricity_name&quot;,&quot;electricity_notice&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;electricity&quot;},&quot;sCondition&quot;:&quot;[sService]=='attr1'&quot;},&quot;ShowFieldsOnCondition_15&quot;:{&quot;aField_ID&quot;:[&quot;SubsReqv&quot;],&quot;asID_Field&quot;:{&quot;sService&quot;:&quot;SubsNumber&quot;},&quot;sCondition&quot;:&quot;[sService]=='2'&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="overload" name="Чи здійснювались Вами за останні 12 місяців придбання майна на суму понад 50 тис. гривень?" type="enum" required="true">
           <activiti:value id="attr1_yes" name="Так"></activiti:value>
           <activiti:value id="attr2_no" name="Ні"></activiti:value>
@@ -210,7 +212,6 @@
         <activiti:formProperty id="overload_cost" name="Вартість, гривень" type="string" default="-"></activiti:formProperty>
         <activiti:formProperty id="overload_date" name="Дата придбання; наприклад, 18.01.2016" type="string" default="-"></activiti:formProperty>
         <activiti:formProperty id="marker3" name="имущество свыше 50000 грн и ЭЦП" type="markers" default="{&quot;motion&quot;:{&quot;ShowFieldsOnCondition_14&quot;:{&quot;aField_ID&quot;:[&quot;overload_fio&quot;,&quot;overload_type&quot;,&quot;overload_cost&quot;,&quot;overload_date&quot;],&quot;asID_Field&quot;:{&quot;sOverload&quot;:&quot;overload&quot;},&quot;sCondition&quot;:&quot;[sOverload]=='attr1_yes'&quot;},&quot;RequiredFieldsOnCondition_15&quot;:{&quot;aField_ID&quot;:[&quot;form_signed_all_1&quot;,&quot;form_signed_all_2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;ECP&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'ecp_yes'&quot;},&quot;ShowFieldsOnCondition_16&quot;:{&quot;aField_ID&quot;:[&quot;form_signed_all_1&quot;,&quot;form_signed_all_2&quot;],&quot;asID_Field&quot;:{&quot;sClient&quot;:&quot;ECP&quot;},&quot;sCondition&quot;:&quot;[sClient] == 'ecp_yes'&quot;}}}"></activiti:formProperty>
-        
         <activiti:formProperty id="asSubNarah" name="Куди перерахувати субсидію у разі її надання у готівковій формі?" type="enum" required="true">
           <activiti:value id="sEnamPost" name="через національного оператора поштового зв’язку"></activiti:value>
           <activiti:value id="sEnamBank" name="на рахунок у банку"></activiti:value>
@@ -221,7 +222,6 @@
         <activiti:formProperty id="sBankKode" name="Код банку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sBankBank" name="Банк одержувача" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="markerSubNarah" name="markerSubNarah" type="markers" default="${markerService.loadFromFile('soczah/654_SubNarah.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="ECP" name="Чи подаєте звернення з ЕЦП або без ЕЦП?" type="enum" required="true">
           <activiti:value id="ecp_yes" name="з ЕЦП (для отримання електронної послуги про призначення субсидії)"></activiti:value>
           <activiti:value id="ecp_no" name="без ЕЦП (погоджуєтесь на особистий візит після перевірки правильності даних)"></activiti:value>
@@ -364,7 +364,13 @@
         <activiti:formProperty id="garbage_number1" name="Номер особового рахунку (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="garbage_name" name="Назва організації, що надає послугу (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="garbage_notice" name="Примітки (вивіз відходів)" type="string" writable="false"></activiti:formProperty>
-        
+        <activiti:formProperty id="garbageR" name="Вивіз побутових відходів (рідких) або вивезення рідких нечистот" type="enum" writable="false">
+          <activiti:value id="attr1" name="Користуюсь"></activiti:value>
+          <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="garbageR_number1" name="Номер особового рахунку (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="garbageR_name" name="Назва організації, що надає послугу (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="garbageR_notice" name="Примітки (вивіз відходів)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="KomOblTE" name="Встановлення, осбслуговування та заміна вузлів комерційного обліку теплової енергії" type="enum" writable="false">
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
           <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
@@ -421,7 +427,6 @@
         <activiti:formProperty id="AbonObslVidh_number1" name="Номер особового рахунку; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="AbonObslVidh_name" name="Назва організації, що надає послугу; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="AbonObslVidh_notice" name="Примітки" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_2" name="Дані для декларації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place_type&quot;],&quot;sValue&quot;:&quot;Дані для декларації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place_type" name="Тип будинку" type="enum" writable="false">
           <activiti:value id="1" name="індивідуальний будинок"></activiti:value>
@@ -445,7 +450,6 @@
         <activiti:formProperty id="overload_type" name="Вид придбаного майна, товарів або оплачених послуг; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="overload_cost" name="Вартість, гривень; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="overload_date" name="Дата придбання (наприклад, 18.01.2016); ;writable=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="asSubNarah" name="Куди перерахувати субсидію у разі її надання у готівковій формі?" type="enum" writable="false">
           <activiti:value id="sEnamPost" name="через національного оператора поштового зв’язку"></activiti:value>
           <activiti:value id="sEnamBank" name="на рахунок у банку"></activiti:value>
@@ -456,7 +460,6 @@
         <activiti:formProperty id="sBankKode" name="Код банку; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sBankBank" name="Банк одержувача; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerSubNarah" name="markerSubNarah" type="markers" default="${markerService.loadFromFile('soczah/654_SubNarah.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="comment" name="Примітки" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="decide" name="Стан" type="enum" required="true">
           <activiti:value id="accept" name="відправлені запити, очікують відповіді"></activiti:value>
@@ -474,7 +477,6 @@
         <activiti:formProperty id="sIncomeTable" name="Доходи;bNew=true" type="table" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sAutoTable" name="Транспорт;bNew=true" type="table" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sAlimentuTable" name="Аліменти; ;bNew=true" type="table" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="form_signed_all_1" name="Заява з ЕЦП; ;bNew=true,bPrintFormFileAsPDF=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="form_signed_all_2" name="Декларація з ЕЦП; ;bNew=true,bPrintFormFileAsPDF=true" type="file" writable="false"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
@@ -671,6 +673,13 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="garbage_number1" name="Номер особового рахунку (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="garbage_name" name="Назва організації, що надає послугу (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="garbage_notice" name="Примітки (вивіз відходів)" type="string" writable="false"></activiti:formProperty>
+        <activiti:formProperty id="garbageR" name="Вивіз побутових відходів (рідких) або вивезення рідких нечистот" type="enum" writable="false">
+          <activiti:value id="attr1" name="Користуюсь"></activiti:value>
+          <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="garbageR_number1" name="Номер особового рахунку (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="garbageR_name" name="Назва організації, що надає послугу (вивіз відходів); ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="garbageR_notice" name="Примітки (вивіз відходів)" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="KomOblTE" name="Встановлення, осбслуговування та заміна вузлів комерційного обліку теплової енергії" type="enum" writable="false">
           <activiti:value id="attr1" name="Користуюсь"></activiti:value>
           <activiti:value id="attr2" name="Не користуюсь"></activiti:value>
@@ -727,7 +736,6 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="AbonObslVidh_number1" name="Номер особового рахунку; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="AbonObslVidh_name" name="Назва організації, що надає послугу; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="AbonObslVidh_notice" name="Примітки" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_2" name="Дані для декларації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;place_type&quot;],&quot;sValue&quot;:&quot;Дані для декларації&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="place_type" name="Тип будинку" type="enum" writable="false">
           <activiti:value id="1" name="індивідуальний будинок"></activiti:value>
@@ -751,7 +759,6 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="overload_type" name="Вид придбаного майна, товарів або оплачених послуг" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="overload_cost" name="Вартість, гривень" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="overload_date" name="Дата придбання; наприклад, 18.01.2016" type="string" writable="false"></activiti:formProperty>
-        
         <activiti:formProperty id="asSubNarah" name="Куди перерахувати субсидію у разі її надання у готівковій формі?" type="enum" writable="false">
           <activiti:value id="sEnamPost" name="через національного оператора поштового зв’язку"></activiti:value>
           <activiti:value id="sEnamBank" name="на рахунок у банку"></activiti:value>
@@ -762,7 +769,6 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="sBankKode" name="Код банку; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sBankBank" name="Банк одержувача; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerSubNarah" name="markerSubNarah" type="markers" default="${markerService.loadFromFile('soczah/654_SubNarah.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="comment" name="Коментарі УПСЗН на першому етапі обробки" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="comment1" name="Примітки" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="selection" name="Стан" type="enum" required="true">

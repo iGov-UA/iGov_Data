@@ -1148,8 +1148,7 @@
         <activiti:formProperty id="markers1" name="hideShowFields1" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common1.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="hideShowFields2" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common2.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="hideValidateFields3" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common3.json')}"></activiti:formProperty>
-        <activiti:formProperty id="nFile1" name="Завантажте матеріал стосовно Вашого звернення, якщо є; ;bNew=true" type="file" writable="false" default=" "></activiti:formProperty>
-        
+        <activiti:formProperty id="nFile1" name="Завантажте матеріал стосовно Вашого звернення, якщо є; ;bNew=true" type="file" default=" " writable="false"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
       </extensionElements>
     </userTask>
@@ -2409,8 +2408,6 @@ execution.setVariable('sAnswerEmail', res)</script>
         </activiti:formProperty>
         <activiti:formProperty id="markers1" name="hideShowFields1" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common1.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="hideShowFields2" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common2.json')}"></activiti:formProperty>
-        
-     
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow30" name="asStatusOperator=='sEnumSendInCallCenter'" sourceRef="exclusivegateway1" targetRef="usertask3">
@@ -3007,11 +3004,9 @@ execution.setVariable('sAnswerEmail', res)</script>
         <activiti:formProperty id="markers1" name="hideShowFields1" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common1.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers2" name="hideShowFields2" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common2.json')}"></activiti:formProperty>
         <activiti:formProperty id="markers3" name="hideValidateFields3" type="markers" default="${markerService.loadFromFile('dneprMVK/dnepr_mvk_291_common3.json')}"></activiti:formProperty>
-        <activiti:formProperty id="nFile1" name="Завантажте матеріал стосовно Вашого звернення, якщо є; ;bNew=true" type="file" writable="false" default=" "></activiti:formProperty>
-        
+        <activiti:formProperty id="nFile1" name="Завантажте матеріал стосовно Вашого звернення, якщо є; ;bNew=true" type="file" default=" " writable="false"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
-        
-              </extensionElements>
+      </extensionElements>
     </userTask>
     <sequenceFlow id="flow43" name="sAnswerStatus=='Reject'" sourceRef="exclusivegateway4" targetRef="usertask4">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sAnswerStatus=='Reject'}]]></conditionExpression>
@@ -3657,11 +3652,8 @@ execution.setVariable('sNameDepartment', per2)</script>
         <activiti:formProperty id="sResponsibleMan" name="Відповідальний в департаменті (управлінні)" type="string"></activiti:formProperty>
         <activiti:formProperty id="sID_Order_GovPublic" name="Номер звернення ДМР" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sBody1" name="[pattern/print/dneprMVK/dnepr_mvk_291_common_print.html] ; ;bVisible=false ,bPrintform=true" type="string" default="Форма письмової відповіді" writable="false"></activiti:formProperty>
-        
-        <activiti:formProperty id="nFile1" name="Завантажте матеріал стосовно Вашого звернення, якщо є; ;bNew=true" type="file" writable="false" default=" "></activiti:formProperty>
-        
+        <activiti:formProperty id="nFile1" name="Завантажте матеріал стосовно Вашого звернення, якщо є; ;bNew=true" type="file" default=" " writable="false"></activiti:formProperty>
         <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
-        
       </extensionElements>
     </userTask>
     <sequenceFlow id="flow48" sourceRef="usertask9" targetRef="endevent10"></sequenceFlow>
@@ -3790,7 +3782,7 @@ execution.setVariable('sID_Order_GovPublic', fullNumber)</script>
     </scriptTask>
     <serviceTask id="servicetask10" name="ProcessCountTask" activiti:delegateExpression="#{ProcessCountTaskListener}"></serviceTask>
     <sequenceFlow id="flow87" sourceRef="servicetask10" targetRef="scripttask5"></sequenceFlow>
-    <sequenceFlow id="flow88" sourceRef="scripttask5" targetRef="servicetask14"></sequenceFlow>
+    <sequenceFlow id="flow88" sourceRef="scripttask5" targetRef="scripttask1"></sequenceFlow>
     <serviceTask id="servicetask11" name="Відповідь на email" activiti:delegateExpression="#{MailTaskWithAttachments}">
       <extensionElements>
         <activiti:field name="from">
@@ -3923,17 +3915,6 @@ execution.setVariable('sID_Order_GovPublic', fullNumber)</script>
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${sAnswerEmail=='noSendEmail'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow107" sourceRef="servicetask12" targetRef="usertask3"></sequenceFlow>
-    <serviceTask id="servicetask14" name="Service Task (Corezoid)" activiti:delegateExpression="#{SendObject_Corezoid_New}">
-      <extensionElements>
-        <activiti:field name="sID_Conveyour">
-          <activiti:string><![CDATA[158300]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="soData">
-          <activiti:string><![CDATA[sBankIdlastName::value{[bankIdlastName]};;sBankIdfirstName::value{[bankIdfirstName]};;sBankIdmiddleName::value{[bankIdmiddleName]};;sSex::enum{[asSex]};;sPhone::value{[sPhone]};;sEmail::value{[email]};;sDistrict::enum{[asDistrict]};;sZipCode::value{[sZipCode]};;sCity::value{[sCity]};;sAdress::value{[sAdress]};;sAdressProbl::value{[sAdressProbl]};;sHowCategory::enum{[asHowCategory]};;sKindTr::enum{[asKindTr]};;sTypeTr::enum{[asTypeTr]};;sHowSocStatus::enum{[asHowSocStatus]};;sTopHead::enum{[asTopHead]};;sTop1::enum{[asTop1]};;sTop2::enum{[asTop2]};;sTop3::enum{[asTop3]};;sTop4::enum{[asTop4]};;sTop5::enum{[asTop5]};;sTop6::enum{[asTop6]};;sTop7::enum{[asTop7]};;sTop8::enum{[asTop8]};;sTop9::enum{[asTop9]};;sTop10::enum{[asTop10]};;sTop11::enum{[asTop11]};;sTop12::enum{[asTop12]};;sTop13::enum{[asTop13]};;sTop14::enum{[asTop14]};;sTop15::enum{[asTop15]};;sTop16::enum{[asTop16]};;sTop17::enum{[asTop17]};;sTop18::enum{[asTop18]};;sTop19::enum{[asTop19]};;sTop20::enum{[asTop20]};;sTop21::enum{[asTop21]};;sTop22::enum{[asTop22]};;sTop23::enum{[asTop23]};;sTop24::enum{[asTop24]};;sReason::value{[sReason]};;sAdditionalInformation::value{[sAdditionalInformation]};;sDateReglament::value{[sDateReglament]};;sChannelAppeals::enum{[asChannelAppeals]};;sAnswerChannel::enum{[asAnswerChannel]};;sRegistrationNumberRGA::value{[sRegistrationNumberRGA]};;sChannelAppealsRGA::enum{[asChannelAppealsRGA]};;sStatusRGA::enum{[asStatusRGA]};;sID_Order_GovPublic::value{[sID_Order_GovPublic]};;sDateAppeal::value{[sDateAppeal]};;sID_Order::[sID_Order];;test_param::value{[test_param]}]]></activiti:string>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
-    <sequenceFlow id="flow108" sourceRef="servicetask14" targetRef="scripttask1"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_dnepr_mvk_291_common">
     <bpmndi:BPMNPlane bpmnElement="dnepr_mvk_291_common" id="BPMNPlane_dnepr_mvk_291_common">
@@ -4038,9 +4019,6 @@ execution.setVariable('sID_Order_GovPublic', fullNumber)</script>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="exclusivegateway13" id="BPMNShape_exclusivegateway13">
         <omgdc:Bounds height="40.0" width="40.0" x="1851.0" y="860.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask14" id="BPMNShape_servicetask14">
-        <omgdc:Bounds height="55.0" width="169.0" x="766.0" y="504.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
         <omgdi:waypoint x="853.0" y="104.0"></omgdi:waypoint>
@@ -4204,7 +4182,7 @@ execution.setVariable('sID_Order_GovPublic', fullNumber)</script>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow88" id="BPMNEdge_flow88">
         <omgdi:waypoint x="852.0" y="469.0"></omgdi:waypoint>
-        <omgdi:waypoint x="850.0" y="504.0"></omgdi:waypoint>
+        <omgdi:waypoint x="851.0" y="591.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow96" id="BPMNEdge_flow96">
         <omgdi:waypoint x="2461.0" y="470.0"></omgdi:waypoint>
@@ -4258,10 +4236,6 @@ execution.setVariable('sID_Order_GovPublic', fullNumber)</script>
         <omgdi:waypoint x="1743.0" y="820.0"></omgdi:waypoint>
         <omgdi:waypoint x="1742.0" y="1122.0"></omgdi:waypoint>
         <omgdi:waypoint x="1620.0" y="1122.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow108" id="BPMNEdge_flow108">
-        <omgdi:waypoint x="850.0" y="559.0"></omgdi:waypoint>
-        <omgdi:waypoint x="851.0" y="591.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

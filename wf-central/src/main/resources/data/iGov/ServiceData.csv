@@ -5674,3 +5674,8 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5805;144;51;51;NULL;4;{"processDefinitionId":"Registr_0144_ZniatSmert:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5806;676;375;375;NULL;4;{"processDefinitionId":"ostroh_mvk_481:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5807;161;375;375;NULL;4;{"processDefinitionId":"Rada_0161_InfoZaput:1:1"};;false;212;false;;BankID,EDS,mpbds;0
+5808;740;707;707;NULL;4;{"processDefinitionId":"rada_0740_SkladSimyi:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5809;657;707;707;NULL;4;{"processDefinitionId":"ZemRada_0657_ZemNajavnist:1:1"};;false;225;true;;BankID,EDS,mpbds;0
+5810;267;7;7;NULL;4;{"processDefinitionId":"bti_0267_VlasnistInfo:1:1"};;false;210;true;;BankID,EDS;0
+5811;945;NULL;NULL;NULL;1;{};https://askep.net/patient/register;false;1;false;Ви можете скористатись послугою перейшовши за посиланням;BankID,EDS,mpbds;0
+5812;946;NULL;NULL;NULL;1;{};https://askep.net/patient/login;false;1;false;Ви можете скористатись послугою перейшовши за посиланням;BankID,EDS,mpbds;0

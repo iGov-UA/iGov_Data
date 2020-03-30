@@ -5679,3 +5679,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5810;267;7;7;NULL;4;{"processDefinitionId":"bti_0267_VlasnistInfo:1:1"};;false;210;true;;BankID,EDS;0
 5811;945;NULL;NULL;NULL;1;{};https://askep.net/patient/register;false;1;false;Ви можете скористатись послугою перейшовши за посиланням;BankID,EDS,mpbds;0
 5812;946;NULL;NULL;NULL;1;{};https://askep.net/patient/login;false;1;false;Ви можете скористатись послугою перейшовши за посиланням;BankID,EDS,mpbds;0
+5813;1120;NULL;NULL;NULL;1;{};https://new.igov.gov.ua/service/1120/general;FALSE;1;FALSE;Ви можете отримати послугу на оновленій версії порталу;BankID,EDS,mpbds;0

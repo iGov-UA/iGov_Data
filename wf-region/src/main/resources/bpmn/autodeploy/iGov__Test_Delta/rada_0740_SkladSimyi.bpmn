@@ -27,7 +27,8 @@
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про адресу реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про адресу реєстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Інформація про адресу реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationMisto&quot;],&quot;sValue&quot;:&quot;Інформація про адресу реєстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sRegistrationMisto" name="Місто" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Вкажіть тип вашого будинку" type="enum" required="true">
           <activiti:value id="sBagkvatur" name="багатоквартирний"></activiti:value>
           <activiti:value id="sPrivSector" name="приватний"></activiti:value>
@@ -133,7 +134,8 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про адресу реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про адресу реэстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Інформація про адресу реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationMisto&quot;],&quot;sValue&quot;:&quot;Інформація про адресу реэстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sRegistrationMisto" name="Місто" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Тип будинку" type="enum" writable="false">
           <activiti:value id="sBagkvatur" name="багатоквартирний"></activiti:value>
           <activiti:value id="sPrivSector" name="приватний"></activiti:value>
@@ -270,7 +272,8 @@ ${sNameOrgan},<br>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" writable="false"></activiti:formProperty>
         
-        <activiti:formProperty id="markersLine_2" name="Інформація про адресу реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;asBudType&quot;],&quot;sValue&quot;:&quot;Інформація про адресу реэстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="markersLine_2" name="Інформація про адресу реєстрації" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistrationMisto&quot;],&quot;sValue&quot;:&quot;Інформація про адресу реэстрації&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sRegistrationMisto" name="Місто" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="asBudType" name="Тип будинку" type="enum" writable="false">
           <activiti:value id="sBagkvatur" name="багатоквартирний"></activiti:value>
           <activiti:value id="sPrivSector" name="приватний"></activiti:value>
@@ -385,7 +388,9 @@ ${sNameOrgan},<br>
     <endEvent id="endevent5" name="End"></endEvent>
     <sequenceFlow id="flow34" sourceRef="boundaryerror1" targetRef="endevent5"></sequenceFlow>
     <scriptTask id="scripttask1" name="Script Task" scriptFormat="javascript" activiti:autoStoreVariables="false">
-      <script>var Vul = execution.getVariable('sRegistrationVul')
+      <script>
+var Misto = execution.getVariable('sRegistrationMisto')
+var Vul = execution.getVariable('sRegistrationVul')
 var Bud = execution.getVariable('sRegistrationBud')
 var Korp = execution.getVariable('lRegistrationKorp')
 var Kvart = execution.getVariable('lRegistrationKvart')
@@ -393,15 +398,16 @@ var Adres = ' '
   
 if(execution.getVariable('asBudType') == 'sBagkvatur')
   {
-  if(execution.getVariable('asKorp') == 'yes'){Adres='м.Дніпро, '+Vul+', б. '+Bud+', корп. '+Korp+', кв. '+Kvart}
-  if(execution.getVariable('asKorp') == 'no'){Adres='м.Дніпро, '+Vul+', б. '+Bud+', кв. '+Kvart}
+  if(execution.getVariable('asKorp') == 'yes'){Adres=Misto + ', '+Vul+', б. '+Bud+', корп. '+Korp+', кв. '+Kvart}
+  if(execution.getVariable('asKorp') == 'no'){Adres=Misto + ', '+Vul+', б. '+Bud+', кв. '+Kvart}
   }
 if(execution.getVariable('asBudType') == 'sPrivSector')
   {
-  if(execution.getVariable('asKvart') == 'yes'){Adres='м.Дніпро, '+Vul+', б. '+Bud+', кв. '+Kvart}
-  if(execution.getVariable('asKvart') == 'no'){Adres='м.Дніпро, '+Vul+', б. '+Bud}
+  if(execution.getVariable('asKvart') == 'yes'){Adres=Misto + ', '+Vul+', б. '+Bud+', кв. '+Kvart}
+  if(execution.getVariable('asKvart') == 'no'){Adres=Misto + ', '+Vul+', б. '+Bud}
   }  
-execution.setVariable('ScriptAdress', Adres)</script>
+execution.setVariable('ScriptAdress', Adres)
+      </script>
     </scriptTask>
     <sequenceFlow id="flow35" sourceRef="servicetask12" targetRef="scripttask1"></sequenceFlow>
     <sequenceFlow id="flow36" sourceRef="scripttask1" targetRef="servicetask4"></sequenceFlow>

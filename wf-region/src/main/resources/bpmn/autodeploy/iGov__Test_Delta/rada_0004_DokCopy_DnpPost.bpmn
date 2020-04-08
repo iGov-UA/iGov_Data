@@ -20,6 +20,20 @@
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
         
+        <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">
+          <activiti:value id="sEnamFiz" name="Фізична особа"></activiti:value>
+          <activiti:value id="sEnamUrK" name="Юридична особа (подає керівник)"></activiti:value>
+          <activiti:value id="sEnamUrP" name="Юридична особа (подає представник)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('Rada/rada_0004_ur_fizK.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Введіть код ЄДРПОУ" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи" type="textArea" required="true"></activiti:formProperty>
+        <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
+        
+        <activiti:formProperty id="nFile_UODovirenist" name="Документ що підтверджує повноваження;(завантажте сканкопію документа, що підтверджує ваше право подавати заяву від юридичної особи) ;bNew=true" type="file" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_2" name="Інформація про документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sLabe2008&quot;],&quot;sValue&quot;:&quot;Інформація про документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabe2008" name=" ; ;labelType=info" type="label" default="&lt;b&gt; Зверніть увагу!!! Копії рішень та витягів доступні лише з 01.01.2008 року! Для отримання копій за період до 2008 року звертайтеся до архіву! &lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="asDocType" name="Копії рішень стосуються" type="enum" required="true">
@@ -40,6 +54,11 @@
           <activiti:value id="sEnamECP" name="Електронна копія"></activiti:value>
           <activiti:value id="sEnamPost" name="Лист поштою (з оплатою доставки)"></activiti:value>
           <activiti:value id="sEnamnarochno" name="Самостійно забрати довідку"></activiti:value>
+        </activiti:formProperty>
+        
+        <activiti:formProperty id="asPost" name="Оберіть поштову компанію" type="enum" required="true">
+          <activiti:value id="sEnamUP" name="Укрпошта"></activiti:value>
+          <activiti:value id="sEnamNP" name="Нова пошта"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sIndex" name="Індекс" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь" type="string" required="true"></activiti:formProperty>

@@ -1,0 +1,29 @@
+{
+  "motion": {
+    "ShowFieldsOnCondition_04_FOK": {
+      "aField_ID": [
+        "sAddressRegistr",
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrK'"
+    },
+    "ShowFieldsOnCondition_04_FOP": {
+      "aField_ID": [
+        "sAddressRegistr",
+        "sID_SubjectOrgan_OKPO_01",
+        "sFullName_SubjectOrgan_01",
+        "sDateActual_SubjectOrgan_01",
+        "nFile_UODovirenist"
+      ],
+      "asID_Field": {
+        "sCond": "asOsoba"
+      },
+      "sCondition": "[sCond]=='sEnamUrP'"
+    }
+  }
+}

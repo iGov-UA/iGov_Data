@@ -2,6 +2,7 @@
   "motion": {
     "ShowFieldsOnCondition_VidpovidPost": {
       "aField_ID": [
+        "asPost",
         "sIndex",
         "sPostAdress",
         "asLust"

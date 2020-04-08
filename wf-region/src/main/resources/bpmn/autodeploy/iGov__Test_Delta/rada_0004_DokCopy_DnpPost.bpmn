@@ -145,6 +145,19 @@
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон заявника; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail заявника; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" writable="false">
+          <activiti:value id="sEnamFiz" name="Фізична особа"></activiti:value>
+          <activiti:value id="sEnamUrK" name="Юридична особа (подає керівник)"></activiti:value>
+          <activiti:value id="sEnamUrP" name="Юридична особа (подає представник)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('Rada/rada_0004_ur_fizK.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Код ЄДРПОУ; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="nFile_UODovirenist" name="Документ що підтверджує повноваження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_22" name="Інформація про документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_22&quot;:{&quot;aElement_ID&quot;:[&quot;asDocType&quot;],&quot;sValue&quot;:&quot;Інформація про документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asDocType" name="Копії рішень стосуються" type="enum" writable="false">
           <activiti:value id="sDocTypeCreateProject" name="надання дозволу на розроблення проекту відведення земельної ділянки"></activiti:value>
@@ -163,6 +176,11 @@
           <activiti:value id="sEnamPost" name="Поштою (з оплатою доставки)"></activiti:value>
           <activiti:value id="sEnamnarochno" name="Самостійно забрати довідку"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="asPost" name="Поштова компанія" type="enum" writable="false">
+          <activiti:value id="sEnamUP" name="Укрпошта"></activiti:value>
+          <activiti:value id="sEnamNP" name="Нова пошта"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="asDicide1" name="Результат опрацювання" type="enum" required="true">
           <activiti:value id="sEnamAccept" name="Копію рішення можливо надати"></activiti:value>
           <activiti:value id="sEnamReject" name="Відмовити у реєстрації звернення"></activiti:value>
@@ -304,6 +322,19 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон заявника; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail заявника; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" writable="false">
+          <activiti:value id="sEnamFiz" name="Фізична особа"></activiti:value>
+          <activiti:value id="sEnamUrK" name="Юридична особа (подає керівник)"></activiti:value>
+          <activiti:value id="sEnamUrP" name="Юридична особа (подає представник)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('Rada/rada_0004_ur_fizK.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Код ЄДРПОУ; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="nFile_UODovirenist" name="Документ що підтверджує повноваження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_22" name="Інформація про документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_22&quot;:{&quot;aElement_ID&quot;:[&quot;asDocType&quot;],&quot;sValue&quot;:&quot;Інформація про документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asDocType" name="Копії рішень стосуються" type="enum" writable="false">
           <activiti:value id="sDocTypeCreateProject" name="надання дозволу на розроблення проекту відведення земельної ділянки"></activiti:value>
@@ -516,6 +547,19 @@ ${sNameOrgan}<br/>
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон заявника; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail заявника; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" writable="false">
+          <activiti:value id="sEnamFiz" name="Фізична особа"></activiti:value>
+          <activiti:value id="sEnamUrK" name="Юридична особа (подає керівник)"></activiti:value>
+          <activiti:value id="sEnamUrP" name="Юридична особа (подає представник)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('Rada/rada_0004_ur_fizK.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Код ЄДРПОУ; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="nFile_UODovirenist" name="Документ що підтверджує повноваження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
         <activiti:formProperty id="markersLine_22" name="Інформація про документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_22&quot;:{&quot;aElement_ID&quot;:[&quot;asDocType&quot;],&quot;sValue&quot;:&quot;Інформація про документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asDocType" name="Копії рішень стосуються" type="enum" writable="false">
           <activiti:value id="sDocTypeCreateProject" name="надання дозволу на розроблення проекту відведення земельної ділянки"></activiti:value>
@@ -534,6 +578,11 @@ ${sNameOrgan}<br/>
           <activiti:value id="sEnamPost" name="Поштою (з оплатою доставки)"></activiti:value>
           <activiti:value id="sEnamnarochno" name="Самостійно забрати довідку"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="asPost" name="Поштова компанія" type="enum" writable="false">
+          <activiti:value id="sEnamUP" name="Укрпошта"></activiti:value>
+          <activiti:value id="sEnamNP" name="Нова пошта"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="sIndex" name="Індекс" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="Номер транзакції платежу" type="string" writable="false"></activiti:formProperty>
@@ -586,12 +635,31 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="tPassport" name="Паспортні дані; ;writable=false" type="textArea"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон заявника; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail заявника; ;writable=false" type="string"></activiti:formProperty>
+        
+        <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" writable="false">
+          <activiti:value id="sEnamFiz" name="Фізична особа"></activiti:value>
+          <activiti:value id="sEnamUrK" name="Юридична особа (подає керівник)"></activiti:value>
+          <activiti:value id="sEnamUrP" name="Юридична особа (подає представник)"></activiti:value>
+        </activiti:formProperty>
+        <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('Rada/rada_0004_ur_fizK.json')}"></activiti:formProperty>
+        
+        <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
+        <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Код ЄДРПОУ; ;writable=false" type="string"></activiti:formProperty>
+        <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи; ;writable=false" type="textArea"></activiti:formProperty>
+        <activiti:formProperty id="nFile_UODovirenist" name="Документ що підтверджує повноваження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
+        
+        
         <activiti:formProperty id="markersLine_333" name="Інформація про доставку" type="markers" default="{&quot;attributes&quot;:{&quot;Line_333&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Інформація про доставку&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як заявник хоче отримати відповідь" type="enum" writable="false">
           <activiti:value id="sEnamECP" name="Електронна копія"></activiti:value>
           <activiti:value id="sEnamPost" name="Поштою (з оплатою доставки)"></activiti:value>
           <activiti:value id="sEnamnarochno" name="Самостійно забрати довідку"></activiti:value>
         </activiti:formProperty>
+        <activiti:formProperty id="asPost" name="Поштова компанія" type="enum" writable="false">
+          <activiti:value id="sEnamUP" name="Укрпошта"></activiti:value>
+          <activiti:value id="sEnamNP" name="Нова пошта"></activiti:value>
+        </activiti:formProperty>
+        
         <activiti:formProperty id="sIndex" name="Індекс" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Адреса на яку надіслати відповідь" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="Номер транзакції платежу" type="string" writable="false"></activiti:formProperty>

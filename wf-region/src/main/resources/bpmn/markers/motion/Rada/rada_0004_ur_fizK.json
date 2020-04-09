@@ -10,7 +10,7 @@
       "asID_Field": {
         "sCond": "asOsoba"
       },
-      "sCondition": "[sCond]=='sEnamUrK'"
+      "sCondition": "[sCond]=='sEnamUrK' || [sCond]=='Юридична особа (подає керівник)'"
     },
     "ShowFieldsOnCondition_04_FOP": {
       "aField_ID": [
@@ -23,7 +23,7 @@
       "asID_Field": {
         "sCond": "asOsoba"
       },
-      "sCondition": "[sCond]=='sEnamUrP'"
+      "sCondition": "[sCond]=='sEnamUrP' || [sCond]=='Юридична особа (подає представник)'"
     }
   }
 }

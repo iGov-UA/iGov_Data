@@ -178,7 +178,7 @@
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDicide1 == 'sEnamAccept' && asVidpovid == 'sEnamECP'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow64" name="БЕЗ ПОШТИ" sourceRef="exclusivegateway2" targetRef="servicetask14">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDicide1 == 'sEnamAccept' && (asVidpovid == 'sEnamnarochno' || asVidpovid == 'sEnamPost')}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDicide1 == 'sEnamAccept' && asVidpovid != 'sEnamECP'}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask8" name="Відмова" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>

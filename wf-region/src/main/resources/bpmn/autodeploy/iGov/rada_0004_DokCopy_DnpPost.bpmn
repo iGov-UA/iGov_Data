@@ -9,30 +9,25 @@
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По батькові" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="Індивідуальний податковий номер (ІПН)" type="string" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="tPassport" name="Паспорт заявника; (серія, номер, дата і орган, що його видав)" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdPassport" name="Паспортні дані ; ;bVisible=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdphone" name="БанкІДтелефон; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="bankIdemail" name="БанкІДпошта; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="FlagBankId" name="FlagBankIdPhoneEmail; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="markerBankIdPasportPhoneEmail" name="markerBankIdPasportPhoneEmail" type="markers" default="${markerService.loadFromFile('1_Standart_marker/BankIdPasportPhoneEmail.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="asOsoba" name="Статус заявника" type="enum" required="true">
           <activiti:value id="sEnamFiz" name="Фізична особа"></activiti:value>
           <activiti:value id="sEnamUrK" name="Юридична особа (подає керівник)"></activiti:value>
           <activiti:value id="sEnamUrP" name="Юридична особа (подає представник)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="marker_ur_fiz" name="markers" type="markers" default="${markerService.loadFromFile('Rada/rada_0004_ur_fizK.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_UO" name="Інформація про юридичну особу" type="markers" default="{&quot;attributes&quot;:{&quot;Line_UO&quot;:{&quot;aElement_ID&quot;:[&quot;sID_SubjectOrgan_OKPO_01&quot;],&quot;sValue&quot;:&quot;Інформація про юридичну особу&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sID_SubjectOrgan_OKPO_01" name="Введіть код ЄДРПОУ" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sFullName_SubjectOrgan_01" name="Повне найменування юридичної особи" type="textArea" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDateActual_SubjectOrgan_01" name="Дата отримання інформації з ЄДРПОУ" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="nFile_UODovirenist" name="Документ що підтверджує повноваження;(завантажте сканкопію документа, що підтверджує ваше право подавати заяву від юридичної особи) ;bNew=true" type="file" required="true"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_2" name="Інформація про документ" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sLabe2008&quot;],&quot;sValue&quot;:&quot;Інформація про документ&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sLabe2008" name=" ; ;labelType=info" type="label" default="&lt;b&gt; Зверніть увагу!!! Копії рішень та витягів доступні лише з 01.01.2008 року! Для отримання копій за період до 2008 року звертайтеся до архіву! &lt;/b&gt;"></activiti:formProperty>
         <activiti:formProperty id="asDocType" name="Копії рішень стосуються" type="enum" required="true">
@@ -46,7 +41,6 @@
         <activiti:formProperty id="sDocDate" name="Дата прийняття документа" type="date" required="true"></activiti:formProperty>
         <activiti:formProperty id="sDocNumber" name="Номер документа" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="sMeta" name="Мета отримання документа; ;bVisible=false" type="string" default="Для ознайомлення"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_3" name="Спосіб отримання відповіді" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;sText1&quot;],&quot;sValue&quot;:&quot;Спосіб отримання відповіді&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="sText1" name=" ; ;labelType=info" type="label" default="Якщо ви оберете відповідь поштою, вам подрібно буде сплатити вартість доставки при отриманні."></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як ви хочете отримати відповідь" type="enum" required="true">
@@ -57,7 +51,6 @@
         <activiti:formProperty id="sPostAdress" name="Вкажіть відділення де хочете отримати документ" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="asLust" name=" ; ;labelType=info" type="label" default="Ви можете визначити потрібне вам відделення нової пошти за посиланням - &lt;a href=&quot;https://novaposhta.ua/office &quot; target=&quot;_blank&quot;&gt;Відділення нової пошти&lt;/a&gt;"></activiti:formProperty>
         <activiti:formProperty id="markerVidpovid" name="markerVidpovid" type="markers" default="${markerService.loadFromFile('1_Standart_marker/Vidpovid_Post_Dnp.json')}"></activiti:formProperty>
-        
         <activiti:formProperty id="sMailClerk" name="Пошта для службових повідомлень ЦНАП; ;bVisible=false" type="string" default="k_n_i@ukr.net"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="назва органу; ;bVisible=false" type="string" default="Дніпровська міська рада"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон ; ;bVisible=false" type="string" default="&lt;b&gt;Телефон(и):&lt;/b&gt; (056) 742-84-08, (056) 745-30-26"></activiti:formProperty>
@@ -165,7 +158,6 @@
           <activiti:value id="sEnamnarochno" name="Самостійно забрати довідку"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Відділення Нової Пошти; ;writable=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="asDicide1" name="Результат опрацювання" type="enum" required="true">
           <activiti:value id="sEnamAccept" name="Копію рішення можливо надати"></activiti:value>
           <activiti:value id="sEnamReject" name="Відмовити у реєстрації звернення"></activiti:value>
@@ -186,7 +178,7 @@
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDicide1 == 'sEnamAccept' && asVidpovid == 'sEnamECP'}]]></conditionExpression>
     </sequenceFlow>
     <sequenceFlow id="flow64" name="БЕЗ ПОШТИ" sourceRef="exclusivegateway2" targetRef="servicetask14">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDicide1 == 'sEnamAccept' && asVidpovid == 'sEnamnarochno'}]]></conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${asDicide1 == 'sEnamAccept' && (asVidpovid == 'sEnamnarochno' || asVidpovid == 'sEnamPost')}]]></conditionExpression>
     </sequenceFlow>
     <serviceTask id="servicetask8" name="Відмова" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
       <extensionElements>
@@ -325,7 +317,6 @@ ${sNameOrgan}<br>
         <activiti:formProperty id="sDocDate" name="Дата прийняття документа; ;writable=false" type="date"></activiti:formProperty>
         <activiti:formProperty id="sDocNumber" name="Номер документа; ;writable=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sMeta" name="Мета отримання документа; ;writable=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="markersLine_33" name="Спосіб отримання відповіді" type="markers" default="{&quot;attributes&quot;:{&quot;Line_33&quot;:{&quot;aElement_ID&quot;:[&quot;asVidpovid&quot;],&quot;sValue&quot;:&quot;Спосіб отримання відповіді&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="asVidpovid" name="Як заявник хоче отримати відповідь" type="enum" writable="false">
           <activiti:value id="sEnamECP" name="Електронна копія"></activiti:value>
@@ -333,7 +324,6 @@ ${sNameOrgan}<br>
           <activiti:value id="sEnamnarochno" name="Самостійно забрати довідку"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sPostAdress" name="Відділення Нової Пошти; ;writable=false" type="string"></activiti:formProperty>
-        
         <activiti:formProperty id="asVudacha" name="Чи видано відповідь заявнику?" type="enum" required="true">
           <activiti:value id="sEnamVudano" name="Так видано"></activiti:value>
           <activiti:value id="sEnamNejavka" name="Заявник, не з'явився"></activiti:value>
@@ -482,7 +472,7 @@ ${sNameOrgan}<br>
         <omgdi:waypoint x="438.0" y="184.0"></omgdi:waypoint>
         <omgdi:waypoint x="438.0" y="214.0"></omgdi:waypoint>
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="63.0" x="512.0" y="209.0"></omgdc:Bounds>
+          <omgdc:Bounds height="14.0" width="100.0" x="512.0" y="209.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow48" id="BPMNEdge_flow48">

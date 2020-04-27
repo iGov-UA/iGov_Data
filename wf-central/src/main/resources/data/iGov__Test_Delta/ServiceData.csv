@@ -5681,3 +5681,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5812;946;NULL;NULL;NULL;1;{};https://askep.net/patient/login;false;1;false;Ви можете скористатись послугою перейшовши за посиланням;BankID,EDS,mpbds;0
 5813;1120;NULL;NULL;NULL;1;{};https://new.igov.gov.ua/service/1120/general;FALSE;1;FALSE;Ви можете отримати послугу на оновленій версії порталу;BankID,EDS,mpbds;0
 5814;17;1;1;NULL;4;{"processDefinitionId":"rada_0017_KvOblik:1:1"};;false;309;false;;BankID,EDS,mpbds;0
+5815;1497;50018;NULL;18;4;{"processDefinitionId":"dnepr_cnap_686:1:1"};;false;1;true;;BankID,EDS,mpbds;0

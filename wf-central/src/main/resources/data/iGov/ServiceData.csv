@@ -390,7 +390,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 450;1394;NULL;NULL;NULL;4;{"processDefinitionId":"_test_gris:1:1"};;false;1;false;;BankID,email,EDS,mpbds;0
 451;1395;28;28;NULL;4;{"processDefinitionId":"dndz_cnap_200:1:1"};;false;1;false;;BankID,EDS,mpbds;0
 452;184;1;1;NULL;4;{"processDefinitionId":"Registr_0184_RegistrDo14:1:1"};;false;89;false;;BankID,EDS,mpbds;0
-453;1397;NULL;NULL;NULL;4;{"processDefinitionId":"common_mreo_2:1:58"};;false;1;false;;BankID,EDS,mpbds;0
+453;1397;NULL;NULL;NULL;4;{"processDefinitionId":"common_mreo_2:1:58"};;false;1;true;;BankID,EDS,mpbds;0
 454;667;15;15;NULL;4;{"processDefinitionId":"rada_667_worktime_BaseVar:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 455;20;137;137;NULL;4;{"processDefinitionId":"dnepr_cnap_213:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 456;1398;1;1;NULL;4;{"processDefinitionId":"dnepr_cnap_220:1:1"};;false;225;false;;BankID,EDS,mpbds;0
@@ -5362,10 +5362,10 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5493;173;84;84;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5494;175;84;84;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 5495;1431;84;84;NULL;4;{"processDefinitionId":"dms_1431_IDLost_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5496;28;129;129;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5497;25;129;129;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5498;173;129;129;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-5499;175;129;129;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;false;;BankID,EDS,mpbds;0
+5496;28;129;129;NULL;4;{"processDefinitionId":"dms_0028_ID14_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5497;25;129;129;NULL;4;{"processDefinitionId":"dms_0025_ID2545_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5498;173;129;129;NULL;4;{"processDefinitionId":"dms_0173_IDChangeFIO_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
+5499;175;129;129;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_iGov:1:1"};;false;205;true;;BankID,EDS,mpbds;0
 5500;274;51;51;NULL;4;{"processDefinitionId":"Rada_0274_ZapusPosadov:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 5501;1429;51;51;NULL;4;{"processDefinitionId":"dnepr_cnap_268:1:1"};;false;225;false;;BankID,EDS,mpbds;0
 5502;102;662;662;NULL;4;{"processDefinitionId":"DGK_0102_6Zem:1:1"};;false;225;false;;BankID,EDS,mpbds;0

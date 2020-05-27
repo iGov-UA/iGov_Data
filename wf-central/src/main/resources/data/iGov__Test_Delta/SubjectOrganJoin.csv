@@ -3352,4 +3352,11 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3682;212;Новоайдарівська районна рада;Новоайдарівська районна рада;lug_NovoaidR;lug_NovoaidR; ; ;NULL;NULL;4423100000
 3683;210;БТІ м. Дніпро;БТІ м. Дніпро;bti_request1_1;bti_request1_1; ; ;NULL;NULL;1210100000
 3684;210;БТІ м. Херсон;БТІ м. Херсон;bti_kherson;bti_kherson; ; ;NULL;NULL;6510100000
-3685;309;Дніпровська міська рада;Дніпровська міська рада;DniproGutObl;DniproGutObl; ; ;NULL;NULL;1210100000
+3685;309;Соборна районна рада;Соборна районна рада;DnSobGutObl;DnSobGutObl; ; ;NULL;NULL;1210100000
+3686;309;Шевченківська районна рада;Шевченківська районна рада;DnShevchGutObl;DnShevchGutObl; ; ;NULL;NULL;1210100000
+3687;309;Центральна районна рада;Центральна районна рада;DnCentrGutObl;DnCentrGutObl; ; ;NULL;NULL;1210100000
+3688;309;Новокодаціка районна рада;Новокодаціка районна рада;DnNovokGutObl;DnNovokGutObl; ; ;NULL;NULL;1210100000
+3689;309;Чечелівська районна рада;Чечелівська районна рада;DnChechelGutObl;DnChechelGutObl; ; ;NULL;NULL;1210100000
+3690;309;Індустріальна районна рада;Індустріальна районна рада;DnIndustrGutObl;DnIndustrGutObl; ; ;NULL;NULL;1210100000
+3691;309;Амур-Нижньодніпровська районна рада;Амур-Нижньодніпровська районна рада;DnANDGutObl;DnANDGutObl; ; ;NULL;NULL;1210100000
+3692;309;Самарська районна рада;Самарська районна рада;DnSamarGutObl;DnSamarGutObl; ; ;NULL;NULL;1210100000

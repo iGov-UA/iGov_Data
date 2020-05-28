@@ -170,7 +170,7 @@
           <activiti:value id="sEnam8" name="вісім осіб"></activiti:value>
           <activiti:value id="sEnam9" name="дев'ять осіб"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum">
+        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" writable="false">
           <activiti:value id="sEnamDitu" name="Неповнолітні діти"></activiti:value>
           <activiti:value id="sEnamDorosli" name="Дорослі члени сім'ї"></activiti:value>
           <activiti:value id="sEnamDituDorosli" name="Діти та дорослі члени сім'ї"></activiti:value>
@@ -191,7 +191,7 @@
         <activiti:formProperty id="nFile_NarodDitey" name="Свідоцтва про народження дітей; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidOdroj" name="Свідоцтво про одруження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_PasportRod" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RobotRod" name="Довідки з місця роботи членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Pilgu" name="Документи на пільгу; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="decide" name="Рішення про надання послуги" type="enum" required="true">
@@ -302,134 +302,10 @@
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <sequenceFlow id="flow27" sourceRef="servicetask7" targetRef="usertask2_green"></sequenceFlow>
-    <userTask id="usertask2_green" name="Підготовка витягу з рішення виконавчого комітету Ммр щодо взяття на квартирний облік" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
-      <extensionElements>
-        <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="clFio" name="ПІБ заявника" type="string" default="${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="bankIdinn" name="IПН заявника" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="phone" name="Контактний телефон" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="email" name="E-Mail" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asRobota" name="Чи є у заявника робота?; ;sID_CheckboxTrue=yes" type="enum" writable="false">
-          <activiti:value id="yes" name="так"></activiti:value>
-          <activiti:value id="no" name="ні"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="sNamePidpruemstvo" name="Повна назва підприємства" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="sNamePosada" name="Назва посади; " type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="RobotaData" name="Дата з якої заявник працює на цій посаді" type="date" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="markersLine_2" name="Інформація про ваше житло" type="markers" default="{&quot;attributes&quot;:{&quot;Line_2&quot;:{&quot;aElement_ID&quot;:[&quot;sRegistration&quot;],&quot;sValue&quot;:&quot;Інформація про житло&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="sRegistration" name="Місце проживання" type="string" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="RegistrationData" name="Дата з якої заявник проживає за вищевказаною адресою" type="date" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="tPruchina" name="Причина постановки на квартирний облік" type="textArea" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="asVlasnist" name="Чи належить заявнику це житлове примішення" type="enum" writable="false">
-          <activiti:value id="sEnamPrivat" name="Так, 100% приватної власності"></activiti:value>
-          <activiti:value id="sEnamChastPrivat" name="У приватній власності частка"></activiti:value>
-          <activiti:value id="sEnamInshi" name="Приміщення належить місту або іншим особам"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="markersLine_3" name="Інформація про членів родини" type="markers" default="{&quot;attributes&quot;:{&quot;Line_3&quot;:{&quot;aElement_ID&quot;:[&quot;asKilkOsib&quot;],&quot;sValue&quot;:&quot;Інформація про членів родини&quot;}}}"></activiti:formProperty>
-        <activiti:formProperty id="asKilkOsib" name="Скільки осіб проживає на вищевказаній площі? (включно із заявником)" type="enum" writable="false">
-          <activiti:value id="sEnam1" name="одна особа(тільки заявник)"></activiti:value>
-          <activiti:value id="sEnam2" name="дві особи"></activiti:value>
-          <activiti:value id="sEnam3" name="три особи"></activiti:value>
-          <activiti:value id="sEnam4" name="чотири особи"></activiti:value>
-          <activiti:value id="sEnam5" name="п'ять осіб"></activiti:value>
-          <activiti:value id="sEnam6" name="шість осіб"></activiti:value>
-          <activiti:value id="sEnam7" name="сім осіб"></activiti:value>
-          <activiti:value id="sEnam8" name="вісім осіб"></activiti:value>
-          <activiti:value id="sEnam9" name="дев'ять осіб"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" writable="false">
-          <activiti:value id="sEnamDitu" name="Неповнолітні діти"></activiti:value>
-          <activiti:value id="sEnamDorosli" name="Дорослі члени сім'ї"></activiti:value>
-          <activiti:value id="sEnamDituDorosli" name="Діти та дорослі члени сім'ї"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asOdrujenia" name="Чи одружений заявник?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
-          <activiti:value id="yes" name="так"></activiti:value>
-          <activiti:value id="no" name="ні"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="asPracuuciRod" name="Чи є в родині заявника повнолітні члени сім'ї які працюють?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" writable="false">
-          <activiti:value id="yes" name="так"></activiti:value>
-          <activiti:value id="no" name="ні"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="PeopleTable" name="Члени родини; ;bNew=true" type="table" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_PasportZay" name="Паспорт заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_IPN" name="ІПН заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_RobotZay" name="Довідка з місця роботи заявника; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Vlasnist" name="Право власності на житло; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_NarodDitey" name="Свідоцтва про народження дітей; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_SvidOdroj" name="Свідоцтво про одруження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_PasportRod" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_RobotRod" name="Довідки з місця роботи членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_Pilgu" name="Документи на пільгу; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="regChanged" name="Витяг готовий?" type="enum" required="true">
-          <activiti:value id="yes" name="Так, готовий"></activiti:value>
-          <activiti:value id="no" name="витяг не може бути наданий"></activiti:value>
-        </activiti:formProperty>
-        <activiti:formProperty id="sComment" name="В разі відмови в наданні послуги зазначте підставу для відмови" type="textArea"></activiti:formProperty>
-        <activiti:formProperty id="sBody_1" name="[pattern/print/mvk/nikolaev_mvk_408_print.html]; ;bVisible=false" type="string" default="Заява громадянина" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="PrintForm_2" name="Заява;Заява громадянина;pattern/print/mvk/nikolaev_mvk_408_print.html" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="markers2" name="hide fields Status" type="markers" default="${markerService.loadFromFile('mvk/show_fill_status.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers_For_Print_1" name="hide-show fields adult" type="markers" default="${markerService.loadFromFile('mvk/nikolaev_mvk_408_hide-show_for_print_1.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers_For_Print_2" name="hide-show fields table" type="markers" default="${markerService.loadFromFile('mvk/nikolaev_mvk_408_hide-show_for_print_2.json')}"></activiti:formProperty>
-        <activiti:formProperty id="markers_For_Print_3" name="hide-show fields sFIO" type="markers" default="${markerService.loadFromFile('mvk/nikolaev_mvk_408_hide-show_for_print_3.json')}"></activiti:formProperty>
-        <activiti:taskListener event="create" delegateExpression="${fileTaskUploadListener}"></activiti:taskListener>
-      </extensionElements>
-    </userTask>
-    <sequenceFlow id="flow17" sourceRef="usertask2_green" targetRef="exclusivegateway2"></sequenceFlow>
-    <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
-    <sequenceFlow id="flow18" name="Відмовити по причині" sourceRef="exclusivegateway2" targetRef="servicetask5">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${regChanged == 'no'}]]></conditionExpression>
-    </sequenceFlow>
-    <sequenceFlow id="flow19" name="Заявка оброблена" sourceRef="exclusivegateway2" targetRef="servicetask4">
-      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${regChanged == 'yes'}]]></conditionExpression>
-    </sequenceFlow>
-    <serviceTask id="servicetask4" name="Відправлення листа громадянину" activiti:delegateExpression="#{MailTaskWithAttachmentsAndSMS}">
-      <extensionElements>
-        <activiti:field name="from">
-          <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
-        </activiti:field>
-        <activiti:field name="sPhone_SMS">
-          <activiti:expression><![CDATA[${phone}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="sText_SMS">
-          <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno "Vukonano". Na Vash email pryyshov lyst z zayavoyu, rozdrukuyte ta pidpyshit']]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="to">
-          <activiti:expression><![CDATA[${email}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="subject">
-          <activiti:expression><![CDATA[iGov: Взяття на облік громадян, які потребують поліпшення житлових умов. Схвалено]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${PrintForm_2}]]></activiti:expression>
-        </activiti:field>
-        <activiti:field name="text">
-          <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
-			[pattern/mail/new_design/_common_content_start.html]
-			<p> 
-				Ваше звернення виконано.<br>
-				Для отмання документу, будь ласка, не забудьте з собою взяти, підписану Вами та всіма понолітніми членами Вашої сім'ї, заяву.<br> 
-				Бланк прикріплений до листа.
-			</p>
-			<br>
-			Ви можете отримати результат за наступними контактами<br>
-			${sAddress}<br>
-			${sWorkTime}<br>
-			${sPhoneOrgan}
-			[pattern/mail/new_design/_common_content_end.html] 
-			[pattern/mail/new_design/_common_feedback.html]   	
-			[pattern/mail/new_design/_common_signature_start.html]
-			${sNameOrgan}.<br />
-			[pattern/mail/new_design/_common_signature_end.html]
-			[pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
-        </activiti:field>
-      </extensionElements>
-    </serviceTask>
     <endEvent id="endevent3" name="End"></endEvent>
-    <endEvent id="endevent4" name="End"></endEvent>
-    <sequenceFlow id="flow29" sourceRef="servicetask4" targetRef="endevent4"></sequenceFlow>
     <sequenceFlow id="flow30" sourceRef="startevent1" targetRef="servicetask2"></sequenceFlow>
+    <endEvent id="endevent5" name="End"></endEvent>
+    <sequenceFlow id="flow31" sourceRef="servicetask7" targetRef="endevent5"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_rada_0017_KvOblik_Dnipro">
     <bpmndi:BPMNPlane bpmnElement="rada_0017_KvOblik_Dnipro" id="BPMNPlane_rada_0017_KvOblik_Dnipro">
@@ -454,20 +330,11 @@
       <bpmndi:BPMNShape bpmnElement="servicetask7" id="BPMNShape_servicetask7">
         <omgdc:Bounds height="55.0" width="105.0" x="754.0" y="258.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="usertask2_green" id="BPMNShape_usertask2_green">
-        <omgdc:Bounds height="88.0" width="166.0" x="614.0" y="344.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="exclusivegateway2" id="BPMNShape_exclusivegateway2">
-        <omgdc:Bounds height="40.0" width="40.0" x="676.0" y="483.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="servicetask4" id="BPMNShape_servicetask4">
-        <omgdc:Bounds height="55.0" width="105.0" x="754.0" y="476.0"></omgdc:Bounds>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent3" id="BPMNShape_endevent3">
         <omgdc:Bounds height="35.0" width="35.0" x="410.0" y="268.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="endevent4" id="BPMNShape_endevent4">
-        <omgdc:Bounds height="35.0" width="35.0" x="789.0" y="570.0"></omgdc:Bounds>
+      <bpmndi:BPMNShape bpmnElement="endevent5" id="BPMNShape_endevent5">
+        <omgdc:Bounds height="35.0" width="35.0" x="904.0" y="268.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow22" id="BPMNEdge_flow22">
         <omgdi:waypoint x="429.0" y="164.0"></omgdi:waypoint>
@@ -499,36 +366,13 @@
           <omgdc:Bounds height="42.0" width="100.0" x="756.0" y="224.0"></omgdc:Bounds>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow27" id="BPMNEdge_flow27">
-        <omgdi:waypoint x="806.0" y="313.0"></omgdi:waypoint>
-        <omgdi:waypoint x="697.0" y="344.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow17" id="BPMNEdge_flow17">
-        <omgdi:waypoint x="697.0" y="432.0"></omgdi:waypoint>
-        <omgdi:waypoint x="696.0" y="483.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow18" id="BPMNEdge_flow18">
-        <omgdi:waypoint x="676.0" y="503.0"></omgdi:waypoint>
-        <omgdi:waypoint x="550.0" y="502.0"></omgdi:waypoint>
-        <omgdi:waypoint x="550.0" y="314.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="42.0" width="100.0" x="551.0" y="461.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow19" id="BPMNEdge_flow19">
-        <omgdi:waypoint x="716.0" y="503.0"></omgdi:waypoint>
-        <omgdi:waypoint x="754.0" y="503.0"></omgdi:waypoint>
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds height="14.0" width="94.0" x="759.0" y="460.0"></omgdc:Bounds>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="flow29" id="BPMNEdge_flow29">
-        <omgdi:waypoint x="806.0" y="531.0"></omgdi:waypoint>
-        <omgdi:waypoint x="806.0" y="570.0"></omgdi:waypoint>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow30" id="BPMNEdge_flow30">
         <omgdi:waypoint x="255.0" y="164.0"></omgdi:waypoint>
         <omgdi:waypoint x="324.0" y="164.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow31" id="BPMNEdge_flow31">
+        <omgdi:waypoint x="859.0" y="285.0"></omgdi:waypoint>
+        <omgdi:waypoint x="904.0" y="285.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

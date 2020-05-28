@@ -6,12 +6,12 @@
         <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган, у якому Ви бажаєте отримати рішення" type="select" default="0" required="true"></activiti:formProperty>
         <activiti:formProperty id="markersLine_1" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_1&quot;:{&quot;aElement_ID&quot;:[&quot;bankIdlastName&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
         <activiti:formProperty id="bankIdlastName" name="Ваше прізвище" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="bankIdfirstName" name="2Ваше ім'я" type="string" required="true"></activiti:formProperty>
+        <activiti:formProperty id="bankIdfirstName" name="Ваше ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="Ваше по батькові" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdinn" name="Ваш IПН" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="phone" name="Контактний телефон" type="string" default="+380" required="true"></activiti:formProperty>
         <activiti:formProperty id="email" name="E-Mail адреса для зворотнього зв'язку" type="string" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asRobota" name="Чи є у вас робота?;позначте галочкою - якщо працевлаштовані в даний момент;sID_CheckboxTrue=yes" type="enum">
+        <activiti:formProperty id="asRobota" name="Чи є у вас робота?;позначте галочкою - якщо працевлаштовані в даний момент;sID_CheckboxTrue=yes" type="enum" default="no">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -44,11 +44,11 @@
           <activiti:value id="sEnamDorosli" name="Дорослі члени сім'ї"></activiti:value>
           <activiti:value id="sEnamDituDorosli" name="Діти та дорослі члени сім'ї"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asOdrujenia" name="Ви одружені?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum">
+        <activiti:formProperty id="asOdrujenia" name="Ви одружені?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" default="no">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asPracuuciRod" name="Чи є в вашій родині повнолітні члени сім'ї які працюють?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum">
+        <activiti:formProperty id="asPracuuciRod" name="Чи є в вашій родині повнолітні члени сім'ї які працюють?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" default="no">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>
@@ -64,7 +64,7 @@
         <activiti:formProperty id="nFile_PasportRod" name="Паспорти членів родини;(1, 2 сторінка, та сторінка з місцем реєстрації);bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" required="true"></activiti:formProperty>
         <activiti:formProperty id="nFile_RobotRod" name="Довідки з місця роботи членів родини; ;bNew=true" type="file" required="true"></activiti:formProperty>
-        <activiti:formProperty id="asPilgu" name="Чи є у вас документи що дають право на пільгу?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum">
+        <activiti:formProperty id="asPilgu" name="Чи є у вас документи що дають право на пільгу?;позначте галочкою - якщо так;sID_CheckboxTrue=yes" type="enum" default="no">
           <activiti:value id="yes" name="так"></activiti:value>
           <activiti:value id="no" name="ні"></activiti:value>
         </activiti:formProperty>

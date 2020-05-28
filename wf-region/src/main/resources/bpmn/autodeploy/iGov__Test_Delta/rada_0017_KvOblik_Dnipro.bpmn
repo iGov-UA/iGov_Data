@@ -278,7 +278,7 @@
           <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno "Vzyato v robotu".  Na Vash email pryyshov lyst z zayavoyu, rozdrukuyte ta pidpyshit']]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${PrintForm_1}]]></activiti:expression>
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Взяття на облік громадян, які потребують поліпшення житлових умов. Перевірка документів]]></activiti:expression>
@@ -338,7 +338,7 @@
           <activiti:value id="sEnam8" name="вісім осіб"></activiti:value>
           <activiti:value id="sEnam9" name="дев'ять осіб"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum">
+        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" writable="false">
           <activiti:value id="sEnamDitu" name="Неповнолітні діти"></activiti:value>
           <activiti:value id="sEnamDorosli" name="Дорослі члени сім'ї"></activiti:value>
           <activiti:value id="sEnamDituDorosli" name="Діти та дорослі члени сім'ї"></activiti:value>
@@ -359,7 +359,7 @@
         <activiti:formProperty id="nFile_NarodDitey" name="Свідоцтва про народження дітей; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidOdroj" name="Свідоцтво про одруження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_PasportRod" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RobotRod" name="Довідки з місця роботи членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Pilgu" name="Документи на пільгу; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="regChanged" name="Витяг готовий?" type="enum" required="true">

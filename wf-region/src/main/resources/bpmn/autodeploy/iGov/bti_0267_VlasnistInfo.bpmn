@@ -4,6 +4,8 @@
     <startEvent id="startevent1" name="Start">
       <extensionElements>
         <activiti:formProperty id="sLabeECP" name=" ; ;labelType=info" type="label" default="Увага!  Щоб скористатися цією послугою, потрібно використати власний &lt;a href=&quot;https://goo.gl/1OioXt &quot; target=&quot;_blank&quot;&gt;електронно-цифровий підпис (ЕЦП)&lt;/a&gt; (наприклад податкової або банку, що вас обслуговує)"></activiti:formProperty>
+        <activiti:formProperty id="sID_Public_SubjectOrganJoin" name="Оберіть орган БТІ" type="select" default="0" required="true"></activiti:formProperty>
+        
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" required="true"></activiti:formProperty>
         <activiti:formProperty id="bankIdmiddleName" name="По Батькові" type="string" required="true"></activiti:formProperty>
@@ -14,17 +16,17 @@
         <activiti:formProperty id="sRequestGoal" name="Зазначте яку додаткову інформацію Ви бажаєте отримати" type="textArea" default="-"></activiti:formProperty>
         <activiti:formProperty id="saQuestion3" name="Стосовно якої кількості адрес буде створено запит стандартного типу?" type="enum">
           <activiti:value id="type1" name="Одна адреса (480 грн)"></activiti:value>
-          <activiti:value id="type2" name="Дві адреси (760 грн)"></activiti:value>
-          <activiti:value id="type3" name="Три адреси (1040 грн)"></activiti:value>
-          <activiti:value id="type4" name="Чотири адреси (1320 грн)"></activiti:value>
-          <activiti:value id="type5" name="П'ять адрес (1600 грн)"></activiti:value>
+          <activiti:value id="type2" name="Дві адреси (960 грн)"></activiti:value>
+          <activiti:value id="type3" name="Три адреси (1440 грн)"></activiti:value>
+          <activiti:value id="type4" name="Чотири адреси (1920 грн)"></activiti:value>
+          <activiti:value id="type5" name="П'ять адрес (2400 грн)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saQuestion4" name="Стосовно якої кількості адрес буде створено запит з додатковою інформацією?" type="enum">
           <activiti:value id="type1" name="Одна адреса (520 грн)"></activiti:value>
-          <activiti:value id="type2" name="Дві адреси (800 грн)"></activiti:value>
-          <activiti:value id="type3" name="Три адреси (1080 грн)"></activiti:value>
-          <activiti:value id="type4" name="Чотири адреси (1360 грн)"></activiti:value>
-          <activiti:value id="type5" name="П'ять адрес (1640 грн)"></activiti:value>
+          <activiti:value id="type2" name="Дві адреси (1040 грн)"></activiti:value>
+          <activiti:value id="type3" name="Три адреси (1560 грн)"></activiti:value>
+          <activiti:value id="type4" name="Чотири адреси (2080 грн)"></activiti:value>
+          <activiti:value id="type5" name="П'ять адрес (2600 грн)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="warningMessage1" name=" ; ;labelType=warning" type="label" default="Адреса власності має бути в межах м.Дніпро. В іншому випадку Вам буде відмовлено в наданні інформації"></activiti:formProperty>
         <activiti:formProperty id="sAskedAddress1" name="Зазначте адресу #1" type="string" default=" "></activiti:formProperty>
@@ -69,6 +71,8 @@
         <activiti:formProperty id="sSumWithPDV" name="сумма платежа З ПДВ;  поле відображено для тестування сплати;bVisible=false" type="label" default=" "></activiti:formProperty>
         <activiti:formProperty id="sID_Merchant" name="ИД-строковой мерчанта ; ;bVisible=false" type="string" default="i90213635286"></activiti:formProperty>
         <activiti:formProperty id="sCountPayment" name="лічільник спрацювання таймера; ;bVisible=false" type="string" default="0"></activiti:formProperty>
+        
+        <activiti:formProperty id="sNameOrgan" name="Назва органу ; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги ; ;bVisible=false" type="string" default="Запит інформації про власність згідно матеріалів інвентаризаційної справи"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_nameZV" name="назва послугиЗВ ; ;bVisible=false" type="string" default="запит інформації про власність згідно матеріалів інвентаризаційної справи"></activiti:formProperty>
       </extensionElements>
@@ -91,6 +95,7 @@
 Ви отримаєте відповідь протягом 5ти робочих днів.<br /><br />
 [pattern/mail/new_design/_common_content_end.html]
 [pattern/mail/new_design/_common_signature_start.html]
+${sNameOrgan},<br>
 З повагою, iGov.
 [pattern/mail/new_design/_common_signature_end.html]
 [pattern/mail/new_design/_common_footer.html]]]></activiti:expression>
@@ -106,7 +111,7 @@
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask1" name="Початкова перевірка запиту" activiti:candidateGroups="bti_request1_1">
+    <userTask id="usertask1" name="Початкова перевірка запиту" activiti:candidateGroups="${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
@@ -118,17 +123,17 @@
         <activiti:formProperty id="sRequestGoal" name="Додаткова запитувана інформація" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="saQuestion3" name="Стосовно якої кількості адрес було створено запит стандартного типу?" type="enum" writable="false">
           <activiti:value id="type1" name="Одна адреса (480 грн)"></activiti:value>
-          <activiti:value id="type2" name="Дві адреси (760 грн)"></activiti:value>
-          <activiti:value id="type3" name="Три адреси (1040 грн)"></activiti:value>
-          <activiti:value id="type4" name="Чотири адреси (1320 грн)"></activiti:value>
-          <activiti:value id="type5" name="П'ять адрес (1600 грн)"></activiti:value>
+          <activiti:value id="type2" name="Дві адреси (960 грн)"></activiti:value>
+          <activiti:value id="type3" name="Три адреси (1440 грн)"></activiti:value>
+          <activiti:value id="type4" name="Чотири адреси (1920 грн)"></activiti:value>
+          <activiti:value id="type5" name="П'ять адрес (2400 грн)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saQuestion4" name="Стосовно якої кількості адрес було створено запит з додатковою інформацією?" type="enum" writable="false">
           <activiti:value id="type1" name="Одна адреса (520 грн)"></activiti:value>
-          <activiti:value id="type2" name="Дві адреси (800 грн)"></activiti:value>
-          <activiti:value id="type3" name="Три адреси (1080 грн)"></activiti:value>
-          <activiti:value id="type4" name="Чотири адреси (1360 грн)"></activiti:value>
-          <activiti:value id="type5" name="П'ять адрес (1640 грн)"></activiti:value>
+          <activiti:value id="type2" name="Дві адреси (1040 грн)"></activiti:value>
+          <activiti:value id="type3" name="Три адреси (1560 грн)"></activiti:value>
+          <activiti:value id="type4" name="Чотири адреси (2080 грн)"></activiti:value>
+          <activiti:value id="type5" name="П'ять адрес (2600 грн)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sAskedAddress1" name=" адреса #1" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sAskedAddress2" name=" адреса #2" type="string" writable="false"></activiti:formProperty>
@@ -154,7 +159,7 @@
         <activiti:formProperty id="marker4" name="set printform content (jur)" type="markers" default="${markerService.loadFromFile('bti/bti_request_1_4.json')}"></activiti:formProperty>
         <activiti:formProperty id="sID_Payment" name="ИД транзакции платежа; ;bVisible=false" type="string" default=" "></activiti:formProperty>
         <activiti:formProperty id="result" name="Запит складено  без помилок?" type="enum" required="true">
-          <activiti:value id="accept" name="Помилкі відсутні. Надіслати ліст для сплати вартості послуги"></activiti:value>
+          <activiti:value id="accept" name="Помилкі відсутні. Надіслати ліст для сплати вартості послуги" ></activiti:value>
           <activiti:value id="reject" name="Запит містить помилки. Відмовити в наданні послуги"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="comment" name="Причина відмови в наданні послуги" type="textArea"></activiti:formProperty>
@@ -357,7 +362,7 @@ Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         </activiti:field>
       </extensionElements>
     </serviceTask>
-    <userTask id="usertask4" name="Підготовка відповіді" activiti:candidateGroups="bti_request1_1">
+    <userTask id="usertask4" name="Підготовка відповіді" activiti:candidateGroups="${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         <activiti:formProperty id="bankIdlastName" name="Прізвище" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="bankIdfirstName" name="Ім'я" type="string" writable="false"></activiti:formProperty>
@@ -369,17 +374,17 @@ Detali: igov.gov.ua/journal abo u Vashomu email]]></activiti:expression>
         <activiti:formProperty id="sRequestGoal" name="Додаткова запитувана інформація" type="textArea" writable="false"></activiti:formProperty>
         <activiti:formProperty id="saQuestion3" name="Стосовно якої кількості адрес було створено запит стандартного типу?" type="enum" writable="false">
           <activiti:value id="type1" name="Одна адреса (480 грн)"></activiti:value>
-          <activiti:value id="type2" name="Дві адреси (760 грн)"></activiti:value>
-          <activiti:value id="type3" name="Три адреси (1040 грн)"></activiti:value>
-          <activiti:value id="type4" name="Чотири адреси (1320 грн)"></activiti:value>
-          <activiti:value id="type5" name="П'ять адрес (1600 грн)"></activiti:value>
+          <activiti:value id="type2" name="Дві адреси (960 грн)"></activiti:value>
+          <activiti:value id="type3" name="Три адреси (1440 грн)"></activiti:value>
+          <activiti:value id="type4" name="Чотири адреси (1920 грн)"></activiti:value>
+          <activiti:value id="type5" name="П'ять адрес (2400 грн)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="saQuestion4" name="Стосовно якої кількості адрес було створено запит з додатковою інформацією?" type="enum" writable="false">
           <activiti:value id="type1" name="Одна адреса (520 грн)"></activiti:value>
-          <activiti:value id="type2" name="Дві адреси (800 грн)"></activiti:value>
-          <activiti:value id="type3" name="Три адреси (1080 грн)"></activiti:value>
-          <activiti:value id="type4" name="Чотири адреси (1360 грн)"></activiti:value>
-          <activiti:value id="type5" name="П'ять адрес (1640 грн)"></activiti:value>
+          <activiti:value id="type2" name="Дві адреси (1040 грн)"></activiti:value>
+          <activiti:value id="type3" name="Три адреси (1560 грн)"></activiti:value>
+          <activiti:value id="type4" name="Чотири адреси (2080 грн)"></activiti:value>
+          <activiti:value id="type5" name="П'ять адрес (2600 грн)"></activiti:value>
         </activiti:formProperty>
         <activiti:formProperty id="sAskedAddress1" name=" адреса #1" type="string" writable="false"></activiti:formProperty>
         <activiti:formProperty id="sAskedAddress2" name=" адреса #2" type="string" writable="false"></activiti:formProperty>

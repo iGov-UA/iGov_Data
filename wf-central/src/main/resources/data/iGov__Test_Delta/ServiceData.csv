@@ -3003,7 +3003,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 3064;36;491;491;NULL;4;{"processDefinitionId":"kalush_uszn_400:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 3065;774;491;491;NULL;4;{"processDefinitionId":"dnepr_soc_144:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 3066;8;491;491;NULL;4;{"processDefinitionId":"kalush_upszn_398:1:1"};;false;14;true;;BankID,EDS,mpbds;0
-3067;776;491;491;NULL;4;{"processDefinitionId":"dnepr_soc_help_147:1:1"};;false;14;true;;BankID,EDS,mpbds;0
+3067;776;491;491;NULL;4;{"processDefinitionId":"dnepr_soc_help_147:1:1"};;false;14;true;;BankID,EDS,mpbds,phone;0
 3068;30;491;491;NULL;4;{"processDefinitionId":"kalush_soczah_401:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 3069;31;491;491;NULL;4;{"processDefinitionId":"kalush_minsoc_399:1:1"};;false;14;true;;BankID,EDS,mpbds;0
 3070;781;491;491;NULL;4;{"processDefinitionId":"dnepr_soczah_163:1:1"};;false;14;true;;BankID,EDS,mpbds;0

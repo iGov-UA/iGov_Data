@@ -3895,7 +3895,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4016;775;61;61;NULL;4;{"processDefinitionId":"dnepr_soczah_154:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4017;780;61;61;NULL;4;{"processDefinitionId":"dnepr_soc_help_157:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4018;774;61;61;NULL;4;{"processDefinitionId":"dnepr_soc_144:1:1"};;false;14;false;;BankID,EDS,mpbds;0
-4019;776;61;61;NULL;4;{"processDefinitionId":"dnepr_soc_help_147:1:1"};;false;14;false;;BankID,EDS,mpbds;0
+4019;776;61;61;NULL;4;{"processDefinitionId":"dnepr_soc_help_147:1:1"};;false;14;false;;BankID,EDS,mpbds,phone;0
 4020;781;61;61;NULL;4;{"processDefinitionId":"dnepr_soczah_163:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4021;779;61;61;NULL;4;{"processDefinitionId":"dnepr_soczah_165:1:1"};;false;14;false;;BankID,EDS,mpbds;0
 4022;654;61;61;NULL;4;{"processDefinitionId":"subsidiesUkraine_ECP:1:1"};;false;14;false;;BankID,EDS,mpbds;0

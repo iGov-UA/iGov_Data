@@ -249,13 +249,6 @@ execution.setVariable('sID_Payment', Payment)
 
 <br/><br/>
 
-<b>
-Зверніть увагу:<br/>
-Термін надання відповіді на запит складає до 5 робочих днів з моменту сплати вартості послуги<br/>
-Якщо протягом цього часу ви не отримали відповіді, зверніться в службу підтримки:<br/>
-<a href="https://docs.google.com/forms/d/1d2ZttyUR9DBqSInCXsx_llvg8xp8ecjTgHVJnTtb2HM/viewform?edit_requested=true" target="_blank">Посилання на форму звернення</a><br/>
-</b>
-
 Якщо Ваш запит вже не актуальний або містить хибні дані, натисніть на цю кнопку:
 [cancelTaskSimple]
 <br/>

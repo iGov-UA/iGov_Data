@@ -182,7 +182,7 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 181;659;283;283;NULL;4;{"processDefinitionId":"rada_659_CityHeadRequest:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 182;11;493;493;NULL;4;{"processDefinitionId":"rda_360:1:1"};;false;212;false;;BankID,EDS,mpbds;0
 183;598;NULL;NULL;NULL;4;{"processDefinitionId":"eco_0598_useAnimals:1:1"};;false;1;true;;BankID,EDS,mpbds;0
-184;352;1;1;NULL;4;{"processDefinitionId":"_test_dnepr_mvk_291_common:1:1"};;false;1;false;;BankID,email,EDS,mpbds;0
+184;352;1;1;NULL;4;{"processDefinitionId":"_test_dnepr_mvk_291_common:1:1"};;false;1;false;;BankID,email,EDS,mpbds,BankidNBU;0
 185;28;2;2;NULL;4;{"processDefinitionId":"dms_0028_ID14_DMS:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 186;176;50005;NULL;5;4;{"processDefinitionId":"dms_0176_Zagran_DMS:1:1"};;false;288;false;;BankID,EDS,mpbds;0
 187;177;50005;NULL;5;4;{"processDefinitionId":"dms_0177_zagranChild_DMS:1:1"};;false;288;false;;BankID,EDS,mpbds;0

@@ -3,7 +3,7 @@
 
 		"ValuesFieldsOnCondition_6": {
 		      "aField_ID": ["sSum","sDescription","sSumWithoutPDV","sSumPDV","sSumWithPDV"],
-		      "asID_Field_sValue": ["590.64","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","464.00","116.00","580.00"],				
+		      "asID_Field_sValue": ["590.63","Підготовка відповіді за зверненнями фіз. або юрид. осіб при складності відповіді","464.00","116.00","580.00"],				
 		      "asID_Field": {
 		        "sCond1":"saQuestion1",
 		        "sCond2":"saQuestion4"

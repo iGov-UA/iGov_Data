@@ -14202,7 +14202,7 @@ nID_SubjectOrganJoin;sName;sValue
 3528;sMailClerk;tsur_cnap@ukr.net
 3528;sAddress;<b>Адреса:</b> 75100, Херсонська область, м. Олешки, вул. Гвардійська, 24
 3528;sRekv;Одержувач платежу: реквізити Олешків
-3528;nID_Department_visitDay;999
+3528;nID_Department_visitDay;498
 3528;sRekvIDZagranPos;<a href="http://drohobych-rada.gov.ua/administratyvnyj-zbir-miskogo-viddilu-tsnap" target="_blank">доступні за посиланням</a>
 
 3529;sNameOrgan;Олешківський районний ЦНАП при РДА
@@ -14211,7 +14211,7 @@ nID_SubjectOrganJoin;sName;sValue
 3529;sMailClerk;tsur_cnap@ukr.net
 3529;sAddress;<b>Адреса:</b> 75100, Херсонська область, м. Олешки, вул. Гвардійська, 24
 3529;sRekv;Одержувач платежу: реквізити Олешків
-3529;nID_Department_visitDay1;999
+3529;nID_Department_visitDay1;498
 3529;sRekvIDZagranPos;<a href="http://drohobych-rada.gov.ua/administratyvnyj-zbir-miskogo-viddilu-tsnap" target="_blank">доступні за посиланням</a>
 
 3530;sNameOrgan;ЦНАП м.Обухів

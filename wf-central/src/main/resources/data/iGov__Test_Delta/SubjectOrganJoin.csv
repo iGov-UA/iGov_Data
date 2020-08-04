@@ -3360,3 +3360,4 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 3690;309;Індустріальна районна рада;Індустріальна районна рада;DnIndustrGutObl;DnIndustrGutObl; ; ;NULL;NULL;1210100000
 3691;309;Амур-Нижньодніпровська районна рада;Амур-Нижньодніпровська районна рада;DnANDGutObl;DnANDGutObl; ; ;NULL;NULL;1210100000
 3692;309;Самарська районна рада;Самарська районна рада;DnSamarGutObl;DnSamarGutObl; ; ;NULL;NULL;1210100000
+3693;212;Маріупольська міська рада;Маріупольська міська рада;RadaMariupol;RadaMariupol; ; ;NULL;NULL;1412300000

@@ -3484,13 +3484,13 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 3605;144;637;637;NULL;4;{"processDefinitionId":"Registr_0144_ZniatSmert:1:1"};;false;212;true;;BankID,EDS,mpbds;0
 3606;184;637;637;NULL;4;{"processDefinitionId":"Registr_0184_RegistrDo14:1:1"};;false;212;true;;BankID,EDS,mpbds;0
 3607;185;637;637;NULL;4;{"processDefinitionId":"Registr_0185_ZniatDo14:1:1"};;false;212;true;;BankID,EDS,mpbds;0
-3608;703;1;1;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
-3609;703;28;28;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
-3610;703;2;2;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
-3611;703;182;182;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
-3612;703;92;92;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
-3613;703;102;102;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
-3614;703;104;104;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;;BankID,EDS,mpbds;0
+3608;703;1;1;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
+3609;703;28;28;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
+3610;703;2;2;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
+3611;703;182;182;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
+3612;703;92;92;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
+3613;703;102;102;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
+3614;703;104;104;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
 3615;703;42;42;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
 3616;703;149;149;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
 3617;703;137;137;NULL;1;{};https://dracs.minjust.gov.ua;false;760;false;Для одержання послуги перейдіть за посиланням на портал НАІС, зверніть увагу що даному порталі вам необхідно буде пройти реєстрацію.;BankID,EDS,mpbds;0
@@ -4865,7 +4865,6 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 4986;25;16;16;NULL;4;{"processDefinitionId":"dms_0025_ID2545_Qlogic:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4987;1431;16;16;NULL;4;{"processDefinitionId":"dms_0175_IDDamage_Qlogic:1:1"};;false;205;false;;BankID,EDS,mpbds;0
 4988;175;16;16;NULL;4;{"processDefinitionId":"dms_1431_IDLost_Qlogic:1:1"};;false;205;false;;BankID,EDS,mpbds;0
-;;;;;;;;;;;;;
 5000;2500;NULL;NULL;NULL;4;{"processDefinitionId":"_test_print_table:1:1"};;false;1;true;;BankID;0
 5001;2501;NULL;NULL;NULL;4;{"processDefinitionId":"_test_choose_employee:1:1"};;false;1;true;;BankID;0
 5002;2502;NULL;NULL;NULL;4;{"processDefinitionId":"_test_skuhtin:1:1"};;false;1;true;;BankID;0

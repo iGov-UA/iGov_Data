@@ -197,7 +197,7 @@
         <activiti:formProperty id="nFile_NarodDitey" name="Свідоцтва про народження дітей; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidOdroj" name="Свідоцтво про одруження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_PasportRod" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RobotRod" name="Довідки з місця роботи членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Pilgu" name="Документи на пільгу; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         
@@ -287,7 +287,7 @@
           <activiti:expression><![CDATA[Status Vashoho zvernennya [sID_Order] zmineno "Vzyato v robotu".  Na Vash email pryyshov lyst z zayavoyu, rozdrukuyte ta pidpyshit']]></activiti:expression>
         </activiti:field>
         <activiti:field name="saAttachmentsForSend">
-          <activiti:expression><![CDATA[${PrintForm_1}]]></activiti:expression>
+          <activiti:expression><![CDATA[" "]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[iGov: Взяття на облік громадян, які потребують поліпшення житлових умов. Перевірка документів]]></activiti:expression>
@@ -296,7 +296,7 @@
           <activiti:expression><![CDATA[[pattern/mail/new_design/_common_header.html]
 			[pattern/mail/new_design/_common_content_start.html]
 			<p> 
-				Ваше звернення було перевірено. Будь ласка, роздрукуйте та підпишіть у всіх понолітніх членів вашої сім'ї, прикріплену до листа заяву.
+				Ваше звернення було перевірено і взято в роботу. Вас буде додатково повідомлено щодо рішення про взяття облік.
 			</p>
 			<br>
 			За додатковими питаннями Ви можете звернутись за наступними контактами<br>
@@ -373,7 +373,7 @@
         <activiti:formProperty id="nFile_NarodDitey" name="Свідоцтва про народження дітей; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_SvidOdroj" name="Свідоцтво про одруження; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_PasportRod" name="Паспорти членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
-        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" required="true"></activiti:formProperty>
+        <activiti:formProperty id="nFile_IPNRod" name="ІПНи членів родини;;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_RobotRod" name="Довідки з місця роботи членів родини; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         <activiti:formProperty id="nFile_Pilgu" name="Документи на пільгу; ;bNew=true" type="file" writable="false"></activiti:formProperty>
         

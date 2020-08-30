@@ -175,7 +175,7 @@
           <activiti:value id="sEnam8" name="вісім осіб"></activiti:value>
           <activiti:value id="sEnam9" name="дев'ять осіб"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" dwritable="false">
+        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" writable="false">
           <activiti:value id="sEnamDitu" name="Неповнолітні діти"></activiti:value>
           <activiti:value id="sEnamDorosli" name="Дорослі члени сім'ї"></activiti:value>
           <activiti:value id="sEnamDituDorosli" name="Діти та дорослі члени сім'ї"></activiti:value>
@@ -312,7 +312,7 @@
       </extensionElements>
     </serviceTask>
     <sequenceFlow id="flow27" sourceRef="servicetask7" targetRef="usertask2_green"></sequenceFlow>
-    <userTask id="usertask2_green" name="Підготовка витягу з рішення виконавчого комітету Ммр щодо взяття на квартирний облік" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
+    <userTask id="usertask2_green" name="Підготовка витягу з рішення щодо взяття на квартирний облік" activiti:candidateGroups="cnap_${sID_Public_SubjectOrganJoin}">
       <extensionElements>
         
         <activiti:formProperty id="markersLine_11" name="Інформація про заявника" type="markers" default="{&quot;attributes&quot;:{&quot;Line_11&quot;:{&quot;aElement_ID&quot;:[&quot;clFio&quot;],&quot;sValue&quot;:&quot;Інформація про заявника&quot;}}}"></activiti:formProperty>
@@ -351,7 +351,7 @@
           <activiti:value id="sEnam8" name="вісім осіб"></activiti:value>
           <activiti:value id="sEnam9" name="дев'ять осіб"></activiti:value>
         </activiti:formProperty>
-        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" dwritable="false">
+        <activiti:formProperty id="asTipOsib" name="Хто проживає разом з заявником?" type="enum" writable="false">
           <activiti:value id="sEnamDitu" name="Неповнолітні діти"></activiti:value>
           <activiti:value id="sEnamDorosli" name="Дорослі члени сім'ї"></activiti:value>
           <activiti:value id="sEnamDituDorosli" name="Діти та дорослі члени сім'ї"></activiti:value>

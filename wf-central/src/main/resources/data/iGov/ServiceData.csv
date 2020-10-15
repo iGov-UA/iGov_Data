@@ -5683,3 +5683,4 @@ nID;nID_Service;nID_Place;nID_City;nID_Region;nID_ServiceType;oData;sURL;bHidden
 5815;1497;50018;NULL;18;4;{"processDefinitionId":"dnepr_cnap_686:1:1"};;false;1;true;;BankID,EDS,mpbds;0
 5816;745;1;1;NULL;1;{};https://new.igov.gov.ua/service/745/general?sID_UA_Region=1200000000&sID_UA_City=1210100000;false;1;false;Отримайте послугу на оновленій версії Порталу;BankID,EDS,mpbds;0
 5817;1476;16;16;NULL;4;{"processDefinitionId":"Ark_1476_TumchSpor:1:1"};;false;212;false;;BankID,EDS,mpbds;0
+5818;267;15;15;NULL;1;{};https://new.igov.gov.ua/service/267/general?sID_UA_Region=1200000000&sID_UA_City=4810100000;false;1;false;Отримайте послугу на оновленій версії Порталу;BankID,EDS,mpbds;0

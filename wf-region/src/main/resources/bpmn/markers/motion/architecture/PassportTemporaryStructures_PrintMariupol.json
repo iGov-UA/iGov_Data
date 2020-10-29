@@ -1,0 +1,34 @@
+{
+  "motion": {
+    "ShowElementsOnTrue_1": {
+      "aElement_ID": [
+        "DivGetPassport1",
+        "DivGetPassport2"
+      ],
+      "asID_Field": {
+        "sClient": "asPurpose"
+      },
+      "sCondition": "[sClient] == 'getPassport'"
+    },
+    "ShowElementsOnTrue_2": {
+      "aElement_ID": [
+        "DivСontinPassport1",
+        "DivСontinPassport2"
+      ],
+      "asID_Field": {
+        "sClient": "asPurpose"
+      },
+      "sCondition": "[sClient] == 'continPassport'"
+    },
+    "ShowElementsOnTrue_3": {
+      "aElement_ID": [
+        "DivEndPassport1",
+        "DivEndPassport2"
+      ],
+      "asID_Field": {
+        "sClient": "asPurpose"
+      },
+      "sCondition": "[sClient] == 'endPassport'"
+    }
+  }
+}

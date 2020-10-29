@@ -891,7 +891,7 @@ nID;nID_SubjectOrgan;sNameUa;sNameRu;sID_Privat;sID_Public;sGeoLongitude;sGeoLat
 1221;89;Новокодацький (Ленінський) район;Новокодацкий район;dnepr_novokod;dnepr_novokod; ; ;NULL;NULL;1210100000
 1222;89;Самарський район;Самарский район;dnepr_samars;dnepr_samars; ; ;NULL;NULL;1210100000
 1223;89;Таромське (Новокодацький район);Таромское (Новокодацкий район);dnepr_taroms;dnepr_taroms; ; ;NULL;NULL;1210100000
-1224;89;Покровський (Жовтневий) район;Покровский (Жовтневий) район;krrog_pokrov;krrog_pokrov; ; ;NULL;NULL;1211000000
+1224;2;Покровський (Жовтневий) район;Покровский (Жовтневий) район;krrog_pokrov;krrog_pokrov; ; ;NULL;NULL;1211000000
 1225;89;Саксаганський район;Саксаганский район;krrog_saks;krrog_saks; ; ;NULL;NULL;1211000000
 1226;89;Тернівський район;Терновский район;krrog_tern;krrog_tern; ; ;NULL;NULL;1211000000
 1227;225;ЦНАП Царичанської РДА;ЦОАУ Царичанского РГА;carich;carich; ; ;NULL;NULL;1225655100

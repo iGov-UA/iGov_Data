@@ -18,7 +18,8 @@
         "nFile_Passport",
         "dStartPassprot",
         "dContine",
-        "sNumberPassport"
+        "sNumberPassport",
+        "nFile_kor_zeml"
       ],
       "asID_Field": {
         "sClient": "asPurpose"

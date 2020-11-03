@@ -1,0 +1,40 @@
+{
+  "oProperties":{ 
+      "bSkipStepCreate":true
+       },
+   "_:Watch": {
+	"_default_author": {
+      "oMission": {"sKey_Right":"SignRelease"},
+      "oRights": {
+      	"EditFields": {},
+     	"SignComment": {},     
+        "TaskManage": {},
+        "AddSignerRead": {},
+        "ManageViewers": {}
+      }
+    },
+    "_default_accept": {
+      "oMission": {"sKey_Right": "SignWrite"},
+      "oRights": {
+        "SignWriteRefuse": {},
+        "SignComment": {},
+        "SignDelegate":{},      	
+      	"ManageSignersRead": {}
+      }
+    },  
+    "_default_agree": {
+      "oMission": {"sKey_Right":"SignWrite", "bResetImageAfterSubmit": true},
+      "oRights": {
+      	"EditFields": {},
+     	"SignWriteNotNeed":{},
+      	"SignComment": {},
+      	"AddSignerWriteAgree": {}
+     },
+      "bNeedECP": true
+    }
+  },
+  "step_create:Create": {},
+  "step_accept:Accept": {},
+  "step_agree:Agree": {}
+
+}

@@ -29,6 +29,7 @@
     "ShowFieldsOnCondition_333": {
       "aField_ID": [
         "nFile_Passport",
+        "nFile_SporudaDelete",
         "dStartPassprot",
         "sNumberPassport",
         "sPrichinaEnd"

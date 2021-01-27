@@ -133,7 +133,7 @@ nID_SubjectOrganJoin;sName;sValue
 384;sAddress;<b>Адреса:</b> 49000, Дніпро, вулиця Косіора, 55
 384;sWorkTime;<b>Графік роботи:</b> понеділок-п’ятниця: з 8.00 до 17.00
 384;sPhoneOrgan;<b>Телефон(и):</b> (056) 760-24-98, (056) 725-47-71, (056) 726-30-95
-384;sMailClerk;1239indust@ukr.net
+384;sMailClerk;lbuszn@ukr.net
 
 385;nArea;5
 385;sNameOrgan;УПСЗН Центрального (Кіровського) району, м. Дніпро
@@ -8442,7 +8442,7 @@ nID_SubjectOrganJoin;sName;sValue
 1808;sAddress;<b>Адреса:</b> 49000, Дніпро, вулиця Косіора, 55
 1808;sWorkTime;<b>Графік роботи:</b> понеділок-п’ятниця: з 8.00 до 17.00
 1808;sPhoneOrgan;<b>Телефон(и):</b> (056) 760-24-98, (056) 725-47-71
-1808;sMailClerk;1239indust@ukr.net
+1808;sMailClerk;lbuszn@ukr.net
 
 1809;nArea;5
 1809;sNameOrgan;УПСЗН Центрального (Кіровського) району, м. Дніпро

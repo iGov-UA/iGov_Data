@@ -63,6 +63,8 @@ nID;sID;sName_RU;sName_UA;nID_ServiceTagType;nOrder;sLinkImage;sNote;nID_Place
 61;Medicine;Медицина;Медицина;3;1006;;[*];NULL
 62;Medicine;Медицина;Медицина;2;7;/wf/VAADIN/themes/activiti/img/services/financial_aid.png;;1
 63;Online doctor;Лікар онлайн;Лікар онлайн;3;1002;;[*];NULL
+64;Правова допомога;Правова допомога;Правова допомога;3;25;;[*];NULL
+
 
 100;_Test_DABI_root; Тест ГАСК;_Тест ДАБІ;2;14;;;NULL
 101;_TestDabi_paper_doc;_Бумажный документ;_Паперовий документ;3;1401;;;NULL

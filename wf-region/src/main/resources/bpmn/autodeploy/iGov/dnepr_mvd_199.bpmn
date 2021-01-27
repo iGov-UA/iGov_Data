@@ -104,7 +104,7 @@
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:string><![CDATA[Akylish88@gmail.com]]></activiti:string>
+          <activiti:string><![CDATA[eds.idoc@gmail.com]]></activiti:string>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:string><![CDATA[Нове звернення: Відстрілювання зброї]]></activiti:string>

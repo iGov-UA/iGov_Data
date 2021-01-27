@@ -63,7 +63,7 @@
         <activiti:formProperty id="sPhoneOrgan" name="Телефон органу ; ;bVisible=false" type="string" default="ТЕСТ"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="Графік роботи ; ;bVisible=false" type="string" default="ТЕСТ"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу; ;bVisible=false" type="string" default="ТЕСТ"></activiti:formProperty>
-        <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string" default="akylish88@gmail.com"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта органу; ;bVisible=false" type="string" default="eds.idoc@gmail.com"></activiti:formProperty>
         <activiti:formProperty id="sCancelInfo" name="sCancelInfo; ;bVisible=false" type="string" default="Заявка актуальна"></activiti:formProperty>
         <activiti:formProperty id="sRegNumber" name="Номер документа в системі; ;bVisible=false" type="string"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги; ;bVisible=false" type="string" default="Довідка про реєстрацію місця проживання"></activiti:formProperty>
@@ -480,7 +480,7 @@ execution.setVariable('sAddress', oRegistrationOrgans[sRegOrgan].adress)</script
           <activiti:string><![CDATA[noreply@igov.org.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[akylish88@gmail.com]]></activiti:expression>
+          <activiti:expression><![CDATA[eds.idoc@gmail.com]]></activiti:expression>
         </activiti:field>
         <activiti:field name="sName">
           <activiti:string><![CDATA[Довідка з ЕЦП]]></activiti:string>

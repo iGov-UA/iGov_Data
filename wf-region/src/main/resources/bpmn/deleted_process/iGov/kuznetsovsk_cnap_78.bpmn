@@ -71,9 +71,9 @@
           <activiti:string><![CDATA[Нове звернення на тему: Отримання довідки про наявність та розмів земельної частки (паю)]]></activiti:string>
         </activiti:field>
         <activiti:field name="bcc">
-          <activiti:string><![CDATA[akylish88@gmail.com ]]></activiti:string>
+          <activiti:string><![CDATA[eds.idoc@gmail.com ]]></activiti:string>
 =======
-          <activiti:expression>akylish88@gmail.com </activiti:expression>
+          <activiti:expression>eds.idoc@gmail.com </activiti:expression>
         </activiti:field>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>

@@ -142,7 +142,7 @@
           <activiti:string><![CDATA[UTF-8]]></activiti:string>
         </activiti:field>
         <activiti:field name="bcc">
-          <activiti:string><![CDATA[akylish88@gmail.com ]]></activiti:string>
+          <activiti:string><![CDATA[eds.idoc@gmail.com ]]></activiti:string>
         </activiti:field>
         <activiti:field name="html">
           <activiti:expression>&lt;!DOCTYPE html&gt;

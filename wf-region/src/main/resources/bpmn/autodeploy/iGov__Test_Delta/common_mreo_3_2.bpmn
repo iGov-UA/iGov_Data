@@ -259,7 +259,7 @@ ${sMail_Signature}<br>
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>
         </activiti:field>
         <activiti:field name="to">
-          <activiti:expression><![CDATA["${sMail_Employee},Akylish88@gmail.com"]]></activiti:expression>
+          <activiti:expression><![CDATA["${sMail_Employee},eds.idoc@gmail.com"]]></activiti:expression>
         </activiti:field>
         <activiti:field name="subject">
           <activiti:expression><![CDATA[Нове звернення. Поновлення/заміна водійського посвідчення. (Заявник:  ${bankIdfirstName} ${bankIdmiddleName} ${bankIdlastName})]]></activiti:expression>

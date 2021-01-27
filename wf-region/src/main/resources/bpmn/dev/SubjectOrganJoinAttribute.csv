@@ -2,7 +2,7 @@ nID_SubjectOrganJoin;sName;sValue
 20;sRegion;Херсонська
 20;sAddress; м.Херсон, вул.Лютеранська(Кірова), 4, каб.№108
 20;nID_Department_visitDate;1
-20;sMail_Employee;Akylish88@gmail.com
+20;sMail_Employee;eds.idoc@gmail.com
 20;sWork_Time;понеділок-п'ятниця з 10:00 до 12:00<br> <br>
 20;sMail_Signature;ГУНП України в Херсонській області,<br>
 
@@ -36,7 +36,7 @@ nID_SubjectOrganJoin;sName;sValue
 369;sNameOrgan;Управління соціального захисту населення<br>Тернопільської РДА
 
 372;sOrganID;Управління соціального захисту населення м. Нетішин
-372;sMailClerk;akylish88@gmail.com 
+372;sMailClerk;eds.idoc@gmail.com 
 372;sNameOrgan;Управління соціального захисту населення<br>м. Нетішин
 
 373;sNameOrgan;Сектор архітектури, містобудування та житлово-комунального господарства Чорнухинської РДА
@@ -57,11 +57,11 @@ nID_SubjectOrganJoin;sName;sValue
 374;sMailClerk;Up_ekon22@city.kherson.ua
 
 375;sOrganID;Департаменту соціального захисту населення Херсонської ОДА
-375;sMailClerk;akylish88@gmail.com 
+375;sMailClerk;eds.idoc@gmail.com 
 375;sNameOrgan;Департамент соціального захисту населення<br>Херсонської ОДА
 
 376;sOrganID;Управління соціального захисту населення Шепетівської РДА
-376;sMailClerk;akylish88@gmail.com 
+376;sMailClerk;eds.idoc@gmail.com 
 376;sNameOrgan;Управління соціального захисту населення<br>Шепетівської РДА
 
 377;sAddress; м. Дніпро, вул. Красна 2-а
@@ -70,7 +70,7 @@ nID_SubjectOrganJoin;sName;sValue
 377;nUser;1
 377;nID_Department_visitDay;1
 377;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-377;sMailClerk;Akylish88@gmail.com
+377;sMailClerk;eds.idoc@gmail.com
 377;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 377;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 377;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -83,7 +83,7 @@ nID_SubjectOrganJoin;sName;sValue
 378;nUser;0
 378;nID_Department_visitDay;1
 378;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-378;sMailClerk;Akylish88@gmail.com
+378;sMailClerk;eds.idoc@gmail.com
 378;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 378;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 378;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -96,7 +96,7 @@ nID_SubjectOrganJoin;sName;sValue
 379;nUser;0
 379;nID_Department_visitDay;1
 379;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-379;sMailClerk;Akylish88@gmail.com
+379;sMailClerk;eds.idoc@gmail.com
 379;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 379;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 379;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -104,7 +104,7 @@ nID_SubjectOrganJoin;sName;sValue
 379;sZajava_zber;<a href="https://drive.google.com/file/d/0B4euXvFru4YDRlBuVHhOSEFzS0k/view?usp=sharing" target="_blank">Зразок заяви</a>
 
 380;sOrganID;Управління соціального захисту населення Каховського МВК
-380;sMailClerk;akylish88@gmail.com 
+380;sMailClerk;eds.idoc@gmail.com 
 380;sNameOrgan;Управління соціального захисту населення<br>Каховського МВК
 
 381;nArea;1
@@ -1628,7 +1628,7 @@ nID_SubjectOrganJoin;sName;sValue
 
 1136;sShapkaGolova;Міському голові <br>м. Суми
 1136;sAddress;40013, Сумська обл., м. Суми, вул. Горького,21
-1136;sMailClerk;akylish88@gmail.com 
+1136;sMailClerk;eds.idoc@gmail.com 
 1136;sNameOrgan;ЦНАП Сумської міськради
 1136;sWorkTime;<p>Понеділок, середа: 08.00-17.15<br>вівторок, четвер: 08.00-20.00<br>п’ятниця: 08.00-16.00<br>субота: 08.00-14.00<br>Вихідний - Неділя</p>
 1136;sPhoneOrgan;Телефон: (0542) 700-575, 700-574
@@ -1718,7 +1718,7 @@ nID_SubjectOrganJoin;sName;sValue
 1142;sAddress;<b>Адреса:</b> 49051, м. Дніпро, просп. Слобожанський, 31Д
 1142;sPhoneOrgan;<b>Телефон(и):</b> (099) 602-10-02, (068) 237-52-76
 1142;sMailClerk;dnepr-cnap@ukr.net
-1142;sMailClerk_dgk;akylish88@gmail.com
+1142;sMailClerk_dgk;eds.idoc@gmail.com
 1142;sMailClerk_dabi;o.bezmilitsina@dniprorada.gov.ua
 1142;sMailClerkPrivatiz;valykanatalia@gmail.com
 1142;sMailOfficialContact;<b>E-mail:</b> dnepr-cnap@ukr.net
@@ -1755,7 +1755,7 @@ nID_SubjectOrganJoin;sName;sValue
 1143;sAddress;<b>Адреса:</b> 49000, м. Дніпро, просп. Д. Яворницького, 75, 1 поверх, кімн. 105
 1143;sPhoneOrgan;<b>Телефон(и):</b> (099) 203-09-25, (097) 807-37-07
 1143;sMailClerk;k_n_i@ukr.net
-1143;sMailClerk_dgk;akylish88@gmail.com
+1143;sMailClerk_dgk;eds.idoc@gmail.com
 1143;sMailClerk_dabi;o.bezmilitsina@dniprorada.gov.ua
 1143;sMailClerkPrivatiz;valykanatalia@gmail.com
 1143;sMailOfficialContact;<b>E-mail:</b> dnepr-cnap@ukr.net
@@ -1895,12 +1895,12 @@ nID_SubjectOrganJoin;sName;sValue
 1181;sNameOrgan;Костопільська РДА
 1181;sPhoneOrgan;телефон
 1181;sWorkTime;Графік роботи
-1181;sMailClerk;akylish88@gmail.com 
+1181;sMailClerk;eds.idoc@gmail.com 
 1181;sOrgan;голови Костопільської РДА
 1181;sAddress;<b>Адреса:</b> адреса
 
 1182;sNameOrgan;Дніпровський МВК
-1182;sMailClerk226;akylish88@gmail.com 
+1182;sMailClerk226;eds.idoc@gmail.com 
 1182;sPosada;["Міський голова","Заступник міського голови","Заступник міського голови/керуючий справами виконкому ради","Заступник міського голови/директор департаменту комунального господарства та капітального будівництва","Заступник міського голови","Заступник міського голови/директор департаменту охорони здоров’я"]
 1182;sRozkladPriyom;=[sPosada]=='0'?'2-й четвер місяця з 11.00 год. та 3-й четвер місяця (обов’язковий попередній запис з 1 по 8 число місяця прийому)':[sPosada]=='1'?'1-й четвер і 3-й понеділок місяця з 11.00 год.':[sPosada]=='2'?'2-а вівторок місяця з 15.00 год.':[sPosada]=='3'?'2-а і 4-а п`ятниця місяця з 10.00 год.':[sPosada]=='4'?'3-а вівторок місяця з 11.00 год.':[sPosada]=='5'?'1-й понеділок місяця з 10.00 год. до 13.00 год.':''
 1182;sPhoneOrgan; телефон для довідок
@@ -1910,7 +1910,7 @@ nID_SubjectOrganJoin;sName;sValue
 1183;sSignCnap;Виконавчий комітет Богодухівської міської ради
 1183;sPhoneCnap;телефон
 1183;sRozklad;Адреса: 62103, м.Богодухів, пл.Леніна, 2<br>Графік роботи:<br>
-1183;sPostV;akylish88@gmail.com 
+1183;sPostV;eds.idoc@gmail.com 
 1183;sOrgan;міського голови м. Богодухів
 1183;sAddress;<b>Адреса:</b> 62103, м.Богодухів, пл.Леніна, 2
 
@@ -2042,7 +2042,7 @@ nID_SubjectOrganJoin;sName;sValue
 1197;sShapkaGolova;Голові Каланчацької РДА
 
 1198;sSignCnap;УПСЗН Каланчацького району
-1198;sMailClerk;akylish88@gmail.com 
+1198;sMailClerk;eds.idoc@gmail.com 
 
 1199;sMailClerk;tsar.alternatyva@gmail.com
 1199;sWorkTime;<b>Графік роботи:</b><br>Понеділок-п'ятниця з 8.00 до 20.00<br>Субота з 9.00 до 16.00<br>Без перерви на обід
@@ -2669,7 +2669,7 @@ nID_SubjectOrganJoin;sName;sValue
 1264;nUser;0
 1264;nID_Department_visitDay;1
 1264;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-1264;sMailClerk;Akylish88@gmail.com
+1264;sMailClerk;eds.idoc@gmail.com
 1264;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 1264;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 1264;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -2682,7 +2682,7 @@ nID_SubjectOrganJoin;sName;sValue
 1265;nUser;0
 1265;nID_Department_visitDay;1
 1265;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-1265;sMailClerk;Akylish88@gmail.com
+1265;sMailClerk;eds.idoc@gmail.com
 1265;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 1265;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 1265;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -2695,7 +2695,7 @@ nID_SubjectOrganJoin;sName;sValue
 1266;nUser;0
 1266;nID_Department_visitDay;1
 1266;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-1266;sMailClerk;Akylish88@gmail.com
+1266;sMailClerk;eds.idoc@gmail.com
 1266;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 1266;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 1266;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -2708,7 +2708,7 @@ nID_SubjectOrganJoin;sName;sValue
 1267;nUser;0
 1267;nID_Department_visitDay;1
 1267;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-1267;sMailClerk;Akylish88@gmail.com
+1267;sMailClerk;eds.idoc@gmail.com
 1267;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 1267;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 1267;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -2721,7 +2721,7 @@ nID_SubjectOrganJoin;sName;sValue
 1268;nUser;0
 1268;nID_Department_visitDay;1
 1268;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-1268;sMailClerk;Akylish88@gmail.com
+1268;sMailClerk;eds.idoc@gmail.com
 1268;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 1268;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 1268;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -2734,7 +2734,7 @@ nID_SubjectOrganJoin;sName;sValue
 1269;nUser;0
 1269;nID_Department_visitDay;1
 1269;sNameOrgan;Управління превентивної діяльності, відділ дозвільної системи
-1269;sMailClerk;Akylish88@gmail.com
+1269;sMailClerk;eds.idoc@gmail.com
 1269;sInvoice1;<a href="https://drive.google.com/file/d/0B4euXvFru4YDYm9VWm1zbm82MDQ/view?usp=sharing" target="_blank">Платіжне доручення</a>
 1269;sZajava;<a href="https://drive.google.com/file/d/0B4euXvFru4YDWXNWWUdVQVdKcjQ/view?usp=sharing" target="_blank">Зразок заяви</a>
 1269;sKartka;<a href="https://drive.google.com/file/d/0B4euXvFru4YDUkRZbllJTGx1LU0/view?usp=sharing" target="_blank">Зразок картки-заяви</a>
@@ -2817,11 +2817,11 @@ nID_SubjectOrganJoin;sName;sValue
 1282;sPosadaVid;=[sPosada]=='0'?'голови Тернопільської РДА':''
 
 1283;sNameOrgan;Івано-Франківська ОДА
-1283;sMailClerk;akylish88@gmail.com 
+1283;sMailClerk;eds.idoc@gmail.com 
 1283;sPosada;["Голова Івано-Франківської ОДА"]
 1283;sRozkladPriyom;=[sPosada]=='0'?'1-й і 3-й четвер щомісяця в облдержадміністрації з 10.00 до 13.00 год. 4-й четвер - виїзний день':''
 1283;sPhoneOrgan;(0342) 55-20-07
-1283;sMailClerk226;akylish88@gmail.com 
+1283;sMailClerk226;eds.idoc@gmail.com 
 1283;sPosadaVid;=[sPosada]=='0'?'голови Івано-Франківської ОДА':''
 1283;sArea;Івано-Франківської обласної державної адміністрації
 1283;sGolova; 
@@ -3337,7 +3337,7 @@ nID_SubjectOrganJoin;sName;sValue
 1350;sMailClerkNodebts;elzvit2225@ukr.net
 
 1351;sAddress; м.Дніпро проспект Праці 16
-1351;sMail_Employee;Akylish88@gmail.com
+1351;sMail_Employee;eds.idoc@gmail.com
 1351;sWork_Time;Вівторок - П'ятниця з 9:00 до 18:00 <br>(перерва з  13:00 до 13:45) <br> Субота з 9:00 до 16:45 <br>
 1351;sPayLink0;
 1351;sPayLink1;
@@ -3375,7 +3375,7 @@ nID_SubjectOrganJoin;sName;sValue
 1352;sPhoneOrgan;371-53-90
 
 1353;sAddress; м.Дніпро проспект Праці 16
-1353;sMail_Employee;Akylish88@gmail.com
+1353;sMail_Employee;eds.idoc@gmail.com
 1353;sWork_Time;Вівторок - П'ятниця з 9:00 до 18:00 <br>(перерва з  13:00 до 13:45) <br> Субота з 9:00 до 16:45 <br>
 1353;nID_Department_visitDate;10
 1353;sMail_Signature;Територіальний сервісний центр 1242 Регіонального сервісного центру МВС України в Дніпропетровській області <br>
@@ -3522,21 +3522,21 @@ nID_SubjectOrganJoin;sName;sValue
 1370;sRegion;Чернівецька
 1370;sAddress; м. Чернівці, вул. Кармелюка, 9 (вхід з тильної сторони, 3-ій поверх, кабінет №3)
 1370;nID_Department_visitDate;1
-1370;sMail_Employee;Akylish88@gmail.com
+1370;sMail_Employee;eds.idoc@gmail.com
 1370;sWork_Time;Час видачі довідок, крім вихідних та святкових днів: <br> понеділок-четвер з 17:00 до 17:45 <br>п’ятниця з 16:00 до 16:45
 1370;sMail_Signature;Міністерство Внутрішніх Справ України,<br>
 
 1371;sRegion;Дніпропетровська
 1371;sAddress; м. Дніпро, вул Ворошилова, 21
 1371;nID_Department_visitDate;1
-1371;sMail_Employee;Akylish88@gmail.com
+1371;sMail_Employee;eds.idoc@gmail.com
 1371;sWork_Time;<br> з 15:00 до 17: 00 (крім вихідних) <br>
 1371;sMail_Signature;ГУНП України в Дніпропетровській області<br>
 
 1372;sRegion;Житомирська
 1372;sAddress; м. Житомир, Старий Бульвар, 5/37
 1372;nID_Department_visitDate;1
-1372;sMail_Employee;Akylish88@gmail.com
+1372;sMail_Employee;eds.idoc@gmail.com
 1372;sWork_Time;Час видачі довідок  <br>
 1372;sMail_Signature;ГУНП України в Житомирській області<br>
 
@@ -4374,7 +4374,7 @@ nID_SubjectOrganJoin;sName;sValue
 1418;sRekv;УК у м. Новомосковську<br>Одержувач: 22012500<br>Рахунок 33216879727030 ГУДКСУ у Дніпропетровській області<br>МФО 805012<br>ОКПО 37951041
 1418;sAddress;<b>Адреса:</b> 51200, Дніпропетровська обл., м. Новомосковськ, вул. Шевченка, 7, І поверх
 1418;sPhoneOrgan;<b>Телефон(и):</b> (05693)7-54-31, (05693)7-89-60
-1418;sMailClerk;akylish88@gmail.com 
+1418;sMailClerk;eds.idoc@gmail.com 
 1418;sMailOfficialContact;<b>E-mail:</b> nmoskrda@i.ua
 1418;sWepPortal;<b>Веб портал:</b> <a href='http://www.novomosk-rn.dp.gov.ua'>ЦНАП Новомосковської РДА </a>
 1418;sWorkTime;<b>Графік роботи:</b> Понеділок, середа, п’ятниця, субота: 8:00 – 16:00 Вівторок, четвер: 13:00 – 20:00
@@ -5036,7 +5036,7 @@ nID_SubjectOrganJoin;sName;sValue
 1476;sGolovaKomu;=[sPosada]=='0'?'Мерікову В.І.':[sPosada]=='1'?'Романчуку М.П.':[sPosada]=='2'?'Бонь В.В.':[sPosada]=='3'?'Янішевській О.А.':[sPosada]=='4'?'Ничипорчуку А.Г.':''
 
 1477;sNameOrgan;Івано-Франківська ОДА
-1477;sMailClerk;akylish88@gmail.com 
+1477;sMailClerk;eds.idoc@gmail.com 
 1477;sPosada;["Голова Івано-Франківської ОДА"]
 1477;sPosadaVid;=[sPosada]=='0'?'голови Івано-Франківської ОДА':''
 1477;sPhoneOrgan;(0342) 55-20-07
@@ -5064,7 +5064,7 @@ nID_SubjectOrganJoin;sName;sValue
 1479;shapka; Центр надання адміністративних послуг м.Коломия  <br> міському голові
 
 1480;sNameOrgan;порту Ізмаїл
-1480;sMailClerk;akylish88@gmail.com 
+1480;sMailClerk;eds.idoc@gmail.com 
 1480;sArea;Ізмаїл
 1480;sPort;PORT IZMAIL
 1480;sPhoneOrgan; (04841) 2-04-87
@@ -5074,7 +5074,7 @@ nID_SubjectOrganJoin;sName;sValue
 1480;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-четверг з 15.00 до 17.00, п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів
 
 1481;sNameOrgan;порту Маріуполь
-1481;sMailClerk;akylish88@gmail.com 
+1481;sMailClerk;eds.idoc@gmail.com 
 1481;sArea;Маріуполь
 1481;sPort;PORT MARIUPOL
 1481;sPhoneOrgan; (0629) 40-08-35
@@ -5084,7 +5084,7 @@ nID_SubjectOrganJoin;sName;sValue
 1481;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів 
 
 1482;sNameOrgan;порту Миколаїв
-1482;sMailClerk;akylish88@gmail.com 
+1482;sMailClerk;eds.idoc@gmail.com 
 1482;sArea;Миколаїв
 1482;sPort;PORT MYKOLAIV
 1482;sPhoneOrgan; (0512) 50-75-87
@@ -5094,7 +5094,7 @@ nID_SubjectOrganJoin;sName;sValue
 1482;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів
 
 1483;sNameOrgan;порту Одеса
-1483;sMailClerk;akylish88@gmail.com 
+1483;sMailClerk;eds.idoc@gmail.com 
 1483;sArea;Одеса
 1483;sPort;PORT ODESSA
 1483;sPhoneOrgan; (048) 729-48-22
@@ -5104,7 +5104,7 @@ nID_SubjectOrganJoin;sName;sValue
 1483;sRozklad;<b>Графік видачі посвідчень:</b> понеділок-п’ятниця з 14.00 до 16.00 крім вихідних та святкових днів 
 
 1484;sNameOrgan;порту Херсон
-1484;sMailClerk;akylish88@gmail.com 
+1484;sMailClerk;eds.idoc@gmail.com 
 1484;sArea;Херсон
 1484;sPort;PORT KHERSON
 1484;sPhoneOrgan; (0552) 48-13-24
@@ -5114,7 +5114,7 @@ nID_SubjectOrganJoin;sName;sValue
 1484;sRozklad;<b>Графік видачі посвідчень:</b>  понеділок-четверг з 14.00 до 16.00, п’ятниця з 14.00 до 15.45 крім вихідних та святкових днів
 
 1485;sNameOrgan;порту Чорноморськ
-1485;sMailClerk;akylish88@gmail.com 
+1485;sMailClerk;eds.idoc@gmail.com 
 1485;sArea;Чорноморськ
 1485;sPort;PORT CHORNOMORSK
 1485;sPhoneOrgan; (04868) 9-19-78
@@ -6472,7 +6472,7 @@ nID_SubjectOrganJoin;sName;sValue
 1635;sPhoneOrgan;<b>Телефон(и):</b> (03543) 2-16-95
 1635;sWorkTime;<b>Графік роботи:</b><p>Понеділок-середа 8:00-16:00<br>четвер 09:00 - 20:00<br>п'ятниця 8:00 - 15:00</p>
 1635;sShapka;ЦНАП Підволочиського району
-1635;sArkhPost;akylish88@gmail.com
+1635;sArkhPost;eds.idoc@gmail.com
 1635;sArchShapka;ЦНАП Підволочиського району
 
 1636;shapka; Відділу Держгеокадастру у Підгаєцькому районі
@@ -6582,7 +6582,7 @@ nID_SubjectOrganJoin;sName;sValue
 1645;sShapka;ЦНАП Уманської міської ради <br>міському голові Умані
 1645;shapka;ЦНАП Уманської міської ради <br>міському голові Умані
 1645;sAddress;<b>Адреса:</b> 20300, Черкаська обл.,м. Умань,вул. Горького, 32/6
-1645;sMailClerk;Akylish88@gmail.com
+1645;sMailClerk;eds.idoc@gmail.com
 1645;sNameOrgan;ЦНАП Уманської міської ради
 1645;sWorkTime;<b>Графік роботи:</b> Понеділок, Вівторок, Четвер, П'ятниця - з 8.00 до 15.00, Середа – 13.00 до 20.00
 1645;sPhoneOrgan;<b>Телефон(и):</b> (04744) 30866
@@ -14051,7 +14051,7 @@ nID_SubjectOrganJoin;sName;sValue
 3508;nID_Department_visitDay;344
 
 3509;sNameOrgan;Одномандатний виборчий округ №26
-3509;sMailClerk967;akylish88@gmail.com
+3509;sMailClerk967;eds.idoc@gmail.com
 
 3510;sNameOrgan;Рада Тавричанської об'єднаної територіальної громади
 3510;sAddress;74862, Херсонська обл. Каховський р-н с. Тавричанка вул. Соборна, 26
@@ -14959,7 +14959,7 @@ nID_SubjectOrganJoin;sName;sValue
 3674;sRecvizitiAdmin;Одержувач: Послуга платна, уточнюйте реквізити в вашому районі
 
 3675;sNameOrgan;Львівська міська рада
-3675;sMailClerk;Akylish88@gmail.com
+3675;sMailClerk;eds.idoc@gmail.com
 3675;sPhoneOrgan;ТЕСТ 
 3675;sWorkTime;ТЕСТ
 3675;sShapkaM;Львівська міська рада
@@ -15013,13 +15013,13 @@ nID_SubjectOrganJoin;sName;sValue
 3681;sAddress;<b>Адреса:</b> Луганська обл., Новоайдарський р-н, смт Новоайдар, вул. Дружби, буд. 1
 3681;sPhoneOrgan;<b>Телефон(и):</b> 0644592401
 3681;sWorkTime;<b>Графік роботи:</b> Понеділок- п'ятниця: з 08.00 до 17.00
-3681;sMailClerk;akylish88@gmail.com
+3681;sMailClerk;eds.idoc@gmail.com
 
 3682;sNameOrgan;Новоайдарівська районна рада
 3682;sAddress;<b>Адреса:</b> Луганська обл., Новоайдарський р-н, смт Новоайдар, вул. Дружби, буд. 1
 3682;sPhoneOrgan;<b>Телефон(и):</b> 0644592401
 3682;sWorkTime;<b>Графік роботи:</b> Понеділок- п'ятниця: з 08.00 до 17.00
-3682;sMailClerk;akylish88@gmail.com
+3682;sMailClerk;eds.idoc@gmail.com
 
 3683;sNameOrgan;БТІ м. Дніпро
 

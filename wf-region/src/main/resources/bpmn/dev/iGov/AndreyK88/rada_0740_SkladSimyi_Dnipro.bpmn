@@ -443,7 +443,7 @@ ${sNameOrgan}<br>
     <serviceTask id="servicetask17" name="Контроль відмов" activiti:delegateExpression="#{MailTaskWithoutAttachment}">
       <extensionElements>
         <activiti:field name="to">
-          <activiti:expression><![CDATA[akylish88@gmail.com]]></activiti:expression>
+          <activiti:expression><![CDATA[eds.idoc@gmail.com]]></activiti:expression>
         </activiti:field>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>

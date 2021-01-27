@@ -73,7 +73,7 @@
           <activiti:expression>Нове звернення на порталі igov.gov.ua на тему: Видача довідки з  державної статистичної звітності про наявність земель та розподіл їх за власниками земель, землекористувачами, угіддями. Заявник ${bankIdlastName} ${bankIdfirstName} ${bankIdmiddleName}</activiti:expression>
         </activiti:field>
         <activiti:field name="bcc">
-          <activiti:string><![CDATA[akylish88@gmail.com ]]></activiti:string>
+          <activiti:string><![CDATA[eds.idoc@gmail.com ]]></activiti:string>
         </activiti:field>
         <activiti:field name="text">
           <activiti:expression>[pattern/mail/_common_employee_notify.html]</activiti:expression>

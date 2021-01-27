@@ -32,7 +32,7 @@
         <activiti:formProperty id="sAddress" name="Адреса ЦНАП ; ;bVisible=false" type="string" default="АДРЕСА ОРГАНУ"></activiti:formProperty>
         <activiti:formProperty id="sWorkTime" name="Час роботи ЦНАП ; ;bVisible=false" type="string" default="ЧАС РОБОТИ"></activiti:formProperty>
         <activiti:formProperty id="Date" name="Дата заяви ; ;bVisible=false" type="string"></activiti:formProperty>
-        <activiti:formProperty id="sMailClerk" name="Пошта Органів для тесту" type="string" default="akylish88@gmail.com"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта Органів для тесту" type="string" default="eds.idoc@gmail.com"></activiti:formProperty>
         <activiti:formProperty id="s3Etap" name="Назва 3го етапу ; ;bVisible=false" type="string" default="Відділ Правового Забезпечення, перевірка документів, прийняття рішення, підготовка наказу"></activiti:formProperty>
         <activiti:formProperty id="sPosluga_name" name="назва послуги ; ;bVisible=false" type="string" default="Присвоєння будівельної адреси об'єкту нового будівництва"></activiti:formProperty>
       </extensionElements>

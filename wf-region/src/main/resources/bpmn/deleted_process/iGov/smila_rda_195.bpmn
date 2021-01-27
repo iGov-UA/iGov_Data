@@ -130,7 +130,7 @@
     <serviceTask id="mailtask6" name="Повідомлення про нову заявку" activiti:type="mail">
       <extensionElements>
         <activiti:field name="to">
-          <activiti:expression>akylish88@gmail.com </activiti:expression>
+          <activiti:expression>eds.idoc@gmail.com </activiti:expression>
         </activiti:field>
         <activiti:field name="from">
           <activiti:string><![CDATA[noreply@igov.gov.ua]]></activiti:string>

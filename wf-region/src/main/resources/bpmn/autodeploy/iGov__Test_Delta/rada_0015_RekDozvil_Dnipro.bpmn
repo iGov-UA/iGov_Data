@@ -60,7 +60,7 @@
         <activiti:formProperty id="nFile_2" name="File_2; ;bNew=true" type="file"></activiti:formProperty>
         <activiti:formProperty id="nFile_3" name="File_3; ;bNew=true" type="file"></activiti:formProperty>
         
-        <activiti:formProperty id="sMailClerk" name="Пошта виконавця; ;bVisible=false" type="string" default="Akylish88@gmail.com"></activiti:formProperty>
+        <activiti:formProperty id="sMailClerk" name="Пошта виконавця; ;bVisible=false" type="string" default="eds.idoc@gmail.com"></activiti:formProperty>
         <activiti:formProperty id="sNameOrgan" name="Назва органу; ;bVisible=false" type="string" default="Управління реклами м. Дніпро"></activiti:formProperty>
         <activiti:formProperty id="sPhoneOrgan" name="телефон органу; ;bVisible=false" type="string" default="Телефон органу"></activiti:formProperty>
         <activiti:formProperty id="sAddress" name="Адреса органу; ;bVisible=false" type="string" default="Адреса"></activiti:formProperty>
